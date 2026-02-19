@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.LoginController",
+    "Method": "AuthenticateUser",
+    "RelativePath": "api/CPORTALLOGIN/v1/AuthenticateUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Orchid.DataModels.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

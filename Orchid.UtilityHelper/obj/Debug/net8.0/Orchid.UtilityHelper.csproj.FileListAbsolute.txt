@@ -1,0 +1,14 @@
+D:\Current Projects\OrchidCapital\Orchid.UtilityHelper\obj\Debug\net8.0\Orchid.UtilityHelper.GeneratedMSBuildEditorConfig.editorconfig
+D:\Current Projects\OrchidCapital\Orchid.UtilityHelper\obj\Debug\net8.0\Orchid.UtilityHelper.AssemblyInfoInputs.cache
+D:\Current Projects\OrchidCapital\Orchid.UtilityHelper\obj\Debug\net8.0\Orchid.UtilityHelper.AssemblyInfo.cs
+D:\Current Projects\OrchidCapital\Orchid.UtilityHelper\obj\Debug\net8.0\Orchid.UtilityHelper.csproj.CoreCompileInputs.cache
+D:\Current Projects\OrchidCapital\Orchid.UtilityHelper\bin\Debug\net8.0\Orchid.UtilityHelper.exe
+D:\Current Projects\OrchidCapital\Orchid.UtilityHelper\bin\Debug\net8.0\Orchid.UtilityHelper.deps.json
+D:\Current Projects\OrchidCapital\Orchid.UtilityHelper\bin\Debug\net8.0\Orchid.UtilityHelper.runtimeconfig.json
+D:\Current Projects\OrchidCapital\Orchid.UtilityHelper\bin\Debug\net8.0\Orchid.UtilityHelper.dll
+D:\Current Projects\OrchidCapital\Orchid.UtilityHelper\bin\Debug\net8.0\Orchid.UtilityHelper.pdb
+D:\Current Projects\OrchidCapital\Orchid.UtilityHelper\obj\Debug\net8.0\Orchid.UtilityHelper.dll
+D:\Current Projects\OrchidCapital\Orchid.UtilityHelper\obj\Debug\net8.0\refint\Orchid.UtilityHelper.dll
+D:\Current Projects\OrchidCapital\Orchid.UtilityHelper\obj\Debug\net8.0\Orchid.UtilityHelper.pdb
+D:\Current Projects\OrchidCapital\Orchid.UtilityHelper\obj\Debug\net8.0\Orchid.UtilityHelper.genruntimeconfig.cache
+D:\Current Projects\OrchidCapital\Orchid.UtilityHelper\obj\Debug\net8.0\ref\Orchid.UtilityHelper.dll

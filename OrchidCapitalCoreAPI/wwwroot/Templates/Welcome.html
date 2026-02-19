@@ -1,0 +1,560 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="x-apple-disable-message-reformatting">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" as="font">
+    <title>Paperchase</title>
+    <style>
+        html,
+        body {
+            margin: 0 auto !important;
+            padding: 0 !important;
+            height: 100% !important;
+            width: 100% !important;
+            font-family: 'Lato';
+        }
+
+        * {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
+        }
+
+        table {
+            border-spacing: 0 !important;
+            border-collapse: collapse !important;
+            table-layout: fixed !important;
+            margin: 0 auto !important;
+        }
+
+            table table table {
+                table-layout: auto;
+            }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        *[x-apple-data-detectors],
+        .unstyle-auto-detected-links *,
+        .aBn {
+            border-bottom: 0 !important;
+            cursor: default !important;
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+
+        .a6S {
+            display: none !important;
+            opacity: 0.01 !important;
+        }
+
+        img.g-img + div {
+            display: none !important;
+        }
+
+        .button-td,
+        .button-a {
+            transition: all 100ms ease-in;
+        }
+
+        .button-td-primary:hover,
+        .button-a-primary:hover {
+            background: #555555 !important;
+            border-color: #555555 !important;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: normal;
+            text-align: center;
+            vertical-align: middle;
+            -ms-touch-action: manipulation;
+            touch-action: manipulation;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid #f2effe;
+            white-space: nowrap;
+            padding: 8px 35px;
+            font-size: 20px;
+            height: 25px;
+            line-height: 1;
+            border-radius: 25px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background: #f2effe;
+            color: #390077;
+        }
+
+
+
+        .pad-x40 {
+            padding: 0px 40px;
+        }
+
+        .title-text {
+            font-weight: normal;
+        }
+
+        /*-------------Responsive----------------*/
+        @media only screen and (min-device-width: 320px) and (max-device-width: 374px) {
+            .email-container {
+                min-width: 320px !important;
+            }
+
+            .pad-x40 {
+                padding: 0px 5px;
+            }
+
+            .mail-box {
+                width: 100%;
+                display: block;
+                padding: 10px 0px !important;
+            }
+        }
+
+        @media only screen and (min-device-width: 375px) and (max-device-width: 413px) {
+            .email-container {
+                min-width: 375px !important;
+            }
+
+            .pad-x40 {
+                padding: 0px 10px;
+            }
+
+            .mail-box {
+                width: 100%;
+                display: block;
+                padding: 10px 0px !important;
+            }
+
+            .title1 {
+                font-size: 24px !important;
+                margin: 30px 0px 10px 0px !important;
+            }
+
+            .title2 {
+                font-size: 36px !important;
+                margin: 10px 0px !important;
+            }
+
+            .title3 {
+                font-size: 20px !important;
+                margin: 0px !important;
+            }
+
+            .title4 {
+                margin: 30px 0px !important;
+            }
+        }
+
+        @media only screen and (min-device-width: 414px) and (max-device-width: 600px) {
+            .email-container {
+                min-width: 414px !important;
+            }
+
+            .pad-x40 {
+                padding: 0px 15px;
+            }
+
+            .mail-box {
+                width: 100%;
+                display: block;
+                padding: 10px 0px !important;
+            }
+
+            .title1 {
+                font-size: 24px !important;
+                margin: 30px 0px 10px 0px !important;
+            }
+
+            .title2 {
+                font-size: 36px !important;
+                margin: 10px 0px !important;
+            }
+
+            .title3 {
+                font-size: 20px !important;
+                margin: 0px !important;
+            }
+
+            .title4 {
+                margin: 30px 0px !important;
+            }
+        }
+
+        @media only screen and (min-width: 601px) and (max-width:768px) {
+            .email-container {
+                min-width: 500px !important;
+            }
+
+            .pad-x40 {
+                padding: 0px 25px;
+            }
+        }
+
+        @media only screen and (max-width:1024px) and (min-width:769px) {
+            .email-container {
+                min-width: 680px !important;
+            }
+
+            .pad-x40 {
+                padding: 0px 30px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+
+            .email-container {
+                width: 100% !important;
+                margin: auto !important;
+            }
+
+            .fluid {
+                max-width: 100% !important;
+                height: auto !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+
+            .stack-column,
+            .stack-column-center {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                direction: ltr !important;
+            }
+
+            .stack-column-center {
+                text-align: center !important;
+            }
+
+            .center-on-narrow {
+                text-align: center !important;
+                display: block !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                float: none !important;
+            }
+
+            table.center-on-narrow {
+                display: inline-block !important;
+            }
+        }
+    </style>
+</head>
+<body width="100%" style="margin: 0; padding: 0 !important; mso-line-height-rule: exactly;">
+    <div style="width: 100%; background-color: #333;">
+        <table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="800" style="margin: 0 auto;" class="email-container">
+            <tr>
+                <td class="pad-x40" style="background: #ebedf9; padding:10px;">
+                    <p style=" padding: 10px 0px 20px 0px;width: 100%;"></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="pad-x40" style="background: #ebedf9;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                            <td>
+                                <img src="https://web.paperchase.ac/images/img/logo.png" width="180" alt="alt_text" border="0" style="height: auto; padding: 10px 0px;">
+                            </td>
+                            <td style="text-align: right;">
+                                <a href="https://www.paperchase.ac/" target="_blank" style="font-size: 16px; color: #333; font-weight:400; color: #390077;">www.paperchase.ac</a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="pad-x40" style="background-color: #ebedf9;">
+                    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style=" text-align: center; border-radius: 10px;">
+                        <tr>
+                            <td>
+                                <h1 class="title-text title1" style="margin: 20px 0 0px 0; font-size: 36px;color:#390077;">Hi, $$userfullname$$</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h1 class="title-text title2" style="margin: 15px 0px; font-size: 48px; color:#390077;">Welcome to Paperchase</h1>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p style="font-size: 20px; font-weight: 400;margin:10px 0;"><span><img src="https://cdn.paperchase.ac/cdn/img/ic_email_user.png"> &nbsp;</span>Username:<span style="color:#390077;">&nbsp;$$username$$</span></p>
+                                <p style="font-size: 20px; font-weight: 400;margin:10px 0;"><span><img src="https://cdn.paperchase.ac/cdn/img/ic_email_lock.png"> &nbsp;</span>Password:<span style="color:#390077;">&nbsp;$$userpassword$$</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="$$clientportallink$$" class="btn title4" style="margin: 20px 0px 30px 0px;"><img src="https://cdn.paperchase.ac/cdn/img/login.png" alt="login"> </a>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="pad-x40" style="background: #ebedf9;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+                        <tr>
+                            <td style="padding: 20px 10px 0px 0px;" class="mail-box">
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="text-align:center; background: #fff; box-shadow:2px 2px 15px rgb(72 48 125 / 15%); border-radius: 10px; height: 400px;">
+                                    <tr>
+                                        <td style="text-align:right; padding:10px 10px 0 0;">
+                                            <a href="http://help.pchase.com/en/collections/2426365-edocs-historical-uploads"><img src="https://cdn.paperchase.ac/cdn/img/ic_portal_link.png" /></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 20px 0 10px;">
+                                            <img src="https://cdn.paperchase.ac/cdn/img/ic_DocUploads.png" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3 style="color: #390077; margin: 10px 0px 10px 0px; font-weight: 400;">Doc Uploads</h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 0px 7px;height: 140px;">
+                                            <p style="color: #333; font-size: 15px; margin: 0 0 10px 0; height: 140px; display: block; width:100%;">
+                                                Scan invoices and receipts on the go, right from your phone and web. Historical Uploads: View copies of any invoices scanned, sent or emailed to us.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style="padding: 20px 0px 0px 10px;" class="mail-box">
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="text-align:center; background: #fff; box-shadow:2px 2px 15px rgb(72 48 125 / 15%); border-radius: 10px; height: 400px;">
+                                    <tr>
+                                        <td style="text-align:right; padding:10px 10px 0 0;">
+                                            <a href="http://help.pchase.com/en/collections/2426373-invoice-approval"><img src="https://cdn.paperchase.ac/cdn/img/ic_portal_link.png" /></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 20px 0 10px;">
+                                            <img src="https://cdn.paperchase.ac/cdn/img/ic_email_inv.png" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3 style="color: #390077; margin: 10px 0px 10px 0px; font-weight: 400;">Invoice Approval</h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 0px 7px;height: 140px;">
+                                            <p style="color: #333; font-size: 15px; margin: 0 0 10px 0; height: 140px; display: block; width:100%;">
+                                                Review flagged invoices that need a 2nd
+                                                look – approve or reject instantly from the app. Send invoices to one approver or multiple reviewers based on category, so the right people are always signing off.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 20px 10px 10px 0px;" class="mail-box">
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="text-align:center; background: #fff; box-shadow:2px 2px 15px rgb(72 48 125 / 15%); border-radius: 10px; height: 400px;">
+                                    <tr>
+                                        <td style="text-align:right; padding:10px 10px 0 0;">
+                                            <a href="http://help.pchase.com/en/collections/2426374-payment-approval"><img src="https://cdn.paperchase.ac/cdn/img/ic_portal_link.png" /></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 20px 0 10px;">
+                                            <img src="https://cdn.paperchase.ac/cdn/img/ic_email_pay.png" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3 style="color: #390077; margin: 10px 0px 10px 0px; font-weight: 400;">Payment Approval</h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 0px 7px;height: 140px;">
+                                            <p style="color: #333; font-size: 15px; margin: 0 0 10px 0; height: 140px; display: block; width:100%;">
+                                                It is an online platform to review and approve the payments for suggested invoices. You have control to approve the payments either fully or partially.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style="padding: 20px 0px 10px 10px;" class="mail-box">
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="text-align:center; background: #fff; box-shadow:2px 2px 15px rgb(72 48 125 / 15%); border-radius: 10px; height: 400px;">
+                                    <tr>
+                                        <td style="text-align:right; padding:10px 10px 0 0;">
+                                            <a href="http://help.pchase.com/en/articles/5767728-purchase-order"><img src="https://cdn.paperchase.ac/cdn/img/ic_portal_link.png" /></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 20px 0 10px;">
+                                            <img src="https://cdn.paperchase.ac/cdn/img/ic_po_inv.png" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3 style="color: #390077; margin: 10px 0px 10px 0px; font-weight: 400;">PO & Inventory</h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 0px 7px;height: 140px;">
+                                            <p style="color: #333; font-size: 15px; margin: 0 0 10px 0;height: 140px; display: block; width:100%;">
+                                                The purchase order module can create the orders to send to various vendors and the inventory module will track the opening and closing stock for the specific period.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 10px 10px 20px 0px;" class="mail-box">
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="text-align:center; background: #fff; box-shadow:2px 2px 15px rgb(72 48 125 / 15%); border-radius: 10px; height: 400px;">
+                                    <tr>
+                                        <td style="text-align:right; padding:10px 10px 0 0;">
+                                            <a href="http://help.pchase.com/en/collections/3120613-dashboard"><img src="https://cdn.paperchase.ac/cdn/img/ic_portal_link.png" /></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 20px 0 10px;">
+                                            <img src="https://cdn.paperchase.ac/cdn/img/ic_dash_repo.png" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3 style="color: #390077; margin: 10px 0px 10px 0px; font-weight: 400;">Dashboard & Reports</h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 0px 7px;height: 140px;">
+                                            <p style="color: #333; font-size: 15px; margin: 0 0 10px 0;height: 140px; display: block; width:100%;">
+                                                The dashboard consists of the key performance index of the business to help in decision making on a weekly basis consisting of various sales & COGS charts and graphs while reporting provides the information on a detailed level.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style="padding: 10px 0px 20px 10px;" class="mail-box">
+                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="text-align:center; background: #fff; box-shadow:2px 2px 15px rgb(72 48 125 / 15%); border-radius: 10px; height: 400px;">
+                                    <tr>
+                                        <td style="text-align:right; padding:10px 10px 0 0;">
+                                            <a href="http://help.pchase.com/en/articles/5724057-password-manager"><img src="https://cdn.paperchase.ac/cdn/img/ic_portal_link.png" /></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 20px 0 10px;">
+                                            <img src="https://cdn.paperchase.ac/cdn/img/ic_email_pwd.png" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <h3 style="color: #390077; margin: 10px 0px 10px 0px; font-weight: 400;">Password Manager</h3>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 0px 7px;height: 140px;">
+                                            <p style="color: #333; font-size: 15px; margin: 0 0 10px 0;height: 140px; display: block; width:100%;">
+                                                Password Manager is a common platform to securely share the login credentials of different vendors between your team and Paperchase.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="pad-x40" style="background: #ebedf9;">
+                    <p style="border-bottom: 1px solid #e7dff7; margin: 10px 0px 20px 0px; line-height: 0;"></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="pad-x40" style="background: #ebedf9;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="text-align: center">
+
+                        <tr>
+                            <td>
+                                <h5 style="margin: 5px 0px 0 20px;color:#390077; font-size: 20px;font-weight: 400;">To learn more about all modules, please click on <a href="http://help.pchase.com/en/" style="color:#390077;">help</a></h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h5 style="margin: 5px 0px 10px 20px;color:#390077; font-size: 20px;font-weight: 400;">Get the paperchase app:</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://itunes.apple.com/us/app/paperchase-docmanager/id1293304271?mt=8" target="_blank">
+                                    <img src="https://web.paperchase.ac/images/img/iTuneStore.png" />
+                                </a>&nbsp;&nbsp;
+                                <a href="https://play.google.com/store/apps/details?id=com.pchase.docmanager.pchasedocmanager" target="_blank">
+                                    <img src="https://web.paperchase.ac/images/img/playstore.png" style="padding: 0px 15px 0px 0px;" />
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p style="color: #555555; font-size: 10px; margin: 10px 30px;">Paperchase is a registered trademark of Paperchase. Apple and the Apple logo are trademark of Apple Inc., registered in the US and other countries. Mac App Store is a service of Apple Inc. Google Play and Google Play logo are trademarks of Google Inc.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td class="pad-x40" style="background: #ebedf9;">
+                    <p style="border-bottom: 1px solid #e7dff7; margin: 10px 0px 20px 0px; line-height: 0;"></p>
+                </td>
+            </tr>
+            <tr>
+                <td class="pad-x40" style="background: #ebedf9;">
+                    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="text-align: center">
+                        <tr>
+                            <td>
+                                <h5 style="margin: 0px 0px 5px 0px; font-size: 12px; font-weight: 500;">
+									<span style="color: #390077; padding: 0px 5px;">LONDON &nbsp;&nbsp;</span>|
+									<span style="color: #390077; padding: 0px 5px;">&nbsp;&nbsp; NEW YORK &nbsp;&nbsp;</span>|
+									<span style="color: #390077; padding: 0px 5px;">&nbsp;&nbsp; LOS ANGELES &nbsp;&nbsp;</span>|
+									<span style="color: #390077; padding: 0px 5px;">&nbsp;&nbsp; MIAMI &nbsp;&nbsp;</span>|
+									<span style="color: #390077; padding: 0px 5px;">&nbsp;&nbsp; HONG KONG &nbsp;&nbsp;</span>|
+									<span style="color: #390077; padding: 0px 5px;">&nbsp;&nbsp; DUBAI</span>                                    
+                                </h5>
+                            </td>
+						</tr>
+						<tr>
+						  <td>
+							<h6 style="color:#555555; margin: 0px; font-weight: 500;">&copy; <span id="copyright"><script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script></span> - Paperchase Accountancy</h6>
+						  </td>
+						</tr>
+						<tr>
+						  <td>
+                              <h6 style="color:#555555; margin: 5px 0px 30px 0px; font-weight: 500;">$$tmpaddress$$</h6>
+						  </td>
+						</tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
