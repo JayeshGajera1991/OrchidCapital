@@ -1,0 +1,54 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "OrchidCapital",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build OrchidCapital",
+            "program": "${workspaceFolder}/OrchidCapital/bin/Debug/net8.0/OrchidCapital.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/OrchidCapital",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "Now listening on: (https?://\\S+)"
+            },
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "https://localhost:44323"
+            },
+            "sourceFileMap": {
+                "/Views": "${workspaceFolder}/OrchidCapital/Views"
+            }
+        },
+        {
+            "name": "OrchidCapitalCoreAPI",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build OrchidCapitalCoreAPI",
+            "program": "${workspaceFolder}/OrchidCapitalCoreAPI/bin/Debug/net8.0/OrchidCapitalCoreAPI.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/OrchidCapitalCoreAPI",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development",
+                "ASPNETCORE_URLS": "https://localhost:44355"
+            },
+            "serverReadyAction": {
+                "action": "openExternally",
+                "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+                "uriFormat": "%s/swagger"
+            }
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Launch OrchidCapital & OrchidCapitalCoreAPI",
+            "configurations": [
+                "OrchidCapital",
+                "OrchidCapitalCoreAPI"
+            ]
+        }
+    ]
+}
