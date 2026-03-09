@@ -432,7 +432,14 @@
           }
         }
       },
-      "System.Diagnostics.DiagnosticSource/8.0.1": {},
+      "System.Diagnostics.DiagnosticSource/8.0.1": {
+        "runtime": {
+          "lib/net8.0/System.Diagnostics.DiagnosticSource.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.424.16909"
+          }
+        }
+      },
       "System.Diagnostics.EventLog/8.0.1": {
         "runtime": {
           "lib/net8.0/System.Diagnostics.EventLog.dll": {
@@ -501,18 +508,12 @@
           "Microsoft.Extensions.Configuration.Abstractions": "10.0.3"
         },
         "runtime": {
-          "Orchid.DataAccess.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Orchid.DataAccess.dll": {}
         }
       },
       "Orchid.DataModels/1.0.0": {
         "runtime": {
-          "Orchid.DataModels.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Orchid.DataModels.dll": {}
         }
       },
       "Orchid.TokenValidator/1.0.0": {
@@ -526,18 +527,12 @@
           "Swashbuckle.AspNetCore.SwaggerGen": "7.2.0"
         },
         "runtime": {
-          "Orchid.TokenValidator.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Orchid.TokenValidator.dll": {}
         }
       },
       "Orchid.UtilityHelper/1.0.0": {
         "runtime": {
-          "Orchid.UtilityHelper.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "Orchid.UtilityHelper.dll": {}
         }
       }
     }

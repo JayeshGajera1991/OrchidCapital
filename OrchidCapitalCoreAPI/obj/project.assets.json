@@ -2184,55 +2184,41 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jayesh Gajera\\.nuget\\packages\\": {},
-    "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\JGajera\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Current Projects\\OrchidCapital\\OrchidCapitalCoreAPI\\OrchidCapitalCoreAPI.csproj",
+      "projectUniqueName": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\OrchidCapitalCoreAPI.csproj",
       "projectName": "OrchidCapitalCoreAPI",
-      "projectPath": "D:\\Current Projects\\OrchidCapital\\OrchidCapitalCoreAPI\\OrchidCapitalCoreAPI.csproj",
-      "packagesPath": "C:\\Users\\Jayesh Gajera\\.nuget\\packages\\",
-      "outputPath": "D:\\Current Projects\\OrchidCapital\\OrchidCapitalCoreAPI\\obj\\",
+      "projectPath": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\OrchidCapitalCoreAPI.csproj",
+      "packagesPath": "C:\\Users\\JGajera\\.nuget\\packages\\",
+      "outputPath": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages",
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Jayesh Gajera\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.2.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\JGajera\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\DevExpress 23.2\\Components\\System\\Components\\Packages": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://nuget.devexpress.com/LI5i4Bsb1tz3rnTnYzZBMc5FAOczYe6Og5wxzIFiH7LmshJ2MB/api/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Current Projects\\OrchidCapital\\Orchid.DataAccess\\Orchid.DataAccess.csproj": {
-              "projectPath": "D:\\Current Projects\\OrchidCapital\\Orchid.DataAccess\\Orchid.DataAccess.csproj"
+            "E:\\OrchidCapital\\OrchidCapital\\Orchid.DataAccess\\Orchid.DataAccess.csproj": {
+              "projectPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.DataAccess\\Orchid.DataAccess.csproj"
             },
-            "D:\\Current Projects\\OrchidCapital\\Orchid.DataModels\\Orchid.DataModels.csproj": {
-              "projectPath": "D:\\Current Projects\\OrchidCapital\\Orchid.DataModels\\Orchid.DataModels.csproj"
+            "E:\\OrchidCapital\\OrchidCapital\\Orchid.DataModels\\Orchid.DataModels.csproj": {
+              "projectPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.DataModels\\Orchid.DataModels.csproj"
             },
-            "D:\\Current Projects\\OrchidCapital\\Orchid.TokenValidator\\Orchid.TokenValidator.csproj": {
-              "projectPath": "D:\\Current Projects\\OrchidCapital\\Orchid.TokenValidator\\Orchid.TokenValidator.csproj"
+            "E:\\OrchidCapital\\OrchidCapital\\Orchid.TokenValidator\\Orchid.TokenValidator.csproj": {
+              "projectPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.TokenValidator\\Orchid.TokenValidator.csproj"
             },
-            "D:\\Current Projects\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj": {
-              "projectPath": "D:\\Current Projects\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj"
+            "E:\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj": {
+              "projectPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj"
             }
           }
         }
@@ -2241,13 +2227,7 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.300"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -2269,24 +2249,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.24, 8.0.24]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[8.0.24, 8.0.24]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.24, 8.0.24]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.24, 8.0.24]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -2295,7 +2257,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.311/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

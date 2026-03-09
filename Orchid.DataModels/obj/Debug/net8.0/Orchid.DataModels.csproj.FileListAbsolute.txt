@@ -12,3 +12,18 @@ D:\Current Projects\OrchidCapital\Orchid.DataModels\obj\Debug\net8.0\refint\Orch
 D:\Current Projects\OrchidCapital\Orchid.DataModels\obj\Debug\net8.0\Orchid.DataModels.pdb
 D:\Current Projects\OrchidCapital\Orchid.DataModels\obj\Debug\net8.0\Orchid.DataModels.genruntimeconfig.cache
 D:\Current Projects\OrchidCapital\Orchid.DataModels\obj\Debug\net8.0\ref\Orchid.DataModels.dll
+E:\OrchidCapital\OrchidCapital\Orchid.DataModels\bin\Debug\net8.0\Orchid.DataModels.exe
+E:\OrchidCapital\OrchidCapital\Orchid.DataModels\bin\Debug\net8.0\Orchid.DataModels.deps.json
+E:\OrchidCapital\OrchidCapital\Orchid.DataModels\bin\Debug\net8.0\Orchid.DataModels.runtimeconfig.json
+E:\OrchidCapital\OrchidCapital\Orchid.DataModels\bin\Debug\net8.0\Orchid.DataModels.dll
+E:\OrchidCapital\OrchidCapital\Orchid.DataModels\bin\Debug\net8.0\Orchid.DataModels.pdb
+E:\OrchidCapital\OrchidCapital\Orchid.DataModels\obj\Debug\net8.0\Orchid.DataModels.GeneratedMSBuildEditorConfig.editorconfig
+E:\OrchidCapital\OrchidCapital\Orchid.DataModels\obj\Debug\net8.0\Orchid.DataModels.AssemblyInfoInputs.cache
+E:\OrchidCapital\OrchidCapital\Orchid.DataModels\obj\Debug\net8.0\Orchid.DataModels.AssemblyInfo.cs
+E:\OrchidCapital\OrchidCapital\Orchid.DataModels\obj\Debug\net8.0\Orchid.DataModels.csproj.CoreCompileInputs.cache
+E:\OrchidCapital\OrchidCapital\Orchid.DataModels\obj\Debug\net8.0\Orchid.DataModels.sourcelink.json
+E:\OrchidCapital\OrchidCapital\Orchid.DataModels\obj\Debug\net8.0\Orchid.DataModels.dll
+E:\OrchidCapital\OrchidCapital\Orchid.DataModels\obj\Debug\net8.0\refint\Orchid.DataModels.dll
+E:\OrchidCapital\OrchidCapital\Orchid.DataModels\obj\Debug\net8.0\Orchid.DataModels.pdb
+E:\OrchidCapital\OrchidCapital\Orchid.DataModels\obj\Debug\net8.0\Orchid.DataModels.genruntimeconfig.cache
+E:\OrchidCapital\OrchidCapital\Orchid.DataModels\obj\Debug\net8.0\ref\Orchid.DataModels.dll
