@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Orchid.DataAccess\Orchid.DataAccess.csproj" />
     <ProjectReference Include="..\Orchid.DataModels\Orchid.DataModels.csproj" />
+    <ProjectReference Include="..\Orchid.EmailService\Orchid.EmailService.csproj" />
     <ProjectReference Include="..\Orchid.TokenValidator\Orchid.TokenValidator.csproj" />
     <ProjectReference Include="..\Orchid.UtilityHelper\Orchid.UtilityHelper.csproj" />
   </ItemGroup>

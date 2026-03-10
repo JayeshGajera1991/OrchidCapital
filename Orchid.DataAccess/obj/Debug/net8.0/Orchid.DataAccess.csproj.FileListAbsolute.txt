@@ -128,5 +128,4 @@ E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\refint\Orchid.
 E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\Orchid.DataAccess.pdb
 E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\Orchid.DataAccess.genruntimeconfig.cache
 E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\ref\Orchid.DataAccess.dll
-E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
-E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\Orchid.DataAccess.csproj.CopyComplete
+E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\Orchid.D.4D8AA28B.Up2Date
