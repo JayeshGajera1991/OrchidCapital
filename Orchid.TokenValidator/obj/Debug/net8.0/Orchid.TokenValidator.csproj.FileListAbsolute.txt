@@ -60,4 +60,4 @@ E:\OrchidCapital\OrchidCapital\Orchid.TokenValidator\obj\Debug\net8.0\refint\Orc
 E:\OrchidCapital\OrchidCapital\Orchid.TokenValidator\obj\Debug\net8.0\Orchid.TokenValidator.pdb
 E:\OrchidCapital\OrchidCapital\Orchid.TokenValidator\obj\Debug\net8.0\Orchid.TokenValidator.genruntimeconfig.cache
 E:\OrchidCapital\OrchidCapital\Orchid.TokenValidator\obj\Debug\net8.0\ref\Orchid.TokenValidator.dll
-E:\OrchidCapital\OrchidCapital\Orchid.TokenValidator\obj\Debug\net8.0\Orchid.TokenValidator.csproj.CopyComplete
+E:\OrchidCapital\OrchidCapital\Orchid.TokenValidator\obj\Debug\net8.0\Orchid.T.BE277346.Up2Date

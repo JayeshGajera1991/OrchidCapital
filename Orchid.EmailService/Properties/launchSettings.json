@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Orchid.EmailService": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}

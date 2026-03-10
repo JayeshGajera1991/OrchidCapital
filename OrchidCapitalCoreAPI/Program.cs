@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.OpenApi.Models;
 using Orchid.DataAccess;
+using Orchid.DataModels;
+using Orchid.EmailService.Interface;
+using Orchid.EmailService.Repository;
 using Orchid.TokenValidator;
 using OrchidCapitalCoreAPI.Interface;
 using OrchidCapitalCoreAPI.Repository;
@@ -31,6 +34,12 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<IDapperRepository, DapperRepository>();
 // Login
 builder.Services.AddScoped<ILoginRepository, LoginRepository>();
+
+#region configure email keys
+builder.Services.Configure<EmailConfiguration>(builder.Configuration.GetSection("EMAIL-CONFIG"));
+
+builder.Services.AddTransient<IEmailService, EmailService>();
+#endregion
 
 // Add API versioning and versioned API explorer
 builder.Services.AddApiVersioning(config =>

@@ -1,18 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Current Projects\\OrchidCapital\\",
+  "WorkspaceRootPath": "E:\\OrchidCapital\\OrchidCapital\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BAD0F17A-4100-4DB9-9D0B-34036D4A0E70}|OrchidCapitalCoreAPI\\OrchidCapitalCoreAPI.csproj|d:\\current projects\\orchidcapital\\orchidcapitalcoreapi\\repository\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BAD0F17A-4100-4DB9-9D0B-34036D4A0E70}|OrchidCapitalCoreAPI\\OrchidCapitalCoreAPI.csproj|solutionrelative:orchidcapitalcoreapi\\repository\\loginrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{958D63B7-3CE4-43C2-96F5-CCA1D8ADEC12}|Orchid.EmailService\\Orchid.EmailService.csproj|e:\\orchidcapital\\orchidcapital\\orchid.emailservice\\repository\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{958D63B7-3CE4-43C2-96F5-CCA1D8ADEC12}|Orchid.EmailService\\Orchid.EmailService.csproj|solutionrelative:orchid.emailservice\\repository\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F20C9567-560D-4073-90E1-AE1CC54D7A39}|Orchid.DataModels\\Orchid.DataModels.csproj|d:\\current projects\\orchidcapital\\orchid.datamodels\\commonresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F20C9567-560D-4073-90E1-AE1CC54D7A39}|Orchid.DataModels\\Orchid.DataModels.csproj|solutionrelative:orchid.datamodels\\commonresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BAD0F17A-4100-4DB9-9D0B-34036D4A0E70}|OrchidCapitalCoreAPI\\OrchidCapitalCoreAPI.csproj|e:\\orchidcapital\\orchidcapital\\orchidcapitalcoreapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAD0F17A-4100-4DB9-9D0B-34036D4A0E70}|OrchidCapitalCoreAPI\\OrchidCapitalCoreAPI.csproj|solutionrelative:orchidcapitalcoreapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BAD0F17A-4100-4DB9-9D0B-34036D4A0E70}|OrchidCapitalCoreAPI\\OrchidCapitalCoreAPI.csproj|d:\\current projects\\orchidcapital\\orchidcapitalcoreapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BAD0F17A-4100-4DB9-9D0B-34036D4A0E70}|OrchidCapitalCoreAPI\\OrchidCapitalCoreAPI.csproj|solutionrelative:orchidcapitalcoreapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{958D63B7-3CE4-43C2-96F5-CCA1D8ADEC12}|Orchid.EmailService\\Orchid.EmailService.csproj|e:\\orchidcapital\\orchidcapital\\orchid.emailservice\\interface\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{958D63B7-3CE4-43C2-96F5-CCA1D8ADEC12}|Orchid.EmailService\\Orchid.EmailService.csproj|solutionrelative:orchid.emailservice\\interface\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAD0F17A-4100-4DB9-9D0B-34036D4A0E70}|OrchidCapitalCoreAPI\\OrchidCapitalCoreAPI.csproj|e:\\orchidcapital\\orchidcapital\\orchidcapitalcoreapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BAD0F17A-4100-4DB9-9D0B-34036D4A0E70}|OrchidCapitalCoreAPI\\OrchidCapitalCoreAPI.csproj|solutionrelative:orchidcapitalcoreapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F20C9567-560D-4073-90E1-AE1CC54D7A39}|Orchid.DataModels\\Orchid.DataModels.csproj|e:\\orchidcapital\\orchidcapital\\orchid.datamodels\\emailrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F20C9567-560D-4073-90E1-AE1CC54D7A39}|Orchid.DataModels\\Orchid.DataModels.csproj|solutionrelative:orchid.datamodels\\emailrequestmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,6 +32,19 @@
           "DockedWidth": 200,
           "SelectedChildIndex": 34,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EmailRequestModel.cs",
+              "DocumentMoniker": "E:\\OrchidCapital\\OrchidCapital\\Orchid.DataModels\\EmailRequestModel.cs",
+              "RelativeDocumentMoniker": "Orchid.DataModels\\EmailRequestModel.cs",
+              "ToolTip": "E:\\OrchidCapital\\OrchidCapital\\Orchid.DataModels\\EmailRequestModel.cs",
+              "RelativeToolTip": "Orchid.DataModels\\EmailRequestModel.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAAwBkAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T06:46:35.181Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -158,41 +179,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CommonResponse.cs",
-              "DocumentMoniker": "D:\\Current Projects\\OrchidCapital\\Orchid.DataModels\\CommonResponse.cs",
-              "RelativeDocumentMoniker": "Orchid.DataModels\\CommonResponse.cs",
-              "ToolTip": "D:\\Current Projects\\OrchidCapital\\Orchid.DataModels\\CommonResponse.cs",
-              "RelativeToolTip": "Orchid.DataModels\\CommonResponse.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAMBHwBoAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T02:49:24.451Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LoginRepository.cs",
-              "DocumentMoniker": "D:\\Current Projects\\OrchidCapital\\OrchidCapitalCoreAPI\\Repository\\LoginRepository.cs",
-              "RelativeDocumentMoniker": "OrchidCapitalCoreAPI\\Repository\\LoginRepository.cs",
-              "ToolTip": "D:\\Current Projects\\OrchidCapital\\OrchidCapitalCoreAPI\\Repository\\LoginRepository.cs",
-              "RelativeToolTip": "OrchidCapitalCoreAPI\\Repository\\LoginRepository.cs",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAtwHoAAAA2AAAAAAAAAA==",
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "E:\\OrchidCapital\\OrchidCapital\\Orchid.EmailService\\Repository\\EmailService.cs",
+              "RelativeDocumentMoniker": "Orchid.EmailService\\Repository\\EmailService.cs",
+              "ToolTip": "E:\\OrchidCapital\\OrchidCapital\\Orchid.EmailService\\Repository\\EmailService.cs",
+              "RelativeToolTip": "Orchid.EmailService\\Repository\\EmailService.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAgwEIAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T02:45:26.663Z",
+              "WhenOpened": "2026-03-10T06:45:14.957Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\Current Projects\\OrchidCapital\\OrchidCapitalCoreAPI\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "OrchidCapitalCoreAPI\\appsettings.Development.json",
-              "ToolTip": "D:\\Current Projects\\OrchidCapital\\OrchidCapitalCoreAPI\\appsettings.Development.json",
-              "RelativeToolTip": "OrchidCapitalCoreAPI\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "E:\\OrchidCapital\\OrchidCapital\\Orchid.EmailService\\Interface\\IEmailService.cs",
+              "RelativeDocumentMoniker": "Orchid.EmailService\\Interface\\IEmailService.cs",
+              "ToolTip": "E:\\OrchidCapital\\OrchidCapital\\Orchid.EmailService\\Interface\\IEmailService.cs",
+              "RelativeToolTip": "Orchid.EmailService\\Interface\\IEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T06:45:10.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\Program.cs",
+              "RelativeDocumentMoniker": "OrchidCapitalCoreAPI\\Program.cs",
+              "ToolTip": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\Program.cs",
+              "RelativeToolTip": "OrchidCapitalCoreAPI\\Program.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAAADEAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T06:36:09.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "OrchidCapitalCoreAPI\\appsettings.json",
+              "ToolTip": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\appsettings.json",
+              "RelativeToolTip": "OrchidCapitalCoreAPI\\appsettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-02-18T02:44:52.67Z",
+              "WhenOpened": "2026-03-10T06:36:03.781Z",
               "EditorCaption": ""
             }
           ]
