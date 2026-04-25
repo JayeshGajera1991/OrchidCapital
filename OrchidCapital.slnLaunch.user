@@ -1,0 +1,33 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "OrchidCapital\\OrchidCapital.csproj",
+        "Action": "Start",
+        "DebugTarget": "https"
+      },
+      {
+        "Path": "OrchidCapitalCoreAPI\\OrchidCapitalCoreAPI.csproj",
+        "Action": "Start",
+        "DebugTarget": "https"
+      },
+      {
+        "Path": "Orchid.DataModels\\Orchid.DataModels.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Orchid.TokenValidator\\Orchid.TokenValidator.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Orchid.EmailService\\Orchid.EmailService.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

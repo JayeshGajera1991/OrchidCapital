@@ -1,10 +1,8 @@
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.HttpOverrides;
-using Microsoft.Extensions.DependencyInjection;
 using OrchidCapital.Helper;
-using System.Security.Authentication;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Security.Authentication;
+using Microsoft.AspNetCore.HttpOverrides;
 
 var builder = WebApplication.CreateBuilder(args);
 Utility.Initialize(builder.Configuration);
@@ -42,6 +40,11 @@ mvcBuilder.AddRazorRuntimeCompilation();
 #endif
 
 #region Set Session time out
+builder.Services.AddAuthentication("Cookies")
+    .AddCookie("Cookies", options =>
+    {
+        options.LoginPath = "/Login/Login";
+    });
 builder.Services.AddSession(options =>
 {
     options.IdleTimeout = TimeSpan.FromMinutes(60); // Set the session timeout duration
@@ -113,6 +116,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Login}/{action=Login}/{id?}");
 
 app.Run();

@@ -1,0 +1,49 @@
+@{
+  ViewData["Title"] = "Admin Pages";
+}
+<link rel="stylesheet" href="~/Admin/css/admin_roles.css" asp-append-version="true" />
+<div class="page-header">
+    <div>
+        <h2>Roles & Permissions</h2>
+        <p>Manage employee roles and access control</p>
+    </div>
+
+    <div class="page-actions">
+        <button class="btn primary" id="toggleRoleForm">
+            <i class="fa-solid fa-plus"></i> Create New Role
+        </button>
+    </div>
+</div>
+<div class="table-card">
+    <div class="table-header">
+        <h3>Admin Roles</h3>
+        <div class="table-tools">
+            <input type="text" placeholder="Search roles..." />
+        </div>
+    </div>
+    <table id="rolesTable">
+        <thead>
+            <tr>
+                <th>Employee</th>
+                <th>Role Info</th>
+                <th>Access</th>
+                <th>Status</th>
+                <th>Permissions</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="rolesBody">
+            <!-- JS DATA -->
+        </tbody>
+    </table>
+</div>
+<div class="pagination">
+  <span class="page-info">Showing 1–15 of 50</span>
+  <div class="page-buttons">
+    <button class="page-btn disabled"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="page-btn active">1</button>
+    <button class="page-btn">2</button>
+    <button class="page-btn">3</button>
+    <button class="page-btn"><i class="fa-solid fa-chevron-right"></i></button>
+  </div>
+</div>

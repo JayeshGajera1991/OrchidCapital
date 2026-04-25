@@ -1,0 +1,106 @@
+@using OrchidCapital.Helper
+@model OrchidCapital.Models.LoginViewModel
+@{
+  Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orchid Capital Login</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="@Url.Content("~/Admin/css/admin_login.css")" asp-append-version="true" />
+</head>
+
+<body>
+
+  <div class="left">
+    <div class="brand">
+      <h1>Orchid Capital</h1>
+      <p>Secure & Smart Financial Management</p>
+    </div>
+
+    <div class="features">
+      <div class="feature"><i class="fa-solid fa-shield-halved"></i> Bank-grade Security</div>
+      <div class="feature"><i class="fa-solid fa-chart-line"></i> Advanced Analytics</div>
+      <div class="feature"><i class="fa-solid fa-user-lock"></i> Role-based Access Control</div>
+      <div class="feature"><i class="fa-solid fa-database"></i> End-to-End Encryption</div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="login-box">
+      <h2>Welcome Back</h2>
+      <p>Login to access your secure dashboard</p>
+      @using (Html.BeginForm("Login", "Login", FormMethod.Post, new { @class = "login-form", id = "loginForm" }))
+      {
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="input-group">
+          <label>Username</label>
+          <div class="input-field">
+            <i class="fa-solid fa-user"></i>
+            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder = "Enter username" })
+          </div>
+          @Html.ValidationMessageFor(m => m.UserName, " ", new { @class = "text-danger" })
+        </div>
+
+        <div class="input-group">
+          <label>Password</label>
+          <div class="input-field">
+            <i class="fa-solid fa-lock"></i>
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Enter password" })
+            <i class="fa-solid fa-eye toggle-password" onclick="togglePassword()"></i>
+          </div>
+          @Html.ValidationMessageFor(m => m.Password, " ", new { @class = "text-danger" })
+        </div>
+
+        <div class="extra">
+          <label>@Html.CheckBoxFor(m => m.RememberMe) Remember me</label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button class="login-btn" type="submit" id="btnLogin">Secure Login</button>
+      }
+      <div class="security-info">
+        <i class="fa-solid fa-shield"></i>
+        Protected with enterprise-grade encryption
+      </div>
+    </div>
+  </div>
+  @section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+  }
+  <script>
+      $(document).ready(function () {
+        $("#loginForm").submit(function () {
+          var rememberMeChecked = $("#RememberMe").is(":checked");
+          if (rememberMeChecked) {
+            $("#loginForm").append('<input type="hidden" name="hdnRememberMe" value="true" />');
+          } else {
+            $("#loginForm").append('<input type="hidden" name="hdnRememberMe" value="false" />');
+          }
+          $("#loginForm").submit();
+        });
+      });
+      function togglePassword() {
+        const pass = document.getElementById("password");
+        const icon = document.querySelector(".toggle-password");
+
+        if (pass.type === "password") {
+          pass.type = "text";
+          icon.classList.replace("fa-eye", "fa-eye-slash");
+        } else {
+          pass.type = "password";
+          icon.classList.replace("fa-eye-slash", "fa-eye");
+        }
+      }
+  </script>
+
+</body>
+
+</html>

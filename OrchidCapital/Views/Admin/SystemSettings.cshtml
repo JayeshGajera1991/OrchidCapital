@@ -1,0 +1,170 @@
+@{
+    ViewData["Title"] = "System Settings";
+}
+<link rel="stylesheet" href="~/Admin/css/admin_profile.css" asp-append-version="true" />
+<div class="profile-page">
+
+  <!-- LEFT: PROFILE INFO -->
+  <div class="profile-card">
+
+    <div class="profile-header">
+      <div class="profile-avatar">
+        <i class="fa-solid fa-user"></i>
+      </div>
+
+      <div class="profile-details">
+        <h2>Admin User</h2>
+        <p><i class="fa-solid fa-envelope"></i> admin@company.com</p>
+      </div>
+
+      <button class="edit-btn" title="Edit Profile">
+        <i class="fa-solid fa-pen"></i>
+      </button>
+    </div>
+
+    <div class="profile-body">
+
+      <div class="info-group">
+        <i class="fa-solid fa-user"></i>
+        <div>
+          <label>Full Name</label>
+          <span>Admin User</span>
+        </div>
+      </div>
+
+      <div class="info-group">
+        <i class="fa-solid fa-envelope"></i>
+        <div>
+          <label>Email Address</label>
+          <span>admin@company.com</span>
+        </div>
+      </div>
+
+      <div class="info-group">
+        <i class="fa-solid fa-phone"></i>
+        <div>
+          <label>Phone Number</label>
+          <span>+91 9876543210</span>
+        </div>
+      </div>
+
+      <div class="info-group">
+        <i class="fa-solid fa-user-shield"></i>
+        <div>
+          <label>Role</label>
+          <span>Manager</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- RIGHT: SECURITY -->
+  <div class="security-card">
+
+    <div class="security-header">
+      <h3><i class="fa-solid fa-shield-halved"></i> Security Settings</h3>
+      <p>Protect your account with advanced security options</p>
+    </div>
+
+    <div class="security-box">
+
+      <div class="security-info">
+        <h4><i class="fa-solid fa-mobile-screen-button"></i> Authenticator App</h4>
+        <p>Use Google Authenticator or similar apps</p>
+      </div>
+
+      <label class="switch">
+        <input type="checkbox" checked>
+        <span class="slider"></span>
+      </label>
+
+    </div>
+
+    <div class="security-box">
+
+      <div class="security-info">
+        <h4><i class="fa-solid fa-comment-sms"></i> SMS Verification</h4>
+        <p>Receive OTP on your mobile number</p>
+      </div>
+
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+
+    </div>
+
+    <div class="security-box danger">
+
+      <div class="security-info">
+        <h4><i class="fa-solid fa-key"></i> Change Password</h4>
+        <p>Update your account password regularly</p>
+      </div>
+
+      <button class="security-btn">
+        Change
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="rights-card">
+
+  <div class="rights-header">
+    <h3><i class="fa-solid fa-lock"></i> Page Access Rights</h3>
+    <p>Control which pages this user can access</p>
+  </div>
+
+  <div class="rights-grid">
+
+    <div class="right-item">
+      <i class="fa-solid fa-house"></i>
+      <span>Dashboard</span>
+      <input type="checkbox" checked>
+    </div>
+
+    <div class="right-item">
+      <i class="fa-solid fa-users"></i>
+      <span>Customer List</span>
+      <input type="checkbox" checked>
+    </div>
+
+    <div class="right-item">
+      <i class="fa-solid fa-user-plus"></i>
+      <span>Add Customer</span>
+      <input type="checkbox">
+    </div>
+
+    <div class="right-item">
+      <i class="fa-solid fa-file-invoice"></i>
+      <span>Loan Applications</span>
+      <input type="checkbox" checked>
+    </div>
+
+    <div class="right-item">
+      <i class="fa-solid fa-money-bill-wave"></i>
+      <span>Disbursement</span>
+      <input type="checkbox">
+    </div>
+
+    <div class="right-item">
+      <i class="fa-solid fa-chart-line"></i>
+      <span>Reports</span>
+      <input type="checkbox" checked>
+    </div>
+
+    <div class="right-item">
+      <i class="fa-solid fa-gear"></i>
+      <span>Settings</span>
+      <input type="checkbox">
+    </div>
+
+  </div>
+
+</div>

@@ -22,75 +22,53 @@ namespace OrchidCapitalCoreAPI.Repository
         {
             CommonResponse AuthResponse = new CommonResponse();
             CommonResponse response = new CommonResponse();
-            AuthResponse = await UserAuthenticate(request.UserName, request.Password, request.UserRole, request.PasswordTryCount);
+            AuthResponse = await UserAuthenticate(request.UserName, request.Password, request.PasswordTryCount);
             response.StatusCode = AuthResponse.StatusCode;
             response.Response = AuthResponse.Response;
             response.Message = AuthResponse.Message;
             return response;
         }
 
-        private async Task<CommonResponse> UserAuthenticate(string UserName, string Password, string UserRole, int PasswordTryCount, bool IsEncryptedPassword = false)
+        private async Task<CommonResponse> UserAuthenticate(string UserName, string Password, int PasswordTryCount)
         {
             CommonResponse objResponse = new CommonResponse();
             List<AuthUserLogin> objlist = new List<AuthUserLogin>();
             AuthUserLogin authUser = new AuthUserLogin();
             string userId = string.Empty;
-            string FullName = string.Empty;
-            string Email = string.Empty;
             int LoginTryCount = 0;
             try
             {
-                if (UserRole.ToLower() == "admin")
-                {
-                    if (UserName.ToLower() == "orchidcapitaladmin" && Password == "Admin$$2822" && UserRole.ToLower() == "admin")
-                    {
-                        userId = "1";
-                        authUser.UserName = UserName;
-                        authUser.FullName = UserName;
-                        authUser.UserRole = UserRole;
-                    }
-                    else
-                    {
-                        userId = "-1";
-                    }
-                    //var query = ClientPortalStoreProcedureMappings.NewPortal_Validate_UserLogin_API;
-                    //var param = new DynamicParameters();
-                    //param.Add("@Username", UserName);
-                    //param.Add("@PasswordTryCount", PasswordTryCount);
-                    //param.Add("@UserType", UserType);
+                var query = ProxyAPI.Admin_ValidateUserLogin;
+                var param = new DynamicParameters();
+                param.Add("@Username", UserName);
+                param.Add("@Password", Password);
+                param.Add("@PasswordTryCount", PasswordTryCount);
 
-                    //var queryResponse = await _dapperRepository.GetAllAsync<UserLoginResponse>(query, param, commandTimeout: null, commandType: CommandType.StoredProcedure);
-                    //CommonResponse response = new CommonResponse();
-                    //if (queryResponse.Any())
-                    //{
-                    //    response.StatusCode = 1;
-                    //    response.Response = queryResponse;
-                    //    response.Message = Convert.ToString(response.Response[0].Message);
-                    //    userId = Convert.ToString(response.Response[0].Message);
-                    //    LoginTryCount = Convert.ToInt32(response.Response[0].LoginTryCount);
-                    //    authUser.Email = response.Response[0].Email;
-                    //    authUser.UserName = Convert.ToString(response.Response[0].UserName);
-                    //    authUser.FullName = Convert.ToString(response.Response[0].FullName);
-                    //    authUser.IsRepeat = Convert.ToInt32(response.Response[0].IsRepeat);
-                    //}
-                    //else
-                    //{
-                    //    response.StatusCode = 0;
-                    //    response.Message = "Data Not Found.";
-                    //}
+                var queryResponse = await _dapperRepository.GetAllAsync<UserLoginResponse>(query, param, commandTimeout: null, commandType: CommandType.StoredProcedure);
+                CommonResponse response = new CommonResponse();
+                if (queryResponse.Any())
+                {
+                    response.StatusCode = 1;
+                    response.Response = queryResponse;
+                    response.Message = Convert.ToString(response.Response[0].Message);
+                    userId = Convert.ToString(response.Response[0].Message);
+                    LoginTryCount = Convert.ToInt32(response.Response[0].LoginTryCount);
+                    authUser.EmailId = response.Response[0].Email;
+                    authUser.UserName = Convert.ToString(response.Response[0].UserName);
+                    authUser.FullName = Convert.ToString(response.Response[0].FullName);
+                    authUser.UserRole = Convert.ToString(response.Response[0].UserRole);
+                    authUser.IsRepeat = Convert.ToString(response.Response[0].IsRepeat);
+                }
+                else
+                {
+                    response.StatusCode = 0;
+                    response.Message = "Data Not Found.";
                 }
                 switch (userId)
                 {
                     case "-1":
                         objResponse.StatusCode = 0;
-                        if (UserRole.ToLower() == "admin")
-                        {
-                            objResponse.Message = "101";
-                        }
-                        else
-                        {
-                            objResponse.Message = "102";
-                        }
+                        objResponse.Message = "101";
                         objResponse.Response = Convert.ToString(LoginTryCount);
                         break;
                     case "-2":
@@ -114,14 +92,15 @@ namespace OrchidCapitalCoreAPI.Repository
                         objResponse.Message = "106";
                         break;
                     default:
-                        string response = JWTExtension.CreateToken(authUser.UserName, UserRole, _configuration);
+                        string NewToken = JWTExtension.CreateToken(authUser.UserName, authUser.UserRole, _configuration);
                         objlist.Add(new AuthUserLogin
                         {
-                            Token = response,
+                            Token = NewToken,
                             UserName = authUser.UserName,
                             FullName = authUser.FullName,
                             EmailId = authUser.EmailId,
-                            UserRole = authUser.UserRole
+                            UserRole = authUser.UserRole,
+                            IsRepeat = authUser.IsRepeat
                         });
 
                         objResponse.StatusCode = 1;

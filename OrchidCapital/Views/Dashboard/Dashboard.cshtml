@@ -1,0 +1,102 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+    <div>
+        <h2>Dashboard</h2>
+        <p>Welcome back, here's your financial overview</p>
+    </div>
+
+    <div class="page-actions">
+        <button class="btn primary"><i class="fa-solid fa-plus"></i> New Loan</button>
+        <button class="btn"><i class="fa-solid fa-download"></i> Export</button>
+    </div>
+</div>
+
+<!-- KPI CARDS -->
+<div class="cards">
+
+    <div class="card kpi">
+        <div class="kpi-top">
+            <span>Total Customers</span>
+            <i class="fa-solid fa-users"></i>
+        </div>
+        <h2>12,450</h2>
+        <p class="positive">+8.2% this month</p>
+    </div>
+
+    <div class="card kpi">
+        <div class="kpi-top">
+            <span>Total Revenue</span>
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+        </div>
+        <h2>₹3.2L</h2>
+        <p class="positive">+12.4% growth</p>
+    </div>
+
+    <div class="card kpi">
+        <div class="kpi-top">
+            <span>Active Loans</span>
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+        </div>
+        <h2>1,280</h2>
+        <p class="neutral">Stable</p>
+    </div>
+
+    <div class="card kpi">
+        <div class="kpi-top">
+            <span>Pending Approvals</span>
+            <i class="fa-solid fa-clock"></i>
+        </div>
+        <h2>86</h2>
+        <p class="negative">Needs attention</p>
+    </div>
+
+</div>
+
+<!-- DATA TABLE -->
+<div class="table-card">
+
+    <div class="table-header">
+        <h3>Recent Transactions</h3>
+        <button class="btn small">View All</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Customer</th>
+                <th>Type</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ravi Patel</td>
+                <td>Loan</td>
+                <td>₹50,000</td>
+                <td><span class="status approved">Approved</span></td>
+                <td>22 Apr 2026</td>
+            </tr>
+            <tr>
+                <td>Neha Shah</td>
+                <td>Deposit</td>
+                <td>₹12,000</td>
+                <td><span class="status pending">Pending</span></td>
+                <td>21 Apr 2026</td>
+            </tr>
+            <tr>
+                <td>Amit Kumar</td>
+                <td>Withdrawal</td>
+                <td>₹8,500</td>
+                <td><span class="status rejected">Rejected</span></td>
+                <td>20 Apr 2026</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\OrchidCapital\\OrchidCapital\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{715AF0ED-02BB-420B-8CB4-3A99D332A614}|OrchidCapital\\OrchidCapital.csproj|e:\\orchidcapital\\orchidcapital\\orchidcapital\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{715AF0ED-02BB-420B-8CB4-3A99D332A614}|OrchidCapital\\OrchidCapital.csproj|solutionrelative:orchidcapital\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715AF0ED-02BB-420B-8CB4-3A99D332A614}|OrchidCapital\\OrchidCapital.csproj|e:\\orchidcapital\\orchidcapital\\orchidcapital\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{715AF0ED-02BB-420B-8CB4-3A99D332A614}|OrchidCapital\\OrchidCapital.csproj|solutionrelative:orchidcapital\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{715AF0ED-02BB-420B-8CB4-3A99D332A614}|OrchidCapital\\OrchidCapital.csproj|e:\\orchidcapital\\orchidcapital\\orchidcapital\\views\\login\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{715AF0ED-02BB-420B-8CB4-3A99D332A614}|OrchidCapital\\OrchidCapital.csproj|solutionrelative:orchidcapital\\views\\login\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 33,
           "Children": [
             {
               "$type": "Bookmark",
@@ -142,6 +155,45 @@
             {
               "$type": "Bookmark",
               "Name": "ST:157:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "OrchidCapital\\Controllers\\LoginController.cs",
+              "ToolTip": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "OrchidCapital\\Controllers\\LoginController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAIAwwBUAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T02:36:48.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "OrchidCapital\\Views\\_ViewImports.cshtml",
+              "ToolTip": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "OrchidCapital\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-25T02:36:01.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\Views\\Login\\Login.cshtml",
+              "RelativeDocumentMoniker": "OrchidCapital\\Views\\Login\\Login.cshtml",
+              "ToolTip": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\Views\\Login\\Login.cshtml",
+              "RelativeToolTip": "OrchidCapital\\Views\\Login\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-25T02:35:58.886Z",
+              "EditorCaption": ""
             }
           ]
         }

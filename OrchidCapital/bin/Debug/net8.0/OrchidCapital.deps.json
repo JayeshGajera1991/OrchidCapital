@@ -37,18 +37,22 @@
       "OrchidCapital/1.0.0": {
         "dependencies": {
           "ClosedXML": "0.105.0",
+          "Microsoft.AspNetCore.Authentication": "2.3.9",
+          "Microsoft.AspNetCore.Authentication.Cookies": "2.3.9",
           "Microsoft.AspNetCore.Cors": "2.3.9",
           "Microsoft.AspNetCore.Http": "2.3.9",
           "Microsoft.AspNetCore.Mvc": "2.3.9",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "8.0.0",
+          "Microsoft.AspNetCore.Razor.Design": "2.3.0",
           "Newtonsoft.Json": "13.0.4",
+          "System.Security.Claims": "4.3.0",
           "TwoFactorAuth.Net.QRCoder": "1.0.2",
           "Microsoft.AspNetCore.Antiforgery.Reference": "8.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "8.0.0.0",
           "Microsoft.AspNetCore.Authentication.BearerToken": "8.0.0.0",
-          "Microsoft.AspNetCore.Authentication.Cookies": "8.0.0.0",
+          "Microsoft.AspNetCore.Authentication.Cookies.Reference": "8.0.0.0",
           "Microsoft.AspNetCore.Authentication.Core.Reference": "8.0.0.0",
-          "Microsoft.AspNetCore.Authentication": "8.0.0.0",
+          "Microsoft.AspNetCore.Authentication.Reference": "8.0.0.0",
           "Microsoft.AspNetCore.Authentication.OAuth": "8.0.0.0",
           "Microsoft.AspNetCore.Authorization.Reference": "8.0.0.0",
           "Microsoft.AspNetCore.Authorization.Policy.Reference": "8.0.0.0",
@@ -295,7 +299,7 @@
           "System.Runtime.Serialization.Primitives": "8.0.0.0",
           "System.Runtime.Serialization.Xml": "8.0.0.0",
           "System.Security.AccessControl.Reference": "8.0.0.0",
-          "System.Security.Claims": "8.0.0.0",
+          "System.Security.Claims.Reference": "8.0.0.0",
           "System.Security.Cryptography.Algorithms.Reference": "8.0.0.0",
           "System.Security.Cryptography.Cng.Reference": "8.0.0.0",
           "System.Security.Cryptography.Csp.Reference": "8.0.0.0",
@@ -306,7 +310,7 @@
           "System.Security.Cryptography.X509Certificates.Reference": "8.0.0.0",
           "System.Security.Cryptography.Xml.Reference": "8.0.0.0",
           "System.Security": "4.0.0.0",
-          "System.Security.Principal": "8.0.0.0",
+          "System.Security.Principal.Reference": "8.0.0.0",
           "System.Security.Principal.Windows.Reference": "8.0.0.0",
           "System.Security.SecureString": "8.0.0.0",
           "System.ServiceModel.Web": "4.0.0.0",
@@ -429,11 +433,27 @@
           "Microsoft.Extensions.ObjectPool": "8.0.11"
         }
       },
+      "Microsoft.AspNetCore.Authentication/2.3.9": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Core": "2.3.0",
+          "Microsoft.AspNetCore.DataProtection": "2.3.0",
+          "Microsoft.AspNetCore.Http": "2.3.9",
+          "Microsoft.AspNetCore.Http.Extensions": "2.3.0",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
+          "Microsoft.Extensions.Options": "8.0.2",
+          "Microsoft.Extensions.WebEncoders": "8.0.11"
+        }
+      },
       "Microsoft.AspNetCore.Authentication.Abstractions/2.3.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "2.3.0",
           "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
           "Microsoft.Extensions.Options": "8.0.2"
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Cookies/2.3.9": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication": "2.3.9"
         }
       },
       "Microsoft.AspNetCore.Authentication.Core/2.3.0": {
@@ -1402,6 +1422,17 @@
           "System.Security.Principal.Windows": "5.0.0"
         }
       },
+      "System.Security.Claims/4.3.0": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Security.Principal": "4.3.0"
+        }
+      },
       "System.Security.Cryptography.Algorithms/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
@@ -1555,6 +1586,11 @@
           }
         }
       },
+      "System.Security.Principal/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.0"
+        }
+      },
       "System.Security.Principal.Windows/5.0.0": {},
       "System.Text.Encoding/4.3.0": {
         "dependencies": {
@@ -1636,7 +1672,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Authentication.Cookies/8.0.0.0": {
+      "Microsoft.AspNetCore.Authentication.Cookies.Reference/8.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Authentication.Cookies.dll": {}
         },
@@ -1648,7 +1684,7 @@
         },
         "compileOnly": true
       },
-      "Microsoft.AspNetCore.Authentication/8.0.0.0": {
+      "Microsoft.AspNetCore.Authentication.Reference/8.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Authentication.dll": {}
         },
@@ -3130,7 +3166,7 @@
         },
         "compileOnly": true
       },
-      "System.Security.Claims/8.0.0.0": {
+      "System.Security.Claims.Reference/8.0.0.0": {
         "compile": {
           "System.Security.Claims.dll": {}
         },
@@ -3196,7 +3232,7 @@
         },
         "compileOnly": true
       },
-      "System.Security.Principal/8.0.0.0": {
+      "System.Security.Principal.Reference/8.0.0.0": {
         "compile": {
           "System.Security.Principal.dll": {}
         },
@@ -3474,12 +3510,26 @@
       "path": "microsoft.aspnetcore.antiforgery/2.3.0",
       "hashPath": "microsoft.aspnetcore.antiforgery.2.3.0.nupkg.sha512"
     },
+    "Microsoft.AspNetCore.Authentication/2.3.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CcvW4qPOhEP6HbU5DQSQsXpb9rE5IvecxXvBg9TD106IgYUuzRSe0obFdvErUpLPn2ooXhryXBKNpYYYLeCijg==",
+      "path": "microsoft.aspnetcore.authentication/2.3.9",
+      "hashPath": "microsoft.aspnetcore.authentication.2.3.9.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Authentication.Abstractions/2.3.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-ve6uvLwKNRkfnO/QeN9M8eUJ49lCnWv/6/9p6iTEuiI6Rtsz+myaBAjdMzLuTViQY032xbTF5AdZF5BJzJJyXQ==",
       "path": "microsoft.aspnetcore.authentication.abstractions/2.3.0",
       "hashPath": "microsoft.aspnetcore.authentication.abstractions.2.3.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Authentication.Cookies/2.3.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HTesSvf4qoCvmdtaPRqfIcpeojl0h5hk8IJf95fdzrAPEvgL4EB57+ZTpkEdQKEuwrN1en2ECVspm09NEdmv2Q==",
+      "path": "microsoft.aspnetcore.authentication.cookies/2.3.9",
+      "hashPath": "microsoft.aspnetcore.authentication.cookies.2.3.9.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.Core/2.3.0": {
       "type": "package",
@@ -4300,6 +4350,13 @@
       "path": "system.security.accesscontrol/4.5.0",
       "hashPath": "system.security.accesscontrol.4.5.0.nupkg.sha512"
     },
+    "System.Security.Claims/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-P/+BR/2lnc4PNDHt/TPBAWHVMLMRHsyYZbU1NphW4HIWzCggz8mJbTQQ3MKljFE7LS3WagmVFuBgoLcFzYXlkA==",
+      "path": "system.security.claims/4.3.0",
+      "hashPath": "system.security.claims.4.3.0.nupkg.sha512"
+    },
     "System.Security.Cryptography.Algorithms/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -4362,6 +4419,13 @@
       "sha512": "sha512-aDM/wm0ZGEZ6ZYJLzgqjp2FZdHbDHh6/OmpGfb7AdZ105zYmPn/83JRU2xLIbwgoNz9U1SLUTJN0v5th3qmvjA==",
       "path": "system.security.cryptography.xml/8.0.2",
       "hashPath": "system.security.cryptography.xml.8.0.2.nupkg.sha512"
+    },
+    "System.Security.Principal/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-I1tkfQlAoMM2URscUtpcRo/hX0jinXx6a/KUtEQoz3owaYwl3qwsO8cbzYVVnjxrzxjHo3nJC+62uolgeGIS9A==",
+      "path": "system.security.principal/4.3.0",
+      "hashPath": "system.security.principal.4.3.0.nupkg.sha512"
     },
     "System.Security.Principal.Windows/5.0.0": {
       "type": "package",
@@ -4448,7 +4512,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Authentication.Cookies/8.0.0.0": {
+    "Microsoft.AspNetCore.Authentication.Cookies.Reference/8.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -4458,7 +4522,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.AspNetCore.Authentication/8.0.0.0": {
+    "Microsoft.AspNetCore.Authentication.Reference/8.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -5693,7 +5757,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Security.Claims/8.0.0.0": {
+    "System.Security.Claims.Reference/8.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
@@ -5748,7 +5812,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Security.Principal/8.0.0.0": {
+    "System.Security.Principal.Reference/8.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

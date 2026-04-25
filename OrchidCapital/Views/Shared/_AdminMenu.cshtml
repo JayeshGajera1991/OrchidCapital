@@ -1,0 +1,51 @@
+<ul class="menu" id="Adminmenu">
+    <!-- DASHBOARD -->
+    <div class="menu-title">Overview</div>
+    <li><a class="" href="@Url.Action("Dashboard", "Dashboard")"><i
+        class="fa-solid fa-house"></i> Dashboard</a>
+    </li>
+    <li><a><i class="fa-solid fa-chart-line"></i> Analytics</a></li>
+    <!-- CUSTOMER -->
+    <div class="menu-title">Customer Management</div>
+    <li><a><i class="fa-solid fa-user-plus"></i> Add Customer</a></li>
+    <li><a><i class="fa-solid fa-users"></i> Customer List</a></li>
+    <li><a><i class="fa-solid fa-id-card"></i> KYC Verification</a>
+    </li>
+    <!-- LOAN -->
+    <div class="menu-title">Loan Process</div>
+    <li><a><i class="fa-solid fa-file-circle-plus"></i> New Loan</a>
+    </li>
+    <li><a><i class="fa-solid fa-file-invoice"></i> Loan
+        Applications</a></li>
+    <li><a><i class="fa-solid fa-check-circle"></i> Approvals</a></li>
+    <li><a><i class="fa-solid fa-money-bill-wave"></i>
+        Disbursement</a></li>
+    <!-- TRANSACTIONS -->
+    <div class="menu-title">Transactions</div>
+    <li><a><i class="fa-solid fa-arrow-down"></i> Deposits</a></li>
+    <li><a><i class="fa-solid fa-arrow-up"></i> Withdrawals</a></li>
+    <li><a><i class="fa-solid fa-clock-rotate-left"></i> History</a>
+    </li>
+    <!-- MASTER -->
+    <div class="menu-title">Master</div>
+    <li><a><i class="fa-solid fa-building-columns"></i> Branch</a>
+    </li>
+    <li><a><i class="fa-solid fa-layer-group"></i> Account Types</a>
+    </li>
+    <li><a><i class="fa-solid fa-percent"></i> Interest Setup</a></li>
+    <!-- REPORTS -->
+    <div class="menu-title">Reports</div>
+    <li><a><i class="fa-solid fa-file-lines"></i> Daily Report</a>
+    </li>
+    <li><a><i class="fa-solid fa-chart-pie"></i> Financial Report</a>
+    </li>
+    <!-- SETTINGS -->
+    <div class="menu-title">Settings</div>
+    <li><a href="@Url.Action("Roles", "Admin")"><i
+        class="fa-solid fa-user-shield"></i> Roles &
+        Permissions</a></li>
+    <li><a href="@Url.Action("Pages", "Admin")"><i
+        class="fa-solid fa-user-shield"></i>Pages</a></li>
+    <li><a href="@Url.Action("SystemSettings", "Admin")"><i
+        class="fa-solid fa-gear"></i> System Settings</a></li>
+</ul>

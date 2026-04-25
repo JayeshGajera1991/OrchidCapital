@@ -1,0 +1,552 @@
+@{
+    ViewData["Title"] = "Roles & Permissions";
+}
+<link rel="stylesheet" href="~/Admin/css/admin_roles.css" asp-append-version="true" />
+<!-- PAGE HEADER -->
+<div class="page-header">
+    <div>
+        <h2>Roles & Permissions</h2>
+        <p>Manage employee roles and access control</p>
+    </div>
+
+    <div class="page-actions">
+        <button class="btn primary" id="toggleRoleForm">
+            <i class="fa-solid fa-plus"></i> Create New Role
+        </button>
+    </div>
+</div>
+
+<!-- ROLE PANEL -->
+<div class="role-panel" id="rolePanel">
+
+    <!-- LEFT -->
+    <div class="role-form">
+
+        <!-- STEP INDICATOR -->
+        <div class="step-header">
+            <div class="step active">1</div>
+            <div class="step">2</div>
+        </div>
+
+        <!-- STEP 1 -->
+        <div class="step-content active" id="step1">
+
+            <h3>Employee Role Details</h3>
+
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label>Employee Name *</label>
+                    <input type="text" placeholder="Enter name">
+                </div>
+
+                <div class="form-group">
+                    <label>Employee ID *</label>
+                    <input type="text" placeholder="EMP001">
+                </div>
+
+                <div class="form-group">
+                    <label>Department *</label>
+                    <input type="text" placeholder="Finance / Loan">
+                </div>
+
+                <div class="form-group">
+                    <label>Position *</label>
+                    <input type="text" placeholder="Manager / Officer">
+                </div>
+
+                <div class="form-group full">
+                    <label>Address</label>
+                    <textarea placeholder="Enter address..."></textarea>
+                </div>
+
+            </div>
+
+            <button class="btn primary next-btn">
+                Next <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="step-content" id="step2">
+
+            <h3>Permissions Setup</h3>
+
+            <div class="permission-table">
+
+                <div class="perm-row header">
+                    <span>Module</span>
+                    <span>Full</span>
+                    <span>Read</span>
+                    <span>Block</span>
+                </div>
+
+                <!-- TEMP MODULES -->
+                <div class="perm-row">
+                    <span>Dashboard</span>
+                    <input type="radio" name="dash">
+                    <input type="radio" name="dash">
+                    <input type="radio" name="dash">
+                </div>
+
+                <div class="perm-row">
+                    <span>Customer Management</span>
+                    <input type="radio" name="cust">
+                    <input type="radio" name="cust">
+                    <input type="radio" name="cust">
+                </div>
+
+                <div class="perm-row">
+                    <span>Loan Process</span>
+                    <input type="radio" name="loan">
+                    <input type="radio" name="loan">
+                    <input type="radio" name="loan">
+                </div>
+
+                <div class="perm-row">
+                    <span>Transactions</span>
+                    <input type="radio" name="txn">
+                    <input type="radio" name="txn">
+                    <input type="radio" name="txn">
+                </div>
+
+                <div class="perm-row">
+                    <span>Reports</span>
+                    <input type="radio" name="rep">
+                    <input type="radio" name="rep">
+                    <input type="radio" name="rep">
+                </div>
+
+            </div>
+
+            <div class="step-actions">
+                <button class="btn" id="backBtn">
+                    <i class="fa-solid fa-arrow-left"></i> Back
+                </button>
+                <button class="btn primary">
+                    <i class="fa-solid fa-check"></i> Save Role
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="role-info">
+
+        <div class="process-box active">
+            <i class="fa-solid fa-id-badge"></i>
+            <h4>Step 1: Details</h4>
+            <p>Enter employee and role information</p>
+        </div>
+
+        <div class="process-box">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h4>Step 2: Permissions</h4>
+            <p>Assign access control for each module</p>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- data table for roles  -->
+<div class="table-card">
+
+    <div class="table-header">
+        <h3>Admin Roles</h3>
+        <div class="table-tools">
+            <input type="text" placeholder="Search roles..." />
+        </div>
+    </div>
+
+    <!-- EMPTY STATE -->
+    <div class="empty-state" id="emptyState" style="display:none;">
+        <i class="fa-solid fa-shield-halved"></i>
+        <p>Currently there are no admin roles</p>
+        <button class="btn primary" id="addFirstRole">
+            <i class="fa-solid fa-plus"></i> Add Role
+        </button>
+    </div>
+
+    <!-- TABLE -->
+    <table id="rolesTable">
+        <thead>
+            <tr>
+                <th>Employee</th>
+                <th>Role Info</th>
+                <th>Access</th>
+                <th>Status</th>
+                <th>Permissions</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="rolesBody">
+            <!-- JS DATA -->
+        </tbody>
+    </table>
+
+    <!-- PERMISSION MODAL -->
+    <div class="modal" id="permissionModal">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h3>Page Permissions</h3>
+                <button onclick="closeModal()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="modal-body" id="modalBody">
+                <!-- dynamic -->
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+let editIndex = null;
+
+function editRole(index) {
+  const user = rolesData[index];
+  editIndex = index;
+
+  // open panel
+  panel.classList.add("show");
+
+  // go to step 1
+  step2.classList.remove("active");
+  step1.classList.add("active");
+
+  // fill form
+  const inputs = document.querySelectorAll("#step1 input, #step1 textarea");
+
+  inputs[0].value = user.name;
+  inputs[1].value = user.id;
+  inputs[2].value = user.dept;
+  inputs[3].value = user.role;
+
+  // (optional) address not stored yet
+
+  // move to step 2 automatically (optional UX)
+  setTimeout(() => {
+    nextBtn.click();
+  }, 300);
+}
+</script>
+
+<script>
+const rolesData = [
+  {
+    name: "Rahul Sharma",
+    id: "EMP001",
+    dept: "Finance",
+    role: "Manager",
+    access: "full",
+    status: "active",
+    permissions: {
+      Dashboard: "Full",
+      Customer: "Full",
+      Loan: "Full",
+      Transactions: "Read",
+      Reports: "Full"
+    }
+  },
+  {
+    name: "Priya Mehta",
+    id: "EMP002",
+    dept: "Loan",
+    role: "Officer",
+    access: "read",
+    status: "active",
+    permissions: {
+      Dashboard: "Read",
+      Customer: "Read",
+      Loan: "Full",
+      Transactions: "Read",
+      Reports: "Block"
+    }
+  },
+  {
+    name: "Amit Verma",
+    id: "EMP003",
+    dept: "Accounts",
+    role: "Executive",
+    access: "block",
+    status: "inactive",
+    permissions: {
+      Dashboard: "Block",
+      Customer: "Block",
+      Loan: "Read",
+      Transactions: "Read",
+      Reports: "Block"
+    }
+  }
+];
+
+const tbody2 = document.getElementById("rolesBody");
+
+function renderRoles() {
+  tbody2.innerHTML = "";
+
+  rolesData.forEach((user, index) => {
+
+    const initials = user.name.split(" ").map(n => n[0]).join("");
+
+    const accessClass =
+      user.access === "full" ? "access-full" :
+      user.access === "read" ? "access-read" : "access-block";
+
+    const accessText =
+      user.access === "full" ? "Full Access" :
+      user.access === "read" ? "Read Only" : "Blocked";
+
+    const statusDot =
+      user.status === "active" ? "active-dot" : "inactive-dot";
+
+    const row = `
+      <tr>
+        <td>
+          <div class="emp-cell">
+            <div class="emp-avatar">${initials}</div>
+            <div class="emp-info">
+              <span class="emp-name">${user.name}</span>
+              <span class="emp-id">${user.id}</span>
+            </div>
+          </div>
+        </td>
+
+        <td>
+          <div>${user.dept}</div>
+          <span class="role-badge">${user.role}</span>
+        </td>
+
+        <td>
+          <span class="access-tag ${accessClass}">${accessText}</span>
+        </td>
+
+        <td>
+          <span class="status-dot ${statusDot}"></span>
+          ${user.status}
+        </td>
+        <td>
+  <button class="btn small view-btn" onclick="openPermissionModal(${index})">
+    View Pages
+  </button>
+</td>
+
+        <td>
+         <div class="action-wrapper">
+  <button class="action-btn" onclick="toggleMenu(this)">
+    <i class="fa-solid fa-ellipsis-vertical"></i>
+  </button>
+
+  <div class="action-menu">
+    <div onclick="editRole(${index})">
+      <i class="fa-solid fa-pen"></i> Edit
+    </div>
+    <div onclick="deleteRole(${index})">
+      <i class="fa-solid fa-trash"></i> Delete
+    </div>
+  </div>
+</div>
+        </td>
+      </tr>
+    `;
+
+    tbody2.insertAdjacentHTML("beforeend", row);
+  });
+}
+
+renderRoles();
+</script>
+
+<script>
+function openPermissionModal(index) {
+  const user = rolesData[index];
+  const modal = document.getElementById("permissionModal");
+  const body = document.getElementById("modalBody");
+
+  body.innerHTML = "";
+
+  Object.entries(user.permissions).forEach(([page, value]) => {
+
+    const className =
+      value === "Full" ? "full" :
+      value === "Read" ? "read" : "block";
+
+    const row = `
+      <div class="perm-item">
+        <span>${page}</span>
+        <span class="perm-badge ${className}">${value}</span>
+      </div>
+    `;
+
+    body.insertAdjacentHTML("beforeend", row);
+  });
+
+  modal.classList.add("show");
+}
+
+function closeModal() {
+  document.getElementById("permissionModal").classList.remove("show");
+}
+</script>
+
+<script>
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('overlay');
+
+document.getElementById('toggleBtn').onclick = () => {
+  sidebar.classList.add('show');
+  overlay.classList.add('show');
+};
+
+document.getElementById('closeSidebar').onclick =
+overlay.onclick = () => {
+  sidebar.classList.remove('show');
+  overlay.classList.remove('show');
+};
+
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+
+<!-- ROLES AND PERMISSION SCRIPT -->
+<script>
+    const toggleBtn = document.getElementById("toggleRoleForm");
+const panel = document.getElementById("rolePanel");
+
+toggleBtn.onclick = () => {
+  panel.classList.toggle("show");
+};
+
+const nextBtn = document.querySelector(".next-btn");
+const backBtn = document.getElementById("backBtn");
+
+const step1 = document.getElementById("step1");
+const step2 = document.getElementById("step2");
+
+const steps = document.querySelectorAll(".step");
+const process = document.querySelectorAll(".process-box");
+
+nextBtn.onclick = () => {
+  step1.classList.remove("active");
+  step2.classList.add("active");
+
+  steps[0].classList.remove("active");
+  steps[1].classList.add("active");
+
+  process[0].classList.remove("active");
+  process[1].classList.add("active");
+};
+
+backBtn.onclick = () => {
+  step2.classList.remove("active");
+  step1.classList.add("active");
+
+  steps[1].classList.remove("active");
+  steps[0].classList.add("active");
+
+  process[1].classList.remove("active");
+  process[0].classList.add("active");
+};
+
+// data tables for roles
+
+</script>
+
+<!-- table edit/delete toggle  -->
+<script>
+function toggleMenu(btn) {
+  // close all first
+  document.querySelectorAll(".action-menu").forEach(m => m.style.display = "none");
+
+  const menu = btn.nextElementSibling;
+  menu.style.display = "block";
+
+  // close on outside click
+  document.addEventListener("click", function handler(e) {
+    if (!btn.parentElement.contains(e.target)) {
+      menu.style.display = "none";
+      document.removeEventListener("click", handler);
+    }
+  });
+}
+</script>
+
+<!-- save while new/edit -->
+<script>
+document.querySelector(".step-actions .primary").onclick = () => {
+
+  const inputs = document.querySelectorAll("#step1 input");
+
+  const newData = {
+    name: inputs[0].value,
+    id: inputs[1].value,
+    dept: inputs[2].value,
+    role: inputs[3].value,
+    access: "full",
+    status: "active",
+    permissions: {
+      Dashboard: "Full",
+      Customer: "Read",
+      Loan: "Full",
+      Transactions: "Read",
+      Reports: "Full"
+    }
+  };
+
+  if (editIndex !== null) {
+    // UPDATE
+    rolesData[editIndex] = newData;
+    editIndex = null;
+  } else {
+    // CREATE
+    rolesData.push(newData);
+  }
+
+  renderRoles();
+  panel.classList.remove("show");
+};
+</script>
+
+<!-- delete role -->
+ <script>
+function deleteRole(index) {
+  if (confirm("Delete this role?")) {
+    rolesData.splice(index, 1);
+    renderRoles();
+  }
+}
+</script>
+
+<script>
+const profileToggle = document.getElementById("profileToggle");
+const profileMenu = document.getElementById("profileMenu");
+
+profileToggle.onclick = (e) => {
+  e.stopPropagation();
+  profileMenu.style.display =
+    profileMenu.style.display === "block" ? "none" : "block";
+};
+
+// close when clicking outside
+document.addEventListener("click", (e) => {
+  if (!profileToggle.contains(e.target) && !profileMenu.contains(e.target)) {
+    profileMenu.style.display = "none";
+  }
+});
+
+profileToggle.onclick = (e) => {
+  e.stopPropagation();
+  profileMenu.style.display =
+    profileMenu.style.display === "block" ? "none" : "block";
+
+  profileToggle.classList.toggle("open");
+};
+</script>

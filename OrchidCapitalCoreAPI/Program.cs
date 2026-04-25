@@ -34,7 +34,7 @@ builder.Services.AddControllers();
 builder.Services.AddScoped<IDapperRepository, DapperRepository>();
 // Login
 builder.Services.AddScoped<ILoginRepository, LoginRepository>();
-
+builder.Services.AddScoped<IAdminRepository, AdminRepository>();
 #region configure email keys
 builder.Services.Configure<EmailConfiguration>(builder.Configuration.GetSection("EMAIL-CONFIG"));
 

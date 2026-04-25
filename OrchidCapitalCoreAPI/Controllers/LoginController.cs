@@ -1,13 +1,11 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Abstractions;
 using Orchid.DataModels;
 using OrchidCapitalCoreAPI.Interface;
-using System.Diagnostics;
 
 namespace OrchidCapitalCoreAPI.Controllers
 {
-    [Route("api/CPORTALLOGIN")]
+    [Route("api/ORCHIDCAPITAL")]
     [ApiController]
     [ApiVersion(APIVersions.Version1)]
     public class LoginController : Controller

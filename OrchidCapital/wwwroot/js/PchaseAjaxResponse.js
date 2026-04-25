@@ -45,12 +45,6 @@
                 "Accept-Language": PChaseModule.configs.loginUserCultureCode,
                 "App-ModuleBaseUrl": PChaseModule._PChaseCommon._GetCurrentProjectBaseUrl,
                 "Access-Control-Allow-Origin": PChaseModule.configs.basePath,
-                "App-CompanyCode": PChaseModule._PChaseCommon._companyCode,
-                "App-SiteCode": PChaseModule._PChaseCommon._locationCode,
-                "App-CompanyRegion": PChaseModule._PChaseCommon._companyRegion,
-                "App-ERPName": PChaseModule._PChaseCommon._erpName,
-                "App-EnableOCR": PChaseModule._PChaseCommon._enableOCR,      
-                "App-NumberOfDecimal": PChaseModule._PChaseCommon._companyNumberOfDecimal,
                 "Access-Control-Allow-Credentials": true,
                 "Access-Control-Allow-Methods": 'GET,PUT,POST,DELETE',
                 "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept"

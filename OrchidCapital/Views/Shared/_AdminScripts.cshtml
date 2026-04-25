@@ -1,0 +1,65 @@
+<script>
+    document.querySelectorAll('#Adminmenu a').forEach(link => {
+        link.addEventListener('click', function () {
+            localStorage.setItem("activeMenu", this.href);
+            $('#Adminmenu li a').removeClass("active");
+        });
+    });
+    document.querySelectorAll('#profileMenu a').forEach(link => {
+        link.addEventListener('click', function () {
+            localStorage.setItem("activeMenu", this.href);
+            $('#Adminmenu li a').removeClass("active");
+        });
+    });
+    const saved = localStorage.getItem("activeMenu");
+    if (saved === null) {
+        $('#Adminmenu li a:first').addClass("active");
+    }
+    document.querySelectorAll('#Adminmenu a').forEach(link => {
+        if (link.href === saved) {
+            link.classList.add("active");
+        }
+    });
+
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    document.getElementById('toggleBtn').onclick = () => {
+        sidebar.classList.add('show');
+        overlay.classList.add('show');
+    };
+
+    document.getElementById('closeSidebar').onclick =
+        overlay.onclick = () => {
+            sidebar.classList.remove('show');
+            overlay.classList.remove('show');
+        };
+
+    document.getElementById('year').innerHTML = new Date().getFullYear();
+</script>
+
+<script>
+    const profileToggle = document.getElementById("profileToggle");
+    const profileMenu = document.getElementById("profileMenu");
+
+    profileToggle.onclick = (e) => {
+        e.stopPropagation();
+        profileMenu.style.display =
+            profileMenu.style.display === "block" ? "none" : "block";
+    };
+
+    // close when clicking outside
+    document.addEventListener("click", (e) => {
+        if (!profileToggle.contains(e.target) && !profileMenu.contains(e.target)) {
+            profileMenu.style.display = "none";
+        }
+    });
+
+    profileToggle.onclick = (e) => {
+        e.stopPropagation();
+        profileMenu.style.display =
+            profileMenu.style.display === "block" ? "none" : "block";
+
+        profileToggle.classList.toggle("open");
+    };
+</script>
