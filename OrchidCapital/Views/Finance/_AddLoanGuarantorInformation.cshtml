@@ -1,0 +1,262 @@
+@model OrchidCapital.Models.UpdateLoanApplicationGuarantorRequest
+@{
+    var random = new Random();
+}
+<h3>Guarantor Information</h3>
+<div class="customer-toolbar tooltip">
+    <button class="btn btn-blue addGuarantor" id="addGuarantor" onclick="AFinanceNewLoan._AFinanceNewLoan.AddGuarantor();">
+        <i class="fa-solid fa-plus"></i><span class="tooltip-text">Add Guarantor</span>
+    </button>
+</div>
+<!-- Loan Summary -->
+<div class="summary-box">
+    <div class="summary-item">
+        <label>Application No</label>
+        <span id="summaryApplicationNo">@Model.ApplicationNo</span>
+    </div>
+    <div class="summary-item">
+        <label>Customer</label>
+        <span id="summaryCustomer">@Model.CustomerName</span>
+    </div>
+    <div class="summary-item">
+        <label>Loan Amount</label>
+        <span id="summaryAmount">₹@Model.RequestedAmount</span>
+    </div>
+    <div class="summary-item">
+        <label>Branch</label>
+        <span id="summaryBranch">@Model.BranchName</span>
+    </div>
+</div>
+<!-- ========================== -->
+<form id="nav_LoanApplicationGuarantor_form" action="@Url.Action("UpdateLoanApplicationGuarantorDetails", "Finance")"
+      method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="guarantor-card-main1" id="guarantorContainer">
+        @for (int i = 0; i < Model.Guarantors.Count; i++)
+        {
+            <div class="guarantor-card mb-3">
+                @Html.HiddenFor(m => m.LoanApplicationId)
+                @Html.HiddenFor(m => m.Guarantors[i].GuarantorId)
+
+                <div class="card-title1">
+                    <h4>Guarantor @(i + 1)</h4>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Name</label>
+                        @Html.TextBoxFor(m => m.Guarantors[@i].Name, new
+                        {
+                            @placeholder = "Name",
+                            @class = "form-control txtspace", MaxLength = 500
+                        })
+                        @Html.ValidationMessageFor(m => m.Guarantors[@i].Name, "", new
+                        {
+                            @class =
+                        "text-danger"
+                        })
+                    </div>
+
+                    <div class="form-group">
+                        <label>Mobile</label>
+                        @Html.TextBoxFor(m => m.Guarantors[@i].Mobile, new
+                        {
+                            @placeholder = "Mobile",
+                            @class = "form-control txtspace txtnumeric", MaxLength = 10
+                        })
+                        @Html.ValidationMessageFor(m => m.Guarantors[@i].Mobile, "", new
+                        {
+                            @class = "text-danger"
+                        })
+                    </div>
+
+                    <div class="form-group">
+                        <label>Occupation</label>
+                        @Html.TextBoxFor(m => m.Guarantors[@i].Occupation, new
+                        {
+                            @placeholder = "Occupation",
+                            @class = "form-control txtspace", MaxLength = 50
+                        })
+                        @Html.ValidationMessageFor(m => m.Guarantors[@i].Occupation, "", new
+                        {
+                            @class = "text-danger"
+                        })
+                    </div>
+
+                    <div class="form-group">
+                        <label>Relationship</label>
+                        @Html.TextBoxFor(m => m.Guarantors[@i].Relationship, new
+                        {
+                            @placeholder = "Relationship",
+                            @class = "form-control txtspace", MaxLength = 50
+                        })
+                        @Html.ValidationMessageFor(m => m.Guarantors[@i].Relationship, "", new
+                        {
+                            @class = "text-danger"
+                        })
+                    </div>
+
+                    <div class="form-group">
+                        <label>PAN</label>
+                        @Html.TextBoxFor(m => m.Guarantors[@i].PANNumber, new
+                        {
+                            @placeholder = "PAN Number",
+                            @class = "form-control txtspace", MaxLength = 10
+                        })
+                        @Html.ValidationMessageFor(m => m.Guarantors[@i].PANNumber, "", new
+                        {
+                            @class = "text-danger"
+                        })
+                    </div>
+
+                    <div class="form-group">
+                        <label>Aadhaar</label>
+                        @Html.TextBoxFor(m => m.Guarantors[@i].AadhaarNumber, new
+                        {
+                            @placeholder = "Aadhaar Number txtnumeric",
+                            @class = "form-control txtspace", MaxLength = 12
+                        })
+                        @Html.ValidationMessageFor(m => m.Guarantors[@i].AadhaarNumber, "", new
+                        {
+                            @class = "text-danger"
+                        })
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Address</label>
+                        @Html.TextAreaFor(m => m.Guarantors[@i].Address, new
+                        {
+                            @class = "form-control txtspace",
+                            @placeholder = "Address",
+                            @rows = "3", MaxLength = 1000
+                        })
+                        @Html.ValidationMessageFor(m => m.Guarantors[@i].Address, "", new
+                        {
+                            @class = "text-danger"
+                        })
+                    </div>
+                </div>
+
+                <div class="card-title1">
+                    <h4>Guarantor Document</h4>
+                </div>
+                <table class="table">
+                    @for (int j = 0; j < Model.Guarantors[i].Documents.Count; j++)
+                    {
+                       string newId = random.NextInt64(1000000000, 9999999999).ToString();
+                        <tr>
+                            @Html.HiddenFor(m => m.Guarantors[i].Documents[j].GuarantorDocumentId)
+                            @Html.HiddenFor(m => m.Guarantors[i].Documents[j].GuarantorId)
+                            @Html.HiddenFor(m => m.Guarantors[i].Documents[j].DocumentName)
+                            @Html.HiddenFor(m => m.Guarantors[i].Documents[j].FilePath)
+                            <td>
+                                @Model.Guarantors[i].Documents[j].DocumentName
+                            </td>
+
+                            <td>
+                                <div class="file-upload">
+
+                                    <label for="GuaImageFile_@newId" class="upload-button">
+                                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                                        <span id="GuauploadText_@newId">
+                                            @(string.IsNullOrEmpty(Model.Guarantors[@i].Documents[@j].FilePath) ? "Upload Document" :
+                                                         "Replace Document")
+                                        </span>
+                                    </label>
+
+                                    @Html.TextBoxFor(m => m.Guarantors[@i].Documents[@j].ImageFile, new
+                                    {
+                                        type = "file",
+                                        id = "GuaImageFile_" + newId,
+                                        @class = "file-input",
+                                        onchange = "AFinanceNewLoan._AFinanceNewLoan.GuarantorFileChange(this," + newId + ")"
+                                    })
+
+                                    <span id="GuafileName_@newId" class="file-name">
+                                        @(string.IsNullOrEmpty(Model.Guarantors[@i].Documents[@j].FilePath)
+                                            ? "No file selected"
+                                            : Model.Guarantors[@i].Documents[@j].DocumentName)
+                                    </span>
+
+                                    @Html.ValidationMessageFor(m => m.Guarantors[@i].Documents[@j].ImageFile, "", new
+                                    {
+                                        @class ="text-danger"
+                                    })
+
+                                </div>
+                            </td>
+
+                            <td>
+                                @if (!string.IsNullOrEmpty(Model.Guarantors[@i].Documents[@j].FilePath))
+                                    {
+                                        <img src="~/loanguarantors/@Model.Guarantors[@i].Documents[@j].FilePath" id="GuaimgShow_@newId" class="document-preview"
+                                             alt="Document" onclick="window.open('/loanguarantors/@Model.Guarantors[@i].Documents[@j].FilePath','_blank')" />
+                                    }
+                                    else
+                                    {
+                                        <img src="~/loanguarantors/no-image.png" id="GuaimgShow_@newId" class="document-preview"
+                                             alt="No Image" />
+                                    }
+                                    <script>
+                                        $(document).ready(function () {
+                                            setGuarantorImageFromPath('/loanguarantors/@Model.Guarantors[@i].Documents[@j].FilePath',"GuaImageFile_@newId");
+                                        });
+                                    </script>
+                            </td>
+                        </tr>
+                        
+                    }
+                </table>
+            </div>
+        }
+    </div>
+
+    <div class="step-actions">
+        <button class="btn btn-blue" id="back2" type="button"
+                onclick="AFinanceNewLoan._AFinanceNewLoan.LoanProcessStepBack(2, 1)">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+
+        <button class="btn btn-blue" id="next3" type="submit"
+                onclick="AFinanceNewLoan._AFinanceNewLoan.SubmitLoanApplicationGuarantorFormData(event,$('#nav_LoanApplicationGuarantor_form'));">
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </div>
+</form>
+
+<script>
+    async function setGuarantorImageFromPath(imagePath,index) {
+        try {
+            const response = await fetch(imagePath);
+
+            if (!response.ok) {
+                throw new Error("Image not found");
+            }
+
+            const blob = await response.blob();
+
+            const fileName = imagePath.split('/').pop();
+
+            const file = new File(
+                [blob],
+                fileName,
+                {
+                    type: blob.type
+                }
+            );
+
+            const dataTransfer = new DataTransfer();
+            dataTransfer.items.add(file);
+
+            const input = document.getElementById(index);
+
+            input.files = dataTransfer.files;
+
+            console.log(input.files[0].name);
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+</script>

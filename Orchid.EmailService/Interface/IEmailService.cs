@@ -4,6 +4,6 @@ namespace Orchid.EmailService.Interface
 {
     public interface IEmailService
     {
-        Task<bool> SendEmailAsync(EmailRequestModel model);
+        Task<Tuple<bool,string>> SendEmailAsync(EmailRequestModel model);
     }
 }

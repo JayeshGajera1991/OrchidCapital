@@ -6,6 +6,8 @@ namespace OrchidCapital.Helper
     public static class Encryption
     {
         public static Random random = new Random();
+        private static readonly string Key = "12345678901234567890123456789012";
+        private static readonly string IV = "1234567890123456";
         public static string Encrypt(string encryptionKey, string clearText)
         {
             try
@@ -89,5 +91,22 @@ namespace OrchidCapital.Helper
             return new string(scrambledChars);
         }
 
+        public static string DecryptParameter(string cipherText)
+        {
+            byte[] cipherBytes = Convert.FromBase64String(cipherText);
+
+            using var aes = Aes.Create();
+            aes.Key = Encoding.UTF8.GetBytes(Key);
+            aes.IV = Encoding.UTF8.GetBytes(IV);
+            aes.Mode = CipherMode.CBC;
+            aes.Padding = PaddingMode.PKCS7;
+
+            using var decryptor = aes.CreateDecryptor();
+            using var ms = new MemoryStream(cipherBytes);
+            using var cs = new CryptoStream(ms, decryptor, CryptoStreamMode.Read);
+            using var sr = new StreamReader(cs);
+
+            return sr.ReadToEnd();
+        }
     }
 }

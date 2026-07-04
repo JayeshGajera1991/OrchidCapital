@@ -5,12 +5,12 @@
       {
         "Path": "OrchidCapital\\OrchidCapital.csproj",
         "Action": "Start",
-        "DebugTarget": "https"
+        "DebugTarget": "IIS Express"
       },
       {
         "Path": "OrchidCapitalCoreAPI\\OrchidCapitalCoreAPI.csproj",
         "Action": "Start",
-        "DebugTarget": "https"
+        "DebugTarget": "IIS Express"
       },
       {
         "Path": "Orchid.DataModels\\Orchid.DataModels.csproj",
@@ -26,6 +26,10 @@
       },
       {
         "Path": "Orchid.EmailService\\Orchid.EmailService.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "Orchid.DataAccess\\Orchid.DataAccess.csproj",
         "Action": "Start"
       }
     ]

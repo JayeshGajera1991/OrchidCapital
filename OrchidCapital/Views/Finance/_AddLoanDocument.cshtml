@@ -1,0 +1,139 @@
+@model OrchidCapital.Models.UpdateLoanApplicationDocumentRequest
+<h3>Applicant Document Upload</h3>
+<form id="nav_LoanApplicationDocument_form" action="@Url.Action("UpdateLoanApplicationDocumentDetails", "Finance")"
+      method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(m => m.LoanApplicationId)
+    <div class="guarantor-card-main">
+        <div class="table-responsive">
+            <div class="document-table">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th style="width:45%">Document Name</th>
+                            <th>Status</th>
+                            <th>Upload</th>
+                            <th>Review</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @for (int i = 0; i < Model.Documents.Count; i++)
+                        {
+                            <tr>
+                                @Html.HiddenFor(m => m.Documents[i].DocumentId)
+                                @Html.HiddenFor(m => m.Documents[i].DocumentType)
+                                @Html.HiddenFor(m => m.Documents[i].DocumentName)
+                                @Html.HiddenFor(m => m.Documents[i].FilePath)
+                                <td>
+                                    @Model.Documents[i].DocumentName
+                                </td>
+
+                                <td>
+                                    <span class="doc-status pending">Pending</span>
+                                </td>
+
+                                <td>
+                                    <div class="file-upload">
+
+                                        <label for="ImageFile_@i" class="upload-button">
+                                            <i class="fa-solid fa-cloud-arrow-up"></i>
+                                            <span id="uploadText_@i">
+                                                @(string.IsNullOrEmpty(Model.Documents[i].FilePath) ? "Upload Document" :
+                                                             "Replace Document")
+                                            </span>
+                                        </label>
+
+                                        @Html.TextBoxFor(m => m.Documents[i].ImageFile, new
+                                        {
+                                            type = "file",
+                                            id = "ImageFile_" + i,
+                                            @class = "file-input",
+                                            onchange = "AFinanceNewLoan._AFinanceNewLoan.FileChange(this," + i + ")"
+                                        })
+
+                                        <span id="fileName_@i" class="file-name">
+                                            @(string.IsNullOrEmpty(Model.Documents[i].FilePath)
+                                                ? "No file selected"
+                                                : Model.Documents[i].DocumentName)
+                                        </span>
+
+                                        @Html.ValidationMessageFor(m => m.Documents[i].ImageFile, "", new
+                                        {
+                                            @class =
+                                                                 "text-danger"
+                                        })
+
+                                    </div>
+                                </td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(Model.Documents[i].FilePath))
+                                    {
+                                        <img src="~/loandocuments/@Model.Documents[i].FilePath" id="imgShow_@i"
+                                             class="document-preview" alt="Document"
+                                             onclick="window.open('/loandocuments/@Model.Documents[i].FilePath','_blank')" />
+                                    }
+                                    else
+                                    {
+                                        <img src="~/loandocuments/no-image.png" id="imgShow_@i" class="document-preview"
+                                             alt="No Image" />
+                                    }
+                                    <script>
+                                        $(document).ready(function () {
+                                            setImageFromPath('/loandocuments/@Model.Documents[i].FilePath',"ImageFile_@i");
+                                        });
+                                    </script>
+                                </td>                                
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="step-actions">
+        <button class="btn btn-blue" type="button" id="back1"
+                onclick="AFinanceNewLoan._AFinanceNewLoan.LoanProcessStepBack(1,0)">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button class="btn btn-blue" id="next2" type="submit"
+                onclick="AFinanceNewLoan._AFinanceNewLoan.SubmitLoanApplicationDocumentFormData(event,$('#nav_LoanApplicationDocument_form'));">
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </div>
+</form>
+
+<script>
+    async function setImageFromPath(imagePath,index) {
+        try {
+            const response = await fetch(imagePath);
+
+            if (!response.ok) {
+                throw new Error("Image not found");
+            }
+
+            const blob = await response.blob();
+
+            const fileName = imagePath.split('/').pop();
+
+            const file = new File(
+                [blob],
+                fileName,
+                {
+                    type: blob.type
+                }
+            );
+
+            const dataTransfer = new DataTransfer();
+            dataTransfer.items.add(file);
+
+            const input = document.getElementById(index);
+
+            input.files = dataTransfer.files;
+
+            console.log(input.files[0].name);
+
+        } catch (error) {
+            console.log(error);
+        }
+    }

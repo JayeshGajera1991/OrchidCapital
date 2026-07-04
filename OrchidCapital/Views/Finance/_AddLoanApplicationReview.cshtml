@@ -1,0 +1,141 @@
+@using DocumentFormat.OpenXml.Office.CustomUI
+@model OrchidCapital.Models.LoanApplicationReview
+
+<h3>Review Loan Application</h3>
+<div class="guarantor-card-main">
+    <div class="review-card">
+        <div class="card-title1">
+            <h4>Application Details</h4>
+        </div>
+        <div class="table-responsive table-wrapper scroll-body">
+            <table class="review-table table">
+                @if (Model != null && Model.getLoanDetails != null)
+                {
+                    <tr>
+                        <td>Application No</td>
+                        <td><strong>@Model.getLoanDetails.ApplicationNo</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Customer</td>
+                        <td id="reviewCustomer">@Model.getLoanDetails.CustomerName</td>
+                    </tr>
+                    <tr>
+                        <td>Branch</td>
+                        <td id="reviewBranch">@Model.getLoanDetails.BranchName</td>
+                    </tr>
+                    <tr>
+                        <td>Loan Scheme</td>
+                        <td id="reviewScheme">@Model.getLoanDetails.ServiceName</td>
+                    </tr>
+                    <tr>
+                        <td>Loan Amount</td>
+                        <td id="reviewAmount">₹@Model.getLoanDetails.RequestedAmount</td>
+                    </tr>
+                    <tr>
+                        <td>Tenure</td>
+                        <td id="reviewTenure">@Model.getLoanDetails.RequestedTenure Months</td>
+                    </tr>
+                    <tr>
+                        <td>ROI</td>
+                        <td id="reviewROI">@Model.getLoanDetails.RequestedInterestRate%</td>
+                    </tr>
+                    <tr>
+                        <td>Purpose</td>
+                        <td id="reviewPurpose">@Model.getLoanDetails.LoanPurpose</td>
+                    </tr>
+                }
+            </table>
+
+        </div>
+    </div>
+
+    <div class="review-card">
+        <div class="card-title1">
+            <h4>Application Document</h4>
+        </div>
+        <div class="table-responsive table-wrapper scroll-body">
+            <table class="review-table table">
+                @if (Model != null && Model.documentLists != null && Model.documentLists.Count > 0)
+                {
+                    foreach (var item in Model.documentLists)
+                    {
+                        <tr>
+                            <td>@item.DocumentName</td>
+                            <td><span class="status @(item.Verified == true ? "uploaded" : "pending")">@(item.Verified == true ? "Uploaded" : "Pending")</span></td>
+                            </tr>
+                        }
+                    }
+                </table>
+            </div>
+        </div>
+
+        <div class="review-card">
+            <div class="card-title1">
+                <h4>Guarantor Details</h4>
+            </div>
+            <div id="reviewGuarantor">
+                @if (Model != null && Model.guarantorRequests != null && Model.guarantorRequests.Count > 0)
+                {
+                    int i = 1;
+                    foreach (var item in Model.guarantorRequests)
+                    {
+                         <div class="card-title1">
+                            <h4>Guarantor @i</h4>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="review-table">
+                                <tr>
+                                    <td>Name</td>
+                                    <td>@item.Name</td>
+                                </tr>
+                                <tr>
+                                    <td>Mobile</td>
+                                    <td>@item.Mobile</td>
+                                </tr>
+                                <tr>
+                                    <td>Occupation</td>
+                                    <td>@item.Occupation</td>
+                                </tr>
+                                <tr>
+                                    <td>Relationship</td>
+                                    <td>@item.Relationship</td>
+                                </tr>
+                                <tr>
+                                    <td>PAN</td>
+                                    <td>@item.PANNumber</td>
+                                </tr>
+                                <tr>
+                                    <td>Aadhaar</td>
+                                    <td>@item.AadhaarNumber</td>
+                                </tr>
+                                <tr>
+                                    <td>Address</td>
+                                    <td>@item.Address</td>
+                                </tr>
+                            </table>
+                        </div>
+                        i = i + 1;
+                    }
+                }
+            </div>
+        </div>
+
+        <div class="review-card">
+            <h4>Declaration</h4>
+            <label class="checkbox">
+                <input type="checkbox" id="declaration">
+                I hereby declare that all information and uploaded documents are true and correct.
+            </label>
+        </div>
+    </div>
+    <div class="step-actions">
+        <button class="btn btn-blue" id="back3" type="button"
+                onclick="AFinanceNewLoan._AFinanceNewLoan.LoanProcessStepBack(3,2)">
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+
+        <button class="btn btn-green" id="submitApplication" type="button"
+                onclick="AFinanceNewLoan._AFinanceNewLoan.UpdateFinalLoanApplicationDetails();">
+            <i class="fa-solid fa-paper-plane"></i>
+        </button>
+    </div>

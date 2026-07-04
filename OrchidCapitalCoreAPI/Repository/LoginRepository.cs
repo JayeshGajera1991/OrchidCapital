@@ -20,22 +20,13 @@ namespace OrchidCapitalCoreAPI.Repository
         }
         public async Task<CommonResponse> AuthenticateUser(LoginRequest request)
         {
-            CommonResponse AuthResponse = new CommonResponse();
-            CommonResponse response = new CommonResponse();
-            AuthResponse = await UserAuthenticate(request.UserName, request.Password, request.PasswordTryCount);
-            response.StatusCode = AuthResponse.StatusCode;
-            response.Response = AuthResponse.Response;
-            response.Message = AuthResponse.Message;
-            return response;
+            CommonResponse AuthResponse = await UserAuthenticate(request.UserName, request.Password, request.PasswordTryCount);
+            return AuthResponse;
         }
 
         private async Task<CommonResponse> UserAuthenticate(string UserName, string Password, int PasswordTryCount)
         {
-            CommonResponse objResponse = new CommonResponse();
-            List<AuthUserLogin> objlist = new List<AuthUserLogin>();
-            AuthUserLogin authUser = new AuthUserLogin();
-            string userId = string.Empty;
-            int LoginTryCount = 0;
+            CommonResponse response = new CommonResponse();
             try
             {
                 var query = ProxyAPI.Admin_ValidateUserLogin;
@@ -45,78 +36,28 @@ namespace OrchidCapitalCoreAPI.Repository
                 param.Add("@PasswordTryCount", PasswordTryCount);
 
                 var queryResponse = await _dapperRepository.GetAllAsync<UserLoginResponse>(query, param, commandTimeout: null, commandType: CommandType.StoredProcedure);
-                CommonResponse response = new CommonResponse();
                 if (queryResponse.Any())
                 {
+                    string NewToken = JWTExtension.CreateToken(queryResponse.ToList().FirstOrDefault().UserName, queryResponse.ToList().FirstOrDefault().UserRole, _configuration);
+                    queryResponse.ToList().FirstOrDefault().Token = NewToken;
                     response.StatusCode = 1;
                     response.Response = queryResponse;
-                    response.Message = Convert.ToString(response.Response[0].Message);
-                    userId = Convert.ToString(response.Response[0].Message);
-                    LoginTryCount = Convert.ToInt32(response.Response[0].LoginTryCount);
-                    authUser.EmailId = response.Response[0].Email;
-                    authUser.UserName = Convert.ToString(response.Response[0].UserName);
-                    authUser.FullName = Convert.ToString(response.Response[0].FullName);
-                    authUser.UserRole = Convert.ToString(response.Response[0].UserRole);
-                    authUser.IsRepeat = Convert.ToString(response.Response[0].IsRepeat);
+                    response.Message = Convert.ToString(queryResponse.ToList().FirstOrDefault().Message);
                 }
                 else
                 {
                     response.StatusCode = 0;
+                    response.Response = null;
                     response.Message = "Data Not Found.";
                 }
-                switch (userId)
-                {
-                    case "-1":
-                        objResponse.StatusCode = 0;
-                        objResponse.Message = "101";
-                        objResponse.Response = Convert.ToString(LoginTryCount);
-                        break;
-                    case "-2":
-                        objResponse.StatusCode = 2;
-                        objResponse.Message = "103";
-                        objResponse.Response = null;
-                        break;
-                    case "-5":
-                        objResponse.StatusCode = 5;
-                        objResponse.Response = null;
-                        objResponse.Message = "104";
-                        break;
-                    case "-3":
-                        objResponse.StatusCode = 3;
-                        objResponse.Response = null;
-                        objResponse.Message = "105";
-                        break;
-                    case "-4":
-                        objResponse.StatusCode = 4;
-                        objResponse.Response = null;
-                        objResponse.Message = "106";
-                        break;
-                    default:
-                        string NewToken = JWTExtension.CreateToken(authUser.UserName, authUser.UserRole, _configuration);
-                        objlist.Add(new AuthUserLogin
-                        {
-                            Token = NewToken,
-                            UserName = authUser.UserName,
-                            FullName = authUser.FullName,
-                            EmailId = authUser.EmailId,
-                            UserRole = authUser.UserRole,
-                            IsRepeat = authUser.IsRepeat
-                        });
-
-                        objResponse.StatusCode = 1;
-                        objResponse.Response = objlist;
-                        objResponse.Message = "";
-                        break;
-                }
             }
-
             catch (Exception ex)
             {
-                objResponse.StatusCode = 0;
-                objResponse.Message = ex.Message;
-                objResponse.Response = "Internal Server Error";
+                response.StatusCode = 0;
+                response.Message = ex.Message;
+                response.Response = null;
             }
-            return objResponse;
+            return response;
         }
         private string GetDomainName(string usernameDomain)
         {
@@ -160,6 +101,163 @@ namespace OrchidCapitalCoreAPI.Repository
             {
                 return usernameDomain;
             }
+        }
+
+        public async Task<CommonResponse> ChangePassword(ChangePassword request)
+        {
+            CommonResponse response = new CommonResponse();
+            try
+            {
+                var query = "UPortal_ChangePassword";
+                var param = new DynamicParameters();
+                param.Add("@CtxName", request.UserName);
+                param.Add("@CurPassword", request.CurrentPassword);
+                param.Add("@NewPassword", request.NewPassword);
+                var queryResponse = await _dapperRepository.GetAllAsync<dynamic>(query, param, commandTimeout: null, commandType: CommandType.StoredProcedure);
+                if (queryResponse.Any())
+                {
+                    response.StatusCode = 1;
+                    response.Response = queryResponse;
+                    response.Message = "Password changed successfully.";
+                }
+                else
+                {
+                    response.StatusCode = 0;
+                    response.Message = "Data Not Found.";
+                }
+            }
+
+            catch (Exception ex)
+            {
+                response.StatusCode = 0;
+                response.Message = ex.Message;
+                response.Response = "Internal Server Error";
+            }
+            return response;
+        }
+
+        public async Task<CommonResponse> ForgotPassword(ForgotPasswordViewModel request)
+        {
+            CommonResponse response = new CommonResponse();
+            try
+            {
+                var query = "UPortal_ForgotPasswordRequest";
+                var param = new DynamicParameters();
+                param.Add("@MailId", request.EmailId);
+                var queryResponse = await _dapperRepository.GetAllAsync<dynamic>(query, param, commandTimeout: null, commandType: CommandType.StoredProcedure);
+                if (queryResponse.Any())
+                {
+                    response.StatusCode = 1;
+                    response.Response = queryResponse;
+                    response.Message = "Password reset link has been sent to your email.";
+                }
+                else
+                {
+                    response.StatusCode = 0;
+                    response.Message = "Data Not Found.";
+                }
+            }
+
+            catch (Exception ex)
+            {
+                response.StatusCode = 0;
+                response.Message = ex.Message;
+                response.Response = "Internal Server Error";
+            }
+            return response;
+        }
+
+        public async Task<CommonResponse> VerifyResetPasswordRequest(string resetCode)
+        {
+            CommonResponse response = new CommonResponse();
+            try
+            {
+                var query = "UPortal_VerifyResetPasswordRequest";
+                var param = new DynamicParameters();
+                param.Add("@ResetCode", resetCode);
+                var queryResponse = await _dapperRepository.GetAllAsync<dynamic>(query, param, commandTimeout: null, commandType: CommandType.StoredProcedure);
+                if (queryResponse.Any())
+                {
+                    response.StatusCode = 1;
+                    response.Response = queryResponse;
+                    response.Message = "Reset password request verified successfully.";
+                }
+                else
+                {
+                    response.StatusCode = 0;
+                    response.Message = "Data Not Found.";
+                }
+            }
+
+            catch (Exception ex)
+            {
+                response.StatusCode = 0;
+                response.Message = ex.Message;
+                response.Response = "Internal Server Error";
+            }
+            return response;
+        }
+
+        public async Task<CommonResponse> ResetPassword(ResetPasswordViewModel request)
+        {
+            CommonResponse response = new CommonResponse();
+            try
+            {
+                var query = "UPortal_ResetPassword";
+                var param = new DynamicParameters();
+                param.Add("@ResetCode", request.ResetCode);
+                param.Add("@EncPassword", request.NewPassword);
+                var queryResponse = await _dapperRepository.GetAllAsync<dynamic>(query, param, commandTimeout: null, commandType: CommandType.StoredProcedure);
+                if (queryResponse.Any())
+                {
+                    response.StatusCode = 1;
+                    response.Response = queryResponse;
+                    response.Message = "Password reset successfully.";
+                }
+                else
+                {
+                    response.StatusCode = 0;
+                    response.Message = "Data Not Found.";
+                }
+            }
+
+            catch (Exception ex)
+            {
+                response.StatusCode = 0;
+                response.Message = ex.Message;
+                response.Response = "Internal Server Error";
+            }
+            return response;
+        }
+        public async Task<CommonResponse> GetUserPassword(string userName)
+        {
+            CommonResponse response = new CommonResponse();
+            try
+            {
+                var query = "UPortal_GetUserPassword";
+                var param = new DynamicParameters();
+                param.Add("@UserName", userName);
+                var queryResponse = await _dapperRepository.GetAllAsync<dynamic>(query, param, commandTimeout: null, commandType: CommandType.StoredProcedure);
+                if (queryResponse.Any())
+                {
+                    response.StatusCode = 1;
+                    response.Response = queryResponse;
+                    response.Message = "User password retrieved successfully.";
+                }
+                else
+                {
+                    response.StatusCode = 0;
+                    response.Message = "Data Not Found.";
+                }
+            }
+
+            catch (Exception ex)
+            {
+                response.StatusCode = 0;
+                response.Message = ex.Message;
+                response.Response = "Internal Server Error";
+            }
+            return response;
         }
     }
 }

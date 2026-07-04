@@ -342,7 +342,7 @@ body {
 }
 
 /* BUTTONS */
-.btn {
+/* .btn {
   border: 1px solid var(--border);
   background: #fff;
   padding: 7px 12px;
@@ -363,7 +363,7 @@ body {
 .btn.small {
   padding: 5px 10px;
   font-size: 12px;
-}
+} */
 
 /* ================= KPI CARDS ================= */
 .kpi {
@@ -591,6 +591,35 @@ tbody tr:hover {
 
 .edit-btn i {
   color: var(--primary);
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  position: absolute;
+  right: 40px;
+  top: 0;
+  background: var(--accent-light);
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background: #591c1c;
+}
+
+.delete-btn i {
+  color: var(--danger);
+}
+.modal12 {
+  width: 1340px;
+  max-width: 100%;
+  border-radius: 16px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* INFO GROUP */
@@ -854,7 +883,46 @@ tbody tr:hover {
   font-weight: 600;
   color: var(--primary);
 }
+.profile-upload {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+}
 
+.profile-upload img {
+   width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    top: 28px;
+    position: absolute;
+    left: -3px;
+}
+
+.upload-icon {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    cursor: pointer;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 60px;
+    height: 60px;
+    top: 30px;
+}
+
+.profile-upload:hover .upload-icon {
+    opacity: 1;
+}
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .footer {

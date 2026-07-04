@@ -63,6 +63,9 @@ D:\Current Projects\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\refint\Orch
 D:\Current Projects\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\Orchid.DataAccess.pdb
 D:\Current Projects\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\Orchid.DataAccess.genruntimeconfig.cache
 D:\Current Projects\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\ref\Orchid.DataAccess.dll
+E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\bin\Debug\net8.0\Orchid.UtilityHelper.deps.json
+E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\bin\Debug\net8.0\Orchid.UtilityHelper.runtimeconfig.json
+E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\bin\Debug\net8.0\Orchid.UtilityHelper.exe
 E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\bin\Debug\net8.0\Orchid.DataAccess.exe
 E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\bin\Debug\net8.0\Orchid.DataAccess.deps.json
 E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\bin\Debug\net8.0\Orchid.DataAccess.runtimeconfig.json
@@ -117,15 +120,17 @@ E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\bin\Debug\net8.0\runtimes\win-x
 E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.Messages.dll
 E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Diagnostics.EventLog.dll
 E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\bin\Debug\net8.0\Orchid.UtilityHelper.dll
+E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\bin\Debug\net8.0\Orchid.UtilityHelper.pdb
 E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\Orchid.DataAccess.csproj.AssemblyReference.cache
 E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\Orchid.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
 E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\Orchid.DataAccess.AssemblyInfoInputs.cache
 E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\Orchid.DataAccess.AssemblyInfo.cs
 E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\Orchid.DataAccess.csproj.CoreCompileInputs.cache
 E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\Orchid.DataAccess.sourcelink.json
+E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\Orchid.DataAccess.csproj.CopyComplete
 E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\Orchid.DataAccess.dll
 E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\refint\Orchid.DataAccess.dll
 E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\Orchid.DataAccess.pdb
 E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\Orchid.DataAccess.genruntimeconfig.cache
 E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\ref\Orchid.DataAccess.dll
-E:\OrchidCapital\OrchidCapital\Orchid.DataAccess\obj\Debug\net8.0\Orchid.D.4D8AA28B.Up2Date

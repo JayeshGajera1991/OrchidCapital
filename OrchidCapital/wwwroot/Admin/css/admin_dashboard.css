@@ -343,7 +343,7 @@ body {
 }
 
 /* BUTTONS */
-.btn {
+/* .btn {
   border: 1px solid var(--border);
   background: #fff;
   padding: 7px 12px;
@@ -364,7 +364,7 @@ body {
 .btn.small {
   padding: 5px 10px;
   font-size: 12px;
-}
+} */
 
 /* ================= KPI CARDS ================= */
 .kpi {

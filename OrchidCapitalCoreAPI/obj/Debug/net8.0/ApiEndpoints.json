@@ -2,7 +2,7 @@
   {
     "ContainingType": "OrchidCapitalCoreAPI.Controllers.LoginController",
     "Method": "AuthenticateUser",
-    "RelativePath": "api/CPORTALLOGIN/v1/AuthenticateUser",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/AuthenticateUser",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -11,6 +11,417 @@
         "Name": "request",
         "Type": "Orchid.DataModels.LoginRequest",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.LoginController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/ChangePassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Orchid.DataModels.ChangePassword",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.AdminController",
+    "Method": "ChangeStatusInMasterDetails",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/ChangeStatusInMasterDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Orchid.DataModels.ChangeStatusInMasterDetailsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.AdminController",
+    "Method": "DeleteMasterDetails",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/DeleteMasterDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Orchid.DataModels.DeleteMasterDetailsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.AdminController",
+    "Method": "EditMasterDetails",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/EditMasterDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserRole",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SPName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.AdminController",
+    "Method": "ErrorLog",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/ErrorLog",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Orchid.DataModels.ErrorLogModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.LoginController",
+    "Method": "ForgotPassword",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/ForgotPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Orchid.DataModels.ForgotPasswordViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.AdminController",
+    "Method": "GetMasterList",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/GetMasterList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserRole",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "IsActive",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "PageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortColumn",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SortDirection",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "SPName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Filter",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.AdminController",
+    "Method": "GetRolePermissionsList",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/GetRolePermissionsList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserRole",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.AdminController",
+    "Method": "GetUserLoginList",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/GetUserLoginList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserRole",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.AdminController",
+    "Method": "GetUserPageRightsList",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/GetUserPageRightsList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "UserRole",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.LoginController",
+    "Method": "GetUserPassword",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/GetUserPassword",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.LoginController",
+    "Method": "ResetPassword",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/ResetPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Orchid.DataModels.ResetPasswordViewModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.AdminController",
+    "Method": "TwoFactorAuthentication",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/TwoFactorAuthentication",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Orchid.DataModels.TwoFactorRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.AdminController",
+    "Method": "UpdateConfigSettingsDetails",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/UpdateConfigSettingsDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Orchid.DataModels.UpdateConfigSettingsDetailsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.AdminController",
+    "Method": "UpdateImageConfigDetails",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/UpdateImageConfigDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Orchid.DataModels.UpdateImageConfigDetailsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.AdminController",
+    "Method": "UpdatePageDetails",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/UpdatePageDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Orchid.DataModels.UpdatePageDetailsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.AdminController",
+    "Method": "UpdateRoleDetails",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/UpdateRoleDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Orchid.DataModels.UpdateRoleDetailsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.AdminController",
+    "Method": "UpdateTeamDetails",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/UpdateTeamDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Orchid.DataModels.UpdateTeamDetailsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.AdminController",
+    "Method": "UpdateUserPageRightsMapping",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/UpdateUserPageRightsMapping",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Orchid.DataModels.UpdateUserPageRightsMappingRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.AdminController",
+    "Method": "UpdateUsersDetails",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/UpdateUsersDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Orchid.DataModels.UpdateUsersDetailsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OrchidCapitalCoreAPI.Controllers.LoginController",
+    "Method": "VerifyResetPasswordRequest",
+    "RelativePath": "api/ORCHIDCAPITAL/v1/VerifyResetPasswordRequest",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ResetCode",
+        "Type": "System.String",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

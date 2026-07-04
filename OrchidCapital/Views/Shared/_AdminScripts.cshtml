@@ -1,65 +1,24 @@
 <script>
-    document.querySelectorAll('#Adminmenu a').forEach(link => {
-        link.addEventListener('click', function () {
-            localStorage.setItem("activeMenu", this.href);
-            $('#Adminmenu li a').removeClass("active");
-        });
-    });
-    document.querySelectorAll('#profileMenu a').forEach(link => {
-        link.addEventListener('click', function () {
-            localStorage.setItem("activeMenu", this.href);
-            $('#Adminmenu li a').removeClass("active");
-        });
-    });
-    const saved = localStorage.getItem("activeMenu");
-    if (saved === null) {
-        $('#Adminmenu li a:first').addClass("active");
-    }
-    document.querySelectorAll('#Adminmenu a').forEach(link => {
-        if (link.href === saved) {
-            link.classList.add("active");
-        }
-    });
-
-    const sidebar = document.getElementById('sidebar');
-    const overlay = document.getElementById('overlay');
-
-    document.getElementById('toggleBtn').onclick = () => {
-        sidebar.classList.add('show');
-        overlay.classList.add('show');
+  var _loadUrls = function(){
+    return {
+      pages: '@Url.Action("Pages", "Admin")',
     };
-
-    document.getElementById('closeSidebar').onclick =
-        overlay.onclick = () => {
-            sidebar.classList.remove('show');
-            overlay.classList.remove('show');
-        };
-
-    document.getElementById('year').innerHTML = new Date().getFullYear();
+  }
+  window.APortalModule = {
+    configs: {
+      urlBase: '@Utility.GetAppSettings("BasePath")',
+      loginUserName: '@User.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value',
+      loginUserRole: '@User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value',
+      defaultPageSize: 10
+    },
+    urls: _loadUrls()
+  };    
 </script>
-
-<script>
-    const profileToggle = document.getElementById("profileToggle");
-    const profileMenu = document.getElementById("profileMenu");
-
-    profileToggle.onclick = (e) => {
-        e.stopPropagation();
-        profileMenu.style.display =
-            profileMenu.style.display === "block" ? "none" : "block";
-    };
-
-    // close when clicking outside
-    document.addEventListener("click", (e) => {
-        if (!profileToggle.contains(e.target) && !profileMenu.contains(e.target)) {
-            profileMenu.style.display = "none";
-        }
-    });
-
-    profileToggle.onclick = (e) => {
-        e.stopPropagation();
-        profileMenu.style.display =
-            profileMenu.style.display === "block" ? "none" : "block";
-
-        profileToggle.classList.toggle("open");
-    };
-</script>
+<script src="~/js/toastr.min.js" asp-append-version="true"></script>
+<script src="~/js/APortalLoader.js" asp-append-version="true"></script>
+<script src="~/js/APortalToaster.js" asp-append-version="true"></script>
+<script src="~/js/APortalAjaxResponse.js" asp-append-version="true"></script>
+<script src="~/js/APortalCommon.js" asp-append-version="true"></script>
+<script src="~/js/APortalMasterBasicFunctionality.js" asp-append-version="true"></script>
+<script src="~/js/select2.min.js" asp-append-version="true"></script>
+<script src="~/js/crypto-js.min.js" asp-append-version="true"></script>

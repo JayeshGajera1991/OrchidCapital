@@ -1,10 +1,6 @@
-﻿using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using Newtonsoft.Json;
 using OrchidCapital.Helper;
-
 namespace OrchidCapital.Controllers
 {
     public class BaseController : Controller
@@ -16,15 +12,15 @@ namespace OrchidCapital.Controllers
 
         protected BaseController(IHttpContextAccessor httpContext, IConfiguration configuration)
         {
-              string   BaseUri = Utility.GetAppSettings("OrchidCoreAPIurl");
+            Token = httpContext.HttpContext?.User?.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value ?? string.Empty;
+            UserName = httpContext.HttpContext?.User?.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value ?? string.Empty;
+            UserRole = httpContext.HttpContext?.User?.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value ?? string.Empty;
+            string BaseUri = Utility.GetAppSettings("OrchidCoreAPIurl");
             _OrchidClient = new APIClient(BaseUri, Token, UserName, UserRole);
         }
 
         public override void OnActionExecuting(ActionExecutingContext context)
         {
-            Token = Request.Headers["App-Token"].ToString() == string.Empty ? "" : Request.Headers["App-Token"];
-            UserName = Request.Headers["App-UserName"] == string.Empty ? "" : Request.Headers["App-UserName"];
-            UserRole = Request.Headers["App-UserRole"] == string.Empty ? "" :Request.Headers["App-UserRole"];
             Controller controller = context.Controller as Controller;
             if (controller != null)
             {

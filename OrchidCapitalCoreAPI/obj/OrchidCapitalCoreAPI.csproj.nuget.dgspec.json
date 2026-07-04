@@ -32,20 +32,18 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj": {
+                "projectPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -80,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.311/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.128/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -119,13 +117,7 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -146,7 +138,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.311/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.128/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -181,6 +173,9 @@
             "projectReferences": {
               "E:\\OrchidCapital\\OrchidCapital\\Orchid.DataModels\\Orchid.DataModels.csproj": {
                 "projectPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.DataModels\\Orchid.DataModels.csproj"
+              },
+              "E:\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj": {
+                "projectPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj"
               }
             }
           }
@@ -189,18 +184,20 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Google.Apis.Auth": {
+              "target": "Package",
+              "version": "[1.74.0, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[4.16.0, )"
+            },
             "Microsoft.Exchange.WebServices": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -234,7 +231,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.311/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.128/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -266,20 +263,18 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "E:\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj": {
+                "projectPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -330,7 +325,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.311/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.128/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -369,13 +364,7 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -396,7 +385,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.311/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.128/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -451,21 +440,23 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Google.Apis.Gmail.v1": {
+              "target": "Package",
+              "version": "[1.74.0.4134, )"
+            },
             "Microsoft.AspNetCore.Mvc.Versioning": {
               "target": "Package",
               "version": "[5.1.0, )"
+            },
+            "Microsoft.Extensions.Caching.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[10.0.9, )"
             }
           },
           "imports": [
@@ -487,7 +478,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.311/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.128/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,192 @@
+@{
+    ViewData["Title"] = "Admin Pages";
+}
+<link rel="stylesheet" href="~/Admin/css/admin_roles.css" asp-append-version="true" />
+<div class="table-card">
+    <div class="table-header">
+        <div class="page-header">
+            <div>
+                <h2>Application Report</h2>
+                <p>Manage application report information and settings</p>
+            </div>
+        </div>
+        <div class="customer-toolbar">
+            <div class="search-box custom-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text"
+                       onkeyup="APortalModule._APortalMaster.InputBoxSearch(event,this,AFinanceApplicationList._AFinanceApplicationList)"
+                       id="ApplicationSearch" placeholder="Search application..." />
+                <button type="button" class="search_close_btn btn hidden"
+                        onclick="APortalModule._APortalMaster.SearchBoxReset('ApplicationSearch',AFinanceApplicationList._AFinanceApplicationList)">X</button>
+            </div>
+            @* @Html.DropDownList(
+                "statusFilter",
+                ViewBag.ApplicationStatusList as SelectList,
+                "All",
+                new
+                {
+                    @class =
+                    "sort-dropdown",
+                    onchange =
+ "APortalModule._APortalMaster.StatusChangeEvent(this,AFinanceApplicationList._AFinanceApplicationList)"
+                }) *@
+            <div class="page-actions tooltip">
+                <button class="btn btn-purple"
+                        onclick="AFinanceApplicationList._AFinanceApplicationList.ExportToExcel('APortal_LoanApplication', 'Loan Application List');">
+                    <i class="fa-solid fa-file-excel"></i>
+                    <span class="tooltip-text">Export to Excel</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- TABLE -->
+    <div class="table-wrapper scroll-body" id="LoanApplicationTableWrapper"
+         onscroll="APortalModule._APortalMaster.ScrollMore(event,this,AFinanceApplicationList._AFinanceApplicationList)">
+        <table id="tblLoanApplicationList" class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','ApplicationNo',AFinanceApplicationList._AFinanceApplicationList)">
+                            Application Number
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up ApplicationNo_ASC"></i>
+                                <i class="fa-solid fa-sort-down ApplicationNo_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','CustomerName',AFinanceApplicationList._AFinanceApplicationList)">
+                            Customer Name
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up CustomerName_ASC active"></i>
+                                <i class="fa-solid fa-sort-down CustomerName_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','ServiceName',AFinanceApplicationList._AFinanceApplicationList)">
+                            Service Name
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up ServiceName_ASC"></i>
+                                <i class="fa-solid fa-sort-down ServiceName_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','BranchName',AFinanceApplicationList._AFinanceApplicationList)">
+                            Branch Name
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up BranchName_ASC"></i>
+                                <i class="fa-solid fa-sort-down BranchName_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','RequestedAmount',AFinanceApplicationList._AFinanceApplicationList)">
+                            Requested Amount
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up RequestedAmount_ASC"></i>
+                                <i class="fa-solid fa-sort-down RequestedAmount_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','RequestedTenure',AFinanceApplicationList._AFinanceApplicationList)">
+                            Requested Tenure
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up RequestedTenure_ASC"></i>
+                                <i class="fa-solid fa-sort-down RequestedTenure_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','RequestedInterestRate',AFinanceApplicationList._AFinanceApplicationList)">
+                            Requested Interest Rate
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up RequestedInterestRate_ASC"></i>
+                                <i class="fa-solid fa-sort-down RequestedInterestRate_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','LoanPurpose',AFinanceApplicationList._AFinanceApplicationList)">
+                            Loan Purpose
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up LoanPurpose_ASC"></i>
+                                <i class="fa-solid fa-sort-down LoanPurpose_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','Remarks',AFinanceApplicationList._AFinanceApplicationList)">
+                            Remarks
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up Remarks_ASC"></i>
+                                <i class="fa-solid fa-sort-down Remarks_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','Status',AFinanceApplicationList._AFinanceApplicationList)">
+                            Application Status
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up Status_ASC"></i>
+                                <i class="fa-solid fa-sort-down Status_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','CreatedDate',AFinanceApplicationList._AFinanceApplicationList)">
+                            Application Date
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up CreatedDate_ASC"></i>
+                                <i class="fa-solid fa-sort-down CreatedDate_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th class="text-center">Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="applicationlist-tbody-render">
+                <!-- dynamic -->
+            </tbody>
+        </table>
+    </div>
+    <div id="pagination" style="padding: 15px 30px;"></div>
+</div>
+<script>
+    var _loadUrls = function () {
+        return {
+            create: '@Url.Action("Create", "Finance")',
+            list: '@Url.Action("List", "Finance")',
+            get: '@Url.Action("Edit", "Finance")',
+            status: '@Url.Action("Status", "Finance")',
+            delete: '@Url.Action("Delete", "Finance")',
+            export: '@Url.Action("ExportToExcelFile", "Finance")'
+        };
+    }
+    window.AFinanceApplicationReport = {
+        configs: {
+            urlBase: '@Utility.GetAppSettings("BasePath")',
+            loginUserName: '@User.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value',
+            loginUserRole: '@User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value',
+            defaultPageSize: 25
+        },
+        urls: _loadUrls()
+    };    
+</script>
+@* @section Scripts {
+    <script src="~/Admin/js/FinanceLoanApplicationList.js" asp-append-version="true"></script>
+} *@

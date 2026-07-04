@@ -1,3 +1,6 @@
+@{
+    string imagePath = User.FindFirst(System.Security.Claims.ClaimTypes.GivenName)?.Value ?? string.Empty;
+}
 <header class="header">
     <!-- LEFT -->
     <div class="header-left">
@@ -18,7 +21,17 @@
         </div>
         <div class="profile-wrapper">
             <div class="profile" id="profileToggle">
-                <div class="avatar"></div>
+                <div class="avatar">
+                    @if (!string.IsNullOrEmpty(imagePath))
+                    {
+                        <img id="preview" src="~/ImageProfiler/@imagePath" width="35" height="35" style="border-radius:50%;" />
+                    }
+                    else
+                    {
+                        <img id="preview" src="~/ImageProfiler/default.jfif" width="35" height="35"
+                             style="border-radius:50%;" />
+                    }
+                </div>
                 <div class="profile-info">
                     <span class="name">@User.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value</span>
                     <span class="role">@User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value</span>

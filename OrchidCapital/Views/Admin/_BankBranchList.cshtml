@@ -1,0 +1,55 @@
+@model IEnumerable<OrchidCapital.Models.BankBranchModel>
+@{
+    if (Model.Count() == 0)
+    {
+        <tr data-total-records="0" id="0">
+            <td colspan="5" style="text-align: center;">Bank Branch aren’t set up yet. Please add them to continue.</td>
+        </tr>
+    }
+    else
+    {
+        foreach (BankBranchModel item in Model)
+        {
+            <tr data-total-records="@item.TotalRecords" id="@item.BranchId">
+                <td>@item.BranchCode</td>
+                <td>@item.BranchName</td>
+                <td>@item.BankName</td>
+                <td>@item.IFSCCode</td>
+                <td>@item.MICRCode</td>
+                <td>@item.ContactPerson</td>
+                <td>@item.PhoneNumber</td>
+                <td>@item.Email</td>
+                <td>@item.BranchAddress</td>
+                <td>
+                    <span class="status-dot @(item.IsActive ? "active-dot" : "inactive-dot")"></span>
+                    @(item.IsActive ? "Active" : "Inactive")
+                </td>
+                <td>@item.CreatedOn</td>
+                <td class="text-center">
+                    <div class="action-wrapper">
+                        <button class="action-btn" data-id="@item.BranchId" onclick="APortalBankBranch._APortalBankBranch.toggleMenu(this)">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                        <div class="action-menu">
+                            <div id="edit-@item.BranchId" onclick="APortalBankBranch._APortalBankBranch.Edit('@item.BranchId')">
+                                <i class="fa-solid fa-pen-to-square"></i> Edit
+                            </div>
+
+                            <div onclick="APortalBankBranch._APortalBankBranch.Status('@item.BranchId', '@item.IsActive')">
+                                <i class="fa-solid fa-toggle-on"></i>
+                                @(item.IsActive ? "Inactive" : "Active")
+                            </div>
+
+                            @if(item.IsActive == false)
+                            {
+                                <div onclick="APortalBankBranch._APortalBankBranch.Delete('@item.BranchId')">
+                                    <i class="fa-solid fa-trash"></i> Delete
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        }
+    }
+}

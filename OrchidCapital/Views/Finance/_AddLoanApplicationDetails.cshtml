@@ -1,0 +1,123 @@
+@model OrchidCapital.Models.UpdateLoanApplicationDetailsRequest
+<h3>Loan Application Details</h3>
+<span class="spnGetNewApplicationNumber">Loan No. : @ViewBag.GetNewApplicationNumber</span>
+<form id="nav_LoanApplication_form" action="@Url.Action("UpdateLoanApplicationDetails", "Finance")"
+        method="post">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="guarantor-card-main">
+        <div class="form-grid">
+            <div class="form-group">
+                <label>Customer *</label>
+                @Html.DropDownListFor(m => m.CustomerId, ViewBag.CustomerList as SelectList, "-- Select customer --", new
+                {
+                    @class = "loan-select select2",
+                    required = "required"
+                })
+                @Html.ValidationMessageFor(m => m.CustomerId, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <label>Loan Branch *</label>
+                @Html.DropDownListFor(m => m.BranchId, ViewBag.BranchList as SelectList, "-- Select branch --", new
+                {
+                    @class = "loan-select select2",
+                    required = "required"
+                })
+                @Html.ValidationMessageFor(m => m.BranchId, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <label>Loan Scheme *</label>
+                @Html.DropDownListFor(m => m.LoanProductId, ViewBag.LoanProductList as SelectList, "-- Select service --", new
+                {
+                    @class = "loan-select select2",
+                    required = "required"
+                })
+                @Html.ValidationMessageFor(m => m.LoanProductId, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <label>Application Date *</label>
+                @Html.TextBoxFor(m => m.ApplicationDate,"{0:yyyy-MM-dd}", new
+                {
+                    @class = "form-control",
+                    type = "date",
+                    required = "required", MaxLength = 10
+                })
+                @Html.ValidationMessageFor(m => m.ApplicationDate, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <label>Requested Amount *</label>
+                @Html.HiddenFor(m => m.LoanApplicationId) <!-- Hidden field for Page ID -->
+                @Html.HiddenFor(m => m.UserName) <!-- Hidden field for UserName -->
+                @Html.HiddenFor(m => m.UserRole) <!-- Hidden field for UserRole -->
+                @Html.TextBoxFor(m => m.RequestedAmount, "{0:F2}", new
+                {
+                    @placeholder = "0.00",
+                    @class = "txtspace txtdecimal", MaxLength = 20
+                })
+                @Html.ValidationMessageFor(m => m.RequestedAmount, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <label>Requested Tenure (Months)</label>
+                @Html.TextBoxFor(m => m.RequestedTenure, new
+                {
+                    @placeholder = "24",
+                    @class = "txtspace txtnumeric", MaxLength = 10
+                })
+                @Html.ValidationMessageFor(m => m.RequestedTenure, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group">
+                <label>Interest Rate (ROI)</label>
+                @Html.TextBoxFor(m => m.RequestedInterestRate, new
+                {
+                    @placeholder = "12.00",
+                    @class = "txtspace txtdecimal", MaxLength = 10
+                })
+                @Html.ValidationMessageFor(m => m.RequestedInterestRate, "", new
+                {
+                    @class =
+                "text-danger"
+                })
+            </div>
+            <div class="form-group">
+                <label>Loan Status</label>
+                @Html.DropDownListFor(m => m.ApplicationStatus, ViewBag.ApplicationStatusList as
+                    SelectList, "-- Select status --", new
+                    {
+                        @class = "form-control select2",
+                        required = "required"
+                    })
+                @Html.ValidationMessageFor(m => m.ApplicationStatus, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group full-width">
+                <label>Purpose of Loan</label>
+                @Html.TextAreaFor(m => m.LoanPurpose, new
+                {
+                    @placeholder = "Enter Loan Purpose",
+                    @class = "txtspace",
+                    rows = "3", MaxLength = 1000
+                })
+                @Html.ValidationMessageFor(m => m.LoanPurpose, "", new { @class = "text-danger" })
+            </div>
+            <div class="form-group full-width">
+                <label>Remarks</label>
+                @Html.TextAreaFor(m => m.Remarks, new
+                {
+                    @placeholder = "Enter Remarks",
+                    @class = "txtspace",
+                    @rows = 3, MaxLength = 1000
+                })
+                @Html.ValidationMessageFor(m => m.Remarks, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </div>
+    <div class="step-actions">
+        <button class="btn btn-red" type="button"
+                onclick="APortalModule._APortalMaster.FormDataClear(AFinanceNewLoan._AFinanceNewLoan);">
+            <i class="fa-solid fa-refresh"></i>
+        </button>
+        <button class="btn btn-blue" id="saveCustomer" type="submit"
+                onclick="AFinanceNewLoan._AFinanceNewLoan.SubmitFormData(event, $('#nav_LoanApplication_form'));">
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </div>
+</form>

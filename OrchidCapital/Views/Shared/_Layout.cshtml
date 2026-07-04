@@ -5,15 +5,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - OrchidCapital</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-          asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Admin/css/sidepanel.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Admin/css/admin_dashboard.css" asp-append-version="true" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-          asp-append-version="true" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/toastr.min.css" asp-append-version="true" />
+    <link href="~/Admin/css/select2.min.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/Admin/css/font_awesome1.min.css" rel="stylesheet" asp-append-version="true" />
 </head>
 
-<body>
+<body id="common-aportal-wrapper">
     <div class="overlay" id="overlay"></div>
     <div class="dashboard">
         <aside class="sidebar" id="sidebar">
@@ -34,6 +34,7 @@
             <section class="content">
                 @RenderBody()
             </section>
+            <div id="customTooltip"></div>
         </div>
         <partial name="_AdminFooter" />
         <partial name="_ValidationScriptsPartial" />

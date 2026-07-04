@@ -1,0 +1,161 @@
+@{
+    ViewData["Title"] = "Roles & Permissions";
+}
+<link rel="stylesheet" href="~/Admin/css/admin_roles.css" asp-append-version="true" />
+@model IEnumerable<OrchidCapital.Models.GetRolePermissionsRequest>
+<div class="role-panel" id="RolePermission-Master-Panel">
+</div>
+<div class="table-card">
+    <div class="table-header">
+        <div class="page-header">
+            <div>
+                <h2>Roles & Permissions</h2>
+                <p>Manage employee roles and access control</p>
+            </div>
+        </div>
+        <div class="customer-toolbar">
+            <div class="search-box custom-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" onkeyup="APortalRolePermissions._APortalRolePermissions.InputBoxSearch(event,this)"
+                       id="RolePermissionsSearch" placeholder="Search customers..." />
+                <button type="button" class="search_close_btn btn hidden"
+                        onclick="APortalRolePermissions._APortalRolePermissions.SearchBoxReset('RolePermissionsSearch')">X</button>
+            </div>
+
+            <div class="page-actions tooltip">
+                <button class="btn btn-blue" id="toggleRoleForm"
+                        onclick="APortalRolePermissions._APortalRolePermissions.Create();">
+                    <i class="fa-solid fa-plus"></i>
+                    <span class="tooltip-text">Add Role</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="empty-state" id="emptyState" style="display:none;">
+        <i class="fa-solid fa-shield-halved"></i>
+        <p>Currently there are no admin roles</p>
+        <button class="btn btn-blue" id="addFirstRole">
+            <i class="fa-solid fa-plus"></i>
+        </button>
+    </div>
+    <div class="table-wrapper scroll-body" id="pageTableWrapper">
+        <table id="rolesTable" class="table">
+            <thead>
+                <tr>
+                    <th>Employee</th>
+                    <th>Role Info</th>
+                    <th>Access</th>
+                    <th>Status</th>
+                    <th>Permissions</th>
+                    <th class="text-center">Action</th>
+                </tr>
+            </thead>
+            <tbody id="rolesBody">
+                @{
+                    if (Model.Count() == 0)
+                    {
+                        <tr data-total-records="0" id="0">
+                            <td colspan="4" style="text-align: center;">Roles aren’t set up yet. Please add them to continue.
+                            </td>
+                        </tr>
+                    }
+                    else
+                    {
+                        foreach (GetRolePermissionsRequest item in Model)
+                        {
+                            <tr data-total-records="@Model.Count()" id="@item.Id">
+                                <td>
+                                    <div class="emp-cell">
+                                        <div class="emp-avatar">@string.Join("",item.FullName.Split(' ').Select(n => n[0]))</div>
+                                        <div class="emp-info">
+                                            <span class="emp-name">@item.UserName</span>
+                                            <span class="emp-id">@string.Format("OC000{0}",@item.Id)</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <span class="role-badge">@item.Role</span>
+                                </td>
+
+                                <td>
+                                    <span class="access-tag @(item.IsRights > 0 ? "access-full" : "access-block")">@(item.IsRights > 0 ? "Full Access" : "Blocked")</span>
+                                    </td>
+
+                                    <td>
+                                        <span class="status-dot active-dot"></span>
+                                        Active
+                                    </td>
+                                    <td class="tooltip">
+                                        <button class="btn btn-orange" data-id="@item.Id"
+                                                onclick="APortalRolePermissions._APortalRolePermissions.View(@item.Id)">
+                                            <i class="fa-solid fa-circle-info"></i>
+                                            <span class="tooltip-text">View Role</span>
+                                        </button>
+                                    </td>
+
+                                    <td class="text-center">
+                                        <div class="action-wrapper">
+                                            <button class="action-btn" data-id="@item.Id"
+                                                    onclick="APortalRolePermissions._APortalRolePermissions.toggleMenu(this)">
+                                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                                            </button>
+
+                                            <div class="action-menu">
+                                                <div id="edit-@item.Id"
+                                                     onclick="APortalRolePermissions._APortalRolePermissions.Edit('@item.Id')">
+                                                    <i class="fa-solid fa-pen"></i> Edit
+                                                </div>
+                                                <div onclick="APortalRolePermissions._APortalRolePermissions.Delete('@item.Id')">
+                                                    <i class="fa-solid fa-trash"></i> Delete
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    }
+                </tbody>
+        </table>
+    </div>
+    <div id="pagination" style="padding: 15px 30px;"></div>
+    <div class="modal" id="permissionModal">
+        <div class="modal-content">
+            <div class="modal-header tooltip">
+                <h3>Page Permissions</h3>
+                <button class="btn btn-red dangermodal" onclick="APortalRolePermissions._APortalRolePermissions.closeModal();">
+                    <i class="fa-solid fa-xmark"></i>
+                    <span class="tooltip-text">Close</span>
+                </button>
+            </div>
+            <div class="modal-body modal-body-scroll" id="modalBody">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        var _loadUrls = function () {
+            return {
+                create: '@Url.Action("Create", "Admin")',
+                change: '@Url.Action("RolePermissionsChange", "Admin")',
+                list: '@Url.Action("List", "Admin")',
+                get: '@Url.Action("Edit", "Admin")',
+                save: '@Url.Action("SaveRolePermissions", "Admin")',
+                delete: '@Url.Action("Delete", "Admin")'
+            };
+        }
+        window.APortalRolePermissions = {
+            configs: {
+                urlBase: '@Utility.GetAppSettings("BasePath")',
+                loginUserName: '@User.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value',
+                loginUserRole: '@User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value',
+                defaultPageSize: 25
+            },
+            urls: _loadUrls()
+        };    
+    </script>
+    @section Scripts {
+        <script src="~/Admin/js/RolePermissions.js" asp-append-version="true"></script>
+    }

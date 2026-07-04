@@ -1,0 +1,58 @@
+@model IEnumerable<OrchidCapital.Models.BankServiceListModel>
+@{
+    if (Model.Count() == 0)
+    {
+        <tr data-total-records="0" id="0">
+            <td colspan="5" style="text-align: center;">Bank Service aren’t set up yet. Please add them to continue.</td>
+        </tr>
+    }
+    else
+    {
+        foreach (BankServiceListModel item in Model)
+        {
+            <tr data-total-records="@item.TotalRecords" id="@item.LoanProductId">
+                <td>@item.ProductCode</td>
+                <td>@item.ProductName</td>
+                <td>@item.LoanType</td>
+                <td>@item.MinAmount</td>
+                <td>@item.MaxAmount</td>
+                <td>@item.MinTenure</td>
+                <td>@item.MaxTenure</td>
+                <td>@item.InterestType</td>
+                <td>@item.DefaultInterestRate</td>
+                <td>@item.ProcessingFeePercent</td>
+                <td>@item.PenaltyInterest</td>
+                <td>@item.GraceDays</td>
+                <td>
+                    <span class="status-dot @(item.IsActive ? "active-dot" : "inactive-dot")"></span>
+                    @(item.IsActive ? "Active" : "Inactive")
+                </td>
+                <td>@item.CreatedOn</td>
+                <td class="text-center">
+                    <div class="action-wrapper">
+                        <button class="action-btn" data-id="@item.LoanProductId" onclick="APortalBankService._APortalBankService.toggleMenu(this)">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                        <div class="action-menu">
+                            <div id="edit-@item.LoanProductId" onclick="APortalBankService._APortalBankService.Edit('@item.LoanProductId')">
+                                <i class="fa-solid fa-pen-to-square"></i> Edit
+                            </div>
+
+                            <div onclick="APortalBankService._APortalBankService.Status('@item.LoanProductId', '@item.IsActive')">
+                                <i class="fa-solid fa-toggle-on"></i>
+                                @(item.IsActive ? "Inactive" : "Active")
+                            </div>
+
+                            @if(item.IsActive == false)
+                            {
+                                <div onclick="APortalBankService._APortalBankService.Delete('@item.LoanProductId')">
+                                    <i class="fa-solid fa-trash"></i> Delete
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        }
+    }
+}

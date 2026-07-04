@@ -1,0 +1,195 @@
+@{
+    ViewData["Title"] = "Admin Users";
+}
+<link rel="stylesheet" href="~/Admin/css/admin_roles.css" asp-append-version="true" />
+<div class="role-panel" id="Users-Master-Panel">
+    <div class="role-form" id="add_user_form_wrapper">
+    </div>
+</div>
+
+<div class="table-card">
+    <div class="table-header">
+        <div class="page-header">
+            <div>
+                <h2>Agents</h2>
+                <p>Manage agent information and settings</p>
+            </div>
+        </div>
+        <div class="customer-toolbar">
+            <div class="search-box custom-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text"
+                       onkeyup="APortalModule._APortalMaster.InputBoxSearch(event,this,APortalUsers._APortalUsers)"
+                       id="usersSearch" placeholder="Search agents..." />
+                <button type="button" class="search_close_btn btn hidden"
+                        onclick="APortalModule._APortalMaster.SearchBoxReset('usersSearch',APortalUsers._APortalUsers)">X</button>
+            </div>
+            <select id="statusFilter" class="sort-dropdown"
+                    onchange="APortalModule._APortalMaster.StatusChangeEvent(this,APortalUsers._APortalUsers)">
+                <option value="2" selected="selected">All</option>
+                <option value="1">Active</option>
+                <option value="0">Inactive</option>
+            </select>
+            <div class="page-actions tooltip">
+                <button class="btn btn-purple"
+                        onclick="APortalUsers._APortalUsers.ExportToExcel('APortal_UserMst', 'Agents List');">
+                    <i class="fa-solid fa-file-excel"></i>
+                    <span class="tooltip-text">Export to Excel</span>
+                </button>
+            </div>
+            <div class="page-actions tooltip">
+                <button class="btn btn-blue" id="toggleCustomerForm" onclick="APortalUsers._APortalUsers.Create();">
+                    <i class="fa-solid fa-plus"></i>
+                    <span class="tooltip-text">Add Agent</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="empty-state" id="emptyCustomerState" style="display:none;">
+        <i class="fa-solid fa-users"></i>
+        <p>No agents available</p>
+        <button class="btn btn-blue" onclick="APortalUsers._APortalUsers.Create();">
+            <i class="fa-solid fa-plus"></i>
+            <span class="tooltip-text">Add Agent</span>
+        </button>
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-wrapper scroll-body" id="userTableWrapper"
+         onscroll="APortalModule._APortalMaster.ScrollMore(event,this,APortalUsers._APortalUsers)">
+        <table id="tblUsersList" class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                           onclick="APortalModule._APortalMaster.Sorting('tblUsersList','UserName',APortalUsers._APortalUsers)">
+                            User Name
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up UserName_ASC active"></i>
+                                <i class="fa-solid fa-sort-down UserName_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                           onclick="APortalModule._APortalMaster.Sorting('tblUsersList','FirstName',APortalUsers._APortalUsers)">
+                            First Name
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up FirstName_ASC"></i>
+                                <i class="fa-solid fa-sort-down FirstName_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                           onclick="APortalModule._APortalMaster.Sorting('tblUsersList','LastName',APortalUsers._APortalUsers)">
+                            Last Name
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up LastName_ASC"></i>
+                                <i class="fa-solid fa-sort-down LastName_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                           onclick="APortalModule._APortalMaster.Sorting('tblUsersList','MobileNo',APortalUsers._APortalUsers)">
+                            Mobile Number
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up MobileNo_ASC"></i>
+                                <i class="fa-solid fa-sort-down MobileNo_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                           onclick="APortalModule._APortalMaster.Sorting('tblUsersList','EmailId',APortalUsers._APortalUsers)">
+                            Email Id
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up EmailId_ASC"></i>
+                                <i class="fa-solid fa-sort-down EmailId_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                           onclick="APortalModule._APortalMaster.Sorting('tblUsersList','RoleName',APortalUsers._APortalUsers)">
+                            Role Name
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up RoleName_ASC"></i>
+                                <i class="fa-solid fa-sort-down RoleName_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                           onclick="APortalModule._APortalMaster.Sorting('tblUsersList','IsActive',APortalUsers._APortalUsers)">
+                            Status
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up IsActive_ASC"></i>
+                                <i class="fa-solid fa-sort-down IsActive_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                           onclick="APortalModule._APortalMaster.Sorting('tblUsersList','CreatedOn',APortalUsers._APortalUsers)">
+                            Created Date
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up CreatedOn_ASC"></i>
+                                <i class="fa-solid fa-sort-down CreatedOn_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                           onclick="APortalModule._APortalMaster.Sorting('tblUsersList','CreatedBy',APortalUsers._APortalUsers)">
+                            Created By
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up CreatedBy_ASC"></i>
+                                <i class="fa-solid fa-sort-down CreatedBy_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th class="text-center">Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="user-tbody-render">
+                <!-- dynamic -->
+            </tbody>
+        </table>
+    </div>
+    <div id="pagination" style="padding: 15px 30px;"></div>
+</div>
+<script>
+    var _loadUrls = function () {
+        return {
+            create: '@Url.Action("Create", "Admin")',
+            list: '@Url.Action("List", "Admin")',
+            get: '@Url.Action("Edit", "Admin")',
+            status: '@Url.Action("Status", "Admin")',
+            sendWelcomeEmailUser: '@Url.Action("SendWelcomeEmailUser", "Admin")',
+            unlockUser: '@Url.Action("UnlockUser", "Admin")',
+            resetPasswordUser: '@Url.Action("ResetPasswordUser", "Admin")',
+            resetTwoFactorAuthenticationUser: '@Url.Action("ResetTwoFactorAuthenticationUser", "Admin")',
+            deleteUser: '@Url.Action("DeleteUser", "Admin")',
+            export: '@Url.Action("ExportToExcelFile", "Admin")',
+            cities: '@Url.Action("GetCitiesByState", "Admin")'
+        };
+    }
+    window.APortalUsers = {
+        configs: {
+            urlBase: '@Utility.GetAppSettings("BasePath")',
+            loginUserName: '@User.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value',
+            loginUserRole: '@User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value',
+            defaultPageSize: 25
+        },
+        urls: _loadUrls()
+    };    
+</script>
+@section Scripts {
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    @* <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> *@
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="~/Admin/js/Users.js" asp-append-version="true"></script>
+}

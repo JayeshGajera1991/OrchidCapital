@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\AccountLocked.html",
+      "PackagePath": "staticwebassets\\EmailTemplates\\AccountLocked.html"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\ChangePassword.html",
+      "PackagePath": "staticwebassets\\EmailTemplates\\ChangePassword.html"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\ForgotPassword.html",
+      "PackagePath": "staticwebassets\\EmailTemplates\\ForgotPassword.html"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\ResetPassword.html",
+      "PackagePath": "staticwebassets\\EmailTemplates\\ResetPassword.html"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\Welcome.html",
+      "PackagePath": "staticwebassets\\EmailTemplates\\Welcome.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.OrchidCapitalCoreAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.OrchidCapitalCoreAPI.props",
+      "PackagePath": "build\\OrchidCapitalCoreAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.OrchidCapitalCoreAPI.props",
+      "PackagePath": "buildMultiTargeting\\OrchidCapitalCoreAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.OrchidCapitalCoreAPI.props",
+      "PackagePath": "buildTransitive\\OrchidCapitalCoreAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

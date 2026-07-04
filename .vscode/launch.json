@@ -9,7 +9,6 @@
             "program": "${workspaceFolder}/OrchidCapital/bin/Debug/net8.0/OrchidCapital.dll",
             "args": [],
             "cwd": "${workspaceFolder}/OrchidCapital",
-            "stopAtEntry": false,
             "serverReadyAction": {
                 "action": "openExternally",
                 "pattern": "Now listening on: (https?://\\S+)"
@@ -20,7 +19,8 @@
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/OrchidCapital/Views"
-            }
+            },
+            "stopAtEntry": false
         },
         {
             "name": "OrchidCapitalCoreAPI",
@@ -44,7 +44,7 @@
     ],
     "compounds": [
         {
-            "name": "Launch OrchidCapital & OrchidCapitalCoreAPI",
+            "name": "Launch OrchidCapital and OrchidCapitalCoreAPI",
             "configurations": [
                 "OrchidCapital",
                 "OrchidCapitalCoreAPI"

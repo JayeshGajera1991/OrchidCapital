@@ -1,0 +1,195 @@
+@{
+    ViewData["Title"] = "Admin Customers";
+}
+<link rel="stylesheet" href="~/Admin/css/admin_roles.css" asp-append-version="true" />
+<div class="role-panel" id="Customers-Master-Panel">
+    <div class="role-form" id="add_customer_form_wrapper">
+    </div>
+</div>
+
+<div class="table-card">
+    <div class="table-header">
+        <div class="page-header">
+            <div>
+                <h2>Customers</h2>
+                <p>Manage customer information and settings</p>
+            </div>
+        </div>
+        <div class="customer-toolbar">
+            <div class="search-box custom-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text"
+                       onkeyup="APortalModule._APortalMaster.InputBoxSearch(event,this,APortalCustomers._APortalCustomers)"
+                       id="CustomersSearch" placeholder="Search customers..." />
+                <button type="button" class="search_close_btn btn hidden"
+                        onclick="APortalModule._APortalMaster.SearchBoxReset('CustomersSearch',APortalCustomers._APortalCustomers)">X</button>
+            </div>
+            <select id="statusFilter" class="sort-dropdown"
+                    onchange="APortalModule._APortalMaster.StatusChangeEvent(this,APortalCustomers._APortalCustomers)">
+                <option value="2" selected="selected">All</option>
+                <option value="1">Active</option>
+                <option value="0">Inactive</option>
+            </select>
+            <div class="page-actions tooltip">
+                <button class="btn btn-purple"
+                        onclick="APortalCustomers._APortalCustomers.ExportToExcel('APortal_CustomerManage', 'Customers List');">
+                    <i class="fa-solid fa-file-excel"></i>
+                    <span class="tooltip-text">Export to Excel</span>
+                </button>
+            </div>
+            <div class="page-actions tooltip">
+                <button class="btn btn-blue" id="toggleCustomerForm" onclick="APortalCustomers._APortalCustomers.Create();">
+                    <i class="fa-solid fa-plus"></i>
+                    <span class="tooltip-text">Add Customer</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="empty-state" id="emptyCustomerState" style="display:none;">
+        <i class="fa-solid fa-users"></i>
+        <p>No customers available</p>
+        <button class="btn btn-blue" onclick="APortalCustomers._APortalCustomers.Create();">
+            <i class="fa-solid fa-plus"></i>
+            <span class="tooltip-text">Add Customer</span>
+        </button>
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-wrapper scroll-body" id="CustomersTableWrapper"
+         onscroll="APortalModule._APortalMaster.ScrollMore(event,this,APortalCustomers._APortalCustomers)">
+        <table id="tblCustomersList" class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblCustomersList','UserName',APortalCustomers._APortalCustomers)">
+                            User Name
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up UserName_ASC active"></i>
+                                <i class="fa-solid fa-sort-down UserName_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblCustomersList','FirstName',APortalCustomers._APortalCustomers)">
+                            First Name
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up FirstName_ASC"></i>
+                                <i class="fa-solid fa-sort-down FirstName_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblCustomersList','LastName',APortalCustomers._APortalCustomers)">
+                            Last Name
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up LastName_ASC"></i>
+                                <i class="fa-solid fa-sort-down LastName_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblCustomersList','MobileNo',APortalCustomers._APortalCustomers)">
+                            Mobile Number
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up MobileNo_ASC"></i>
+                                <i class="fa-solid fa-sort-down MobileNo_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblCustomersList','EmailId',APortalCustomers._APortalCustomers)">
+                            Email Id
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up EmailId_ASC"></i>
+                                <i class="fa-solid fa-sort-down EmailId_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblCustomersList','RoleName',APortalCustomers._APortalCustomers)">
+                           Role Name
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up RoleName_ASC"></i>
+                                <i class="fa-solid fa-sort-down RoleName_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblCustomersList','IsActive',APortalCustomers._APortalCustomers)">
+                            Status
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up IsActive_ASC"></i>
+                                <i class="fa-solid fa-sort-down IsActive_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblCustomersList','CreatedOn',APortalCustomers._APortalCustomers)">
+                            Created Date
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up CreatedOn_ASC"></i>
+                                <i class="fa-solid fa-sort-down CreatedOn_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                     <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblCustomersList','CreatedBy',APortalCustomers._APortalCustomers)">
+                            Created By
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up CreatedBy_ASC"></i>
+                                <i class="fa-solid fa-sort-down CreatedBy_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th class="text-center">Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="customers-tbody-render">
+                <!-- dynamic -->
+            </tbody>
+        </table>
+    </div>
+    <div id="pagination" style="padding: 15px 30px;"></div>
+</div>
+<script>
+    var _loadUrls = function () {
+        return {
+            create: '@Url.Action("Create", "Admin")',
+            list: '@Url.Action("List", "Admin")',
+            get: '@Url.Action("Edit", "Admin")',
+            status: '@Url.Action("Status", "Admin")',
+            sendWelcomeEmailUser: '@Url.Action("SendWelcomeEmailUser", "Admin")',
+            unlockUser: '@Url.Action("UnlockUser", "Admin")',
+            resetPasswordUser: '@Url.Action("ResetPasswordUser", "Admin")',
+            resetTwoFactorAuthenticationUser: '@Url.Action("ResetTwoFactorAuthenticationUser", "Admin")',
+            deleteUser: '@Url.Action("DeleteUser", "Admin")',
+            export: '@Url.Action("ExportToExcelFile", "Admin")',
+            cities: '@Url.Action("GetCitiesByState", "Admin")'
+        };
+    }
+    window.APortalCustomers = {
+        configs: {
+            urlBase: '@Utility.GetAppSettings("BasePath")',
+            loginUserName: '@User.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value',
+            loginUserRole: '@User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value',
+            defaultPageSize: 25
+        },
+        urls: _loadUrls()
+    };    
+</script>
+@section Scripts {
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    @* <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> *@
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="~/Admin/js/Customers.js" asp-append-version="true"></script>
+}

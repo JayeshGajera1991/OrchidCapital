@@ -1,0 +1,109 @@
+@model OrchidCapital.Models.UpdateBankServiceDetailsRequest
+<h3 id="h3_addRoleHeader">Add New Service</h3>
+<button type="button" class="btn btn-red close-btn"
+        onclick="APortalModule._APortalCommon.CloseToggle('BankService-Master-Panel','nav_BankService_form');">
+    <i class="fa-solid fa-xmark"></i>
+</button>
+<form id="nav_BankService_form" action="@Url.Action("UpdateServiceDetails", "Admin")" method="post">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-grid">
+        <div class="form-group">
+            <label>Product Name *</label>
+            @Html.HiddenFor(m => m.LoanProductId) <!-- Hidden field for Role ID -->
+            @Html.HiddenFor(m => m.IsActive) <!-- Hidden field for IsActive status -->
+            @Html.HiddenFor(m => m.UserName) <!-- Hidden field for UserName -->
+            @Html.HiddenFor(m => m.UserRole) <!-- Hidden field for UserRole -->
+            @Html.TextBoxFor(m => m.ProductName, new { @placeholder = "Enter Product Name",@class="txtspace",MaxLength="500" })
+            @Html.ValidationMessageFor(m => m.ProductName, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            <label>Loan Type *</label>
+            @Html.DropDownListFor( m => m.LoanType,
+            new List<SelectListItem>
+            {
+                new SelectListItem { Text = "-- Select Loan Type --", Value = "" },
+                new SelectListItem { Text = "Home Loan", Value = "Home Loan" },
+                new SelectListItem { Text = "Personal Loan", Value = "Personal Loan" },
+                new SelectListItem { Text = "Vehicle Loan", Value = "Vehicle Loan" },
+                new SelectListItem { Text = "Education Loan", Value = "Education Loan" }
+            }, new { @class = "form-control select2", required = "required" })
+            @Html.ValidationMessageFor(m => m.LoanType, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>Min Amount *</label>
+            @Html.TextBoxFor(m => m.MinAmount, new { @placeholder = "Enter Min Amount", @class = "txtspace txtdecimal", MaxLength = "18" })
+            @Html.ValidationMessageFor(m => m.MinAmount, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>Max Amount *</label>
+            @Html.TextBoxFor(m => m.MaxAmount, new { @placeholder = "Enter Max Amount", @class = "txtspace txtdecimal", MaxLength = "18" })
+            @Html.ValidationMessageFor(m => m.MaxAmount, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>Min Tenure *</label>
+            @Html.TextBoxFor(m => m.MinTenure, new { @placeholder = "Enter Min Tenure", @class = "txtspace txtnumeric", MaxLength = "18" })
+            @Html.ValidationMessageFor(m => m.MinTenure, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>Max Tenure *</label>
+            @Html.TextBoxFor(m => m.MaxTenure, new { @placeholder = "Enter Max Tenure", @class = "txtspace txtnumeric", MaxLength = "18" })
+            @Html.ValidationMessageFor(m => m.MaxTenure, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>Interest Type *</label>
+            @Html.DropDownListFor(m => m.InterestType,
+                new List<SelectListItem>
+                {
+                    new SelectListItem { Text = "-- Select Interest Type --", Value = "" },
+                    new SelectListItem { Text = "Fixed Interest", Value = "Fixed" },
+                    new SelectListItem { Text = "Floating Interest", Value = "Floating" },
+                    new SelectListItem { Text = "Reducing Balance", Value = "Reducing" },
+                    new SelectListItem { Text = "Flat Interest", Value = "Flat" }
+                },new { @class = "form-control select2", required = "required" }
+            )
+            @Html.ValidationMessageFor(m => m.InterestType, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>Default Interest Rate *</label>
+            @Html.TextBoxFor(m => m.DefaultInterestRate, new { @placeholder = "Enter Default Interest Rate", @class = "txtspace txtdecimal", MaxLength = "18" })
+            @Html.ValidationMessageFor(m => m.DefaultInterestRate, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>Processing Fee Percent *</label>
+            @Html.TextBoxFor(m => m.ProcessingFeePercent, new { @placeholder = "Enter Processing Fee Percent", @class = "txtspace txtdecimal", MaxLength = "18" })
+            @Html.ValidationMessageFor(m => m.ProcessingFeePercent, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>Penalty Interest *</label>
+            @Html.TextBoxFor(m => m.PenaltyInterest, new { @placeholder = "Enter Penalty Interest", @class = "txtspace txtdecimal", MaxLength = "18" })
+            @Html.ValidationMessageFor(m => m.PenaltyInterest, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>Grace Days *</label>
+            @Html.TextBoxFor(m => m.GraceDays, new { @placeholder = "Enter Grace Days", @class = "txtspace txtnumeric", MaxLength = "18" })
+            @Html.ValidationMessageFor(m => m.GraceDays, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="action-buttons">
+        @if (Model.LoanProductId == 0)
+        {
+            <button class="btn btn-red" id="ClearPage" type="button"
+                    onclick="APortalModule._APortalMaster.FormDataClear(APortalBankService._APortalBankService);">
+                <i class="fa-solid fa-refresh"></i>
+            </button>
+        }
+        else
+        {
+            <button class="btn btn-red" id="resetPage" type="button"
+                    onclick="APortalModule._APortalMaster.FormDataReset('tblBankServiceList','@Model.LoanProductId');">
+                <i class="fa-solid fa-refresh"></i>
+            </button>
+        }
+        <button class="btn btn-green" id="saveCustomer" type="submit"
+                onclick="APortalBankService._APortalBankService.SubmitFormData(event, $('#nav_BankService_form'));">
+            <i class="fa-solid fa-floppy-disk"></i>
+        </button>
+    </div>
+</form>

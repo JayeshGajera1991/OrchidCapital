@@ -1,0 +1,173 @@
+@{
+    ViewData["Title"] = "Teams";
+}
+<link rel="stylesheet" href="~/Admin/css/admin_roles.css" asp-append-version="true" />
+<div class="role-panel" id="Teams-Master-Panel">
+    <div class="role-form" id="add_teams_form_wrapper">
+    </div>
+</div>
+
+<div class="table-card">
+    <div class="table-header">
+        <div class="page-header">
+            <div>
+                <h2>Teams</h2>
+                <p>Manage team information and settings</p>
+            </div>
+        </div>
+        <div class="customer-toolbar">
+            <div class="search-box custom-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" onkeyup="APortalModule._APortalMaster.InputBoxSearch(event,this,APortalTeams._APortalTeams)" id="TeamsSearch" placeholder="Search teams..." />
+                <button type="button" class="search_close_btn btn hidden" onclick="APortalModule._APortalMaster.SearchBoxReset('TeamsSearch',APortalTeams._APortalTeams)">X</button>
+            </div>
+            <select id="statusFilter" class="sort-dropdown"
+                    onchange="APortalModule._APortalMaster.StatusChangeEvent(this,APortalTeams._APortalTeams)">
+                <option value="2" selected="selected">All</option>
+                <option value="1">Active</option>
+                <option value="0">Inactive</option>
+            </select>
+            <div class="page-actions tooltip">
+                <button class="btn btn-purple" onclick="APortalTeams._APortalTeams.ExportToExcel('APortal_OrchidCapitalTeamMst', 'Teams List');">
+                    <i class="fa-solid fa-file-excel"></i>
+                    <span class="tooltip-text">Export to Excel</span>
+                </button>
+            </div>
+            <div class="page-actions tooltip">
+                <button class="btn btn-blue" id="toggleCustomerForm" onclick="APortalTeams._APortalTeams.Create();">
+                    <i class="fa-solid fa-plus"></i>
+                    <span class="tooltip-text">Add Team</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="empty-state" id="emptyCustomerState" style="display:none;">
+        <i class="fa-solid fa-users"></i>
+        <p>No teams available</p>
+        <button class="btn btn-blue" onclick="APortalTeams._APortalTeams.Create();">
+            <i class="fa-solid fa-plus"></i>
+            <span class="tooltip-text">Add Team</span>
+        </button>
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-wrapper scroll-body" id="TeamsTableWrapper"
+         onscroll="APortalModule._APortalMaster.ScrollMore(event,this,APortalTeams._APortalTeams)">
+        <table id="tblTeamsList" class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblTeamsList','FullName',APortalTeams._APortalTeams)">
+                            FullName
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up FullName_ASC active"></i>
+                                <i class="fa-solid fa-sort-down FullName_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblTeamsList','Role',APortalTeams._APortalTeams)">
+                            Role
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up Role_ASC"></i>
+                                <i class="fa-solid fa-sort-down Role_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblTeamsList','Qualification',APortalTeams._APortalTeams)">
+                            Qualification
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up Qualification_ASC"></i>
+                                <i class="fa-solid fa-sort-down Qualification_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblTeamsList','Headline',APortalTeams._APortalTeams)">
+                            Headline
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up Headline_ASC"></i>
+                                <i class="fa-solid fa-sort-down Headline_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblTeamsList','Description1',APortalTeams._APortalTeams)">
+                            Description - 1
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up Description1_ASC"></i>
+                                <i class="fa-solid fa-sort-down Description1_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblTeamsList','Description2',APortalTeams._APortalTeams)">
+                            Description - 2
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up Description2_ASC"></i>
+                                <i class="fa-solid fa-sort-down Description2_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable" 
+                               onclick="APortalModule._APortalMaster.Sorting('tblTeamsList','IsActive',APortalTeams._APortalTeams)">
+                            Status
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up IsActive_ASC"></i>
+                                <i class="fa-solid fa-sort-down IsActive_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblTeamsList','CreatedOn',APortalTeams._APortalTeams)">
+                            Created Date
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up CreatedOn_ASC"></i>
+                                <i class="fa-solid fa-sort-down CreatedOn_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th class="text-center">Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="teams-tbody-render">
+                <!-- dynamic -->
+            </tbody>
+        </table>
+    </div>
+    <div id="pagination" style="padding: 15px 30px;"></div>
+</div>
+<script>
+    var _loadUrls = function () {
+        return {
+            create: '@Url.Action("Create", "Admin")',
+            list: '@Url.Action("List", "Admin")',
+            get: '@Url.Action("Edit", "Admin")',
+            status: '@Url.Action("Status", "Admin")',
+            delete: '@Url.Action("Delete", "Admin")',
+            export: '@Url.Action("ExportToExcelFile", "Admin")'
+        };
+    }
+    window.APortalTeams = {
+        configs: {
+            urlBase: '@Utility.GetAppSettings("BasePath")',
+            loginUserName: '@User.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value',
+            loginUserRole: '@User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value',
+            defaultPageSize: 25
+        },
+        urls: _loadUrls()
+    };    
+</script>
+@section Scripts {
+    <script src="~/Admin/js/Teams.js" asp-append-version="true"></script>
+}

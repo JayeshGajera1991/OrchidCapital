@@ -1,0 +1,41 @@
+@using DocumentFormat.OpenXml.Wordprocessing
+@model OrchidCapital.Models.UpdateRoleDetailsRequest
+<h3 id="h3_addRoleHeader">Add New Role</h3>
+<button type="button" class="btn btn-red close-btn" onclick="APortalModule._APortalCommon.CloseToggle('Roles-Master-Panel','nav_roles_form');">
+    <i class="fa-solid fa-xmark"></i>
+</button>
+<form id="nav_roles_form" action="@Url.Action("UpdateRolesDetails", "Admin")" method="post">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-grid">
+        <div class="form-group">
+            <label>Role Name *</label>
+            @Html.HiddenFor(m => m.Id) <!-- Hidden field for Role ID -->
+            @Html.HiddenFor(m => m.IsActive) <!-- Hidden field for IsActive status -->
+            @Html.HiddenFor(m => m.UserName) <!-- Hidden field for UserName -->
+            @Html.HiddenFor(m => m.UserRole) <!-- Hidden field for UserRole -->
+            @Html.TextBoxFor(m => m.Role, new { @placeholder = "Enter Role name",@class = "txtspace",MaxLength = "50" })
+            @Html.ValidationMessageFor(m => m.Role, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="action-buttons">
+        @if (Model.Id == 0)
+        {
+            <button class="btn btn-red" id="ClearPage" type="button"
+                    onclick="APortalModule._APortalMaster.FormDataClear(APortalRoles._APortalRoles);">
+                <i class="fa-solid fa-refresh"></i>
+            </button>
+        }
+        else
+        {
+            <button class="btn btn-red" id="resetPage" type="button"
+                    onclick="APortalModule._APortalMaster.FormDataReset('tblRolesList','@Model.Id');">
+                <i class="fa-solid fa-refresh"></i>
+            </button>
+        }
+        <button class="btn btn-green" id="saveCustomer" type="submit"
+                onclick="APortalRoles._APortalRoles.SubmitFormData(event, $('#nav_roles_form'));">
+            <i class="fa-solid fa-floppy-disk"></i>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,172 @@
+@{
+    ViewData["Title"] = "New Loan Application";
+}
+<link rel="stylesheet" href="~/Admin/css/admin_roles.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/Admin/css/loanapplication.css" asp-append-version="true" />
+<div class="table-card">
+    <div class="table-header">
+        <div class="page-header">
+            <div>
+                <h2 id="h3_addLoadnApplicationHeader">Loan Application</h2>
+                <p>Manage Loan Application information</p>
+            </div>
+        </div>
+        <div class="customer-toolbar tooltip">
+            <button class="btn btn-orange" onclick="window.location.href='/Finance/LoanApplicationList';" data-title="View All"><i class="fa-solid fa-table-cells"></i><span
+                class="tooltip-text">View All</span>
+            </button>
+        </div>
+    </div>
+    <div class="loan-panel">
+        <!-- LEFT -->
+        <div class="loan-form">
+            <!-- STEP HEADER -->
+            <div class="loan-step-header">
+                <div class="loan-step active">
+                    <i class="fa-solid fa-file-signature"></i>
+                    <p>Application</p>
+                </div>
+                <div class="loan-step-line"></div>
+                <div class="loan-step">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <p>Documents</p>
+                </div>
+                <div class="loan-step-line"></div>
+                <div class="loan-step">
+                    <i class="fa-solid fa-user-group"></i>
+                    <p>Guarantor</p>
+                </div>
+                <div class="loan-step-line"></div>
+                <div class="loan-step">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <p>Final Review</p>
+                    <input type="hidden" id="hdnLoanApplicationId" value="@(ViewBag.LoanApplicationId == null ? 0 : ViewBag.LoanApplicationId)" />
+                    <input type="hidden" id="hdnLoanStep" value="@(ViewBag.LoanStep == null ? 0 : ViewBag.LoanStep)" />
+                </div>
+            </div>
+
+            <!-- ========================= -->
+            <!-- STEP 1 -->
+            <!-- ========================= -->
+
+            <div class="wizard-step active" id="step1"></div>
+            <!-- STEP 2,3,4 will be added later -->
+
+            <!-- ========================= -->
+            <!-- STEP 2 -->
+            <!-- ========================= -->
+
+            <div class="wizard-step" id="step2"></div>
+            <!-- stage 3 -->
+
+            <!-- ===================================== -->
+            <!-- STEP 3 -->
+            <!-- ===================================== -->
+
+            <div class="wizard-step" id="step3"></div>
+            <!-- stage 4 -->
+
+            <!-- ========================= -->
+            <!-- STEP 4 -->
+            <!-- ========================= -->
+
+            <div class="wizard-step" id="step4"></div>
+        </div>
+        <!-- RIGHT SIDE -->
+        <div class="loan-info">
+            <div class="process-box active">
+                <i class="fa-solid fa-file-circle-plus"></i>
+                <h4>Application</h4>
+                <p>
+                    Create a new loan application for customer.
+                </p>
+            </div>
+
+            <div class="process-box">
+                <i class="fa-solid fa-folder-open"></i>
+                <h4>Documents</h4>
+                <p>
+                    Upload and verify all required documents.
+                </p>
+            </div>
+
+            <div class="process-box">
+                <i class="fa-solid fa-user-check"></i>
+                <h4>Guarantor</h4>
+                <p>
+                    Add guarantor information and documents.
+                </p>
+            </div>
+
+            <div class="process-box">
+                <i class="fa-solid fa-check-circle"></i>
+                <h4>Final Review</h4>
+                <p>
+                    Review all information and submit the application.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<script>
+    var _loadUrls = function () {
+        return {
+            get: '@Url.Action("LoanApplicationProcessStep", "Finance")',
+            status: '@Url.Action("UpdateFinalLoanApplicationDetails", "Finance")',
+        };
+    }
+    window.AFinanceNewLoan = {
+        configs: {
+            urlBase: '@Utility.GetAppSettings("BasePath")',
+            loginUserName: '@User.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value',
+            loginUserRole: '@User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value',
+            defaultPageSize: 25
+        },
+        urls: _loadUrls()
+    };    
+</script>
+@section Scripts {
+    <script src="~/Admin/js/FinanceNewLoanApplication.js" asp-append-version="true"></script>
+    <script>
+
+       
+
+        
+        @* openStep(0);
+
+        document.getElementById("next1").onclick = () => openStep(1); *@
+
+        @* document.getElementById("back1").onclick = () => openStep(0);
+        document.getElementById("next2").onclick = () => openStep(2);
+
+        document.getElementById("back2").onclick = () => openStep(1); *@
+
+        @* let guarantorCount = 1;
+
+        document.getElementById("addGuarantor").onclick = function () {
+        guarantorCount++;
+        const card = document.querySelector(".guarantor-card");
+        const clone = card.cloneNode(true);
+        clone.querySelector("h4").innerHTML = "Guarantor " + guarantorCount;
+        clone.querySelectorAll("input").forEach(i => i.value = "");
+        clone.querySelectorAll("textarea").forEach(i => i.value = "");
+        document.getElementById("guarantorContainer").appendChild(clone);
+        }; *@
+
+
+        @* document.getElementById("next3").onclick = () => openStep(3);
+        document.getElementById("back3").onclick = () => openStep(2); *@
+
+        @* document.getElementById("submitApplication").onclick = function () {
+
+        if (!document.getElementById("declaration").checked) {
+        alert("Please accept the declaration.");
+        return;
+        }
+
+        alert("Loan Application Submitted Successfully.");
+
+        }; *@
+    </script>
+}

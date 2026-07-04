@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Orchid.EmailService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3440900810b2ab31ad6ac7f0f68bf13508fa09bd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+971dd0ea763f372b0308ce2397ea1eb9c8e62fde")]
 [assembly: System.Reflection.AssemblyProductAttribute("Orchid.EmailService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Orchid.EmailService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

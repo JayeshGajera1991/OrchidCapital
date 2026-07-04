@@ -1,0 +1,55 @@
+@model IEnumerable<OrchidCapital.Models.GetLoanApplicationList>
+@{
+    if (Model.Count() == 0)
+    {
+        <tr data-total-records="0" id="0">
+            <td colspan="4" style="text-align: center;">Application aren’t set up yet. Please add them to continue.</td>
+        </tr>
+    }
+    else
+    {
+        foreach (GetLoanApplicationList item in Model)
+        {
+            <tr data-total-records="@item.TotalRecords" id="@item.LoanApplicationId">
+                <td>@item.ApplicationNo</td>
+                <td>@item.CustomerName</td>
+                <td>@item.ServiceName</td>
+                <td>@item.BranchName</td>
+                <td>@item.RequestedAmount</td>
+                <td>@item.RequestedTenure</td>
+                <td>@item.RequestedInterestRate</td>
+                <td>@item.LoanPurpose</td>
+                <td>@item.Remarks</td>
+                <td>
+                    <span
+                    class="status @(item.ApplicationStatus == 3 ? "approved" : item.ApplicationStatus == 4 ? "rejected" : item.ApplicationStatus == 5 ? "rejected" : "pending")">@item.Status</span>
+                </td>
+                <td>@item.CreatedDate</td>
+                <td class="text-center">
+                    <div class="action-wrapper">
+                        <button class="action-btn" data-id="@item.LoanApplicationId"
+                                onclick="AFinanceApplicationList._AFinanceApplicationList.toggleMenu(this)">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                        <div class="action-menu">
+                            @if (item.LoanStep < 4)
+                            {
+                                <div onclick="AFinanceApplicationList._AFinanceApplicationList.Edit('@item.LoanApplicationId','@item.LoanStep')">
+                                    <i class="fa-solid fa-pen-to-square"></i> Edit
+                                </div>
+                            }
+                            @* <div onclick="AFinanceApplicationList._AFinanceApplicationList.Status('@item.LoanApplicationId')">
+                                <i class="fa-solid fa-toggle-on"></i>
+                                @item.Status
+                            </div> *@
+
+                            <div onclick="AFinanceApplicationList._AFinanceApplicationList.Delete('@item.LoanApplicationId')">
+                                <i class="fa-solid fa-trash"></i> Delete
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        }
+    }
+}

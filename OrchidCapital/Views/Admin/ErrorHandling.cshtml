@@ -1,0 +1,112 @@
+@{
+    ViewData["Title"] = "ErrorHandling";
+}
+<link rel="stylesheet" href="~/Admin/css/admin_roles.css" asp-append-version="true" />
+<div class="table-card">
+    <div class="table-header">
+        <div class="page-header">
+            <div>
+                <h2>Error Handling</h2>
+                <p>Manage error handling settings</p>
+            </div>
+        </div>
+        <div class="customer-toolbar">
+            <div class="search-box custom-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" onkeyup="APortalModule._APortalMaster.InputBoxSearch(event,this,APortalErrorHandling._APortalErrorHandling)" id="ErrorHandlingSearch" placeholder="Search error handling..." />
+                <button type="button" class="search_close_btn btn hidden" onclick="APortalModule._APortalMaster.SearchBoxReset('ErrorHandlingSearch',APortalErrorHandling._APortalErrorHandling)">X</button>
+            </div>            
+            <div class="page-actions tooltip">
+                <button class="btn btn-purple" onclick="APortalErrorHandling._APortalErrorHandling.ExportToExcel('APortal_ErrorLog', 'Error Handling List');">
+                    <i class="fa-solid fa-file-excel"></i>
+                    <span class="tooltip-text">Export to Excel</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- TABLE -->
+    <div class="table-wrapper scroll-body" id="ErrorHandlingTableWrapper"
+         onscroll="APortalModule._APortalMaster.ScrollMore(event,this,APortalErrorHandling._APortalErrorHandling)">
+        <table id="tblErrorHandlingList" class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblErrorHandlingList','UserName',APortalErrorHandling._APortalErrorHandling)">
+                            UserName
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up UserName_ASC active"></i>
+                                <i class="fa-solid fa-sort-down UserName_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblErrorHandlingList','ControllerName',APortalErrorHandling._APortalErrorHandling)">
+                            Controller Name
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up ControllerName_ASC"></i>
+                                <i class="fa-solid fa-sort-down ControllerName_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblErrorHandlingList','ActionName',APortalErrorHandling._APortalErrorHandling)">
+                            Action Name
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up ActionName_ASC"></i>
+                                <i class="fa-solid fa-sort-down ActionName_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblErrorHandlingList','ErrorMessage',APortalErrorHandling._APortalErrorHandling)">
+                            Error Message
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up ErrorMessage_ASC"></i>
+                                <i class="fa-solid fa-sort-down ErrorMessage_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblErrorHandlingList','CreatedOn',APortalErrorHandling._APortalErrorHandling)">
+                           Created On
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up CreatedOn_ASC"></i>
+                                <i class="fa-solid fa-sort-down CreatedOn_DESC"></i>
+                            </span>
+                        </a>
+                    </th>                    
+                </tr>
+            </thead>
+
+            <tbody id="errorhandling-tbody-render">
+                <!-- dynamic -->
+            </tbody>
+        </table>
+    </div>
+    <div id="pagination" style="padding: 15px 30px;"></div>
+</div>
+<script>
+    var _loadUrls = function () {
+        return {
+            list: '@Url.Action("List", "Admin")',
+            export: '@Url.Action("ExportToExcelFile", "Admin")'
+        };
+    }
+    window.APortalErrorHandling = {
+        configs: {
+            urlBase: '@Utility.GetAppSettings("BasePath")',
+            loginUserName: '@User.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value',
+            loginUserRole: '@User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value',
+            defaultPageSize: 25
+        },
+        urls: _loadUrls()
+    };    
+</script>
+@section Scripts {
+    <script src="~/Admin/js/ErrorHandling.js" asp-append-version="true"></script>
+}

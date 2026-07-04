@@ -10,7 +10,8 @@
         "dependencies": {
           "Dapper": "2.1.66",
           "Microsoft.Data.SqlClient": "6.1.4",
-          "Microsoft.Extensions.Configuration.Abstractions": "10.0.3"
+          "Microsoft.Extensions.Configuration.Abstractions": "10.0.3",
+          "Orchid.UtilityHelper": "1.0.0"
         },
         "runtime": {
           "Orchid.DataAccess.dll": {}
@@ -418,7 +419,12 @@
           }
         }
       },
-      "System.ValueTuple/4.5.0": {}
+      "System.ValueTuple/4.5.0": {},
+      "Orchid.UtilityHelper/1.0.0": {
+        "runtime": {
+          "Orchid.UtilityHelper.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -643,6 +649,11 @@
       "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
       "path": "system.valuetuple/4.5.0",
       "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
+    },
+    "Orchid.UtilityHelper/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

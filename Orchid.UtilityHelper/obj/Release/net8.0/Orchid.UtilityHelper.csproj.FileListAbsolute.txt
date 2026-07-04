@@ -1,0 +1,15 @@
+E:\OrchidCapital\OrchidCapital\Orchid.UtilityHelper\bin\Release\net8.0\Orchid.UtilityHelper.exe
+E:\OrchidCapital\OrchidCapital\Orchid.UtilityHelper\bin\Release\net8.0\Orchid.UtilityHelper.deps.json
+E:\OrchidCapital\OrchidCapital\Orchid.UtilityHelper\bin\Release\net8.0\Orchid.UtilityHelper.runtimeconfig.json
+E:\OrchidCapital\OrchidCapital\Orchid.UtilityHelper\bin\Release\net8.0\Orchid.UtilityHelper.dll
+E:\OrchidCapital\OrchidCapital\Orchid.UtilityHelper\bin\Release\net8.0\Orchid.UtilityHelper.pdb
+E:\OrchidCapital\OrchidCapital\Orchid.UtilityHelper\obj\Release\net8.0\Orchid.UtilityHelper.GeneratedMSBuildEditorConfig.editorconfig
+E:\OrchidCapital\OrchidCapital\Orchid.UtilityHelper\obj\Release\net8.0\Orchid.UtilityHelper.AssemblyInfoInputs.cache
+E:\OrchidCapital\OrchidCapital\Orchid.UtilityHelper\obj\Release\net8.0\Orchid.UtilityHelper.AssemblyInfo.cs
+E:\OrchidCapital\OrchidCapital\Orchid.UtilityHelper\obj\Release\net8.0\Orchid.UtilityHelper.csproj.CoreCompileInputs.cache
+E:\OrchidCapital\OrchidCapital\Orchid.UtilityHelper\obj\Release\net8.0\Orchid.UtilityHelper.sourcelink.json
+E:\OrchidCapital\OrchidCapital\Orchid.UtilityHelper\obj\Release\net8.0\Orchid.UtilityHelper.dll
+E:\OrchidCapital\OrchidCapital\Orchid.UtilityHelper\obj\Release\net8.0\refint\Orchid.UtilityHelper.dll
+E:\OrchidCapital\OrchidCapital\Orchid.UtilityHelper\obj\Release\net8.0\Orchid.UtilityHelper.pdb
+E:\OrchidCapital\OrchidCapital\Orchid.UtilityHelper\obj\Release\net8.0\Orchid.UtilityHelper.genruntimeconfig.cache
+E:\OrchidCapital\OrchidCapital\Orchid.UtilityHelper\obj\Release\net8.0\ref\Orchid.UtilityHelper.dll

@@ -10,7 +10,7 @@
             ],
             "problemMatcher": "$msCompile",
             "group": "build",
-            "label": "build OrchidCapital"
+            "label": "build OrchidCapital"          
         },
         {
             "type": "process",

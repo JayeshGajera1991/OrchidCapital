@@ -1,0 +1,124 @@
+@{
+    ViewData["Title"] = "Audit Log Handling";
+}
+<link rel="stylesheet" href="~/Admin/css/admin_roles.css" asp-append-version="true" />
+<div class="table-card">
+    <div class="table-header">
+        <div class="page-header">
+            <div>
+                <h2>Audit Log Handling</h2>
+                <p>Manage audit log handling settings</p>
+            </div>
+        </div>
+        <div class="customer-toolbar">
+            <div class="search-box custom-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" onkeyup="APortalModule._APortalMaster.InputBoxSearch(event,this,APortalAuditLogHandling._APortalAuditLogHandling)" id="AuditLogHandlingSearch" placeholder="Search audit log handling..." />
+                <button type="button" class="search_close_btn btn hidden" onclick="APortalModule._APortalMaster.SearchBoxReset('AuditLogHandlingSearch',APortalAuditLogHandling._APortalAuditLogHandling)">X</button>
+            </div>            
+            <div class="page-actions tooltip">
+                <button class="btn btn-purple" onclick="APortalAuditLogHandling._APortalAuditLogHandling.ExportToExcel('UPortal_uspSaveAuditLog', 'Audit Log List');">
+                    <i class="fa-solid fa-file-excel"></i>
+                    <span class="tooltip-text">Export to Excel</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- TABLE -->
+    <div class="table-wrapper scroll-body" id="AuditLogHandlingTableWrapper"
+         onscroll="APortalModule._APortalMaster.ScrollMore(event,this,APortalAuditLogHandling._APortalAuditLogHandling)">
+        <table id="tblAuditLogHandlingList" class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblAuditLogHandlingList','CreatedUser',APortalAuditLogHandling._APortalAuditLogHandling)">
+                            Created User Name
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up CreatedUser_ASC active"></i>
+                                <i class="fa-solid fa-sort-down CreatedUser_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblAuditLogHandlingList','OperationType',APortalAuditLogHandling._APortalAuditLogHandling)">
+                            Operation Type
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up OperationType_ASC"></i>
+                                <i class="fa-solid fa-sort-down OperationType_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblAuditLogHandlingList','Entity',APortalAuditLogHandling._APortalAuditLogHandling)">
+                           Entity
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up Entity_ASC"></i>
+                                <i class="fa-solid fa-sort-down Entity_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblAuditLogHandlingList','PrimaryKey',APortalAuditLogHandling._APortalAuditLogHandling)">
+                            Primary Key
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up PrimaryKey_ASC"></i>
+                                <i class="fa-solid fa-sort-down PrimaryKey_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblAuditLogHandlingList','SPName',APortalAuditLogHandling._APortalAuditLogHandling)">
+                            SP Name
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up SPName_ASC"></i>
+                                <i class="fa-solid fa-sort-down SPName_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>Old Value</th>
+                    <th>New Value</th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblAuditLogHandlingList','CreatedOn',APortalAuditLogHandling._APortalAuditLogHandling)">
+                           Created On
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up CreatedOn_ASC"></i>
+                                <i class="fa-solid fa-sort-down CreatedOn_DESC"></i>
+                            </span>
+                        </a>
+                    </th>                    
+                </tr>
+            </thead>
+
+            <tbody id="auditloghandling-tbody-render">
+                <!-- dynamic -->
+            </tbody>
+        </table>
+    </div>
+    <div id="pagination" style="padding: 15px 30px;"></div>
+</div>
+<script>
+    var _loadUrls = function () {
+        return {
+            list: '@Url.Action("List", "Admin")',
+            export: '@Url.Action("ExportToExcelFile", "Admin")'
+        };
+    }
+    window.APortalAuditLogHandling = {
+        configs: {
+            urlBase: '@Utility.GetAppSettings("BasePath")',
+            loginUserName: '@User.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value',
+            loginUserRole: '@User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value',
+            defaultPageSize: 25
+        },
+        urls: _loadUrls()
+    };    
+</script>
+@section Scripts {
+    <script src="~/Admin/js/AuditLogHandling.js" asp-append-version="true"></script>
+}

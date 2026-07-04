@@ -1,0 +1,204 @@
+@{
+    ViewData["Title"] = "Bank Branch";
+}
+<link rel="stylesheet" href="~/Admin/css/admin_roles.css" asp-append-version="true" />
+<div class="role-panel" id="BankBranch-Master-Panel">
+    <div class="role-form" id="add_BankBranch_form_wrapper">
+    </div>
+</div>
+
+<div class="table-card">
+    <div class="table-header">
+        <div class="page-header">
+            <div>
+                <h2>Bank Branch</h2>
+                <p>Manage Bank Branch information and settings</p>
+            </div>
+        </div>
+        <div class="customer-toolbar">
+            <div class="search-box custom-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" onkeyup="APortalModule._APortalMaster.InputBoxSearch(event,this,APortalBankBranch._APortalBankBranch)" id="BranchSearch" placeholder="Search branch settings..." />
+                <button type="button" class="search_close_btn btn hidden" onclick="APortalModule._APortalMaster.SearchBoxReset('BranchSearch',APortalBankBranch._APortalBankBranch)">X</button>
+            </div>
+            <select id="statusFilter" class="sort-dropdown"
+                    onchange="APortalModule._APortalMaster.StatusChangeEvent(this,APortalBankBranch._APortalBankBranch)">
+                <option value="2" selected="selected">All</option>
+                <option value="1">Active</option>
+                <option value="0">Inactive</option>
+            </select>
+            <div class="page-actions tooltip">
+                <button class="btn btn-purple" onclick="APortalBankBranch._APortalBankBranch.ExportToExcel('APortal_BankBranchMst', 'Branch List');">
+                    <i class="fa-solid fa-file-excel"></i>
+                    <span class="tooltip-text">Export to Excel</span>
+                </button>
+            </div>
+            <div class="page-actions tooltip">
+                <button class="btn btn-blue" id="toggleCustomerForm" onclick="APortalBankBranch._APortalBankBranch.Create();">
+                    <i class="fa-solid fa-plus"></i>
+                    <span class="tooltip-text">Add Branch</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="empty-state" id="emptyCustomerState" style="display:none;">
+        <i class="fa-solid fa-users"></i>
+        <p>No Bank Branch available</p>
+        <button class="btn btn-blue" onclick="APortalBankBranch._APortalBankBranch.Create();">
+            <i class="fa-solid fa-plus"></i>
+            <span class="tooltip-text">Add Branch</span>
+        </button>
+    </div>
+
+    <!-- TABLE -->
+    <div class="table-wrapper scroll-body" id="BankBranchTableWrapper"
+         onscroll="APortalModule._APortalMaster.ScrollMore(event,this,APortalBankBranch._APortalBankBranch)">
+        <table id="tblBankBranchList" class="table">
+            <thead>
+                <tr>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblBankBranchList','BranchCode',APortalBankBranch._APortalBankBranch)">
+                            Branch Code
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up BranchCode_ASC"></i>
+                                <i class="fa-solid fa-sort-down BranchCode_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblBankBranchList','BranchName',APortalBankBranch._APortalBankBranch)">
+                            Branch Name
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up BranchName_ASC active"></i>
+                                <i class="fa-solid fa-sort-down BranchName_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblBankBranchList','BankName',APortalBankBranch._APortalBankBranch)">
+                            Bank Name
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up BankName_ASC"></i>
+                                <i class="fa-solid fa-sort-down BankName_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblBankBranchList','IFSCCode',APortalBankBranch._APortalBankBranch)">
+                            IFSC Code
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up IFSCCode_ASC"></i>
+                                <i class="fa-solid fa-sort-down IFSCCode_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblBankBranchList','MICRCode',APortalBankBranch._APortalBankBranch)">
+                            MICR Code
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up MICRCode_ASC"></i>
+                                <i class="fa-solid fa-sort-down MICRCode_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblBankBranchList','ContactPerson',APortalBankBranch._APortalBankBranch)">
+                            Contact Person
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up ContactPerson_ASC"></i>
+                                <i class="fa-solid fa-sort-down ContactPerson_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblBankBranchList','PhoneNumber',APortalBankBranch._APortalBankBranch)">
+                            Phone Number
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up PhoneNumber_ASC"></i>
+                                <i class="fa-solid fa-sort-down PhoneNumber_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblBankBranchList','Email',APortalBankBranch._APortalBankBranch)">
+                            Email
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up Email_ASC"></i>
+                                <i class="fa-solid fa-sort-down Email_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblBankBranchList','BranchAddress',APortalBankBranch._APortalBankBranch)">
+                            Branch Address
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up BranchAddress_ASC"></i>
+                                <i class="fa-solid fa-sort-down BranchAddress_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable" 
+                               onclick="APortalModule._APortalMaster.Sorting('tblSystemSettingsList','IsActive',APortalBankBranch._APortalBankBranch)">
+                            Status
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up IsActive_ASC"></i>
+                                <i class="fa-solid fa-sort-down IsActive_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th>
+                        <a href="javascript:void(0)" class="sortable"
+                               onclick="APortalModule._APortalMaster.Sorting('tblSystemSettingsList','CreatedOn',APortalBankBranch._APortalBankBranch)">
+                            Created Date
+                            <span class="sort-icons">
+                                <i class="fa-solid fa-sort-up CreatedOn_ASC"></i>
+                                <i class="fa-solid fa-sort-down CreatedOn_DESC"></i>
+                            </span>
+                        </a>
+                    </th>
+                    <th class="text-center">Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="bankBranch-tbody-render">
+                <!-- dynamic -->
+            </tbody>
+        </table>
+    </div>
+    <div id="pagination" style="padding: 15px 30px;"></div>
+</div>
+<script>
+    var _loadUrls = function () {
+        return {
+            create: '@Url.Action("Create", "Admin")',
+            list: '@Url.Action("List", "Admin")',
+            get: '@Url.Action("Edit", "Admin")',
+            status: '@Url.Action("Status", "Admin")',
+            delete: '@Url.Action("Delete", "Admin")',
+            export: '@Url.Action("ExportToExcelFile", "Admin")'
+        };
+    }
+    window.APortalBankBranch = {
+        configs: {
+            urlBase: '@Utility.GetAppSettings("BasePath")',
+            loginUserName: '@User.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value',
+            loginUserRole: '@User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value',
+            defaultPageSize: 25
+        },
+        urls: _loadUrls()
+    };    
+</script>
+@section Scripts {
+    <script src="~/Admin/js/BankBranch.js" asp-append-version="true"></script>
+}
+

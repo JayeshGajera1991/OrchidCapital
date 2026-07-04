@@ -1,0 +1,85 @@
+@model OrchidCapital.Models.AddRolePermissionsRequest
+<div class="role-form">
+    <button type="button" class="btn btn-red close-btn"
+            onclick="APortalModule._APortalCommon.CloseToggle('RolePermission-Master-Panel','nav_RolePermission_form');">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="step-header">
+        <div class="step active">1</div>
+        <div class="step">2</div>
+    </div>
+    <div class="step-content active" id="step1">
+        <h3>Employee Role Details</h3>
+        <div class="form-grid" id="nav_RolePermission_form">
+            <div class="form-group">
+                <label>Employee Name *</label>
+                <select class="form-control" id="selEmployee"
+                        onchange="APortalRolePermissions._APortalRolePermissions.Change(this);">
+                    <option value="0">Select</option>
+                    @if (Model != null && Model.RolePermissions.Count() > 0)
+                    {
+                        foreach (var item in Model.RolePermissions)
+                        {
+                            <option value="@item.Id" data-fname="@item.FullName" data-role="@item.
+                            R                      ole" data-roleid="@item.RoleId">@item.UserName</option>
+                        }
+
+                
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Employee Name *</label>
+                <input type="hidden" id="hdnUserId" value="@Model.UserId" />
+                <input type="text" placeholder="ABC" id="EmployeeName" disabled>
+            </div>
+            <div class="form-group">
+                <label>Employee ID *</label>
+                <input type="text" placeholder="EMP001" id="EmployeeId" disabled>
+            </div>
+            <div class="form-group">
+                <label>Employee Role *</label>
+                <input type="text" placeholder="Admin" id="EmployeeRole" disabled>
+            </div>
+        </div>
+        <button class="btn btn-blue next-btn" onclick="APortalRolePermissions._APortalRolePermissions.Next();">
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </div>
+
+    <div class="step-content" id="step2">
+        <h3>Permissions Setup</h3>
+        <div class="permission-table">
+            <div class="perm-row header">
+                <span>Module</span>
+                <span>Full</span>
+                <span>Read</span>
+            </div>
+            <div id="permissions-tbody-render">
+                @* <span id="@item.PageId">@item.PageName</span>
+                <input type="radio" name="@item.PageId" id="Add">
+                <input type="radio" name="@item.PageId" id="View"> *@
+            </div>
+        </div>
+        <div class="step-actions">
+            <button class="btn btn-blue" id="backBtn" onclick="APortalRolePermissions._APortalRolePermissions.Back();">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button class="btn btn-green" onclick="APortalRolePermissions._APortalRolePermissions.Save();">
+                <i class="fa-solid fa-floppy-disk"></i>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="role-info">
+    <div class="process-box active">
+        <i class="fa-solid fa-id-badge"></i>
+        <h4>Step 1: Details</h4>
+        <p>Enter employee and role information</p>
+    </div>
+    <div class="process-box">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h4>Step 2: Permissions</h4>
+        <p>Assign access control for each module</p>
+    </div>
+</div>

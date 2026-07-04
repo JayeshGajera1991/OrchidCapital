@@ -1,12 +1,8 @@
 ﻿using Dapper;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
+using Orchid.UtilityHelper;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Orchid.DataAccess
 {
@@ -105,7 +101,7 @@ namespace Orchid.DataAccess
                 1 => DefaultConnectionstring,
                 _ => DefaultConnectionstring
             };
-            var connectionString = _config[connection]!;
+            var connectionString = Encryption.Decrypt(Environment.GetEnvironmentVariable("USR_ENC_KEY"), _config[connection]!);
             var updatedConnectionString = connectionString.Replace("{{DBNAME}}", DB_NAME);
             updatedConnectionString += ";Encrypt=False;";
             return updatedConnectionString;

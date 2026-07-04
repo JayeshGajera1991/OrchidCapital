@@ -1,0 +1,125 @@
+@{
+    Layout = null;
+}
+<style>
+    /* Card */
+    .container {
+        width: 390px;
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    /* Steps */
+    .step {
+        display: none;
+    }
+
+    .step.active {
+        display: block;
+    }
+
+    /* Options */
+    .option {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin: 10px 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+
+    .option:hover {
+        background: #f0f8ff;
+    }
+
+    .step input[type="radio"] {
+        margin-right: 10px;
+    }
+
+    /* Buttons */
+    .step .btn {
+        width: 100%;
+        padding: 10px;
+        background: #007bff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        margin-top: 12px;
+        cursor: pointer;
+        justify-content: center;
+    }
+
+    .step .btn:hover {
+        background: #0056b3;
+    }
+
+    /* QR Box */
+    .qr-box {
+        text-align: center;
+        padding: 15px;
+    }
+
+    .qr-box img {
+        width: 180px;
+        margin: 10px 0;
+    }
+
+    /* Input */
+    .step input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+</style>
+<div class="container">
+    <h2>Two-Factor Authentication</h2>
+    <!-- STEP 1 -->
+    <div class="step active" id="step1">
+        <p>Select Device Type</p>
+        <label class="option">
+            <input type="radio" name="device">
+            📱 Android
+        </label>
+        <label class="option">
+            <input type="radio" name="device">
+            🍎 iOS
+        </label>
+        <button class="btn" onclick="APortalTwoFactor._APortalTwoFactor.GenerateQRCode(2);">Next</button>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="step" id="step2">
+        <p>Scan QR Code</p>
+        <div class="qr-box">
+            <img id="imgQRCode" src="" alt="QR Code">
+            <p>Scan using Authenticator App</p>
+        </div>
+        <button class="btn" onclick="APortalTwoFactor._APortalTwoFactor.VerificationCode(3)">Continue</button>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="step" id="step3">
+        <p>Enter Verification Code</p>
+        <form id="nav_twofactor_form" action="@Url.Action("TwoFactorAuthentication", "Admin")" method="post">
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <input type="text" class="form-control textboxallownumeric" id="AuthCode" name="AuthCode" maxlength="6" minlength="6" placeholder="Enter 6-digit code" required>
+            <button class="btn" type="submit" onclick="APortalTwoFactor._APortalTwoFactor.SubmitFormData(event, $('#nav_twofactor_form'))">Verify</button>
+        </form>
+    </div>
+</div>
+<script>
+    function nextStep(step) {
+        document.querySelectorAll(".step").forEach(s => s.classList.remove("active"));
+        document.getElementById("step" + step).classList.add("active");
+    }
+</script>

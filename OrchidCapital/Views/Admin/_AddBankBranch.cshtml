@@ -1,0 +1,76 @@
+@using DocumentFormat.OpenXml.Wordprocessing
+@model OrchidCapital.Models.UpdateBranchDetailsRequest
+<h3 id="h3_addBranchHeader">Add New System Setting</h3>
+<button type="button" class="btn btn-red close-btn" onclick="APortalModule._APortalCommon.CloseToggle('BankBranch-Master-Panel','nav_BankBranch_form');">
+    <i class="fa-solid fa-xmark"></i>
+</button>
+<form id="nav_BankBranch_form" action="@Url.Action("UpdateBranchDetails", "Admin")" method="post">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-grid">
+        <div class="form-group">
+            <label>Branch Name *</label>
+            @Html.HiddenFor(m => m.BranchId) <!-- Hidden field for Page ID -->
+            @Html.HiddenFor(m => m.IsActive) <!-- Hidden field for IsActive status -->
+            @Html.HiddenFor(m => m.UserName) <!-- Hidden field for UserName -->
+            @Html.HiddenFor(m => m.UserRole) <!-- Hidden field for UserRole -->
+            @Html.TextBoxFor(m => m.BranchName, new { @placeholder = "Enter branch name",@class="txtspace",MaxLength="100" })
+            @Html.ValidationMessageFor(m => m.BranchName, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>Bank Name *</label>
+            @Html.TextBoxFor(m => m.BankName, new { @placeholder = "Enter Bank Name",@class="txtspace",MaxLength="500" })
+            @Html.ValidationMessageFor(m => m.BankName, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>IFSC Code *</label>
+            @Html.TextBoxFor(m => m.IFSCCode, new { @placeholder = "Enter IFSC Code",@class="txtspace",MaxLength="11" })
+            @Html.ValidationMessageFor(m => m.IFSCCode, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>MICR Code *</label>
+            @Html.TextBoxFor(m => m.MICRCode, new { @placeholder = "Enter MICR Code",@class="txtspace",MaxLength="9" })
+            @Html.ValidationMessageFor(m => m.MICRCode, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>Contact Person *</label>
+            @Html.TextBoxFor(m => m.ContactPerson, new { @placeholder = "Enter Contact Person",@class="txtspace",MaxLength="100" })
+            @Html.ValidationMessageFor(m => m.ContactPerson, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>Phone Number *</label>
+            @Html.TextBoxFor(m => m.PhoneNumber, new { @placeholder = "Enter Phone Number",@class="txtspace txtnumeric",MaxLength="10" })
+            @Html.ValidationMessageFor(m => m.PhoneNumber, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>Email *</label>
+            @Html.TextBoxFor(m => m.Email, new { @placeholder = "Enter Email",@class="txtspace",MaxLength="500" })
+            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group full-width">
+            <label>Branch Address *</label>
+            @Html.TextAreaFor(m => m.BranchAddress, new { @placeholder = "Enter Branch Address",@class="txtspace",MaxLength="1000" })
+            @Html.ValidationMessageFor(m => m.BranchAddress, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="action-buttons">
+        @if (Model.BranchId == 0)
+        {
+            <button class="btn btn-red" id="ClearPage" type="button"
+                    onclick="APortalModule._APortalMaster.FormDataClear(APortalBankBranch._APortalBankBranch);">
+                <i class="fa-solid fa-refresh"></i>
+            </button>
+        }
+        else
+        {
+            <button class="btn btn-red" id="resetPage" type="button"
+                    onclick="APortalModule._APortalMaster.FormDataReset('tblBankBranchList','@Model.BranchId');">
+                <i class="fa-solid fa-refresh"></i>
+            </button>
+        }
+        <button class="btn btn-green" id="saveCustomer" type="submit"
+                onclick="APortalBankBranch._APortalBankBranch.SubmitFormData(event, $('#nav_BankBranch_form'));">
+            <i class="fa-solid fa-floppy-disk"></i>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Account Locked</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .email-box {
+            max-width: 600px;
+            margin: auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #dc3545;
+        }
+
+        p {
+            color: #555555;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .info-box {
+            background: #fff3f3;
+            border-left: 5px solid #dc3545;
+            padding: 15px;
+            margin-top: 15px;
+            text-align: left;
+            font-size: 14px;
+            color: #333;
+            border-radius: 5px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: #dc3545;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #999999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="email-box">
+
+            <h2>Your Account Has Been Locked</h2>
+
+            <p>Hello,</p>
+
+            <p>
+                We have detected unusual or multiple failed login attempts on your account.
+                For your security, your account has been temporarily locked.
+            </p>
+
+            <div class="info-box">
+                If this was not you, we strongly recommend resetting your password immediately and reviewing your account activity.
+            </div>
+
+            <a href="{{SupportLink}}" class="btn">Contact Support</a>
+
+            <p class="footer">
+                This is a security measure to protect your account.
+            </p>
+
+        </div>
+    </div>
+</body>
+</html>

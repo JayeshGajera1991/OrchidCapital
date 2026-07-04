@@ -35,6 +35,8 @@ builder.Services.AddScoped<IDapperRepository, DapperRepository>();
 // Login
 builder.Services.AddScoped<ILoginRepository, LoginRepository>();
 builder.Services.AddScoped<IAdminRepository, AdminRepository>();
+builder.Services.AddScoped<IFinanceRepository, FinanceRepository>();
+builder.Services.AddScoped<IDashboardRepository, DashboardRepository>();
 #region configure email keys
 builder.Services.Configure<EmailConfiguration>(builder.Configuration.GetSection("EMAIL-CONFIG"));
 
@@ -91,7 +93,7 @@ builder.Services.AddSwaggerGen(options =>
 
 
 });
-
+builder.Services.Configure<EmailConfiguration>(builder.Configuration.GetSection("EmailConfiguration"));
 // Add authorization services
 builder.Services.AddAuthorization();
 

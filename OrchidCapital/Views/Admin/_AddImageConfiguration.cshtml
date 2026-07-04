@@ -1,0 +1,106 @@
+@model OrchidCapital.Models.UpdateImageConfigDetailsRequest
+<h3 id="h3_addImageConfigurationHeader">Add New Image Configuration</h3>
+<button type="button" class="btn btn-red close-btn"
+        onclick="APortalModule._APortalCommon.CloseToggle('ImageConfiguration-Master-Panel','nav_image_config_form');">
+    <i class="fa-solid fa-xmark"></i>
+</button>
+<form id="nav_image_config_form" action="@Url.Action("UpdateImageConfiguration", "Admin")" method="post"
+      enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-grid">
+        <div class="form-group">
+            <label>Headline *</label>
+            @Html.HiddenFor(m => m.ImagePath) <!-- Hidden field for Page ID -->
+            @Html.HiddenFor(m => m.Id) <!-- Hidden field for Page ID -->
+            @Html.HiddenFor(m => m.IsActive) <!-- Hidden field for IsActive status -->
+            @Html.HiddenFor(m => m.UserName) <!-- Hidden field for UserName -->
+            @Html.HiddenFor(m => m.UserRole) <!-- Hidden field for UserRole -->
+            @Html.TextBoxFor(m => m.Headline, new { @placeholder = "Enter Headline",@class="txtspace",MaxLength="1000" })
+            @Html.ValidationMessageFor(m => m.Headline, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>Role *</label>
+            @Html.TextBoxFor(m => m.Role, new { @placeholder = "Enter role",@class="txtspace",MaxLength="50" })
+            @Html.ValidationMessageFor(m => m.Role, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>Type *</label>
+            @Html.TextBoxFor(m => m.Type, new { @placeholder = "Enter type",@class="txtspace",MaxLength="50" })
+            @Html.ValidationMessageFor(m => m.Type, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>Image *</label>
+            @Html.TextBoxFor(m => m.ImageFile, new
+            {
+                @type = "file",
+                @placeholder = "Select image file"
+            })
+            @Html.ValidationMessageFor(m => m.ImageFile, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group full-width">
+            <label>Description *</label>
+            @Html.TextAreaFor(m => m.Description, new { @placeholder = "Enter description",@class="txtspace",MaxLength="1000" })
+            @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+        </div>
+        
+    </div>
+    <div class="action-buttons">
+        @if (Model.Id == 0)
+        {
+            <button class="btn btn-red" id="ClearPage" type="button"
+                    onclick="APortalModule._APortalMaster.FormDataClear(APortalImageConfiguration._APortalImageConfiguration);">
+                <i class="fa-solid fa-refresh"></i>
+            </button>
+        }
+        else
+        {
+            <button class="btn btn-red" id="resetPage" type="button"
+                    onclick="APortalModule._APortalMaster.FormDataReset('tblImageConfigurationsList','@Model.Id');">
+                <i class="fa-solid fa-refresh"></i>
+            </button>
+        }
+        <button class="btn btn-green" id="saveCustomer" type="submit"
+                onclick="APortalImageConfiguration._APortalImageConfiguration.SubmitFormData(event, $('#nav_image_config_form'));">
+            <i class="fa-solid fa-floppy-disk"></i>
+        </button>
+    </div>
+</form>
+<script>
+    $(document).ready(function () {
+        setImageFromPath('/ImageUploads/@Model.ImagePath');
+    });
+    async function setImageFromPath(imagePath) {
+        try {
+            const response = await fetch(imagePath);
+
+            if (!response.ok) {
+                throw new Error("Image not found");
+            }
+
+            const blob = await response.blob();
+
+            const fileName = imagePath.split('/').pop();
+
+            const file = new File(
+                [blob],
+                fileName,
+                {
+                    type: blob.type
+                }
+            );
+
+            const dataTransfer = new DataTransfer();
+            dataTransfer.items.add(file);
+
+            const input = document.getElementById("ImageFile");
+
+            input.files = dataTransfer.files;
+
+            console.log(input.files[0].name);
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
+</script>

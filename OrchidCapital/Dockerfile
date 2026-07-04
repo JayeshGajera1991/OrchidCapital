@@ -1,46 +1,27 @@
-ARG BUILDPLATFORM
-ARG TARGETARCH
-FROM mcr.microsoft.com/dotnet/aspnet:10.0.103 AS base
-
-USER $APP_UID
-WORKDIR /app
-EXPOSE 4001
-
-FROM --platform=$BUILDPLATFORM mcr.microsoft.com/dotnet/sdk:10.0.103 AS build
-# Choose Release or Debug
-ARG BUILD_CONFIGURATION=Release
-
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
-# Copy all project refs & restore
 COPY ["OrchidCapital/OrchidCapital.csproj", "OrchidCapital/"]
-RUN dotnet restore "./OrchidCapital/OrchidCapital.csproj"
+COPY ["Orchid.DataAccess/Orchid.DataAccess.csproj", "Orchid.DataAccess/"]
+COPY ["Orchid.DataModels/Orchid.DataModels.csproj", "Orchid.DataModels/"]
+COPY ["Orchid.EmailService/Orchid.EmailService.csproj", "Orchid.EmailService/"]
+COPY ["Orchid.TokenValidator/Orchid.TokenValidator.csproj", "Orchid.TokenValidator/"]
+COPY ["Orchid.UtilityHelper/Orchid.UtilityHelper.csproj", "Orchid.UtilityHelper/"]
 
-# Copy source & build
+RUN dotnet restore "OrchidCapital/OrchidCapital.csproj"
+
 COPY . .
+
 WORKDIR "/src/OrchidCapital"
-RUN dotnet build "./OrchidCapital.csproj" \ 
-    -c $BUILD_CONFIGURATION \
-    -o /app/build
+RUN dotnet publish "OrchidCapital.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
-FROM build AS publish
-ARG BUILD_CONFIGURATION=Release
-
-# Framework-dependent (no RID needed); UseAppHost=false keeps it portable
-RUN dotnet publish "./OrchidCapital.csproj" \ 
-    -c $BUILD_CONFIGURATION \
-    -o /app/publish \
-    /p:UseAppHost=false
-
-FROM base AS final
-
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
 
-# Pull in the published DLLs (portable assemblies)
-COPY --from=publish /app/publish ./
+EXPOSE 8080
 
-# Set environment & entrypoint
-#ENV ASPNETCORE_ENVIRONMENT=UAT
-ENV ASPNETCORE_URLS="http://+:4001"
+ENV ASPNETCORE_URLS=http://+:8080
+
+COPY --from=build /app/publish .
 
 ENTRYPOINT ["dotnet", "OrchidCapital.dll"]

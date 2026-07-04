@@ -591,6 +591,16 @@
         "runtime": {
           "lib/netcoreapp2.0/_._": {}
         }
+      },
+      "Orchid.UtilityHelper/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Orchid.UtilityHelper.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Orchid.UtilityHelper.dll": {}
+        }
       }
     }
   },
@@ -1523,13 +1533,19 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Orchid.UtilityHelper/1.0.0": {
+      "type": "project",
+      "path": "../Orchid.UtilityHelper/Orchid.UtilityHelper.csproj",
+      "msbuildProject": "../Orchid.UtilityHelper/Orchid.UtilityHelper.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Dapper >= 2.1.66",
       "Microsoft.Data.SqlClient >= 6.1.4",
-      "Microsoft.Extensions.Configuration.Abstractions >= 10.0.3"
+      "Microsoft.Extensions.Configuration.Abstractions >= 10.0.3",
+      "Orchid.UtilityHelper >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1564,20 +1580,18 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj": {
+              "projectPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.300"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -1612,7 +1626,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.311/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.128/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

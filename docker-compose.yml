@@ -1,0 +1,56 @@
+services:
+  orchid-db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: orchid-db
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: "YourStrongPassword@123"
+      MSSQL_PID: "Developer"
+    ports:
+      - "14330:1433"
+    volumes:
+      - orchid_sql_data:/var/opt/mssql
+      - ./database/backup:/var/opt/mssql/backup
+      - ./database/init:/usr/src/app/init
+    networks:
+      - orchid-network
+
+  orchid-api:
+    container_name: orchid-api
+    build:
+      context: .
+      dockerfile: OrchidCapitalCoreAPI/Dockerfile
+    ports:
+      - "5001:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__DefaultConnection: "Server=orchid-db,1433;Database=OrchidCapital;User Id=sa;Password=YourStrongPassword@123;TrustServerCertificate=True;MultipleActiveResultSets=True"
+    depends_on:
+      - orchid-db
+    networks:
+      - orchid-network
+
+  orchid-dashboard:
+    container_name: orchid-dashboard
+    build:
+      context: .
+      dockerfile: OrchidCapital/Dockerfile
+    ports:
+      - "5000:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://+:8080
+      ConnectionStrings__DefaultConnection: "Server=orchid-db,1433;Database=OrchidCapital;User Id=sa;Password=YourStrongPassword@123;TrustServerCertificate=True;MultipleActiveResultSets=True"
+    depends_on:
+      - orchid-api
+      - orchid-db
+    networks:
+      - orchid-network
+
+networks:
+  orchid-network:
+    driver: bridge
+
+volumes:
+  orchid_sql_data:
