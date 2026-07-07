@@ -3,7 +3,8 @@
 }
 @model OrchidCapital.Models.DashboardCommonModel
 <!-- PAGE HEADER -->
-
+<link rel="stylesheet" href="~/Admin/css/admin_dashboard.css" asp-append-version="true" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <div class="table-card">
     <div class="table-header">
         <div class="page-header">
@@ -15,67 +16,572 @@
             <div class="page-actions"> </div>
         </div>
     </div>
-    <!-- KPI CARDS -->
-    <div class="role-panel show" id="Dashboard-Master-Panel">
-        @if (Model.ToolsCountsList != null && Model.ToolsCountsList.Count > 0)
-        {
-            foreach (var item in Model.ToolsCountsList)
-            {
-                <div class="role-form">
-                    <div class="kpi-top">
-                        <span>@item.MetricName</span>
-                        <i class="@item.Icon"></i>
-                    </div>
-                    <h2>@item.TotalCount</h2>
-                    <p class="positive">@item.TotalPer this month</p>
+    <section class="summary-grid">
+        <div class="summary-card">
+            <div class="summary-top">
+                <p>Total Loan Portfolio</p>
+                <div class="summary-icon icon-purple"> <i class="fa-solid fa-indian-rupee-sign"></i> </div>
+            </div>
+            <h2>₹ 8.45 Cr</h2> <small><i class="fa-solid fa-arrow-up"></i> 12.5% from last month</small>
+        </div>
+        <div class="summary-card">
+            <div class="summary-top">
+                <p>Active Loans</p>
+                <div class="summary-icon icon-green"> <i class="fa-solid fa-file-circle-check"></i> </div>
+            </div>
+            <h2>1,248</h2> <small><i class="fa-solid fa-arrow-up"></i> 8.2% from last month</small>
+        </div>
+        <div class="summary-card">
+            <div class="summary-top">
+                <p>Pending Applications</p>
+                <div class="summary-icon icon-orange"> <i class="fa-solid fa-clock"></i> </div>
+            </div>
+            <h2>86</h2> <small class="danger-text"><i class="fa-solid fa-arrow-down"></i> 4.3% from last month</small>
+        </div>
+        <div class="summary-card">
+            <div class="summary-top">
+                <p>Overdue EMI</p>
+                <div class="summary-icon icon-red"> <i class="fa-solid fa-triangle-exclamation"></i> </div>
+            </div>
+            <h2>₹ 4.82 L</h2> <small class="danger-text"><i class="fa-solid fa-arrow-up"></i> 2.1% from last
+            month</small>
+        </div>
+    </section>
+    <div class="guarantor-card-main">
+        <section class="dashboard-charts">
+            <div class="chart-card chart-wide">
+                <div class="chart-header">
+                    <div>
+                        <h3>Monthly Loan Disbursement</h3>
+                        <p>Approved loan amount compared with disbursed amount.</p>
+                    </div> <select>
+                    <option>Last 6 Months</option>
+                    <option>This Year</option>
+                </select>
+            </div> <canvas id="loanDisbursementChart"></canvas>
+        </div>
+        <div class="chart-card">
+            <div class="chart-header">
+                <div>
+                    <h3>Loan Category Distribution</h3>
+                    <p>Loan portfolio by category.</p>
                 </div>
-            }
-        }
+            </div> <canvas id="loanCategoryChart"></canvas>
+        </div>
+        <div class="chart-card">
+            <div class="chart-header">
+                <div>
+                    <h3>EMI Collection Trend</h3>
+                    <p>Monthly EMI collection amount.</p>
+                </div>
+            </div> <canvas id="emiCollectionChart"></canvas>
+        </div>
+        <div class="chart-card">
+            <div class="chart-header">
+                <div>
+                    <h3>Loan Application Status</h3>
+                    <p>Current application status percentage.</p>
+                </div>
+            </div> <canvas id="loanStatusChart"></canvas>
+        </div>
+        <div class="chart-card">
+            <div class="chart-header">
+                <div>
+                    <h3>Overdue EMI Aging</h3>
+                    <p>Pending EMI amount by overdue days.</p>
+                </div>
+            </div> <canvas id="overdueChart"></canvas>
+        </div>
+        <div class="chart-card">
+            <div class="chart-header">
+                <div>
+                    <h3>Branch-wise Loan Portfolio</h3>
+                    <p>Active loan portfolio by branch.</p>
+                </div>
+            </div> <canvas id="branchLoanChart"></canvas>
+        </div>
+        <div class="single-line-chart-card">
+            <div class="single-chart-header">
+                <div>
+                    <h3>Loan Disbursement</h3>
+                    <p>Monthly loan amount disbursed</p>
+                </div>
+
+                <button class="single-chart-menu">
+                    <i class="fa-solid fa-ellipsis"></i>
+                </button>
+            </div>
+
+            <div class="single-chart-value">
+                <div>
+                    <span>Total Loan Disbursed</span>
+                    <h2>₹8.45 Cr</h2>
+                </div>
+
+                <div class="single-chart-growth">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    12.5%
+                </div>
+            </div>
+
+            <div class="single-line-chart">
+                <div class="single-y-axis">
+                    <span>₹10Cr</span>
+                    <span>₹8Cr</span>
+                    <span>₹6Cr</span>
+                    <span>₹4Cr</span>
+                    <span>₹2Cr</span>
+                    <span>₹0</span>
+                </div>
+
+                <div class="single-chart-area">
+                    <div class="single-grid grid-one"></div>
+                    <div class="single-grid grid-two"></div>
+                    <div class="single-grid grid-three"></div>
+                    <div class="single-grid grid-four"></div>
+                    <div class="single-grid grid-five"></div>
+                    <div class="single-grid grid-six"></div>
+
+                    <svg viewBox="0 0 700 250" preserveAspectRatio="none">
+                        <defs>
+                            <linearGradient id="singleLoanGradient" x1="0" x2="0" y1="0" y2="1">
+                                <stop offset="0%" stop-color="#6657d9" stop-opacity="0.25"></stop>
+                                <stop offset="100%" stop-color="#6657d9" stop-opacity="0"></stop>
+                            </linearGradient>
+                        </defs>
+
+                        <path class="single-line-fill" d="M0,190
+                            L115,160
+                            L230,175
+                            L345,115
+                            L460,135
+                            L575,75
+                            L700,40
+                            L700,250
+                            L0,250 Z">
+                        </path>
+
+                        <path class="single-line-path" d="M0,190
+                            L115,160
+                            L230,175
+                            L345,115
+                            L460,135
+                            L575,75
+                            L700,40">
+                        </path>
+
+                        <circle cx="0" cy="190" r="5"></circle>
+                        <circle cx="115" cy="160" r="5"></circle>
+                        <circle cx="230" cy="175" r="5"></circle>
+                        <circle cx="345" cy="115" r="5"></circle>
+                        <circle cx="460" cy="135" r="5"></circle>
+                        <circle cx="575" cy="75" r="5"></circle>
+                        <circle cx="700" cy="40" r="5"></circle>
+                    </svg>
+
+                    <div class="single-x-axis">
+                        <span>Jan</span>
+                        <span>Feb</span>
+                        <span>Mar</span>
+                        <span>Apr</span>
+                        <span>May</span>
+                        <span>Jun</span>
+                        <span>Jul</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bottom-grid">
+        <div class="table-card">
+            <div class="section-header">
+                <h3>Recent Loan Applications</h3> <a href="#">View All</a>
+            </div>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Customer</th>
+                            <th>Loan Type</th>
+                            <th>Loan Amount</th>
+                            <th>Applied Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="customer">
+                                    <div class="customer-avatar">RK</div> Rahul Kumar
+                                </div>
+                            </td>
+                            <td>Home Loan</td>
+                            <td>₹ 25,00,000</td>
+                            <td>06 Jul 2026</td>
+                            <td><span class="status approved">Approved</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="customer">
+                                    <div class="customer-avatar">PS</div> Priya Shah
+                                </div>
+                            </td>
+                            <td>Business Loan</td>
+                            <td>₹ 12,50,000</td>
+                            <td>05 Jul 2026</td>
+                            <td><span class="status pending">Pending</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="customer">
+                                    <div class="customer-avatar">AM</div> Amit Mehta
+                                </div>
+                            </td>
+                            <td>Vehicle Loan</td>
+                            <td>₹ 8,75,000</td>
+                            <td>04 Jul 2026</td>
+                            <td><span class="status approved">Approved</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="customer">
+                                    <div class="customer-avatar">SN</div> Sunita Nagar
+                                </div>
+                            </td>
+                            <td>Personal Loan</td>
+                            <td>₹ 3,00,000</td>
+                            <td>03 Jul 2026</td>
+                            <td><span class="status rejected">Rejected</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="loan-performance-card">
+            <div class="section-header">
+                <h3>Loan Performance</h3> <i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <div class="performance-list">
+                <div class="performance-item">
+                    <div class="performance-left">
+                        <div class="performance-icon icon-purple"> <i class="fa-solid fa-house"></i> </div>
+                        <div>
+                            <h4>Home Loan</h4>
+                            <p>548 Active Loans</p>
+                        </div>
+                    </div>
+                    <div class="performance-right">
+                        <h4>₹ 4.20 Cr</h4>
+                        <p>+14.2%</p>
+                    </div>
+                </div>
+                <div class="performance-item">
+                    <div class="performance-left">
+                        <div class="performance-icon icon-green"> <i class="fa-solid fa-briefcase"></i> </div>
+                        <div>
+                            <h4>Business Loan</h4>
+                            <p>276 Active Loans</p>
+                        </div>
+                    </div>
+                    <div class="performance-right">
+                        <h4>₹ 2.10 Cr</h4>
+                        <p>+10.5%</p>
+                    </div>
+                </div>
+                <div class="performance-item">
+                    <div class="performance-left">
+                        <div class="performance-icon icon-orange"> <i class="fa-solid fa-car"></i> </div>
+                        <div>
+                            <h4>Vehicle Loan</h4>
+                            <p>224 Active Loans</p>
+                        </div>
+                    </div>
+                    <div class="performance-right">
+                        <h4>₹ 1.25 Cr</h4>
+                        <p>+7.8%</p>
+                    </div>
+                </div>
+                <div class="performance-item">
+                    <div class="performance-left">
+                        <div class="performance-icon icon-red"> <i class="fa-solid fa-user"></i> </div>
+                        <div>
+                            <h4>Personal Loan</h4>
+                            <p>200 Active Loans</p>
+                        </div>
+                    </div>
+                    <div class="performance-right">
+                        <h4>₹ 90.00 L</h4>
+                        <p>+5.1%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <!-- DATA TABLE -->
-    <div class="table-header">
-        <h3>Recent Transactions</h3>
-        <button class="btn btn-orange" data-tooltip="View All"><i class="fa-solid fa-table-cells"></i></button>
-    </div>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Customer</th>
-                <th>Type</th>
-                <th>Amount</th>
-                <th>Status</th>
-                <th>Date</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Ravi Patel</td>
-                <td>Loan</td>
-                <td>₹50,000</td>
-                <td><span class="status approved">Approved</span></td>
-                <td>22 Apr 2026</td>
-            </tr>
-            <tr>
-                <td>Neha Shah</td>
-                <td>Deposit</td>
-                <td>₹12,000</td>
-                <td><span class="status pending">Pending</span></td>
-                <td>21 Apr 2026</td>
-            </tr>
-            <tr>
-                <td>Amit Kumar</td>
-                <td>Withdrawal</td>
-                <td>₹8,500</td>
-                <td><span class="status rejected">Rejected</span></td>
-                <td>20 Apr 2026</td>
-            </tr>
-        </tbody>
-    </table>
-
 </div>
 <script>
     localStorage.clear();
     sessionStorage.clear();
+    const chartTextColor = "#7b8197";
+    const gridColor = "#edf0f5";
+
+    Chart.defaults.font.family = "Arial";
+    Chart.defaults.color = chartTextColor;
+
+    new Chart(document.getElementById("loanDisbursementChart"), {
+    type: "bar",
+    data: {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    datasets: [
+    {
+    label: "Approved Amount",
+    data: [32, 45, 38, 56, 48, 65],
+    backgroundColor: "#eeebff",
+    borderRadius: 7,
+    borderSkipped: false
+    },
+    {
+    label: "Disbursed Amount",
+    data: [28, 39, 34, 49, 43, 58],
+    backgroundColor: "#6657d9",
+    borderRadius: 7,
+    borderSkipped: false
+    }
+    ]
+    },
+    options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+    legend: {
+    position: "top",
+    align: "end"
+    },
+    tooltip: {
+    callbacks: {
+    label: function (context) {
+    return context.dataset.label + ": ₹ " + context.raw + " Lakh";
+    }
+    }
+    }
+    },
+    scales: {
+    x: {
+    grid: {
+    display: false
+    }
+    },
+    y: {
+    beginAtZero: true,
+    grid: {
+    color: gridColor
+    },
+    ticks: {
+    callback: function (value) {
+    return "₹ " + value + "L";
+    }
+    }
+    }
+    }
+    }
+    });
+
+    new Chart(document.getElementById("loanCategoryChart"), {
+    type: "doughnut",
+    data: {
+    labels: ["Home Loan", "Business Loan", "Vehicle Loan", "Personal Loan"],
+    datasets: [{
+    data: [42, 26, 18, 14],
+    backgroundColor: ["#6657d9", "#1aaf6c", "#f39a31", "#e65252"],
+    borderWidth: 0,
+    hoverOffset: 8
+    }]
+    },
+    options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    cutout: "68%",
+    plugins: {
+    legend: {
+    position: "bottom"
+    }
+    }
+    }
+    });
+
+    new Chart(document.getElementById("emiCollectionChart"), {
+    type: "line",
+    data: {
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    datasets: [{
+    label: "EMI Collection",
+    data: [14, 18, 16, 22, 20, 26],
+    borderColor: "#1aaf6c",
+    backgroundColor: "rgba(26, 175, 108, 0.12)",
+    fill: true,
+    tension: 0.4,
+    pointBackgroundColor: "#1aaf6c",
+    pointRadius: 4,
+    pointHoverRadius: 6
+    }]
+    },
+    options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+    legend: {
+    display: false
+    },
+    tooltip: {
+    callbacks: {
+    label: function (context) {
+    return "Collected: ₹ " + context.raw + " Lakh";
+    }
+    }
+    }
+    },
+    scales: {
+    x: {
+    grid: {
+    display: false
+    }
+    },
+    y: {
+    beginAtZero: true,
+    grid: {
+    color: gridColor
+    },
+    ticks: {
+    callback: function (value) {
+    return "₹ " + value + "L";
+    }
+    }
+    }
+    }
+    }
+    });
+
+    new Chart(document.getElementById("loanStatusChart"), {
+    type: "pie",
+    data: {
+    labels: ["Approved", "Pending", "Rejected", "Under Review"],
+    datasets: [{
+    data: [58, 18, 9, 15],
+    backgroundColor: ["#1aaf6c", "#f39a31", "#e65252", "#6657d9"],
+    borderWidth: 0
+    }]
+    },
+    options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+    legend: {
+    position: "bottom"
+    },
+    tooltip: {
+    callbacks: {
+    label: function (context) {
+    return context.label + ": " + context.raw + "%";
+    }
+    }
+    }
+    }
+    }
+    });
+
+    new Chart(document.getElementById("overdueChart"), {
+    type: "bar",
+    data: {
+    labels: ["1-30 Days", "31-60 Days", "61-90 Days", "90+ Days"],
+    datasets: [{
+    label: "Overdue Amount",
+    data: [2.4, 1.5, 0.8, 0.35],
+    backgroundColor: ["#f8c36b", "#f39a31", "#ef7d4d", "#e65252"],
+    borderRadius: 7,
+    borderSkipped: false
+    }]
+    },
+    options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+    legend: {
+    display: false
+    },
+    tooltip: {
+    callbacks: {
+    label: function (context) {
+    return "Overdue: ₹ " + context.raw + " Lakh";
+    }
+    }
+    }
+    },
+    scales: {
+    x: {
+    grid: {
+    display: false
+    }
+    },
+    y: {
+    beginAtZero: true,
+    grid: {
+    color: gridColor
+    },
+    ticks: {
+    callback: function (value) {
+    return "₹ " + value + "L";
+    }
+    }
+    }
+    }
+    }
+    });
+
+    new Chart(document.getElementById("branchLoanChart"), {
+    type: "bar",
+    data: {
+    labels: ["Ahmedabad", "Surat", "Vadodara", "Rajkot", "Gandhinagar"],
+    datasets: [{
+    label: "Loan Portfolio",
+    data: [245, 180, 142, 120, 95],
+    backgroundColor: "#6657d9",
+    borderRadius: 7,
+    borderSkipped: false
+    }]
+    },
+    options: {
+    indexAxis: "y",
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+    legend: {
+    display: false
+    },
+    tooltip: {
+    callbacks: {
+    label: function (context) {
+    return "Portfolio: ₹ " + context.raw + " Lakh";
+    }
+    }
+    }
+    },
+    scales: {
+    x: {
+    beginAtZero: true,
+    grid: {
+    color: gridColor
+    },
+    ticks: {
+    callback: function (value) {
+    return "₹ " + value + "L";
+    }
+    }
+    },
+    y: {
+    grid: {
+    display: false
+    }
+    }
+    }
+    }
+    });
 </script>

@@ -14,10 +14,10 @@
             <div class="search-box custom-search">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input type="text"
-                       onkeyup="APortalModule._APortalMaster.InputBoxSearch(event,this,AFinanceApplicationList._AFinanceApplicationList)"
-                       id="ApplicationSearch" placeholder="Search application..." />
+                       onkeyup="APortalModule._APortalMaster.InputBoxSearch(event,this,AFinanceLoanApprovalList._AFinanceLoanApprovalList)"
+                       id="ApprovalSearch" placeholder="Search application..." />
                 <button type="button" class="search_close_btn btn hidden"
-                        onclick="APortalModule._APortalMaster.SearchBoxReset('ApplicationSearch',AFinanceApplicationList._AFinanceApplicationList)">X</button>
+                        onclick="APortalModule._APortalMaster.SearchBoxReset('ApprovalSearch',AFinanceLoanApprovalList._AFinanceLoanApprovalList)">X</button>
             </div>
             @* @Html.DropDownList(
                 "statusFilter",
@@ -28,11 +28,11 @@
                     @class =
                     "sort-dropdown",
                     onchange =
- "APortalModule._APortalMaster.StatusChangeEvent(this,AFinanceApplicationList._AFinanceApplicationList)"
+ "APortalModule._APortalMaster.StatusChangeEvent(this,AFinanceLoanApprovalList._AFinanceLoanApprovalList)"
                 }) *@
             <div class="page-actions tooltip">
                 <button class="btn btn-purple"
-                        onclick="AFinanceApplicationList._AFinanceApplicationList.ExportToExcel('APortal_LoanApplication', 'Loan Application List');">
+                        onclick="AFinanceLoanApprovalList._AFinanceLoanApprovalList.ExportToExcel('APortal_LoanApprovalList', 'Loan Approval List');">
                     <i class="fa-solid fa-file-excel"></i>
                     <span class="tooltip-text">Export to Excel</span>
                 </button>
@@ -40,14 +40,14 @@
         </div>
     </div>
     <!-- TABLE -->
-    <div class="table-wrapper scroll-body" id="LoanApplicationTableWrapper"
-         onscroll="APortalModule._APortalMaster.ScrollMore(event,this,AFinanceApplicationList._AFinanceApplicationList)">
-        <table id="tblLoanApplicationList" class="table">
+    <div class="table-wrapper scroll-body" id="LoanApprovalTableWrapper"
+         onscroll="APortalModule._APortalMaster.ScrollMore(event,this,AFinanceLoanApprovalList._AFinanceLoanApprovalList)">
+        <table id="tblLoanapprovallist" class="table">
             <thead>
                 <tr>
                     <th>
                         <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','ApplicationNo',AFinanceApplicationList._AFinanceApplicationList)">
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanapprovallist','ApplicationNo',AFinanceLoanApprovalList._AFinanceLoanApprovalList)">
                             Application Number
                             <span class="sort-icons">
                                 <i class="fa-solid fa-sort-up ApplicationNo_ASC"></i>
@@ -57,7 +57,7 @@
                     </th>
                     <th>
                         <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','CustomerName',AFinanceApplicationList._AFinanceApplicationList)">
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanapprovallist','CustomerName',AFinanceLoanApprovalList._AFinanceLoanApprovalList)">
                             Customer Name
                             <span class="sort-icons">
                                 <i class="fa-solid fa-sort-up CustomerName_ASC active"></i>
@@ -67,7 +67,7 @@
                     </th>
                     <th>
                         <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','ServiceName',AFinanceApplicationList._AFinanceApplicationList)">
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanapprovallist','ServiceName',AFinanceLoanApprovalList._AFinanceLoanApprovalList)">
                             Service Name
                             <span class="sort-icons">
                                 <i class="fa-solid fa-sort-up ServiceName_ASC"></i>
@@ -77,7 +77,7 @@
                     </th>
                     <th>
                         <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','BranchName',AFinanceApplicationList._AFinanceApplicationList)">
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanapprovallist','BranchName',AFinanceLoanApprovalList._AFinanceLoanApprovalList)">
                             Branch Name
                             <span class="sort-icons">
                                 <i class="fa-solid fa-sort-up BranchName_ASC"></i>
@@ -87,7 +87,7 @@
                     </th>
                     <th>
                         <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','RequestedAmount',AFinanceApplicationList._AFinanceApplicationList)">
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanapprovallist','RequestedAmount',AFinanceLoanApprovalList._AFinanceLoanApprovalList)">
                             Requested Amount
                             <span class="sort-icons">
                                 <i class="fa-solid fa-sort-up RequestedAmount_ASC"></i>
@@ -97,7 +97,7 @@
                     </th>
                     <th>
                         <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','RequestedTenure',AFinanceApplicationList._AFinanceApplicationList)">
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanapprovallist','RequestedTenure',AFinanceLoanApprovalList._AFinanceLoanApprovalList)">
                             Requested Tenure
                             <span class="sort-icons">
                                 <i class="fa-solid fa-sort-up RequestedTenure_ASC"></i>
@@ -107,7 +107,7 @@
                     </th>
                     <th>
                         <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','RequestedInterestRate',AFinanceApplicationList._AFinanceApplicationList)">
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanapprovallist','RequestedInterestRate',AFinanceLoanApprovalList._AFinanceLoanApprovalList)">
                             Requested Interest Rate
                             <span class="sort-icons">
                                 <i class="fa-solid fa-sort-up RequestedInterestRate_ASC"></i>
@@ -115,9 +115,9 @@
                             </span>
                         </a>
                     </th>
-                    <th>
+                    @* <th>
                         <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','LoanPurpose',AFinanceApplicationList._AFinanceApplicationList)">
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanapprovallist','LoanPurpose',AFinanceLoanApprovalList._AFinanceLoanApprovalList)">
                             Loan Purpose
                             <span class="sort-icons">
                                 <i class="fa-solid fa-sort-up LoanPurpose_ASC"></i>
@@ -127,17 +127,17 @@
                     </th>
                     <th>
                         <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','Remarks',AFinanceApplicationList._AFinanceApplicationList)">
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanapprovallist','Remarks',AFinanceLoanApprovalList._AFinanceLoanApprovalList)">
                             Remarks
                             <span class="sort-icons">
                                 <i class="fa-solid fa-sort-up Remarks_ASC"></i>
                                 <i class="fa-solid fa-sort-down Remarks_DESC"></i>
                             </span>
                         </a>
-                    </th>
+                    </th> *@
                     <th>
                         <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','Status',AFinanceApplicationList._AFinanceApplicationList)">
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanapprovallist','Status',AFinanceLoanApprovalList._AFinanceLoanApprovalList)">
                             Application Status
                             <span class="sort-icons">
                                 <i class="fa-solid fa-sort-up Status_ASC"></i>
@@ -147,7 +147,7 @@
                     </th>
                     <th>
                         <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','CreatedDate',AFinanceApplicationList._AFinanceApplicationList)">
+                           onclick="APortalModule._APortalMaster.Sorting('tblLoanapprovallist','CreatedDate',AFinanceLoanApprovalList._AFinanceLoanApprovalList)">
                             Application Date
                             <span class="sort-icons">
                                 <i class="fa-solid fa-sort-up CreatedDate_ASC"></i>
@@ -159,7 +159,7 @@
                 </tr>
             </thead>
 
-            <tbody id="applicationlist-tbody-render">
+            <tbody id="approvallist-tbody-render">
                 <!-- dynamic -->
             </tbody>
         </table>
@@ -177,7 +177,7 @@
             export: '@Url.Action("ExportToExcelFile", "Finance")'
         };
     }
-    window.AFinanceDailyReport = {
+    window.AFinanceLoanApprovalList = {
         configs: {
             urlBase: '@Utility.GetAppSettings("BasePath")',
             loginUserName: '@User.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value',
@@ -187,6 +187,6 @@
         urls: _loadUrls()
     };    
 </script>
-@* @section Scripts {
-    <script src="~/Admin/js/FinanceLoanApplicationList.js" asp-append-version="true"></script>
-} *@
+@section Scripts {
+    <script src="~/Admin/js/FinanceLoanApprovalList.js" asp-append-version="true"></script>
+}

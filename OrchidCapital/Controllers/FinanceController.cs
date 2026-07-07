@@ -218,7 +218,7 @@ namespace OrchidCapital.Controllers
         }
 
         private async Task<UpdateLoanApplicationDocumentRequest> BindLoanApplicationDocument(int loanApplicationId)
-        
+
         {
             UpdateLoanApplicationDocumentRequest documentRequest = new UpdateLoanApplicationDocumentRequest();
             try
@@ -581,11 +581,20 @@ namespace OrchidCapital.Controllers
         #endregion
 
         #region Loan Approval List
-        public async Task<IActionResult> LoanApprovalList()
+        public async Task<IActionResult> LoanApprovalList(string LoanApplicationId = "")
         {
             try
             {
-
+                if (!string.IsNullOrEmpty(LoanApplicationId))
+                {
+                    ViewBag.LoanApplicationId = Encryption.DecryptParameter(LoanApplicationId);
+                    //ViewBag.LoanStep = Encryption.DecryptParameter(LoanStep);
+                }
+                if (string.IsNullOrEmpty(LoanApplicationId))
+                {
+                    ViewBag.LoanApplicationId = 0;
+                    //ViewBag.LoanStep = 0;
+                }
             }
             catch (Exception ex)
             {
@@ -659,6 +668,16 @@ namespace OrchidCapital.Controllers
                             result1 = JsonConvert.DeserializeObject<List<GetLoanApplicationList>>(jsonResponse);
                         }
                         return PartialView("_LoanApplicationList", result1);
+                        break;
+
+                    case "APortal_LoanApprovalList":
+                        List<GetLoanApplicationList> result2 = new List<GetLoanApplicationList>();
+                        if (response != null && response.IsSuccessStatusCode)
+                        {
+                            string jsonResponse = JsonConvert.SerializeObject(response.Response);
+                            result2 = JsonConvert.DeserializeObject<List<GetLoanApplicationList>>(jsonResponse);
+                        }
+                        return PartialView("_LoanApprovalList", result2);
                         break;
                 }
             }

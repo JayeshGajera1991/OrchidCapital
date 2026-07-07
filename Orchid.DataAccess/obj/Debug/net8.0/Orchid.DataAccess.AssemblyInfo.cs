@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Orchid.DataAccess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+917f46f5e570a523f691db9848293acc3d66468b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca094c25c2ce04cd6edbd4b3c8067727dc31a6b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Orchid.DataAccess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Orchid.DataAccess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

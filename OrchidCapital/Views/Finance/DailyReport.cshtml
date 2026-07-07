@@ -1,7 +1,7 @@
 @{
     ViewData["Title"] = "Admin Pages";
 }
-<link rel="stylesheet" href="~/Admin/css/admin_roles.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/Admin/css/dailyreport.css" asp-append-version="true" />
 <div class="table-card">
     <div class="table-header">
         <div class="page-header">
@@ -11,25 +11,10 @@
             </div>
         </div>
         <div class="customer-toolbar">
-            <div class="search-box custom-search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text"
-                       onkeyup="APortalModule._APortalMaster.InputBoxSearch(event,this,AFinanceApplicationList._AFinanceApplicationList)"
-                       id="ApplicationSearch" placeholder="Search application..." />
-                <button type="button" class="search_close_btn btn hidden"
-                        onclick="APortalModule._APortalMaster.SearchBoxReset('ApplicationSearch',AFinanceApplicationList._AFinanceApplicationList)">X</button>
-            </div>
-            @* @Html.DropDownList(
-                "statusFilter",
-                ViewBag.ApplicationStatusList as SelectList,
-                "All",
-                new
-                {
-                    @class =
-                    "sort-dropdown",
-                    onchange =
- "APortalModule._APortalMaster.StatusChangeEvent(this,AFinanceApplicationList._AFinanceApplicationList)"
-                }) *@
+             <div class="report-date">
+                    <i class="fa-regular fa-calendar"></i>
+                   @DateTime.Now.ToString("dd MMMM yyyy")
+                </div>
             <div class="page-actions tooltip">
                 <button class="btn btn-purple"
                         onclick="AFinanceApplicationList._AFinanceApplicationList.ExportToExcel('APortal_LoanApplication', 'Loan Application List');">
@@ -40,131 +25,277 @@
         </div>
     </div>
     <!-- TABLE -->
-    <div class="table-wrapper scroll-body" id="LoanApplicationTableWrapper"
-         onscroll="APortalModule._APortalMaster.ScrollMore(event,this,AFinanceApplicationList._AFinanceApplicationList)">
-        <table id="tblLoanApplicationList" class="table">
-            <thead>
-                <tr>
-                    <th>
-                        <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','ApplicationNo',AFinanceApplicationList._AFinanceApplicationList)">
-                            Application Number
-                            <span class="sort-icons">
-                                <i class="fa-solid fa-sort-up ApplicationNo_ASC"></i>
-                                <i class="fa-solid fa-sort-down ApplicationNo_DESC"></i>
-                            </span>
-                        </a>
-                    </th>
-                    <th>
-                        <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','CustomerName',AFinanceApplicationList._AFinanceApplicationList)">
-                            Customer Name
-                            <span class="sort-icons">
-                                <i class="fa-solid fa-sort-up CustomerName_ASC active"></i>
-                                <i class="fa-solid fa-sort-down CustomerName_DESC"></i>
-                            </span>
-                        </a>
-                    </th>
-                    <th>
-                        <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','ServiceName',AFinanceApplicationList._AFinanceApplicationList)">
-                            Service Name
-                            <span class="sort-icons">
-                                <i class="fa-solid fa-sort-up ServiceName_ASC"></i>
-                                <i class="fa-solid fa-sort-down ServiceName_DESC"></i>
-                            </span>
-                        </a>
-                    </th>
-                    <th>
-                        <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','BranchName',AFinanceApplicationList._AFinanceApplicationList)">
-                            Branch Name
-                            <span class="sort-icons">
-                                <i class="fa-solid fa-sort-up BranchName_ASC"></i>
-                                <i class="fa-solid fa-sort-down BranchName_DESC"></i>
-                            </span>
-                        </a>
-                    </th>
-                    <th>
-                        <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','RequestedAmount',AFinanceApplicationList._AFinanceApplicationList)">
-                            Requested Amount
-                            <span class="sort-icons">
-                                <i class="fa-solid fa-sort-up RequestedAmount_ASC"></i>
-                                <i class="fa-solid fa-sort-down RequestedAmount_DESC"></i>
-                            </span>
-                        </a>
-                    </th>
-                    <th>
-                        <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','RequestedTenure',AFinanceApplicationList._AFinanceApplicationList)">
-                            Requested Tenure
-                            <span class="sort-icons">
-                                <i class="fa-solid fa-sort-up RequestedTenure_ASC"></i>
-                                <i class="fa-solid fa-sort-down RequestedTenure_DESC"></i>
-                            </span>
-                        </a>
-                    </th>
-                    <th>
-                        <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','RequestedInterestRate',AFinanceApplicationList._AFinanceApplicationList)">
-                            Requested Interest Rate
-                            <span class="sort-icons">
-                                <i class="fa-solid fa-sort-up RequestedInterestRate_ASC"></i>
-                                <i class="fa-solid fa-sort-down RequestedInterestRate_DESC"></i>
-                            </span>
-                        </a>
-                    </th>
-                    <th>
-                        <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','LoanPurpose',AFinanceApplicationList._AFinanceApplicationList)">
-                            Loan Purpose
-                            <span class="sort-icons">
-                                <i class="fa-solid fa-sort-up LoanPurpose_ASC"></i>
-                                <i class="fa-solid fa-sort-down LoanPurpose_DESC"></i>
-                            </span>
-                        </a>
-                    </th>
-                    <th>
-                        <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','Remarks',AFinanceApplicationList._AFinanceApplicationList)">
-                            Remarks
-                            <span class="sort-icons">
-                                <i class="fa-solid fa-sort-up Remarks_ASC"></i>
-                                <i class="fa-solid fa-sort-down Remarks_DESC"></i>
-                            </span>
-                        </a>
-                    </th>
-                    <th>
-                        <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','Status',AFinanceApplicationList._AFinanceApplicationList)">
-                            Application Status
-                            <span class="sort-icons">
-                                <i class="fa-solid fa-sort-up Status_ASC"></i>
-                                <i class="fa-solid fa-sort-down Status_DESC"></i>
-                            </span>
-                        </a>
-                    </th>
-                    <th>
-                        <a href="javascript:void(0)" class="sortable"
-                           onclick="APortalModule._APortalMaster.Sorting('tblLoanApplicationList','CreatedDate',AFinanceApplicationList._AFinanceApplicationList)">
-                            Application Date
-                            <span class="sort-icons">
-                                <i class="fa-solid fa-sort-up CreatedDate_ASC"></i>
-                                <i class="fa-solid fa-sort-down CreatedDate_DESC"></i>
-                            </span>
-                        </a>
-                    </th>
-                    <th class="text-center">Action</th>
-                </tr>
-            </thead>
+    <section class="summary-grid">
 
-            <tbody id="applicationlist-tbody-render">
-                <!-- dynamic -->
-            </tbody>
-        </table>
+        <div class="summary-card">
+            <div class="summary-top">
+                <p>Applications Received</p>
+                <div class="summary-icon purple">
+                    <i class="fa-solid fa-file-circle-plus"></i>
+                </div>
+            </div>
+            <h2>42</h2>
+            <small class="success-text">
+                <i class="fa-solid fa-arrow-up"></i> 12% compared to yesterday
+            </small>
+        </div>
+
+        <div class="summary-card">
+            <div class="summary-top">
+                <p>Loans Approved</p>
+                <div class="summary-icon green">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+            </div>
+            <h2>28</h2>
+            <small class="success-text">
+                <i class="fa-solid fa-arrow-up"></i> 8 approvals more today
+            </small>
+        </div>
+
+        <div class="summary-card">
+            <div class="summary-top">
+                <p>Loan Disbursed</p>
+                <div class="summary-icon orange">
+                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                </div>
+            </div>
+            <h2>₹ 38.50 L</h2>
+            <small>
+                18 customer accounts credited
+            </small>
+        </div>
+
+        <div class="summary-card">
+            <div class="summary-top">
+                <p>EMI Collection</p>
+                <div class="summary-icon red">
+                    <i class="fa-solid fa-money-bill-wave"></i>
+                </div>
+            </div>
+            <h2>₹ 12.75 L</h2>
+            <small class="danger-text">
+                <i class="fa-solid fa-triangle-exclamation"></i> ₹ 1.20 L overdue today
+            </small>
+        </div>
+
+    </section>
+    <div class="guarantor-card-main">
+        <section class="report-grid">
+
+            <div class="report-card">
+                <div class="card-header">
+                    <h3>Today's Loan Activity</h3>
+                    <span>07 July 2026</span>
+                </div>
+
+                <div class="activity-list">
+
+                    <div class="activity-item">
+                        <div class="activity-icon purple">
+                            <i class="fa-solid fa-file-circle-plus"></i>
+                        </div>
+
+                        <div class="activity-content">
+                            <h4>New Home Loan Application Received</h4>
+                            <p>Rahul Kumar applied for a Home Loan of ₹ 25,00,000.</p>
+                        </div>
+
+                        <div class="activity-time">10:15 AM</div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon green">
+                            <i class="fa-solid fa-circle-check"></i>
+                        </div>
+
+                        <div class="activity-content">
+                            <h4>Business Loan Approved</h4>
+                            <p>Priya Shah's Business Loan of ₹ 12,50,000 was approved.</p>
+                        </div>
+
+                        <div class="activity-time">11:30 AM</div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon orange">
+                            <i class="fa-solid fa-money-bill-transfer"></i>
+                        </div>
+
+                        <div class="activity-content">
+                            <h4>Loan Amount Disbursed</h4>
+                            <p>₹ 8,75,000 Vehicle Loan disbursed to Amit Mehta.</p>
+                        </div>
+
+                        <div class="activity-time">01:20 PM</div>
+                    </div>
+
+                    <div class="activity-item">
+                        <div class="activity-icon red">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+
+                        <div class="activity-content">
+                            <h4>EMI Payment Overdue</h4>
+                            <p>Sunita Nagar's EMI payment of ₹ 18,500 is overdue.</p>
+                        </div>
+
+                        <div class="activity-time">03:45 PM</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="report-card">
+                <div class="card-header">
+                    <h3>Today's Loan Status</h3>
+                    <span>Total: 42</span>
+                </div>
+
+                <div class="status-list">
+
+                    <div>
+                        <div class="status-item">
+                            <div class="status-left">
+                                <div class="status-circle" style="background:#1aaf6c;"></div>
+                                <div>
+                                    <h4>Approved</h4>
+                                    <p>Applications approved today</p>
+                                </div>
+                            </div>
+                            <div class="status-right">
+                                <h4>28</h4>
+                                <p>66.7%</p>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width:66.7%; background:#1aaf6c;"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="status-item">
+                            <div class="status-left">
+                                <div class="status-circle" style="background:#f39a31;"></div>
+                                <div>
+                                    <h4>Pending</h4>
+                                    <p>Documents or review pending</p>
+                                </div>
+                            </div>
+                            <div class="status-right">
+                                <h4>9</h4>
+                                <p>21.4%</p>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width:21.4%; background:#f39a31;"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="status-item">
+                            <div class="status-left">
+                                <div class="status-circle" style="background:#e65252;"></div>
+                                <div>
+                                    <h4>Rejected</h4>
+                                    <p>Applications not eligible</p>
+                                </div>
+                            </div>
+                            <div class="status-right">
+                                <h4>5</h4>
+                                <p>11.9%</p>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width:11.9%; background:#e65252;"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section class="table-card">
+            <div class="card-header">
+                <h3>Today's Loan Applications</h3>
+                <span>Updated at 05:30 PM</span>
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Customer</th>
+                            <th>Loan Type</th>
+                            <th>Loan Amount</th>
+                            <th>Branch</th>
+                            <th>Application Time</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="customer">
+                                    <div class="customer-avatar">RK</div>
+                                    Rahul Kumar
+                                </div>
+                            </td>
+                            <td>Home Loan</td>
+                            <td>₹ 25,00,000</td>
+                            <td>Ahmedabad</td>
+                            <td>10:15 AM</td>
+                            <td><span class="status approved">Approved</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="customer">
+                                    <div class="customer-avatar">PS</div>
+                                    Priya Shah
+                                </div>
+                            </td>
+                            <td>Business Loan</td>
+                            <td>₹ 12,50,000</td>
+                            <td>Surat</td>
+                            <td>11:30 AM</td>
+                            <td><span class="status approved">Approved</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="customer">
+                                    <div class="customer-avatar">AM</div>
+                                    Amit Mehta
+                                </div>
+                            </td>
+                            <td>Vehicle Loan</td>
+                            <td>₹ 8,75,000</td>
+                            <td>Vadodara</td>
+                            <td>01:20 PM</td>
+                            <td><span class="status pending">Pending</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="customer">
+                                    <div class="customer-avatar">SN</div>
+                                    Sunita Nagar
+                                </div>
+                            </td>
+                            <td>Personal Loan</td>
+                            <td>₹ 3,00,000</td>
+                            <td>Rajkot</td>
+                            <td>03:45 PM</td>
+                            <td><span class="status rejected">Rejected</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </div>
-    <div id="pagination" style="padding: 15px 30px;"></div>
 </div>
 <script>
     var _loadUrls = function () {
