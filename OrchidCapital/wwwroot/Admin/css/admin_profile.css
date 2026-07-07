@@ -15,12 +15,14 @@ html, body {
   --card: #ffffff;
   --sidebar: #ffffff;
 
-  --primary: #4f46e5;   /* Indigo */
-  --secondary: #2563eb; /* Blue */
+  --primary: #390077;
+  /* Indigo */
+  --secondary: #26014e;
+  /* Blue */
 
-  --accent-light: #eef2ff;
+  --accent-light: #EEEBFF;
 
-  --text-main: #111827;
+  --text-main: #5d4e6e;
   --text-muted: #6b7280;
 
   --border: #e5e7eb;

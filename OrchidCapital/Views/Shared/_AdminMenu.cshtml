@@ -6,73 +6,45 @@
     var userData = claimsIdentity?.FindFirst(ClaimTypes.UserData)?.Value;
     if (!string.IsNullOrEmpty(userData))
     {
-        menuItems = JsonConvert.DeserializeObject<List<MenuItemVm>>(Encryption.Decrypt(Environment.GetEnvironmentVariable("USR_ENC_KEY"), userData));
+        menuItems = JsonConvert.DeserializeObject<List<MenuItemVm>>(Encryption.Decrypt(Environment.GetEnvironmentVariable("USR_ENC_KEY"),userData));
     }
     var groupedMenu = menuItems.GroupBy(x => x.Section).ToList();
+    var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+    var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
 }
-<ul class="menu" id="Adminmenu">
 
-    @foreach (var group in groupedMenu)
+@foreach (var group in groupedMenu)
+{
+     var iconName = group.FirstOrDefault()?.IconName;
+      var isActiveGroup = group.Any(item =>
+        string.Equals(item.Controller, currentController, StringComparison.OrdinalIgnoreCase) &&
+        string.Equals(item.Action, currentAction, StringComparison.OrdinalIgnoreCase)
+    );
+    if (group.Any(x => x.IsSelected == "checked"))
     {
-        if (group.Any(x => x.IsSelected == "checked"))
-        {
-            <li class="menu-group">
+        <div class="menu-item">
 
-                <div class="menu-title" onclick="toggleMenu(this)">
-                    <span>@group.Key</span>
-                    <span class="arrow">&#9662;</span>
+            <div class="menu @(isActiveGroup ? "active" : "")">
+                <i class="@iconName"></i>
+                <span>@group.Key</span>
+            </div>
+
+            <div class="submenu">
+                <div class="submenu-header">
+                    @group.Key
                 </div>
-
-                <ul class="submenu">
-                    @foreach (var item in group)
+                @foreach (var item in group)
+                {
+                    if (item.IsSelected == "checked")
                     {
-                        if (item.IsSelected == "checked")
-                        {
-                            <li>
-                                <a href="@Url.Action(item.Action, item.Controller)">
-                                    <i class="@item.Icon"></i>
-                                    <span>@item.PageName</span>
-                                </a>
-                            </li>
-                        }
+                        <a href="@Url.Action(item.Action, item.Controller)">
+                            <i class="@item.Icon"></i>
+                            @item.PageName
+                        </a>
                     }
-                </ul>
+                }
 
-            </li>
-        }
+            </div>
+        </div>
     }
-
-</ul>
-<script>
-    function toggleMenu(element) {
-        const currentGroup = element.parentElement;
-
-        // Close all other groups
-        document.querySelectorAll(".menu-group").forEach(group => {
-            if (group !== currentGroup) {
-                group.classList.remove("active");
-            }
-        });
-
-        // Toggle current group
-        currentGroup.classList.toggle("active");
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-
-        // Check if any submenu contains active link
-        const activeLink = document.querySelector(".submenu a.active");
-
-        if (activeLink) {
-            activeLink.closest(".menu-group").classList.add("active");
-        }
-        else {
-            // Open first menu if no active link
-            const first = document.querySelector(".menu-group");
-            if (first) {
-                first.classList.add("active");
-            }
-        }
-
-    });
-</script>
+}

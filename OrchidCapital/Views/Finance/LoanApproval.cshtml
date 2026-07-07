@@ -1,0 +1,2539 @@
+@{
+    ViewData["Title"] = "Admin Pages";
+}
+<link rel="stylesheet" href="~/Admin/css/admin_roles.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/Admin/css/loanprocess.css" asp-append-version="true" />
+<!-- PAGE HEADER -->
+<!-- APPLICATION PANEL -->
+<div class="loan-panel">
+    <div class="loan-form">
+        <div class="page-header">
+            <div>
+                <h2>Loan Application Approval</h2>
+                <p>Review and approve new loan applications</p>
+            </div>
+        </div>
+        <div class="loan-step-header">
+            <div class="loan-step active">
+                <i class="fa-solid fa-file-signature"></i>
+                <p>Application</p>
+            </div>
+            <div class="loan-step-line"></div>
+            <div class="loan-step">
+                <i class="fa-solid fa-folder-tree"></i>
+                <p>Documents</p>
+            </div>
+            <div class="loan-step-line"></div>
+            <div class="loan-step">
+                <i class="fa-solid fa-user-group"></i>
+                <p>Guarantor</p>
+            </div>
+            <div class="loan-step-line"></div>
+            <div class="loan-step">
+                <i class="fa-solid fa-house-circle-check"></i>
+                <p>Collateral</p>
+            </div>
+            <div class="loan-step-line"></div>
+            <div class="loan-step">
+                <i class="fa-solid fa-chart-line"></i>
+                <p>Assessment</p>
+            </div>
+            <div class="loan-step-line"></div>
+            <div class="loan-step">
+                <i class="fa-solid fa-stamp"></i>
+                <p>Approval</p>
+            </div>
+            <div class="loan-step-line"></div>
+            <div class="loan-step">
+                <i class="fa-solid fa-calculator"></i>
+                <p>EMI Setup</p>
+            </div>
+            <div class="loan-step-line"></div>
+            <div class="loan-step">
+                <i class="fa-solid fa-money-bill-transfer"></i>
+                <p>Disbursement</p>
+            </div>
+            <div class="loan-step-line"></div>
+            <div class="loan-step">
+                <i class="fa-solid fa-circle-check"></i>
+                <p>Completed</p>
+            </div>
+        </div>
+        <!-- ========================= -->
+        <!-- STEP 1 : LOAN APPLICATION -->
+        <!-- ========================= -->
+        <div class="wizard-step active" id="step1">
+            <div class="loan-summary-card">
+                <div class="summary-item">
+                    <label>Application No</label>
+                    <span>LAP-2026-000001</span>
+                </div>
+                <div class="summary-item">
+                    <label>Status</label>
+                    <span class="badge draft">Draft</span>
+                </div>
+                <div class="summary-item">
+                    <label>Created On</label>
+                    <span>06-Jul-2026</span>
+                </div>
+                <div class="summary-item">
+                    <label>Branch</label>
+                    <span>Main Branch</span>
+                </div>
+                <div class="summary-item">
+                    <label>Loan Officer</label>
+                    <span>Rahul Patel</span>
+                </div>
+                <div class="summary-item">
+                    <label>Stage</label>
+                    <span>Application</span>
+                </div>
+            </div>
+            <!-- ===================== -->
+            <!-- CUSTOMER PROFILE -->
+            <!-- ===================== -->
+            <div class="guarantor-card-main">
+                <div class="application-layout">
+                    <div class="application-content">
+                        <div class="loan-card">
+                            <div class="card-header">
+                                <span class="header-line"></span>
+                                <h3>
+                                    <i class="fa-solid fa-user"></i>
+                                    Customer Profile
+                                </h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="customer-layout">
+                                    <!-- LEFT -->
+                                    <div class="customer-form">
+                                        <div class="form-grid">
+                                            <div class="form-group">
+                                                <label>Customer *</label>
+                                                <select>
+                                                    <option>Select Customer</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Customer ID</label>
+                                                <input type="text" value="CUS000001" readonly>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Customer Name</label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Mobile</label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Email</label>
+                                                <input type="email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Date of Birth</label>
+                                                <input type="date">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>PAN</label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Aadhaar</label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Branch</label>
+                                                <select>
+                                                    <option>Main Branch</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Relationship Manager</label>
+                                                <select>
+                                                    <option>Select RM</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Loan Officer</label>
+                                                <select>
+                                                    <option>Select Officer</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Customer Category</label>
+                                                <select>
+                                                    <option>Individual</option>
+                                                    <option>Business</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ===================== -->
+                        <!-- LOAN DETAILS -->
+                        <!-- ===================== -->
+                        <div class="loan-card">
+                            <div class="card-header">
+                                <h3>
+                                    <i class="fa-solid fa-money-check-dollar"></i>
+                                    Loan Details
+                                </h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label>Loan Product *</label>
+                                        <select>
+                                            <option>Select Product</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Loan Type *</label>
+                                        <select>
+                                            <option>Term Loan</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Requested Amount *</label>
+                                        <input type="number">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Interest Type</label>
+                                        <select>
+                                            <option>Reducing</option>
+                                            <option>Flat</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Interest Rate</label>
+                                        <input type="number">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Tenure (Months)</label>
+                                        <input type="number">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Repayment Frequency</label>
+                                        <select>
+                                            <option>Monthly</option>
+                                            <option>Quarterly</option>
+                                            <option>Half Yearly</option>
+                                            <option>Yearly</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Expected EMI</label>
+                                        <input type="text" readonly value="Auto Calculated">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Moratorium</label>
+                                        <select>
+                                            <option>No</option>
+                                            <option>Yes</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Insurance Required</label>
+                                        <select>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group full">
+                                        <label>Purpose Of Loan</label>
+                                        <textarea rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <aside class="customer-side-panel">
+                        <div class="customer-side-panel">
+                            <div class="photo-box">
+                                <img src="~/ImageProfiler/default.jfif">
+                                <button class=" btn btn-blue">
+                                    <i class="fa-solid fa-upload"></i>
+                                </button>
+                            </div>
+                            <div class="kyc-status">
+                                <div class="kyc-header">
+                                    <span class="header-line"></span>
+                                    <h4>
+                                        <i class="fa-solid fa-shield-halved"></i>
+                                        KYC Verification
+                                    </h4>
+                                </div>
+                                <ul>
+                                    <li class="verified">
+                                        <span class="status-icon">
+                                            <i class="fa-solid fa-circle-check"></i>
+                                        </span>
+                                        <span class="status-text">
+                                            Aadhaar Verified
+                                        </span>
+                                        <span class="status-badge">
+                                            Verified
+                                        </span>
+                                    </li>
+                                    <li class="verified">
+                                        <span class="status-icon">
+                                            <i class="fa-solid fa-circle-check"></i>
+                                        </span>
+                                        <span class="status-text">
+                                            PAN Verified
+                                        </span>
+                                        <span class="status-badge">
+                                            Verified
+                                        </span>
+                                    </li>
+                                    <li class="pending">
+                                        <span class="status-icon">
+                                            <i class="fa-solid fa-clock"></i>
+                                        </span>
+                                        <span class="status-text">
+                                            CKYC Pending
+                                        </span>
+                                        <span class="status-badge">
+                                            Pending
+                                        </span>
+                                    </li>
+                                    <li class="verified">
+                                        <span class="status-icon">
+                                            <i class="fa-solid fa-circle-check"></i>
+                                        </span>
+                                        <span class="status-text">
+                                            Mobile Verified
+                                        </span>
+                                        <span class="status-badge">
+                                            Verified
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <!-- ===================== -->
+                <!-- FINANCIAL ANALYSIS -->
+                <!-- ===================== -->
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-chart-line"></i>
+                            Financial Assessment
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Monthly Income</label>
+                                <input type="number">
+                            </div>
+                            <div class="form-group">
+                                <label>Monthly Expense</label>
+                                <input type="number">
+                            </div>
+                            <div class="form-group">
+                                <label>Existing EMI</label>
+                                <input type="number">
+                            </div>
+                            <div class="form-group">
+                                <label>Other Liabilities</label>
+                                <input type="number">
+                            </div>
+                            <div class="form-group">
+                                <label>Net Income</label>
+                                <input readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>FOIR %</label>
+                                <input readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>LTV %</label>
+                                <input readonly>
+                            </div>
+                            <div class="form-group">
+                                <label>Credit Score</label>
+                                <input readonly value="760">
+                            </div>
+                            <div class="form-group">
+                                <label>Risk Grade</label>
+                                <input readonly value="LOW">
+                            </div>
+                            <div class="form-group">
+                                <label>Eligible Amount</label>
+                                <input readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ===================== -->
+                <!-- APPLICATION REMARK -->
+                <!-- ===================== -->
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-note-sticky"></i>
+                            Application Remarks
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-grid">
+                            <div class="form-group full">
+                                <label>Internal Remarks</label>
+                                <textarea rows="4"></textarea>
+                            </div>
+                            <div class="form-group full">
+                                <label>Customer Remarks</label>
+                                <textarea rows="4"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ===================== -->
+            <!-- BUTTONS -->
+            <!-- ===================== -->
+            <div class="step-actions customer-toolbar tooltip">
+                <button class="btn btn-red" data-title="Cancel">
+                    <i class="fa-solid fa-refresh"></i><span class="tooltip-text">Cancel</span>
+                </button>
+                <<button class="btn btn-blue" data-title="Save & Next" id="next1">
+                    <i class="fa-solid fa-arrow-right"></i><span class="tooltip-text">Save & Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- ====================================================== -->
+        <!-- STEP 2 : DOCUMENT VERIFICATION -->
+        <!-- ====================================================== -->
+        <div class="wizard-step" id="step2">
+            <div class="page-title">
+                <h2>
+                    <i class="fa-solid fa-folder-open"></i>
+                    Document Verification
+                </h2>
+                <p>
+                    Verify all mandatory customer documents before loan assessment.
+                </p>
+            </div>
+            <!-- ========================================== -->
+            <!-- DOCUMENT STATUS -->
+            <!-- ========================================== -->
+            <div class="dashboard-cards">
+                <div class="dash-card success">
+                    <h5>Total Documents</h5>
+                    <h2>12</h2>
+                </div>
+                <div class="dash-card warning">
+                    <h5>Pending</h5>
+                    <h2>4</h2>
+                </div>
+                <div class="dash-card primary">
+                    <h5>Verified</h5>
+                    <h2>8</h2>
+                </div>
+                <div class="dash-card danger">
+                    <h5>Rejected</h5>
+                    <h2>0</h2>
+                </div>
+            </div>
+            <!-- ========================================== -->
+            <!-- DOCUMENT TABLE -->
+            <!-- ========================================== -->
+            <div class="guarantor-card-main1">
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-file-lines"></i>
+                            Customer Documents
+                        </h3>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="loan-table">
+                            <thead>
+                                <tr>
+                                    <th width="40">#</th>
+                                    <th>Document</th>
+                                    <th>Status</th>
+                                    <th>Expiry</th>
+                                    <th>Uploaded By</th>
+                                    <th>Date</th>
+                                    <th width="340">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>
+                                        <strong>Aadhaar Card</strong>
+                                        <small>Identity Proof</small>
+                                    </td>
+                                    <td>
+                                        <span class="badge success">
+                                            Verified
+                                        </span>
+                                    </td>
+                                    <td>NA</td>
+                                    <td>Customer</td>
+                                    <td>01-Jul-2026</td>
+                                    <td class="actionbtn">
+                                        <button class="btn btn-blue">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                        <button class="btn  btn-blue">
+                                            <i class="fa-solid fa-check"></i>
+                                        </button>
+                                        <button class="btn  btn-blue">
+                                            <i class="fa-solid fa-times"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>
+                                        <strong>PAN Card</strong>
+                                        <small>Income Tax</small>
+                                    </td>
+                                    <td>
+                                        <span class="badge success">
+                                            Verified
+                                        </span>
+                                    </td>
+                                    <td>NA</td>
+                                    <td>Customer</td>
+                                    <td>01-Jul-2026</td>
+                                    <td class="actionbtn">
+                                        <button class=" btn btn-blue">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                        <button class="btn  btn-blue">
+                                            <i class="fa-solid fa-check"></i>
+                                        </button>
+                                        <button class="btn  btn-blue">
+                                            <i class="fa-solid fa-times"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>
+                                        <strong>Salary Slip</strong>
+                                    </td>
+                                    <td>
+                                        <span class="badge warning">
+                                            Pending
+                                        </span>
+                                    </td>
+                                    <td>NA</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td class="actionbtn">
+                                        <label class="upload-btn">
+                                            <i class="fa-solid fa-upload"></i>
+                                            <input type="file" hidden>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>
+                                        <strong>Bank Statement</strong>
+                                    </td>
+                                    <td>
+                                        <span class="badge warning">
+                                            Pending
+                                        </span>
+                                    </td>
+                                    <td>NA</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td class="actionbtn">
+                                        <label class="upload-btn">
+                                            <i class="fa-solid fa-upload"></i>
+                                            <input type="file" hidden>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>
+                                        <strong>Income Tax Return</strong>
+                                    </td>
+                                    <td>
+                                        <span class="badge warning">
+                                            Pending
+                                        </span>
+                                    </td>
+                                    <td>NA</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td class="actionbtn">
+                                        <label class="upload-btn">
+                                            <i class="fa-solid fa-upload"></i>
+                                            <input type="file" hidden>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>
+                                        <strong>Address Proof</strong>
+                                    </td>
+                                    <td>
+                                        <span class="badge success">
+                                            Verified
+                                        </span>
+                                    </td>
+                                    <td>NA</td>
+                                    <td>Customer</td>
+                                    <td>02-Jul-2026</td>
+                                    <td class="actionbtn">
+                                        <button class=" btn btn-blue">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                        <button class="btn  btn-blue">
+                                            <i class="fa-solid fa-check"></i>
+                                        </button>
+                                        <button class="btn  btn-blue">
+                                            <i class="fa-solid fa-times"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>
+                                        <strong>Passport Size Photo</strong>
+                                    </td>
+                                    <td>
+                                        <span class="badge success">
+                                            Verified
+                                        </span>
+                                    </td>
+                                    <td>NA</td>
+                                    <td>Customer</td>
+                                    <td>02-Jul-2026</td>
+                                    <td class="actionbtn">
+                                        <button class=" btn btn-blue">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                        <button class="btn  btn-blue">
+                                            <i class="fa-solid fa-check"></i>
+                                        </button>
+                                        <button class="btn  btn-blue">
+                                            <i class="fa-solid fa-times"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>
+                                        <strong>Property Papers</strong>
+                                    </td>
+                                    <td>
+                                        <span class="badge warning">
+                                            Pending
+                                        </span>
+                                    </td>
+                                    <td>NA</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td class="actionbtn">
+                                        <label class="upload-btn">
+                                            <i class="fa-solid fa-upload"></i>
+                                            <input type="file" hidden>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- ========================================== -->
+                <!-- DOCUMENT REVIEW -->
+                <!-- ========================================== -->
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            Verification Notes
+                        </h3>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group full">
+                            <label>Verification Remarks</label>
+                            <textarea rows="5" placeholder="Enter verification observations..."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ========================================== -->
+            <!-- ACTION -->
+            <!-- ========================================== -->
+           <div class="step-actions customer-toolbar tooltip">
+                <button class="btn btn-blue" data-title="Back" id="back1">
+                    <i class="fa-solid fa-arrow-left"></i><span class="tooltip-text">Back</span>
+                </button>
+
+                <button class="btn btn-blue" data-title="Save & Next" id="next2">
+                    <i class="fa-solid fa-arrow-right"></i><span class="tooltip-text">Save & Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- stage 4 -->
+        <!-- ========================= -->
+        <!-- STEP 4 -->
+        <!-- ========================= -->
+        <!-- ====================================================== -->
+        <!-- STEP 3 : GUARANTOR VERIFICATION -->
+        <!-- ====================================================== -->
+        <div class="wizard-step" id="step3">
+            <div class="page-title">
+                <h2>
+                    <i class="fa-solid fa-users"></i>
+                    Guarantor Verification
+                </h2>
+                <p>
+                    Add and verify guarantors before loan approval.
+                </p>
+            </div>
+            <!-- ======================================= -->
+            <!-- SUMMARY -->
+            <!-- ======================================= -->
+            <div class="dashboard-cards">
+                <div class="dash-card primary">
+                    <h5>Total Guarantors</h5>
+                    <h2>2</h2>
+                </div>
+                <div class="dash-card success">
+                    <h5>Verified</h5>
+                    <h2>1</h2>
+                </div>
+                <div class="dash-card warning">
+                    <h5>Pending</h5>
+                    <h2>1</h2>
+                </div>
+                <div class="dash-card danger">
+                    <h5>Rejected</h5>
+                    <h2>0</h2>
+                </div>
+            </div>
+            <!-- ================================================= -->
+            <!-- GUARANTOR 1 -->
+            <!-- ================================================= -->
+            <div class="guarantor-card-main1">
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-user-check"></i>
+                            Guarantor #1
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text">
+                            </div>
+                            <div class="form-group">
+                                <label>Relationship</label>
+                                <select>
+                                    <option>Brother</option>
+                                    <option>Father</option>
+                                    <option>Mother</option>
+                                    <option>Friend</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Mobile</label>
+                                <input type="text">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email">
+                            </div>
+                            <div class="form-group">
+                                <label>PAN</label>
+                                <input type="text">
+                            </div>
+                            <div class="form-group">
+                                <label>Aadhaar</label>
+                                <input type="text">
+                            </div>
+                            <div class="form-group">
+                                <label>Occupation</label>
+                                <input type="text">
+                            </div>
+                            <div class="form-group">
+                                <label>Monthly Income</label>
+                                <input type="number">
+                            </div>
+                            <div class="form-group">
+                                <label>Net Worth</label>
+                                <input type="number">
+                            </div>
+                            <div class="form-group">
+                                <label>Credit Score</label>
+                                <input type="number">
+                            </div>
+                            <div class="form-group full">
+                                <label>Address</label>
+                                <textarea rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ======================================= -->
+                <!-- GUARANTOR DOCUMENTS -->
+                <!-- ======================================= -->
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-folder-open"></i>
+                            Guarantor Documents
+                        </h3>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="loan-table">
+                            <thead>
+                                <tr>
+                                    <th>Document</th>
+                                    <th>Status</th>
+                                    <th>View</th>
+                                    <th>Verify</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PAN Card</td>
+                                    <td>
+                                        <span class="badge success">
+                                            Uploaded
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <button class=" btn btn-blue">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button class="btn  btn-blue">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Aadhaar Card</td>
+                                    <td>
+                                        <span class="badge success">
+                                            Uploaded
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <button class=" btn btn-blue">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button class="btn  btn-blue">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Income Proof</td>
+                                    <td>
+                                        <span class="badge warning">
+                                            Pending
+                                        </span>
+                                    </td>
+                                    <td>-</td>
+                                    <td>
+                                        <label class="upload-btn">
+                                            Upload
+                                            <input type="file" hidden>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Address Proof</td>
+                                    <td>
+                                        <span class="badge warning">
+                                            Pending
+                                        </span>
+                                    </td>
+                                    <td>-</td>
+                                    <td>
+                                        <label class="upload-btn">
+                                            Upload
+                                            <input type="file" hidden>
+                                        </label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- ======================================= -->
+                <!-- RISK ANALYSIS -->
+                <!-- ======================================= -->
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-chart-column"></i>
+                            Guarantor Risk Assessment
+                        </h3>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Income Stability</label>
+                            <select>
+                                <option>Excellent</option>
+                                <option>Good</option>
+                                <option>Average</option>
+                                <option>Poor</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Credit Rating</label>
+                            <input readonly value="Excellent">
+                        </div>
+                        <div class="form-group">
+                            <label>Verification Status</label>
+                            <select>
+                                <option>Pending</option>
+                                <option>Verified</option>
+                                <option>Rejected</option>
+                            </select>
+                        </div>
+                        <div class="form-group full">
+                            <label>Verification Remarks</label>
+                            <textarea rows="4"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ======================================= -->
+                <!-- ADD GUARANTOR -->
+                <!-- ======================================= -->
+                <div style="margin-bottom:25px;">
+                    <button class="btn btn-blue">
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <button class="btn btn-blue">
+                        <i class="fa-solid fa-user-plus"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- ======================================= -->
+            <!-- BUTTONS -->
+            <!-- ======================================= -->
+            <div class="step-actions customer-toolbar tooltip">
+                <button class="btn btn-blue" data-title="Back" id="back2">
+                    <i class="fa-solid fa-arrow-left"></i><span class="tooltip-text">Back</span>
+                </button>
+
+                <button class="btn btn-blue" data-title="Save & Next" id="next3">
+                    <i class="fa-solid fa-arrow-right"></i><span class="tooltip-text">Save & Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- step 4 over -->
+        <!-- step 5 -->
+        <!-- ====================================================== -->
+        <!-- STEP 4 : COLLATERAL VERIFICATION -->
+        <!-- ====================================================== -->
+        <div class="wizard-step" id="step4">
+            <div class="page-title">
+                <h2>
+                    <i class="fa-solid fa-building-columns"></i>
+                    Collateral Verification
+                </h2>
+                <p>
+                    Add collateral offered against this loan and complete valuation.
+                </p>
+            </div>
+            <!-- =========================================== -->
+            <!-- COLLATERAL SUMMARY -->
+            <!-- =========================================== -->
+            <div class="dashboard-cards">
+                <div class="dash-card primary">
+                    <h5>Total Collaterals</h5>
+                    <h2>2</h2>
+                </div>
+                <div class="dash-card success">
+                    <h5>Total Value</h5>
+                    <h2>₹24.50L</h2>
+                </div>
+                <div class="dash-card warning">
+                    <h5>LTV</h5>
+                    <h2>61%</h2>
+                </div>
+                <div class="dash-card success">
+                    <h5>Status</h5>
+                    <h2>Eligible</h2>
+                </div>
+            </div>
+            <!-- =========================================== -->
+            <!-- COLLATERAL DETAILS -->
+            <!-- =========================================== -->
+            <div class="guarantor-card-main1">
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-house"></i>
+                            Collateral Information
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Collateral Type</label>
+                                <select>
+                                    <option>House</option>
+                                    <option>Land</option>
+                                    <option>Gold</option>
+                                    <option>Vehicle</option>
+                                    <option>FD</option>
+                                    <option>Shares</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <input type="text">
+                            </div>
+                            <div class="form-group">
+                                <label>Serial No / Survey No</label>
+                                <input type="text">
+                            </div>
+                            <div class="form-group">
+                                <label>Ownership</label>
+                                <select>
+                                    <option>Self</option>
+                                    <option>Joint</option>
+                                    <option>Guarantor</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Market Value</label>
+                                <input type="number">
+                            </div>
+                            <div class="form-group">
+                                <label>Forced Sale Value</label>
+                                <input type="number">
+                            </div>
+                            <div class="form-group">
+                                <label>Valuation Date</label>
+                                <input type="date">
+                            </div>
+                            <div class="form-group">
+                                <label>Valuation Officer</label>
+                                <select>
+                                    <option>Select Officer</option>
+                                </select>
+                            </div>
+                            <div class="form-group full">
+                                <label>Property Address</label>
+                                <textarea rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- =========================================== -->
+                <!-- PROPERTY DOCUMENTS -->
+                <!-- =========================================== -->
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-folder-tree"></i>
+                            Collateral Documents
+                        </h3>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="loan-table">
+                            <thead>
+                                <tr>
+                                    <th>Document</th>
+                                    <th>Status</th>
+                                    <th>View</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sale Deed</td>
+                                    <td>
+                                        <span class="badge success">
+                                            Uploaded
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <button class=" btn btn-blue">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button class="btn  btn-blue">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Legal Report</td>
+                                    <td>
+                                        <span class="badge warning">
+                                            Pending
+                                        </span>
+                                    </td>
+                                    <td>-</td>
+                                    <td>
+                                        <label class="upload-btn">
+                                            Upload
+                                            <input type="file" hidden>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Valuation Report</td>
+                                    <td>
+                                        <span class="badge warning">
+                                            Pending
+                                        </span>
+                                    </td>
+                                    <td>-</td>
+                                    <td>
+                                        <label class="upload-btn">
+                                            Upload
+                                            <input type="file" hidden>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Insurance</td>
+                                    <td>
+                                        <span class="badge success">
+                                            Uploaded
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <button class=" btn btn-blue">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                    </td>
+                                    <td>
+                                        <button class="btn  btn-blue">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- =========================================== -->
+                <!-- SYSTEM CALCULATION -->
+                <!-- =========================================== -->
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-calculator"></i>
+                            Security Analysis
+                        </h3>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Total Security Value</label>
+                            <input readonly value="24,50,000">
+                        </div>
+                        <div class="form-group">
+                            <label>Loan Requested</label>
+                            <input readonly value="15,00,000">
+                        </div>
+                        <div class="form-group">
+                            <label>LTV %</label>
+                            <input readonly value="61%">
+                        </div>
+                        <div class="form-group">
+                            <label>Collateral Status</label>
+                            <input readonly value="Eligible">
+                        </div>
+                        <div class="form-group full">
+                            <label>Verification Remarks</label>
+                            <textarea rows="4"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- =========================================== -->
+            <!-- BUTTONS -->
+            <!-- =========================================== -->
+            <div class="step-actions customer-toolbar tooltip">
+                <button class="btn btn-blue" data-title="Back" id="back3">
+                    <i class="fa-solid fa-arrow-left"></i><span class="tooltip-text">Back</span>
+                </button>
+                <button class="btn btn-blue" data-title="Add Collateral">
+                    <i class="fa-solid fa-plus"></i><span class="tooltip-text">Add Collateral</span>
+                </button>
+                <button class="btn btn-blue" data-title="Verify Collateral">
+                    <i class="fa-solid fa-check-double"></i><span class="tooltip-text">Verify Collateral</span>
+                </button>
+                 <button class="btn btn-blue" data-title="Save & Next" id="next4">
+                    <i class="fa-solid fa-arrow-right"></i><span class="tooltip-text">Save & Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- step 5 over -->
+        <!-- step 6  -->
+        <!-- ====================================================== -->
+        <!-- STEP 5 : CREDIT ASSESSMENT -->
+        <!-- ====================================================== -->
+        <div class="wizard-step" id="step5">
+            <div class="page-title">
+                <h2>
+                    <i class="fa-solid fa-chart-line"></i>
+                    Credit Assessment
+                </h2>
+                <p>
+                    Credit officer recommendation and financial eligibility assessment.
+                </p>
+            </div>
+            <!-- ====================================== -->
+            <!-- DASHBOARD -->
+            <!-- ====================================== -->
+            <div class="dashboard-cards">
+                <div class="dash-card success">
+                    <h5>Credit Score</h5>
+                    <h2>782</h2>
+                </div>
+                <div class="dash-card primary">
+                    <h5>FOIR</h5>
+                    <h2>34%</h2>
+                </div>
+                <div class="dash-card warning">
+                    <h5>LTV</h5>
+                    <h2>61%</h2>
+                </div>
+                <div class="dash-card success">
+                    <h5>Risk Grade</h5>
+                    <h2>LOW</h2>
+                </div>
+            </div>
+            <!-- ====================================== -->
+            <!-- ELIGIBILITY -->
+            <!-- ====================================== -->
+            <div class="guarantor-card-main1">
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-calculator"></i>
+                            Eligibility Calculation
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Monthly Income</label>
+                                <input readonly value="95,000">
+                            </div>
+                            <div class="form-group">
+                                <label>Total EMI</label>
+                                <input readonly value="12,500">
+                            </div>
+                            <div class="form-group">
+                                <label>Other Liabilities</label>
+                                <input readonly value="1,80,000">
+                            </div>
+                            <div class="form-group">
+                                <label>Requested Loan</label>
+                                <input readonly value="15,00,000">
+                            </div>
+                            <div class="form-group">
+                                <label>Eligible Loan</label>
+                                <input readonly value="18,50,000">
+                            </div>
+                            <div class="form-group">
+                                <label>Recommended Loan</label>
+                                <input value="15,00,000">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== -->
+                <!-- CIBIL -->
+                <!-- ====================================== -->
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-address-card"></i>
+                            Credit Bureau Report
+                        </h3>
+                    </div>
+                    <table class="loan-table">
+                        <thead>
+                            <tr>
+                                <th>Parameter</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CIBIL Score</td>
+                                <td>782</td>
+                            </tr>
+                            <tr>
+                                <td>Active Loans</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Overdue Accounts</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Cheque Bounce</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>DPD</td>
+                                <td>000</td>
+                            </tr>
+                            <tr>
+                                <td>Credit Utilization</td>
+                                <td>23%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- ====================================== -->
+                <!-- RISK -->
+                <!-- ====================================== -->
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-shield-halved"></i>
+                            Risk Assessment
+                        </h3>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Income Stability</label>
+                            <select>
+                                <option>Excellent</option>
+                                <option>Good</option>
+                                <option>Average</option>
+                                <option>Poor</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Business Stability</label>
+                            <select>
+                                <option>Excellent</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Residence Stability</label>
+                            <select>
+                                <option>Owned House</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Risk Grade</label>
+                            <select>
+                                <option>Low</option>
+                                <option>Medium</option>
+                                <option>High</option>
+                            </select>
+                        </div>
+                        <div class="form-group full">
+                            <label>Assessment Remarks</label>
+                            <textarea rows="4"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <!-- ====================================== -->
+                <!-- OFFICER DECISION -->
+                <!-- ====================================== -->
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-user-check"></i>
+                            Credit Officer Recommendation
+                        </h3>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Recommendation</label>
+                            <select>
+                                <option>Approve</option>
+                                <option>Reject</option>
+                                <option>Need Clarification</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Recommended Amount</label>
+                            <input type="number">
+                        </div>
+                        <div class="form-group">
+                            <label>Recommended ROI</label>
+                            <input type="number">
+                        </div>
+                        <div class="form-group">
+                            <label>Recommended Tenure</label>
+                            <input type="number">
+                        </div>
+                        <div class="form-group full">
+                            <label>Officer Remarks</label>
+                            <textarea rows="5"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ====================================== -->
+            <!-- ACTION -->
+            <!-- ====================================== -->
+            <div class="step-actions customer-toolbar tooltip">
+                <button class="btn btn-blue" data-title="Back" id="back4">
+                    <i class="fa-solid fa-arrow-left"></i><span class="tooltip-text">Back</span>
+                </button>
+                <button class="btn btn-blue" data-title="Hold">
+                    <i class="fa-solid fa-pen-to-square"></i><span class="tooltip-text">Hold</span>
+                </button>
+                <button class="btn btn-blue" data-title="Forward To Manager">
+                    <i class="fa-solid fa-envelope"></i><span class="tooltip-text">Forward To Manager</span>
+                </button>
+                 <button class="btn btn-blue" data-title="Save & Next" id="next5">
+                    <i class="fa-solid fa-arrow-right"></i><span class="tooltip-text">Save & Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- step 6 over -->
+        <!-- step 7  -->
+        <!-- ====================================================== -->
+        <!-- STEP 6 : SANCTION & APPROVAL -->
+        <!-- ====================================================== -->
+        <div class="wizard-step" id="step6">
+            <div class="page-title">
+                <h2>
+                    <i class="fa-solid fa-stamp"></i>
+                    Loan Sanction & Approval
+                </h2>
+                <p>
+                    Manager approval and sanction details before loan creation.
+                </p>
+            </div>
+            <!-- ========================================= -->
+            <!-- APPROVAL SUMMARY -->
+            <!-- ========================================= -->
+            <div class="dashboard-cards">
+                <div class="dash-card primary">
+                    <h5>Requested</h5>
+                    <h2>₹15,00,000</h2>
+                </div>
+                <div class="dash-card success">
+                    <h5>Eligible</h5>
+                    <h2>₹18,50,000</h2>
+                </div>
+                <div class="dash-card warning">
+                    <h5>Recommended</h5>
+                    <h2>₹15,00,000</h2>
+                </div>
+                <div class="dash-card success">
+                    <h5>Status</h5>
+                    <h2>Pending Approval</h2>
+                </div>
+            </div>
+            <!-- ========================================= -->
+            <!-- SANCTION DETAILS -->
+            <!-- ========================================= -->
+            <div class="guarantor-card-main1">
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-file-signature"></i>
+                            Sanction Details
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Sanction Amount</label>
+                                <input type="number">
+                            </div>
+                            <div class="form-group">
+                                <label>Interest Rate</label>
+                                <input type="number">
+                            </div>
+                            <div class="form-group">
+                                <label>Interest Type</label>
+                                <select>
+                                    <option>Reducing</option>
+                                    <option>Flat</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Tenure</label>
+                                <input type="number">
+                            </div>
+                            <div class="form-group">
+                                <label>Repayment Frequency</label>
+                                <select>
+                                    <option>Monthly</option>
+                                    <option>Quarterly</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>EMI</label>
+                                <input readonly value="Auto Calculated">
+                            </div>
+                            <div class="form-group">
+                                <label>Loan Start Date</label>
+                                <input type="date">
+                            </div>
+                            <div class="form-group">
+                                <label>First EMI Date</label>
+                                <input type="date">
+                            </div>
+                            <div class="form-group">
+                                <label>Loan End Date</label>
+                                <input type="date">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ========================================= -->
+                <!-- CHARGES -->
+                <!-- ========================================= -->
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-money-check-dollar"></i>
+                            Loan Charges
+                        </h3>
+                    </div>
+                    <table class="loan-table">
+                        <thead>
+                            <tr>
+                                <th>Charge</th>
+                                <th>Amount</th>
+                                <th>GST</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Processing Fee</td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                                <td>₹5,900</td>
+                            </tr>
+                            <tr>
+                                <td>Legal Fee</td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                                <td>₹2,360</td>
+                            </tr>
+                            <tr>
+                                <td>Documentation</td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                                <td>₹1,180</td>
+                            </tr>
+                            <tr>
+                                <td>Insurance</td>
+                                <td><input type="number"></td>
+                                <td><input type="number"></td>
+                                <td>₹6,200</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- ========================================= -->
+                <!-- APPROVAL MATRIX -->
+                <!-- ========================================= -->
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-users-gear"></i>
+                            Approval Matrix
+                        </h3>
+                    </div>
+                    <table class="loan-table">
+                        <thead>
+                            <tr>
+                                <th>Level</th>
+                                <th>Officer</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th>Remarks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Credit Officer</td>
+                                <td>Rahul Patel</td>
+                                <td>
+                                    <span class="badge success">
+                                        Approved
+                                    </span>
+                                </td>
+                                <td>05-Jul-2026</td>
+                                <td>Eligible</td>
+                            </tr>
+                            <tr>
+                                <td>Branch Manager</td>
+                                <td>----------</td>
+                                <td>
+                                    <span class="badge warning">
+                                        Pending
+                                    </span>
+                                </td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Regional Manager</td>
+                                <td>----------</td>
+                                <td>
+                                    <span class="badge secondary">
+                                        Waiting
+                                    </span>
+                                </td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- ========================================= -->
+                <!-- MANAGER REMARK -->
+                <!-- ========================================= -->
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-comments"></i>
+                            Manager Remarks
+                        </h3>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Decision</label>
+                            <select>
+                                <option>Approve</option>
+                                <option>Reject</option>
+                                <option>Send Back</option>
+                            </select>
+                        </div>
+                        <div class="form-group full">
+                            <label>Remarks</label>
+                            <textarea rows="5"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ========================================= -->
+            <!-- ACTION -->
+            <!-- ========================================= -->
+            <div class="step-actions customer-toolbar tooltip">
+                <button class="btn btn-blue" id="back5">
+                    <i class="fa-solid fa-arrow-left"></i><span class="tooltip-text">Back</span>
+                </button>
+                <button class="btn btn-blue" data-title="Send Back">
+                    <i class="fa-solid fa-envelope"></i><span class="tooltip-text">Send Back</span>
+                </button>
+                <button class="btn btn-blue" data-title="Reject">
+                    <i class="fa-solid fa-trash"></i><span class="tooltip-text">Reject</span>
+                </button>
+                <button class="btn btn-blue" data-title="Approve Loan">
+                    <i class="fa-solid fa-floppy-disk"></i></i><span class="tooltip-text">Approve Loan</span>
+                </button>
+                 <button class="btn btn-blue" data-title="Save & Next" id="next6">
+                    <i class="fa-solid fa-arrow-right"></i><span class="tooltip-text">Save & Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- step 7 over  -->
+        <!-- step 8 -->
+        <!-- ====================================================== -->
+        <!-- STEP 7 : EMI GENERATION & REPAYMENT SETUP -->
+        <!-- ====================================================== -->
+        <div class="wizard-step" id="step7">
+            <div class="page-title">
+                <h2>
+                    <i class="fa-solid fa-calculator"></i>
+                    EMI Generation
+                </h2>
+                <p>
+                    Generate repayment schedule after sanction approval.
+                </p>
+            </div>
+            <!-- ========================================== -->
+            <!-- LOAN SUMMARY -->
+            <!-- ========================================== -->
+            <div class="dashboard-cards">
+                <div class="dash-card primary">
+                    <h5>Sanction Amount</h5>
+                    <h2>₹15,00,000</h2>
+                </div>
+                <div class="dash-card success">
+                    <h5>Interest</h5>
+                    <h2>8.50%</h2>
+                </div>
+                <div class="dash-card warning">
+                    <h5>Tenure</h5>
+                    <h2>240 Months</h2>
+                </div>
+                <div class="dash-card success">
+                    <h5>EMI</h5>
+                    <h2>₹13,018</h2>
+                </div>
+            </div>
+            <!-- ========================================== -->
+            <!-- EMI CONFIGURATION -->
+            <!-- ========================================== -->
+            <div class="guarantor-card-main1">
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-sliders"></i>
+                            Repayment Configuration
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Principal Amount</label>
+                                <input type="number">
+                            </div>
+                            <div class="form-group">
+                                <label>Interest Rate</label>
+                                <input type="number">
+                            </div>
+                            <div class="form-group">
+                                <label>Interest Type</label>
+                                <select>
+                                    <option>Reducing</option>
+                                    <option>Flat</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Tenure</label>
+                                <input type="number">
+                            </div>
+                            <div class="form-group">
+                                <label>Repayment Frequency</label>
+                                <select>
+                                    <option>Monthly</option>
+                                    <option>Quarterly</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Installment Start Date</label>
+                                <input type="date">
+                            </div>
+                            <div class="form-group">
+                                <label>Due Day</label>
+                                <select>
+                                    <option>1</option>
+                                    <option>5</option>
+                                    <option>10</option>
+                                    <option>15</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Grace Days</label>
+                                <input type="number">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ========================================== -->
+                <!-- EMI SCHEDULE -->
+                <!-- ========================================== -->
+                <div class="loan-card">
+                    <div class="card-header customer-toolbar tooltip">
+                        <h3>
+                            <i class="fa-solid fa-table"></i>
+                            EMI Schedule Preview
+                        </h3>
+                        <button class="btn  btn-blue" data-title="Generate EMI">
+                            <i class="fa-solid fa-gear"></i>
+                            <span class="tooltip-text">Generate EMI</span>
+                        </button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="loan-table">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Due Date</th>
+                                    <th>Opening</th>
+                                    <th>Principal</th>
+                                    <th>Interest</th>
+                                    <th>EMI</th>
+                                    <th>Closing</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>05-Aug-2026</td>
+                                    <td>15,00,000</td>
+                                    <td>2,393</td>
+                                    <td>10,625</td>
+                                    <td>13,018</td>
+                                    <td>14,97,607</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>05-Sep-2026</td>
+                                    <td>14,97,607</td>
+                                    <td>2,410</td>
+                                    <td>10,608</td>
+                                    <td>13,018</td>
+                                    <td>14,95,197</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>05-Oct-2026</td>
+                                    <td>14,95,197</td>
+                                    <td>2,428</td>
+                                    <td>10,590</td>
+                                    <td>13,018</td>
+                                    <td>14,92,769</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- ========================================== -->
+                <!-- AUTO CREATED -->
+                <!-- ========================================== -->
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-circle-check"></i>
+                            Records To Be Created
+                        </h3>
+                    </div>
+                    <table class="loan-table">
+                        <tbody>
+                            <tr>
+                                <td>Loan Master</td>
+                                <td>
+                                    <span class="badge success">
+                                        Ready
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Loan EMI Schedule</td>
+                                <td>
+                                    <span class="badge success">
+                                        240 Installments
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Loan Charges</td>
+                                <td>
+                                    <span class="badge success">
+                                        Calculated
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- ========================================== -->
+            <!-- ACTION -->
+            <!-- ========================================== -->
+            <div class="step-actions customer-toolbar tooltip">
+                <button class="btn btn-blue" data-title="Back" id="back6">
+                    <i class="fa-solid fa-arrow-left"></i><span class="tooltip-text">Back</span>
+                </button>
+                <button class="btn  btn-blue" data-title="Generate Schedule">
+                    <i class="fa-solid fa-check"></i><span class="tooltip-text">Generate Schedule</span>
+                </button>
+                <button class="btn  btn-blue" data-title="Save & Next" id="next7">
+                    <i class="fa-solid fa-arrow-right"></i><span class="tooltip-text">Save & Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- step 8 over -->
+        <!-- step 9 -->
+        <!-- ====================================================== -->
+        <!-- STEP 8 : LOAN DISBURSEMENT -->
+        <!-- ====================================================== -->
+        <div class="wizard-step" id="step8">
+            <div class="page-title">
+                <h2>
+                    <i class="fa-solid fa-money-bill-transfer"></i>
+                    Loan Disbursement
+                </h2>
+                <p>
+                    Disburse the approved loan amount to the customer.
+                </p>
+            </div>
+            <!-- ========================================== -->
+            <!-- DISBURSEMENT SUMMARY -->
+            <!-- ========================================== -->
+            <div class="dashboard-cards">
+                <div class="dash-card primary">
+                    <h5>Sanction Amount</h5>
+                    <h2>₹15,00,000</h2>
+                </div>
+                <div class="dash-card warning">
+                    <h5>Total Charges</h5>
+                    <h2>₹18,440</h2>
+                </div>
+                <div class="dash-card success">
+                    <h5>Net Payable</h5>
+                    <h2>₹14,81,560</h2>
+                </div>
+                <div class="dash-card primary">
+                    <h5>Disbursed</h5>
+                    <h2>₹0.00</h2>
+                </div>
+            </div>
+            <!-- ========================================== -->
+            <!-- DISBURSEMENT DETAILS -->
+            <!-- ========================================== -->
+            <div class="guarantor-card-main1">
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-wallet"></i>
+                            Disbursement Information
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Disbursement Type</label>
+                                <select>
+                                    <option>Single Disbursement</option>
+                                    <option>Multiple Disbursement</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Disbursement Date</label>
+                                <input type="date">
+                            </div>
+                            <div class="form-group">
+                                <label>Amount</label>
+                                <input type="number">
+                            </div>
+                            <div class="form-group">
+                                <label>Mode</label>
+                                <select>
+                                    <option>NEFT</option>
+                                    <option>RTGS</option>
+                                    <option>IMPS</option>
+                                    <option>Cheque</option>
+                                    <option>Cash</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Bank Account</label>
+                                <select>
+                                    <option>Select Account</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Cheque / Reference No</label>
+                                <input type="text">
+                            </div>
+                            <div class="form-group">
+                                <label>Voucher No</label>
+                                <input type="text">
+                            </div>
+                            <div class="form-group">
+                                <label>Authorized By</label>
+                                <select>
+                                    <option>Select Officer</option>
+                                </select>
+                            </div>
+                            <div class="form-group full">
+                                <label>Remarks</label>
+                                <textarea rows="4"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ========================================== -->
+                <!-- DISBURSEMENT SCHEDULE -->
+                <!-- ========================================== -->
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-table-list"></i>
+                            Disbursement Schedule
+                        </h3>
+                        <button class="btn btn-blue">
+                            <i class="fa-solid fa-plus"></i>
+                            Add Installment
+                        </button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="loan-table">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                    <th>Mode</th>
+                                    <th>Reference</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>06-Jul-2026</td>
+                                    <td>₹14,81,560</td>
+                                    <td>NEFT</td>
+                                    <td>UTR00012345</td>
+                                    <td>
+                                        <span class="badge warning">
+                                            Pending
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <button class="btn btn-blue">
+                                            <i class="fa-solid fa-floppy-disk"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- ========================================== -->
+                <!-- ACCOUNTING ENTRIES -->
+                <!-- ========================================== -->
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-book"></i>
+                            Accounting Preview
+                        </h3>
+                    </div>
+                    <table class="loan-table">
+                        <thead>
+                            <tr>
+                                <th>Ledger</th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Loan Account</td>
+                                <td>15,00,000</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td>Processing Charges</td>
+                                <td>-</td>
+                                <td>18,440</td>
+                            </tr>
+                            <tr>
+                                <td>Customer Bank</td>
+                                <td>-</td>
+                                <td>14,81,560</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- ========================================== -->
+                <!-- SYSTEM ACTION -->
+                <!-- ========================================== -->
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-database"></i>
+                            System Actions
+                        </h3>
+                    </div>
+                    <table class="loan-table">
+                        <tbody>
+                            <tr>
+                                <td>Create Loan Master</td>
+                                <td><span class="badge success">Ready</span></td>
+                            </tr>
+                            <tr>
+                                <td>Create Loan Disbursement</td>
+                                <td><span class="badge success">Ready</span></td>
+                            </tr>
+                            <tr>
+                                <td>Post Accounting Voucher</td>
+                                <td><span class="badge success">Ready</span></td>
+                            </tr>
+                            <tr>
+                                <td>Activate Loan</td>
+                                <td><span class="badge success">Ready</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- ========================================== -->
+            <!-- ACTION -->
+            <!-- ========================================== -->
+            <div class="step-actions customer-toolbar tooltip">
+                <button class="btn btn-blue" data-title="Back" id="back7">
+                    <i class="fa-solid fa-arrow-left"></i><span class="tooltip-text">Back</span>
+                </button>
+                <button class="btn btn-blue" data-title=" Print Advice">
+                    <i class="fa-solid fa-print"></i><span class="tooltip-text"> Print Advice</span>
+                </button>
+                <button class="btn btn-blue" data-title="Process Disbursement">
+                    <i class="fa-solid fa-check"></i><span class="tooltip-text">Process Disbursement</span>
+                </button>
+                <button class="btn btn-blue" data-title="Save & Next" id="next8">
+                    <i class="fa-solid fa-arrow-right"></i><span class="tooltip-text">Save & Next</span>
+
+                </button>
+            </div>
+        </div>
+        <!-- step 9 over -->
+        <!-- step 10 -->
+        <!-- ====================================================== -->
+        <!-- STEP 9 : LOAN ACTIVATION & COMPLETION -->
+        <!-- ====================================================== -->
+        <div class="wizard-step" id="step9">
+            <div class="page-title">
+                <h2>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Loan Successfully Activated
+                </h2>
+                <p>
+                    Loan account has been created successfully and is ready for servicing.
+                </p>
+            </div>
+            <!-- ========================================== -->
+            <!-- SUCCESS -->
+            <!-- ========================================== -->
+            <div class="success-card">
+                <div class="success-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h2>
+                    Loan Approved Successfully
+                </h2>
+                <p>
+                    All approval stages are completed.
+                    Loan account has been activated.
+                </p>
+            </div>
+            <!-- ========================================== -->
+            <!-- LOAN INFORMATION -->
+            <!-- ========================================== -->
+            <div class="guarantor-card-main1">
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                            Loan Information
+                        </h3>
+                    </div>
+                    <table class="loan-table">
+                        <tbody>
+                            <tr>
+                                <td>Loan Number</td>
+                                <td>
+                                    <strong>
+                                        LN000000154
+                                    </strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Application Number</td>
+                                <td>LAP-2026-000001</td>
+                            </tr>
+                            <tr>
+                                <td>Customer</td>
+                                <td>Rahul Sharma</td>
+                            </tr>
+                            <tr>
+                                <td>Loan Product</td>
+                                <td>Home Loan</td>
+                            </tr>
+                            <tr>
+                                <td>Loan Status</td>
+                                <td>
+                                    <span class="badge success">
+                                        ACTIVE
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sanction Amount</td>
+                                <td>₹15,00,000</td>
+                            </tr>
+                            <tr>
+                                <td>Disbursed Amount</td>
+                                <td>₹14,81,560</td>
+                            </tr>
+                            <tr>
+                                <td>Interest Rate</td>
+                                <td>8.50%</td>
+                            </tr>
+                            <tr>
+                                <td>EMI</td>
+                                <td>₹13,018</td>
+                            </tr>
+                            <tr>
+                                <td>Loan Start Date</td>
+                                <td>06-Jul-2026</td>
+                            </tr>
+                            <tr>
+                                <td>First EMI</td>
+                                <td>05-Aug-2026</td>
+                            </tr>
+                            <tr>
+                                <td>Loan End Date</td>
+                                <td>05-Jul-2046</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- ========================================== -->
+                <!-- SYSTEM GENERATED RECORDS -->
+                <!-- ========================================== -->
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-database"></i>
+                            Records Generated
+                        </h3>
+                    </div>
+                    <table class="loan-table">
+                        <thead>
+                            <tr>
+                                <th>Module</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Loan Master</td>
+                                <td>
+                                    <span class="badge success">
+                                        Created
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Loan EMI Schedule</td>
+                                <td>
+                                    <span class="badge success">
+                                        240 Records Created
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Loan Charges</td>
+                                <td>
+                                    <span class="badge success">
+                                        Posted
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Loan Disbursement</td>
+                                <td>
+                                    <span class="badge success">
+                                        Completed
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Accounting Voucher</td>
+                                <td>
+                                    <span class="badge success">
+                                        Posted
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Customer Ledger</td>
+                                <td>
+                                    <span class="badge success">
+                                        Opened
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- ========================================== -->
+                <!-- PRINT DOCUMENTS -->
+                <!-- ========================================== -->
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-print"></i>
+                            Documents
+                        </h3>
+                    </div>
+                    <div class="document-grid customer-toolbar tooltip">
+                        <button class="btn btn-blue" data-title="Loan Sanction Letter">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span class="tooltip-text">Loan Sanction Letter</span>
+                        </button>
+                        <button class="btn btn-blue" data-title="Loan Agreement">
+                            <i class="fa-solid fa-file-contract"></i>
+                            <span class="tooltip-text">Loan Agreement</span>
+                        </button>
+                        <button class="btn btn-blue" data-title="EMI Schedule">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span class="tooltip-text">EMI Schedule</span>
+                        </button>
+                        <button class="btn btn-blue" data-title="Disbursement Advice">
+                            <i class="fa-solid fa-money-check-dollar"></i>
+                            <span class="tooltip-text">Disbursement Advice</span>
+                        </button>
+                        <button class="btn btn-blue" data-title="Charges Receipt">
+                            <i class="fa-solid fa-receipt"></i>
+                            <span class="tooltip-text">Charges Receipt</span>
+                        </button>
+                        <button class="btn btn-blue" data-title="Loan Ledger">
+                            <i class="fa-solid fa-book"></i>
+                            <span class="tooltip-text">Loan Ledger</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- ========================================== -->
+                <!-- NEXT OPERATIONS -->
+                <!-- ========================================== -->
+                <div class="loan-card">
+                    <div class="card-header">
+                        <h3>
+                            <i class="fa-solid fa-gears"></i>
+                            Next Operations
+                        </h3>
+                    </div>
+                    <div class="document-grid customer-toolbar tooltip">
+                        <button class="btn btn-blue" data-title="Open Loan Account">
+                            <i class="fa-solid fa-book"></i>
+                            <span class="tooltip-text">Open Loan Account</span>
+                        </button>
+                        <button class="btn btn-blue" data-title="Receive EMI">
+                            <i class="fa-solid fa-calendar-days"></i>
+                            <span class="tooltip-text">Receive EMI</span>
+                        </button>
+                        <button class="btn btn-blue" data-title="Loan Statement">
+                            <i class="fa-solid fa-file-contract"></i>
+                            <span class="tooltip-text">Loan Statement</span>
+                        </button>
+                        <button class="btn btn-blue" data-title="Customer Ledger">
+                            <i class="fa-solid fa-file-pdf"></i>
+                            <span class="tooltip-text">Customer Ledger</span>
+                        </button>
+                        <button class="btn btn-blue" data-title="Close Wizard">
+                            <i class="fa-solid fa-file-zipper"></i>
+                            <span class="tooltip-text">Close Wizard</span>
+                        </button>
+                        <button class="btn btn-blue" data-title="New Loan Application<">
+                            <i class="fa-solid fa-file"></i>
+                            <span class="tooltip-text">New Loan Application</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- ========================================== -->
+            <!-- ACTION -->
+            <!-- ========================================== -->
+            <div class="step-actions customer-toolbar tooltip">
+                <button class="btn btn-blue" data-title="Dashboard">
+                    <i class="fa-solid fa-house"></i>
+                     <span class="tooltip-text">Dashboard</span>
+                </button>
+                <button class="btn btn-blue" data-title="Print Loan File">
+                    <i class="fa-solid fa-print"></i>
+                     <span class="tooltip-text">Print Loan File</span>
+                </button>
+                <button class="btn btn-blue" data-title="Open Loan Master">
+                    <i class="fa-solid fa-folder-open"></i>
+                     <span class="tooltip-text">Open Loan Master</span>
+                </button>
+            </div>
+        </div>
+        <!-- step 10 over -->
+    </div>
+</div>
+<script>
+    var _loadUrls = function () {
+        return {
+            create: '@Url.Action("Create", "Finance")',
+            list: '@Url.Action("List", "Finance")',
+            get: '@Url.Action("Edit", "Finance")',
+            status: '@Url.Action("Status", "Finance")',
+            delete: '@Url.Action("Delete", "Finance")',
+            export: '@Url.Action("ExportToExcelFile", "Finance")'
+        };
+    }
+    window.AFinanceReport = {
+        configs: {
+            urlBase: '@Utility.GetAppSettings("BasePath")',
+            loginUserName: '@User.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value',
+            loginUserRole: '@User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value',
+            defaultPageSize: 25
+        },
+        urls: _loadUrls()
+    };    
+</script>
+@section Scripts {
+    @* <script src="~/Admin/js/FinanceLoanApplicationList.js" asp-append-version="true"></script> *@
+    <script>
+        /* ==========================================================
+           LOAN APPROVAL WIZARD (9 STEPS)
+        ========================================================== */
+        const wizardSteps = document.querySelectorAll(".wizard-step");
+        const topSteps = document.querySelectorAll(".loan-step");
+        const processBoxes = document.querySelectorAll(".process-box");
+        const stepIcons = [
+            "fa-solid fa-file-signature",
+            "fa-solid fa-folder-tree",
+            "fa-solid fa-user-group",
+            "fa-solid fa-house-circle-check",
+            "fa-solid fa-chart-line",
+            "fa-solid fa-stamp",
+            "fa-solid fa-calculator",
+            "fa-solid fa-money-bill-transfer",
+            "fa-solid fa-circle-check"
+        ];
+        function openStep(index) {
+            wizardSteps.forEach((step, i) => {
+                step.style.display = (i === index) ? "block" : "none";
+            });
+            /* ==========================
+               TOP HEADER
+            ========================== */
+            topSteps.forEach((step, i) => {
+                step.classList.remove("active", "completed");
+                const icon = step.querySelector("i");
+                if (i < index) {
+                    step.classList.add("completed");
+                    icon.className = "fa-solid fa-circle-check";
+                } else if (i === index) {
+                    step.classList.add("active");
+                    icon.className = stepIcons[i];
+                } else {
+                    icon.className = stepIcons[i];
+                }
+            });
+            /* ==========================
+               RIGHT PANEL
+            ========================== */
+            processBoxes.forEach((box, i) => {
+                box.classList.remove("active", "completed");
+                if (i < index) {
+                    box.classList.add("completed");
+                } else if (i === index) {
+                    box.classList.add("active");
+                }
+            });
+        }
+        /* Initial Step */
+        openStep(0);
+        /* ==========================================================
+           STEP NAVIGATION
+        ========================================================== */
+        document.getElementById("next1").onclick = () => openStep(1);
+        document.getElementById("back1").onclick = () => openStep(0);
+        document.getElementById("next2").onclick = () => openStep(2);
+        document.getElementById("back2").onclick = () => openStep(1);
+        document.getElementById("next3").onclick = () => openStep(3);
+        document.getElementById("back3").onclick = () => openStep(2);
+        document.getElementById("next4").onclick = () => openStep(4);
+        document.getElementById("back4").onclick = () => openStep(3);
+        document.getElementById("next5").onclick = () => openStep(5);
+        document.getElementById("back5").onclick = () => openStep(4);
+        document.getElementById("next6").onclick = () => openStep(6);
+        document.getElementById("back6").onclick = () => openStep(5);
+        document.getElementById("next7").onclick = () => openStep(7);
+        document.getElementById("back7").onclick = () => openStep(6);
+        document.getElementById("next8").onclick = () => openStep(8);
+        /* ==========================================================
+           OPTIONAL FINISH BUTTON
+        ========================================================== */
+        const finishBtn = document.getElementById("finishLoan");
+        if (finishBtn) {
+            finishBtn.onclick = function () {
+                alert("Loan approval process completed successfully.");
+            };
+        }
+    </script>
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        document.getElementById('toggleBtn').onclick = () => {
+            sidebar.classList.add('show');
+            overlay.classList.add('show');
+        };
+        document.getElementById('closeSidebar').onclick =
+            overlay.onclick = () => {
+                sidebar.classList.remove('show');
+                overlay.classList.remove('show');
+            };
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <!-- ROLES AND PERMISSION SCRIPT -->
+    <script>
+        const toggleBtn = document.getElementById("toggleRoleForm");
+        const panel = document.getElementById("rolePanel");
+        toggleBtn.onclick = () => {
+            panel.classList.toggle("show");
+        };
+        const nextBtn = document.querySelector(".next-btn");
+        const backBtn = document.getElementById("backBtn");
+        const step1 = document.getElementById("step1");
+        const step2 = document.getElementById("step2");
+        const steps = document.querySelectorAll(".step");
+        const process = document.querySelectorAll(".process-box");
+        nextBtn.onclick = () => {
+            step1.classList.remove("active");
+            step2.classList.add("active");
+            steps[0].classList.remove("active");
+            steps[1].classList.add("active");
+            process[0].classList.remove("active");
+            process[1].classList.add("active");
+        };
+        backBtn.onclick = () => {
+            step2.classList.remove("active");
+            step1.classList.add("active");
+            steps[1].classList.remove("active");
+            steps[0].classList.add("active");
+            process[1].classList.remove("active");
+            process[0].classList.add("active");
+        };
+        // data tables for roles
+    </script>
+    <script>
+        const profileToggle = document.getElementById("profileToggle");
+        const profileMenu = document.getElementById("profileMenu");
+        profileToggle.onclick = (e) => {
+            e.stopPropagation();
+            profileMenu.style.display =
+                profileMenu.style.display === "block" ? "none" : "block";
+        };
+        // close when clicking outside
+        document.addEventListener("click", (e) => {
+            if (!profileToggle.contains(e.target) && !profileMenu.contains(e.target)) {
+                profileMenu.style.display = "none";
+            }
+        });
+        profileToggle.onclick = (e) => {
+            e.stopPropagation();
+            profileMenu.style.display =
+                profileMenu.style.display === "block" ? "none" : "block";
+            profileToggle.classList.toggle("open");
+        };
+    </script>
+}

@@ -21,7 +21,7 @@
                 <input type="text" onkeyup="APortalModule._APortalMaster.InputBoxSearch(event,this,APortalBankBranch._APortalBankBranch)" id="BranchSearch" placeholder="Search branch settings..." />
                 <button type="button" class="search_close_btn btn hidden" onclick="APortalModule._APortalMaster.SearchBoxReset('BranchSearch',APortalBankBranch._APortalBankBranch)">X</button>
             </div>
-            <select id="statusFilter" class="sort-dropdown"
+            <select id="statusFilter" class="sort-dropdown select2"
                     onchange="APortalModule._APortalMaster.StatusChangeEvent(this,APortalBankBranch._APortalBankBranch)">
                 <option value="2" selected="selected">All</option>
                 <option value="1">Active</option>

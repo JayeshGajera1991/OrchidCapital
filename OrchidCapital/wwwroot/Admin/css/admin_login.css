@@ -1,11 +1,24 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
 
-:root{
-  --primary:#4f46e5;
-  --secondary:#2563eb;
-  --bg:#f4f7fb;
-  --text:#111827;
-  --muted:#6b7280;
+/* ================= ROOT ================= */
+:root {
+  --bg: #f4f7fb;
+  --card: #ffffff;
+  --sidebar: #ffffff;
+
+  --primary: #390077;
+  /* Indigo */
+  --secondary: #26014e;
+  /* Blue */
+
+  --accent-light: #EEEBFF;
+
+  --text-main: #5d4e6e;
+  --text-muted: #6b7280;
+
+  --border: #e5e7eb;
+
+  --radius: 14px;
 }
 
 body{

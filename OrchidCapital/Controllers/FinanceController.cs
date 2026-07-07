@@ -218,6 +218,7 @@ namespace OrchidCapital.Controllers
         }
 
         private async Task<UpdateLoanApplicationDocumentRequest> BindLoanApplicationDocument(int loanApplicationId)
+        
         {
             UpdateLoanApplicationDocumentRequest documentRequest = new UpdateLoanApplicationDocumentRequest();
             try
@@ -247,6 +248,7 @@ namespace OrchidCapital.Controllers
                                     new(){ DocumentType="PHOTO", DocumentName="Photograph"},
                                     new(){ DocumentType="ADDRESS", DocumentName="Address Proof"},
                                     new(){ DocumentType="SALARY", DocumentName="Salary Slip"},
+                                    new(){ DocumentType="INCOMETAX", DocumentName="Income Tax Return"},
                                     new(){ DocumentType="BANK", DocumentName="Bank Statement"},
                                     new(){ DocumentType="PROPERTY", DocumentName="Property Documents"}
                                 }
@@ -578,8 +580,23 @@ namespace OrchidCapital.Controllers
         }
         #endregion
 
-        #region Application Report
-        public async Task<IActionResult> ApplicationReport()
+        #region Loan Approval List
+        public async Task<IActionResult> LoanApprovalList()
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                await SaveErrorLog(ex, "FinanceController", "ApplicationReport");
+            }
+            return View();
+        }
+        #endregion
+
+        #region Loan Approval
+        public async Task<IActionResult> LoanApproval()
         {
             try
             {

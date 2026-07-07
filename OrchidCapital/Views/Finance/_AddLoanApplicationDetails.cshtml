@@ -1,15 +1,15 @@
 @model OrchidCapital.Models.UpdateLoanApplicationDetailsRequest
 <h3>Loan Application Details</h3>
 <span class="spnGetNewApplicationNumber">Loan No. : @ViewBag.GetNewApplicationNumber</span>
-<form id="nav_LoanApplication_form" action="@Url.Action("UpdateLoanApplicationDetails", "Finance")"
-        method="post">
+<form id="nav_LoanApplication_form" action="@Url.Action("UpdateLoanApplicationDetails", "Finance")" method="post">
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     <div class="guarantor-card-main">
         <div class="form-grid">
             <div class="form-group">
                 <label>Customer *</label>
-                @Html.DropDownListFor(m => m.CustomerId, ViewBag.CustomerList as SelectList, "-- Select customer --", new
+                @Html.DropDownListFor(m => m.CustomerId, ViewBag.CustomerList as SelectList, "-- Select customer --",
+                new
                 {
                     @class = "loan-select select2",
                     required = "required"
@@ -36,11 +36,12 @@
             </div>
             <div class="form-group">
                 <label>Application Date *</label>
-                @Html.TextBoxFor(m => m.ApplicationDate,"{0:yyyy-MM-dd}", new
+                @Html.TextBoxFor(m => m.ApplicationDate, "{0:yyyy-MM-dd}", new
                 {
                     @class = "form-control",
                     type = "date",
-                    required = "required", MaxLength = 10
+                    required = "required",
+                    MaxLength = 10
                 })
                 @Html.ValidationMessageFor(m => m.ApplicationDate, "", new { @class = "text-danger" })
             </div>
@@ -52,7 +53,8 @@
                 @Html.TextBoxFor(m => m.RequestedAmount, "{0:F2}", new
                 {
                     @placeholder = "0.00",
-                    @class = "txtspace txtdecimal", MaxLength = 20
+                    @class = "txtspace txtdecimal",
+                    MaxLength = 20
                 })
                 @Html.ValidationMessageFor(m => m.RequestedAmount, "", new { @class = "text-danger" })
             </div>
@@ -61,7 +63,8 @@
                 @Html.TextBoxFor(m => m.RequestedTenure, new
                 {
                     @placeholder = "24",
-                    @class = "txtspace txtnumeric", MaxLength = 10
+                    @class = "txtspace txtnumeric",
+                    MaxLength = 10
                 })
                 @Html.ValidationMessageFor(m => m.RequestedTenure, "", new { @class = "text-danger" })
             </div>
@@ -70,7 +73,8 @@
                 @Html.TextBoxFor(m => m.RequestedInterestRate, new
                 {
                     @placeholder = "12.00",
-                    @class = "txtspace txtdecimal", MaxLength = 10
+                    @class = "txtspace txtdecimal",
+                    MaxLength = 10
                 })
                 @Html.ValidationMessageFor(m => m.RequestedInterestRate, "", new
                 {
@@ -94,7 +98,8 @@
                 {
                     @placeholder = "Enter Loan Purpose",
                     @class = "txtspace",
-                    rows = "3", MaxLength = 1000
+                    rows = "3",
+                    MaxLength = 1000
                 })
                 @Html.ValidationMessageFor(m => m.LoanPurpose, "", new { @class = "text-danger" })
             </div>
@@ -104,7 +109,8 @@
                 {
                     @placeholder = "Enter Remarks",
                     @class = "txtspace",
-                    @rows = 3, MaxLength = 1000
+                    @rows = 3,
+                    MaxLength = 1000
                 })
                 @Html.ValidationMessageFor(m => m.Remarks, "", new { @class = "text-danger" })
             </div>
@@ -121,3 +127,12 @@
         </button>
     </div>
 </form>
+<script>
+    $(document).ready(function () {
+        $('.select2').select2({
+            placeholder: "-- Select --",
+            allowClear: true,
+            width: '100%'
+        });
+    });
+</script>

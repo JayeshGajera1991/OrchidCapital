@@ -14,6 +14,13 @@
     }
 
     _APortalTwoFactor.prototype.load = function () {
+        $(document).ready(function () {
+            $('.select2').select2({
+                placeholder: "-- Select --",
+                allowClear: true,
+                width: '100%'
+            });
+        });
         //APortalTwoFactor._APortalTwoFactor.List();
     }
 
@@ -44,7 +51,7 @@
     _APortalTwoFactor.prototype.closeModal = function () {
         $(`${_root} #TwoFactorModal`).removeClass('show');
         $("#modalBodyTwoFactor").empty();
-         $(`${_root} #UpdateUserProfilerModal`).removeClass('show');
+        $(`${_root} #UpdateUserProfilerModal`).removeClass('show');
         $("#modalBodyUserProfiler").empty();
     };
 
@@ -132,7 +139,7 @@
         formData.append('ImageFile', file);
         formData.append('ImageUrl', module.configs.loginUserImage);
         APortalModule._APortalAjaxResponse.PostFromAjaxJsonResponse(url, formData, function (response) {
-            if(response.isSuccess) {
+            if (response.isSuccess) {
                 APortalModule._APortalToaster._toastr(1, response.message);
                 $("#preview").attr("src", `~/ImageProfiler/${response.imageUrl}`);
                 $(`#img_ImageProfiler`).attr("src", `~/ImageProfiler/${response.imageUrl}`);
@@ -143,7 +150,7 @@
         });
     }
 
-     _APortalTwoFactor.prototype.OpenUpdateUserProfileModal = function (code) {
+    _APortalTwoFactor.prototype.OpenUpdateUserProfileModal = function (code) {
         let url = module.urls.get;
         let data = { Id: code, SPName: 'APortal_UserManage' };
         APortalModule._APortalAjaxResponse.GetAjaxHtmlResponse(url, data, function (response) {
@@ -194,7 +201,7 @@
         }
     }
 
-     _APortalTwoFactor.prototype.LoadCities = function (state, cityDropdownId) {
+    _APortalTwoFactor.prototype.LoadCities = function (state, cityDropdownId) {
         let url = module.urls.cities;
         let data = { state: state };
         APortalModule._APortalAjaxResponse.GetAjaxJsonResponse(url, data, function (response) {

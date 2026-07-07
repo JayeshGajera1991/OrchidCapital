@@ -15,6 +15,7 @@ namespace OrchidCapital.Models
         public bool IsView { get; set; }
         public string Section { get; set; } // Overview, Customer Management etc.
         public string IsSelected { get; set; }
+        public string IconName { get; set; }
     }
     public class GetToolsCountsListModel
     {

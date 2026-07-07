@@ -22,9 +22,16 @@
     }
 
     _APortalRolePermissions.prototype.load = function () {
+        $(document).ready(function () {
+            $('.select2').select2({
+                placeholder: "-- Select --",
+                allowClear: true,
+                width: '100%'
+            });
+        });
         var PageTotal = $(`${_root} #rolesTable tbody tr:first`).attr('data-total-records') || 0;
-            var PageIndex = PageTotal == 0 ? 0 : 1;
-            var PageSize = PageTotal > $(`${_root} #rolesTable tbody tr`).length ? $(`${_root} #rolesTable tbody tr`).length : PageTotal;
+        var PageIndex = PageTotal == 0 ? 0 : 1;
+        var PageSize = PageTotal > $(`${_root} #rolesTable tbody tr`).length ? $(`${_root} #rolesTable tbody tr`).length : PageTotal;
         document.getElementById("pagination").innerText =
             `Showing ${PageIndex} to ${PageSize} of ${PageTotal}`;
     }
@@ -189,7 +196,7 @@
     }
 
     _APortalRolePermissions.prototype.toggleMenu = function (btn) {
-         const menu = btn.nextElementSibling;
+        const menu = btn.nextElementSibling;
 
         // close other menus first
         document.querySelectorAll(".action-menu").forEach(m => {

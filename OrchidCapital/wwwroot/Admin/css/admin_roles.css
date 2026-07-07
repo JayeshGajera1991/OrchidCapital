@@ -17,14 +17,14 @@ body {
   --card: #ffffff;
   --sidebar: #ffffff;
 
-  --primary: #4f46e5;
+  --primary: #390077;
   /* Indigo */
-  --secondary: #2563eb;
+  --secondary: #26014e;
   /* Blue */
 
-  --accent-light: #eef2ff;
+  --accent-light: #EEEBFF;
 
-  --text-main: #111827;
+  --text-main: #5d4e6e;
   --text-muted: #6b7280;
 
   --border: #e5e7eb;
@@ -49,7 +49,7 @@ body {
 
 /* ================= MAIN ================= */
 .main {
-  margin-left: 250px;
+  margin-left: 0px;
   width: 100%;
 }
 
@@ -157,7 +157,7 @@ body {
 
 /* FOCUS EFFECT */
 .search-box:focus-within {
-  border-color: #2563eb;
+  border-color: #390077;
   background: #fff;
 }
 
@@ -333,10 +333,12 @@ body {
 .page-header h2 {
   font-size: 20px;
   font-weight: 600;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .page-header p {
+  position: relative;
   font-size: 13px;
   color: var(--text-muted);
 }
@@ -411,7 +413,7 @@ body {
 }
 
 /* ================= TABLE ================= */
-.table-card {
+/* .table-card {
   margin-top: 22px;
   background: #fff;
   border: 1px solid var(--border);
@@ -420,11 +422,10 @@ body {
 }
 
 .table-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 16px;
-  border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+    border-bottom: 1px solid var(--border);
 }
 
 .table-header h3 {
@@ -458,7 +459,7 @@ tbody tr {
 
 tbody tr:hover {
   background: #f9fafb;
-}
+} */
 
 /* STATUS BADGES */
 .status {
@@ -487,7 +488,7 @@ tbody tr:hover {
 .footer {
   position: fixed;
   bottom: 0;
-  left: 250px;
+  left: 0px;
   right: 0;
   height: 42px;
   /* reduced height */
@@ -651,6 +652,11 @@ tbody tr:hover {
   display: flex;
   justify-content: space-between;
   margin-top: 16px;
+  align-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: -5px;
 }
 
 /* ================= RIGHT PANEL ================= */

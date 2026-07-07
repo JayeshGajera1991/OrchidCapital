@@ -385,6 +385,7 @@ namespace OrchidCapital.Models
         public string IsSelected { get; set; }
         public string Controller { get; set; }
         public string ActionName { get; set; }
+        public string IconName {get; set;}
     }
     public class GetRolePermissionsRequest
     {

@@ -22,6 +22,13 @@
     }
 
     _APortalCustomers.prototype.load = function () {
+        $(document).ready(function () {
+            $('.select2').select2({
+                placeholder: "-- Select --",
+                allowClear: true,
+                width: '100%'
+            });
+        });
         APortalCustomers._APortalCustomers.List();
     }
 

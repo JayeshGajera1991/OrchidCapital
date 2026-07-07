@@ -6,8 +6,8 @@
     <div class="table-header">
         <div class="page-header">
             <div>
-                <h2>Application Report</h2>
-                <p>Manage application report information and settings</p>
+                <h2>Loan Approval Liat</h2>
+                <p>Manage loan approval list information and settings</p>
             </div>
         </div>
         <div class="customer-toolbar">
@@ -177,7 +177,7 @@
             export: '@Url.Action("ExportToExcelFile", "Finance")'
         };
     }
-    window.AFinanceApplicationReport = {
+    window.AFinanceDailyReport = {
         configs: {
             urlBase: '@Utility.GetAppSettings("BasePath")',
             loginUserName: '@User.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value',

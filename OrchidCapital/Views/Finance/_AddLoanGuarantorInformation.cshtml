@@ -35,7 +35,7 @@
     <div class="guarantor-card-main1" id="guarantorContainer">
         @for (int i = 0; i < Model.Guarantors.Count; i++)
         {
-            <div class="guarantor-card mb-3">
+            <div class=" mb-3">
                 @Html.HiddenFor(m => m.LoanApplicationId)
                 @Html.HiddenFor(m => m.Guarantors[i].GuarantorId)
 

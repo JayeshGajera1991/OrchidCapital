@@ -162,6 +162,7 @@ namespace OrchidCapital.Controllers
                                                 Id = x.Id,
                                                 PageName = x.PageName,
                                                 Icon = x.Icon,
+                                                IconName=x.IconName,
                                                 Controller = x.Controller,
                                                 Action = x.ActionName,
                                                 Section = x.MenuName,

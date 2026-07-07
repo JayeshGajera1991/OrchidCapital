@@ -24,6 +24,13 @@
             let _step = parseInt($("#hdnLoanStep").val());
             AFinanceNewLoan._AFinanceNewLoan.LoanProcessStepBack(_step, (_step - 1));
         }
+        $(document).ready(function () {
+            $('.select2').select2({
+                placeholder: "-- Select --",
+                allowClear: true,
+                width: '100%'
+            });
+        });
     }
 
     _AFinanceNewLoan.prototype.Create = function () {

@@ -6,14 +6,12 @@
 <div class="table-card">
     <div class="table-header">
         <div class="page-header">
-            <div>
-                <h2 id="h3_addLoadnApplicationHeader">Loan Application</h2>
-                <p>Manage Loan Application information</p>
-            </div>
+            <h2 id="h3_addLoadnApplicationHeader">Loan Application</h2>
+            <p>Manage Loan Application information</p>
         </div>
         <div class="customer-toolbar tooltip">
-            <button class="btn btn-orange" onclick="window.location.href='/Finance/LoanApplicationList';" data-title="View All"><i class="fa-solid fa-table-cells"></i><span
-                class="tooltip-text">View All</span>
+            <button class="btn btn-orange" onclick="window.location.href='/Finance/LoanApplicationList';"
+                    data-title="View All"><i class="fa-solid fa-table-cells"></i><span class="tooltip-text">View All</span>
             </button>
         </div>
     </div>
@@ -40,7 +38,8 @@
                 <div class="loan-step">
                     <i class="fa-solid fa-paper-plane"></i>
                     <p>Final Review</p>
-                    <input type="hidden" id="hdnLoanApplicationId" value="@(ViewBag.LoanApplicationId == null ? 0 : ViewBag.LoanApplicationId)" />
+                    <input type="hidden" id="hdnLoanApplicationId"
+                           value="@(ViewBag.LoanApplicationId == null ? 0 : ViewBag.LoanApplicationId)" />
                     <input type="hidden" id="hdnLoanStep" value="@(ViewBag.LoanStep == null ? 0 : ViewBag.LoanStep)" />
                 </div>
             </div>
@@ -128,45 +127,4 @@
 </script>
 @section Scripts {
     <script src="~/Admin/js/FinanceNewLoanApplication.js" asp-append-version="true"></script>
-    <script>
-
-       
-
-        
-        @* openStep(0);
-
-        document.getElementById("next1").onclick = () => openStep(1); *@
-
-        @* document.getElementById("back1").onclick = () => openStep(0);
-        document.getElementById("next2").onclick = () => openStep(2);
-
-        document.getElementById("back2").onclick = () => openStep(1); *@
-
-        @* let guarantorCount = 1;
-
-        document.getElementById("addGuarantor").onclick = function () {
-        guarantorCount++;
-        const card = document.querySelector(".guarantor-card");
-        const clone = card.cloneNode(true);
-        clone.querySelector("h4").innerHTML = "Guarantor " + guarantorCount;
-        clone.querySelectorAll("input").forEach(i => i.value = "");
-        clone.querySelectorAll("textarea").forEach(i => i.value = "");
-        document.getElementById("guarantorContainer").appendChild(clone);
-        }; *@
-
-
-        @* document.getElementById("next3").onclick = () => openStep(3);
-        document.getElementById("back3").onclick = () => openStep(2); *@
-
-        @* document.getElementById("submitApplication").onclick = function () {
-
-        if (!document.getElementById("declaration").checked) {
-        alert("Please accept the declaration.");
-        return;
-        }
-
-        alert("Loan Application Submitted Successfully.");
-
-        }; *@
-    </script>
 }

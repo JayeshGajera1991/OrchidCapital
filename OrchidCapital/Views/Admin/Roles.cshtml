@@ -21,7 +21,7 @@
                 <input type="text" onkeyup="APortalModule._APortalMaster.InputBoxSearch(event,this,APortalRoles._APortalRoles)" id="rolesSearch" placeholder="Search role..." />
                 <button type="button" class="search_close_btn btn hidden" onclick="APortalModule._APortalMaster.SearchBoxReset('rolesSearch',APortalRoles._APortalRoles)">X</button>
             </div>
-            <select id="statusFilter" class="sort-dropdown"
+            <select id="statusFilter" class="sort-dropdown select2"
                     onchange="APortalModule._APortalMaster.StatusChangeEvent(this,APortalRoles._APortalRoles)">
                 <option value="2" selected="selected">All</option>
                 <option value="1">Active</option>
