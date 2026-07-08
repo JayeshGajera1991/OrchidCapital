@@ -116,14 +116,14 @@
             </div>
         </div>
     </div>
-    <div class="step-actions">
-        <button class="btn btn-red" type="button"
+    <div class="step-actions customer-toolbar tooltip">
+        <button class="btn btn-red" type="button" data-title="Cancel"
                 onclick="APortalModule._APortalMaster.FormDataClear(AFinanceNewLoan._AFinanceNewLoan);">
-            <i class="fa-solid fa-refresh"></i>
+            <i class="fa-solid fa-refresh"></i><span class="tooltip-text">Cancel</span>
         </button>
-        <button class="btn btn-blue" id="saveCustomer" type="submit"
+        <button class="btn btn-blue" id="saveCustomer" type="submit" data-title="Save & Next"
                 onclick="AFinanceNewLoan._AFinanceNewLoan.SubmitFormData(event, $('#nav_LoanApplication_form'));">
-            <i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right"></i><span class="tooltip-text">Save & Next</span>
         </button>
     </div>
 </form>

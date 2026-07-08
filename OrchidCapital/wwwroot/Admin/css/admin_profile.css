@@ -5,7 +5,8 @@
   font-family: 'Inter', sans-serif;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -67,18 +68,6 @@ body {
 }
 
 /* ================= HEADER ================= */
-.header {
-  height: 64px;
-  background: #ffffff;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 22px;
-  position: sticky;
-  top: 0;
-  z-index: 900;
-}
 
 .hamburger {
   font-size: 20px;
@@ -115,9 +104,11 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 18px;
-  position: sticky;
+  position: absolute;
   top: 0;
   z-index: 900;
+  left: 89px;
+  width: 95%;
 }
 
 /* LEFT SIDE */
@@ -182,7 +173,7 @@ body {
 
 .header-icon i {
   font-size: 14px;
-  color: #374151;
+  color: #390077;
 }
 
 /* HOVER */
@@ -279,7 +270,7 @@ body {
 
 .card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 }
 
 .card h3 {
@@ -298,7 +289,7 @@ body {
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
@@ -394,17 +385,36 @@ body {
   font-size: 12px;
 }
 
-.positive { color: #16a34a; }
-.negative { color: #dc2626; }
-.neutral { color: #6b7280; }
+.positive {
+  color: #16a34a;
+}
+
+.negative {
+  color: #dc2626;
+}
+
+.neutral {
+  color: #6b7280;
+}
 
 /* ================= TABLE ================= */
-.table-card {
+/* .table-card {
   margin-top: 22px;
   background: #fff;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
+} */
+
+.table-card {
+  margin-top: 85px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  left: 99px;
+  position: absolute;
+  width: 94%;
 }
 
 .table-header {
@@ -428,7 +438,8 @@ thead {
   background: #f9fafb;
 }
 
-th, td {
+th,
+td {
   padding: 12px 16px;
   text-align: left;
   font-size: 13px;
@@ -471,7 +482,7 @@ tbody tr:hover {
 }
 
 /* PROFILE DROPDOWN */
-.profile-wrapper {
+/* .profile-wrapper {
   position: relative;
 }
 
@@ -509,7 +520,6 @@ tbody tr:hover {
   background: #f3f4f6;
 }
 
-/* divider */
 .profile-menu .divider {
   height: 1px;
   background: var(--border);
@@ -521,12 +531,14 @@ tbody tr:hover {
 
 .profile.open i {
   transform: rotate(180deg);
-}/* PROFILE PAGE */
+} */
+
+/* PROFILE PAGE */
 .profile-page {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
-  padding: 24px;
+  padding: 0px;
 }
 
 /* CARD */
@@ -536,7 +548,7 @@ tbody tr:hover {
   border-radius: 16px;
   padding: 22px;
   border: 1px solid var(--border);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
 }
 
 /* HEADER */
@@ -615,13 +627,14 @@ tbody tr:hover {
 .delete-btn i {
   color: var(--danger);
 }
+
 .modal12 {
   width: 1340px;
   max-width: 100%;
   border-radius: 16px;
   padding: 20px;
   background: #fff;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 /* INFO GROUP */
@@ -750,11 +763,11 @@ tbody tr:hover {
   transition: 0.3s;
 }
 
-.switch input:checked + .slider {
+.switch input:checked+.slider {
   background: var(--primary);
 }
 
-.switch input:checked + .slider::before {
+.switch input:checked+.slider::before {
   transform: translateX(18px);
 }
 
@@ -769,12 +782,12 @@ tbody tr:hover {
 /* rights table  */
 /* RIGHTS CARD */
 .rights-card {
-  margin: 0 24px 24px;
+  margin: 15px 0px 0px;
   background: #fff;
   border-radius: 16px;
-  padding: 22px;
+  padding: 17px;
   border: 1px solid var(--border);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
 }
 
 /* HEADER */
@@ -796,6 +809,8 @@ tbody tr:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
+  height: calc(100vh - 621px);
+  overflow: auto;
 }
 
 /* ITEM */
@@ -857,9 +872,10 @@ tbody tr:hover {
 .footer {
   position: fixed;
   bottom: 0;
-  left: 250px;
+  left: 0px;
   right: 0;
-  height: 42px; /* reduced height */
+  height: 42px;
+  /* reduced height */
 
   display: flex;
   align-items: center;
@@ -885,46 +901,48 @@ tbody tr:hover {
   font-weight: 600;
   color: var(--primary);
 }
+
 .profile-upload {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    display: inline-block;
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: inline-block;
 }
 
 .profile-upload img {
-   width: 65px;
-    height: 65px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #ddd;
-    top: 28px;
-    position: absolute;
-    left: -3px;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  top: 28px;
+  position: absolute;
+  left: -3px;
 }
 
 .upload-icon {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.45);
-    color: #fff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 28px;
-    cursor: pointer;
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  cursor: pointer;
 
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    width: 60px;
-    height: 60px;
-    top: 30px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: 60px;
+  height: 60px;
+  top: 30px;
 }
 
 .profile-upload:hover .upload-icon {
-    opacity: 1;
+  opacity: 1;
 }
+
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
   .footer {
@@ -964,4 +982,26 @@ tbody tr:hover {
   .close-sidebar {
     display: block;
   }
+}
+
+.rights-grid {
+    overflow-y: auto;
+    scrollbar-width: thin;              /* Firefox */
+    scrollbar-color: #390077 transparent;
+}
+
+/* Chrome, Edge, Safari */
+.rights-grid::-webkit-scrollbar {
+    width: 10px;
+}
+
+.rights-grid::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+.rights-grid::-webkit-scrollbar-thumb {
+    background: #390077;
+    border-radius: 10px;
+    transition: background 0.25s ease;
 }

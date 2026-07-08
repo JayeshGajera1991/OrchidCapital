@@ -91,14 +91,14 @@
             </div>
         </div>
     </div>
-    <div class="step-actions">
-        <button class="btn btn-blue" type="button" id="back1"
+    <div class="step-actions customer-toolbar tooltip">
+        <button class="btn btn-blue" type="button" id="back1" data-title="Back"
                 onclick="AFinanceNewLoan._AFinanceNewLoan.LoanProcessStepBack(1,0)">
-            <i class="fa-solid fa-arrow-left"></i>
+            <i class="fa-solid fa-arrow-left"></i><span class="tooltip-text">Back</span>
         </button>
-        <button class="btn btn-blue" id="next2" type="submit"
+        <button class="btn btn-blue" id="next2" type="submit" data-title="Save & Next"
                 onclick="AFinanceNewLoan._AFinanceNewLoan.SubmitLoanApplicationDocumentFormData(event,$('#nav_LoanApplicationDocument_form'));">
-            <i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right"></i><span class="tooltip-text">Save & Next</span>
         </button>
     </div>
 </form>

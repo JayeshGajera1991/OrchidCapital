@@ -4,108 +4,109 @@
 }
 @model OrchidCapital.Models.GetUserDetailsResponseModel
 <link rel="stylesheet" href="~/Admin/css/admin_profile.css" asp-append-version="true" />
-<div class="profile-page">
-  <!-- LEFT: PROFILE INFO -->
-  <div class="profile-card">
-    <div class="profile-header">
-      <div class="profile-avatar">
-        <div class="profile-upload">
-          @if (!string.IsNullOrEmpty(imagePath))
-          {
-            <img id="img_ImageProfiler" src="~/ImageProfiler/@imagePath" width="100" height="100"
-                 style="border-radius:50%;" />
-          }
-          else
-          {
-            <img id="img_ImageProfiler" src="~/ImageProfiler/default.jfif" width="100" height="100"
-                 style="border-radius:50%;" />
-          }
-          <label for="profileImage" class="upload-icon">
-            <i class="fa fa-camera"></i>
-          </label>
-          <input type="file" id="profileImage" onchange="APortalTwoFactor._APortalTwoFactor.UpdateProfileImage(this);"
-                 hidden accept="image/*">
+<div class="table-card">
+  <div class="profile-page">
+    <!-- LEFT: PROFILE INFO -->
+    <div class="profile-card">
+      <div class="profile-header">
+        <div class="profile-avatar">
+          <div class="profile-upload">
+            @if (!string.IsNullOrEmpty(imagePath))
+            {
+              <img id="img_ImageProfiler" src="~/ImageProfiler/@imagePath" width="100" height="100"
+                   style="border-radius:50%;" />
+            }
+            else
+            {
+              <img id="img_ImageProfiler" src="~/ImageProfiler/default.jfif" width="100" height="100"
+                   style="border-radius:50%;" />
+            }
+            <label for="profileImage" class="upload-icon">
+              <i class="fa fa-camera"></i>
+            </label>
+            <input type="file" id="profileImage" onchange="APortalTwoFactor._APortalTwoFactor.UpdateProfileImage(this);"
+                   hidden accept="image/*">
+          </div>
         </div>
-      </div>
-      <div class="profile-details">
-        <h2>@Model.SingleResult.UserName</h2>
-        <p><i class="fa-solid fa-envelope"></i> @Model.SingleResult.EmailId</p>
-      </div>
-      @if (!string.IsNullOrEmpty(imagePath))
-      {
+        <div class="profile-details">
+          <h2>@Model.SingleResult.UserName</h2>
+          <p><i class="fa-solid fa-envelope"></i> @Model.SingleResult.EmailId</p>
+        </div>
+        @if (!string.IsNullOrEmpty(imagePath))
+        {
+          <div class="tooltip" style="
+            position: absolute;
+            right: 78px;
+            top: 1px;
+            ">
+            <button class="btn btn-red" title="Delete Profiler Image"
+                    onclick="APortalTwoFactor._APortalTwoFactor.DeleteUserProfileImage(@Model.SingleResult.UserName);">
+              <i class="fa-solid fa-trash"></i>
+              <span class="tooltip-text">Delete Profiler Image</span>
+            </button>
+          </div>
+        }
         <div class="tooltip" style="
           position: absolute;
-          right: 78px;
+          right: 0px;
           top: 1px;
           ">
-          <button class="btn btn-red" title="Delete Profiler Image"
-                  onclick="APortalTwoFactor._APortalTwoFactor.DeleteUserProfileImage(@Model.SingleResult.UserName);">
-            <i class="fa-solid fa-trash"></i>
-            <span class="tooltip-text">Delete Profiler Image</span>
+          <button class="btn btn-blue" title="Edit Profile"
+                  onclick="APortalTwoFactor._APortalTwoFactor.OpenUpdateUserProfileModal(@Model.SingleResult.Id);">
+            <i class="fa-solid fa-pen"></i>
+            <span class="tooltip-text">Edit User details</span>
           </button>
         </div>
-      }
-      <div class="tooltip" style="
-        position: absolute;
-        right: 0px;
-        top: 1px;
-        ">
-        <button class="btn btn-blue" title="Edit Profile"
-                onclick="APortalTwoFactor._APortalTwoFactor.OpenUpdateUserProfileModal(@Model.SingleResult.Id);">
-          <i class="fa-solid fa-pen"></i>
-          <span class="tooltip-text">Edit User details</span>
-        </button>
       </div>
-    </div>
-    <div class="profile-body">
-      <div class="info-group">
-        <i class="fa-solid fa-user"></i>
-        <div>
-          <label>Full Name :</label>
-          <span>@Model.SingleResult.FirstName @Model.SingleResult.LastName</span>
+      <div class="profile-body">
+        <div class="info-group">
+          <i class="fa-solid fa-user"></i>
+          <div>
+            <label>Full Name :</label>
+            <span>@Model.SingleResult.FirstName @Model.SingleResult.LastName</span>
+          </div>
         </div>
-      </div>
-      <div class="info-group">
-        <i class="fa-solid fa-envelope"></i>
-        <div>
-          <label>Email Address :</label>
-          <span>@Model.SingleResult.EmailId</span>
+        <div class="info-group">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <label>Email Address :</label>
+            <span>@Model.SingleResult.EmailId</span>
+          </div>
         </div>
-      </div>
-      <div class="info-group">
-        <i class="fa-solid fa-phone"></i>
-        <div>
-          <label>Phone Number :</label>
-          <span>@Model.SingleResult.MobileNo</span>
+        <div class="info-group">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <label>Phone Number :</label>
+            <span>@Model.SingleResult.MobileNo</span>
+          </div>
         </div>
-      </div>
-      <div class="info-group">
-        <i class="fa-solid fa-user-shield"></i>
-        <div>
-          <label>Role :</label>
-          <span>@Model.SingleResult.RoleName</span>
+        <div class="info-group">
+          <i class="fa-solid fa-user-shield"></i>
+          <div>
+            <label>Role :</label>
+            <span>@Model.SingleResult.RoleName</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- RIGHT: SECURITY -->
-  <div class="security-card">
-    <div class="security-header">
-      <h3><i class="fa-solid fa-shield-halved"></i> Security Settings</h3>
-      <p>Protect your account with advanced security options</p>
-    </div>
-    <div class="security-box">
-      <div class="security-info">
-        <h4><i class="fa-solid fa-mobile-screen-button"></i> Authenticator App</h4>
-        <p>Use Google Authenticator or similar apps</p>
+    <!-- RIGHT: SECURITY -->
+    <div class="security-card">
+      <div class="security-header">
+        <h3><i class="fa-solid fa-shield-halved"></i> Security Settings</h3>
+        <p>Protect your account with advanced security options</p>
       </div>
-      <label class="switch">
-        <input type="checkbox" onchange="APortalTwoFactor._APortalTwoFactor.EnableTwoFactor(this);"
-        @(Model.SingleResult.IsTwoFactor ? "checked" : "")>
-        <span class="slider"></span>
-      </label>
-    </div>
-    @* <div class="security-box">
+      <div class="security-box">
+        <div class="security-info">
+          <h4><i class="fa-solid fa-mobile-screen-button"></i> Authenticator App</h4>
+          <p>Use Google Authenticator or similar apps</p>
+        </div>
+        <label class="switch">
+          <input type="checkbox" onchange="APortalTwoFactor._APortalTwoFactor.EnableTwoFactor(this);"
+          @(Model.SingleResult.IsTwoFactor ? "checked" : "")>
+          <span class="slider"></span>
+        </label>
+      </div>
+      @* <div class="security-box">
       <div class="security-info">
         <h4><i class="fa-solid fa-comment-sms"></i> SMS Verification</h4>
         <p>Receive OTP on your mobile number</p>
@@ -115,76 +116,77 @@
         <span class="slider"></span>
       </label>
     </div> *@
-    <div class="security-box danger">
-      <div class="security-info">
-        <h4><i class="fa-solid fa-key"></i> Change Password</h4>
-        <p>Update your account password regularly</p>
-      </div>
-      <div class="tooltip">
-        <button class="btn btn-blue" onclick="window.location.href='@Url.Action("ChangePassword", "Admin")'">
-          <i class="fa-solid fa-key"></i>
-          <span class="tooltip-text">Change Password</span>
-        </button>
+      <div class="security-box danger">
+        <div class="security-info">
+          <h4><i class="fa-solid fa-key"></i> Change Password</h4>
+          <p>Update your account password regularly</p>
+        </div>
+        <div class="tooltip">
+          <button class="btn btn-blue" onclick="window.location.href='@Url.Action("ChangePassword", "Admin")'">
+            <i class="fa-solid fa-key"></i>
+            <span class="tooltip-text">Change Password</span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<div class="rights-card">
-  <div class="rights-header">
-    <h3><i class="fa-solid fa-file-lines"></i> Page Access Rights</h3>
-    <p>Control which pages this user can access</p>
-  </div>
-  <div class="rights-grid">
-    @{
-      if (Model.PageRights.Count() == 0)
-      {
-        <div class="right-item">
-          <span>Pages aren’t set up yet. Please add them to continue.</span>
-        </div>
-      }
-      else
-      {
-        foreach (GetUserPageRightsList item in Model.PageRights)
+  <div class="rights-card">
+    <div class="rights-header">
+      <h3><i class="fa-solid fa-file-lines"></i> Page Access Rights</h3>
+      <p>Control which pages this user can access</p>
+    </div>
+    <div class="rights-grid">
+      @{
+        if (Model.PageRights.Count() == 0)
         {
           <div class="right-item">
-            <i class="@item.Icon"></i>
-            <span>@item.PageName</span>
-            @if (item.IsSelected == "checked")
-            {
-              <i class="fa-solid fa-check"></i>
-            }
-            else
-            {
-              <i class="fa-solid fa-xmark"></i>
-            }
+            <span>Pages aren’t set up yet. Please add them to continue.</span>
           </div>
         }
+        else
+        {
+          foreach (GetUserPageRightsList item in Model.PageRights)
+          {
+            <div class="right-item">
+              <i class="@item.Icon"></i>
+              <span>@item.PageName</span>
+              @if (item.IsSelected == "checked")
+              {
+                <i class="fa-solid fa-check"></i>
+              }
+              else
+              {
+                <i class="fa-solid fa-xmark"></i>
+              }
+            </div>
+          }
+        }
       }
-    }
-  </div>
-  <div class="modal" id="TwoFactorModal">
-    <div class="modal-content">
-      <div class="modal-header tooltip">
-        <h3>Two-Factor Authentication</h3>
-        <button class="btn btn-red dangermodal" onclick="APortalTwoFactor._APortalTwoFactor.closeModal();">
-          <i class="fa-solid fa-xmark"></i>
-          <span class="tooltip-text">Close</span>
-        </button>
-      </div>
-      <div class="modal-body" id="modalBodyTwoFactor">
+    </div>
+    <div class="modal" id="TwoFactorModal">
+      <div class="modal-content">
+        <div class="modal-header tooltip">
+          <h3>Two-Factor Authentication</h3>
+          <button class="btn btn-red dangermodal" onclick="window.location.reload();">
+            <i class="fa-solid fa-xmark"></i>
+            <span class="tooltip-text">Close</span>
+          </button>
+        </div>
+        <div class="modal-body" id="modalBodyTwoFactor">
+        </div>
       </div>
     </div>
-  </div>
-  <div class="modal" id="UpdateUserProfilerModal">
-    <div class="modal-content modal12">
-      <div class="modal-header tooltip">
-        <h3>Update User Profile</h3>
-        <button class="btn btn-red dangermodal" onclick="APortalTwoFactor._APortalTwoFactor.closeModal();">
-          <i class="fa-solid fa-xmark"></i>
-          <span class="tooltip-text">Close</span>
-        </button>
-      </div>
-      <div class="modal-body" id="modalBodyUserProfiler">
+    <div class="modal" id="UpdateUserProfilerModal">
+      <div class="modal-content modal12">
+        <div class="modal-header tooltip">
+          <h3>Update User Profile</h3>
+          <button class="btn btn-red dangermodal" onclick="APortalTwoFactor._APortalTwoFactor.closeModal();">
+            <i class="fa-solid fa-xmark"></i>
+            <span class="tooltip-text">Close</span>
+          </button>
+        </div>
+        <div class="modal-body" id="modalBodyUserProfiler">
+        </div>
       </div>
     </div>
   </div>
@@ -212,7 +214,7 @@
     },
     urls: _loadUrls()
   };
-  const profileToggle = document.getElementById("profileToggle");
+  @* const profileToggle = document.getElementById("profileToggle");
   const profileMenu = document.getElementById("profileMenu");
 
   profileToggle.onclick = (e) => {
@@ -248,11 +250,10 @@
     overlay.onclick = () => {
       sidebar.classList.remove('show');
       overlay.classList.remove('show');
-    };
+    }; *@
 </script>
 @section Scripts {
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-  @* <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> *@
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script src="~/Admin/js/TwoFactor.js" asp-append-version="true"></script>
 }

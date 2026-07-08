@@ -184,7 +184,7 @@ body {
 
 .header-icon i {
   font-size: 14px;
-  color: #374151;
+  color: #390077;
 }
 
 /* HOVER */
@@ -946,7 +946,7 @@ tbody tr:hover {
 }
 
 /* PROFILE DROPDOWN */
-.profile-wrapper {
+/* .profile-wrapper {
   position: relative;
 }
 
@@ -984,7 +984,6 @@ tbody tr:hover {
   background: #f3f4f6;
 }
 
-/* divider */
 .profile-menu .divider {
   height: 1px;
   background: var(--border);
@@ -997,7 +996,7 @@ tbody tr:hover {
 
 .profile.open i {
   transform: rotate(180deg);
-}
+} */
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {

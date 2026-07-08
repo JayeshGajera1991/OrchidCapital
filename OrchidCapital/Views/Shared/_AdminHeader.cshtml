@@ -4,27 +4,143 @@
 <header class="header">
     <!-- LEFT -->
     <div class="header-left">
-        <i class="fa-solid fa-bars hamburger" id="toggleBtn"></i>
-        <div class="search-box">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input type="text" placeholder="Search customers, loans, transactions..." />
+        <div class="live-clock">
+            <i class="fa-regular fa-clock"></i>
+            <span id="liveClock"></span>
         </div>
     </div>
     <!-- RIGHT -->
     <div class="header-right">
-        <div class="header-icon">
-            <i class="fa-regular fa-bell"></i>
-            <span class="badge">3</span>
+        <div class="header-actions">
+
+            <div class="header-icon dropdown-trigger" id="notificationBtn">
+                <i class="fa-regular fa-bell"></i>
+                <span class="badge">3</span>
+
+                <div class="header-dropdown notification-dropdown" id="notificationPanel">
+                    <div class="dropdown-header">
+                        <div>
+                            <h4>Notifications</h4>
+                            <span>You have 3 new notifications</span>
+                        </div>
+                        <button class="mark-read-btn">Mark all read</button>
+                    </div>
+
+                    <div class="notification-list">
+                        <a href="#" class="notification-item unread">
+                            <div class="notify-icon purple-icon">
+                                <i class="fa-solid fa-file-circle-check"></i>
+                            </div>
+                            <div class="notify-content">
+                                <h5>New loan application</h5>
+                                <p>Rahul Patel submitted a home loan application.</p>
+                                <span>5 minutes ago</span>
+                            </div>
+                            <span class="unread-dot"></span>
+                        </a>
+
+                        <a href="#" class="notification-item unread">
+                            <div class="notify-icon red-icon">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </div>
+                            <div class="notify-content">
+                                <h5>EMI payment overdue</h5>
+                                <p>3 customer EMI payments are overdue today.</p>
+                                <span>25 minutes ago</span>
+                            </div>
+                            <span class="unread-dot"></span>
+                        </a>
+
+                        <a href="#" class="notification-item unread">
+                            <div class="notify-icon green-icon">
+                                <i class="fa-solid fa-money-bill-wave"></i>
+                            </div>
+                            <div class="notify-content">
+                                <h5>Payment received</h5>
+                                <p>₹24,500 EMI received from Amit Mehta.</p>
+                                <span>1 hour ago</span>
+                            </div>
+                            <span class="unread-dot"></span>
+                        </a>
+
+                        <a href="#" class="notification-item">
+                            <div class="notify-icon orange-icon">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <div class="notify-content">
+                                <h5>Monthly report ready</h5>
+                                <p>June 2026 financial report is now available.</p>
+                                <span>Yesterday</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <a href="#" class="view-all-link">
+                        View all notifications
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="header-icon dropdown-trigger" id="messageBtn">
+                <i class="fa-regular fa-envelope"></i>
+                <span class="badge message-badge">2</span>
+
+                <div class="header-dropdown message-dropdown" id="messagePanel">
+                    <div class="dropdown-header">
+                        <div>
+                            <h4>Messages</h4>
+                            <span>2 unread messages</span>
+                        </div>
+                        <button class="mark-read-btn">View inbox</button>
+                    </div>
+
+                    <div class="notification-list">
+                        <a href="#" class="notification-item unread">
+                            <div class="message-avatar">RP</div>
+                            <div class="notify-content">
+                                <h5>Rahul Patel</h5>
+                                <p>Please check my home loan application status.</p>
+                                <span>10 minutes ago</span>
+                            </div>
+                            <span class="unread-dot"></span>
+                        </a>
+
+                        <a href="#" class="notification-item unread">
+                            <div class="message-avatar avatar-green">AM</div>
+                            <div class="notify-content">
+                                <h5>Amit Mehta</h5>
+                                <p>I have completed this month's EMI payment.</p>
+                                <span>45 minutes ago</span>
+                            </div>
+                            <span class="unread-dot"></span>
+                        </a>
+
+                        <a href="#" class="notification-item">
+                            <div class="message-avatar avatar-orange">PS</div>
+                            <div class="notify-content">
+                                <h5>Priya Shah</h5>
+                                <p>Please share the business loan repayment schedule.</p>
+                                <span>Yesterday</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <a href="#" class="view-all-link">
+                        Open message center
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
         </div>
-        <div class="header-icon">
-            <i class="fa-regular fa-envelope"></i>
-        </div>
-        <div class="profile-wrapper">
+        @* <div class="profile-wrapper">
             <div class="profile" id="profileToggle">
                 <div class="avatar">
                     @if (!string.IsNullOrEmpty(imagePath))
                     {
-                        <img id="preview" src="~/ImageProfiler/@imagePath" width="35" height="35" style="border-radius:50%;" />
+                        <img id="preview" src="~/ImageProfiler/@imagePath" width="35" height="35"
+                             style="border-radius:50%;" />
                     }
                     else
                     {
@@ -48,6 +164,134 @@
                     <i class="fa-solid fa-right-from-bracket"></i> Logout
                 </a>
             </div>
+        </div> *@
+        <div class="profile-wrapper">
+            <button type="button" class="profile" id="profileToggle">
+                <div class="avatar">
+                    @if (!string.IsNullOrEmpty(imagePath))
+                    {
+                        <img id="preview" src="~/ImageProfiler/@imagePath" width="35" height="35"
+                             style="border-radius:50%;" />
+                    }
+                    else
+                    {
+                        <img id="preview" src="~/ImageProfiler/default.jfif" width="35" height="35"
+                             style="border-radius:50%;" />
+                    }
+                </div>
+
+                <div class="profile-info">
+                    <span class="name">@User.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value</span>
+                    <span class="role">@User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value</span>
+                </div>
+
+                <i class="fa-solid fa-chevron-down profile-arrow"></i>
+            </button>
+
+            <div class="profile-menu" id="profileMenu">
+                <div class="profile-menu-header">
+                    <div class="menu-avatar">
+                        @if (!string.IsNullOrEmpty(imagePath))
+                        {
+                            <img id="preview" src="~/ImageProfiler/@imagePath" width="35" height="35"
+                                 style="border-radius:50%;" />
+                        }
+                        else
+                        {
+                            <img id="preview" src="~/ImageProfiler/default.jfif" width="35" height="35"
+                                 style="border-radius:50%;" />
+                        }
+                    </div>
+                    <div>
+                        <h5 class="name">@User.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value</h5>
+                        <span class="role">@User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value</span>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <a href="@Url.Action("Profile", "Admin")">
+                    <i class="fa-solid fa-user"></i>
+                    <span>My Profile</span>
+                    <i class="fa-solid fa-chevron-right link-arrow"></i>
+                </a>
+
+                <a href="@Url.Action("Logout", "Login")" class="logout-link">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                    <i class="fa-solid fa-chevron-right link-arrow"></i>
+                </a>
+            </div>
         </div>
     </div>
 </header>
+
+<script>
+    function updateLiveClock() {
+        const now = new Date();
+
+        const date = now.toLocaleDateString("en-GB", {
+            day: "2-digit",
+            month: "long",
+            year: "numeric"
+        });
+
+        const time = now.toLocaleTimeString("en-IN", {
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: true
+        });
+
+        document.getElementById("liveClock").innerHTML = date + " | " + time;
+    }
+
+    updateLiveClock();
+    setInterval(updateLiveClock, 1000);
+</script>
+<script>
+    const notificationBtn = document.getElementById("notificationBtn");
+    const messageBtn = document.getElementById("messageBtn");
+    const notificationPanel = document.getElementById("notificationPanel");
+    const messagePanel = document.getElementById("messagePanel");
+
+    notificationBtn.addEventListener("click", function (event) {
+        event.stopPropagation();
+        notificationPanel.classList.toggle("show");
+        messagePanel.classList.remove("show");
+    });
+
+    messageBtn.addEventListener("click", function (event) {
+        event.stopPropagation();
+        messagePanel.classList.toggle("show");
+        notificationPanel.classList.remove("show");
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!notificationBtn.contains(event.target)) {
+            notificationPanel.classList.remove("show");
+        }
+
+        if (!messageBtn.contains(event.target)) {
+            messagePanel.classList.remove("show");
+        }
+    });
+</script>
+<script>
+    const profileToggle = document.getElementById("profileToggle");
+    const profileMenu = document.getElementById("profileMenu");
+
+    profileToggle.addEventListener("click", function (event) {
+        event.stopPropagation();
+
+        profileMenu.classList.toggle("show");
+        profileToggle.classList.toggle("active");
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!profileToggle.contains(event.target) && !profileMenu.contains(event.target)) {
+            profileMenu.classList.remove("show");
+            profileToggle.classList.remove("active");
+        }
+    });
+</script>
