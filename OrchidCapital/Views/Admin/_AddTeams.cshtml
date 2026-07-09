@@ -1,6 +1,6 @@
 @model OrchidCapital.Models.UpdateTeamDetailsRequest
 <h3 id="h3_addTeamHeader">Add New Team</h3>
-<button type="button" class="btn btn-red close-btn" onclick="APortalModule._APortalCommon.CloseToggle('Teams-Master-Panel','nav_teams_form');">
+<button type="button" class="btn btn-danger close-btn" onclick="APortalModule._APortalCommon.CloseToggle('Teams-Master-Panel','nav_teams_form');">
     <i class="fa-solid fa-xmark"></i>
 </button>
 <form id="nav_teams_form" action="@Url.Action("UpdateTeams", "Admin")" method="post">
@@ -45,19 +45,19 @@
     <div class="action-buttons">
         @if (Model.Id == 0)
         {
-            <button class="btn btn-red" id="ClearPage" type="button"
+            <button class="btn btn-danger" id="ClearPage" type="button"
                     onclick="APortalModule._APortalMaster.FormDataClear(APortalTeams._APortalTeams);">
                 <i class="fa-solid fa-refresh"></i>
             </button>
         }
         else
         {
-            <button class="btn btn-red" id="resetPage" type="button"
+            <button class="btn btn-danger" id="resetPage" type="button"
                     onclick="APortalModule._APortalMaster.FormDataReset('tblTeamsList','@Model.Id');">
                 <i class="fa-solid fa-refresh"></i>
             </button>
         }
-        <button class="btn btn-green" id="saveCustomer" type="submit"
+        <button class="btn btn-success" id="saveCustomer" type="submit"
                 onclick="APortalTeams._APortalTeams.SubmitFormData(event, $('#nav_teams_form'));">
             <i class="fa-solid fa-floppy-disk"></i>
         </button>

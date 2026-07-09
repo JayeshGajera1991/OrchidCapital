@@ -1,7 +1,7 @@
 @using DocumentFormat.OpenXml.Wordprocessing
 @model OrchidCapital.Models.UpdateRoleDetailsRequest
 <h3 id="h3_addRoleHeader">Add New Role</h3>
-<button type="button" class="btn btn-red close-btn" onclick="APortalModule._APortalCommon.CloseToggle('Roles-Master-Panel','nav_roles_form');">
+<button type="button" class="btn btn-danger close-btn" onclick="APortalModule._APortalCommon.CloseToggle('Roles-Master-Panel','nav_roles_form');">
     <i class="fa-solid fa-xmark"></i>
 </button>
 <form id="nav_roles_form" action="@Url.Action("UpdateRolesDetails", "Admin")" method="post">
@@ -21,19 +21,19 @@
     <div class="action-buttons">
         @if (Model.Id == 0)
         {
-            <button class="btn btn-red" id="ClearPage" type="button"
+            <button class="btn btn-danger" id="ClearPage" type="button"
                     onclick="APortalModule._APortalMaster.FormDataClear(APortalRoles._APortalRoles);">
                 <i class="fa-solid fa-refresh"></i>
             </button>
         }
         else
         {
-            <button class="btn btn-red" id="resetPage" type="button"
+            <button class="btn btn-danger" id="resetPage" type="button"
                     onclick="APortalModule._APortalMaster.FormDataReset('tblRolesList','@Model.Id');">
                 <i class="fa-solid fa-refresh"></i>
             </button>
         }
-        <button class="btn btn-green" id="saveCustomer" type="submit"
+        <button class="btn btn-success" id="saveCustomer" type="submit"
                 onclick="APortalRoles._APortalRoles.SubmitFormData(event, $('#nav_roles_form'));">
             <i class="fa-solid fa-floppy-disk"></i>
         </button>

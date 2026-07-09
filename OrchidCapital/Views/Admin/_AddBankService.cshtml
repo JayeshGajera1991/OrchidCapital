@@ -1,6 +1,6 @@
 @model OrchidCapital.Models.UpdateBankServiceDetailsRequest
 <h3 id="h3_addRoleHeader">Add New Service</h3>
-<button type="button" class="btn btn-red close-btn"
+<button type="button" class="btn btn-danger close-btn"
         onclick="APortalModule._APortalCommon.CloseToggle('BankService-Master-Panel','nav_BankService_form');">
     <i class="fa-solid fa-xmark"></i>
 </button>
@@ -89,19 +89,19 @@
     <div class="action-buttons">
         @if (Model.LoanProductId == 0)
         {
-            <button class="btn btn-red" id="ClearPage" type="button"
+            <button class="btn btn-danger" id="ClearPage" type="button"
                     onclick="APortalModule._APortalMaster.FormDataClear(APortalBankService._APortalBankService);">
                 <i class="fa-solid fa-refresh"></i>
             </button>
         }
         else
         {
-            <button class="btn btn-red" id="resetPage" type="button"
+            <button class="btn btn-danger" id="resetPage" type="button"
                     onclick="APortalModule._APortalMaster.FormDataReset('tblBankServiceList','@Model.LoanProductId');">
                 <i class="fa-solid fa-refresh"></i>
             </button>
         }
-        <button class="btn btn-green" id="saveCustomer" type="submit"
+        <button class="btn btn-success" id="saveCustomer" type="submit"
                 onclick="APortalBankService._APortalBankService.SubmitFormData(event, $('#nav_BankService_form'));">
             <i class="fa-solid fa-floppy-disk"></i>
         </button>

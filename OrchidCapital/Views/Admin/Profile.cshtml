@@ -39,7 +39,7 @@
             right: 78px;
             top: 1px;
             ">
-            <button class="btn btn-red" title="Delete Profiler Image"
+            <button class="btn btn-danger" title="Delete Profiler Image"
                     onclick="APortalTwoFactor._APortalTwoFactor.DeleteUserProfileImage(@Model.SingleResult.UserName);">
               <i class="fa-solid fa-trash"></i>
               <span class="tooltip-text">Delete Profiler Image</span>
@@ -51,7 +51,7 @@
           right: 0px;
           top: 1px;
           ">
-          <button class="btn btn-blue" title="Edit Profile"
+          <button class="btn btn-primary" title="Edit Profile"
                   onclick="APortalTwoFactor._APortalTwoFactor.OpenUpdateUserProfileModal(@Model.SingleResult.Id);">
             <i class="fa-solid fa-pen"></i>
             <span class="tooltip-text">Edit User details</span>
@@ -122,7 +122,7 @@
           <p>Update your account password regularly</p>
         </div>
         <div class="tooltip">
-          <button class="btn btn-blue" onclick="window.location.href='@Url.Action("ChangePassword", "Admin")'">
+          <button class="btn btn-primary" onclick="window.location.href='@Url.Action("ChangePassword", "Admin")'">
             <i class="fa-solid fa-key"></i>
             <span class="tooltip-text">Change Password</span>
           </button>
@@ -167,7 +167,7 @@
       <div class="modal-content">
         <div class="modal-header tooltip">
           <h3>Two-Factor Authentication</h3>
-          <button class="btn btn-red dangermodal" onclick="window.location.reload();">
+          <button class="btn btn-danger dangermodal" onclick="window.location.reload();">
             <i class="fa-solid fa-xmark"></i>
             <span class="tooltip-text">Close</span>
           </button>
@@ -180,7 +180,7 @@
       <div class="modal-content modal12">
         <div class="modal-header tooltip">
           <h3>Update User Profile</h3>
-          <button class="btn btn-red dangermodal" onclick="APortalTwoFactor._APortalTwoFactor.closeModal();">
+          <button class="btn btn-danger dangermodal" onclick="APortalTwoFactor._APortalTwoFactor.closeModal();">
             <i class="fa-solid fa-xmark"></i>
             <span class="tooltip-text">Close</span>
           </button>
@@ -255,5 +255,5 @@
 @section Scripts {
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <script src="~/Admin/js/TwoFactor.js" asp-append-version="true"></script>
+  <script src="~/Admin/Js/TwoFactor.js" asp-append-version="true"></script>
 }

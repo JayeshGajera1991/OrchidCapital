@@ -35,14 +35,14 @@
                                 <i class="fa-solid fa-pen-to-square"></i> Edit
                             </div>
 
-                            <div onclick="APortalBankBranch._APortalBankBranch.Status('@item.BranchId', '@item.IsActive')">
+                            <div id="status-@item.BranchId" onclick="APortalBankBranch._APortalBankBranch.Status('@item.BranchId', '@item.IsActive')">
                                 <i class="fa-solid fa-toggle-on"></i>
                                 @(item.IsActive ? "Inactive" : "Active")
                             </div>
 
                             @if(item.IsActive == false)
                             {
-                                <div onclick="APortalBankBranch._APortalBankBranch.Delete('@item.BranchId')">
+                                <div id="remove-@item.BranchId" onclick="APortalBankBranch._APortalBankBranch.Delete('@item.BranchId')">
                                     <i class="fa-solid fa-trash"></i> Delete
                                 </div>
                             }

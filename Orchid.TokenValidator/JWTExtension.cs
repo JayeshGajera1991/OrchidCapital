@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using Orchid.UtilityHelper;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,12 +29,12 @@ namespace Orchid.TokenValidator
                         ValidateIssuerSigningKey = true, // Validate signature of the token 
 
                         //Issuer and audience values are same as defined in generating Token
-                        ValidIssuer = Encryption.Decrypt(Environment.GetEnvironmentVariable("USR_ENC_KEY"),_config["JWT-ISSUER"]), // stored in appsetting file
-                        ValidAudience = Encryption.Decrypt(Environment.GetEnvironmentVariable("USR_ENC_KEY"),_config["JWT-AUDIENCE"]), // stored in appsetting file
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Encryption.Decrypt(Environment.GetEnvironmentVariable("USR_ENC_KEY"),_config["JWT-SECRET"]!))), // stored in appsetting file
+                        ValidIssuer = _config["JWT-ISSUER"], // stored in appsetting file
+                        ValidAudience = _config["JWT-AUDIENCE"], // stored in appsetting file
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["JWT-SECRET"]!)), // stored in appsetting file
                         ClockSkew = TimeSpan.Zero
                     };
-                    options.Audience = Encryption.Decrypt(Environment.GetEnvironmentVariable("USR_ENC_KEY"),_config["JWT-AUDIENCE"]);
+                    options.Audience = _config["JWT-AUDIENCE"];
                     options.SaveToken = true;
                     options.RequireHttpsMetadata = false;
 

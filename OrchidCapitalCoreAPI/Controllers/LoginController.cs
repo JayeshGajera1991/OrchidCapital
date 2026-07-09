@@ -16,6 +16,7 @@ namespace OrchidCapitalCoreAPI.Controllers
         private readonly ILoginRepository _loginRepository;
         private readonly IConfiguration _configuration;
         private readonly IEmailService _emailService;
+        private readonly OrchidCapitalCoreAPI.Helper.RsaService _rsaService;
         private readonly Microsoft.AspNetCore.Hosting.IHostingEnvironment _environment;
         public LoginController(ILoginRepository loginRepository, IConfiguration configuration, IEmailService emailService, Microsoft.AspNetCore.Hosting.IHostingEnvironment environment)
         {
@@ -30,6 +31,23 @@ namespace OrchidCapitalCoreAPI.Controllers
         [HttpPost("v{version:apiVersion}/AuthenticateUser")]
         public async Task<IActionResult> AuthenticateUser([FromBody] LoginRequest request)
         {
+            // Attempt to decrypt password if client sent RSA-encrypted value
+            try
+            {
+                if (!string.IsNullOrEmpty(request?.Password))
+                {
+                    var rsa = HttpContext.RequestServices.GetService(typeof(OrchidCapitalCoreAPI.Helper.RsaService)) as OrchidCapitalCoreAPI.Helper.RsaService;
+                    if (rsa != null)
+                    {
+                        var maybe = rsa.TryDecrypt(request.Password);
+                        if (!string.IsNullOrEmpty(maybe))
+                        {
+                            request.Password = maybe;
+                        }
+                    }
+                }
+            }
+            catch { }
             CommonResponse response = new CommonResponse();
             Tuple<bool, string> tpl = null;
             try

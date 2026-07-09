@@ -77,6 +77,12 @@ namespace OrchidCapital.Controllers
                         model.Password = _rsaService.Decrypt(
                             Request.Form["hdnEncryptedPassword"].ToString()
                         );
+
+                        if (string.IsNullOrWhiteSpace(model.Password))
+                        {
+                            model.ErrorMessage = "Password encryption/decryption failed.";
+                            return View(model);
+                        }
                     }
                     if (!model.Password.StartsWith("*******"))
                     {
@@ -91,7 +97,7 @@ namespace OrchidCapital.Controllers
                             Utility.RemoveCookie("UserName", _httpContextAccessor);
                             Utility.RemoveCookie("Password", _httpContextAccessor);
                         }
-                        // Check Password (Current Passswor & Database Password)
+                        // Check Password (Current Password & Database Password)
                         string QueryString = $"?UserName={model.UserName}";
                         var response = await _OrchidClient.GetAsync<dynamic>(
                             ProxyAPI.GetUserPassword + QueryString
@@ -99,10 +105,16 @@ namespace OrchidCapital.Controllers
                         if (response != null && response.IsSuccessStatusCode)
                         {
                             string encryptedPassword = response.Response[0].EncPassword.ToString();
+                            string currentKey = Environment.GetEnvironmentVariable("USR_ENC_KEY");
+
                             string decryptedPassword = Encryption.Decrypt(
-                                Environment.GetEnvironmentVariable("USR_ENC_KEY"),
+                                currentKey,
                                 encryptedPassword
                             );
+
+                            Console.WriteLine($"USR_ENC_KEY exists: {!string.IsNullOrEmpty(currentKey)}");
+                            Console.WriteLine($"Decrypted password length: {decryptedPassword?.Length ?? 0}");
+
                             if (model.Password != decryptedPassword)
                             {
                                 model.ErrorMessage = "Invalid username or password.";
@@ -114,16 +126,25 @@ namespace OrchidCapital.Controllers
                             model.ErrorMessage = "Invalid username or password.";
                             return View(model);
                         }
-                        // Encrypt Password before sending to API
-                        model.Password = Encryption.Encrypt(
-                            Environment.GetEnvironmentVariable("USR_ENC_KEY"),
-                            model.Password
-                        );
-                        // Call API to Authenticate User
+                        // Encrypt password for transit using API public key, then call API
+                        string originalPassword = model.Password;
+                        try
+                        {
+                            var encryptedForTransit = _rsaService.Encrypt(model.Password);
+                            if (!string.IsNullOrEmpty(encryptedForTransit))
+                            {
+                                model.Password = encryptedForTransit;
+                            }
+                        }
+                        catch { }
+
                         var result = await _OrchidClient.PostAsync<LoginResponse>(
                             ProxyAPI.AuthenticateUser,
                             model
                         );
+
+                        // restore local plaintext password
+                        model.Password = originalPassword;
                         var lst = new List<LoginResponse>();
                         if (result != null && result.IsSuccessStatusCode)
                         {
@@ -292,8 +313,7 @@ namespace OrchidCapital.Controllers
             }
             catch (Exception ex)
             {
-                model.ErrorMessage =
-                    "An error occurred while processing your request. Please try again later.";
+                model.ErrorMessage = $"Login error: {ex.Message}";
                 return View(model);
             }
         }

@@ -1,0 +1,505 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\AuditLogHandling.js",
+      "PackagePath": "staticwebassets\\Admin\\Js\\AuditLogHandling.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\BankBranch.js",
+      "PackagePath": "staticwebassets\\Admin\\Js\\BankBranch.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\BankService.js",
+      "PackagePath": "staticwebassets\\Admin\\Js\\BankService.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\Customers.js",
+      "PackagePath": "staticwebassets\\Admin\\Js\\Customers.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\ErrorHandling.js",
+      "PackagePath": "staticwebassets\\Admin\\Js\\ErrorHandling.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\FinanceLoanApplicationList.js",
+      "PackagePath": "staticwebassets\\Admin\\Js\\FinanceLoanApplicationList.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\FinanceLoanApprovalList.js",
+      "PackagePath": "staticwebassets\\Admin\\Js\\FinanceLoanApprovalList.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\FinanceNewLoanApplication.js",
+      "PackagePath": "staticwebassets\\Admin\\Js\\FinanceNewLoanApplication.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\ImageConfiguration.js",
+      "PackagePath": "staticwebassets\\Admin\\Js\\ImageConfiguration.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\Pages.js",
+      "PackagePath": "staticwebassets\\Admin\\Js\\Pages.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\RolePermissions.js",
+      "PackagePath": "staticwebassets\\Admin\\Js\\RolePermissions.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\Roles.js",
+      "PackagePath": "staticwebassets\\Admin\\Js\\Roles.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\Teams.js",
+      "PackagePath": "staticwebassets\\Admin\\Js\\Teams.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\TwoFactor.js",
+      "PackagePath": "staticwebassets\\Admin\\Js\\TwoFactor.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\Users.js",
+      "PackagePath": "staticwebassets\\Admin\\Js\\Users.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\admin_dashboard.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\admin_dashboard.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\admin_login.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\admin_login.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\admin_profile.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\admin_profile.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\admin_roles.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\admin_roles.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\dailyreport.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\dailyreport.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\financereport.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\financereport.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\fonts_googleapis.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\fonts_googleapis.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\loanapplication.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\loanapplication.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\loanprocess.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\loanprocess.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\select2.min.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\select2.min.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\sidepanel.css",
+      "PackagePath": "staticwebassets\\Admin\\css\\sidepanel.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageProfiler\\5f4abdae-4cc2-4050-a178-f6dd4bdf9ec9.jfif",
+      "PackagePath": "staticwebassets\\ImageProfiler\\5f4abdae-4cc2-4050-a178-f6dd4bdf9ec9.jfif"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageProfiler\\6cbb0b1f-37b1-468d-8550-1a4335ba52e1.webp",
+      "PackagePath": "staticwebassets\\ImageProfiler\\6cbb0b1f-37b1-468d-8550-1a4335ba52e1.webp"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageProfiler\\74bd2414-2d8f-4741-9c99-8b404a989fca.jfif",
+      "PackagePath": "staticwebassets\\ImageProfiler\\74bd2414-2d8f-4741-9c99-8b404a989fca.jfif"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageProfiler\\786d2c76-0ae1-4ca1-b57d-24736af4c0ae.webp",
+      "PackagePath": "staticwebassets\\ImageProfiler\\786d2c76-0ae1-4ca1-b57d-24736af4c0ae.webp"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageProfiler\\default.jfif",
+      "PackagePath": "staticwebassets\\ImageProfiler\\default.jfif"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageProfiler\\fdd661bf-9f2f-4fcb-84ab-58c217d6631e.webp",
+      "PackagePath": "staticwebassets\\ImageProfiler\\fdd661bf-9f2f-4fcb-84ab-58c217d6631e.webp"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageUploads\\0bf2515d-fd65-4050-8b68-0827b1f20e02.webp",
+      "PackagePath": "staticwebassets\\ImageUploads\\0bf2515d-fd65-4050-8b68-0827b1f20e02.webp"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\toastr.min.css",
+      "PackagePath": "staticwebassets\\css\\toastr.min.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\APortalAjaxResponse.js",
+      "PackagePath": "staticwebassets\\js\\APortalAjaxResponse.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\APortalCommon.js",
+      "PackagePath": "staticwebassets\\js\\APortalCommon.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\APortalLoader.js",
+      "PackagePath": "staticwebassets\\js\\APortalLoader.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\APortalMasterBasicFunctionality.js",
+      "PackagePath": "staticwebassets\\js\\APortalMasterBasicFunctionality.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\APortalToaster.js",
+      "PackagePath": "staticwebassets\\js\\APortalToaster.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\crypto-js.min.js",
+      "PackagePath": "staticwebassets\\js\\crypto-js.min.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\jquery-3.7.1.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery-3.7.1.min.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.min.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\js\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\jsencrypt.min.js",
+      "PackagePath": "staticwebassets\\js\\jsencrypt.min.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\select2.min.js",
+      "PackagePath": "staticwebassets\\js\\select2.min.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\toastr.min.js",
+      "PackagePath": "staticwebassets\\js\\toastr.min.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\1dc58d2e-f5d1-4587-bc3f-981829c326ef.png",
+      "PackagePath": "staticwebassets\\loandocuments\\1dc58d2e-f5d1-4587-bc3f-981829c326ef.png"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\58832592-4141-4ec5-9336-32f31b2ea9f1.png",
+      "PackagePath": "staticwebassets\\loandocuments\\58832592-4141-4ec5-9336-32f31b2ea9f1.png"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\7affeded-0140-48ca-8fef-d656c4b25761.png",
+      "PackagePath": "staticwebassets\\loandocuments\\7affeded-0140-48ca-8fef-d656c4b25761.png"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\86f9c399-cf73-4900-8a6a-9835689e3561.png",
+      "PackagePath": "staticwebassets\\loandocuments\\86f9c399-cf73-4900-8a6a-9835689e3561.png"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\97324238-93dd-4948-8c6f-12da16f12bf0.png",
+      "PackagePath": "staticwebassets\\loandocuments\\97324238-93dd-4948-8c6f-12da16f12bf0.png"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\a311ecc7-6270-4f47-a485-f4c5412981e7.png",
+      "PackagePath": "staticwebassets\\loandocuments\\a311ecc7-6270-4f47-a485-f4c5412981e7.png"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\ea628c89-1cb7-48dd-91db-256d16419f56.png",
+      "PackagePath": "staticwebassets\\loandocuments\\ea628c89-1cb7-48dd-91db-256d16419f56.png"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\no-image.png",
+      "PackagePath": "staticwebassets\\loandocuments\\no-image.png"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loanguarantors\\1462bf19-4004-49fb-bd5c-c78caa4e9c8e.jpg",
+      "PackagePath": "staticwebassets\\loanguarantors\\1462bf19-4004-49fb-bd5c-c78caa4e9c8e.jpg"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loanguarantors\\529ea957-e22c-4c5b-828e-969be7d68cbf.png",
+      "PackagePath": "staticwebassets\\loanguarantors\\529ea957-e22c-4c5b-828e-969be7d68cbf.png"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loanguarantors\\64814e51-e33c-46ec-97c0-2168c63c047b.png",
+      "PackagePath": "staticwebassets\\loanguarantors\\64814e51-e33c-46ec-97c0-2168c63c047b.png"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loanguarantors\\7440f28f-1001-4211-b727-eb5c76f8d024.jfif",
+      "PackagePath": "staticwebassets\\loanguarantors\\7440f28f-1001-4211-b727-eb5c76f8d024.jfif"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loanguarantors\\9354d8c4-47e4-40aa-bf72-ad8fdcb53016.png",
+      "PackagePath": "staticwebassets\\loanguarantors\\9354d8c4-47e4-40aa-bf72-ad8fdcb53016.png"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loanguarantors\\a10d6e62-57f6-426d-90ad-c52f395608cd.png",
+      "PackagePath": "staticwebassets\\loanguarantors\\a10d6e62-57f6-426d-90ad-c52f395608cd.png"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loanguarantors\\no-image.png",
+      "PackagePath": "staticwebassets\\loanguarantors\\no-image.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.OrchidCapital.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.OrchidCapital.props",
+      "PackagePath": "build\\OrchidCapital.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.OrchidCapital.props",
+      "PackagePath": "buildMultiTargeting\\OrchidCapital.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.OrchidCapital.props",
+      "PackagePath": "buildTransitive\\OrchidCapital.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

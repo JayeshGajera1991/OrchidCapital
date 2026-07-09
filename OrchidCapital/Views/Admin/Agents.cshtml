@@ -31,14 +31,14 @@
                 <option value="0">Inactive</option>
             </select>
             <div class="page-actions tooltip">
-                <button class="btn btn-purple"
+                <button class="btn btn-secondary"
                         onclick="APortalUsers._APortalUsers.ExportToExcel('APortal_UserMst', 'Agents List');">
                     <i class="fa-solid fa-file-excel"></i>
                     <span class="tooltip-text">Export to Excel</span>
                 </button>
             </div>
             <div class="page-actions tooltip">
-                <button class="btn btn-blue" id="toggleCustomerForm" onclick="APortalUsers._APortalUsers.Create();">
+                <button class="btn btn-primary" id="toggleCustomerForm" onclick="APortalUsers._APortalUsers.Create();">
                     <i class="fa-solid fa-plus"></i>
                     <span class="tooltip-text">Add Agent</span>
                 </button>
@@ -48,7 +48,7 @@
     <div class="empty-state" id="emptyCustomerState" style="display:none;">
         <i class="fa-solid fa-users"></i>
         <p>No agents available</p>
-        <button class="btn btn-blue" onclick="APortalUsers._APortalUsers.Create();">
+        <button class="btn btn-primary" onclick="APortalUsers._APortalUsers.Create();">
             <i class="fa-solid fa-plus"></i>
             <span class="tooltip-text">Add Agent</span>
         </button>
@@ -188,8 +188,5 @@
     };    
 </script>
 @section Scripts {
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    @* <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> *@
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script src="~/Admin/js/Users.js" asp-append-version="true"></script>
+    <script src="~/Admin/Js/Users.js" asp-append-version="true"></script>
 }

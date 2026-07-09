@@ -2,7 +2,7 @@
     display: flex;
     gap: 20px;
     align-items: flex-start;
-    margin-top: 5px;
+    margin: 10px;
     padding: 10px;
 }
 
@@ -250,13 +250,13 @@
 }
 
 .guarantor-card-main {
-    height: calc(100vh - 545px);
-    overflow: auto;
+    /* height: calc(100vh - 500px);
+    overflow: auto; */
 }
 
 .guarantor-card-main1 {
-    height: calc(100vh - 620px);
-    overflow: auto;
+    /* height: calc(100vh - 620px);
+    overflow: auto; */
 }
 
 .guarantor-card {

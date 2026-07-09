@@ -7,12 +7,17 @@ services:
     ports:
       - "5001:8080"
     environment:
-      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: http://+:8080
-
-      # Replace DefaultConnection with your actual key from appsettings.json.
-      # Replace database name, SQL username, and password with your current values.
-      ConnectionStrings__DefaultConnection: "Server=DESKTOP-GMTUJA5\\JAYESH;Database=OrchidCapital;User Id=sa;Password=sa@123;TrustServerCertificate=True;MultipleActiveResultSets=True"
+      DB-CONN-STR: "Data Source=mssql-db,1433;Initial Catalog={{DBNAME}};User Id=sa;Password=Sa@12345;TrustServerCertificate=True;MultipleActiveResultSets=True"
+      DB_NAME: "OrchidCapital"
+      USR_ENC_KEY: "ORCHIDCAPITAL@2026"
+    volumes:
+      - ./docker/dataprotection-keys:/root/.aspnet/DataProtection-Keys
+      # Bind-mount API static content so small JS/CSS changes don't require rebuild
+      - ./OrchidCapitalCoreAPI/wwwroot:/app/wwwroot:ro
+      # Mount private RSA key so API can decrypt incoming passwords
+      - ./OrchidCapital/Helper/private.pem:/app/Helper/private.pem:ro
 
   orchid-dashboard:
     container_name: orchid-dashboard
@@ -22,13 +27,30 @@ services:
     ports:
       - "5000:8080"
     environment:
-      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_URLS: http://+:8080
-
-      # Same database connection as the API, if the MVC project also accesses SQL Server.
-      ConnectionStrings__DefaultConnection: "Server=DESKTOP-GMTUJA5\\JAYESH;Database=OrchidCapital;User Id=sa;Password=sa@123;TrustServerCertificate=True;MultipleActiveResultSets=True"
-
-      # Use this address when the MVC project calls the API from inside Docker.
+      ConnectionStrings__DefaultConnection: "Server=mssql-db,1433;Database=OrchidCapital;User Id=sa;Password=Sa@12345;TrustServerCertificate=True;MultipleActiveResultSets=True"
+      OrchidCoreAPIurl: "http://orchid-api:8080/api/ORCHIDCAPITAL/v1/"
       ApiSettings__BaseUrl: "http://orchid-api:8080"
+
+      # Required by LoginController
+      USR_ENC_KEY: "ORCHIDCAPITAL@2026"
     depends_on:
       - orchid-api
+    volumes:
+      - ./docker/dataprotection-keys:/root/.aspnet/DataProtection-Keys
+      # Bind-mount dashboard static content so small JS/CSS changes don't require rebuild
+      - ./OrchidCapital/wwwroot:/app/wwwroot:ro
+
+  mssql-db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: mssql-db
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Sa@12345"
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./docker/mssql-backup:/var/opt/mssql/backup
+      - ./docker/mssql-data:/var/opt/mssql/data
+    # removed healthcheck that relied on missing mssql-tools in image

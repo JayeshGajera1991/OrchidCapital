@@ -84,17 +84,18 @@ builder.Services.Configure<IdentityOptions>(options =>
 });
 builder.Services.AddScoped<RsaService>();
 #region Cors Domain Policy
-var AllowBasePath = builder.Configuration["AllowBasePath"]!;
-if (AllowBasePath.ToLower() == "true")
+var allowBasePath = builder.Configuration.GetValue<bool>("AllowBasePath");
+var basePath = builder.Configuration["BasePath"];
+
+if (allowBasePath && !string.IsNullOrWhiteSpace(basePath))
 {
-    var PBasePath = builder.Configuration["BasePath"]!;
     builder.Services.AddCors(options =>
     {
-        options.AddPolicy("CorsPolicy",
-            builder => builder.WithOrigins(PBasePath)
-            .AllowAnyMethod()
-            .AllowAnyHeader()
-            .AllowCredentials());
+        options.AddPolicy("CorsPolicy", policy =>
+            policy.WithOrigins(basePath)
+                  .AllowAnyMethod()
+                  .AllowAnyHeader()
+                  .AllowCredentials());
     });
 }
 #endregion
@@ -105,11 +106,11 @@ var app = builder.Build();
 
 app.UseForwardedHeaders();
 app.UseSession();
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 app.UseRouting();
-if (AllowBasePath.ToLower() == "true")
+if (allowBasePath && !string.IsNullOrWhiteSpace(basePath))
 {
     app.UseCors("CorsPolicy");
 }
@@ -131,7 +132,7 @@ var localizationOptions = new RequestLocalizationOptions
 };
 
 app.UseRequestLocalization(localizationOptions);
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();

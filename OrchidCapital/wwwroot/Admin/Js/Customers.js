@@ -72,14 +72,6 @@
                     el.value = '';
                 });
             }
-            $(function () {
-                $("#DOB").datepicker({
-                    dateFormat: "yy-mm-dd",
-                    changeMonth: true,
-                    changeYear: true,
-                    yearRange: "1900:2500"
-                });
-            });
             //$(window).on("load resize", resizeLayout);
             $(document).ready(function () {
                 $('.select2').select2({
@@ -125,14 +117,6 @@
             $("#State").change();
             document.querySelectorAll(".action-menu").forEach(menu => {
                 menu.style.display = "none";
-            });
-            $(function () {
-                $("#DOB").datepicker({
-                    dateFormat: "yy-mm-dd",
-                    changeMonth: true,
-                    changeYear: true,
-                    yearRange: "1900:2500"
-                });
             });
             //$(window).on("load resize", resizeLayout);
             $(document).ready(function () {

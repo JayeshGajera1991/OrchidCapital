@@ -18,9 +18,18 @@ namespace OrchidCapital.Helper
             var value = string.Empty;
             if (_configuration != null)
             {
-                value = _configuration[apiUrl]!;
+                value = _configuration[apiUrl] ?? string.Empty;
+                if (string.IsNullOrWhiteSpace(value) && apiUrl == "OrchidCoreAPIurl")
+                {
+                    value = _configuration["ApiSettings:BaseUrl"] ?? string.Empty;
+                }
             }
             return value;
+        }
+
+        private static string GetEncryptionKey()
+        {
+            return _configuration?["USR-ENC-KEY"] ?? Environment.GetEnvironmentVariable("USR_ENC_KEY") ?? string.Empty;
         }
 
         public static string GetAssets(int Option, string FileName = "")
@@ -106,7 +115,7 @@ namespace OrchidCapital.Helper
             {
                 option.Expires = DateTime.Now.AddDays(expireTime.Value).AddMilliseconds(10);
             }
-            _contextAccessor.HttpContext.Response.Cookies.Append(key, Encryption.Encrypt(_configuration["USR-ENC-KEY"], value), option);
+            _contextAccessor.HttpContext.Response.Cookies.Append(key, Encryption.Encrypt(GetEncryptionKey(), value), option);
         }
 
         public static string GetCookie(string key, IHttpContextAccessor _contextAccessor)
@@ -114,7 +123,7 @@ namespace OrchidCapital.Helper
             string cartId = _contextAccessor.HttpContext.Request.Cookies[key];
             if (cartId != null)
             {
-                return Encryption.Decrypt(_configuration["USR-ENC-KEY"], _contextAccessor.HttpContext.Request.Cookies[key]);
+                return Encryption.Decrypt(GetEncryptionKey(), _contextAccessor.HttpContext.Request.Cookies[key]);
             }
             else
             {

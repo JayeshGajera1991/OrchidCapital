@@ -1,6 +1,6 @@
 @model OrchidCapital.Models.AddRolePermissionsRequest
 <div class="role-form">
-    <button type="button" class="btn btn-red close-btn"
+    <button type="button" class="btn btn-danger close-btn"
             onclick="APortalModule._APortalCommon.CloseToggle('RolePermission-Master-Panel','nav_RolePermission_form');">
         <i class="fa-solid fa-xmark"></i>
     </button>
@@ -42,7 +42,7 @@
                 <input type="text" placeholder="Admin" id="EmployeeRole" disabled>
             </div>
         </div>
-        <button class="btn btn-blue next-btn" onclick="APortalRolePermissions._APortalRolePermissions.Next();">
+        <button class="btn btn-primary next-btn" onclick="APortalRolePermissions._APortalRolePermissions.Next();">
             <i class="fa-solid fa-arrow-right"></i>
         </button>
     </div>
@@ -54,6 +54,7 @@
                 <span>Module</span>
                 <span>Full</span>
                 <span>Read</span>
+                <span>Remove</span>
             </div>
             <div id="permissions-tbody-render">
                 @* <span id="@item.PageId">@item.PageName</span>
@@ -62,10 +63,10 @@
             </div>
         </div>
         <div class="step-actions">
-            <button class="btn btn-blue" id="backBtn" onclick="APortalRolePermissions._APortalRolePermissions.Back();">
+            <button class="btn btn-primary" id="backBtn" onclick="APortalRolePermissions._APortalRolePermissions.Back();">
                 <i class="fa-solid fa-arrow-left"></i>
             </button>
-            <button class="btn btn-green" onclick="APortalRolePermissions._APortalRolePermissions.Save();">
+            <button class="btn btn-success" onclick="APortalRolePermissions._APortalRolePermissions.Save();">
                 <i class="fa-solid fa-floppy-disk"></i>
             </button>
         </div>

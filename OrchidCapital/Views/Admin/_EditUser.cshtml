@@ -56,7 +56,7 @@
         </div>
         <div class="form-group">
             <label>DOB *</label>
-            @Html.TextBoxFor(m => m.DOB, new { @placeholder = "Enter DOB", required = "required", @class = "txtspace" })
+            @Html.TextBoxFor(m => m.DOB, new { @placeholder = "Enter DOB",type = "date", required = "required", @class = "txtspace" })
             @Html.ValidationMessageFor(m => m.DOB, "", new { @class = "text-danger" })
         </div>
         <div class="form-group full-width">
@@ -149,7 +149,7 @@
         
     </div>
     <div class="action-buttons">
-        <button class="btn btn-green" id="saveCustomer" type="submit"
+        <button class="btn btn-success" id="saveCustomer" type="submit"
                 onclick="APortalTwoFactor._APortalTwoFactor.SubmitFormData(event, $('#nav_agentuser_form'));">
             <i class="fa-solid fa-floppy-disk"></i>
         </button>

@@ -8,15 +8,26 @@ namespace OrchidCapital.Helper
         private readonly string _publicKey;
         private readonly string _privateKey;
         private static readonly RSA _rsa = RSA.Create(2048);
+
         public RsaService(IConfiguration config)
         {
-            _publicKey = System.IO.File.ReadAllText("Helper/public.pem");
-            _privateKey = System.IO.File.ReadAllText("Helper/private.pem");
+            var helperFolder = Path.Combine(AppContext.BaseDirectory, "Helper");
+
+            var publicKeyPath = Path.Combine(helperFolder, "public.pem");
+            var privateKeyPath = Path.Combine(helperFolder, "private.pem");
+
+            _publicKey = File.ReadAllText(publicKeyPath);
+            _privateKey = File.ReadAllText(privateKeyPath);
         }
 
         public string GetPublicKey()
         {
-            return System.IO.File.ReadAllText("Helper/public.pem");
+            var publicKeyPath = Path.Combine(
+                AppContext.BaseDirectory,
+                "Helper",
+                "public.pem"
+            );
+            return System.IO.File.ReadAllText(publicKeyPath);
         }
 
         public string Encrypt(string text)
@@ -26,8 +37,8 @@ namespace OrchidCapital.Helper
                 using RSA rsa = RSA.Create();
                 rsa.ImportFromPem(_publicKey);
                 byte[] data = Encoding.UTF8.GetBytes(text);
-                byte[] encryptedBytes = rsa.Encrypt(data,RSAEncryptionPadding.Pkcs1);
-                return Convert.ToBase64String(encryptedBytes);;
+                byte[] encryptedBytes = rsa.Encrypt(data, RSAEncryptionPadding.Pkcs1);
+                return Convert.ToBase64String(encryptedBytes); ;
             }
             catch (Exception ex)
             {
@@ -45,7 +56,7 @@ namespace OrchidCapital.Helper
                 byte[] encryptedBytes = Convert.FromBase64String(encryptedText);
                 using RSA rsa = RSA.Create();
                 rsa.ImportFromPem(_privateKey);
-                byte[] decryptedBytes = rsa.Decrypt(encryptedBytes,RSAEncryptionPadding.Pkcs1);
+                byte[] decryptedBytes = rsa.Decrypt(encryptedBytes, RSAEncryptionPadding.Pkcs1);
                 return Encoding.UTF8.GetString(decryptedBytes);
             }
             catch (Exception ex)

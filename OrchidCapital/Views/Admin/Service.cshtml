@@ -31,14 +31,14 @@
                 <option value="0">Inactive</option>
             </select>
             <div class="page-actions tooltip">
-                <button class="btn btn-purple"
+                <button class="btn btn-secondary"
                         onclick="APortalBankService._APortalBankService.ExportToExcel('APortal_LoanProductMaster', 'Bank Service List');">
                     <i class="fa-solid fa-file-excel"></i>
                     <span class="tooltip-text">Export to Excel</span>
                 </button>
             </div>
             <div class="page-actions tooltip">
-                <button class="btn btn-blue" id="toggleCustomerForm"
+                <button class="btn btn-primary" id="toggleCustomerForm"
                         onclick="APortalBankService._APortalBankService.Create();">
                     <i class="fa-solid fa-plus"></i>
                     <span class="tooltip-text">Add Service</span>
@@ -49,7 +49,7 @@
     <div class="empty-state" id="emptyCustomerState" style="display:none;">
         <i class="fa-solid fa-users"></i>
         <p>No Service available</p>
-        <button class="btn btn-blue" onclick="APortalBankService._APortalBankService.Create();">
+        <button class="btn btn-primary" onclick="APortalBankService._APortalBankService.Create();">
             <i class="fa-solid fa-plus"></i>
             <span class="tooltip-text">Add Service</span>
         </button>
@@ -234,5 +234,5 @@
     };    
 </script>
 @section Scripts {
-    <script src="~/Admin/js/BankService.js" asp-append-version="true"></script>
+    <script src="~/Admin/Js/BankService.js" asp-append-version="true"></script>
 }

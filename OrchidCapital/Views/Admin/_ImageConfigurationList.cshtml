@@ -33,7 +33,7 @@
                                 <i class="fa-solid fa-pen-to-square"></i> Edit
                             </div>
 
-                            <div
+                            <div  id="status-@item.Id"
                                 onclick="APortalImageConfiguration._APortalImageConfiguration.Status('@item.Id', '@item.IsActive')">
                                 <i class="fa-solid fa-toggle-on"></i>
                                 @(item.IsActive ? "Inactive" : "Active")
@@ -41,7 +41,7 @@
                             
                             @if (item.IsActive == false)
                             {
-                                <div onclick="APortalImageConfiguration._APortalImageConfiguration.Delete('@item.Id')">
+                                <div id="remove-@item.Id" onclick="APortalImageConfiguration._APortalImageConfiguration.Delete('@item.Id')">
                                     <i class="fa-solid fa-trash"></i> Delete
                                 </div>
                             }

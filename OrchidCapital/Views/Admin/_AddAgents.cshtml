@@ -1,7 +1,7 @@
 @model OrchidCapital.Models.UpdateUserDetailsRequest
 @using Microsoft.AspNetCore.Mvc.Rendering;
 <h3 id="h3_addUserHeader">Add New Agent</h3>
-<button type="button" class="btn btn-red close-btn" onclick="APortalModule._APortalCommon.CloseToggle('Users-Master-Panel','nav_agentuser_form');">
+<button type="button" class="btn btn-danger close-btn" onclick="APortalModule._APortalCommon.CloseToggle('Users-Master-Panel','nav_agentuser_form');">
     <i class="fa-solid fa-xmark"></i>
 </button>
 <form id="nav_agentuser_form" action="@Url.Action("UpdateAgentsDetails", "Admin")" method="post">
@@ -62,7 +62,7 @@
         </div>
         <div class="form-group">
             <label>DOB *</label>
-            @Html.TextBoxFor(m => m.DOB, new { @placeholder = "Enter DOB", @class = "txtspace", MaxLength = 10, required = "required" })
+            @Html.TextBoxFor(m => m.DOB, new { @placeholder = "Enter DOB", @class = "txtspace",type = "date", MaxLength = 10, required = "required" })
             @Html.ValidationMessageFor(m => m.DOB, "", new { @class = "text-danger" })
         </div>
         <div class="form-group full-width">
@@ -139,19 +139,19 @@
     <div class="action-buttons">
         @if (Model.Id == 0)
         {
-            <button class="btn btn-red" id="ClearPage" type="button"
+            <button class="btn btn-danger" id="ClearPage" type="button"
                     onclick="APortalModule._APortalMaster.FormDataClear(APortalUsers._APortalUsers);">
                 <i class="fa-solid fa-refresh"></i>
             </button>
         }
         else
         {
-            <button class="btn btn-red" id="resetPage" type="button"
+            <button class="btn btn-danger" id="resetPage" type="button"
                     onclick="APortalModule._APortalMaster.FormDataReset('tblUsersList','@Model.Id');">
                 <i class="fa-solid fa-refresh"></i>
             </button>
         }
-        <button class="btn btn-green" id="saveCustomer" type="submit"
+        <button class="btn btn-success" id="saveCustomer" type="submit"
                 onclick="APortalUsers._APortalUsers.SubmitFormData(event, $('#nav_agentuser_form'));">
             <i class="fa-solid fa-floppy-disk"></i>
         </button>

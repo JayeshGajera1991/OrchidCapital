@@ -49,33 +49,9 @@
               "target": "Package",
               "version": "[0.105.0, )"
             },
-            "Microsoft.AspNetCore.Authentication": {
-              "target": "Package",
-              "version": "[2.3.9, )"
-            },
-            "Microsoft.AspNetCore.Authentication.Cookies": {
-              "target": "Package",
-              "version": "[2.3.9, )"
-            },
-            "Microsoft.AspNetCore.Cors": {
-              "target": "Package",
-              "version": "[2.3.9, )"
-            },
-            "Microsoft.AspNetCore.Http": {
-              "target": "Package",
-              "version": "[2.3.9, )"
-            },
-            "Microsoft.AspNetCore.Mvc": {
-              "target": "Package",
-              "version": "[2.3.9, )"
-            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[8.0.0, )"
-            },
-            "Microsoft.AspNetCore.Razor.Design": {
-              "target": "Package",
-              "version": "[2.3.0, )"
             },
             "Microsoft.Extensions.Caching.StackExchangeRedis": {
               "target": "Package",
@@ -88,10 +64,6 @@
             "PemUtils": {
               "target": "Package",
               "version": "[3.0.0.82, )"
-            },
-            "System.Security.Claims": {
-              "target": "Package",
-              "version": "[4.3.0, )"
             },
             "TwoFactorAuth.Net.QRCoder": {
               "target": "Package",

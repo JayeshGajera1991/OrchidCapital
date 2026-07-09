@@ -38,14 +38,14 @@
                                 <i class="fa-solid fa-pen-to-square"></i> Edit
                             </div>
 
-                            <div onclick="APortalBankService._APortalBankService.Status('@item.LoanProductId', '@item.IsActive')">
+                            <div id="status-@item.LoanProductId" onclick="APortalBankService._APortalBankService.Status('@item.LoanProductId', '@item.IsActive')">
                                 <i class="fa-solid fa-toggle-on"></i>
                                 @(item.IsActive ? "Inactive" : "Active")
                             </div>
 
                             @if(item.IsActive == false)
                             {
-                                <div onclick="APortalBankService._APortalBankService.Delete('@item.LoanProductId')">
+                                <div id="remove-@item.LoanProductId" onclick="APortalBankService._APortalBankService.Delete('@item.LoanProductId')">
                                     <i class="fa-solid fa-trash"></i> Delete
                                 </div>
                             }

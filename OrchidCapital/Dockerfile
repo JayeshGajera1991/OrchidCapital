@@ -12,6 +12,10 @@ RUN dotnet restore "OrchidCapital/OrchidCapital.csproj"
 
 COPY . .
 
+# Ensure RSA key files are included in the build output
+COPY OrchidCapital/Helper/public.pem /src/OrchidCapital/Helper/public.pem
+COPY OrchidCapital/Helper/private.pem /src/OrchidCapital/Helper/private.pem
+
 WORKDIR "/src/OrchidCapital"
 RUN dotnet publish "OrchidCapital.csproj" -c Release -o /app/publish /p:UseAppHost=false
 

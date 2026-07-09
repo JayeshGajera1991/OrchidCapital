@@ -31,14 +31,14 @@
                 <option value="0">Inactive</option>
             </select>
             <div class="page-actions tooltip">
-                <button class="btn btn-purple" 
+                <button class="btn btn-secondary" 
                         onclick="APortalPages._APortalPages.ExportToExcel('APortal_PageMst', 'Pages List');">
                     <i class="fa-solid fa-file-excel"></i>
                     <span class="tooltip-text">Export to Excel</span>
                 </button>
             </div>
             <div class="page-actions tooltip">
-                <button class="btn btn-blue" id="toggleCustomerForm" onclick="APortalPages._APortalPages.Create();">
+                <button class="btn btn-primary" id="toggleCustomerForm" onclick="APortalPages._APortalPages.Create();">
                     <i class="fa-solid fa-plus"></i>
                     <span class="tooltip-text">Add Page</span>
                 </button>
@@ -48,7 +48,7 @@
     <div class="empty-state" id="emptyCustomerState" style="display:none;">
         <i class="fa-solid fa-users"></i>
         <p>No pages available</p>
-        <button class="btn btn-blue" onclick="APortalPages._APortalPages.Create();">
+        <button class="btn btn-primary" onclick="APortalPages._APortalPages.Create();">
             <i class="fa-solid fa-plus"></i>
         </button>
     </div>
@@ -172,5 +172,5 @@
     };    
 </script>
 @section Scripts {
-    <script src="~/Admin/js/Pages.js" asp-append-version="true"></script>
+    <script src="~/Admin/Js/Pages.js" asp-append-version="true"></script>
 }

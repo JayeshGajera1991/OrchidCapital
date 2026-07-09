@@ -101,9 +101,32 @@ namespace Orchid.DataAccess
                 1 => DefaultConnectionstring,
                 _ => DefaultConnectionstring
             };
-            var connectionString = Encryption.Decrypt(Environment.GetEnvironmentVariable("USR_ENC_KEY"), _config[connection]!);
+
+            var connectionString = _config[connection] ?? string.Empty;
+            var decryptedConnectionString = string.Empty;
+            try
+            {
+                // var key = Environment.GetEnvironmentVariable("USR_ENC_KEY");
+                // if (!string.IsNullOrEmpty(key))
+                // {
+                //     decryptedConnectionString = Encryption.Decrypt(key, connectionString);
+                // }
+            }
+            catch
+            {
+                decryptedConnectionString = string.Empty;
+            }
+
+            if (!string.IsNullOrEmpty(decryptedConnectionString))
+            {
+                connectionString = decryptedConnectionString;
+            }
+
             var updatedConnectionString = connectionString.Replace("{{DBNAME}}", DB_NAME);
-            updatedConnectionString += ";Encrypt=False;";
+            if (!updatedConnectionString.Contains("Encrypt=", StringComparison.OrdinalIgnoreCase))
+            {
+                updatedConnectionString += ";Encrypt=False;";
+            }
             return updatedConnectionString;
 
         }

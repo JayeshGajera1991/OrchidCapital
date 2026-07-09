@@ -1,6 +1,6 @@
 @model OrchidCapital.Models.UpdatePageDetailsRequest
 <h3 id="h3_addPageHeader">Add New Page</h3>
-<button type="button" class="btn btn-red close-btn" onclick="APortalModule._APortalCommon.CloseToggle('Pages-Master-Panel','nav_page_form');">
+<button type="button" class="btn btn-danger close-btn" onclick="APortalModule._APortalCommon.CloseToggle('Pages-Master-Panel','nav_page_form');">
     <i class="fa-solid fa-xmark"></i>
 </button>
 <form id="nav_page_form" action="@Url.Action("UpdatePagesDetails", "Admin")" method="post">
@@ -45,19 +45,19 @@
     <div class="action-buttons top-buttons">
         @if (Model.Id == 0)
         {
-            <button class="btn btn-red" id="ClearPage" type="button"
+            <button class="btn btn-danger" id="ClearPage" type="button"
                     onclick="APortalModule._APortalMaster.FormDataClear(APortalPages._APortalPages);">
                 <i class="fa-solid fa-refresh"></i>
             </button>
         }
         else
         {
-            <button class="btn btn-red" id="resetPage" type="button"
+            <button class="btn btn-danger" id="resetPage" type="button"
                     onclick="APortalModule._APortalMaster.FormDataReset('tblPagesList','@Model.Id');">
                 <i class="fa-solid fa-refresh"></i>
             </button>
         }
-        <button class="btn btn-green" id="saveCustomer" type="submit"
+        <button class="btn btn-success" id="saveCustomer" type="submit"
                 onclick="APortalPages._APortalPages.SubmitFormData(event, $('#nav_page_form'));">
             <i class="fa-solid fa-floppy-disk"></i>
         </button>

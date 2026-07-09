@@ -1,7 +1,7 @@
 @using DocumentFormat.OpenXml.Wordprocessing
 @model OrchidCapital.Models.UpdateBranchDetailsRequest
 <h3 id="h3_addBranchHeader">Add New System Setting</h3>
-<button type="button" class="btn btn-red close-btn" onclick="APortalModule._APortalCommon.CloseToggle('BankBranch-Master-Panel','nav_BankBranch_form');">
+<button type="button" class="btn btn-danger close-btn" onclick="APortalModule._APortalCommon.CloseToggle('BankBranch-Master-Panel','nav_BankBranch_form');">
     <i class="fa-solid fa-xmark"></i>
 </button>
 <form id="nav_BankBranch_form" action="@Url.Action("UpdateBranchDetails", "Admin")" method="post">
@@ -56,19 +56,19 @@
     <div class="action-buttons">
         @if (Model.BranchId == 0)
         {
-            <button class="btn btn-red" id="ClearPage" type="button"
+            <button class="btn btn-danger" id="ClearPage" type="button"
                     onclick="APortalModule._APortalMaster.FormDataClear(APortalBankBranch._APortalBankBranch);">
                 <i class="fa-solid fa-refresh"></i>
             </button>
         }
         else
         {
-            <button class="btn btn-red" id="resetPage" type="button"
+            <button class="btn btn-danger" id="resetPage" type="button"
                     onclick="APortalModule._APortalMaster.FormDataReset('tblBankBranchList','@Model.BranchId');">
                 <i class="fa-solid fa-refresh"></i>
             </button>
         }
-        <button class="btn btn-green" id="saveCustomer" type="submit"
+        <button class="btn btn-success" id="saveCustomer" type="submit"
                 onclick="APortalBankBranch._APortalBankBranch.SubmitFormData(event, $('#nav_BankBranch_form'));">
             <i class="fa-solid fa-floppy-disk"></i>
         </button>

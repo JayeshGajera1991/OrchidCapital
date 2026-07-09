@@ -23,7 +23,7 @@
             </div>
 
             <div class="page-actions tooltip">
-                <button class="btn btn-blue" id="toggleRoleForm"
+                <button class="btn btn-primary" id="toggleRoleForm"
                         onclick="APortalRolePermissions._APortalRolePermissions.Create();">
                     <i class="fa-solid fa-plus"></i>
                     <span class="tooltip-text">Add Role</span>
@@ -34,7 +34,7 @@
     <div class="empty-state" id="emptyState" style="display:none;">
         <i class="fa-solid fa-shield-halved"></i>
         <p>Currently there are no admin roles</p>
-        <button class="btn btn-blue" id="addFirstRole">
+        <button class="btn btn-primary" id="addFirstRole">
             <i class="fa-solid fa-plus"></i>
         </button>
     </div>
@@ -89,7 +89,7 @@
                                     <td class="tooltip">
                                         <button class="btn btn-orange" data-id="@item.Id"
                                                 onclick="APortalRolePermissions._APortalRolePermissions.View(@item.Id)">
-                                            <i class="fa-solid fa-circle-info"></i>
+                                            <i class="fa-solid fa-table-cells"></i>
                                             <span class="tooltip-text">View Role</span>
                                         </button>
                                     </td>
@@ -124,7 +124,7 @@
         <div class="modal-content">
             <div class="modal-header tooltip">
                 <h3>Page Permissions</h3>
-                <button class="btn btn-red dangermodal" onclick="APortalRolePermissions._APortalRolePermissions.closeModal();">
+                <button class="btn btn-danger dangermodal" onclick="APortalRolePermissions._APortalRolePermissions.closeModal();">
                     <i class="fa-solid fa-xmark"></i>
                     <span class="tooltip-text">Close</span>
                 </button>
@@ -157,5 +157,5 @@
         };    
     </script>
     @section Scripts {
-        <script src="~/Admin/js/RolePermissions.js" asp-append-version="true"></script>
+        <script src="~/Admin/Js/RolePermissions.js" asp-append-version="true"></script>
     }

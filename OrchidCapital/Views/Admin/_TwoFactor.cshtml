@@ -3,30 +3,31 @@
 }
 <style>
     /* Card */
-    .container {
+    .containerqr {
         width: 390px;
         background: white;
         padding: 25px;
         border-radius: 12px;
         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        min-height: 200px;
     }
 
-    h2 {
+     .containerqr h2 {
         text-align: center;
         margin-bottom: 15px;
     }
 
     /* Steps */
-    .step {
+    .containerqr .stepqr {
         display: none;
     }
 
-    .step.active {
+     .containerqr .stepqr.active {
         display: block;
     }
 
     /* Options */
-    .option {
+     .containerqr .option {
         padding: 10px;
         border: 1px solid #390077;
         border-radius: 8px;
@@ -36,21 +37,21 @@
         align-items: center;
     }
 
-    .option:hover {
+     .containerqr .option:hover {
         background: #eeebff;
     }
 
-    .step input[type="radio"] {
+     .containerqr .stepqr input[type="radio"] {
         margin-right: 10px;
         accent-color: #390077;
     }
 
     /* Buttons */
-    .step .btn {
+     .containerqr .stepqr .btn {
         width: 100%;
         padding: 10px;
         background: #390077;
-        color: white;
+        color: white !important;
         border: none;
         border-radius: 8px;
         margin-top: 12px;
@@ -58,33 +59,34 @@
         justify-content: center;
     }
 
-    .step .btn:hover {
+     .containerqr .stepqr .btn:hover {
         background: #390077;
+        color: #ccc !important;
     }
 
     /* QR Box */
-    .qr-box {
+     .containerqr .qr-box {
         text-align: center;
         padding: 15px;
     }
 
-    .qr-box img {
+     .containerqr .qr-box img {
         width: 180px;
         margin: 10px 0;
     }
 
     /* Input */
-    .step input[type="text"] {
+     .containerqr .stepqr input[type="text"] {
         width: 100%;
         padding: 10px;
         border-radius: 6px;
         border: 1px solid #ccc;
     }
 </style>
-<div class="container">
+<div class="containerqr">
     <h2>Two-Factor Authentication</h2>
     <!-- STEP 1 -->
-    <div class="step active" id="step1">
+    <div class="stepqr active" id="step1">
         <p>Select Device Type</p>
         <label class="option">
             <input type="radio" name="device">
@@ -98,7 +100,7 @@
     </div>
 
     <!-- STEP 2 -->
-    <div class="step" id="step2">
+    <div class="stepqr" id="step2">
         <p>Scan QR Code</p>
         <div class="qr-box">
             <img id="imgQRCode" src="" alt="QR Code">
@@ -108,7 +110,7 @@
     </div>
 
     <!-- STEP 3 -->
-    <div class="step" id="step3">
+    <div class="stepqr" id="step3">
         <p>Enter Verification Code</p>
         <form id="nav_twofactor_form" action="@Url.Action("TwoFactorAuthentication", "Admin")" method="post">
             @Html.AntiForgeryToken()
@@ -120,7 +122,7 @@
 </div>
 <script>
     function nextStep(step) {
-        document.querySelectorAll(".step").forEach(s => s.classList.remove("active"));
+        document.querySelectorAll(".stepqr").forEach(s => s.classList.remove("active"));
         document.getElementById("step" + step).classList.add("active");
     }
 </script>

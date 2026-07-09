@@ -251,7 +251,7 @@
                 </table>
 
                 <button type="button"
-                        class="removeGuarantor btn btn-red"
+                        class="removeGuarantor btn btn-danger"
                         onclick="AFinanceNewLoan._AFinanceNewLoan.RemoveGuarantor(this);">
                     <i class="fa-solid fa-remove"></i>
                 </button>

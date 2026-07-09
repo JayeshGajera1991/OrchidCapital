@@ -11,27 +11,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ================= ROOT ================= */
-:root {
-  --bg: #f4f7fb;
-  --card: #ffffff;
-  --sidebar: #ffffff;
-
-  --primary: #390077;
-  /* Indigo */
-  --secondary: #26014e;
-  /* Blue */
-
-  --accent-light: #EEEBFF;
-
-  --text-main: #5d4e6e;
-  --text-muted: #6b7280;
-
-  --border: #e5e7eb;
-
-  --radius: 14px;
-}
-
 /* ================= BODY ================= */
 body {
   background: var(--bg);
@@ -623,28 +602,8 @@ tbody tr:hover {
 }
 
 .guarantor-card-main {
-  height: calc(100vh - 400px);
-  overflow: auto;
-}
-
-
-
-:root {
-  --primary: #6657d9;
-  --primary-dark: #4d40ba;
-  --primary-light: #eeebff;
-  --sidebar: #18244a;
-  --body-bg: #f5f7fb;
-  --text: #20253b;
-  --muted: #7b8197;
-  --border: #edf0f5;
-  --success: #1aaf6c;
-  --success-light: #e5f9ef;
-  --warning: #f39a31;
-  --warning-light: #fff1df;
-  --danger: #e65252;
-  --danger-light: #ffe7e7;
-  --white: #ffffff;
+  /* height: calc(100vh - 400px);
+  overflow: auto; */
 }
 
 * {

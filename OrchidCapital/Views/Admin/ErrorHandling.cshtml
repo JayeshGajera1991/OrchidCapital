@@ -17,7 +17,7 @@
                 <button type="button" class="search_close_btn btn hidden" onclick="APortalModule._APortalMaster.SearchBoxReset('ErrorHandlingSearch',APortalErrorHandling._APortalErrorHandling)">X</button>
             </div>            
             <div class="page-actions tooltip">
-                <button class="btn btn-purple" onclick="APortalErrorHandling._APortalErrorHandling.ExportToExcel('APortal_ErrorLog', 'Error Handling List');">
+                <button class="btn btn-secondary" onclick="APortalErrorHandling._APortalErrorHandling.ExportToExcel('APortal_ErrorLog', 'Error Handling List');">
                     <i class="fa-solid fa-file-excel"></i>
                     <span class="tooltip-text">Export to Excel</span>
                 </button>
@@ -108,5 +108,5 @@
     };    
 </script>
 @section Scripts {
-    <script src="~/Admin/js/ErrorHandling.js" asp-append-version="true"></script>
+    <script src="~/Admin/Js/ErrorHandling.js" asp-append-version="true"></script>
 }

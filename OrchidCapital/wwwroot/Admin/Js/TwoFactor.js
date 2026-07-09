@@ -67,7 +67,7 @@
                 // Base64 QR Image
                 var qrImage = response.qrCodeUrl;
                 $(`#imgQRCode`).attr('src', qrImage);
-                document.querySelectorAll(".step").forEach(s => s.classList.remove("active"));
+                document.querySelectorAll(".stepqr").forEach(s => s.classList.remove("active"));
                 document.getElementById("step" + step).classList.add("active");
             }
         });
@@ -75,7 +75,7 @@
 
     _APortalTwoFactor.prototype.VerificationCode = function (step) {
         $(`${_root} #txtVerificationCode`).val('');
-        document.querySelectorAll(".step").forEach(s => s.classList.remove("active"));
+        document.querySelectorAll(".stepqr").forEach(s => s.classList.remove("active"));
         document.getElementById("step" + step).classList.add("active");
     }
 
