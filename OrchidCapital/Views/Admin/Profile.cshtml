@@ -1,5 +1,6 @@
 @{
   ViewData["Title"] = "Profile";
+  Layout = "_LayoutAdmin";
   string imagePath = User.FindFirst(System.Security.Claims.ClaimTypes.GivenName)?.Value ?? string.Empty;
 }
 @model OrchidCapital.Models.GetUserDetailsResponseModel

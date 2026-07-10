@@ -4,12 +4,14 @@
     <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <RootNamespace>OrchidCapital</RootNamespace>  
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="ClosedXML" Version="0.105.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.0" />
     <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="10.0.9" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="10.0.9" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
     <PackageReference Include="PemUtils" Version="3.0.0.82" />
     <PackageReference Include="TwoFactorAuth.Net.QRCoder" Version="1.0.2" />

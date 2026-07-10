@@ -36,10 +36,16 @@ builder.Services.AddControllers(options =>
     });
 #endregion
 
-
+builder.Services.AddLocalization(options =>
+{
+    options.ResourcesPath = "Resources";
+});
 
 // Add services to the container.
-var mvcBuilder = builder.Services.AddControllersWithViews();
+var mvcBuilder = builder.Services
+    .AddControllersWithViews()
+    .AddViewLocalization()
+    .AddDataAnnotationsLocalization();
 
 #if DEBUG
 mvcBuilder.AddRazorRuntimeCompilation();
@@ -103,12 +109,36 @@ if (allowBasePath && !string.IsNullOrWhiteSpace(basePath))
 builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
-
 app.UseForwardedHeaders();
+var supportedCultures = new[]
+{
+    new CultureInfo("en"),
+    new CultureInfo("hi"),
+    new CultureInfo("gu"),
+    new CultureInfo("mr")
+};
+
+var localizationOptions = new RequestLocalizationOptions
+{
+    DefaultRequestCulture = new RequestCulture("en"),
+    SupportedCultures = supportedCultures,
+    SupportedUICultures = supportedCultures
+};
+
+localizationOptions.RequestCultureProviders = new List<IRequestCultureProvider>
+{
+    new CookieRequestCultureProvider(),
+    new QueryStringRequestCultureProvider(),
+    new AcceptLanguageHeaderRequestCultureProvider()
+};
+
+app.UseRequestLocalization(localizationOptions);
+
 app.UseSession();
-//app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 
 app.UseStaticFiles();
+
 app.UseRouting();
 if (allowBasePath && !string.IsNullOrWhiteSpace(basePath))
 {
@@ -122,25 +152,11 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-var culture = new CultureInfo("en-IN");
-
-var localizationOptions = new RequestLocalizationOptions
-{
-    DefaultRequestCulture = new RequestCulture(culture),
-    SupportedCultures = new[] { culture },
-    SupportedUICultures = new[] { culture }
-};
-
-app.UseRequestLocalization(localizationOptions);
-//app.UseHttpsRedirection();
-app.UseStaticFiles();
-
-app.UseRouting();
 
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Login}/{action=Login}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

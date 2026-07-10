@@ -11,6 +11,9 @@ E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\OrchidCapital.deps
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\OrchidCapital.runtimeconfig.json
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\OrchidCapital.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\OrchidCapital.pdb
+E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\gu\OrchidCapital.resources.dll
+E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\hi\OrchidCapital.resources.dll
+E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\mr\OrchidCapital.resources.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Antiforgery.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\refs\Microsoft.AspNetCore.Authentication.BearerToken.dll
@@ -126,8 +129,6 @@ E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\refs\Microsoft.Ext
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\refs\Microsoft.Extensions.Http.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\refs\Microsoft.Extensions.Identity.Core.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\refs\Microsoft.Extensions.Identity.Stores.dll
-E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\refs\Microsoft.Extensions.Localization.Abstractions.dll
-E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\refs\Microsoft.Extensions.Localization.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\refs\Microsoft.Extensions.Logging.Configuration.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\refs\Microsoft.Extensions.Logging.Console.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\refs\Microsoft.Extensions.Logging.Debug.dll
@@ -322,6 +323,8 @@ E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensio
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.Localization.dll
+E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.Localization.Abstractions.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
@@ -366,6 +369,11 @@ E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\zh-Hant\Microsoft.
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\runtimes\unix\lib\netcoreapp2.0\System.Drawing.Common.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.0\System.Drawing.Common.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.csproj.AssemblyReference.cache
+E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.Resources.Resources.SharedResource.resources
+E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.Resources.Resources.SharedResource.gu.resources
+E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.Resources.Resources.SharedResource.hi.resources
+E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.Resources.Resources.SharedResource.mr.resources
+E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.csproj.GenerateResource.cache
 E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.GeneratedMSBuildEditorConfig.editorconfig
 E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.AssemblyInfoInputs.cache
 E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.AssemblyInfo.cs
@@ -375,6 +383,12 @@ E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.MvcA
 E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.RazorAssemblyInfo.cache
 E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.RazorAssemblyInfo.cs
 E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.sourcelink.json
+E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\gu\OrchidCapital.resources.cs
+E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\gu\OrchidCapital.resources.dll
+E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\hi\OrchidCapital.resources.cs
+E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\hi\OrchidCapital.resources.dll
+E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\mr\OrchidCapital.resources.cs
+E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\mr\OrchidCapital.resources.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\staticwebassets.build.json
 E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\staticwebassets.development.json
 E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\staticwebassets\msbuild.OrchidCapital.Microsoft.AspNetCore.StaticWebAssets.props

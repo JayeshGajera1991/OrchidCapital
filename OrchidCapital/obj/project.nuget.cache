@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "z1O9v6jvZyrnU/0vFAs7KW3utpZUDb4IMKPFYFmq4oAZ5L+mNHRazbO8XmVVQvvjDcYg/xNJzt37SlXTSbhTfA==",
+  "dgSpecHash": "bIjfR3mCOOYT/zE2teCkMSdm+Agn6zGfmZCLHO6uyFxF2xTOc46H92rQME28scAmJxEUJMmVi8VBnlfXrepKHg==",
   "success": true,
   "projectFilePath": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\OrchidCapital.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,8 @@
     "C:\\Users\\JGajera\\.nuget\\packages\\microsoft.extensions.caching.stackexchangeredis\\10.0.9\\microsoft.extensions.caching.stackexchangeredis.10.0.9.nupkg.sha512",
     "C:\\Users\\JGajera\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.9\\microsoft.extensions.dependencyinjection.abstractions.10.0.9.nupkg.sha512",
     "C:\\Users\\JGajera\\.nuget\\packages\\microsoft.extensions.dependencymodel\\8.0.0\\microsoft.extensions.dependencymodel.8.0.0.nupkg.sha512",
+    "C:\\Users\\JGajera\\.nuget\\packages\\microsoft.extensions.localization\\10.0.9\\microsoft.extensions.localization.10.0.9.nupkg.sha512",
+    "C:\\Users\\JGajera\\.nuget\\packages\\microsoft.extensions.localization.abstractions\\10.0.9\\microsoft.extensions.localization.abstractions.10.0.9.nupkg.sha512",
     "C:\\Users\\JGajera\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\10.0.9\\microsoft.extensions.logging.abstractions.10.0.9.nupkg.sha512",
     "C:\\Users\\JGajera\\.nuget\\packages\\microsoft.extensions.options\\10.0.9\\microsoft.extensions.options.10.0.9.nupkg.sha512",
     "C:\\Users\\JGajera\\.nuget\\packages\\microsoft.extensions.primitives\\10.0.9\\microsoft.extensions.primitives.10.0.9.nupkg.sha512",

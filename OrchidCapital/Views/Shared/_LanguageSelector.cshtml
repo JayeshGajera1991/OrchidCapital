@@ -1,0 +1,41 @@
+@{
+    var currentCulture = Context.Features
+        .Get<IRequestCultureFeature>()?
+        .RequestCulture
+        .Culture
+        .TwoLetterISOLanguageName ?? "en";
+
+    var returnUrl = Context.Request.Path + Context.Request.QueryString;
+}
+
+<form asp-controller="Home"
+      asp-action="SetLanguage"
+      method="post"
+      id="languageForm">
+
+    @Html.AntiForgeryToken()
+
+    <input type="hidden" name="returnUrl" value="@returnUrl" />
+
+    <select name="culture"
+            id="culture"
+            class="form-select"
+            onchange="this.form.submit()">
+
+        <option value="en" selected="@(currentCulture == "en")">
+            English
+        </option>
+
+        <option value="hi" selected="@(currentCulture == "hi")">
+            हिंदी
+        </option>
+
+        <option value="gu" selected="@(currentCulture == "gu")">
+            ગુજરાતી
+        </option>
+
+        <option value="mr" selected="@(currentCulture == "mr")">
+            मराठी
+        </option>
+    </select>
+</form>

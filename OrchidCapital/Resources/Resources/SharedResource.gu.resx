@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="ApplicationName" xml:space="preserve"><value>લોન મેનેજમેન્ટ સિસ્ટમ</value></data>
+  <data name="Dashboard" xml:space="preserve"><value>ડેશબોર્ડ</value></data>
+  <data name="WelcomeMessage" xml:space="preserve"><value>લોન મેનેજમેન્ટ સિસ્ટમમાં આપનું સ્વાગત છે</value></data>
+  <data name="Save" xml:space="preserve"><value>સાચવો</value></data>
+  <data name="Cancel" xml:space="preserve"><value>રદ કરો</value></data>
+  <data name="Submit" xml:space="preserve"><value>સબમિટ કરો</value></data>
+  <data name="Name" xml:space="preserve"><value>નામ</value></data>
+  <data name="Email" xml:space="preserve"><value>ઇમેઇલ સરનામું</value></data>
+  <data name="MobileNumber" xml:space="preserve"><value>મોબાઇલ નંબર</value></data>
+  <data name="ContactUs" xml:space="preserve"><value>સંપર્ક કરો</value></data>
+  <data name="SelectLanguage" xml:space="preserve"><value>ભાષા પસંદ કરો</value></data>
+  <data name="English" xml:space="preserve"><value>અંગ્રેજી</value></data>
+  <data name="Hindi" xml:space="preserve"><value>હિન્દી</value></data>
+  <data name="Gujarati" xml:space="preserve"><value>ગુજરાતી</value></data>
+  <data name="Marathi" xml:space="preserve"><value>મરાઠી</value></data>
+  <data name="RequiredName" xml:space="preserve"><value>નામ જરૂરી છે</value></data>
+  <data name="RequiredEmail" xml:space="preserve"><value>ઇમેઇલ સરનામું જરૂરી છે</value></data>
+  <data name="InvalidEmail" xml:space="preserve"><value>કૃપા કરીને માન્ય ઇમેઇલ સરનામું દાખલ કરો</value></data>
+</root>
