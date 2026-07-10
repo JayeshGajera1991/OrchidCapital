@@ -241,7 +241,7 @@ namespace OrchidCapital.Controllers
                     request.IsActive = true;
                     if (request.Id == 0)
                     {
-                        request.EncPassword = Encryption.Encrypt(Environment.GetEnvironmentVariable("USR_ENC_KEY"), request.FirstName + "@123");
+                        request.EncPassword = Encryption.Encrypt(_configuration["USR_ENC_KEY"], request.FirstName + "@123");
                     }
                     if (request.RoleId == 4) // If the role is "Agent", set the ReferenceCode to the user's serial number
                     {
@@ -424,7 +424,7 @@ namespace OrchidCapital.Controllers
                     request.IsActive = true;
                     if (request.Id == 0)
                     {
-                        request.EncPassword = Encryption.Encrypt(Environment.GetEnvironmentVariable("USR_ENC_KEY"), request.FirstName + "@123");
+                        request.EncPassword = Encryption.Encrypt(_configuration["USR_ENC_KEY"], request.FirstName + "@123");
                     }
                     if (User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value == "Power" && request.RoleId == 4) // If the role is "Agent", set the ReferenceCode to the user's serial number
                     {
@@ -1714,7 +1714,7 @@ namespace OrchidCapital.Controllers
                         if (response != null && response.IsSuccessStatusCode)
                         {
                             string encryptedPassword = response.Response[0].EncPassword.ToString();
-                            string decryptedPassword = Encryption.Decrypt(Environment.GetEnvironmentVariable("USR_ENC_KEY"), encryptedPassword);
+                            string decryptedPassword = Encryption.Decrypt(_configuration["USR_ENC_KEY"], encryptedPassword);
                             if (request.CurrentPassword != decryptedPassword)
                             {
                                 request.ErrorMessage = "Invalid username or password.";
@@ -1729,8 +1729,8 @@ namespace OrchidCapital.Controllers
 
                         request.UserName = UserName;
                         request.UserRole = UserRole;
-                        request.CurrentPassword = Encryption.Encrypt(Environment.GetEnvironmentVariable("USR_ENC_KEY"), request.CurrentPassword);
-                        request.NewPassword = Encryption.Encrypt(Environment.GetEnvironmentVariable("USR_ENC_KEY"), request.NewPassword);
+                        request.CurrentPassword = Encryption.Encrypt(_configuration["USR_ENC_KEY"], request.CurrentPassword);
+                        request.NewPassword = Encryption.Encrypt(_configuration["USR_ENC_KEY"], request.NewPassword);
                         var response1 = await _OrchidClient.PostAsync<dynamic>(ProxyAPI.ChangePassword, request);
                         if (response1 != null && response1.IsSuccessStatusCode)
                         {
@@ -1842,7 +1842,7 @@ namespace OrchidCapital.Controllers
                         if (response != null && response.IsSuccessStatusCode)
                         {
                             string encryptedPassword = response.Response[0].EncPassword.ToString();
-                            string decryptedPassword = Encryption.Decrypt(Environment.GetEnvironmentVariable("USR_ENC_KEY"), encryptedPassword);
+                            string decryptedPassword = Encryption.Decrypt(_configuration["USR_ENC_KEY"], encryptedPassword);
                             if (request.NewPassword != decryptedPassword)
                             {
                                 request.ErrorMessage = "Invalid username or password.";
@@ -1854,7 +1854,7 @@ namespace OrchidCapital.Controllers
                             request.ErrorMessage = "Invalid username or password.";
                             return View(request);
                         }
-                        request.NewPassword = Encryption.Encrypt(Environment.GetEnvironmentVariable("USR_ENC_KEY"), request.NewPassword);
+                        request.NewPassword = Encryption.Encrypt(_configuration["USR_ENC_KEY"], request.NewPassword);
                         var response1 = await _OrchidClient.PostAsync<dynamic>(ProxyAPI.ForgotPassword, request);
                         if (response1 != null && response1.IsSuccessStatusCode)
                         {

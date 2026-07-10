@@ -34,7 +34,7 @@
                         <div class="action-menu">
                             @if (item.LoanStep < 4)
                             {
-                                <div onclick="AFinanceApplicationList._AFinanceApplicationList.Edit('@item.LoanApplicationId','@item.LoanStep')">
+                                <div id="edit-@item.LoanApplicationId" onclick="AFinanceApplicationList._AFinanceApplicationList.Edit('@item.LoanApplicationId','@item.LoanStep')">
                                     <i class="fa-solid fa-pen-to-square"></i> Edit
                                 </div>
                             }
@@ -43,7 +43,7 @@
                                 @item.Status
                             </div> *@
 
-                            <div onclick="AFinanceApplicationList._AFinanceApplicationList.Delete('@item.LoanApplicationId')">
+                            <div id="remove-@item.LoanApplicationId" onclick="AFinanceApplicationList._AFinanceApplicationList.Delete('@item.LoanApplicationId')">
                                 <i class="fa-solid fa-trash"></i> Delete
                             </div>
                         </div>

@@ -44,7 +44,6 @@ docker compose restart orchid-api
 ## Summary of other fixes applied during the troubleshooting session
 
 - Fixed login encryption contract: the dashboard previously re-encrypted the password before calling the API. The dashboard now sends the plaintext password over HTTPS to the API and the API performs expected encryption/decryption flow internally. See `OrchidCapital/Controllers/LoginController.cs` for the change.
-- Implemented RSA transit encryption: the dashboard now encrypts the password with the API public key before POSTing to `AuthenticateUser`. The API decrypts the password with its private key (mounted at `./OrchidCapital/Helper/private.pem`) before validating against the database. This prevents sending raw plaintext across the network.
 - Shared DataProtection key ring: `./docker/dataprotection-keys` is mounted into both services so antiforgery tokens and authentication cookies are validated across containers.
 - Restored host DB into container: backup and restore scripts were added/updated under `docker/` (see `docker/backup-host-db.ps1` and `docker/restore-to-container.ps1`).
 - Fixed Linux case-sensitivity for static paths: several views were updated to reference `~/Admin/Js/...` (capitalization matched), and `wwwroot/Admin/js` was created to ensure the files are served on Linux containers.

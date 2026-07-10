@@ -35,7 +35,7 @@ namespace OrchidCapital.Controllers
             LoginViewModel model = new LoginViewModel();
             try
             {
-                string key = Environment.GetEnvironmentVariable("USR_ENC_KEY");
+                string key = _configuration["USR_ENC_KEY"];
                 if (string.IsNullOrEmpty(key))
                 {
                     throw new Exception("USR_ENC_KEY not found");
@@ -105,7 +105,7 @@ namespace OrchidCapital.Controllers
                         if (response != null && response.IsSuccessStatusCode)
                         {
                             string encryptedPassword = response.Response[0].EncPassword.ToString();
-                            string currentKey = Environment.GetEnvironmentVariable("USR_ENC_KEY");
+                            string currentKey = _configuration["USR_ENC_KEY"];
 
                             string decryptedPassword = Encryption.Decrypt(
                                 currentKey,
@@ -126,25 +126,12 @@ namespace OrchidCapital.Controllers
                             model.ErrorMessage = "Invalid username or password.";
                             return View(model);
                         }
-                        // Encrypt password for transit using API public key, then call API
-                        string originalPassword = model.Password;
-                        try
-                        {
-                            var encryptedForTransit = _rsaService.Encrypt(model.Password);
-                            if (!string.IsNullOrEmpty(encryptedForTransit))
-                            {
-                                model.Password = encryptedForTransit;
-                            }
-                        }
-                        catch { }
-
+                        // Do not re-encrypt password here — API expects plaintext password
+                        // Call API to Authenticate User
                         var result = await _OrchidClient.PostAsync<LoginResponse>(
                             ProxyAPI.AuthenticateUser,
                             model
                         );
-
-                        // restore local plaintext password
-                        model.Password = originalPassword;
                         var lst = new List<LoginResponse>();
                         if (result != null && result.IsSuccessStatusCode)
                         {
@@ -222,7 +209,7 @@ namespace OrchidCapital.Controllers
                                     new Claim(
                                         ClaimTypes.UserData,
                                         Encryption.Encrypt(
-                                            Environment.GetEnvironmentVariable("USR_ENC_KEY"),
+                                            _configuration["USR_ENC_KEY"],
                                             JsonConvert.SerializeObject(lstMenuItems)
                                         )
                                     ),
@@ -447,7 +434,7 @@ namespace OrchidCapital.Controllers
                         if (response != null && response.IsSuccessStatusCode)
                         {
                             string encryptedPassword = response.Response[0].EncPassword.ToString();
-                            string decryptedPassword = Encryption.Decrypt(Environment.GetEnvironmentVariable("USR_ENC_KEY"), encryptedPassword);
+                            string decryptedPassword = Encryption.Decrypt(_configuration["USR_ENC_KEY"], encryptedPassword);
                             if (request.CurrentPassword != decryptedPassword)
                             {
                                 request.ErrorMessage = "Invalid username or password.";
@@ -462,8 +449,8 @@ namespace OrchidCapital.Controllers
 
                         request.UserName = User.FindFirst(System.Security.Claims.ClaimTypes.Name)?.Value;
                         request.UserRole = User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value;
-                        request.CurrentPassword = Encryption.Encrypt(Environment.GetEnvironmentVariable("USR_ENC_KEY"), request.CurrentPassword);
-                        request.NewPassword = Encryption.Encrypt(Environment.GetEnvironmentVariable("USR_ENC_KEY"), request.NewPassword);
+                        request.CurrentPassword = Encryption.Encrypt(_configuration["USR_ENC_KEY"], request.CurrentPassword);
+                        request.NewPassword = Encryption.Encrypt(_configuration["USR_ENC_KEY"], request.NewPassword);
                         var response1 = await _OrchidClient.PostAsync<dynamic>(ProxyAPI.ChangePassword, request);
                         if (response1 != null && response1.IsSuccessStatusCode)
                         {

@@ -1,7 +1,6 @@
 ﻿using Dapper;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
-using Orchid.UtilityHelper;
 using System.Data;
 
 namespace Orchid.DataAccess
@@ -106,7 +105,7 @@ namespace Orchid.DataAccess
             var decryptedConnectionString = string.Empty;
             try
             {
-                // var key = Environment.GetEnvironmentVariable("USR_ENC_KEY");
+                // var key = _config["USR_ENC_KEY"];
                 // if (!string.IsNullOrEmpty(key))
                 // {
                 //     decryptedConnectionString = Encryption.Decrypt(key, connectionString);

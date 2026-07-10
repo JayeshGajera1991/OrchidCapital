@@ -234,3 +234,4 @@ E:\OrchidCapital\OrchidCapital\OrchidCapitalCoreAPI\obj\Debug\net8.0\refint\Orch
 E:\OrchidCapital\OrchidCapital\OrchidCapitalCoreAPI\obj\Debug\net8.0\OrchidCapitalCoreAPI.pdb
 E:\OrchidCapital\OrchidCapital\OrchidCapitalCoreAPI\obj\Debug\net8.0\OrchidCapitalCoreAPI.genruntimeconfig.cache
 E:\OrchidCapital\OrchidCapital\OrchidCapitalCoreAPI\obj\Debug\net8.0\ref\OrchidCapitalCoreAPI.dll
+E:\OrchidCapital\OrchidCapital\OrchidCapitalCoreAPI\bin\Debug\net8.0\appsettings.Production.json

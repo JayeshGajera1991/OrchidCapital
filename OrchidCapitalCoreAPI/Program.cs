@@ -48,8 +48,6 @@ builder.Services.AddScoped<ILoginRepository, LoginRepository>();
 builder.Services.AddScoped<IAdminRepository, AdminRepository>();
 builder.Services.AddScoped<IFinanceRepository, FinanceRepository>();
 builder.Services.AddScoped<IDashboardRepository, DashboardRepository>();
-// RSA helper to decrypt incoming encrypted payloads
-builder.Services.AddScoped<OrchidCapitalCoreAPI.Helper.RsaService>();
 #region configure email keys
 builder.Services.Configure<EmailConfiguration>(builder.Configuration.GetSection("EMAIL-CONFIG"));
 
