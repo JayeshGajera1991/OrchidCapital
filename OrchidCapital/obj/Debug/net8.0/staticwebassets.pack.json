@@ -133,6 +133,14 @@
       "PackagePath": "staticwebassets\\ImageUploads\\0bf2515d-fd65-4050-8b68-0827b1f20e02.webp"
     },
     {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Images\\orchid-capital-logo.jpeg",
+      "PackagePath": "staticwebassets\\Images\\orchid-capital-logo.jpeg"
+    },
+    {
+      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Images\\orchid-capital-logo.png",
+      "PackagePath": "staticwebassets\\Images\\orchid-capital-logo.png"
+    },
+    {
       "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

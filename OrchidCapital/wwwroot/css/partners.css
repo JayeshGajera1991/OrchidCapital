@@ -1,0 +1,208 @@
+.partners-section {
+  padding: 110px 6%;
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+}
+
+.partners-wrapper {
+  max-width: 1250px;
+  margin: auto;
+  text-align: center;
+}
+
+/* Header */
+.partners-header h2 {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+  background: linear-gradient(135deg, #0E69F1, #631988);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.partners-line {
+  width: 70px;
+  height: 3px;
+  margin: 16px auto;
+  background: linear-gradient(90deg, #0E69F1, #9724a7);
+  border-radius: 10px;
+}
+
+.partners-header p {
+  font-size: 15px;
+  color: #64748b;
+  margin-bottom: 55px;
+}
+
+/* Scroll */
+.partners-scroll {
+  overflow-y: hidden;   /* ⭐ prevents vertical interference */
+}
+
+.partners-scroll {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  overflow-x: auto;
+  scroll-behavior: auto;   /* ⭐ disable smooth here */
+  padding: 10px 4px 18px;
+
+  will-change: scroll-position;
+}
+.partner-card {
+  transform: translateZ(0);
+}
+
+
+.partners-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cards */
+.partner-card {
+  min-width: 240px;
+  text-align: left;
+  border-radius: 22px;
+  padding: 24px 20px 18px;
+  color: white;
+
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.25);
+
+  
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.partner-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 20%,
+    rgba(255,255,255,0.25),
+    transparent 80%
+  );
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+
+.partner-card:hover::before {
+  opacity: 1;
+}
+
+.partner-card i {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.partner-card h4 {
+  font-size: 16px;
+  font-weight: 650;
+  margin-bottom: 6px;
+}
+
+.partner-card p {
+  font-size: 13.8px;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.partner-card span {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Unique Colors */
+.banks { background: linear-gradient(135deg, #0E69F1, #1d4ed8); }
+.nbfc { background: linear-gradient(135deg, #7c3aed, #5b21b6); }
+.sidbi { background: linear-gradient(135deg, #059669, #047857); }
+.coop { background: linear-gradient(135deg, #d97706, #b45309); }
+.investors { background: linear-gradient(135deg, #db2777, #9d174d); }
+
+/* ===== CONNECTOR ===== */
+
+.connector {
+  min-width: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.connector i {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+  color: #6366f1;
+
+  box-shadow: 0 8px 20px rgba(15,23,42,0.15);
+  transition: all 0.35s ease;
+}
+
+.connector i:hover {
+  transform: rotate(18deg) scale(1.15);
+  box-shadow: 0 12px 28px rgba(99,102,241,0.35);
+}
+
+/* Controls */
+.scroll-controls {
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.scroll-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 10px 22px rgba(15,23,42,0.12);
+  transition: 0.3s ease;
+}
+
+.scroll-btn:hover {
+  transform: scale(1.08);
+}
+
+.scroll-btn i {
+  font-size: 14px;
+  color: #475569;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .partner-card {
+    min-width: 85%;
+  }
+
+  .connector {
+    min-width: 34px;
+  }
+
+  .connector i {
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+  }
+}

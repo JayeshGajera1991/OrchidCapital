@@ -10,39 +10,13 @@
     <link href="~/Admin/css/select2.min.css" rel="stylesheet" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/toastr.min.css" asp-append-version="true" />
+    <link rel="preload" as="image" href="img/heron1.png">
 </head>
 
 <body id="common-uportal-wrapper">
-    <div class="overlay" id="overlay"></div>
-    <div class="dashboard">
-        <aside class="sidebar" id="sidebar">
-            @* <button class="close-sidebar" id="closeSidebar">
-                <i class="fa-solid fa-xmark"></i>
-            </button> *@
-            <!-- FIXED LOGO -->
-            @* <div class="sidebar-header">
-                <div class="logo">OC</div>
-            </div> *@
-            <!-- SCROLLABLE MENU -->
-            @* <div class="sidebar-menu">
-                <partial name="_AdminMenu" />
-            </div> *@
-        </aside>
-        <div class="main">
-            <div class="language-wrapper">
-                <partial name="_LanguageSelector" />
-            </div>
-            @* <partial name="_AdminHeader" /> *@
-            <section class="content">
-                @RenderBody()
-            </section>
-            <div id="customTooltip"></div>
-        </div>
-        @* <partial name="_AdminFooter" />
-        <partial name="_ValidationScriptsPartial" />
-        <partial name="_AdminScripts" /> *@
-        @await RenderSectionAsync("Scripts", required: false)
-    </div>
+    <partial name="_UserHeader" />   
+    @RenderBody()   
+   <partial name="_UserFooter" />
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
-
 </html>

@@ -1,0 +1,351 @@
+ .funding-showcase {
+  padding: 70px 6%;
+  text-align: center;
+  background: linear-gradient(135deg, #f8fafc, #eef2ff);
+}
+
+/* TITLE */
+.showcase-title {
+  font-size: 46px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #0E69F1, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* SUBTITLE */
+.showcase-subtitle {
+  margin-top: 6px;
+  font-size: 15px;
+  color: #64748b;
+}
+/* ================= OPTION BAR – BANK GRADE ================= */
+
+.showcase-options {
+  margin-top: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #475569;
+}
+
+/* Individual option */
+.option {
+  position: relative;
+  cursor: pointer;
+  padding: 6px 2px;
+  letter-spacing: 0.2px;
+  transition: 0.25s ease;
+  color: #64748b;
+}
+
+/* Hover */
+.option:hover {
+  color: #0E69F1;
+}
+
+/* Active */
+.option.active {
+  color: #0E69F1;
+  font-weight: 600;
+}
+
+/* Underline animation */
+.option::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #0E69F1, #7c3aed);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.option:hover::after {
+  width: 100%;
+}
+
+.option.active::after {
+  width: 100%;
+}
+
+/* Divider */
+.divider {
+  width: 1px;
+  height: 16px;
+  background: linear-gradient(to bottom, transparent, #cbd5f5, transparent);
+}
+
+
+/* Horizontal Line */
+.showcase-line {
+  margin: 18px auto 26px;
+  width: 520px;
+  max-width: 90%;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+/* CARDS WRAPPER */
+.showcase-cards-wrapper {
+  overflow: hidden;
+}
+
+
+
+/* CARD */
+/* ================= CARDS – PREMIUM SIZE ================= */
+
+.showcase-card {
+  min-width: 340px;     /* ⭐ bigger */
+  padding: 26px;
+  border-radius: 22px;
+
+  backdrop-filter: blur(16px);
+  background: rgba(255,255,255,0.7);
+
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+
+  opacity: 0.35;
+  transform: scale(0.92);
+  transition: 0.35s ease;
+}
+
+.showcase-card.active {
+  opacity: 1;
+  transform: scale(0.96);
+}
+
+/* Typography */
+.showcase-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.showcase-card p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* NAV DOTS */
+.showcase-nav {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.showcase-cards-wrapper {
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0;
+}
+
+.showcase-cards {
+  display: flex;
+  gap: 18px;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+   padding: 0 calc(50% - 130px);  
+}
+
+.showcase-card {
+  min-width: 260px;
+  padding: 20px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: left;
+  opacity: 0.35;
+  transform: scale(0.96);
+  transition: 0.35s ease;
+}
+.showcase-cards-wrapper {
+  overflow: hidden;
+  position: relative;
+}
+
+
+
+/* Bottom arrows */
+.showcase-arrows {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.showcase-arrows button {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid #e2e8f0;
+  background: white;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.showcase-arrows button:hover {
+  background: #0E69F1;
+  color: white;
+  border-color: #0E69F1;
+  transform: translateY(-1px);
+}
+
+/* ================= CARD COLOR TONES ================= */
+
+.tone-blue {
+  background: linear-gradient(135deg, #eff6ff, #dbeafe);
+}
+
+.tone-purple {
+  background: linear-gradient(135deg, #f5f3ff, #ede9fe);
+}
+
+.tone-cyan {
+  background: linear-gradient(135deg, #ecfeff, #cffafe);
+}
+
+.tone-gold {
+  background: linear-gradient(135deg, #fffbeb, #fef3c7);
+}
+
+.tone-emerald {
+  background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+}
+
+/* ================= PREMIUM CARD LAYOUT ================= */
+
+.showcase-card {
+  flex: 0 0 340px;   /* ⭐ CRITICAL → fixed width in flex layout */
+  padding: 26px;
+  border-radius: 22px;
+  backdrop-filter: blur(16px);
+  background: rgba(255,255,255,0.7);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+
+  opacity: 0.35;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+
+
+
+/* Top section */
+.card-top {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 160px;
+}
+
+/* Image */
+.card-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: 0.4s ease;
+}
+
+
+
+/* Icon bubble */
+.card-icon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 16px;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Body */
+.card-body {
+  padding: 14px 6px 6px;
+  text-align: left;
+}
+
+.card-body h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.card-body p {
+  margin-top: 4px;
+  font-size: 13.5px;
+  color: #64748b;
+  line-height: 1.5;
+}
+.card-icon i {
+  transform: scale(0.95);
+  transition: 0.25s ease;
+}
+
+
+
+/* APPLY BUTTON */
+.card-apply {
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  border: none;
+  background: linear-gradient(135deg, #0E69F1, #7c3aed);
+  color: white;
+
+  padding: 8px 14px;
+  border-radius: 10px;
+
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+
+  cursor: pointer;
+  transition: 0.25s ease;
+
+  box-shadow: 0 6px 18px rgba(14,105,241,0.25);
+}
+
+/* Hover */
+.card-apply:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(124,58,237,0.35);
+}
+
+/* Icon micro-motion */
+.card-apply i {
+  font-size: 11px;
+  transition: 0.25s ease;
+}
+
+.card-apply:hover i {
+  transform: translateX(2px);
+}

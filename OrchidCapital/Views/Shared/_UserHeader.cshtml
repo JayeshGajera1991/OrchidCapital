@@ -1,0 +1,215 @@
+<link rel="stylesheet" href="~/css/header.css" asp-append-version="true" />
+<header class="top-header">
+    <div class="header-left">
+        <img src="img/logo.png" alt="Logo" class="logo">
+
+        <div class="business-trigger">
+            <button class="business-btn" id="businessBtn">
+                <i class="fa-solid fa-briefcase"></i>
+                Business
+                <i class="fa-solid fa-chevron-down biz-arrow"></i>
+            </button>
+        </div>
+    </div>
+    <nav class="header-nav">
+        <a href="#">Resources</a>
+        <div class="about-container">
+            <div class="about-trigger" id="aboutToggle">
+                <i class="fa-solid fa-star"></i>
+                <span>What's Special About Us</span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+            <!-- CLICK PANEL -->
+            <div class="about-panel" id="aboutPanel">
+                <div class="panel-logos">
+                    <img src="img/logo.png" class="logo-original" alt="Logo">
+                    <img src="img/logo.png" class="logo-white" alt="Logo">
+                </div>
+                <p>
+                    Orchid Capital blends innovation, security, and trust
+                    to deliver a next-generation premium banking experience.
+                </p>
+                <!-- NEW BUTTON -->
+                <button class="know-more-btn">
+                    Know More
+                </button>
+            </div>
+        </div>
+        <a href="#" class="help-link">
+            <i class="fa-solid fa-phone"></i>
+            +91 98765 43210
+        </a>
+        <div class="lang-dropdown" id="langDropdown">
+            @* <button class="lang-btn" id="langBtn">
+                <i class="fa-solid fa-globe"></i>
+                English
+                <i class="fa-solid fa-chevron-down lang-arrow"></i>
+            </button> *@
+            <div class="language-wrapper">
+                <partial name="_LanguageSelector" />
+            </div>
+        </div>
+        <button class="login-btn">Login</button>
+    </nav>
+    <div class="mobile-right">
+        <button class="call-btn">
+            <i class="fa-solid fa-phone"></i>
+        </button>
+        <button class="login-btn">
+            Login
+        </button>
+        <button class="hamburger-btn" id="hamburgerBtn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+</header>
+@Html.Partial("_UserHeroICICI")
+@Html.Partial("_UserSuperBusinessMega")
+
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-panel" id="mobilePanel">
+    <div class="mobile-panel-header">
+        <div class="mobile-brand">
+            <img src="img/logo.png" alt="Logo">
+            <div class="mobile-brand-text">
+                <strong>Orchid Capital</strong>
+                <span>Premium Financial Services</span>
+            </div>
+        </div>
+        <i class="fa-solid fa-xmark mobile-close" id="mobileClose"></i>
+    </div>
+    <div class="mobile-menu">
+        <div class="mobile-item" id="mobileBusiness">
+            <span>Business</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="mobile-submenu">
+            <a href="#">MSME Finance</a>
+            <a href="#">Working Capital</a>
+            <a href="#">Trade Finance</a>
+            <a href="#">Property Finance</a>
+        </div>
+        <div class="mobile-divider"></div>
+        <div class="mobile-item">
+            <span>Resources</span>
+        </div>
+        <div class="mobile-item">
+            <span>About</span>
+        </div>
+    </div>
+</div>
+<section class="usp-bar">
+    <div class="usp-left">
+        <img src="img/logo.png" alt="Logo">
+    </div>
+    <div class="usp-center">
+        <div class="usp-item">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>Finance upto 500% of Asset Value</span>
+        </div>
+
+        <div class="usp-item">
+            <i class="fa-solid fa-coins"></i>
+            <span>Low EMI / No EMI Expertise</span>
+        </div>
+
+        <div class="usp-item">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+            <span>Finance on Future Projection</span>
+        </div>
+
+        <div class="usp-item">
+            <i class="fa-solid fa-award"></i>
+            <span>20+ Years of Experience</span>
+        </div>
+    </div>
+</section>
+<script>
+    const businessBtn = document.getElementById("businessBtn");
+    const businessPanel = document.getElementById("businessPanel");
+
+    /* Toggle on click */
+    businessBtn.addEventListener("click", (e) => {
+        e.stopPropagation(); // prevents immediate close
+
+        businessBtn.classList.toggle("active");
+        businessPanel.classList.toggle("active");
+    });
+
+    /* Close when clicking outside */
+    document.addEventListener("click", (e) => {
+        if (
+            !businessPanel.contains(e.target) &&
+            !businessBtn.contains(e.target)
+        ) {
+            businessBtn.classList.remove("active");
+            businessPanel.classList.remove("active");
+        }
+    });
+
+    /* Prevent panel clicks from bubbling */
+    businessPanel.addEventListener("click", (e) => {
+        e.stopPropagation();
+    });
+</script>
+
+<script>
+    const langBtn = document.getElementById("langBtn");
+    const langMenu = document.getElementById("langMenu");
+
+    /* Toggle on click */
+    langBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        langBtn.classList.toggle("active");
+        langMenu.classList.toggle("show");
+    });
+
+    /* Close when clicking outside */
+    document.addEventListener("click", () => {
+        langBtn.classList.remove("active");
+        langMenu.classList.remove("show");
+    });
+
+    /* Prevent closing when clicking inside */
+    langMenu.addEventListener("click", (e) => {
+        e.stopPropagation();
+    });
+</script>
+
+
+<script>
+    const toggle = document.getElementById("aboutToggle");
+    const panel = document.getElementById("aboutPanel");
+
+    toggle.addEventListener("click", () => {
+        panel.classList.toggle("active");
+        toggle.classList.toggle("active");   // ⭐ THIS ROTATES ARROW
+    });
+
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        const hamburger = document.getElementById("hamburgerBtn");
+        const panel = document.getElementById("mobilePanel");
+        const close = document.getElementById("mobileClose");
+        const business = document.getElementById("mobileBusiness");
+
+        if (!hamburger || !panel) return;
+
+        hamburger.addEventListener("click", () => {
+            panel.classList.add("active");
+        });
+
+        close.addEventListener("click", () => {
+            panel.classList.remove("active");
+        });
+
+        business.addEventListener("click", () => {
+            business.classList.toggle("active");
+        });
+
+    });
+</script>

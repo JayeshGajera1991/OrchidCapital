@@ -1,0 +1,121 @@
+<link rel="stylesheet" href="~/css/financialcalculator.css" asp-append-version="true" />
+<section class="emi-section">
+    <div class="emi-header">
+        <h2>Simplify Financial Planning with the Right Tools</h2>
+        <p>Flexible EMIs to Address Your Needs</p>
+    </div>
+    <!-- Loan Type Tabs -->
+    <div class="emi-tabs">
+        <div class="emi-tab active" data-loan="personal">
+            <i class="fa-regular fa-user"></i>
+            <span>Personal Loan</span>
+        </div>
+        <div class="emi-tab" data-loan="home">
+            <i class="fa-solid fa-house"></i>
+            <span>Home Loan</span>
+        </div>
+        <div class="emi-tab" data-loan="lap">
+            <i class="fa-solid fa-building"></i>
+            <span>Loan Against Property</span>
+        </div>
+        <div class="emi-tab" data-loan="card">
+            <i class="fa-regular fa-credit-card"></i>
+            <span>Card Loan</span>
+        </div>
+        <div class="emi-tab" data-loan="tractor">
+            <i class="fas fa-industry"></i>
+            <span>MSME Loan</span>
+        </div>
+    </div>
+    <!-- Calculator Body -->
+    <div class="emi-container">
+        <!-- LEFT → Sliders -->
+        <div class="emi-left">
+            <div class="slider-group">
+                <label>Loan Amount</label>
+                <div class="slider-value">₹ <span id="amountVal">500000</span></div>
+                <input type="range" id="loanAmount" min="50000" max="5000000" step="50000" value="500000">
+            </div>
+            <div class="slider-group">
+                <label>Loan Tenure (Years)</label>
+                <div class="slider-value"><span id="tenureVal">5</span> Years</div>
+                <input type="range" id="loanTenure" min="1" max="30" step="1" value="5">
+            </div>
+            <div class="slider-group">
+                <label>Interest Rate (%)</label>
+                <div class="slider-value"><span id="rateVal">10</span>%</div>
+                <input type="range" id="interestRate" min="5" max="20" step="0.1" value="10">
+            </div>
+        </div>
+        <!-- RIGHT → Results (FRESH BUILD) -->
+        <div class="emi-right-new">
+            <div class="emi-result-new">
+                <p>Your Monthly EMI</p>
+                <h2>₹ <span id="emiVal">0</span></h2>
+            </div>
+            <div class="emi-breakdown-new">
+                <div>
+                    <span>Amount Payable</span>
+                    <strong>₹ <span id="totalVal">0</span></strong>
+                </div>
+                <div>
+                    <span>Total Interest</span>
+                    <strong>₹ <span id="interestVal">0</span></strong>
+                </div>
+                <div>
+                    <span>Principal Amount</span>
+                    <strong>₹ <span id="principalVal">0</span></strong>
+                </div>
+            </div>
+            <div class="emi-actions-new">
+                <button class="apply-btn-new">Apply Now</button>
+                <button class="know-btn-new">Know More</button>
+            </div>
+            <div class="emi-triangles-new">
+                <span></span><span></span><span></span>
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    const amount = document.getElementById("loanAmount");
+    const tenure = document.getElementById("loanTenure");
+    const rate = document.getElementById("interestRate");
+
+    const amountVal = document.getElementById("amountVal");
+    const tenureVal = document.getElementById("tenureVal");
+    const rateVal = document.getElementById("rateVal");
+
+    const emiVal = document.getElementById("emiVal");
+    const totalVal = document.getElementById("totalVal");
+    const interestVal = document.getElementById("interestVal");
+    const principalVal = document.getElementById("principalVal");
+
+    function calculateEMI() {
+        const P = parseFloat(amount.value);
+        const annualRate = parseFloat(rate.value);
+        const r = annualRate / 12 / 100;
+        const n = parseFloat(tenure.value) * 12;
+
+        const emi = (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
+        const total = emi * n;
+        const interest = total - P;
+
+        emiVal.textContent = emi.toFixed(0);
+        totalVal.textContent = total.toFixed(0);
+        interestVal.textContent = interest.toFixed(0);
+        principalVal.textContent = P.toFixed(0);
+
+        amountVal.textContent = P.toFixed(0);
+        tenureVal.textContent = tenure.value;
+        rateVal.textContent = annualRate.toFixed(1);
+    }
+
+    amount.oninput = calculateEMI;
+    tenure.oninput = calculateEMI;
+    rate.oninput = calculateEMI;
+
+    calculateEMI();
+</script>

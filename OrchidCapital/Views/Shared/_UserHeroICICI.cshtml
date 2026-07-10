@@ -1,0 +1,273 @@
+<link rel="stylesheet" href="~/css/heroICICI.css" asp-append-version="true" />
+<section class="hero-section">
+    <div class="hero-container">
+        <div class="hero-left">
+            <h1>Truth, Trust and Transparency</h1>
+            <div class="hero-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search banking products, services..." />
+                <div class="voice-search">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
+            </div>
+            <div class="banking-grid">
+                <div class="banking-card">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                    Secure Loans
+                </div>
+                <div class="banking-card">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                    Unsecure Loans
+                </div>
+                <div class="banking-card">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                    MSME Loans
+                </div>
+                <div class="banking-card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Private Investors
+                </div>
+                <div class="banking-card">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Agent Login
+                </div>
+            </div>
+            <div class="hero-support">
+                <i class="fa-solid fa-phone"></i>
+                <div class="hero-support-text">
+                    <span>Get Support</span>
+                    <strong>1800 123 4567</strong>
+                </div>
+            </div>
+            <div class="hero-left-extension">
+                <div class="feature-content active">
+                    <div class="feature-text">
+                        <h2>Secure Banking</h2>
+                        <p>Built for safety. Designed for trust.</p>
+                        <button class="feature-btn">Explore Services</button>
+                    </div>
+                </div>
+                <div class="feature-content">
+                    <div class="feature-text">
+                        <h2>Instant Loans</h2>
+                        <p>Fast approvals with flexible repayment.</p>
+                        <button class="feature-btn">Apply Now</button>
+                    </div>
+                </div>
+                <div class="feature-content">
+                    <div class="feature-text">
+                        <h2>Smart Investments</h2>
+                        <p>Grow your wealth with confidence.</p>
+                        <button class="feature-btn">Start Investing</button>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-decorations">
+                <span class="decor-square sq1"></span>
+                <span class="decor-square sq2"></span>
+                <span class="decor-square sq3"></span>
+                <span class="decor-square sq4"></span>
+                <span class="decor-square sq5"></span>
+                <span class="decor-square sq6"></span>
+                <span class="decor-square sq7"></span>
+                <span class="decor-square sq8"></span>
+                <span class="decor-square sq9"></span>
+                <span class="decor-square sq10"></span>
+                <span class="decor-square sq11"></span>
+                <span class="decor-square sq12"></span>
+                <span class="decor-square sq13"></span>
+                <span class="decor-square sq14"></span>
+                <span class="decor-square sq15"></span>
+                <span class="decor-square sq16"></span>
+                <span class="decor-square sq17"></span>
+                <span class="decor-square sq18"></span>
+            </div>
+        </div>
+        <!-- RIGHT PANEL -->
+        <div class="hero-right">
+            <div class="slider">
+                <div class="slides">
+                    <picture class="slide active">
+                        <source media="(max-width: 768px)" srcset="img/heron1.png">
+                        <img src="img/heron1.png" decoding="async">
+                    </picture>
+
+                    <picture class="slide">
+                        <source media="(max-width: 768px)" srcset="img/heron2.png">
+                        <img src="img/heron2.png" decoding="async">
+                    </picture>
+
+                    <picture class="slide">
+                        <source media="(max-width: 768px)" srcset="img/heron1.png">
+                        <img src="img/heron1.png" decoding="async">
+                    </picture>
+                </div>
+                <!-- Slider Controls -->
+                <div class="slider-controls">
+                    <button id="prev"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button id="next"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="service-wrapper">
+        <div class="service-panel">
+
+            <button class="service-btn primary">
+                <i class="fa-solid fa-headset"></i>
+                <span>Service Request</span>
+            </button>
+
+            <button class="service-btn">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                <span>Track Application / Service</span>
+            </button>
+
+            <button class="service-btn">
+                <i class="fa-solid fa-lock"></i>
+                <span>Smart Lock</span>
+            </button>
+
+            <button class="service-btn">
+                <i class="fa-solid fa-credit-card"></i>
+                <span>Block Card</span>
+            </button>
+
+            <button class="service-btn">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span>Report Fraud</span>
+            </button>
+        </div>
+    </div>
+    <div class="hero-bottom">
+        <div class="strip-line">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div class="empty-white-spcae"></div>
+</section>
+<script>
+    window.addEventListener("load", () => {
+
+        const slides = document.querySelectorAll(".slide");
+        const features = document.querySelectorAll(".feature-content");
+
+        let index = 0;
+        let autoSlideInterval;
+
+        function updateSlider(newIndex) {
+            slides[index].classList.remove("active");
+            features[index].classList.remove("active");
+
+            index = newIndex;
+
+            slides[index].classList.add("active");
+            features[index].classList.add("active");
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                let newIndex = (index + 1) % slides.length;
+                updateSlider(newIndex);
+            }, 3500);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+
+        document.getElementById("next").onclick = () => {
+            resetAutoSlide();
+            updateSlider((index + 1) % slides.length);
+        };
+
+        document.getElementById("prev").onclick = () => {
+            resetAutoSlide();
+            updateSlider((index - 1 + slides.length) % slides.length);
+        };
+
+        const hero = document.querySelector(".hero-section");
+
+        hero.addEventListener("mouseenter", () => {
+            clearInterval(autoSlideInterval);
+        });
+
+        hero.addEventListener("mouseleave", () => {
+            startAutoSlide();
+        });
+
+        startAutoSlide();
+    });
+</script>
+
+
+<script>
+    const phrases = [
+        "What are you looking for?",
+        "Search loans, cards, investments...",
+        "Find banking solutions...",
+        "Explore Orchid Capital services..."
+    ];
+
+    const input = document.querySelector(".hero-search input");
+
+    let phraseIndex = 0;
+    let letterIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+        const currentPhrase = phrases[phraseIndex];
+
+        if (!isDeleting) {
+            letterIndex++;
+        } else {
+            letterIndex--;
+        }
+
+        input.setAttribute(
+            "placeholder",
+            currentPhrase.substring(0, letterIndex)
+        );
+
+        let typingSpeed = isDeleting ? 35 : 55;
+
+        if (!isDeleting && letterIndex === currentPhrase.length) {
+            typingSpeed = 1400;   // pause at full text
+            isDeleting = true;
+        }
+        else if (isDeleting && letterIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            typingSpeed = 350;    // pause before next phrase
+        }
+
+        setTimeout(typeEffect, typingSpeed);
+    }
+
+    /* Smooth fade when changing phrase */
+    function startAnimation() {
+        input.classList.add("placeholder-fade-in");
+        typeEffect();
+    }
+
+    startAnimation();
+</script>

@@ -1,31 +1,8 @@
-﻿@using System.Globalization
-@using Microsoft.Extensions.Localization
-@using OrchidCapital.Resources
-@inject IStringLocalizer<SharedResource> Localizer
-@{
+﻿@{
     ViewData["Title"] = Localizer["WelcomeMessage"];
 }
-
-<div class="container mt-4">
-    <div class="card shadow-sm border-0">
-        <div class="card-body p-4">
-<p>Current Culture: @CultureInfo.CurrentUICulture.Name</p>
-            <h2>@Localizer["Dashboard"]</h2>
-
-            <p class="text-muted">
-                @Localizer["WelcomeMessage"]
-            </p>
-
-            <div class="mt-4">
-                <button class="btn btn-primary">
-                    @Localizer["Save"]
-                </button>
-
-                <button class="btn btn-secondary">
-                    @Localizer["Cancel"]
-                </button>
-            </div>
-
-        </div>
-    </div>
-</div>
+<partial name="_UserWhatWeDo" />
+<partial name="_UserFinancialCalculator" />
+<partial name="_UserWhyUs" />
+<partial name="_UserPartners" />
+<partial name="_UserTeams" />
