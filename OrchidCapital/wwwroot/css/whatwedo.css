@@ -156,7 +156,7 @@
   gap: 18px;
   transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: transform;
-   padding: 0 calc(50% - 130px);  
+   /* padding: 0 calc(50% - 130px);   */
 }
 
 .showcase-card {

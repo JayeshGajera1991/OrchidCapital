@@ -1,136 +1,115 @@
 <link rel="stylesheet" href="~/css/superBusinessMega.css" asp-append-version="true" />
+@model AllModuleListRequest
 <div class="business-panel" id="businessPanel">
     <div class="panel-header">
         <div class="biz-head-left">
             <h2>
                 <i class="fa-solid fa-briefcase"></i>
-                Business
+                @Localizer["Business"]
             </h2>
         </div>
+
         <div class="biz-head-center">
-            <img src="img/msme.png" alt="MSME Logo">
-            <span>Empower MSME</span>
+            <img src="img/msme.png" alt="@Localizer["MSMELogo"]">
+            <span>@Localizer["EmpowerMSME"]</span>
         </div>
         <div class="panel-header-right">
             <img src="img/logo.png" alt="Company Logo">
         </div>
     </div>
-    <div class="panel-divider"></div>
-    <div class="panel-body three-zone">
-        <div class="panel-columns advanced-finance zone-left">
+    <div class="panel-divider"></div> <!-- BODY -->
+    <div class="panel-body three-zone"> <!-- LEFT : PRODUCTS -->
+        <div class="panel-columns advanced-finance zone-left"> <!-- SECURED -->
             <div class="panel-column finance-group">
-                <h4>Secured</h4>
-                <a href="#"
-                   data-desc="Funding support for Micro, Small & Medium Enterprises with flexible structures.">MSME
-                    Finance</a>
-                    <a href="#" data-desc="Collateral-free loans backed by CGTMSE guarantee coverage.">CGTMSE Finance</a>
-                    <a href="#" data-desc="Loans structured around government subsidy schemes.">Subsidy Backed Finance</a>
-                    <a href="#" data-desc="Short-term and long-term working capital solutions.">Working Capital Finance</a>
-                    <a href="#" data-desc="Optimized financing across vendor & distributor networks.">Supply Chain
-                        Finance</a>
-                        <a href="#" data-desc="Structured debt arrangement for large-scale funding needs.">Debt Syndication</a>
-                        <a href="#" data-desc="Specialized financing solutions for builders & developers.">Builder Finance</a>
-                        <a href="#" data-desc="Tailored home loan solutions with competitive rates.">Home Finance</a>
-                        <a href="#" data-desc="Funding solutions against residential & commercial property.">Property
-                            Finance</a>
-                        </div>
-                        <!-- UNSECURED -->
-                        <div class="panel-column finance-group">
-                            <h4>Unsecured</h4>
-
-                            <a href="#" data-desc="Quick liquidity via bill discounting & trade receivables.">Bill Discounting</a>
-                            <a href="#" data-desc="Comprehensive trade finance instruments for businesses.">Trade Finance</a>
-                            <a href="#" data-desc="Financing solutions in major global currencies.">Foreign Currency Finance</a>
-                            <a href="#" data-desc="Structured financing support for import transactions.">Import Finance</a>
-                            <a href="#" data-desc="External Commercial Borrowing advisory & execution.">ECB Finance</a>
-                            <a href="#" data-desc="Working capital & term finance for export businesses.">Export Finance</a>
-                        </div>
-                    </div>
-                    <div class="zone-middle">
-                        <div class="finance-detail dynamic-desc">
-                            <div class="finance-header">
-                                <span id="financeTitle">Financing Solutions</span>
-                            </div>
-                            <ul id="financePoints">
-                                <li>Tailored financial products</li>
-                                <li>Flexible repayment structures</li>
-                                <li>Competitive interest rates</li>
-                            </ul>
-                            <button class="apply-btn">
-                                <i class="fa-solid fa-arrow-right"></i>
-                                Apply Now
-                            </button>
-                        </div>
-                    </div>
-                    <div class="zone-right">
-                        <div class="help-box">
-                            <h4>Need Help?</h4>
-                            <p>Talk to our financial advisors for customized solutions.</p>
-                            <button>
-                                <i class="fa-solid fa-headset"></i>
-                                Contact Relationship Manager
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel-emi-tags">
-                    <span class="emi-tag low">LOW EMI</span>
-                    <span class="emi-tag no">NO EMI</span>
-                    <span class="emi-tag flexi">FLEXI EMI</span>
-                </div>
-                <!-- FOOTER -->
-                <div class="panel-footer bank-footer">
-                    <div class="footer-tagline">
-                        Raise Easy Business Capital
-                        <span>UNLIMITED</span>
-                    </div>
-                    <button id="businessCloseBottom">
-                        <i class="fa-solid fa-xmark"></i>
-                        Close
-                    </button>
-                </div>
+                <h4>@Localizer["Secured"]</h4>
+                @if (Model != null && Model.ProductsList != null & Model.ProductsList.Count > 0)
+                {
+                    foreach (BankServiceListModel item in Model.ProductsList.Where(m => m.IsSecure == true).ToList())
+                    {
+                        <a href="#" data-desc="@Html.Raw(@item.Descriptions)">@item.ProductName</a>
+                    }
+                }
             </div>
-            <script>
-                const financeLinks = document.querySelectorAll('.finance-group a');
-                const titleBox = document.getElementById('financeTitle');
-                const pointsBox = document.getElementById('financePoints');
+            <div class="panel-column finance-group">
+                <h4>@Localizer["Unsecured"]</h4>
+                @if (Model != null && Model.ProductsList != null & Model.ProductsList.Count > 0)
+                {
+                    foreach (BankServiceListModel item in Model.ProductsList.Where(m => m.IsSecure == false).ToList())
+                    {
+                        <a href="#" data-desc="@Html.Raw(@item.Descriptions)">@item.ProductName</a>
+                    }
+                }
+            </div>
+        </div>
+        <div class="zone-middle">
+            <div class="finance-detail dynamic-desc">
+                <div class="finance-header">
+                    <span id="financeTitle"></span>
+                </div>
+                <div id="financePoints"></div>
+                <button class="apply-btn">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    @Localizer["ApplyNow"]
+                </button>
+            </div>
+        </div>
+        <div class="zone-right">
+            <div class="help-box">
+                <h4>@Localizer["NeedHelp"]</h4>
+                <p>@Localizer["NeedHelpDescription"]</p>
+                <button>
+                    <i class="fa-solid fa-headset"></i>
+                    @Localizer["ContactRelationshipManager"]
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="panel-emi-tags">
+        <span class="emi-tag low">@Localizer["LowEMI"]</span>
+        <span class="emi-tag no">@Localizer["NoEMI"]</span>
+        <span class="emi-tag flexi">@Localizer["FlexiEMI"]</span>
+    </div>
 
-                financeLinks.forEach(link => {
-                    link.addEventListener('mouseenter', () => {
+    <div class="panel-footer bank-footer">
+        <div class="footer-tagline">
+            @Localizer["RaiseEasyBusinessCapital"]
+            <span>@Localizer["Unlimited"]</span>
+        </div>
 
-                        const product = link.textContent.trim();
-                        const desc = link.dataset.desc;
+        <button id="businessCloseBottom">
+            <i class="fa-solid fa-xmark"></i>
+            @Localizer["Close"]
+        </button>
+    </div>
+</div>
 
-                        titleBox.style.opacity = 0;
-                        pointsBox.style.opacity = 0;
+<script>
+   $(document).ready(function () {
+    $('.finance-group a').on('mouseenter', function () {
+        var product = $.trim($(this).text());
+        var desc = $(this).data('desc');
+        $('#financeTitle, #financePoints').css('opacity', 0);
+        setTimeout(function () {
+            $('#financeTitle').text(product);
+            $('#financePoints').html(desc);
+            $('#financeTitle, #financePoints').css('opacity', 1);
+        }, 120);
+    });
+    $('.finance-group a:first').trigger("mouseenter");
+});
+</script>
 
-                        setTimeout(() => {
-                            titleBox.textContent = product;
+<script>
+    (function () {
+        const closeBtn = document.getElementById('businessCloseBottom');
+        const panel = document.getElementById('businessPanel');
 
-                            pointsBox.innerHTML = `
-                                        <li>${desc}</li>
-                                        <li>Flexible tenure options</li>
-                                        <li>Fast approval & disbursement</li>
-                                    `;
+        if (!closeBtn || !panel) return;
 
-                            titleBox.style.opacity = 1;
-                            pointsBox.style.opacity = 1;
-                        }, 120);
-                    });
-                });
-            </script>
-
-            <script>
-                (function () {
-                    const closeBtn = document.getElementById('businessCloseBottom');
-                    const panel = document.getElementById('businessPanel');
-
-                    if (!closeBtn || !panel) return;
-
-                    closeBtn.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        e.stopPropagation();   // ⭐ prevents menu hover/click conflicts
-                        panel.classList.remove('active');
-                    });
-                })();
-            </script>
+        closeBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();   // ⭐ prevents menu hover/click conflicts
+            panel.classList.remove('active');
+        });
+    })();
+</script>

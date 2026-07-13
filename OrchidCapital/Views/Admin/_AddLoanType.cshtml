@@ -1,0 +1,41 @@
+@using DocumentFormat.OpenXml.Wordprocessing
+@model OrchidCapital.Models.UpdateLoanTypeDetailsRequest
+<h3 id="h3_addRoleHeader">Add New Role</h3>
+<button type="button" class="btn btn-danger close-btn" onclick="APortalModule._APortalCommon.CloseToggle('LoanType-Master-Panel','nav_loantype_form');">
+    <i class="fa-solid fa-xmark"></i>
+</button>
+<form id="nav_loantype_form" action="@Url.Action("UpdateLoanTypeDetails", "Admin")" method="post">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-grid">
+        <div class="form-group">
+            <label>TYpe Name *</label>
+            @Html.HiddenFor(m => m.LoanTypeId) <!-- Hidden field for Role ID -->
+            @Html.HiddenFor(m => m.IsActive) <!-- Hidden field for IsActive status -->
+            @Html.HiddenFor(m => m.UserName) <!-- Hidden field for UserName -->
+            @Html.HiddenFor(m => m.UserRole) <!-- Hidden field for UserRole -->
+            @Html.TextBoxFor(m => m.Name, new { @placeholder = "Enter Type name",@class = "txtspace",MaxLength = "50" })
+            @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="action-buttons">
+        @if (Model.LoanTypeId == 0)
+        {
+            <button class="btn btn-danger" id="ClearPage" type="button"
+                    onclick="APortalModule._APortalMaster.FormDataClear(APortalLoanType._APortalLoanType);">
+                <i class="fa-solid fa-refresh"></i>
+            </button>
+        }
+        else
+        {
+            <button class="btn btn-danger" id="resetPage" type="button"
+                    onclick="APortalModule._APortalMaster.FormDataReset('tblLoanTypeList','@Model.LoanTypeId');">
+                <i class="fa-solid fa-refresh"></i>
+            </button>
+        }
+        <button class="btn btn-success" id="saveCustomer" type="submit"
+                onclick="APortalLoanType._APortalLoanType.SubmitFormData(event, $('#nav_loantype_form'));">
+            <i class="fa-solid fa-floppy-disk"></i>
+        </button>
+    </div>
+</form>

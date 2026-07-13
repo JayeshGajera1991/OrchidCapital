@@ -1,6 +1,130 @@
-/* ================= HEADER USP BAR ================= */
+/* Full Screen Loader */
+/* Full Screen Overlay */
+.loader-overlay {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.50);
+  transition: background 0.7s ease, box-shadow 0.7s ease;
+  z-index: 99999;
+  outline: none;
+}
 
-/* ================= ULTRA PREMIUM USP BAR ================= */
+/* Container */
+.loader-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+/* Logo (Behind) */
+.loader-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, .8));
+}
+
+/* Rotating Loader (Above Logo) */
+.loader-ring {
+  position: absolute;
+  inset: 0;
+  border: 5px solid rgba(79, 140, 255, 0.15);
+  border-top: 5px solid #4f8cff;
+  border-right: 5px solid #6c63ff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  z-index: 2;
+}
+
+
+/* Rotation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ================= Language ================= */
+.language-wrapper {
+    position: relative;
+}
+
+.language-wrapper::after {
+    content: "\f078";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255,255,255,.9);
+    font-size: 11px;
+    pointer-events: none;
+}
+
+.form-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    width: 100px;
+    height: 25px;
+
+    padding: 0 0px 0 12px;
+
+    border: 1px solid rgb(123 202 255);
+    border-radius: 5px;
+
+    background: rgb(123 202 255);
+    backdrop-filter: blur(8px);
+
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: all .25s ease;
+
+    outline: none;
+    box-shadow: none;
+}
+
+.form-select:hover {
+    background: rgb(123 202 255);
+    border-color: rgb(123 202 255);
+}
+
+.form-select:focus {
+    background: rgb(123 202 255);
+    border-color: rgb(123 202 255);
+    box-shadow: 0 0 0 3px rgb(123 202 255);
+}
+
+/* Dropdown items (supported by some browsers) */
+.form-select option {
+    background: #ffffff;
+    color: #222;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.form-select option:checked {
+    background: #6c3fd6;
+    color: #fff;
+}
+/* =================HEADER USP BAR ================= */
 
 .usp-bar {
   height: 68px;

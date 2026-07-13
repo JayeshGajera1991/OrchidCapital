@@ -49,6 +49,14 @@
               "target": "Package",
               "version": "[0.105.0, )"
             },
+            "GTranslate": {
+              "target": "Package",
+              "version": "[2.3.1, )"
+            },
+            "Google.Cloud.Translation.V2": {
+              "target": "Package",
+              "version": "[3.5.0, )"
+            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -68,6 +76,10 @@
             "PemUtils": {
               "target": "Package",
               "version": "[3.0.0.82, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[114.0.0, )"
             },
             "TwoFactorAuth.Net.QRCoder": {
               "target": "Package",

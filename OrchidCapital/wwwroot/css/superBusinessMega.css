@@ -1,10 +1,10 @@
-  /* =========================
+ /* =========================
    BUSINESS MEGA PANEL
    ========================= */
 
 .business-panel {
   position: fixed;
-  top: 78px;
+  top: 39px; /* EXACT header height */
   left: 0;
   width: 100%;
   box-sizing: border-box;
@@ -15,7 +15,7 @@
   box-shadow: 0 22px 60px rgba(0,0,0,0.28);
 
   opacity: 0;
-  transform: translateY(14px) scale(0.97);
+  transform: translateY(0) scale(0.98);
   transform-origin: top center;
 
   transition:
@@ -667,5 +667,4 @@
   50% { opacity: 1; }
   100% { opacity: 0.75; }
 }
-
 

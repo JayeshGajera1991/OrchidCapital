@@ -1,77 +1,34 @@
+@model AllModuleListRequest
 <link rel="stylesheet" href="~/css/teams.css" asp-append-version="true" />
 <section class="team-glass-section">
     <div class="team-glass-wrapper">
-
         <div class="team-glass-header">
-            <h2>Leadership Team</h2>
+            <h2>@Localizer["LeadershipTeam"]</h2>
             <div class="team-glass-line"></div>
-            <p>Experienced professionals driving financial excellence</p>
+            <p>@Localizer["LeadershipTeamDescription"]</p>
         </div>
-
         <div class="team-glass-scroll" id="teamGlassScroll">
-
-            <div class="team-glass-card">
-                <div class="team-glass-icon">
-                    <i class="fa-solid fa-user-tie"></i>
-                </div>
-                <h4>Rahul Mehta</h4>
-                <div class="team-glass-role">
-                    Chief Executive Officer<br>
-                    Strategy & Growth
-                </div>
-                <p>
-                    Leads corporate vision, expansion strategy, and long-term value creation
-                    with over 18 years of financial leadership experience.
-                </p>
-            </div>
-
-            <div class="team-glass-card">
-                <div class="team-glass-icon">
-                    <i class="fa-solid fa-chart-line"></i>
-                </div>
-                <h4>Anita Sharma</h4>
-                <div class="team-glass-role">
-                    Head of Credit Risk<br>
-                    Portfolio & Analytics
-                </div>
-                <p>
-                    Specializes in underwriting frameworks, risk modeling, and
-                    portfolio optimization across SME & structured finance segments.
-                </p>
-            </div>
-
-            <div class="team-glass-card">
-                <div class="team-glass-icon">
-                    <i class="fa-solid fa-scale-balanced"></i>
-                </div>
-                <h4>Vikram Iyer</h4>
-                <div class="team-glass-role">
-                    Compliance Director<br>
-                    Regulatory & Governance
-                </div>
-                <p>
-                    Ensures regulatory adherence, policy controls, and governance
-                    standards aligned with banking and financial regulations.
-                </p>
-            </div>
-
-            <div class="team-glass-card">
-                <div class="team-glass-icon">
-                    <i class="fa-solid fa-handshake"></i>
-                </div>
-                <h4>Neha Kapoor</h4>
-                <div class="team-glass-role">
-                    Relationship Head<br>
-                    Client & Partnerships
-                </div>
-                <p>
-                    Drives client success, institutional partnerships, and strategic
-                    alliances through consultative financial engagement models.
-                </p>
-            </div>
-
+            @if (Model != null && Model.TeamsList != null & Model.TeamsList.Count > 0)
+            {
+                foreach (TeamModel item in Model.TeamsList)
+                {
+                    <div class="team-glass-card">
+                        <div class="team-glass-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h4>@(string.IsNullOrEmpty(item.FullName) ? "" : item.FullName)</h4>
+                        <div class="team-glass-role">
+                            @(string.IsNullOrEmpty(item.Headline) ? "" : item.Headline)<br>
+                            @(string.IsNullOrEmpty(item.Qualification) ? "" : item.Qualification)
+                        </div>
+                        <p>
+                            @(string.IsNullOrEmpty(item.Description1) ? "" : item.Description1)
+                            @(string.IsNullOrEmpty(item.Description2) ? "" : item.Description2)
+                        </p>
+                    </div>
+                }
+            }
         </div>
-
         <div class="team-glass-controls">
             <button class="team-glass-btn team-left">
                 <i class="fa-solid fa-chevron-left"></i>
@@ -80,11 +37,8 @@
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
         </div>
-
     </div>
 </section>
-
-
 <script>
     const teamScroll = document.getElementById("teamGlassScroll");
     const teamLeft = document.querySelector(".team-left");

@@ -1,66 +1,69 @@
-<link rel="stylesheet" href="~/css/heroICICI.css" asp-append-version="true" />
+@model AllModuleListRequest
+<link rel="stylesheet" href="~/css/heroYono5.css" asp-append-version="true" />
 <section class="hero-section">
     <div class="hero-container">
         <div class="hero-left">
-            <h1>Truth, Trust and Transparency</h1>
+            <h1>@Localizer["HeroTitle"]</h1>
+
             <div class="hero-search">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="Search banking products, services..." />
+                <input type="text" placeholder="@Localizer["SearchPlaceholder"].Value" />
                 <div class="voice-search">
                     <i class="fa-solid fa-microphone"></i>
                 </div>
             </div>
+
             <div class="banking-grid">
                 <div class="banking-card">
                     <i class="fa-solid fa-hand-holding-dollar"></i>
-                    Secure Loans
+                    @Localizer["SecureLoans"]
                 </div>
+
                 <div class="banking-card">
                     <i class="fa-solid fa-hand-holding-dollar"></i>
-                    Unsecure Loans
+                    @Localizer["UnsecureLoans"]
                 </div>
+
                 <div class="banking-card">
                     <i class="fa-solid fa-hand-holding-dollar"></i>
-                    MSME Loans
+                    @Localizer["MSMELoans"]
                 </div>
+
                 <div class="banking-card">
                     <i class="fa-solid fa-chart-line"></i>
-                    Private Investors
+                    @Localizer["PrivateInvestors"]
                 </div>
+
                 <div class="banking-card">
                     <i class="fa-solid fa-shield-halved"></i>
-                    Agent Login
+                    @Localizer["AgentLogin"]
                 </div>
             </div>
+
             <div class="hero-support">
                 <i class="fa-solid fa-phone"></i>
+
                 <div class="hero-support-text">
-                    <span>Get Support</span>
+                    <span>@Localizer["GetSupport"]</span>
                     <strong>1800 123 4567</strong>
                 </div>
             </div>
             <div class="hero-left-extension">
-                <div class="feature-content active">
-                    <div class="feature-text">
-                        <h2>Secure Banking</h2>
-                        <p>Built for safety. Designed for trust.</p>
-                        <button class="feature-btn">Explore Services</button>
-                    </div>
-                </div>
-                <div class="feature-content">
-                    <div class="feature-text">
-                        <h2>Instant Loans</h2>
-                        <p>Fast approvals with flexible repayment.</p>
-                        <button class="feature-btn">Apply Now</button>
-                    </div>
-                </div>
-                <div class="feature-content">
-                    <div class="feature-text">
-                        <h2>Smart Investments</h2>
-                        <p>Grow your wealth with confidence.</p>
-                        <button class="feature-btn">Start Investing</button>
-                    </div>
-                </div>
+                @if (Model != null && Model.ImagesList != null & Model.ImagesList.Count > 0)
+                {
+                    string _activeC = "active";
+                    foreach (ImageConfigurationModel item in Model.ImagesList.Where(m => m.Role == "HeroImage").ToList())
+                    {
+                        <div class="feature-content @_activeC">
+                            <div class="feature-text">
+                                <h2>@item.Headline</h2>
+                                <p>@item.Description</p>
+                                <button class="feature-btn">@item.Type</button>
+                            </div>
+                        </div>
+                        _activeC = "";
+                    }
+                }
             </div>
             <div class="hero-decorations">
                 <span class="decor-square sq1"></span>
@@ -83,26 +86,20 @@
                 <span class="decor-square sq18"></span>
             </div>
         </div>
-        <!-- RIGHT PANEL -->
         <div class="hero-right">
             <div class="slider">
                 <div class="slides">
-                    <picture class="slide active">
-                        <source media="(max-width: 768px)" srcset="img/heron1.png">
-                        <img src="img/heron1.png" decoding="async">
-                    </picture>
-
-                    <picture class="slide">
-                        <source media="(max-width: 768px)" srcset="img/heron2.png">
-                        <img src="img/heron2.png" decoding="async">
-                    </picture>
-
-                    <picture class="slide">
-                        <source media="(max-width: 768px)" srcset="img/heron1.png">
-                        <img src="img/heron1.png" decoding="async">
-                    </picture>
+                    @if (Model != null && Model.ImagesList != null & Model.ImagesList.Count > 0)
+                    {
+                        string _activeC = "active";
+                        foreach (ImageConfigurationModel item in Model.ImagesList.Where(m => m.Role ==
+         "HeroImage").ToList())
+                        {
+                            <img src="~/ImageUploads/@item.ImagePath" class="slide @_activeC">
+                            _activeC = "";
+                        }
+                    }
                 </div>
-                <!-- Slider Controls -->
                 <div class="slider-controls">
                     <button id="prev"><i class="fa-solid fa-chevron-left"></i></button>
                     <button id="next"><i class="fa-solid fa-chevron-right"></i></button>
@@ -116,116 +113,125 @@
 
             <button class="service-btn primary">
                 <i class="fa-solid fa-headset"></i>
-                <span>Service Request</span>
+                <span>@Localizer["ServiceRequest"]</span>
             </button>
 
             <button class="service-btn">
                 <i class="fa-solid fa-magnifying-glass-chart"></i>
-                <span>Track Application / Service</span>
+                <span>@Localizer["TrackApplicationService"]</span>
             </button>
 
             <button class="service-btn">
                 <i class="fa-solid fa-lock"></i>
-                <span>Smart Lock</span>
+                <span>@Localizer["SmartLock"]</span>
             </button>
 
             <button class="service-btn">
                 <i class="fa-solid fa-credit-card"></i>
-                <span>Block Card</span>
+                <span>@Localizer["BlockCard"]</span>
             </button>
 
             <button class="service-btn">
                 <i class="fa-solid fa-triangle-exclamation"></i>
-                <span>Report Fraud</span>
+                <span>@Localizer["ReportFraud"]</span>
             </button>
+
         </div>
     </div>
-    <div class="hero-bottom">
-        <div class="strip-line">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+
+    <div class="hero-strips">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
+        <span></span> <span></span> <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
-    <div class="empty-white-spcae"></div>
+    <div class="hero-bottom"></div>
 </section>
+<section class="next-section"></section>
 <script>
-    window.addEventListener("load", () => {
+    const slides = document.querySelectorAll(".slide");
+    const features = document.querySelectorAll(".feature-content");
 
-        const slides = document.querySelectorAll(".slide");
-        const features = document.querySelectorAll(".feature-content");
+    let index = 0;
+    let autoSlideInterval;
 
-        let index = 0;
-        let autoSlideInterval;
+    /* Update function */
+    function updateSlider(newIndex) {
+        slides[index].classList.remove("active");
+        features[index].classList.remove("active");
 
-        function updateSlider(newIndex) {
-            slides[index].classList.remove("active");
-            features[index].classList.remove("active");
+        index = newIndex;
 
-            index = newIndex;
+        slides[index].classList.add("active");
+        features[index].classList.add("active");
+    }
 
-            slides[index].classList.add("active");
-            features[index].classList.add("active");
-        }
+    /* Next / Prev controls */
+    document.getElementById("next").onclick = () => {
+        resetAutoSlide();
+        let newIndex = (index + 1) % slides.length;
+        updateSlider(newIndex);
+    };
 
-        function startAutoSlide() {
-            autoSlideInterval = setInterval(() => {
-                let newIndex = (index + 1) % slides.length;
-                updateSlider(newIndex);
-            }, 3500);
-        }
+    document.getElementById("prev").onclick = () => {
+        resetAutoSlide();
+        let newIndex = (index - 1 + slides.length) % slides.length;
+        updateSlider(newIndex);
+    };
 
-        function resetAutoSlide() {
-            clearInterval(autoSlideInterval);
-            startAutoSlide();
-        }
+    /* ✅ Auto slide */
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(() => {
+            let newIndex = (index + 1) % slides.length;
+            updateSlider(newIndex);
+        }, 3500); // ⏱ Premium timing (3.5s)
+    }
 
-        document.getElementById("next").onclick = () => {
-            resetAutoSlide();
-            updateSlider((index + 1) % slides.length);
-        };
+    /* Reset when user clicks */
+    function resetAutoSlide() {
+        clearInterval(autoSlideInterval);
+        startAutoSlide();
+    }
 
-        document.getElementById("prev").onclick = () => {
-            resetAutoSlide();
-            updateSlider((index - 1 + slides.length) % slides.length);
-        };
+    /* ✅ Pause on hover (very bank-grade feel) */
+    const hero = document.querySelector(".hero-section");
 
-        const hero = document.querySelector(".hero-section");
+    hero.addEventListener("mouseenter", () => {
+        clearInterval(autoSlideInterval);
+    });
 
-        hero.addEventListener("mouseenter", () => {
-            clearInterval(autoSlideInterval);
-        });
-
-        hero.addEventListener("mouseleave", () => {
-            startAutoSlide();
-        });
-
+    hero.addEventListener("mouseleave", () => {
         startAutoSlide();
     });
+
+    /* Start */
+    startAutoSlide();
 </script>
 
 
 <script>
     const phrases = [
-        "What are you looking for?",
-        "Search loans, cards, investments...",
-        "Find banking solutions...",
-        "Explore Orchid Capital services..."
+        "@Html.Raw(Localizer["WhatAreYouLookingFor"])",
+        "@Html.Raw(Localizer["SearchLoansCardsInvestments"])",
+        "@Html.Raw(Localizer["FindBankingSolutions"])",
+        "@Html.Raw(Localizer["ExploreOrchidCapitalServices"])"
     ];
 
     const input = document.querySelector(".hero-search input");

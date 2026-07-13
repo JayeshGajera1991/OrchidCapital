@@ -1,240 +1,96 @@
+@using DocumentFormat.OpenXml.Office.CustomUI
+@model AllModuleListRequest
 <link rel="stylesheet" href="~/css/whatwedo.css" asp-append-version="true" />
 <section class="funding-showcase">
     <div class="mesh-bg"></div>
-    <h1 class="showcase-title">What We Do</h1>
-    <p class="showcase-subtitle">We Raise Funds For</p>
-    <!-- OPTION BAR -->
+    <h1 class="showcase-title">@Localizer["WhatWeDo"]</h1>
+    <p class="showcase-subtitle">@Localizer["WeRaiseFundsFor"]</p>
     <div class="showcase-options">
-        <span class="option active" data-target="0">Manufacturers</span>
-        <span class="divider"></span>
-        <span class="option" data-target="1">Trader</span>
-        <span class="divider"></span>
-        <span class="option" data-target="2">Service Providers</span>
-        <span class="divider"></span>
-        <span class="option" data-target="3">Developers</span>
-        <span class="divider"></span>
-        <span class="option" data-target="4">Salaried Individuals</span>
+        @if (Model != null && Model.ProductTypesList != null & Model.ProductTypesList.Count > 0)
+        {
+            string _activeC = "active";
+            foreach (LoanTypeModel item in Model.ProductTypesList.OrderBy(m => m.LoanTypeId))
+            {
+                <span class="option @_activeC" data-target="@item.LoanTypeId">@item.Name</span>
+                <span class="divider"></span>
+                _activeC = "";
+            }
+        }
     </div>
     <div class="showcase-line"></div>
-    <!-- CARDS -->
     <div class="showcase-cards-wrapper">
         <div class="showcase-cards" id="showcaseCards">
-            <div class="showcase-card tone-blue active">
-                <div class="card-top">
-                    <div class="card-icon">
-                        <i class="fa-solid fa-industry"></i>
+            @if (Model != null && Model.ProductsList != null & Model.ProductsList.Count > 0)
+            {
+                string _activeC = "active";
+                foreach (BankServiceListModel item in Model.ProductsList)
+                {
+                    <div class="showcase-card tone-blue @_activeC" data-loan="@item.LoanTypeId">
+                        <div class="card-top">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-industry"></i>
+                            </div>
+                            <img src="~/LoanProductImage/@item.ImageUrl" alt="@item.ProductName">
+                        </div>
+                        <div class="card-body">
+                            <h3>@item.ProductName</h3>
+                            <p>@item.LoanType</p>
+                        </div>
+                        <button class="card-apply">
+                            @Localizer["ApplyNow"]
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
-                    <img src="img/manu.jpg" alt="Manufacturing Finance">
-                </div>
-                <div class="card-body">
-                    <h3>Manufacturing Finance</h3>
-                    <p>Working capital, machinery loans & expansion funding.</p>
-                </div>
-                <button class="card-apply">
-                    Apply Now
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-            </div>
-            <!-- Trader -->
-            <div class="showcase-card tone-purple">
-                <div class="card-top">
-                    <div class="card-icon">
-                        <i class="fa-solid fa-shop"></i>
-                    </div>
-                    <img src="img/trade.jpg" alt="Trade Finance">
-                </div>
-                <div class="card-body">
-                    <h3>Trade Finance</h3>
-                    <p>Inventory funding, bill discounting & cash flow support.</p>
-                </div>
-
-                <button class="card-apply">
-                    Apply Now
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-            </div>
-            <!-- Service Providers -->
-            <div class="showcase-card tone-cyan">
-                <div class="card-top">
-                    <div class="card-icon">
-                        <i class="fa-solid fa-briefcase"></i>
-                    </div>
-                    <img src="img/service.jpg" alt="Service Funding">
-                </div>
-                <div class="card-body">
-                    <h3>Service Sector Funding</h3>
-                    <p>Unsecured loans & revenue-based financing solutions.</p>
-                </div>
-
-                <button class="card-apply">
-                    Apply Now
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-            </div>
-            <!-- Developers -->
-            <div class="showcase-card tone-gold">
-                <div class="card-top">
-                    <div class="card-icon">
-                        <i class="fa-solid fa-building"></i>
-                    </div>
-                    <img src="img/developer.jpg" alt="Developer Funding">
-                </div>
-                <div class="card-body">
-                    <h3>Developer Funding</h3>
-                    <p>Project finance, structured debt & builder solutions.</p>
-                </div>
-
-                <button class="card-apply">
-                    Apply Now
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-            </div>
-            <!-- Salaried -->
-            <div class="showcase-card tone-emerald">
-                <div class="card-top">
-                    <div class="card-icon">
-                        <i class="fa-solid fa-user-tie"></i>
-                    </div>
-                    <img src="img/salaried.jpg" alt="Personal Funding">
-                </div>
-                <div class="card-body">
-                    <h3>Personal Funding</h3>
-                    <p>Home loans, LAP & tailored salaried solutions.</p>
-                </div>
-
-                <button class="card-apply">
-                    Apply Now
-                    <i class="fa-solid fa-arrow-right"></i>
-                </button>
-            </div>
+                    _activeC = "";
+                }
+            }
         </div>
     </div>
-    <!-- BOTTOM ARROWS -->
     <div class="showcase-arrows">
         <button id="prevCard"><i class="fa-solid fa-chevron-left"></i></button>
         <button id="nextCard"><i class="fa-solid fa-chevron-right"></i></button>
     </div>
 </section>
-
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-
-        const track = document.getElementById("showcaseCards");
-        const wrapper = document.querySelector(".showcase-cards-wrapper");
-        const options = document.querySelectorAll(".option");
-
-        let cards = Array.from(document.querySelectorAll(".showcase-card"));
-
-        const prevBtn = document.getElementById("prevCard");
-        const nextBtn = document.getElementById("nextCard");
-
-        /* Clone cards for infinite loop */
-        cards.forEach(card => {
-            track.appendChild(card.cloneNode(true));
-        });
-
-        cards = Array.from(document.querySelectorAll(".showcase-card"));
-
-        let originalCount = cards.length / 2;
-        let index = originalCount;
-        // ⭐ Start from middle clone set
-        // ⭐ Manufacturers default
-
-        let cardWidth, gap, step;
-
-        function calculateStep() {
-            cardWidth = cards[0].offsetWidth;
-            gap = 18; // MUST match CSS gap
-            step = cardWidth + gap;
-        }
-
-        function updateCarousel(animate = true) {
-
-            cards.forEach(c => c.classList.remove("active"));
-            options.forEach(o => o.classList.remove("active"));
-
-            const activeCard = cards[index];
-            activeCard.classList.add("active");
-
-            const realIndex = index % originalCount;
-            options[realIndex].classList.add("active");
-
-            track.style.transition = animate
-                ? "transform 0.45s cubic-bezier(0.22, 1, 0.36, 1)"
-                : "none";
-
-            track.style.transform = `translateX(-${index * step}px)`;
-        }
-        window.addEventListener("resize", () => {
-            calculateStep();
-            updateCarousel(false);
-        });
-
-
-        function nextCard() {
-            index++;
-            updateCarousel();
-
-            /* ✅ Reset ONLY after entering clone set */
-            if (index === cards.length - originalCount) {
-                setTimeout(() => {
-                    track.style.transition = "none";
-                    index = originalCount;
-                    updateCarousel(false);
-
-                    requestAnimationFrame(() => {
-                        track.style.transition = "transform 0.45s cubic-bezier(0.22, 1, 0.36, 1)";
-                    });
-                }, 450);
-            }
-        }
-
-
-        function prevCard() {
-            index--;
-            updateCarousel();
-
-            if (index === 0) {
-                setTimeout(() => {
-                    track.style.transition = "none";
-                    index = originalCount;
-                    updateCarousel(false);
-
-                    requestAnimationFrame(() => {
-                        track.style.transition = "transform 0.45s cubic-bezier(0.22, 1, 0.36, 1)";
-                    });
-                }, 450);
-            }
-        }
-        nextBtn.addEventListener("click", nextCard);
-        prevBtn.addEventListener("click", prevCard);
-
-        options.forEach(option => {
-            option.addEventListener("click", () => {
-
-                const target = parseInt(option.dataset.target);
-
-                /* ⭐ Jump inside ORIGINAL SET (middle clones) */
-                index = originalCount + target;
-
-                updateCarousel();
+    $(function () {
+        let currentIndex = 0;
+        const cardWidth = $(".showcase-card").outerWidth(true);
+        function slideCards() {
+            $("#showcaseCards").css({
+                transform: "translateX(" + -(currentIndex * cardWidth) + "px)",
+                transition: "transform .4s ease"
             });
+        }
+
+        // Next
+        $("#nextCard").click(function () {
+            const totalCards = $(".showcase-card:visible").length;
+            if (currentIndex < totalCards - 1) {
+                currentIndex++;
+                slideCards();
+            }
         });
 
+        // Previous
+        $("#prevCard").click(function () {
+            if (currentIndex > 0) {
+                currentIndex--;
+                slideCards();
+            }
+        });
 
-        /* ⭐ CRITICAL: wait for layout */
-        setTimeout(() => {
-            calculateStep();
-
-            /* ⭐ PRE-SHIFT so first card is centered */
-            const centerOffset = (wrapper.offsetWidth / 2) - (cardWidth / 2);
-            track.style.transform = `translateX(${centerOffset}px)`;
-
-            /* then apply normal positioning */
-            setTimeout(() => {
-                updateCarousel(false);
-            }, 50);
-
-        }, 120);
+        $(".option").click(function () {
+            currentIndex = 0;
+            $(".option").removeClass("active");
+            $(this).addClass("active");
+            var loanId = $(this).data("target");
+            $(".showcase-card").hide();
+            $(".showcase-card").removeClass("active");
+            $('.showcase-card[data-loan="' + loanId + '"]').addClass("active");
+            $('.showcase-card[data-loan="' + loanId + '"]').fadeIn(300);
+            slideCards();
+        });
+        // Default load
+        $(".option.active").trigger("click");
     });
 </script>

@@ -4,51 +4,74 @@
         onclick="APortalModule._APortalCommon.CloseToggle('BankService-Master-Panel','nav_BankService_form');">
     <i class="fa-solid fa-xmark"></i>
 </button>
-<form id="nav_BankService_form" action="@Url.Action("UpdateServiceDetails", "Admin")" method="post">
+<form id="nav_BankService_form" action="@Url.Action("UpdateServiceDetails", "Admin")" method="post"
+      enctype="multipart/form-data">
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
     <div class="form-grid">
         <div class="form-group">
             <label>Product Name *</label>
             @Html.HiddenFor(m => m.LoanProductId) <!-- Hidden field for Role ID -->
+            @Html.HiddenFor(m => m.ImageUrl) <!-- Hidden field for Role ID -->
             @Html.HiddenFor(m => m.IsActive) <!-- Hidden field for IsActive status -->
             @Html.HiddenFor(m => m.UserName) <!-- Hidden field for UserName -->
             @Html.HiddenFor(m => m.UserRole) <!-- Hidden field for UserRole -->
-            @Html.TextBoxFor(m => m.ProductName, new { @placeholder = "Enter Product Name",@class="txtspace",MaxLength="500" })
+            @Html.TextBoxFor(m => m.ProductName, new
+            {
+                @placeholder = "Enter Product Name",
+                @class = "txtspace",
+                MaxLength = "500"
+            })
             @Html.ValidationMessageFor(m => m.ProductName, "", new { @class = "text-danger" })
         </div>
 
         <div class="form-group">
             <label>Loan Type *</label>
-            @Html.DropDownListFor( m => m.LoanType,
-            new List<SelectListItem>
+            @Html.DropDownListFor(m => m.LoanTypeId, ViewBag.TypeList as SelectList, "-- Select Loan Type --", new
             {
-                new SelectListItem { Text = "-- Select Loan Type --", Value = "" },
-                new SelectListItem { Text = "Home Loan", Value = "Home Loan" },
-                new SelectListItem { Text = "Personal Loan", Value = "Personal Loan" },
-                new SelectListItem { Text = "Vehicle Loan", Value = "Vehicle Loan" },
-                new SelectListItem { Text = "Education Loan", Value = "Education Loan" }
-            }, new { @class = "form-control select2", required = "required" })
-            @Html.ValidationMessageFor(m => m.LoanType, "", new { @class = "text-danger" })
+                @class = "form-control select2",
+                required = "required"
+            })
+            @Html.ValidationMessageFor(m => m.LoanTypeId, "", new { @class = "text-danger" })
         </div>
         <div class="form-group">
             <label>Min Amount *</label>
-            @Html.TextBoxFor(m => m.MinAmount, new { @placeholder = "Enter Min Amount", @class = "txtspace txtdecimal", MaxLength = "18" })
+            @Html.TextBoxFor(m => m.MinAmount, new
+            {
+                @placeholder = "Enter Min Amount",
+                @class = "txtspace txtdecimal",
+                MaxLength = "18"
+            })
             @Html.ValidationMessageFor(m => m.MinAmount, "", new { @class = "text-danger" })
         </div>
         <div class="form-group">
             <label>Max Amount *</label>
-            @Html.TextBoxFor(m => m.MaxAmount, new { @placeholder = "Enter Max Amount", @class = "txtspace txtdecimal", MaxLength = "18" })
+            @Html.TextBoxFor(m => m.MaxAmount, new
+            {
+                @placeholder = "Enter Max Amount",
+                @class = "txtspace txtdecimal",
+                MaxLength = "18"
+            })
             @Html.ValidationMessageFor(m => m.MaxAmount, "", new { @class = "text-danger" })
         </div>
         <div class="form-group">
             <label>Min Tenure *</label>
-            @Html.TextBoxFor(m => m.MinTenure, new { @placeholder = "Enter Min Tenure", @class = "txtspace txtnumeric", MaxLength = "18" })
+            @Html.TextBoxFor(m => m.MinTenure, new
+            {
+                @placeholder = "Enter Min Tenure",
+                @class = "txtspace txtnumeric",
+                MaxLength = "18"
+            })
             @Html.ValidationMessageFor(m => m.MinTenure, "", new { @class = "text-danger" })
         </div>
         <div class="form-group">
             <label>Max Tenure *</label>
-            @Html.TextBoxFor(m => m.MaxTenure, new { @placeholder = "Enter Max Tenure", @class = "txtspace txtnumeric", MaxLength = "18" })
+            @Html.TextBoxFor(m => m.MaxTenure, new
+            {
+                @placeholder = "Enter Max Tenure",
+                @class = "txtspace txtnumeric",
+                MaxLength = "18"
+            })
             @Html.ValidationMessageFor(m => m.MaxTenure, "", new { @class = "text-danger" })
         </div>
         <div class="form-group">
@@ -61,18 +84,30 @@
                     new SelectListItem { Text = "Floating Interest", Value = "Floating" },
                     new SelectListItem { Text = "Reducing Balance", Value = "Reducing" },
                     new SelectListItem { Text = "Flat Interest", Value = "Flat" }
-                },new { @class = "form-control select2", required = "required" }
+                }, new { @class = "form-control select2", required = "required" }
             )
             @Html.ValidationMessageFor(m => m.InterestType, "", new { @class = "text-danger" })
         </div>
         <div class="form-group">
             <label>Default Interest Rate *</label>
-            @Html.TextBoxFor(m => m.DefaultInterestRate, new { @placeholder = "Enter Default Interest Rate", @class = "txtspace txtdecimal", MaxLength = "18" })
+            @Html.TextBoxFor(m => m.DefaultInterestRate, new
+            {
+                @placeholder = "Enter Default Interest Rate",
+                @class =
+      "txtspace txtdecimal",
+                MaxLength = "18"
+            })
             @Html.ValidationMessageFor(m => m.DefaultInterestRate, "", new { @class = "text-danger" })
         </div>
         <div class="form-group">
             <label>Processing Fee Percent *</label>
-            @Html.TextBoxFor(m => m.ProcessingFeePercent, new { @placeholder = "Enter Processing Fee Percent", @class = "txtspace txtdecimal", MaxLength = "18" })
+            @Html.TextBoxFor(m => m.ProcessingFeePercent, new
+            {
+                @placeholder = "Enter Processing Fee Percent",
+                @class =
+        "txtspace txtdecimal",
+                MaxLength = "18"
+            })
             @Html.ValidationMessageFor(m => m.ProcessingFeePercent, "", new { @class = "text-danger" })
         </div>
         <div class="form-group">
@@ -82,8 +117,34 @@
         </div>
         <div class="form-group">
             <label>Grace Days *</label>
-            @Html.TextBoxFor(m => m.GraceDays, new { @placeholder = "Enter Grace Days", @class = "txtspace txtnumeric", MaxLength = "18" })
+            @Html.TextBoxFor(m => m.GraceDays, new
+            {
+                @placeholder = "Enter Grace Days",
+                @class = "txtspace txtnumeric",
+                MaxLength = "18"
+            })
             @Html.ValidationMessageFor(m => m.GraceDays, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>Image *</label>
+            @Html.TextBoxFor(m => m.ImageFile, new
+            {
+                @type = "file",
+                @placeholder = "Select image file"
+            })
+            @Html.ValidationMessageFor(m => m.ImageFile, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>Is Secure *</label>
+            @Html.CheckBoxFor(m => m.IsSecure)
+        </div>
+        <div class="form-group full-width">
+            <label>Description *</label>
+            @Html.TextAreaFor(m => m.Descriptions, new
+            {
+                @placeholder = "Descriptions"
+            })
+            @Html.ValidationMessageFor(m => m.Descriptions, "", new { @class = "text-danger" })
         </div>
     </div>
     <div class="action-buttons">
@@ -107,3 +168,52 @@
         </button>
     </div>
 </form>
+<script>
+    $('#Descriptions').summernote({
+    height: 180,
+    placeholder: 'Enter Description...',
+    toolbar: [
+    ['style', ['bold', 'italic', 'underline', 'clear']],
+    ['font', ['fontsize', 'color']],
+    ['para', ['ul', 'ol', 'paragraph']],
+    ['insert', ['link', 'picture', 'table']],
+    ['view', ['fullscreen', 'codeview']]
+    ]
+    });
+    $(document).ready(function () {
+    setImageFromPath('/LoanProductImage/@Model.ImageUrl');
+    });
+    async function setImageFromPath(imagePath) {
+    try {
+    const response = await fetch(imagePath);
+
+    if (!response.ok) {
+    throw new Error("Image not found");
+    }
+
+    const blob = await response.blob();
+
+    const fileName = imagePath.split('/').pop();
+
+    const file = new File(
+    [blob],
+    fileName,
+    {
+    type: blob.type
+    }
+    );
+
+    const dataTransfer = new DataTransfer();
+    dataTransfer.items.add(file);
+
+    const input = document.getElementById("ImageFile");
+
+    input.files = dataTransfer.files;
+
+    console.log(input.files[0].name);
+
+    } catch (error) {
+    console.log(error);
+    }
+    }
+</script>

@@ -1,4 +1,4 @@
-  /* ================= WHY US – BANK GRADE ================= */
+ /* ================= WHY US – BANK GRADE ================= */
 
 .whyus-section {
   display: flex;
@@ -190,7 +190,7 @@
 /* Logo */
 .whyus-logo {
   height: 44px;
-  filter: brightness(0) invert(1);
+  /* filter: brightness(0) invert(1); */
 }
 
 /* Reveal Animation */

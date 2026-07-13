@@ -1,8 +1,72 @@
 ﻿@{
     ViewData["Title"] = Localizer["WelcomeMessage"];
 }
-<partial name="_UserWhatWeDo" />
-<partial name="_UserFinancialCalculator" />
+@model AllModuleListRequest
+
+@await Html.PartialAsync("_UserHeroYono5", Model);
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-panel" id="mobilePanel">
+    <div class="mobile-panel-header">
+        <div class="mobile-brand">
+            <img src="img/logo.png" alt="Logo">
+            <div class="mobile-brand-text">
+                <strong>Orchid Capital</strong>
+                <span>@Localizer["PremiumFinancialServices"]</span>
+            </div>
+        </div>
+        <i class="fa-solid fa-xmark mobile-close" id="mobileClose"></i>
+    </div>
+    <div class="mobile-menu">
+        <div class="mobile-item" id="mobileBusiness">
+            <span>@Localizer["Business"]</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="mobile-submenu">
+            @if (Model != null && Model.ProductsList != null & Model.ProductsList.Count > 0)
+            {
+                foreach (BankServiceListModel item in Model.ProductsList)
+                {
+                    <a href="#" data-desc="@item.Descriptions">@item.ProductName</a>
+                }
+            }
+        </div>
+        <div class="mobile-divider"></div>
+        <div class="mobile-item">
+            <span>@Localizer["Resources"]</span>
+        </div>
+        <div class="mobile-item">
+            <span>@Localizer["AboutUs"]</span>
+        </div>
+    </div>
+</div>
+<section class="usp-bar">
+    <div class="usp-left">
+        <img src="img/logo.png" alt="Logo">
+    </div>
+    <div class="usp-center">
+        <div class="usp-item">
+            <i class="fa-solid fa-chart-pie"></i>
+            <span>@Localizer["FinanceUpto500AssetValue"]</span>
+        </div>
+
+        <div class="usp-item">
+            <i class="fa-solid fa-coins"></i>
+            <span>@Localizer["LowNoEMIExpertise"]</span>
+        </div>
+
+        <div class="usp-item">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+            <span>@Localizer["FinanceOnFutureProjection"]</span>
+        </div>
+
+        <div class="usp-item">
+            <i class="fa-solid fa-award"></i>
+            <span>@Localizer["TwentyYearsExperience"]</span>
+        </div>
+    </div>
+</section>
+@await Html.PartialAsync("_UserWhatWeDo", Model);
+@await Html.PartialAsync("_UserFinancialCalculator", Model);
 <partial name="_UserWhyUs" />
 <partial name="_UserPartners" />
-<partial name="_UserTeams" />
+@await Html.PartialAsync("_UserTeams", Model);

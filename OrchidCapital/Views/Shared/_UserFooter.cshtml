@@ -1,69 +1,66 @@
 <link rel="stylesheet" href="~/css/footer.css" asp-append-version="true" />
 <footer class="bank-footer">
-  <div class="bank-footer-wrapper">
+    <div class="bank-footer-wrapper">
 
-    <div class="bank-footer-grid">
+        <div class="bank-footer-grid">
 
-      <!-- BRAND / LOGO -->
-      <div class="bank-footer-brand">
-        <img src="img/logo.png" alt="Company Logo">
+            <!-- BRAND -->
+            <div class="bank-footer-brand">
+                <img src="img/logo.png" alt="@Localizer["CompanyLogo"]">
 
-        <div class="bank-footer-tagline">
-          Delivering structured financial solutions with regulatory discipline,
-          risk-optimized frameworks, and long-term value creation.
+                <div class="bank-footer-tagline">
+                    @Localizer["FooterTagline"]
+                </div>
+
+                <div class="bank-footer-certifications">
+                    <div class="bank-badge">@Localizer["RBICompliant"]</div>
+                    <div class="bank-badge">@Localizer["SecurePlatform"]</div>
+                    <div class="bank-badge">@Localizer["ISOStandards"]</div>
+                </div>
+            </div>
+
+            <!-- COMPANY -->
+            <div class="bank-footer-column">
+                <h4>@Localizer["Company"]</h4>
+                <ul>
+                    <li><a href="@Url.Action("AboutUs","Home")">@Localizer["AboutUs"]</a></li>
+                    <li><a href="@Url.Action("Leadership","Home")">@Localizer["Leadership"]</a></li>
+                    <li><a href="@Url.Action("Careers","Home")">@Localizer["Careers"]</a></li>
+                    <li><a href="@Url.Action("Newsroom","Home")">@Localizer["Newsroom"]</a></li>
+                </ul>
+            </div>
+
+            <!-- SERVICES -->
+            <div class="bank-footer-column">
+                <h4>@Localizer["Services"]</h4>
+                <ul>
+                    <li><a href="@Url.Action("BusinessLoans","Home")">@Localizer["BusinessLoans"]</a></li>
+                    <li><a href="@Url.Action("StructuredFinance","Home")">@Localizer["StructuredFinance"]</a></li>
+                    <li><a href="@Url.Action("WorkingCapital","Home")">@Localizer["WorkingCapital"]</a></li>
+                    <li><a href="@Url.Action("Advisory","Home")">@Localizer["Advisory"]</a></li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="bank-footer-column bank-footer-contact">
+                <h4>@Localizer["Contact"]</h4>
+                <p>@Localizer["Email"] : support@orchidcapital.com</p>
+                <p>@Localizer["Phone"] : +91 90000 00000</p>
+                <p>@Localizer["Locations"]</p>
+            </div>
+
         </div>
 
-        <div class="bank-footer-certifications">
-          <div class="bank-badge">RBI Compliant</div>
-          <div class="bank-badge">Secure Platform</div>
-          <div class="bank-badge">ISO Standards</div>
+        <div class="bank-footer-divider"></div>
+        <div class="bank-footer-bottom">
+            <p>@Localizer["Copyright"]</p>
+            <div class="bank-footer-links">
+                <a href="@Url.Action("PrivacyPolicy","Home")">@Localizer["PrivacyPolicy"]</a>
+                <a href="@Url.Action("Terms","Home")">@Localizer["Terms"]</a>
+                <a href="@Url.Action("Compliance","Home")">@Localizer["Compliance"]</a>
+                <a href="@Url.Action("Disclosures","Home")">@Localizer["Disclosures"]</a>
+            </div>
         </div>
-      </div>
-
-      <!-- COMPANY -->
-      <div class="bank-footer-column">
-        <h4>Company</h4>
-        <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Leadership</a></li>
-          <li><a href="#">Careers</a></li>
-          <li><a href="#">Newsroom</a></li>
-        </ul>
-      </div>
-
-      <!-- SERVICES -->
-      <div class="bank-footer-column">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="#">Business Loans</a></li>
-          <li><a href="#">Structured Finance</a></li>
-          <li><a href="#">Working Capital</a></li>
-          <li><a href="#">Advisory</a></li>
-        </ul>
-      </div>
-
-      <!-- CONTACT -->
-      <div class="bank-footer-column bank-footer-contact">
-        <h4>Contact</h4>
-        <p>Email: support@orchidcapital.com</p>
-        <p>Phone: +91 90000 00000</p>
-        <p>Mumbai • Delhi • Bengaluru</p>
-      </div>
 
     </div>
-
-    <div class="bank-footer-divider"></div>
-
-    <div class="bank-footer-bottom">
-      <p>© 2026 Orchid Capital. All Rights Reserved.</p>
-
-      <div class="bank-footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms</a>
-        <a href="#">Compliance</a>
-        <a href="#">Disclosures</a>
-      </div>
-    </div>
-
-  </div>
 </footer>

@@ -1,0 +1,49 @@
+@model IEnumerable<OrchidCapital.Models.LoanTypeModel>
+@{
+    if (Model.Count() == 0)
+    {
+        <tr data-total-records="0" id="0">
+            <td colspan="4" style="text-align: center;">Roles aren’t set up yet. Please add them to continue.</td>
+        </tr>
+    }
+    else
+    {
+        foreach (LoanTypeModel item in Model)
+        {
+            <tr data-total-records="@item.TotalRecords" id="@item.LoanTypeId">
+                 <td>@item.LoanTypeId</td>
+                <td>@item.Name</td>
+                <td>
+                    <span class="status-dot @(item.IsActive ? "active-dot" : "inactive-dot")"></span>
+                    @(item.IsActive ? "Active" : "Inactive")
+                </td>
+                <td>@item.CreatedOn</td>
+                <td>@item.CreatedBy</td>
+                <td class="text-center">
+                    <div class="action-wrapper">
+                        <button class="action-btn" data-id="@item.LoanTypeId" onclick="APortalLoanType._APortalLoanType.toggleMenu(this)">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+                        <div class="action-menu">
+                            <div id="edit-@item.LoanTypeId" onclick="APortalLoanType._APortalLoanType.Edit('@item.LoanTypeId')">
+                                <i class="fa-solid fa-pen-to-square"></i> Edit
+                            </div>
+
+                            <div id="status-@item.LoanTypeId" onclick="APortalLoanType._APortalLoanType.Status('@item.LoanTypeId', '@item.IsActive')">
+                                <i class="fa-solid fa-toggle-on"></i>
+                                @(item.IsActive ? "Inactive" : "Active")
+                            </div>
+
+                            @if (item.IsActive == false)
+                            {
+                                <div id="remove-@item.LoanTypeId" onclick="APortalLoanType._APortalLoanType.Delete('@item.LoanTypeId')">
+                                    <i class="fa-solid fa-trash"></i> Delete
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        }
+    }
+}

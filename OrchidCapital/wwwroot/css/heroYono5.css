@@ -1,11 +1,135 @@
-/* HERO SECTION */
+/* ==================================================
+   PREMIUM LIGHT BLUE HERO – BANK GRADE FINISH
+   Inspired by corporate blue + subtle saffron warmth
+   ================================================== */
+
 .hero-section {
   position: relative;
-background: #771f89;
-  color: white;
+
+  /* 🔥 Upscaled Bank-Grade Dual Gradient */
+  background: linear-gradient(
+    115deg,
+    rgba(70, 0, 50, 0.68) 0%,     /* Deep Luxury Pink */
+    rgb(132, 0, 110) 15%,    /* Gloss Pink Lift */
+    rgb(0, 126, 245) 75%,     /* Rich Corporate Blue */
+    rgb(0, 41, 113) 100%     /* Deep Financial Blue */
+  );
+filter: contrast(1.12) brightness(1.05);
+  color: #ffffff;
   overflow: hidden;
+  margin-top: -82px;
+  padding-top: 82px;
+  
+
+ box-shadow:
+  inset 0 0 60px rgba(255,255,255,0.04),
+  0 30px 70px rgba(0,0,0,0.18);
 }
 
+
+/* ----------------------------------------
+   Subtle Saffron Warm Accent (very soft)
+   ---------------------------------------- */
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at 30% 25%, rgba(255,40,40,0.35), transparent 45%),
+    radial-gradient(circle at 70% 30%, rgba(60,120,255,0.35), transparent 55%);
+
+  mix-blend-mode: color-dodge;
+  pointer-events: none;
+}
+
+/* ==================================================
+   SEARCH BAR – PREMIUM CLEAN ELEVATION
+   ================================================== */
+
+.hero-search {
+  margin-top: 40px;
+  background: rgba(255,255,255,0.98);
+  border-radius: 18px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 520px;
+
+  box-shadow:
+    0 22px 50px rgba(0,0,0,0.20),
+    0 8px 18px rgba(0,0,0,0.08);
+
+  border: none;
+}
+
+.hero-search input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 15px;
+  font-weight: 500;
+  background: transparent;
+  color: #111;
+}
+
+.hero-search i {
+  color: #555;
+}
+
+/* ==================================================
+   EXTENSION PANEL – MATTE GLASS FINISH
+   ================================================== */
+
+.hero-left-extension {
+  background: rgba(255,255,255,0.10);
+  backdrop-filter: blur(18px);
+  border-radius: 26px;
+
+  border: 1px solid rgba(255,255,255,0.18);
+
+  box-shadow:
+    0 35px 70px rgba(0,0,0,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.15);
+}
+
+/* ==================================================
+   SERVICE PANEL – CLEAN BANK DEPTH
+   ================================================== */
+
+.service-panel {
+  background: #ffffff;
+  border-radius: 24px;
+
+  box-shadow:
+    0 40px 90px rgba(0,0,0,0.16),
+    0 12px 28px rgba(0,0,0,0.08);
+}
+
+/* ==================================================
+   SLIDER CONTROLS – MODERN CORPORATE STYLE
+   ================================================== */
+
+.slider-controls button {
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+
+  background: rgba(0,0,0,0.45);
+  color: white;
+
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.slider-controls button:hover {
+  transform: translateY(-2px);
+  background: rgba(0,0,0,0.60);
+}
 /* HERO LAYOUT (EDGE-TO-EDGE) */
 .hero-container {
   display: flex;
@@ -20,7 +144,7 @@ background: #771f89;
 /* LEFT PANEL */
 .hero-left {
   flex: 1;
-  background: #771f89;   /* 👈 Solid light purple */
+  background: transparent;   /* 👈 Solid light purple */
    padding: 20px 55px 60px;
   display: flex;
   flex-direction: column;
@@ -162,21 +286,28 @@ background: #771f89;
   overflow: visible;   /* 👈 IMPORTANT */
 }
 
-/* EXTENSION PANEL */
+/* ==================================================
+   EXTENSION PANEL – PREMIUM BLENDED MATTE
+   ================================================== */
+
 .hero-left-extension {
   position: absolute;
-  right: -250px;       /* 👈 Push outside from right boundary */
+  right: -250px;
   top: 50%;
   transform: translateY(-50%);
 
   width: 300px;
-  height: 30px;
+  padding: 28px 24px;
 
-  background: #771f89;   /* SAME purple */
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(22px);
 
+  border-radius: 28px;
+  border: 1px solid rgba(255,255,255,0.18);
 
- 
-  padding: 26px 22px;
+  box-shadow:
+    0 40px 80px rgba(0,0,0,0.28),
+    inset 0 1px 0 rgba(255,255,255,0.20);
 
   z-index: 20;
 }
@@ -200,30 +331,32 @@ background: #771f89;
   font-size: 26px;
   font-weight: 600;
   margin: 0;
+  color: black;
 }
 
 .feature-text p {
   margin: 6px 0 0;
   font-size: 14px;
-  color: rgba(255,255,255,0.75);
+  color: black;
 }
 
 /* 🚀 Floating Button */
 .feature-btn {
   position: absolute;
-  top: 150px;              /* 👈 Push FAR DOWN */
-  right: -130px;          /* 👈 Move over hero image */
-  z-index: 5;
-  border: none;
-  background: white;
-  color: #771f89;
-  padding: 12px 22px;
-  border-radius: 14px;
-  font-size: 14px;
-  font-weight: 600;
-  cursor: pointer;
+  top: 150px;
+  right: -130px;
 
-  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+  background: #ffffff;
+  color: rgb(38,110,215); /* match hero blue */
+
+  padding: 12px 24px;
+  border-radius: 16px;
+  font-weight: 600;
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,0.22),
+    0 6px 15px rgba(0,0,0,0.10);
+
   transition: 0.25s ease;
 }
 
@@ -238,7 +371,6 @@ background: #771f89;
   flex: 1;
   position: relative;
   background: transparent;
-  height: 650px; 
 }
 
 /* SLIDER */
@@ -252,7 +384,7 @@ background: #771f89;
   position: relative;
   width: 100%;
   height: 100%;
-  
+  min-height: 540px;
 }
 
 .slide {
@@ -363,28 +495,43 @@ background: #771f89;
   opacity: 0.95;
 }
 
+/* ==================================================
+   SEAMLESS HERO CONTINUATION PANEL
+   Same gradient → fades to white
+================================================== */
 
-
-/* BOTTOM TRANSITION AREA */
 .hero-bottom {
   position: relative;
   width: 100%;
-  height: 190px;
-  margin-top: -80px;
+  height: 80px;
+  margin-top: -46px;
   z-index: 1;
-  
+
+  /* SAME EXACT HERO GRADIENT */
+  background:
+    linear-gradient(
+      140deg,
+           /* Deep Luxury Pink */
+    rgb(108, 0, 99) 25%,    /* Gloss Pink Lift */
+    rgb(46, 102, 255) 75%,     /* Rich Corporate Blue */
+    rgb(22, 60, 170) 100%    
+    );
+
+  overflow: hidden;
+}
+.hero-bottom::after {
+  content: "";
+  position: absolute;
+  inset: 0;
 
   background: linear-gradient(
     to bottom,
-    #771f89 0%,      /* 👈 Exact match */
-    #771f89 18%,     /* 👈 HARD COLOR HOLD */
-    rgba(255, 255, 255, 0.83) 40%,
-    rgba(255, 255, 255, 1) 100%
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,0.6) 60%,
+    rgba(255,255,255,0.9) 80%,
+    #ffffff 100%
   );
 }
-
-
-
 
 
 /* STRIPS CONTAINER */
@@ -404,15 +551,12 @@ background: #771f89;
   flex: 1;
   height: 100%;
 
-  background: linear-gradient(
-    to bottom,
-    #771f89 0%,     /* 👈 PURE SOLID PURPLE */
-    #771f89 22%,    /* 👈 HARD HOLD (prevents fade line) */
-    rgba(232, 228, 228, 0.35) 45%,
-    #ffffff 100%
-  );
+  background: transparent;
+  border-right: 1px solid rgba(0,0,0,0.03);
+}
 
-  border-right: 1px solid rgba(120, 21, 143, 0.18);
+.strip-line span:last-child {
+  border-right: none;
 }
 
 
@@ -500,7 +644,8 @@ background: #771f89;
   position: absolute;
   width: 58px;
   height: 58px;
-  background: rgb(139, 32, 169); /* 👈 Low opacity */
+  background: rgba(255,255,255,0.10);
+backdrop-filter: blur(4px); /* 👈 Low opacity */
   
 }
 
@@ -716,273 +861,42 @@ background: #771f89;
 .banking-options .option:active i {
   color: #000000 !important;
 }
-.slide {
-  will-change: opacity;
+
+.next-section {
+  background: #ffffff;
+  position: relative;
+  height: 50px;
+  z-index: 2;
 }
 
-  
-@media (max-width: 768px) {
+/* ==========================================
+   PREMIUM BLENDED HERO STRIPS
+   ========================================== */
 
-  /* HERO CONTAINER STACK */
-  .hero-container {
-    flex-direction: column;
-    min-height: auto;
-  }
+.hero-strips {
+  position: relative;
+  height: 120px;
+  margin-top: -120px; /* slight overlap with service panel */
+  z-index: 2;
 
-  /* SLIDER ON TOP */
-  .hero-right {
-    order: 1;
-    width: 100%;
-  }
-
-  .slides {
-    min-height: 260px;   /* Mobile-friendly height */
-  }
-
-  .slide img {
-    height: 260px;
-    object-fit: cover;
-  }
-
-  /* LEFT CONTENT BELOW */
-  .hero-left {
-    order: 2;
-    margin-top: 0;
-    padding: 26px 18px 40px;
-  }
-
-  /* Reduce headline size */
-  .hero-left h1 {
-    font-size: 28px;
-  }
-
-  /* Adjust search */
-  .hero-search {
-    margin-top: 22px;
-    max-width: 100%;
-  }
-
-  /* Grid → horizontal scroll */
-  .banking-grid {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
-  }
-
-  .banking-grid::-webkit-scrollbar {
-    display: none;
-  }
-
-  .banking-card {
-    min-width: 170px;
-    flex-shrink: 0;
-  }
-
-  /* Hide extension panel on mobile */
-  .hero-left-extension {
-    position: relative;
-    right: auto;
-    top: auto;
-    transform: none;
-    margin-top: 22px;
-  }
-
-  .feature-btn {
-    position: relative;
-    right: auto;
-    top: auto;
-    margin-top: 10px;
-  }
-
-  /* Support alignment */
-  .hero-support {
-    margin-top: 26px;
-  }
-  .service-wrapper {
-    display: none;
-  }
-  .hero-bottom {
-    display: none;
-  }
-  
-
-  .hero-container {
-    max-width: 100%;
-    width: 100%;
-  }
-  .hero-right {
-    width: 100%;
-  }
-   body {
-    overflow-x: hidden;
-  }
-  .slide,
-.slide img,
-.slide picture {
+  display: flex;
   width: 100%;
+
+  /* NO background */
+}
+
+/* Vertical Lines */
+.hero-strips span {
+  flex: 1;
   height: 100%;
-  display: block;
-}
- .hero-left-extension {
-    position: relative;     /* remove absolute */
-    right: auto;
-    top: auto;
-    transform: none;
 
-    width: 100%;
-    margin-top: -25px;
-    margin-bottom: 25px;    /* space before search */
-    padding: 0;
-  }
-
-}
-@media (max-width: 768px) {
-
-  .decor-square {
-    display: none !important;
-  }
-
-}
-@media (max-width: 768px) {
-
-  /* Allow free ordering */
-  .hero-container {
-    flex-direction: column;
-  }
-
-  .hero-left {
-    display: contents;
-  }
-
-  /* ✅ TITLE FIRST */
-  .hero-left h1 {
-    order: 1;
-    display: block;
-    font-size: 26px;
-    padding: 14px;
-    margin: 0;
-  }
-
-  /* ✅ SLIDER SECOND */
-  .hero-right {
-    order: 2;
-  }
-
-  /* ✅ EXTENSION THIRD */
-  .hero-left-extension {
-    order: 3;
-  }
-
-  /* ✅ SEARCH FOURTH */
-  .hero-search {
-    order: 4;
-  }
-
-  /* ✅ CARDS FIFTH */
-  .banking-grid {
-    order: 5;
-  }
-
-  /* ✅ SUPPORT LAST */
-  .hero-support {
-    order: 6;
-  }
-
+  border-right: 1px solid rgba(255,255,255,0.10);
 }
 
-@media (max-width: 768px) {
-
-  /* ===== THINNER BANK-GRADE SEARCH ===== */
-  .hero-search {
-    margin-top: 30px;
-    margin-left: 5px;
-    margin-right: 5px;
-    background: white;
-    border-radius: 14px;          /* tighter radius */
-    padding: 8px 12px;            /* 👈 thinner */
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    max-width: 100%;
-
-    border: 1px solid #e5e7eb;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  }
-
-  .hero-search i {
-    font-size: 14px;
-    color: #6b7280;
-  }
-
-  .hero-search input {
-    font-size: 13.5px;
-    font-weight: 500;
-  }
-
-  /* Voice button slimmer */
-  .voice-search {
-    width: 30px;
-    height: 30px;
-    border-radius: 8px;
-    background: #f3f4f6;
-  }
-
-  .voice-search i {
-    font-size: 13px;
-    color: #771f89;
-  }
-
+/* Remove last border */
+.hero-strips span:last-child {
+  border-right: none;
 }
 
-@media (max-width: 768px) {
 
-  /* ===== BUTTON STRIP ===== */
-  .banking-grid {
-    margin-top: 20px;
-    margin-right: 5px;
-    margin-left: 5px;
-    display: flex;
-    overflow-x: auto;
-    gap: 8px;
-    padding-bottom: 4px;
-  }
-
-  .banking-grid::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* ===== BANK-GRADE BUTTON ===== */
-  .banking-card {
-    padding: 7px 12px;            /* 👈 tighter */
-    border-radius: 10px;          /* 👈 bank style */
-    font-size: 13px;
-    font-weight: 500;
-    background: #ffffff;
-    
-
-    border: 1px solid #e5e7eb;
-    height: 38px;                 /* 👈 consistent */
-    min-width: auto;
-
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-
-    flex-shrink: 0;
-    transition: 0.2s ease;
-  }
-
-  .banking-card i {
-    font-size: 14px;
-  }
-
-  /* Hover → subtle professional */
-  .banking-card:hover {
-    background: #f9fafb;
-    transform: none;
-  }
-  .hero-support {
-    margin : 30px;
-  }
-
-}
+/* Soft fade blending to hero-bottom */

@@ -87,4 +87,338 @@
   <data name="InvalidEmail" xml:space="preserve">
     <value>Please enter a valid email address</value>
   </data>
+  <data name="CompanyLogo" xml:space="preserve">
+  <value>Company Logo</value>
+</data>
+
+<data name="FooterTagline" xml:space="preserve">
+  <value>Delivering structured financial solutions with regulatory discipline, risk-optimized frameworks, and long-term value creation.</value>
+</data>
+
+<data name="RBICompliant" xml:space="preserve">
+  <value>RBI Compliant</value>
+</data>
+
+<data name="SecurePlatform" xml:space="preserve">
+  <value>Secure Platform</value>
+</data>
+
+<data name="ISOStandards" xml:space="preserve">
+  <value>ISO Standards</value>
+</data>
+
+<data name="Company" xml:space="preserve">
+  <value>Company</value>
+</data>
+
+<data name="AboutUs" xml:space="preserve">
+  <value>About Us</value>
+</data>
+
+<data name="Leadership" xml:space="preserve">
+  <value>Leadership</value>
+</data>
+
+<data name="Careers" xml:space="preserve">
+  <value>Careers</value>
+</data>
+
+<data name="Newsroom" xml:space="preserve">
+  <value>Newsroom</value>
+</data>
+
+<data name="Services" xml:space="preserve">
+  <value>Services</value>
+</data>
+
+<data name="BusinessLoans" xml:space="preserve">
+  <value>Business Loans</value>
+</data>
+
+<data name="StructuredFinance" xml:space="preserve">
+  <value>Structured Finance</value>
+</data>
+
+<data name="WorkingCapital" xml:space="preserve">
+  <value>Working Capital</value>
+</data>
+
+<data name="Advisory" xml:space="preserve">
+  <value>Advisory</value>
+</data>
+
+<data name="Contact" xml:space="preserve">
+  <value>Contact</value>
+</data>
+
+<data name="Email" xml:space="preserve">
+  <value>Email</value>
+</data>
+
+<data name="Phone" xml:space="preserve">
+  <value>Phone</value>
+</data>
+
+<data name="Locations" xml:space="preserve">
+  <value>Mumbai • Delhi • Bengaluru</value>
+</data>
+
+<data name="Copyright" xml:space="preserve">
+  <value>© 2026 Orchid Capital. All Rights Reserved.</value>
+</data>
+
+<data name="PrivacyPolicy" xml:space="preserve">
+  <value>Privacy Policy</value>
+</data>
+
+<data name="Terms" xml:space="preserve">
+  <value>Terms</value>
+</data>
+
+<data name="Compliance" xml:space="preserve">
+  <value>Compliance</value>
+</data>
+
+<data name="Disclosures" xml:space="preserve">
+  <value>Disclosures</value>
+</data>
+<data name="WhyChooseUs" xml:space="preserve"><value>Why Choose Us</value></data>
+<data name="WhyOrchidCapitalStandsApart" xml:space="preserve"><value>Why Orchid Capital Stands Apart</value></data>
+<data name="WhyUsDescription" xml:space="preserve"><value>We combine deep financial expertise with modern digital precision, delivering funding solutions designed for speed, flexibility, and trust.</value></data>
+<data name="KnowMore" xml:space="preserve"><value>Know More</value></data>
+<data name="CompanyLogo" xml:space="preserve"><value>Company Logo</value></data>
+<data name="ComparedToTraditionalLenders" xml:space="preserve"><value>Compared to Traditional Lenders</value></data>
+<data name="FastApprovals" xml:space="preserve"><value>Fast Approvals</value></data>
+<data name="DecisionsWithinHours" xml:space="preserve"><value>Decisions within hours</value></data>
+<data name="FlexibleStructuring" xml:space="preserve"><value>Flexible Structuring</value></data>
+<data name="TailoredFinancialModels" xml:space="preserve"><value>Tailored financial models</value></data>
+<data name="FutureProjectionFunding" xml:space="preserve"><value>Future Projection Funding</value></data>
+<data name="NotJustPastPerformance" xml:space="preserve"><value>Not just past performance</value></data>
+<data name="MinimalDocumentation" xml:space="preserve"><value>Minimal Documentation</value></data>
+<data name="SimplifiedOnboarding" xml:space="preserve"><value>Simplified onboarding</value></data>
+<data name="RelationshipDriven" xml:space="preserve"><value>Relationship-Driven</value></data>
+<data name="HumanFirstAdvisory" xml:space="preserve"><value>Human-first advisory</value></data>
+<data name="TwentyYearsExpertise" xml:space="preserve"><value>20+ Years Expertise</value></data>
+<data name="ProvenIndustryLeadership" xml:space="preserve"><value>Proven industry leadership</value></data>
+<data name="WhatWeDo" xml:space="preserve">
+  <value>What We Do</value>
+</data>
+<data name="WeRaiseFundsFor" xml:space="preserve">
+  <value>We Raise Funds For</value>
+</data>
+<data name="TrustedFinancialNetwork" xml:space="preserve"><value>Trusted Financial Network</value></data>
+<data name="PoweringGrowth" xml:space="preserve"><value>Powering growth through strategic financial partnerships</value></data>
+<data name="Banks" xml:space="preserve"><value>Banks</value></data>
+<data name="BanksDescription" xml:space="preserve"><value>Structured funding and regulated lending partnerships.</value></data>
+<data name="NBFC" xml:space="preserve"><value>NBFC</value></data>
+<data name="NBFCDescription" xml:space="preserve"><value>Flexible credit models and specialized financing.</value></data>
+<data name="SIDBI" xml:space="preserve"><value>SIDBI</value></data>
+<data name="SIDBIDescription" xml:space="preserve"><value>Empowering MSME growth through development finance.</value></data>
+<data name="CoOperatives" xml:space="preserve"><value>Co-Operatives</value></data>
+<data name="CoOperativesDescription" xml:space="preserve"><value>Localized capital channels for inclusive finance.</value></data>
+<data name="Investors" xml:space="preserve"><value>Investors</value></data>
+<data name="InvestorsDescription" xml:space="preserve"><value>Private capital and growth acceleration partners.</value></data>
+<data name="ReadMore" xml:space="preserve"><value>Read More</value></data>
+<data name="LeadershipTeam" xml:space="preserve">
+  <value>Leadership Team</value>
+</data>
+<data name="LeadershipTeamDescription" xml:space="preserve">
+  <value>Experienced professionals driving financial excellence</value>
+</data>
+<data name="SimplifyFinancialPlanning" xml:space="preserve">
+  <value>Simplify Financial Planning with the Right Tools</value>
+</data>
+
+<data name="FlexibleEMIs" xml:space="preserve">
+  <value>Flexible EMIs to Address Your Needs</value>
+</data>
+<data name="LoanAmount" xml:space="preserve"><value>Loan Amount</value></data>
+<data name="LoanTenureYears" xml:space="preserve"><value>Loan Tenure (Years)</value></data>
+<data name="Years" xml:space="preserve"><value>Years</value></data>
+<data name="InterestRate" xml:space="preserve"><value>Interest Rate</value></data>
+<data name="YourMonthlyEMI" xml:space="preserve"><value>Your Monthly EMI</value></data>
+<data name="AmountPayable" xml:space="preserve"><value>Amount Payable</value></data>
+<data name="TotalInterest" xml:space="preserve"><value>Total Interest</value></data>
+<data name="PrincipalAmount" xml:space="preserve"><value>Principal Amount</value></data>
+<data name="ApplyNow" xml:space="preserve"><value>Apply Now</value></data>
+<data name="KnowMore" xml:space="preserve"><value>Know More</value></data>
+<data name="HeroTitle" xml:space="preserve">
+  <value>Truth, Trust and Transparency</value>
+</data>
+
+<data name="SearchPlaceholder" xml:space="preserve">
+  <value>Search banking products, services...</value>
+</data>
+
+<data name="SecureLoans" xml:space="preserve">
+  <value>Secure Loans</value>
+</data>
+
+<data name="UnsecureLoans" xml:space="preserve">
+  <value>Unsecure Loans</value>
+</data>
+
+<data name="MSMELoans" xml:space="preserve">
+  <value>MSME Loans</value>
+</data>
+
+<data name="PrivateInvestors" xml:space="preserve">
+  <value>Private Investors</value>
+</data>
+
+<data name="AgentLogin" xml:space="preserve">
+  <value>Agent Login</value>
+</data>
+
+<data name="GetSupport" xml:space="preserve">
+  <value>Get Support</value>
+</data>
+<data name="ServiceRequest" xml:space="preserve">
+  <value>Service Request</value>
+</data>
+
+<data name="TrackApplicationService" xml:space="preserve">
+  <value>Track Application / Service</value>
+</data>
+
+<data name="SmartLock" xml:space="preserve">
+  <value>Smart Lock</value>
+</data>
+
+<data name="BlockCard" xml:space="preserve">
+  <value>Block Card</value>
+</data>
+
+<data name="ReportFraud" xml:space="preserve">
+  <value>Report Fraud</value>
+</data>
+<data name="NeedHelp" xml:space="preserve">
+  <value>Need Help?</value>
+</data>
+
+<data name="NeedHelpDescription" xml:space="preserve">
+  <value>Talk to our financial advisors for customized solutions.</value>
+</data>
+
+<data name="ContactRelationshipManager" xml:space="preserve">
+  <value>Contact Relationship Manager</value>
+</data>
+<data name="LowEMI" xml:space="preserve">
+  <value>LOW EMI</value>
+</data>
+
+<data name="NoEMI" xml:space="preserve">
+  <value>NO EMI</value>
+</data>
+
+<data name="FlexiEMI" xml:space="preserve">
+  <value>FLEXI EMI</value>
+</data>
+
+<data name="RaiseEasyBusinessCapital" xml:space="preserve">
+  <value>Raise Easy Business Capital</value>
+</data>
+
+<data name="Unlimited" xml:space="preserve">
+  <value>UNLIMITED</value>
+</data>
+
+<data name="Close" xml:space="preserve">
+  <value>Close</value>
+</data>
+<data name="Business" xml:space="preserve">
+  <value>Business</value>
+</data>
+
+<data name="MSMELogo" xml:space="preserve">
+  <value>MSME Logo</value>
+</data>
+
+<data name="EmpowerMSME" xml:space="preserve">
+  <value>Empower MSME</value>
+</data>
+<data name="Secured" xml:space="preserve">
+  <value>Secured</value>
+</data>
+<data name="Unsecured" xml:space="preserve">
+  <value>Unsecured</value>
+</data>
+<data name="SecureLoans" xml:space="preserve">
+  <value>Secure Loans</value>
+</data>
+
+<data name="UnsecureLoans" xml:space="preserve">
+  <value>Unsecure Loans</value>
+</data>
+
+<data name="CreditScore" xml:space="preserve">
+  <value>Credit Score</value>
+</data>
+
+<data name="Calculations" xml:space="preserve">
+  <value>Calculations</value>
+</data>
+
+<data name="Learn" xml:space="preserve">
+  <value>Learn</value>
+</data>
+
+<data name="Resources" xml:space="preserve">
+  <value>Resources</value>
+</data>
+<data name="Home" xml:space="preserve">
+  <value>Home</value>
+</data>
+
+<data name="Business" xml:space="preserve">
+  <value>Business</value>
+</data>
+
+<data name="AboutUs" xml:space="preserve">
+  <value>About Us</value>
+</data>
+
+<data name="ContactUs" xml:space="preserve">
+  <value>Contact Us</value>
+</data>
+<data name="LimitedTimeOffer" xml:space="preserve">
+  <value>Limited Time Offer</value>
+</data>
+
+<data name="HomeLoanProcessingFeeWaiver" xml:space="preserve">
+  <value>Get processing fee waiver on Home Loans.</value>
+</data>
+<data name="PremiumFinancialServices" xml:space="preserve">
+  <value>Premium Financial Services</value>
+</data>
+<data name="FinanceUpto500AssetValue" xml:space="preserve">
+  <value>Finance upto 500% of Asset Value</value>
+</data>
+
+<data name="LowNoEMIExpertise" xml:space="preserve">
+  <value>Low EMI / No EMI Expertise</value>
+</data>
+
+<data name="FinanceOnFutureProjection" xml:space="preserve">
+  <value>Finance on Future Projection</value>
+</data>
+
+<data name="TwentyYearsExperience" xml:space="preserve">
+  <value>20+ Years of Experience</value>
+</data>
+<data name="WhatAreYouLookingFor" xml:space="preserve">
+  <value>What are you looking for?</value>
+</data>
+
+<data name="SearchLoansCardsInvestments" xml:space="preserve">
+  <value>Search loans, cards, investments...</value>
+</data>
+
+<data name="FindBankingSolutions" xml:space="preserve">
+  <value>Find banking solutions...</value>
+</data>
+
+<data name="ExploreOrchidCapitalServices" xml:space="preserve">
+  <value>Explore Orchid Capital services...</value>
+</data>
 </root>

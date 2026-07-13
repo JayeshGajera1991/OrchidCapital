@@ -56,7 +56,7 @@ namespace OrchidCapital.Models
     }
     public class BankBranchModel
     {
-         public int BranchId { get; set; }
+        public int BranchId { get; set; }
         public string BranchCode { get; set; }
         public string BranchName { get; set; }
         public string BranchAddress { get; set; }
@@ -65,7 +65,7 @@ namespace OrchidCapital.Models
         public string MICRCode { get; set; }
         public string ContactPerson { get; set; }
         public string PhoneNumber { get; set; }
-        public string Email { get; set; }        
+        public string Email { get; set; }
         public bool IsActive { get; set; }
         public string CreatedOn { get; set; }
         public string CreatedBy { get; set; }
@@ -88,6 +88,15 @@ namespace OrchidCapital.Models
     {
         public int Id { get; set; }
         public string Role { get; set; }
+        public bool IsActive { get; set; }
+        public string CreatedBy { get; set; }
+        public string CreatedOn { get; set; }
+        public int TotalRecords { get; set; }
+    }
+    public class LoanTypeModel
+    {
+        public int LoanTypeId { get; set; }
+        public string Name { get; set; }
         public bool IsActive { get; set; }
         public string CreatedBy { get; set; }
         public string CreatedOn { get; set; }
@@ -385,7 +394,7 @@ namespace OrchidCapital.Models
         public string IsSelected { get; set; }
         public string Controller { get; set; }
         public string ActionName { get; set; }
-        public string IconName {get; set;}
+        public string IconName { get; set; }
     }
     public class GetRolePermissionsRequest
     {
@@ -450,11 +459,17 @@ namespace OrchidCapital.Models
         public string UserRole { get; set; }
         public long LoanProductId { get; set; }
         public string ProductCode { get; set; }
+        public bool IsSecure { get; set; }
+        [Required(ErrorMessage = "Description is required")]
+        public string Descriptions { get; set; }
+
+        [Required(ErrorMessage = "Image is required")]
+        public IFormFile ImageFile { get; set; }
         [Required(ErrorMessage = "Product name is required")]
         [StringLength(500, ErrorMessage = "Product name cannot exceed 500 characters")]
         public string ProductName { get; set; }
         [Required(ErrorMessage = "Please select loan type")]
-        public string LoanType { get; set; }
+        public int LoanTypeId { get; set; }
         [Required(ErrorMessage = "Min amount is required")]
         [Range(0, double.MaxValue, ErrorMessage = "Min amount must be a positive number")]
         public decimal? MinAmount { get; set; }
@@ -481,11 +496,22 @@ namespace OrchidCapital.Models
         [Required(ErrorMessage = "Grace days is required")]
         [Range(0, int.MaxValue, ErrorMessage = "Grace days must be a positive integer")]
         public int? GraceDays { get; set; }
+        public string? ImageUrl { get; set; }
+        public bool? IsActive { get; set; }
+    }
+    public class UpdateLoanTypeDetailsRequest
+    {
+        public string UserName { get; set; }
+        public string UserRole { get; set; }
+        public long LoanTypeId { get; set; }
+        [Required(ErrorMessage = "Loan type is required")]
+        [StringLength(500, ErrorMessage = "Loan type cannot exceed 500 characters")]
+        public string Name { get; set; }
         public bool? IsActive { get; set; }
     }
     public class GetNewApplicationNumber
     {
-         public string ApplicationNumber { get; set; }
+        public string ApplicationNumber { get; set; }
     }
     public class UpdateLoanApplicationDetailsRequest
     {
@@ -524,6 +550,7 @@ namespace OrchidCapital.Models
         public string ProductCode { get; set; }
         public string ProductName { get; set; }
         public string LoanType { get; set; }
+        public int LoanTypeId { get; set; }
         public decimal MinAmount { get; set; }
         public decimal MaxAmount { get; set; }
         public int MinTenure { get; set; }
@@ -533,9 +560,11 @@ namespace OrchidCapital.Models
         public decimal ProcessingFeePercent { get; set; }
         public decimal PenaltyInterest { get; set; }
         public int GraceDays { get; set; }
-         public bool IsActive { get; set; }
+        public bool IsActive { get; set; }
         public string CreatedBy { get; set; }
-        public string CreatedOn { get; set; }
+        public string ImageUrl { get; set; }
+        public bool IsSecure { get; set; }
+        public string Descriptions { get; set; }
         public int TotalRecords { get; set; }
     }
 }

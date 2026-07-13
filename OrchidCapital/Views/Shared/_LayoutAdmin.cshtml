@@ -5,13 +5,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - OrchidCapital</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+          asp-append-version="true" />
     <link href="~/Admin/css/select2.min.css" rel="stylesheet" asp-append-version="true" />
     <link rel="stylesheet" href="~/Admin/css/sidepanel.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/toastr.min.css" asp-append-version="true" />    
+    <link rel="stylesheet" href="~/css/toastr.min.css" asp-append-version="true" />
 </head>
 
 <body id="common-aportal-wrapper">
+    <div class="loader-overlay" id="loader">
+        <div class="loader-wrapper">
+            <div class="loader-ring"></div>
+            <img src="~/Images/loder.png" alt="Logo" class="loader-logo">
+        </div>
+    </div>
     <div class="overlay" id="overlay"></div>
     <div class="dashboard">
         <aside class="sidebar" id="sidebar">
@@ -39,6 +46,11 @@
         <partial name="_AdminScripts" />
         @await RenderSectionAsync("Scripts", required: false)
     </div>
+    <script>
+            window.addEventListener("load", function () {
+                document.getElementById("loader").style.display = "none";
+            });
+    </script>
 </body>
 
 </html>

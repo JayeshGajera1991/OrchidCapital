@@ -1,177 +1,179 @@
 /* ===== TEAM SECTION ===== */
 
 .team-glass-section {
-    padding: 80px 6%;
-    background: linear-gradient(135deg, #a0cdfa, #be8fc7);
+  padding: 80px 6%;
+  background: linear-gradient(135deg, #a0cdfa, #be8fc7);
 }
 
 .team-glass-wrapper {
-    max-width: 1250px;
-    margin: auto;
-    text-align: center;
+  /* max-width: 1250px; */
+  margin: auto;
+  text-align: center;
 }
 
 /* Header */
 
 .team-glass-header h2 {
-    font-size: 38px;
-    font-weight: 700;
-    letter-spacing: -0.7px;
-    background: linear-gradient(135deg, #0E69F1, #631988);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+  background: linear-gradient(135deg, #0E69F1, #631988);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .team-glass-line {
-    width: 70px;
-    height: 3px;
-    margin: 16px auto;
-    background: linear-gradient(90deg, #0E69F1, #9724a7);
-    border-radius: 10px;
+  width: 70px;
+  height: 3px;
+  margin: 16px auto;
+  background: linear-gradient(90deg, #0E69F1, #9724a7);
+  border-radius: 10px;
 }
 
 .team-glass-header p {
-    font-size: 15px;
-    color: #64748b;
-    margin-bottom: 55px;
+  font-size: 15px;
+  color: #64748b;
+  margin-bottom: 55px;
 }
 
 /* Scroll */
 
 .team-glass-scroll {
-    display: flex;
-    gap: 22px;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 12px 4px 24px;
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 12px 4px 24px;
 }
 
 .team-glass-scroll::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 /* Cards */
 
 .team-glass-card {
-    min-width: 260px;
-    padding: 26px 22px;
-    border-radius: 26px;
+  min-width: 260px;
+  padding: 26px 22px;
+  border-radius: 26px;
 
-    background: rgba(255, 255, 255, 0.55);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    box-shadow:
-        0 10px 30px rgba(15, 23, 42, 0.08),
-        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 
+    0 10px 30px rgba(15, 23, 42, 0.08),
+    inset 0 1px 0 rgba(255,255,255,0.6);
 
-    text-align: left;
-    transition: all 0.45s ease;
-    position: relative;
-    overflow: hidden;
+  text-align: left;
+  transition: all 0.45s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .team-glass-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(120deg,
-            transparent 20%,
-            rgba(255, 255, 255, 0.45),
-            transparent 80%);
-    opacity: 0;
-    transition: 0.45s ease;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 20%,
+    rgba(255,255,255,0.45),
+    transparent 80%
+  );
+  opacity: 0;
+  transition: 0.45s ease;
 }
 
 .team-glass-card:hover {
-    transform: translateY(-8px) scale(1.03);
-    box-shadow:
-        0 18px 45px rgba(15, 23, 42, 0.12),
-        inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 
+    0 18px 45px rgba(15, 23, 42, 0.12),
+    inset 0 1px 0 rgba(255,255,255,0.7);
 }
 
 .team-glass-card:hover::before {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Icon */
 
 .team-glass-icon {
-    width: 52px;
-    height: 52px;
-    border-radius: 16px;
-    background: linear-gradient(135deg, #0E69F1, #7c3aed);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 20px;
-    margin-bottom: 16px;
-    box-shadow: 0 10px 25px rgba(14, 105, 241, 0.25);
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #0E69F1, #7c3aed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 10px 25px rgba(14,105,241,0.25);
 }
 
 /* Text */
 
 .team-glass-card h4 {
-    font-size: 16px;
-    font-weight: 650;
-    color: #0f172a;
-    margin-bottom: 4px;
+  font-size: 16px;
+  font-weight: 650;
+  color: #0f172a;
+  margin-bottom: 4px;
 }
 
 .team-glass-role {
-    font-size: 13.5px;
-    font-weight: 600;
-    color: #0E69F1;
-    margin-bottom: 10px;
-    line-height: 1.4;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #0E69F1;
+  margin-bottom: 10px;
+  line-height: 1.4;
 }
 
 .team-glass-card p {
-    font-size: 13.8px;
-    color: #475569;
-    line-height: 1.6;
+  font-size: 13.8px;
+  color: #475569;
+  line-height: 1.6;
 }
 
 /* Controls */
 
 .team-glass-controls {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 14px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
 }
 
 .team-glass-btn {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    border: none;
-    background: white;
-    cursor: pointer;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: white;
+  cursor: pointer;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.12);
-    transition: 0.3s ease;
+  box-shadow: 0 10px 25px rgba(15,23,42,0.12);
+  transition: 0.3s ease;
 }
 
 .team-glass-btn:hover {
-    transform: scale(1.08);
+  transform: scale(1.08);
 }
 
 .team-glass-btn i {
-    font-size: 14px;
-    color: #475569;
+  font-size: 14px;
+  color: #475569;
 }
 
 /* Responsive */
 
 @media (max-width: 768px) {
-    .team-glass-card {
-        min-width: 85%;
-    }
+  .team-glass-card {
+    min-width: 85%;
+  }
 }

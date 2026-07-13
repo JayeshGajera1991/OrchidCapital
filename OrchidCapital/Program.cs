@@ -105,7 +105,6 @@ if (allowBasePath && !string.IsNullOrWhiteSpace(basePath))
     });
 }
 #endregion
-
 builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();

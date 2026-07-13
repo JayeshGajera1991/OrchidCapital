@@ -1,14 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
 :root {
-    --primary: #4338ca;
-    --primary-dark: #2e1065;
-    --primary-light: #6366f1;
-    --surface: #ffffff;
-    --text: #151526;
+    --orchid-blue: #075aa8;
+    --orchid-blue-dark: #073a87;
+    --orchid-indigo: #2636b7;
+    --orchid-purple: #6c168c;
+    --orchid-magenta: #a90b9a;
+    --orchid-pink: #c318a4;
+    --ink: #152033;
     --muted: #667085;
-    --border: #e4e7ec;
-    --danger: #d92d20;
+    --line: #dfe5ef;
+    --surface: #ffffff;
+    --soft: #f5f8ff;
 }
 
 * {
@@ -19,184 +22,271 @@ html,
 body {
     min-height: 100%;
     margin: 0;
-    font-family: "Inter", sans-serif;
+    font-family: "Inter", Arial, sans-serif;
 }
 
-body {
+body.orchid-login-page {
+    min-height: 100vh;
+    color: var(--ink);
+    background: #f6f8fc;
+}
+
+.login-shell {
     min-height: 100vh;
     display: grid;
-    grid-template-columns: minmax(420px, 1.08fr) minmax(500px, 0.92fr);
-    background: #f7f8ff;
-    color: var(--text);
+    grid-template-columns: minmax(520px, 1.1fr) minmax(480px, 0.9fr);
 }
 
-/* Left branding panel */
-.left {
+/* Left branding area */
+.brand-panel {
     position: relative;
-    overflow: hidden;
     min-height: 100vh;
-    padding: clamp(42px, 7vw, 110px);
+    overflow: hidden;
+    padding: clamp(42px, 6vw, 75px);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: #fff;
     background:
-        radial-gradient(circle at 14% 18%, rgba(255, 255, 255, 0.18) 0 2px, transparent 3px),
-        radial-gradient(circle at 78% 14%, rgba(255, 255, 255, 0.14) 0 1px, transparent 2px),
-        linear-gradient(135deg, #4f46e5 0%, #3459e6 48%, #263fd0 100%);
+        radial-gradient(circle at 12% 20%, rgba(41, 207, 255, 0.30), transparent 24%),
+        radial-gradient(circle at 78% 76%, rgba(207, 25, 170, 0.26), transparent 28%),
+        linear-gradient(138deg, #064d9d 0%, #1434ad 44%, #5d178d 76%, #9b138e 100%);
 }
 
-.left::before {
+.brand-panel::before {
     content: "";
     position: absolute;
-    width: 540px;
-    height: 540px;
-    border: 1px solid rgba(255, 255, 255, 0.14);
+    width: 620px;
+    height: 620px;
+    top: -370px;
+    right: -290px;
     border-radius: 50%;
-    top: -285px;
-    right: -220px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
     box-shadow:
-        0 0 0 65px rgba(255, 255, 255, 0.04),
-        0 0 0 130px rgba(255, 255, 255, 0.03);
+        0 0 0 60px rgba(255, 255, 255, 0.04),
+        0 0 0 120px rgba(255, 255, 255, 0.03);
 }
 
-.left::after {
+.brand-panel::after {
     content: "";
     position: absolute;
-    width: 340px;
-    height: 340px;
+    width: 480px;
+    height: 480px;
+    bottom: -300px;
+    left: -240px;
     border-radius: 50%;
-    bottom: -170px;
-    left: -125px;
-    background: rgba(255, 255, 255, 0.07);
+    background: rgba(0, 211, 255, 0.13);
+    box-shadow: 0 0 0 85px rgba(255, 255, 255, 0.035);
 }
 
-.brand,
-.features {
+.brand-content,
+.brand-footer {
     position: relative;
     z-index: 1;
 }
 
-.brand {
-    margin-bottom: 54px;
+.brand-content {
+    width: min(100%, 590px);
 }
 
-.brand::before {
-    content: "OC";
-    width: 54px;
-    height: 54px;
-    margin-bottom: 24px;
-    display: grid;
-    place-items: center;
-    border-radius: 16px;
-    font-weight: 800;
-    letter-spacing: -1px;
-    color: #fff;
-    background: rgba(255, 255, 255, 0.16);
-    border: 1px solid rgba(255, 255, 255, 0.24);
-    box-shadow: 0 12px 28px rgba(23, 33, 135, 0.22);
+.logo-wrapper{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:18px 30px;
+    margin-bottom:35px;
+
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.2);
+    backdrop-filter:blur(15px);
+
+    border-radius:22px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.18),
+        inset 0 1px 0 rgba(255,255,255,.25);
 }
 
-.brand h1 {
-    margin: 0;
+.orchid-logo{
+    width:185px;
+    height:auto;
+	 object-fit:contain;
+border-radius:22px;
+    filter:
+        drop-shadow(0 0 8px rgba(255,255,255,.8))
+        drop-shadow(0 15px 30px rgba(0,0,0,.18));
+}
+
+.trusted-badge,
+.secure-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.trusted-badge {
+    padding: 12px 40px;
     color: #fff;
-    font-size: clamp(34px, 3vw, 52px);
+    background: rgba(255, 255, 255, 0.13);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.trusted-badge i {
+    color: #75e8ff;
+}
+
+.brand-copy h1 {
+    max-width: 540px;
+    margin: 20px 0 15px;
+    font-size: clamp(37px, 4vw, 60px);
     line-height: 1.08;
-    letter-spacing: -2px;
+    letter-spacing: -2.5px;
     font-weight: 800;
 }
 
-.brand p {
-    margin: 14px 0 0;
-    color: rgba(255, 255, 255, 0.83);
-    font-size: 15px;
-    font-weight: 500;
+.brand-copy p {
+    max-width: 510px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 16px;
+    line-height: 1.7;
 }
 
-.features {
+.security-points {
     display: grid;
     gap: 14px;
-    max-width: 370px;
+    margin-top: 46px;
 }
 
-.feature {
+.security-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 17px;
+    background: rgba(255, 255, 255, 0.09);
+    backdrop-filter: blur(10px);
+}
+
+.point-icon {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    flex: 0 0 40px;
+    border-radius: 12px;
+    color: #fff;
+    background: linear-gradient(145deg, rgba(29, 213, 255, 0.50), rgba(202, 23, 183, 0.50));
+}
+
+.security-point strong {
+    display: block;
+    margin: 1px 0 5px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.security-point small {
+    display: block;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.brand-footer {
     display: flex;
     align-items: center;
-    gap: 14px;
-    padding: 13px 16px 13px 13px;
-    color: #fff;
-    border-radius: 15px;
-    font-size: 14px;
-    font-weight: 600;
-    background: rgba(255, 255, 255, 0.09);
-    border: 1px solid rgba(255, 255, 255, 0.11);
-    backdrop-filter: blur(8px);
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 42px;
+    color: rgba(255, 255, 255, 0.66);
+    font-size: 12px;
 }
 
-.feature i {
-    width: 36px;
-    height: 36px;
-    display: grid;
-    place-items: center;
-    flex: 0 0 36px;
-    border-radius: 11px;
-    color: #fff;
-    background: rgba(255, 255, 255, 0.16);
+.footer-dot {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.65);
 }
 
-/* Right login panel */
-.right {
+/* Right sign-in area */
+.form-panel {
     position: relative;
     min-height: 100vh;
-    display: grid;
-    place-items: center;
-    padding: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 46px;
     overflow: hidden;
     background:
-        radial-gradient(circle at 80% 18%, rgba(99, 102, 241, 0.14), transparent 28%),
-        radial-gradient(circle at 12% 84%, rgba(79, 70, 229, 0.10), transparent 27%),
-        #f8f9ff;
+        radial-gradient(circle at 90% 12%, rgba(190, 30, 181, 0.12), transparent 25%),
+        radial-gradient(circle at 8% 85%, rgba(0, 124, 216, 0.11), transparent 26%),
+        #f8faff;
 }
 
-.right::before {
+.form-panel::before {
     content: "";
     position: absolute;
-    width: 420px;
-    height: 420px;
+    width: 500px;
+    height: 500px;
+    top: -320px;
+    right: -250px;
     border-radius: 50%;
-    top: -240px;
-    right: -180px;
-    background: rgba(99, 102, 241, 0.09);
+    border: 1px solid rgba(98, 56, 187, 0.10);
+    box-shadow:
+        0 0 0 55px rgba(96, 57, 187, 0.035),
+        0 0 0 110px rgba(96, 57, 187, 0.025);
+}
+
+.form-panel-top {
+    position: absolute;
+    top: 34px;
+    right: 42px;
+}
+
+.secure-status {
+    padding: 9px 13px;
+    color: var(--orchid-purple);
+    background: #fff;
+    border: 1px solid #e9d9ef;
+    box-shadow: 0 8px 22px rgba(74, 31, 123, 0.08);
 }
 
 .login-box {
     position: relative;
     z-index: 1;
-    width: min(100%, 430px);
+    width: min(100%, 440px);
     padding: 42px;
-    border-radius: 24px;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid rgba(255, 255, 255, 0.85);
-    box-shadow: 0 24px 60px rgba(45, 52, 115, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 25px 70px rgba(29, 42, 106, 0.15);
     backdrop-filter: blur(14px);
 }
 
-.login-box h2 {
+.login-heading h2 {
     margin: 0;
-    font-size: 28px;
-    line-height: 1.2;
-    letter-spacing: -0.8px;
+    color: #16223a;
+    font-size: 30px;
+    letter-spacing: -1px;
     font-weight: 800;
 }
 
-.login-box > p {
-    margin: 10px 0 30px;
+.login-heading p {
+    margin: 10px 0 32px;
     color: var(--muted);
     font-size: 14px;
 }
 
 .login-form {
     display: grid;
-    gap: 20px;
+    gap: 5px;
 }
 
 .input-group {
@@ -210,15 +300,35 @@ body {
     font-weight: 700;
 }
 
+.label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.label-row a {
+    color: var(--orchid-purple);
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.label-row a:hover {
+    color: var(--orchid-magenta);
+    text-decoration: underline;
+}
+
 .input-field {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-.input-field > i:first-child {
+.input-field > i {
     position: absolute;
-    left: 15px;
+    left: 16px;
+    z-index: 1;
     color: #667085;
     font-size: 15px;
     pointer-events: none;
@@ -226,16 +336,16 @@ body {
 
 .input-field input {
     width: 100%;
-    height: 50px;
-    padding: 0 46px 0 44px;
-    outline: none;
-    border: 1px solid var(--border);
-    border-radius: 13px;
-    color: var(--text);
+    height: 53px;
+    padding: 0 48px 0 46px;
+    outline: 0;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    color: var(--ink);
     background: #fff;
     font-family: inherit;
     font-size: 14px;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: border-color .2s ease, box-shadow .2s ease;
 }
 
 .input-field input::placeholder {
@@ -243,88 +353,100 @@ body {
 }
 
 .input-field input:focus {
-    border-color: var(--primary-light);
-    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.13);
+    border-color: var(--orchid-purple);
+    box-shadow: 0 0 0 4px rgba(147, 24, 158, 0.12);
 }
 
 .toggle-password {
     position: absolute;
-    right: 15px;
-    color: #475467;
+    z-index: 2;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    border: 0;
+    border-radius: 9px;
+    color: #5f6680;
     cursor: pointer;
-    font-size: 16px;
-    transition: color 0.2s ease;
+    background: transparent;
 }
 
 .toggle-password:hover {
-    color: var(--primary);
+    color: var(--orchid-purple);
+    background: #f4eff8;
 }
 
 .text-danger,
 .field-validation-error {
-    display: block;
-    margin-top: -2px;
-    color: var(--danger);
+    min-height: 15px;
+    color: #d92d20;
     font-size: 12px;
-    font-weight: 500;
 }
 
-.extra {
-    display: flex;
+.remember-option {
+    display: inline-flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 14px;
-    margin-top: -2px;
-    font-size: 13px;
-}
-
-.extra label {
-    display: flex;
-    align-items: center;
-    gap: 7px;
+    gap: 9px;
+    width: fit-content;
     color: #475467;
     cursor: pointer;
-    white-space: nowrap;
+    font-size: 13px;
+    user-select: none;
 }
 
-.extra input[type="checkbox"] {
-    width: 15px;
-    height: 15px;
-    margin: 0;
-    accent-color: var(--primary);
-    cursor: pointer;
+.remember-option input {
+    position: absolute;
+    opacity: 0;
 }
 
-.extra a {
-    color: var(--primary-dark);
-    font-weight: 700;
-    text-decoration: none;
+.custom-check {
+    width: 18px;
+    height: 18px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #b9c1d0;
+    border-radius: 5px;
+    color: transparent;
+    background: #fff;
+    transition: all .18s ease;
 }
 
-.extra a:hover {
-    text-decoration: underline;
+.custom-check i {
+    font-size: 10px;
+}
+
+.remember-option input:checked + .custom-check {
+    border-color: var(--orchid-purple);
+    color: #fff;
+    background: linear-gradient(135deg, var(--orchid-blue), var(--orchid-magenta));
 }
 
 .login-btn {
-    position: relative;
     width: 100%;
-    height: 52px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
     margin-top: 2px;
     border: 0;
-    border-radius: 13px;
+    border-radius: 14px;
     color: #fff;
     cursor: pointer;
     font-family: inherit;
     font-size: 14px;
     font-weight: 700;
-    background: linear-gradient(100deg, #4f0b84, #2e075d);
-    box-shadow: 0 12px 22px rgba(67, 8, 125, 0.25);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: linear-gradient(100deg, #075aa8 0%, #4a249c 47%, #a20d91 100%);
+    box-shadow: 0 14px 26px rgba(92, 24, 151, 0.28);
+    transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
 }
 
 .login-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 16px 28px rgba(67, 8, 125, 0.32);
+    filter: brightness(1.04);
+    box-shadow: 0 18px 32px rgba(92, 24, 151, 0.34);
 }
 
 .login-btn:active {
@@ -333,109 +455,181 @@ body {
 
 .login-btn:disabled {
     cursor: not-allowed;
-    opacity: 0.7;
+    opacity: .72;
 }
 
-.security-info {
+.login-security-note {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    margin-top: 22px;
+    margin-top: 23px;
     color: #667085;
     font-size: 12px;
     text-align: center;
 }
 
-.security-info i {
-    color: #1d2939;
+.login-security-note i {
+    color: var(--orchid-purple);
+}
+
+.form-panel-footer {
+    position: absolute;
+    bottom: 30px;
+    display: flex;
+    gap: 7px;
+    color: #667085;
     font-size: 12px;
 }
 
+.form-panel-footer a {
+    color: var(--orchid-purple);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.form-panel-footer a:hover {
+    text-decoration: underline;
+}
+.home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 18px;
+    border-radius: 999px;
+
+    background: #fff;
+    color: #6c168c;
+
+    border: 1px solid #e5d8f3;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+
+    white-space: nowrap; /* Keep text on one line */
+
+    transition: all .3s ease;
+}
+
+.home-btn:hover {
+    background: linear-gradient(135deg, #075aa8, #6c168c);
+    color: #fff;
+    border-color: transparent;
+    box-shadow: 0 8px 20px rgba(108, 22, 140, .25);
+}
+
+.home-btn i {
+    font-size: 14px;
+}
+
 /* Tablet */
-@media (max-width: 900px) {
-    body {
+@media (max-width: 980px) {
+    .login-shell {
         grid-template-columns: 1fr;
     }
 
-    .left {
+    .brand-panel {
         min-height: auto;
-        padding: 42px 30px;
+        padding: 48px 34px;
     }
 
-    .brand {
-        margin-bottom: 28px;
+    .brand-content {
+        width: 100%;
+        max-width: 720px;
     }
 
-    .brand::before {
-        width: 44px;
-        height: 44px;
-        margin-bottom: 16px;
-        border-radius: 13px;
+    .orchid-logo {
+        width: 270px;
+        margin-bottom: 30px;
     }
 
-    .brand h1 {
-        font-size: 34px;
+    .brand-copy h1 {
+        font-size: 42px;
     }
 
-    .features {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        max-width: none;
+    .security-points {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: 34px;
     }
 
-    .right {
+    .security-point {
+        min-height: 142px;
+        display: block;
+    }
+
+    .point-icon {
+        margin-bottom: 12px;
+    }
+
+    .brand-footer {
+        display: none;
+    }
+
+    .form-panel {
         min-height: auto;
-        padding: 46px 24px;
+        padding: 72px 24px 92px;
     }
 }
 
 /* Mobile */
-@media (max-width: 560px) {
-    .left {
+@media (max-width: 620px) {
+    .brand-panel {
         padding: 34px 22px;
     }
 
-    .brand h1 {
-        font-size: 30px;
-        letter-spacing: -1.2px;
+    .orchid-logo {
+        width: 225px;
+        max-height: 118px;
+        margin-bottom: 25px;
+        padding: 8px 12px;
     }
 
-    .brand p {
-        font-size: 13px;
+    .brand-copy h1 {
+        margin-top: 16px;
+        font-size: 32px;
+        letter-spacing: -1.4px;
     }
 
-    .features {
+    .brand-copy p {
+        font-size: 14px;
+    }
+
+    .security-points {
         grid-template-columns: 1fr;
         gap: 10px;
+        margin-top: 28px;
     }
 
-    .feature {
-        padding: 10px 12px;
-        font-size: 13px;
+    .security-point {
+        min-height: auto;
+        display: flex;
+        padding: 12px;
     }
 
-    .feature i {
-        width: 32px;
-        height: 32px;
-        flex-basis: 32px;
+    .point-icon {
+        margin: 0;
     }
 
-    .right {
-        padding: 26px 16px 36px;
+    .form-panel {
+        padding: 70px 16px 80px;
+    }
+
+    .form-panel-top {
+        top: 20px;
+        right: 18px;
     }
 
     .login-box {
         padding: 30px 22px;
-        border-radius: 20px;
+        border-radius: 21px;
     }
 
-    .login-box h2 {
-        font-size: 25px;
+    .login-heading h2 {
+        font-size: 26px;
     }
 
-    .extra {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 12px;
+    .form-panel-footer {
+        bottom: 25px;
     }
 }

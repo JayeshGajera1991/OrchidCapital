@@ -37,11 +37,14 @@
       "OrchidCapital/1.0.0": {
         "dependencies": {
           "ClosedXML": "0.105.0",
+          "GTranslate": "2.3.1",
+          "Google.Cloud.Translation.V2": "3.5.0",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "8.0.0",
           "Microsoft.Extensions.Caching.StackExchangeRedis": "10.0.9",
           "Microsoft.Extensions.Localization": "10.0.9",
           "Newtonsoft.Json": "13.0.4",
           "PemUtils": "3.0.0.82",
+          "RestSharp": "114.0.0",
           "TwoFactorAuth.Net.QRCoder": "1.0.2",
           "Microsoft.AspNetCore.Antiforgery": "8.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "8.0.0.0",
@@ -434,6 +437,123 @@
           "lib/netstandard2.0/ExcelNumberFormat.dll": {}
         }
       },
+      "Google.Api.Gax/4.12.1": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
+          "Newtonsoft.Json": "13.0.4",
+          "System.Diagnostics.DiagnosticSource": "10.0.9"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Api.Gax.dll": {
+            "assemblyVersion": "4.12.1.0",
+            "fileVersion": "4.12.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Api.Gax.dll": {}
+        }
+      },
+      "Google.Api.Gax.Rest/4.12.1": {
+        "dependencies": {
+          "Google.Api.Gax": "4.12.1",
+          "Google.Apis.Auth": "1.72.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "10.0.9"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Api.Gax.Rest.dll": {
+            "assemblyVersion": "4.12.1.0",
+            "fileVersion": "4.12.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Api.Gax.Rest.dll": {}
+        }
+      },
+      "Google.Apis/1.72.0": {
+        "dependencies": {
+          "Google.Apis.Core": "1.72.0"
+        },
+        "runtime": {
+          "lib/net6.0/Google.Apis.dll": {
+            "assemblyVersion": "1.72.0.0",
+            "fileVersion": "1.72.0.0"
+          }
+        },
+        "compile": {
+          "lib/net6.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Auth/1.72.0": {
+        "dependencies": {
+          "Google.Apis": "1.72.0",
+          "Google.Apis.Core": "1.72.0",
+          "System.Management": "7.0.2"
+        },
+        "runtime": {
+          "lib/net6.0/Google.Apis.Auth.dll": {
+            "assemblyVersion": "1.72.0.0",
+            "fileVersion": "1.72.0.0"
+          }
+        },
+        "compile": {
+          "lib/net6.0/Google.Apis.Auth.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.72.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.4"
+        },
+        "runtime": {
+          "lib/net6.0/Google.Apis.Core.dll": {
+            "assemblyVersion": "1.72.0.0",
+            "fileVersion": "1.72.0.0"
+          }
+        },
+        "compile": {
+          "lib/net6.0/Google.Apis.Core.dll": {}
+        }
+      },
+      "Google.Apis.Translate.v2/1.68.0.875": {
+        "dependencies": {
+          "Google.Apis": "1.72.0",
+          "Google.Apis.Auth": "1.72.0"
+        },
+        "runtime": {
+          "lib/net6.0/Google.Apis.Translate.v2.dll": {
+            "assemblyVersion": "1.68.0.875",
+            "fileVersion": "1.68.0.875"
+          }
+        },
+        "compile": {
+          "lib/net6.0/Google.Apis.Translate.v2.dll": {}
+        }
+      },
+      "Google.Cloud.Translation.V2/3.5.0": {
+        "dependencies": {
+          "Google.Api.Gax.Rest": "4.12.1",
+          "Google.Apis.Translate.v2": "1.68.0.875"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Cloud.Translation.V2.dll": {
+            "assemblyVersion": "3.5.0.0",
+            "fileVersion": "3.5.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Cloud.Translation.V2.dll": {}
+        }
+      },
+      "GTranslate/2.3.1": {
+        "runtime": {
+          "lib/net8.0/GTranslate.dll": {
+            "assemblyVersion": "2.3.1.0",
+            "fileVersion": "2.3.1.0"
+          }
+        },
+        "compile": {
+          "lib/net8.0/GTranslate.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Mvc.Razor.Extensions/6.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Razor.Language": "6.0.0",
@@ -474,6 +594,17 @@
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Razor.Language.dll": {}
+        }
+      },
+      "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.Analyzers/3.3.2": {},
@@ -801,6 +932,17 @@
           "lib/net8.0/RBush.dll": {}
         }
       },
+      "RestSharp/114.0.0": {
+        "runtime": {
+          "lib/net8.0/RestSharp.dll": {
+            "assemblyVersion": "114.0.0.0",
+            "fileVersion": "114.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/net8.0/RestSharp.dll": {}
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
       "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {},
@@ -867,6 +1009,17 @@
         },
         "compile": {
           "lib/net6.0/StackExchange.Redis.dll": {}
+        }
+      },
+      "System.CodeDom/7.0.0": {
+        "runtime": {
+          "lib/net7.0/System.CodeDom.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.51805"
+          }
+        },
+        "compile": {
+          "lib/net7.0/System.CodeDom.dll": {}
         }
       },
       "System.Collections/4.3.0": {
@@ -1014,6 +1167,28 @@
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0"
+        }
+      },
+      "System.Management/7.0.2": {
+        "dependencies": {
+          "System.CodeDom": "7.0.0"
+        },
+        "runtime": {
+          "lib/net7.0/System.Management.dll": {
+            "assemblyVersion": "7.0.0.2",
+            "fileVersion": "7.0.723.27404"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net7.0/System.Management.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "7.0.0.2",
+            "fileVersion": "7.0.723.27404"
+          }
+        },
+        "compile": {
+          "lib/net7.0/System.Management.dll": {}
         }
       },
       "System.Memory/4.5.4": {},
@@ -3113,6 +3288,62 @@
       "path": "excelnumberformat/1.1.0",
       "hashPath": "excelnumberformat.1.1.0.nupkg.sha512"
     },
+    "Google.Api.Gax/4.12.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-G62dRNOv5DolfRviT6CCrL2a5nZ/CWWdRzhADkGnpCkYSOc3QnH5xxRvZiOKuHU8weJ/pAqAqrj7+T9IWdlu2Q==",
+      "path": "google.api.gax/4.12.1",
+      "hashPath": "google.api.gax.4.12.1.nupkg.sha512"
+    },
+    "Google.Api.Gax.Rest/4.12.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-djYb7sDJvUiOG66fpDIOsprrZz4RPbiAtMiKtRguQhrzlHasd+3k/u6BQFFY3S0KCdxJzvv8M8hi81Ocdi6Ijw==",
+      "path": "google.api.gax.rest/4.12.1",
+      "hashPath": "google.api.gax.rest.4.12.1.nupkg.sha512"
+    },
+    "Google.Apis/1.72.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QbSJ08W7QuqsfzDPOZDHl1aFzCYwMcfBoHqQRh7koglwDN5WacShCKYMpU/zR1Pf3h3sH6JTGEeM/txAxaJuEg==",
+      "path": "google.apis/1.72.0",
+      "hashPath": "google.apis.1.72.0.nupkg.sha512"
+    },
+    "Google.Apis.Auth/1.72.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RBoFwFKBHKUjuyJf2weEnqICQLaY0TdIrdFv2yC8bsiR2VFYxizOn3C/qN1FWCCb0Uh9GhW+zwAV1yUxPjiocw==",
+      "path": "google.apis.auth/1.72.0",
+      "hashPath": "google.apis.auth.1.72.0.nupkg.sha512"
+    },
+    "Google.Apis.Core/1.72.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZmYX1PU0vTKFT42c7gp4zaYcb/0TFAXrt9qw8yEz0wjvaug85+/WddlPTfT525Qei8iIUsF6t4bHYrsb2O7crg==",
+      "path": "google.apis.core/1.72.0",
+      "hashPath": "google.apis.core.1.72.0.nupkg.sha512"
+    },
+    "Google.Apis.Translate.v2/1.68.0.875": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ju9Lzekopcr2yoheUsT1AnVd5j7zJJMvFDpTO77Lr8MjhXsX7rq5q5QEk4lUsNqYenMVgFckZo8Za/sIBOHNzQ==",
+      "path": "google.apis.translate.v2/1.68.0.875",
+      "hashPath": "google.apis.translate.v2.1.68.0.875.nupkg.sha512"
+    },
+    "Google.Cloud.Translation.V2/3.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lIM3RDB4z59+Bi6/PlwoH+/bIYnrMQcH3kkK6fBT0zh7VcvUR0aaF6oE7yK05zwUVvn/4GLTsFaQP3VCMpO8Kg==",
+      "path": "google.cloud.translation.v2/3.5.0",
+      "hashPath": "google.cloud.translation.v2.3.5.0.nupkg.sha512"
+    },
+    "GTranslate/2.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-bHT6UbYjVWCmhNyxt73NEyJtE1tDl9OMrIGIMypn3DPD7S7pjUVbS1TyZF6N8V2qtn9mSlaiu+6XbecIvjQZ8w==",
+      "path": "gtranslate/2.3.1",
+      "hashPath": "gtranslate.2.3.1.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Mvc.Razor.Extensions/6.0.0": {
       "type": "package",
       "serviceable": true,
@@ -3133,6 +3364,13 @@
       "sha512": "sha512-yCtBr1GSGzJrrp1NJUb4ltwFYMKHw/tJLnIDvg9g/FnkGIEzmE19tbCQqXARIJv5kdtBgsoVIdGLL+zmjxvM/A==",
       "path": "microsoft.aspnetcore.razor.language/6.0.0",
       "hashPath": "microsoft.aspnetcore.razor.language.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UcSjPsst+DfAdJGVDsu346FX0ci0ah+lw3WRtn18NUwEqRt70HaOQ7lI72vy3+1LxtqI3T5GWwV39rQSrCzAeg==",
+      "path": "microsoft.bcl.asyncinterfaces/6.0.0",
+      "hashPath": "microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.Analyzers/3.3.2": {
       "type": "package",
@@ -3274,6 +3512,13 @@
       "path": "rbush.signed/4.0.0",
       "hashPath": "rbush.signed.4.0.0.nupkg.sha512"
     },
+    "RestSharp/114.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8pDO4q+K8nIqXbvGCb9ciKcngj36pCXGRDzOYPEPoS2IvBIL+mejmUMAtSNALt/NkDc9LQmHvM95kdniLSbGtg==",
+      "path": "restsharp/114.0.0",
+      "hashPath": "restsharp.114.0.0.nupkg.sha512"
+    },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.2": {
       "type": "package",
       "serviceable": true,
@@ -3393,6 +3638,13 @@
       "path": "stackexchange.redis/2.7.27",
       "hashPath": "stackexchange.redis.2.7.27.nupkg.sha512"
     },
+    "System.CodeDom/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-GLltyqEsE5/3IE+zYRP5sNa1l44qKl9v+bfdMcwg+M9qnQf47wK3H0SUR/T+3N4JEQXF3vV4CSuuo0rsg+nq2A==",
+      "path": "system.codedom/7.0.0",
+      "hashPath": "system.codedom.7.0.0.nupkg.sha512"
+    },
     "System.Collections/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -3504,6 +3756,13 @@
       "sha512": "sha512-5DbqIUpsDp0dFftytzuMmc0oeMdQwjcP/EWxsksIz/w1TcFRkZ3yKKz0PqiYFMmEwPSWw+qNVqD7PJ889JzHbw==",
       "path": "system.linq/4.3.0",
       "hashPath": "system.linq.4.3.0.nupkg.sha512"
+    },
+    "System.Management/7.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/qEUN91mP/MUQmJnM5y5BdT7ZoPuVrtxnFlbJ8a3kBJGhe2wCzBfnPFtK2wTtEEcf3DMGR9J00GZZfg6HRI6yA==",
+      "path": "system.management/7.0.2",
+      "hashPath": "system.management.7.0.2.nupkg.sha512"
     },
     "System.Memory/4.5.4": {
       "type": "package",

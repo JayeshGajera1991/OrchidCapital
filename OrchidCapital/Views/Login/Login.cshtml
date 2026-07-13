@@ -16,74 +16,152 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="@Url.Content("~/Admin/css/admin_login.css")" asp-append-version="true" />  
+  <link rel="stylesheet" href="@Url.Content("~/Admin/css/admin_login.css")" asp-append-version="true" />
 </head>
 
-<body>
-  <div class="left">
-    <div class="brand">
-      <h1>Orchid Capital</h1>
-      <p>Secure & Smart Financial Management</p>
-    </div>
-
-    <div class="features">
-      <div class="feature"><i class="fa-solid fa-shield-halved"></i> Bank-grade Security</div>
-      <div class="feature"><i class="fa-solid fa-chart-line"></i> Advanced Analytics</div>
-      <div class="feature"><i class="fa-solid fa-user-lock"></i> Role-based Access Control</div>
-      <div class="feature"><i class="fa-solid fa-database"></i> End-to-End Encryption</div>
-    </div>
-  </div>
-
-  <div class="right">
-    <div class="login-box">
-      <h2>Welcome Back</h2>
-      <p>Login to access your secure dashboard</p>
-      @using (Html.BeginForm("Login", "Login", FormMethod.Post, new { @class = "login-form", id = "loginForm", autocomplete="off" }))
-      {
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="input-group">
-          <label>Username</label>
-          <div class="input-field">
-            <i class="fa-solid fa-user"></i>
-            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder = "Enter username", autocomplete="off" })
-          </div>
-          @Html.ValidationMessageFor(m => m.UserName, " ", new { @class = "text-danger" })
+<body class="orchid-login-page">
+  <main class="login-shell">
+    <section class="brand-panel">
+      <div class="brand-content">
+        <div class="logo-wrapper">
+          <img src="~/Images/logo.png" alt="Orchid Capital" class="orchid-logo">
         </div>
-
-        <div class="input-group">
-          <label>Password</label>
-          <div class="input-field">
-            <i class="fa-solid fa-lock"></i>
-            @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Enter password", spellcheck="false",autocorrect="off",autocomplete="off" })
-            <i class="fa-solid fa-eye toggle-password" onclick="togglePassword()"></i>
-          </div>
-          @Html.ValidationMessageFor(m => m.Password, " ", new { @class = "text-danger" })
+        <div class="brand-copy">
+          <span class="trusted-badge">
+            <i class="fa-solid fa-shield-halved"></i>
+            Secure Financial Platform
+          </span>
+          <h1>Finance with confidence.</h1>
+          <p>
+            Secure access to your Orchid Capital account,
+            designed for modern financial management.
+          </p>
         </div>
-
-        <div class="extra">
-          <label>@Html.CheckBoxFor(m => m.RememberMe) Remember me</label>
-          <a href="@Url.Action("ForgotPassword", "Admin")">Forgot password?</a>
-        </div>
-        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
-        {
-          <div style="color: red;" role="alert">
-            @Model.ErrorMessage
+        <div class="security-points">
+          <div class="security-point">
+            <span class="point-icon">
+              <i class="fa-solid fa-lock"></i>
+            </span>
+            <div>
+              <strong>Bank-level protection</strong>
+              <small>Your information is protected with modern security controls.</small>
+            </div>
           </div>
-          <br />
-        }
-        <button class="login-btn" type="submit" id="btnLogin">Secure Login</button>
-      }
-      <div class="security-info">
-        <i class="fa-solid fa-shield"></i>
-        Protected with enterprise-grade encryption
+          <div class="security-point">
+            <span class="point-icon">
+              <i class="fa-solid fa-chart-line"></i>
+            </span>
+            <div>
+              <strong>Smart financial tools</strong>
+              <small>Manage loans, accounts, and financial activity in one place.</small>
+            </div>
+          </div>
+          <div class="security-point">
+            <span class="point-icon">
+              <i class="fa-solid fa-headset"></i>
+            </span>
+            <div>
+              <strong>Dedicated support</strong>
+              <small>Get help when you need it from the Orchid Capital team.</small>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
- 
+      <div class="brand-footer">
+        <span>© @DateTime.Now.Year Orchid Capital</span>
+        <span class="footer-dot"></span>
+        <span>Secure banking access</span>
+      </div>
+    </section>
+    <section class="form-panel">
+      <div class="form-panel-top">
+        <span class="secure-status" onclick="location.href='@Url.Action("Index", "Home")'" style="cursor: pointer;">
+          <i class="fa-solid fa-house"></i>
+          Go to Home
+        </span>
+        <span class="secure-status">
+          <i class="fa-solid fa-lock"></i>
+          Secure sign in
+        </span>
+      </div>
+      <div class="login-box">
+        <div class="login-heading">
+          <h2>Welcome back</h2>
+          <p>Sign in to continue to your account.</p>
+        </div>
+        <form action="/Login/Login" autocomplete="off" class="login-form" id="loginForm" method="post" novalidate>
+          <div class="input-group">
+            <label for="UserName">Username</label>
+            <div class="input-field">
+              <i class="fa-regular fa-user"></i>
+              @Html.TextBoxFor(m => m.UserName, new
+              {
+                @class = "form-control",
+                placeholder = "Enter username",
+                autocomplete = "username"
+              })
+            </div>
+            @Html.ValidationMessageFor(m => m.UserName, " ", new { @class = "text-danger" })
+          </div>
+
+          <div class="input-group">
+            <div class="label-row">
+              <label for="Password">Password</label>
+              <a href="@Url.Action("ForgotPassword", "Admin")">Forgot password?</a>
+            </div>
+
+            <div class="input-field">
+              <i class="fa-solid fa-lock"></i>
+              @Html.PasswordFor(m => m.Password, new
+              {
+                @class = "form-control",
+                placeholder = "Enter password",
+                spellcheck = "false",
+                autocorrect = "off",
+                autocomplete = "current-password"
+              })
+              <button type="button" class="toggle-password" aria-label="Show password" onclick="togglePassword()">
+                <i class="fa-regular fa-eye"></i>
+              </button>
+            </div>
+            @Html.ValidationMessageFor(m => m.Password, " ", new { @class = "text-danger" })
+          </div>
+
+          <label class="remember-option">
+            @Html.CheckBoxFor(m => m.RememberMe)
+            <span class="custom-check">
+              <i class="fa-solid fa-check"></i>
+            </span>
+            <span>Keep me signed in</span>
+          </label>
+          @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+          {
+            <div style="color: red;" role="alert">
+              @Model.ErrorMessage
+            </div>
+            <br />
+          }
+          <button class="login-btn" type="submit" id="btnLogin">
+            <span>Sign in securely</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
+        <div class="login-security-note">
+          <i class="fa-solid fa-shield-heart"></i>
+          <span>Your login is encrypted and protected.</span>
+        </div>
+      </div>
+
+      <div class="form-panel-footer">
+        <span>Need help?</span>
+        <a href="mailto:support@orchidcapital.com">Contact support</a>
+      </div>
+    </section>
+  </main>
   <script src="@Url.Content("~/js/jquery-3.7.1.min.js")"></script>
   <script src="@Url.Content("~/js/jquery.validate.min.js")"></script>
   <script src="@Url.Content("~/js/jquery.validate.unobtrusive.min.js")"></script>
- <script src="@Url.Content("~/js/jsencrypt.min.js")"></script>
+  <script src="@Url.Content("~/js/jsencrypt.min.js")"></script>
   <script>
     const publicKeyPem = `@Html.Raw(Model.PublicKey)`;
     function encryptPassword(password) {
@@ -92,44 +170,45 @@
       var encrypted = encrypt.encrypt(password);
       return encrypted;
     }
-    $(document).ready(function() {
+    $(document).ready(function () {
       $(function () {
         $("#loginForm").submit(function (event) {
-          $("#loginForm").removeData("validator");
-          $("#loginForm").removeData("unobtrusiveValidation");
-          $.validator.unobtrusive.parse($("#loginForm"));
-          event.preventDefault();
+        $("#loginForm").removeData("validator");
+        $("#loginForm").removeData("unobtrusiveValidation");
+        $.validator.unobtrusive.parse($("#loginForm"));
+        event.preventDefault();
           if ($("#loginForm").valid()) {
-              const password = $('#Password').val();
-              const encryptedPassword = encryptPassword(password);
-              $("#Password").val("*******");
-              $("#loginForm").append('<input type="hidden" id="hdnEncryptedPassword" name="hdnEncryptedPassword" value="' + encryptedPassword + '" />');
-              var rememberMeChecked = $("#RememberMe").is(":checked");
-              if (rememberMeChecked) {
-                $("#loginForm").append('<input type="hidden" name="hdnRememberMe" value="true" />');
-              } else {
-                $("#loginForm").append('<input type="hidden" name="hdnRememberMe" value="false" />');
-              }
-              this.submit();
+            const password = $('#Password').val();
+            const encryptedPassword = encryptPassword(password);
+            $("#Password").val("*******");
+            $("#loginForm").append('<input type="hidden" id="hdnEncryptedPassword" name="hdnEncryptedPassword" value="' + encryptedPassword + '" />');
+            var rememberMeChecked = $("#RememberMe").is(":checked");
+            if (rememberMeChecked) {
+              $("#loginForm").append('<input type="hidden" name="hdnRememberMe" value="true" />');
+            } else {
+              $("#loginForm").append('<input type="hidden" name="hdnRememberMe" value="false" />');
+            }
+            this.submit();
           }
         });
-        });
+      });
     });
 
     function togglePassword() {
       const pass = document.getElementById("Password");
-      const icon = document.querySelector(".toggle-password");
+      const button = document.querySelector(".toggle-password");
+      const icon = button.querySelector("i");
 
       if (pass.type === "password") {
         pass.type = "text";
         icon.classList.replace("fa-eye", "fa-eye-slash");
+        button.setAttribute("aria-label", "Hide password");
       } else {
         pass.type = "password";
         icon.classList.replace("fa-eye-slash", "fa-eye");
+        button.setAttribute("aria-label", "Show password");
       }
     }
   </script>
-
 </body>
-
 </html>

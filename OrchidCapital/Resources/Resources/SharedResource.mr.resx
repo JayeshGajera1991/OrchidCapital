@@ -31,4 +31,338 @@
   <data name="RequiredName" xml:space="preserve"><value>नाव आवश्यक आहे</value></data>
   <data name="RequiredEmail" xml:space="preserve"><value>ईमेल पत्ता आवश्यक आहे</value></data>
   <data name="InvalidEmail" xml:space="preserve"><value>कृपया वैध ईमेल पत्ता प्रविष्ट करा</value></data>
+  <data name="CompanyLogo" xml:space="preserve">
+  <value>कंपनीचा लोगो</value>
+</data>
+
+<data name="FooterTagline" xml:space="preserve">
+  <value>नियामक शिस्त, जोखीम-अनुकूल चौकट आणि दीर्घकालीन मूल्यनिर्मितीसह विश्वासार्ह आर्थिक उपाय प्रदान करणे.</value>
+</data>
+
+<data name="RBICompliant" xml:space="preserve">
+  <value>आरबीआय अनुरूप</value>
+</data>
+
+<data name="SecurePlatform" xml:space="preserve">
+  <value>सुरक्षित प्लॅटफॉर्म</value>
+</data>
+
+<data name="ISOStandards" xml:space="preserve">
+  <value>आयएसओ मानके</value>
+</data>
+
+<data name="Company" xml:space="preserve">
+  <value>कंपनी</value>
+</data>
+
+<data name="AboutUs" xml:space="preserve">
+  <value>आमच्याबद्दल</value>
+</data>
+
+<data name="Leadership" xml:space="preserve">
+  <value>नेतृत्व</value>
+</data>
+
+<data name="Careers" xml:space="preserve">
+  <value>करिअर</value>
+</data>
+
+<data name="Newsroom" xml:space="preserve">
+  <value>बातमी कक्ष</value>
+</data>
+
+<data name="Services" xml:space="preserve">
+  <value>सेवा</value>
+</data>
+
+<data name="BusinessLoans" xml:space="preserve">
+  <value>व्यवसाय कर्ज</value>
+</data>
+
+<data name="StructuredFinance" xml:space="preserve">
+  <value>संरचित वित्त</value>
+</data>
+
+<data name="WorkingCapital" xml:space="preserve">
+  <value>कार्यरत भांडवल</value>
+</data>
+
+<data name="Advisory" xml:space="preserve">
+  <value>सल्लागार सेवा</value>
+</data>
+
+<data name="Contact" xml:space="preserve">
+  <value>संपर्क</value>
+</data>
+
+<data name="Email" xml:space="preserve">
+  <value>ई-मेल</value>
+</data>
+
+<data name="Phone" xml:space="preserve">
+  <value>फोन</value>
+</data>
+
+<data name="Locations" xml:space="preserve">
+  <value>मुंबई • दिल्ली • बेंगळुरू</value>
+</data>
+
+<data name="Copyright" xml:space="preserve">
+  <value>© 2026 ऑर्किड कॅपिटल. सर्व हक्क राखीव.</value>
+</data>
+
+<data name="PrivacyPolicy" xml:space="preserve">
+  <value>गोपनीयता धोरण</value>
+</data>
+
+<data name="Terms" xml:space="preserve">
+  <value>अटी व शर्ती</value>
+</data>
+
+<data name="Compliance" xml:space="preserve">
+  <value>अनुपालन</value>
+</data>
+
+<data name="Disclosures" xml:space="preserve">
+  <value>प्रकटीकरणे</value>
+</data>
+<data name="WhyChooseUs" xml:space="preserve"><value>आम्हाला का निवडावे</value></data>
+<data name="WhyOrchidCapitalStandsApart" xml:space="preserve"><value>ऑर्किड कॅपिटल वेगळे का आहे</value></data>
+<data name="WhyUsDescription" xml:space="preserve"><value>आम्ही सखोल आर्थिक कौशल्य आणि आधुनिक डिजिटल तंत्रज्ञानाच्या सहाय्याने जलद, लवचिक आणि विश्वासार्ह आर्थिक उपाय प्रदान करतो.</value></data>
+<data name="KnowMore" xml:space="preserve"><value>अधिक जाणून घ्या</value></data>
+<data name="CompanyLogo" xml:space="preserve"><value>कंपनीचा लोगो</value></data>
+<data name="ComparedToTraditionalLenders" xml:space="preserve"><value>पारंपरिक कर्जदात्यांच्या तुलनेत</value></data>
+<data name="FastApprovals" xml:space="preserve"><value>जलद मंजुरी</value></data>
+<data name="DecisionsWithinHours" xml:space="preserve"><value>काही तासांत निर्णय</value></data>
+<data name="FlexibleStructuring" xml:space="preserve"><value>लवचिक आर्थिक रचना</value></data>
+<data name="TailoredFinancialModels" xml:space="preserve"><value>गरजेनुसार आर्थिक मॉडेल</value></data>
+<data name="FutureProjectionFunding" xml:space="preserve"><value>भविष्याभिमुख निधी</value></data>
+<data name="NotJustPastPerformance" xml:space="preserve"><value>फक्त भूतकाळातील कामगिरीवर नाही</value></data>
+<data name="MinimalDocumentation" xml:space="preserve"><value>किमान कागदपत्रे</value></data>
+<data name="SimplifiedOnboarding" xml:space="preserve"><value>सुलभ ऑनबोर्डिंग</value></data>
+<data name="RelationshipDriven" xml:space="preserve"><value>नातेसंबंधांवर आधारित सेवा</value></data>
+<data name="HumanFirstAdvisory" xml:space="preserve"><value>मानवी दृष्टिकोनातून मार्गदर्शन</value></data>
+<data name="TwentyYearsExpertise" xml:space="preserve"><value>20+ वर्षांचा अनुभव</value></data>
+<data name="ProvenIndustryLeadership" xml:space="preserve"><value>उद्योगातील सिद्ध नेतृत्व</value></data>
+<data name="WhatWeDo" xml:space="preserve">
+  <value>आम्ही काय करतो</value>
+</data>
+<data name="WeRaiseFundsFor" xml:space="preserve">
+  <value>आम्ही खालील उद्देशांसाठी निधी उभारतो</value>
+</data>
+<data name="TrustedFinancialNetwork" xml:space="preserve"><value>विश्वासार्ह आर्थिक नेटवर्क</value></data>
+<data name="PoweringGrowth" xml:space="preserve"><value>धोरणात्मक आर्थिक भागीदारीद्वारे विकासाला गती देत आहोत.</value></data>
+<data name="Banks" xml:space="preserve"><value>बँका</value></data>
+<data name="BanksDescription" xml:space="preserve"><value>संरचित निधी आणि नियमनबद्ध कर्ज भागीदारी.</value></data>
+<data name="NBFC" xml:space="preserve"><value>एनबीएफसी</value></data>
+<data name="NBFCDescription" xml:space="preserve"><value>लवचिक क्रेडिट मॉडेल आणि विशेष आर्थिक उपाय.</value></data>
+<data name="SIDBI" xml:space="preserve"><value>सिडबी</value></data>
+<data name="SIDBIDescription" xml:space="preserve"><value>विकास वित्ताद्वारे एमएसएमईच्या प्रगतीला चालना.</value></data>
+<data name="CoOperatives" xml:space="preserve"><value>सहकारी संस्था</value></data>
+<data name="CoOperativesDescription" xml:space="preserve"><value>समावेशक वित्तासाठी स्थानिक भांडवलाचे मार्ग.</value></data>
+<data name="Investors" xml:space="preserve"><value>गुंतवणूकदार</value></data>
+<data name="InvestorsDescription" xml:space="preserve"><value>खाजगी भांडवल आणि विकास भागीदार.</value></data>
+<data name="ReadMore" xml:space="preserve"><value>अधिक वाचा</value></data>
+<data name="LeadershipTeam" xml:space="preserve">
+  <value>नेतृत्व संघ</value>
+</data>
+<data name="LeadershipTeamDescription" xml:space="preserve">
+  <value>आर्थिक उत्कृष्टतेला चालना देणारे अनुभवी व्यावसायिक</value>
+</data>
+<data name="SimplifyFinancialPlanning" xml:space="preserve">
+  <value>योग्य आर्थिक साधनांसह तुमचे आर्थिक नियोजन सोपे करा</value>
+</data>
+
+<data name="FlexibleEMIs" xml:space="preserve">
+  <value>तुमच्या गरजेनुसार लवचिक ईएमआय पर्याय</value>
+</data>
+<data name="LoanAmount" xml:space="preserve"><value>कर्जाची रक्कम</value></data>
+<data name="LoanTenureYears" xml:space="preserve"><value>कर्जाचा कालावधी (वर्षे)</value></data>
+<data name="Years" xml:space="preserve"><value>वर्षे</value></data>
+<data name="InterestRate" xml:space="preserve"><value>व्याजदर</value></data>
+<data name="YourMonthlyEMI" xml:space="preserve"><value>तुमचा मासिक ईएमआय</value></data>
+<data name="AmountPayable" xml:space="preserve"><value>एकूण देय रक्कम</value></data>
+<data name="TotalInterest" xml:space="preserve"><value>एकूण व्याज</value></data>
+<data name="PrincipalAmount" xml:space="preserve"><value>मूळ कर्ज रक्कम</value></data>
+<data name="ApplyNow" xml:space="preserve"><value>आत्ताच अर्ज करा</value></data>
+<data name="KnowMore" xml:space="preserve"><value>अधिक जाणून घ्या</value></data>
+<data name="HeroTitle" xml:space="preserve">
+  <value>सत्य, विश्वास आणि पारदर्शकता</value>
+</data>
+
+<data name="SearchPlaceholder" xml:space="preserve">
+  <value>बँकिंग उत्पादने आणि सेवा शोधा...</value>
+</data>
+
+<data name="SecureLoans" xml:space="preserve">
+  <value>सुरक्षित कर्ज</value>
+</data>
+
+<data name="UnsecureLoans" xml:space="preserve">
+  <value>असुरक्षित कर्ज</value>
+</data>
+
+<data name="MSMELoans" xml:space="preserve">
+  <value>एमएसएमई कर्ज</value>
+</data>
+
+<data name="PrivateInvestors" xml:space="preserve">
+  <value>खाजगी गुंतवणूकदार</value>
+</data>
+
+<data name="AgentLogin" xml:space="preserve">
+  <value>एजंट लॉगिन</value>
+</data>
+
+<data name="GetSupport" xml:space="preserve">
+  <value>सहाय्य मिळवा</value>
+</data>
+<data name="ServiceRequest" xml:space="preserve">
+  <value>सेवा विनंती</value>
+</data>
+
+<data name="TrackApplicationService" xml:space="preserve">
+  <value>अर्ज / सेवा ट्रॅक करा</value>
+</data>
+
+<data name="SmartLock" xml:space="preserve">
+  <value>स्मार्ट लॉक</value>
+</data>
+
+<data name="BlockCard" xml:space="preserve">
+  <value>कार्ड ब्लॉक करा</value>
+</data>
+
+<data name="ReportFraud" xml:space="preserve">
+  <value>फसवणुकीची तक्रार करा</value>
+</data>
+<data name="NeedHelp" xml:space="preserve">
+  <value>मदत हवी आहे?</value>
+</data>
+
+<data name="NeedHelpDescription" xml:space="preserve">
+  <value>तुमच्या गरजेनुसार आर्थिक उपायांसाठी आमच्या आर्थिक सल्लागारांशी संपर्क साधा.</value>
+</data>
+
+<data name="ContactRelationshipManager" xml:space="preserve">
+  <value>रिलेशनशिप मॅनेजरशी संपर्क साधा</value>
+</data>
+<data name="LowEMI" xml:space="preserve">
+  <value>कमी ईएमआय</value>
+</data>
+
+<data name="NoEMI" xml:space="preserve">
+  <value>ईएमआय नाही</value>
+</data>
+
+<data name="FlexiEMI" xml:space="preserve">
+  <value>फ्लेक्सी ईएमआय</value>
+</data>
+
+<data name="RaiseEasyBusinessCapital" xml:space="preserve">
+  <value>सहज व्यवसाय भांडवल उभारा</value>
+</data>
+
+<data name="Unlimited" xml:space="preserve">
+  <value>अमर्यादित</value>
+</data>
+
+<data name="Close" xml:space="preserve">
+  <value>बंद करा</value>
+</data>
+<data name="Business" xml:space="preserve">
+  <value>व्यवसाय</value>
+</data>
+
+<data name="MSMELogo" xml:space="preserve">
+  <value>एमएसएमई लोगो</value>
+</data>
+
+<data name="EmpowerMSME" xml:space="preserve">
+  <value>एमएसएमईला सक्षम करा</value>
+</data>
+<data name="Secured" xml:space="preserve">
+  <value>सुरक्षित</value>
+</data>
+<data name="Unsecured" xml:space="preserve">
+  <value>असुरक्षित</value>
+</data>
+<data name="SecureLoans" xml:space="preserve">
+  <value>सुरक्षित कर्ज</value>
+</data>
+
+<data name="UnsecureLoans" xml:space="preserve">
+  <value>असुरक्षित कर्ज</value>
+</data>
+
+<data name="CreditScore" xml:space="preserve">
+  <value>क्रेडिट स्कोअर</value>
+</data>
+
+<data name="Calculations" xml:space="preserve">
+  <value>गणना</value>
+</data>
+
+<data name="Learn" xml:space="preserve">
+  <value>शिका</value>
+</data>
+
+<data name="Resources" xml:space="preserve">
+  <value>संसाधने</value>
+</data>
+<data name="Home" xml:space="preserve">
+  <value>मुख्यपृष्ठ</value>
+</data>
+
+<data name="Business" xml:space="preserve">
+  <value>व्यवसाय</value>
+</data>
+
+<data name="AboutUs" xml:space="preserve">
+  <value>आमच्याबद्दल</value>
+</data>
+
+<data name="ContactUs" xml:space="preserve">
+  <value>संपर्क करा</value>
+</data>
+<data name="LimitedTimeOffer" xml:space="preserve">
+  <value>मर्यादित कालावधीची ऑफर</value>
+</data>
+
+<data name="HomeLoanProcessingFeeWaiver" xml:space="preserve">
+  <value>गृहकर्जावरील प्रक्रिया शुल्क माफीचा लाभ घ्या.</value>
+</data>
+<data name="PremiumFinancialServices" xml:space="preserve">
+  <value>प्रीमियम आर्थिक सेवा</value>
+</data>
+<data name="FinanceUpto500AssetValue" xml:space="preserve">
+  <value>मालमत्तेच्या मूल्याच्या 500% पर्यंत वित्तपुरवठा</value>
+</data>
+
+<data name="LowNoEMIExpertise" xml:space="preserve">
+  <value>कमी ईएमआय / ईएमआयशिवाय तज्ज्ञता</value>
+</data>
+
+<data name="FinanceOnFutureProjection" xml:space="preserve">
+  <value>भविष्यातील प्रोजेक्शनवर आधारित वित्तपुरवठा</value>
+</data>
+
+<data name="TwentyYearsExperience" xml:space="preserve">
+  <value>20+ वर्षांचा अनुभव</value>
+</data>
+<data name="WhatAreYouLookingFor" xml:space="preserve">
+  <value>तुम्ही काय शोधत आहात?</value>
+</data>
+
+<data name="SearchLoansCardsInvestments" xml:space="preserve">
+  <value>कर्ज, कार्ड आणि गुंतवणूक शोधा...</value>
+</data>
+
+<data name="FindBankingSolutions" xml:space="preserve">
+  <value>बँकिंग उपाय शोधा...</value>
+</data>
+
+<data name="ExploreOrchidCapitalServices" xml:space="preserve">
+  <value>ऑर्किड कॅपिटलच्या सेवा जाणून घ्या...</value>
+</data>
 </root>

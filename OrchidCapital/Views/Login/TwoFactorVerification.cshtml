@@ -16,79 +16,142 @@
     <link rel="stylesheet" href="@Url.Content("~/Admin/css/admin_login.css")" asp-append-version="true" />
 </head>
 
-<body>
-
-    <div class="left">
-        <div class="brand">
-            <h1>Orchid Capital</h1>
-            <p>Secure & Smart Financial Management</p>
-        </div>
-
-        <div class="features">
-            <div class="feature"><i class="fa-solid fa-shield-halved"></i> Bank-grade Security</div>
-            <div class="feature"><i class="fa-solid fa-chart-line"></i> Advanced Analytics</div>
-            <div class="feature"><i class="fa-solid fa-user-lock"></i> Role-based Access Control</div>
-            <div class="feature"><i class="fa-solid fa-database"></i> End-to-End Encryption</div>
-        </div>
-    </div>
-
-    <div class="right">
-        <div class="login-box">
-            <h2>Two Factor Authentication</h2>
-            <p>Enter the verification code from your authenticator app</p>
-            @using (Html.BeginForm("TwoFactorVerification", "Login", FormMethod.Post, new
-            {
-                @class = "login-form",
-                id =
-                                          "loginForm"
-            }))
-            {
-                @Html.AntiForgeryToken()
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="input-group">
-                    <label>Verification Code</label>
-                    <div class="input-field">
-                        <i class="fa-solid fa-key"></i>
-                        @Html.HiddenFor(m => m.UserName)
-                        @Html.HiddenFor(m => m.SecretKey)
-                        @Html.TextBoxFor(m => m.AuthCode, new { @class = "form-control textboxallownumeric", placeholder = "Enter verification code",maxlength="6" })
-                    </div>
-                    @Html.ValidationMessageFor(m => m.AuthCode, " ", new { @class = "text-danger" })
+<body class="orchid-login-page">
+    <main class="login-shell">
+        <section class="brand-panel">
+            <div class="brand-content">
+                <div class="logo-wrapper">
+                    <img src="~/Images/logo.png" alt="Orchid Capital" class="orchid-logo">
                 </div>
-                @if (!string.IsNullOrEmpty(Model.ErrorMessage))
-                {
-                    <div style="color: red;" role="alert">
-                        @Model.ErrorMessage
+                <div class="brand-copy">
+                    <span class="trusted-badge">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        Secure Financial Platform
+                    </span>
+                    <h1>Finance with confidence.</h1>
+                    <p>
+                        Secure access to your Orchid Capital account,
+                        designed for modern financial management.
+                    </p>
+                </div>
+                <div class="security-points">
+                    <div class="security-point">
+                        <span class="point-icon">
+                            <i class="fa-solid fa-lock"></i>
+                        </span>
+                        <div>
+                            <strong>Bank-level protection</strong>
+                            <small>Your information is protected with modern security controls.</small>
+                        </div>
                     </div>
-                    <br />
-                }
-                <button class="login-btn" type="submit" id="btnLogin">Verify</button>
-            }
-            <div class="security-info">
-                <i class="fa-solid fa-shield"></i>
-                Protected with enterprise-grade encryption
+                    <div class="security-point">
+                        <span class="point-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </span>
+                        <div>
+                            <strong>Smart financial tools</strong>
+                            <small>Manage loans, accounts, and financial activity in one place.</small>
+                        </div>
+                    </div>
+                    <div class="security-point">
+                        <span class="point-icon">
+                            <i class="fa-solid fa-headset"></i>
+                        </span>
+                        <div>
+                            <strong>Dedicated support</strong>
+                            <small>Get help when you need it from the Orchid Capital team.</small>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <partial name="_ValidationScriptsPartial" />
-    <script>
-            $(document).ready(function () {
-                $("#loginForm").submit(function (event) {
-                    $("#loginForm").removeData("validator");
-                    $("#loginForm").removeData("unobtrusiveValidation");
-                    $.validator.unobtrusive.parse($("#loginForm"));
-                    event.preventDefault();
-                    if ($("#loginForm").valid()) {
-                        this.submit();
+            <div class="brand-footer">
+                <span>© @DateTime.Now.Year Orchid Capital</span>
+                <span class="footer-dot"></span>
+                <span>Secure banking access</span>
+            </div>
+        </section>
+        <section class="form-panel">
+            <div class="form-panel-top">
+                <span class="secure-status" onclick="location.href='@Url.Action("Login", "Login")'"
+                      style="cursor: pointer;">
+                    <i class="fa-solid fa-house"></i>
+                    Go to Login
+                </span>
+                <span class="secure-status">
+                    <i class="fa-solid fa-lock"></i>
+                    Secure sign in
+                </span>
+            </div>
+
+            <div class="login-box">
+                <div class="login-heading">
+                    <<h2>Two Factor Authentication</h2>
+                        <p>Enter the verification code from your authenticator app</p>
+                    </div>
+                    @using (Html.BeginForm("TwoFactorVerification", "Login", FormMethod.Post, new
+                    {
+                        @class = "login-form",
+                        id =
+                                                  "loginForm"
+                    }))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="input-group">
+                            <label>Verification Code</label>
+                            <div class="input-field">
+                                <i class="fa-solid fa-key"></i>
+                                @Html.HiddenFor(m => m.UserName)
+                                @Html.HiddenFor(m => m.SecretKey)
+                                @Html.TextBoxFor(m => m.AuthCode, new
+                                {
+                                    @class = "form-control textboxallownumeric",
+                                    placeholder
+                                = "Enter verification code",
+                                    maxlength = "6"
+                                })
+                            </div>
+                            @Html.ValidationMessageFor(m => m.AuthCode, " ", new { @class = "text-danger" })
+                        </div>
+                        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                        {
+                            <div style="color: red;" role="alert">
+                                @Model.ErrorMessage
+                            </div>
+                            <br />
+                        }
+                        <button class="login-btn" type="submit" id="btnLogin">Verify</button>
+                    }
+                    <div class="login-security-note">
+                        <i class="fa-solid fa-shield-heart"></i>
+                        <span>Your login is encrypted and protected.</span>
+                    </div>
+                </div>
+
+                <div class="form-panel-footer">
+                    <span>Need help?</span>
+                    <a href="mailto:support@orchidcapital.com">Contact support</a>
+                </div>
+            </section>
+        </main>
+        <partial name="_ValidationScriptsPartial" />
+        <script>
+                $(document).ready(function () {
+                    $("#loginForm").submit(function (event) {
+                        $("#loginForm").removeData("validator");
+                        $("#loginForm").removeData("unobtrusiveValidation");
+                        $.validator.unobtrusive.parse($("#loginForm"));
+                        event.preventDefault();
+                        if ($("#loginForm").valid()) {
+                            this.submit();
+                        }
+                    });
+                });
+                $(document).on('keypress', '.textboxallownumeric', function (e) {
+                    if (e.which < 48 || e.which > 57) {
+                        return false;
                     }
                 });
-            });
-            $(document).on('keypress','.textboxallownumeric', function (e) {
-                if (e.which < 48 || e.which > 57) {
-                    return false;
-                }
-            });
-    </script>
-</body>
-
+        </script>
+    </body>
 </html>

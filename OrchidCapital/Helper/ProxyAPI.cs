@@ -35,6 +35,7 @@
         public const string DeleteProfileImage = "DeleteProfileImage";
         public const string GetMenuList = "GetMenuList";
         public const string UpdateBankServiceDetails = "UpdateBankServiceDetails";
+        public const string UpdateLoanTypeDetails = "UpdateLoanTypeDetails";
 
         //Finance
         public const string GetNewApplicationNumber = "GetNewApplicationNumber";

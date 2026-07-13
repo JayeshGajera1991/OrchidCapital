@@ -10,13 +10,25 @@
     <link href="~/Admin/css/select2.min.css" rel="stylesheet" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/toastr.min.css" asp-append-version="true" />
-    <link rel="preload" as="image" href="img/heron1.png">
+    <partial name="_ValidationScriptsPartial" />
 </head>
 
 <body id="common-uportal-wrapper">
+    <div class="loader-overlay" id="loader">
+        <div class="loader-wrapper">
+            <div class="loader-ring"></div>
+            <img src="~/Images/loder.png" alt="Logo" class="loader-logo">
+        </div>
+    </div>
     <partial name="_UserHeader" />   
     @RenderBody()   
    <partial name="_UserFooter" />
+   
     @await RenderSectionAsync("Scripts", required: false)
+     <script>
+            window.addEventListener("load", function () {
+                document.getElementById("loader").style.display = "none";
+            });
+    </script>
 </body>
 </html>

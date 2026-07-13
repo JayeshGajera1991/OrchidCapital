@@ -90,7 +90,7 @@
         $.validator.unobtrusive.parse($("#nav_BankService_form"));
         event.preventDefault();
         if ($("#nav_BankService_form").valid()) {
-            APortalModule._APortalAjaxResponse.PostValidationAjaxJsonResponse(form, function (response) {
+            APortalModule._APortalAjaxResponse.PostValidationAjaxJsonResponsewithFile(form, function (response) {
                 if (response.isSuccess) {
                     document.getElementById('nav_BankService_form').reset();
                     document.querySelectorAll('#nav_BankService_form input, #nav_BankService_form textarea').forEach(el => {

@@ -1,162 +1,162 @@
 /* ===== BANK FOOTER ===== */
 
 .bank-footer {
-    background: linear-gradient(135deg, #ffffff, #f1f5f9);
-    padding: 75px 6% 30px;
-    border-top: 1px solid rgba(15, 23, 42, 0.06);
+  background: linear-gradient(135deg, #ffffff, #f1f5f9);
+  padding: 75px 6% 30px;
+  border-top: 1px solid rgba(15, 23, 42, 0.06);
 }
 
 .bank-footer-wrapper {
-    max-width: 1250px;
-    margin: auto;
+  max-width: 1250px;
+  margin: auto;
 }
 
 /* Grid */
 
 .bank-footer-grid {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
-    gap: 55px;
-    margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 55px;
+  margin-bottom: 50px;
 }
 
 /* Brand */
 
 .bank-footer-brand {
-    text-align: left;
+  text-align: left;
 }
 
 .bank-footer-brand img {
-    height: 62px;
-    margin-bottom: 14px;
+  height: 62px;
+  margin-bottom: 14px;
 }
 
 .bank-footer-tagline {
-    font-size: 14px;
-    color: #64748b;
-    line-height: 1.7;
-    margin-bottom: 18px;
-    max-width: 320px;
+  font-size: 14px;
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  max-width: 320px;
 }
 
 .bank-footer-certifications {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .bank-badge {
-    font-size: 12px;
-    padding: 6px 10px;
-    border-radius: 8px;
-    background: rgba(14, 105, 241, 0.08);
-    color: #0E69F1;
-    font-weight: 600;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(14,105,241,0.08);
+  color: #0E69F1;
+  font-weight: 600;
 }
 
 /* Columns */
 
 .bank-footer-column h4 {
-    font-size: 14.5px;
-    font-weight: 650;
-    color: #0f172a;
-    margin-bottom: 16px;
+  font-size: 14.5px;
+  font-weight: 650;
+  color: #0f172a;
+  margin-bottom: 16px;
 }
 
 .bank-footer-column ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .bank-footer-column li {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .bank-footer-column a {
-    text-decoration: none;
-    font-size: 13.8px;
-    color: #64748b;
-    transition: 0.25s ease;
+  text-decoration: none;
+  font-size: 13.8px;
+  color: #64748b;
+  transition: 0.25s ease;
 }
 
 .bank-footer-column a:hover {
-    color: #0E69F1;
+  color: #0E69F1;
 }
 
 /* Contact */
 
 .bank-footer-contact p {
-    font-size: 13.8px;
-    color: #64748b;
-    margin-bottom: 10px;
+  font-size: 13.8px;
+  color: #64748b;
+  margin-bottom: 10px;
 }
 
 /* Divider */
 
 .bank-footer-divider {
-    height: 1px;
-    background: rgba(15, 23, 42, 0.08);
-    margin: 18px 0 22px;
+  height: 1px;
+  background: rgba(15, 23, 42, 0.08);
+  margin: 18px 0 22px;
 }
 
 /* Bottom */
 
 .bank-footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .bank-footer-bottom p {
-    font-size: 13px;
-    color: #94a3b8;
-    margin: 0;
+  font-size: 13px;
+  color: #94a3b8;
+  margin: 0;
 }
 
 .bank-footer-links {
-    display: flex;
-    gap: 18px;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
 }
 
 .bank-footer-links a {
-    font-size: 13px;
-    text-decoration: none;
-    color: #94a3b8;
-    transition: 0.25s ease;
+  font-size: 13px;
+  text-decoration: none;
+  color: #94a3b8;
+  transition: 0.25s ease;
 }
 
 .bank-footer-links a:hover {
-    color: #0E69F1;
+  color: #0E69F1;
 }
 
 /* Responsive */
 
 @media (max-width: 992px) {
-    .bank-footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 35px;
-    }
+  .bank-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
 }
 
 @media (max-width: 600px) {
-    .bank-footer-grid {
-        grid-template-columns: 1fr;
-    }
+  .bank-footer-grid {
+    grid-template-columns: 1fr;
+  }
 
-    .bank-footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
+  .bank-footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .bank-footer-brand {
-        text-align: center;
-    }
+  .bank-footer-brand {
+    text-align: center;
+  }
 
-    .bank-footer-tagline {
-        margin: auto;
-    }
+  .bank-footer-tagline {
+    margin: auto;
+  }
 }

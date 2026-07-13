@@ -814,7 +814,7 @@ namespace OrchidCapital.Controllers
         }
         #endregion
 
-        #region Bank Service
+        #region Loan Product
         [Authorize(Roles = "Admin,SuperAdmin")]
         public async Task<IActionResult> Service()
         {
@@ -836,6 +836,41 @@ namespace OrchidCapital.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    if (request.ImageFile != null && request.ImageFile.Length > 0)
+                    {
+                        var uploadsFolder = Path.Combine(_environment.WebRootPath, "LoanProductImage");
+                        var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".webp", ".jfif" };
+                        var extension = Path.GetExtension(request.ImageFile.FileName).ToLower();
+                        if (!allowedExtensions.Contains(extension))
+                        {
+                            return Json(new { isSuccess = false, message = "Only image files are allowed.(.jpg,.jpeg,.png,.gif,.webp)" });
+                        }
+                        if (!Directory.Exists(uploadsFolder))
+                        {
+                            Directory.CreateDirectory(uploadsFolder);
+                        }
+                        // Delete old image
+                        if (!string.IsNullOrEmpty(request.ImageUrl))
+                        {
+                            var oldImagePath = Path.Combine(uploadsFolder, request.ImageUrl);
+
+                            if (System.IO.File.Exists(oldImagePath))
+                            {
+                                System.IO.File.Delete(oldImagePath);
+                            }
+                        }
+
+                        // Save new image
+                        var fileName = Guid.NewGuid() + Path.GetExtension(request.ImageFile.FileName);
+                        var filePath = Path.Combine(uploadsFolder, fileName);
+
+                        using (var stream = new FileStream(filePath, FileMode.Create))
+                        {
+                            await request.ImageFile.CopyToAsync(stream);
+                        }
+
+                        request.ImageUrl = fileName;
+                    }
                     request.UserName = UserName;
                     request.UserRole = UserRole;
                     request.IsActive = true;
@@ -857,6 +892,55 @@ namespace OrchidCapital.Controllers
             catch (Exception ex)
             {
                 await SaveErrorLog(ex, "AdminController", "UpdateServiceDetails");
+                return Json(new { isSuccess = false, message = ex.Message });
+            }
+            return Json(new { isSuccess = false, message = "An error occurred while updating service." });
+        }
+        #endregion
+
+        #region Loan Product Type
+        [Authorize(Roles = "Admin,SuperAdmin")]
+        public async Task<IActionResult> LoanType()
+        {
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+                await SaveErrorLog(ex, "AdminController", "LoanType");
+            }
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin,SuperAdmin")]
+        public async Task<IActionResult> UpdateLoanTypeDetails(UpdateLoanTypeDetailsRequest request)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    request.UserName = UserName;
+                    request.UserRole = UserRole;
+                    request.IsActive = true;
+                    var response = await _OrchidClient.PostAsync<dynamic>(ProxyAPI.UpdateLoanTypeDetails, request);
+                    if (response != null && response.IsSuccessStatusCode)
+                    {
+                        string jsonResponse = JsonConvert.SerializeObject(response.Response);
+                        CommonResponseModel Response = JsonConvert.DeserializeObject<List<CommonResponseModel>>(jsonResponse)[0];
+                        return Json(new { isSuccess = true, message = Response.Message });
+                    }
+                }
+                else
+                {
+                    var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
+                    string errorMessage = string.Join("; ", errors);
+                    return Json(new { isSuccess = false, message = errorMessage });
+                }
+            }
+            catch (Exception ex)
+            {
+                await SaveErrorLog(ex, "AdminController", "UpdateLoanTypeDetails");
                 return Json(new { isSuccess = false, message = ex.Message });
             }
             return Json(new { isSuccess = false, message = "An error occurred while updating service." });
@@ -902,7 +986,7 @@ namespace OrchidCapital.Controllers
             {
                 request.UserName = UserName;
                 request.UserRole = UserRole;
-                string QueryString = @"?UserName=" + UserName + "&UserRole=" + UserRole + "&IsActive=" + request.IsActive + "&PageNumber=" + request.PageNumber + "&PageSize=" + request.PageSize + "&PageSize=" + request.PageSize + "&PageSize=" + request.PageSize + "&SortColumn=" + request.SortColumn + "&SortDirection=" + request.SortDirection + "&SPName=" + request.SPName + "&Filter=" + request.Filter;
+                string QueryString = @"?UserName=" + UserName + "&UserRole=" + UserRole + "&IsActive=" + request.IsActive + "&PageNumber=" + request.PageNumber + "&PageSize=" + request.PageSize + "&SortColumn=" + request.SortColumn + "&SortDirection=" + request.SortDirection + "&SPName=" + request.SPName + "&Filter=" + request.Filter;
                 var response = await _OrchidClient.GetAsync<dynamic>(ProxyAPI.GetMasterList + QueryString);
                 switch (request.SPName)
                 {
@@ -995,6 +1079,15 @@ namespace OrchidCapital.Controllers
                             result10 = JsonConvert.DeserializeObject<List<BankServiceListModel>>(jsonResponse);
                         }
                         return PartialView("_BankServiceList", result10);
+                        break;
+                    case "APortal_LoanProductTypeMst":
+                        List<LoanTypeModel> result03 = new List<LoanTypeModel>();
+                        if (response != null && response.IsSuccessStatusCode)
+                        {
+                            string jsonResponse = JsonConvert.SerializeObject(response.Response);
+                            result03 = JsonConvert.DeserializeObject<List<LoanTypeModel>>(jsonResponse);
+                        }
+                        return PartialView("_LoanTypeList", result03);
                         break;
                 }
             }
@@ -1126,7 +1219,26 @@ namespace OrchidCapital.Controllers
                         service.UserName = UserName;
                         service.UserRole = UserRole;
                         service.IsActive = true;
+                        string QueryStringtype = @"?UserName=" + UserName + "&UserRole=" + UserRole + "&IsActive=1&PageNumber=0&PageSize=" + int.MaxValue + "&SortColumn=Name&SortDirection=ASC&SPName=APortal_LoanProductTypeMst&Filter=";
+                        var responsetype = await _OrchidClient.GetAsync<dynamic>(ProxyAPI.GetMasterList + QueryStringtype);
+                        if (responsetype != null && responsetype.IsSuccessStatusCode)
+                        {
+                            string jsonResponse = JsonConvert.SerializeObject(responsetype.Response);
+                            List<LoanTypeModel> resultmenu = JsonConvert.DeserializeObject<List<LoanTypeModel>>(jsonResponse);
+                            ViewBag.TypeList = new SelectList(resultmenu, "LoanTypeId", "Name");
+                        }
+                        else
+                        {
+                            ViewBag.TypeList = new SelectList(Enumerable.Empty<SelectListItem>());
+                        }
                         return PartialView("_AddBankService", service);
+                        break;
+                    case "APortal_LoanProductTypeMst":
+                        UpdateLoanTypeDetailsRequest service03 = new UpdateLoanTypeDetailsRequest();
+                        service03.UserName = UserName;
+                        service03.UserRole = UserRole;
+                        service03.IsActive = true;
+                        return PartialView("_AddLoanType", service03);
                         break;
                 }
             }
@@ -1285,7 +1397,30 @@ namespace OrchidCapital.Controllers
                         }
                         service.ToList().FirstOrDefault().UserName = UserName;
                         service.ToList().FirstOrDefault().UserRole = UserRole;
+                        string QueryStringtype = @"?UserName=" + UserName + "&UserRole=" + UserRole + "&IsActive=1&PageNumber=0&PageSize=" + int.MaxValue + "&SortColumn=Name&SortDirection=ASC&SPName=APortal_LoanProductTypeMst&Filter=";
+                        var responsetype = await _OrchidClient.GetAsync<dynamic>(ProxyAPI.GetMasterList + QueryStringtype);
+                        if (responsetype != null && responsetype.IsSuccessStatusCode)
+                        {
+                            string jsonResponse = JsonConvert.SerializeObject(responsetype.Response);
+                            List<LoanTypeModel> resultmenu = JsonConvert.DeserializeObject<List<LoanTypeModel>>(jsonResponse);
+                            ViewBag.TypeList = new SelectList(resultmenu, "LoanTypeId", "Name");
+                        }
+                        else
+                        {
+                            ViewBag.TypeList = new SelectList(Enumerable.Empty<SelectListItem>());
+                        }
                         return PartialView("_AddBankService", service.ToList().FirstOrDefault());
+                        break;
+                    case "APortal_LoanProductTypeMst":
+                        List<UpdateLoanTypeDetailsRequest> service03 = new List<UpdateLoanTypeDetailsRequest>();
+                        if (response != null && response.IsSuccessStatusCode)
+                        {
+                            string jsonResponse = JsonConvert.SerializeObject(response.Response);
+                            service03 = JsonConvert.DeserializeObject<List<UpdateLoanTypeDetailsRequest>>(jsonResponse);
+                        }
+                        service03.ToList().FirstOrDefault().UserName = UserName;
+                        service03.ToList().FirstOrDefault().UserRole = UserRole;
+                        return PartialView("_AddLoanType", service03.ToList().FirstOrDefault());
                         break;
                 }
             }
@@ -1614,7 +1749,7 @@ namespace OrchidCapital.Controllers
                         }
                         break;
                     case "APortal_LoanProductMaster":
-                         if (response != null && response.IsSuccessStatusCode)
+                        if (response != null && response.IsSuccessStatusCode)
                         {
                             string jsonResponse = JsonConvert.SerializeObject(response.Response);
                             DataTable result = JsonConvert.DeserializeObject<DataTable>(jsonResponse);
@@ -1623,6 +1758,34 @@ namespace OrchidCapital.Controllers
                                 Title = "Bank Service List",
                                 data = result,
                                 ExcludeColumnList = "LoanProductId,TotalRecords",
+                                filters = new Dictionary<string, string>() { { "IsActive", request.IsActive == 1 ? "Active" : request.IsActive == 0 ? "Inactive" : "All" }, { "Filter", request.Filter } }
+                            };
+                            string errorMsg = string.Empty;
+                            byte[] fileBytes = ExportToExcel.GenerateExcel(exportDataModel, ref errorMsg);
+                            if (fileBytes != null)
+                            {
+                                return File(fileBytes, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", exportDataModel.Title + ".xlsx");
+                            }
+                            else
+                            {
+                                return Json(new { isSuccess = false, message = "An error occurred while generating the Excel file: " + errorMsg });
+                            }
+                        }
+                        else
+                        {
+                            return Json(new { isSuccess = false, message = "An error occurred while fetching data for export." });
+                        }
+                        break;
+                    case "APortal_LoanProductTypeMst":
+                        if (response != null && response.IsSuccessStatusCode)
+                        {
+                            string jsonResponse = JsonConvert.SerializeObject(response.Response);
+                            DataTable result = JsonConvert.DeserializeObject<DataTable>(jsonResponse);
+                            ExportDataModel<DataTable> exportDataModel = new ExportDataModel<DataTable>()
+                            {
+                                Title = "Loan Type List",
+                                data = result,
+                                ExcludeColumnList = "LoanTypeId,TotalRecords",
                                 filters = new Dictionary<string, string>() { { "IsActive", request.IsActive == 1 ? "Active" : request.IsActive == 0 ? "Inactive" : "All" }, { "Filter", request.Filter } }
                             };
                             string errorMsg = string.Empty;

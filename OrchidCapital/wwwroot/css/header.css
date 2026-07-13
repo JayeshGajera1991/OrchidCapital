@@ -4,37 +4,91 @@ body {
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* HEADER CONTAINER */
+/* ===============================
+   TOP ANGLED AXIS STYLE HEADER
+================================= */
 .top-header {
   position: sticky;
   top: 0;
   z-index: 5000;
-  height: 72px;
-  padding: 0 6%;
+  height: 82px;
+  padding: 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(135deg, #571067, #750e8f, #0E69F1);
-  box-shadow: 0 4px 18px rgba(0,0,0,0.12);
+  align-items: flex-start;   /* 👈 important */
+  overflow: hidden;
+
+  background: transparent;
+  backdrop-filter: none; /* optional */
 }
 
-/* LEFT SIDE */
+
+.header-left,
+.header-nav {
+  height: 45px;              /* 👈 restrict to white zone */
+  display: flex;
+  align-items: center;
+}
+
+/* ===== WHITE TOP PARALLELOGRAM ===== */
+
 .header-left {
+  position: relative;
+  height: 100%;
+  width: 260px;
+  background: white;
   display: flex;
   align-items: center;
-  gap: 18px;
+  padding-left: 6%;
+  z-index: 6;
+
+
+  /* TOP angled cut */
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    85% 100%,
+    0% 100%
+  );
 }
 
+/* Original logo */
 .logo {
-  height: 48px;
-  filter: brightness(0) invert(1); /* White logo effect */
+  height: 76px;
+  filter: none;
+}
+
+/* ===== THIN WHITE LINE AT TOP ===== */
+
+.top-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  background: white;
+  z-index: 5;
+  
+}
+
+/* ===== RIGHT PURPLE AREA ===== */
+
+.header-nav,
+.mobile-right {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 6%;
+  background: transparent;
 }
 
 /* BUSINESS BUTTON */
 .business-btn {
   border: none;
-  background: rgba(255,255,255,0.15);
-  color: white;
+ background: transparent;
+  color: #3b0764;
   padding: 9px 16px;
   border-radius: 10px;
   font-size: 14px;
@@ -73,7 +127,7 @@ body {
 }
 
 .header-nav a {
-  color: rgba(255,255,255,0.85);
+   color: #3b0764;   
   text-decoration: none;
   font-size: 14px;
   position: relative;
@@ -81,7 +135,7 @@ body {
 }
 
 .header-nav a:hover {
-  color: white;
+  color: #791d95;
 }
 
 /* UNDERLINE HOVER EFFECT */
@@ -325,7 +379,7 @@ body {
   border: none;
   background: white;
   color: #4c1d95;
-  padding: 9px 18px;
+  padding: 5px 10px;
   border-radius: 10px;
   font-size: 14px;
   font-weight: 600;
@@ -587,4 +641,280 @@ body {
 .mobile-overlay.active {
   opacity: 1;
   pointer-events: auto;
+}
+/* =========================================
+   NEW WHITE TOP MENU (INSIDE WHITE LINE)
+========================================= */
+
+/* WHITE MENU WRAPPER */
+.white-menu {
+  position: absolute;
+  top: 12px;
+  left: 40px;
+  right: 40px;      /* important for right alignment */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+/* LEFT LINKS */
+.white-menu-left {
+  display: flex;
+  gap: 34px;
+}
+
+/* RIGHT SECTION */
+.white-menu-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: -10px;
+}
+
+
+
+/* SOCIAL WRAPPER */
+.white-social {
+  display: flex;
+  align-items: center;
+  gap: 16px;   /* professional spacing */
+}
+
+/* SOCIAL ICON */
+.white-social a {
+  color: #1d5395;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+/* Subtle professional hover */
+.white-social a:hover {
+  color: #266ED7;
+}
+
+.white-menu a {
+  text-decoration: none;
+  color: #3b0764;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.white-menu a:hover {
+  color: #1d5395;
+}
+
+/* Underline */
+.white-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #1d5395;
+  transition: 0.3s;
+}
+
+.white-menu a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================
+   PURPLE SUB MENU (BOTTOM BAR)
+========================================= */
+
+/* =========================================
+   ENHANCED PURPLE SUB MENU – BANK GRADE
+========================================= */
+
+.purple-submenu {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+
+  height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  z-index: 2;
+}
+
+.purple-submenu a {
+  position: relative;
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 500;
+
+  color: rgba(255,255,255,0.85);
+
+  letter-spacing: 0.3px;
+
+  transition: color 0.3s ease;
+}
+
+/* Premium underline animation */
+.purple-submenu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.purple-submenu a:hover {
+  color: #ffffff;
+}
+
+.purple-submenu a:hover::after {
+  width: 100%;
+}
+/* WHITE MENU FIX */
+.white-menu {
+  position: absolute;
+  top: 12px;          /* inside white 45px strip */
+  left: 40px;        /* space after angled logo */
+  display: flex;
+  gap: 34px;
+  z-index: 10;        /* IMPORTANT: above white strip layer */
+}
+
+/* Make sure header is positioned */
+.top-header {
+  position: sticky;
+}
+
+/* Make sure nav doesn't interfere */
+.header-nav {
+  position: relative;
+}
+
+/* ===============================
+   SCROLL DARK MODE HEADER
+================================= */
+
+.top-header.scrolled {
+  background: linear-gradient(
+    135deg,
+    #530e53,
+    #144eb9
+  );
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  transition: all 0.4s ease;
+}
+
+/* Darken purple submenu text slightly */
+.top-header.scrolled .purple-submenu a {
+  color: rgba(255,255,255,0.95);
+}
+
+/* Smooth transition always active */
+.top-header {
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.business-trigger {
+  position: relative;
+  display: inline-block;
+}
+.logo {
+  position: relative;
+  z-index: 50;
+
+  filter: brightness(1.08) contrast(1.1);
+
+  text-shadow:
+    0 2px 6px rgba(0,0,0,0.25),
+    0 0 18px rgba(255,255,255,0.15);
+}
+.header-left {
+  position: relative;
+  overflow: hidden;
+}
+.header-left::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  background: white;
+  border-radius: 50%;
+  z-index: 7;
+}
+
+/* =========================================
+   OC PREMIUM THIN OFFER BAR (UNIQUE SAFE)
+========================================= */
+
+.oc-offer-bar {
+  position: relative;
+  width: 100%;
+  height: 34px; /* thin professional bar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  background: linear-gradient(
+    90deg,
+    #530e53,
+    #144eb9
+  );
+
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: 0.3px;
+  z-index: 6000; /* above header */
+}
+
+/* Shine animation layer */
+.oc-offer-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -70%;
+  width: 70%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255,255,255,0.35) 50%,
+    transparent 100%
+  );
+
+  transform: skewX(-18deg);
+  animation: oc-offer-shine 4.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Text wrapper */
+.oc-offer-text {
+  position: relative;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+/* Animation */
+@keyframes oc-offer-shine {
+  0% {
+    left: -70%;
+  }
+  55% {
+    left: 120%;
+  }
+  100% {
+    left: 120%;
+  }
 }
