@@ -430,5 +430,22 @@ namespace OrchidCapitalCoreAPI.Controllers
                 return Ok(new CommonResponse { Message = "Error occurred", Response = null, StatusCode = 500 });
             }
         }
+
+        [MapToApiVersion(APIVersions.Version1)]
+        [HttpPost("v{version:apiVersion}/UpdateLoanTypeDetails")]
+        public async Task<IActionResult> UpdateLoanTypeDetails([FromBody] UpdateLoanTypeDetailsRequest request)
+        {
+            CommonResponse response = new CommonResponse();
+            try
+            {
+                response = await _adminRepository.UpdateLoanTypeDetails(request);
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return Ok(new CommonResponse { Message = "Error occurred", Response = null, StatusCode = 500 });
+            }
+        }
+
     }
 }

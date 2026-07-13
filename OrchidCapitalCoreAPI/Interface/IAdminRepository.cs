@@ -23,6 +23,8 @@ namespace OrchidCapitalCoreAPI.Interface
         Task<CommonResponse> UpdateBranchDetails(UpdateBranchDetailsRequest request);
         Task<CommonResponse> UpdateCustomersDetails(UpdateUsersDetailsRequest request);
         Task<CommonResponse> UpdateImageConfigDetails(UpdateImageConfigDetailsRequest request);
+        Task<CommonResponse> UpdateLoanTypeDetails(UpdateLoanTypeDetailsRequest request);
+
         Task<CommonResponse> UpdatePageDetails(UpdatePageDetailsRequest request);
         Task<CommonResponse> UpdateProfileImage(UpdateProfileImageRequest request);
         Task<CommonResponse> UpdateRoleDetails(UpdateRoleDetailsRequest request);

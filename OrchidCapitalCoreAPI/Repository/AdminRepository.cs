@@ -954,7 +954,7 @@ namespace OrchidCapitalCoreAPI.Repository
                 param.Add("@LoanProductId", request.LoanProductId);
                 param.Add("@ProductCode", request.ProductCode);
                 param.Add("@ProductName", request.ProductName);
-                param.Add("@LoanType", request.LoanType);
+                param.Add("@LoanTypeId", request.LoanTypeId);
                 param.Add("@MinAmount", request.MinAmount);
                 param.Add("@MaxAmount", request.MaxAmount);
                 param.Add("@MinTenure", request.MinTenure);
@@ -966,12 +966,52 @@ namespace OrchidCapitalCoreAPI.Repository
                 param.Add("@PenaltyInterest", request.PenaltyInterest);
                 param.Add("@GraceDays", request.GraceDays);
                 param.Add("@CreatedBy", request.UserName);
+                param.Add("@ImageUrl", request.ImageUrl);
+                param.Add("@IsSecure", request.IsSecure);
+                param.Add("@Descriptions", request.Descriptions);
                 var queryResponse = await _dapperRepository.GetAllAsync<dynamic>(query, param, commandTimeout: null, commandType: CommandType.StoredProcedure);
                 if (queryResponse.Any())
                 {
                     response.StatusCode = 1;
                     response.Response = queryResponse;
                     response.Message = "Your bank service details have been updated successfully.";
+                }
+                else
+                {
+                    response.StatusCode = 0;
+                    response.Message = "Data Not Found.";
+                }
+            }
+            catch (Exception ex)
+            {
+                response.StatusCode = 0;
+                response.Message = ex.Message;
+                response.Response = "Internal Server Error";
+            }
+            return response;
+        }
+
+        public async Task<CommonResponse> UpdateLoanTypeDetails(UpdateLoanTypeDetailsRequest request)
+        {
+            CommonResponse response = new CommonResponse();
+            try
+            {
+                var query = "APortal_LoanProductTypeMst";
+                var param = new DynamicParameters();
+                if (request.LoanTypeId == 0)
+                    param.Add("@Action", "INSERT");
+                else
+                    param.Add("@Action", "UPDATE");
+                param.Add("@Name", request.Name);
+                param.Add("@LoanTypeId", request.LoanTypeId);
+                param.Add("@IsActive", request.IsActive);
+                param.Add("@CreatedBy", request.UserName);
+                var queryResponse = await _dapperRepository.GetAllAsync<dynamic>(query, param, commandTimeout: null, commandType: CommandType.StoredProcedure);
+                if (queryResponse.Any())
+                {
+                    response.StatusCode = 1;
+                    response.Response = queryResponse;
+                    response.Message = "Your Loan type details have been updated successfully.";
                 }
                 else
                 {

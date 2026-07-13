@@ -145,6 +145,14 @@ namespace Orchid.DataModels
         public int UserId { get; set; }
         public string XmlData { get; set; }
     }
+    public class UpdateLoanTypeDetailsRequest
+    {
+        public string UserName { get; set; }
+        public string UserRole { get; set; }
+        public long LoanTypeId { get; set; }
+        public string Name { get; set; }
+        public bool? IsActive { get; set; }
+    }
     public class ErrorLogModel
     {
         public string UserName { get; set; }
@@ -183,31 +191,21 @@ namespace Orchid.DataModels
         public string UserName { get; set; }
         public string UserRole { get; set; }
         public long LoanProductId { get; set; }
-
         public string? ProductCode { get; set; }
-
         public string ProductName { get; set; }
-
-        public string LoanType { get; set; }
-
+        public int LoanTypeId { get; set; }
         public decimal MinAmount { get; set; }
-
         public decimal MaxAmount { get; set; }
-
         public int MinTenure { get; set; }
-
         public int MaxTenure { get; set; }
-
         public string InterestType { get; set; }
-
         public decimal DefaultInterestRate { get; set; }
-
         public decimal? ProcessingFeePercent { get; set; }
-
         public decimal? PenaltyInterest { get; set; }
-
+        public bool? IsSecure { get; set; }
+        public string Descriptions { get; set; }
         public int? GraceDays { get; set; }
-
+        public string? ImageUrl {get; set;}
         public bool? IsActive { get; set; }
     }
     

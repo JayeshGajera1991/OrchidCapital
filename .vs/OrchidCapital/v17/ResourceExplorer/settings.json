@@ -1,0 +1,28 @@
+{
+  "ShowEmptyProjects": false,
+  "SelectedGroups": [
+    "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\Resources\\SharedResource.resx"
+  ],
+  "ExpandedProjects": [
+    "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\OrchidCapital.csproj"
+  ],
+  "EnableSpellChecker": true,
+  "ColumnOrder": [
+    "name",
+    "type",
+    "neutral-value",
+    "neutral-comment",
+    "gu",
+    "hi",
+    "mr",
+    "file-path",
+    "file-name"
+  ],
+  "VisibleColumnKeys": [
+    "gu",
+    "name",
+    "hi",
+    "mr",
+    "neutral-value"
+  ]
+}

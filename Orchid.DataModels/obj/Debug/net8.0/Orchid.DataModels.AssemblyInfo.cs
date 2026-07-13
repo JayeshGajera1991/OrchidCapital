@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Orchid.DataModels")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87bdc9391ddb06b2548b860e6e2dce8c83fc8de1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc035acca8155bef3fd38ca937649a61d30477f4")]
 [assembly: System.Reflection.AssemblyProductAttribute("Orchid.DataModels")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Orchid.DataModels")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
