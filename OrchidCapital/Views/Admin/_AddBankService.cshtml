@@ -134,9 +134,13 @@
             })
             @Html.ValidationMessageFor(m => m.ImageFile, "", new { @class = "text-danger" })
         </div>
-        <div class="form-group">
-            <label>Is Secure *</label>
-            @Html.CheckBoxFor(m => m.IsSecure)
+        <div class="form-group secure-group">
+            <label for="IsSecure">Is Secure *</label>
+            <label class="switch">
+                @Html.CheckBoxFor(m => m.IsSecure)
+                <span class="slider"></span>
+            </label>
+
         </div>
         <div class="form-group full-width">
             <label>Description *</label>
@@ -170,50 +174,50 @@
 </form>
 <script>
     $('#Descriptions').summernote({
-    height: 180,
-    placeholder: 'Enter Description...',
-    toolbar: [
-    ['style', ['bold', 'italic', 'underline', 'clear']],
-    ['font', ['fontsize', 'color']],
-    ['para', ['ul', 'ol', 'paragraph']],
-    ['insert', ['link', 'picture', 'table']],
-    ['view', ['fullscreen', 'codeview']]
-    ]
+        height: 180,
+        placeholder: 'Enter Description...',
+        toolbar: [
+            ['style', ['bold', 'italic', 'underline', 'clear']],
+            ['font', ['fontsize', 'color']],
+            ['para', ['ul', 'ol', 'paragraph']],
+            ['insert', ['link', 'picture', 'table']],
+            ['view', ['fullscreen', 'codeview']]
+        ]
     });
     $(document).ready(function () {
-    setImageFromPath('/LoanProductImage/@Model.ImageUrl');
+        setImageFromPath('/LoanProductImage/@Model.ImageUrl');
     });
     async function setImageFromPath(imagePath) {
-    try {
-    const response = await fetch(imagePath);
+        try {
+            const response = await fetch(imagePath);
 
-    if (!response.ok) {
-    throw new Error("Image not found");
-    }
+            if (!response.ok) {
+                throw new Error("Image not found");
+            }
 
-    const blob = await response.blob();
+            const blob = await response.blob();
 
-    const fileName = imagePath.split('/').pop();
+            const fileName = imagePath.split('/').pop();
 
-    const file = new File(
-    [blob],
-    fileName,
-    {
-    type: blob.type
-    }
-    );
+            const file = new File(
+                [blob],
+                fileName,
+                {
+                    type: blob.type
+                }
+            );
 
-    const dataTransfer = new DataTransfer();
-    dataTransfer.items.add(file);
+            const dataTransfer = new DataTransfer();
+            dataTransfer.items.add(file);
 
-    const input = document.getElementById("ImageFile");
+            const input = document.getElementById("ImageFile");
 
-    input.files = dataTransfer.files;
+            input.files = dataTransfer.files;
 
-    console.log(input.files[0].name);
+            console.log(input.files[0].name);
 
-    } catch (error) {
-    console.log(error);
-    }
+        } catch (error) {
+            console.log(error);
+        }
     }
 </script>

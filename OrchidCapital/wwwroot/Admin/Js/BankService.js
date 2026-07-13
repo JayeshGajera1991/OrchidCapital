@@ -72,7 +72,7 @@
                     el.value = '';
                 });
             }
-            $(`${_root} #h3_addBankServiceHeader`).empty().html('Add New Service Details');
+            $(`${_root} #h3_addBankServiceHeader`).empty().html('Add New Product Details');
             $(document).ready(function () {
                 $('.select2').select2({
                     placeholder: "-- Select --",
@@ -123,7 +123,7 @@
                     width: '100%'
                 });
             });
-            $(`${_root} #h3_addBankServiceHeader`).empty().html('Edit Service Details');
+            $(`${_root} #h3_addBankServiceHeader`).empty().html('Edit Product Details');
         });
     };
 
