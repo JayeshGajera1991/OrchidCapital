@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OrchidCapitalCoreAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b7aa27cf4b4a3511d9aa51cd09b7d8991c6a54d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ea73ce58c14fdf296d4f121a4bea339bd33d0bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("OrchidCapitalCoreAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OrchidCapitalCoreAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

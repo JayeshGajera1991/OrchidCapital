@@ -2416,12 +2416,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loandocuments\no-image.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\1462bf19-4004-49fb-bd5c-c78caa4e9c8e.jpg))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\0750bf9b-f9d6-4d63-8a59-7c76336702b6.png))">
       <SourceType>Package</SourceType>
       <SourceId>OrchidCapital</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/OrchidCapital</BasePath>
-      <RelativePath>loanguarantors/1462bf19-4004-49fb-bd5c-c78caa4e9c8e.jpg</RelativePath>
+      <RelativePath>loanguarantors/0750bf9b-f9d6-4d63-8a59-7c76336702b6.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2430,14 +2430,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\1462bf19-4004-49fb-bd5c-c78caa4e9c8e.jpg))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\0750bf9b-f9d6-4d63-8a59-7c76336702b6.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\529ea957-e22c-4c5b-828e-969be7d68cbf.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\0964a7ae-8c4e-4eee-a269-11bbeb8280b4.png))">
       <SourceType>Package</SourceType>
       <SourceId>OrchidCapital</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/OrchidCapital</BasePath>
-      <RelativePath>loanguarantors/529ea957-e22c-4c5b-828e-969be7d68cbf.png</RelativePath>
+      <RelativePath>loanguarantors/0964a7ae-8c4e-4eee-a269-11bbeb8280b4.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2446,14 +2446,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\529ea957-e22c-4c5b-828e-969be7d68cbf.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\0964a7ae-8c4e-4eee-a269-11bbeb8280b4.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\64814e51-e33c-46ec-97c0-2168c63c047b.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\1c650ebf-ed01-4ffa-a601-9035b1c1e3fd.png))">
       <SourceType>Package</SourceType>
       <SourceId>OrchidCapital</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/OrchidCapital</BasePath>
-      <RelativePath>loanguarantors/64814e51-e33c-46ec-97c0-2168c63c047b.png</RelativePath>
+      <RelativePath>loanguarantors/1c650ebf-ed01-4ffa-a601-9035b1c1e3fd.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2462,14 +2462,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\64814e51-e33c-46ec-97c0-2168c63c047b.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\1c650ebf-ed01-4ffa-a601-9035b1c1e3fd.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\7440f28f-1001-4211-b727-eb5c76f8d024.jfif))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\52d7b41c-50d4-48ae-9e09-a982f6ea396f.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>OrchidCapital</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/OrchidCapital</BasePath>
-      <RelativePath>loanguarantors/7440f28f-1001-4211-b727-eb5c76f8d024.jfif</RelativePath>
+      <RelativePath>loanguarantors/52d7b41c-50d4-48ae-9e09-a982f6ea396f.jpg</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2478,14 +2478,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\7440f28f-1001-4211-b727-eb5c76f8d024.jfif))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\52d7b41c-50d4-48ae-9e09-a982f6ea396f.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\9354d8c4-47e4-40aa-bf72-ad8fdcb53016.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\7b5f6600-3ddc-48cf-9764-e1293b37a9e9.png))">
       <SourceType>Package</SourceType>
       <SourceId>OrchidCapital</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/OrchidCapital</BasePath>
-      <RelativePath>loanguarantors/9354d8c4-47e4-40aa-bf72-ad8fdcb53016.png</RelativePath>
+      <RelativePath>loanguarantors/7b5f6600-3ddc-48cf-9764-e1293b37a9e9.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2494,14 +2494,14 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\9354d8c4-47e4-40aa-bf72-ad8fdcb53016.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\7b5f6600-3ddc-48cf-9764-e1293b37a9e9.png))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\a10d6e62-57f6-426d-90ad-c52f395608cd.png))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\c2627884-d3d3-473d-a12b-6d7f265d326b.jfif))">
       <SourceType>Package</SourceType>
       <SourceId>OrchidCapital</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/OrchidCapital</BasePath>
-      <RelativePath>loanguarantors/a10d6e62-57f6-426d-90ad-c52f395608cd.png</RelativePath>
+      <RelativePath>loanguarantors/c2627884-d3d3-473d-a12b-6d7f265d326b.jfif</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -2510,7 +2510,7 @@
       <AssetTraitValue></AssetTraitValue>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\a10d6e62-57f6-426d-90ad-c52f395608cd.png))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\c2627884-d3d3-473d-a12b-6d7f265d326b.jfif))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\loanguarantors\no-image.png))">
       <SourceType>Package</SourceType>
@@ -2640,22 +2640,6 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\LoanProductImage\5acb8dd8-5c63-4027-9206-0b195069a1cd.jpg))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\LoanProductImage\9a9bec1e-e1fb-4b9a-a178-898ce3ed4c38.jpg))">
-      <SourceType>Package</SourceType>
-      <SourceId>OrchidCapital</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/OrchidCapital</BasePath>
-      <RelativePath>LoanProductImage/9a9bec1e-e1fb-4b9a-a178-898ce3ed4c38.jpg</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\LoanProductImage\9a9bec1e-e1fb-4b9a-a178-898ce3ed4c38.jpg))</OriginalItemSpec>
-    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\LoanProductImage\b1833703-331e-41f6-a7a3-99aafed6f611.png))">
       <SourceType>Package</SourceType>
       <SourceId>OrchidCapital</SourceId>
@@ -2671,6 +2655,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\LoanProductImage\b1833703-331e-41f6-a7a3-99aafed6f611.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\LoanProductImage\b20298c4-ab03-4555-8a56-5b843167604a.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>OrchidCapital</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/OrchidCapital</BasePath>
+      <RelativePath>LoanProductImage/b20298c4-ab03-4555-8a56-5b843167604a.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\LoanProductImage\b20298c4-ab03-4555-8a56-5b843167604a.jpg))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\LoanProductImage\c44f5062-c47c-41fc-b07d-92e6ee15bdd3.jpg))">
       <SourceType>Package</SourceType>
