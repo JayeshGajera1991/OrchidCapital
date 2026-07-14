@@ -13,6 +13,7 @@ namespace OrchidCapital.Controllers
 {
     [SessionIsRepeat]
     [SessionTimeOut]
+    [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
     public class AdminController : BaseController
     {
         private readonly IHttpContextAccessor _httpContextAccessor;

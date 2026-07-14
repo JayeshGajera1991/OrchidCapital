@@ -9,6 +9,7 @@ namespace OrchidCapital.Controllers
 {
     [SessionIsRepeat]
     [SessionTimeOut]
+    [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
     public class FinanceController : BaseController
     {
         private readonly IHttpContextAccessor _httpContextAccessor;

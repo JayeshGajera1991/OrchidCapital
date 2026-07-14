@@ -416,3 +416,7 @@ E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\refint\OrchidCapit
 E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.pdb
 E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.genruntimeconfig.cache
 E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\ref\OrchidCapital.dll
+E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll

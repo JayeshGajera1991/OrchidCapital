@@ -9,6 +9,7 @@ using OrchidCapital.Resources;
 
 namespace OrchidCapital.Controllers
 {
+    [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
     public class HomeController : BaseController
     {
         private readonly IHttpContextAccessor _httpContextAccessor;

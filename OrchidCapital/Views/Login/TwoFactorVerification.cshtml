@@ -136,6 +136,24 @@
         </main>
         <partial name="_ValidationScriptsPartial" />
         <script>
+                history.pushState(null, "", location.href);
+
+                window.onpopstate = function () {
+                    history.go(1);
+                };
+                   @* document.addEventListener("keydown", function (e) {
+                if (
+                    e.key === "F12" ||
+                    (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key.toUpperCase())) ||
+                    (e.ctrlKey && ["U", "S"].includes(e.key.toUpperCase()))
+                ) {
+                    e.preventDefault();
+                }
+            });
+
+            document.addEventListener("contextmenu", function (e) {
+                e.preventDefault();
+            }); *@
                 $(document).ready(function () {
                     $("#loginForm").submit(function (event) {
                         $("#loginForm").removeData("validator");
@@ -154,4 +172,5 @@
                 });
         </script>
     </body>
+
 </html>

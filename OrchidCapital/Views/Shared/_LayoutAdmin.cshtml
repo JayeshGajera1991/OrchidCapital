@@ -3,6 +3,9 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - OrchidCapital</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -50,6 +53,24 @@
             window.addEventListener("load", function () {
                 document.getElementById("loader").style.display = "none";
             });
+            history.pushState(null, "", location.href);
+
+            window.onpopstate = function () {
+                history.go(1);
+            };
+            @* document.addEventListener("keydown", function (e) {
+                if (
+                        e.key === "F12" ||
+                        (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key.toUpperCase())) ||
+                        (e.ctrlKey && ["U", "S"].includes(e.key.toUpperCase()))
+                ) {
+                e.preventDefault();
+                }
+                });
+
+            document.addEventListener("contextmenu", function (e) {
+                e.preventDefault();
+            });*@
     </script>
 </body>
 

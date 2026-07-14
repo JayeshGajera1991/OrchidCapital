@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Identity;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
+using OrchidCapital.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 Utility.Initialize(builder.Configuration);
@@ -106,7 +107,7 @@ if (allowBasePath && !string.IsNullOrWhiteSpace(basePath))
 }
 #endregion
 builder.Services.AddHttpContextAccessor();
-
+builder.Services.AddSignalR();
 var app = builder.Build();
 app.UseForwardedHeaders();
 var supportedCultures = new[]
@@ -157,5 +158,5 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
+app.MapHub<ChatHub>("/chatHub");
 app.Run();

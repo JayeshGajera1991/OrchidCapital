@@ -9,6 +9,7 @@ using TwoFactorAuthNet;
 
 namespace OrchidCapital.Controllers
 {
+    [ResponseCache(Location = ResponseCacheLocation.None, NoStore = true)]
     public class LoginController : Controller
     {
         private readonly IHttpContextAccessor _httpContextAccessor;

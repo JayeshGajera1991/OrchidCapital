@@ -6,7 +6,7 @@
     var userData = claimsIdentity?.FindFirst(ClaimTypes.UserData)?.Value;
     if (!string.IsNullOrEmpty(userData))
     {
-        menuItems = JsonConvert.DeserializeObject<List<MenuItemVm>>(Encryption.Decrypt(Environment.GetEnvironmentVariable("USR_ENC_KEY"),userData));
+        menuItems = JsonConvert.DeserializeObject<List<MenuItemVm>>(Encryption.Decrypt(configuration["USR_ENC_KEY"],userData));
     }
     var groupedMenu = menuItems.GroupBy(x => x.Section).ToList();
     var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
