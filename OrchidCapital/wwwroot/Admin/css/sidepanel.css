@@ -30,7 +30,7 @@
   --black: #000;
   --red: #ff0000;
   --radius: 14px;
-  --sidebar-width: 78px;
+  --sidebar-width: 88px;
   --header-height: 50px;
 }
 
@@ -154,17 +154,19 @@ body {
 
 /* =============================================== Header Main ================================================== */
 .header {
-  height: 64px;
-  background: var(--white);
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 18px;
-  position: fixed;
-  top: 0;
-  z-index: 3;
-  width: 96%;
+    position: fixed;
+    top: 0;
+    left: var(--sidebar-width);
+    width: calc(100% - var(--sidebar-width));
+    height: 64px;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+    z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 /* LEFT SIDE */

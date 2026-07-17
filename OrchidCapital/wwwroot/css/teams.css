@@ -1,179 +1,441 @@
-/* ===== TEAM SECTION ===== */
+/*==============================
+    TEAM SECTION
+==============================*/
 
-.team-glass-section {
-  padding: 80px 6%;
-  background: linear-gradient(135deg, #a0cdfa, #be8fc7);
+/* .team-glass-section{
+    padding:90px 5%;
+    background:#f7f8fc;
+} */
+/* 
+.team-glass-wrapper{
+    max-width:1400px;
+    margin:auto;
+} */
+
+/*==============================
+        HEADER
+==============================*/
+
+.team-glass-header{
+    text-align:center;
+    margin-bottom:60px;
 }
 
-.team-glass-wrapper {
-  /* max-width: 1250px; */
-  margin: auto;
-  text-align: center;
+.team-glass-header h2{
+
+    font-size:46px;
+
+    font-weight:700;
+
+    color:#1d2333;
+
+    background:none;
+
+    -webkit-text-fill-color:inherit;
+
 }
 
-/* Header */
+.team-glass-line{
 
-.team-glass-header h2 {
-  font-size: 38px;
-  font-weight: 700;
-  letter-spacing: -0.7px;
-  background: linear-gradient(135deg, #0E69F1, #631988);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    width:80px;
+
+    height:5px;
+
+    margin:18px auto;
+
+    border-radius:30px;
+
+    background:linear-gradient(90deg,#390077,#8d46ff);
+
 }
 
-.team-glass-line {
-  width: 70px;
-  height: 3px;
-  margin: 16px auto;
-  background: linear-gradient(90deg, #0E69F1, #9724a7);
-  border-radius: 10px;
+.team-glass-header p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:17px;
+
+    color:#6b7280;
+
+    line-height:30px;
+
 }
 
-.team-glass-header p {
-  font-size: 15px;
-  color: #64748b;
-  margin-bottom: 55px;
+/*==============================
+       SLIDER
+==============================*/
+
+.team-glass-scroll{
+
+    display:flex;
+
+    gap:28px;
+
+    overflow-x:auto;
+
+    scroll-behavior:smooth;
+
+    padding-bottom:20px;
+
 }
 
-/* Scroll */
+.team-glass-scroll::-webkit-scrollbar{
 
-.team-glass-scroll {
-  display: flex;
-  gap: 22px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 12px 4px 24px;
+    display:none;
+
 }
 
-.team-glass-scroll::-webkit-scrollbar {
-  display: none;
+/*==============================
+         CARD
+==============================*/
+
+.team-glass-card{
+
+    min-width:320px;
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:35px 28px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border:1px solid #edf0f7;
+
+    transition:.35s;
+
+    box-shadow:
+    0 12px 40px rgba(0,0,0,.06);
+
 }
 
-/* Cards */
+/* Left Accent */
 
-.team-glass-card {
-  min-width: 260px;
-  padding: 26px 22px;
-  border-radius: 26px;
+.team-glass-card::before{
 
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+    content:"";
 
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  box-shadow: 
-    0 10px 30px rgba(15, 23, 42, 0.08),
-    inset 0 1px 0 rgba(255,255,255,0.6);
+    position:absolute;
 
-  text-align: left;
-  transition: all 0.45s ease;
-  position: relative;
-  overflow: hidden;
+    left:0;
+
+    top:0;
+
+    width:6px;
+
+    height:100%;
+
+    background:linear-gradient(135deg, #2898d9, #731d95);
+
 }
 
-.team-glass-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    120deg,
-    transparent 20%,
-    rgba(255,255,255,0.45),
-    transparent 80%
-  );
-  opacity: 0;
-  transition: 0.45s ease;
+/* Top Ribbon */
+
+.team-glass-card::after{
+
+    content:"Leadership";
+
+    position:absolute;
+
+    right:-34px;
+
+    top:20px;
+
+    width:120px;
+
+    text-align:center;
+
+    padding:6px 0;
+
+    transform:rotate(45deg);
+
+    background:linear-gradient(135deg, #2898d9, #731d95);
+
+    color:#fff;
+
+    font-size:11px;
+
+    font-weight:600;
+
+    letter-spacing:.8px;
+
 }
 
-.team-glass-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 
-    0 18px 45px rgba(15, 23, 42, 0.12),
-    inset 0 1px 0 rgba(255,255,255,0.7);
+.team-glass-card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:
+    0 25px 55px rgba(57,0,119,.18);
+
 }
 
-.team-glass-card:hover::before {
-  opacity: 1;
+/*==============================
+        ICON
+==============================*/
+
+.team-glass-icon{
+
+    width:82px;
+
+    height:82px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    background:linear-gradient(135deg, #2898d9, #731d95);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    font-size:34px;
+
+    margin-bottom:22px;
+
+    box-shadow:
+    0 12px 30px rgba(57,0,119,.25);
+
 }
 
-/* Icon */
+/*==============================
+        NAME
+==============================*/
 
-.team-glass-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #0E69F1, #7c3aed);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 20px;
-  margin-bottom: 16px;
-  box-shadow: 0 10px 25px rgba(14,105,241,0.25);
+.team-glass-card h4{
+
+    text-align:center;
+
+    font-size:23px;
+
+    color:#222;
+
+    margin-bottom:8px;
+
 }
 
-/* Text */
+/*==============================
+       DESIGNATION
+==============================*/
 
-.team-glass-card h4 {
-  font-size: 16px;
-  font-weight: 650;
-  color: #0f172a;
-  margin-bottom: 4px;
+.team-glass-role{
+
+    text-align:center;
+
+    color:#390077;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    line-height:24px;
+
+    margin-bottom:22px;
+
+    position:relative;
+
 }
 
-.team-glass-role {
-  font-size: 13.5px;
-  font-weight: 600;
-  color: #0E69F1;
-  margin-bottom: 10px;
-  line-height: 1.4;
+.team-glass-role::after{
+
+    content:"";
+
+    width:60px;
+
+    height:2px;
+
+    background:#ddd;
+
+    display:block;
+
+    margin:18px auto 0;
+
 }
 
-.team-glass-card p {
-  font-size: 13.8px;
-  color: #475569;
-  line-height: 1.6;
+/*==============================
+      DESCRIPTION
+==============================*/
+
+.team-glass-card p{
+
+    font-size:14px;
+
+    line-height:28px;
+
+    color:#616a79;
+
+    min-height:150px;
+
+    text-align:center;
+
 }
 
-/* Controls */
+/*==============================
+      BUTTON
+==============================*/
+/* 
+.team-glass-card p::after{
 
-.team-glass-controls {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 14px;
+    content:"View Profile →";
+
+    display:block;
+
+    margin-top:25px;
+
+    font-weight:700;
+
+    color:#390077;
+
+    cursor:pointer;
+
+    transition:.3s;
+
 }
 
-.team-glass-btn {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: none;
-  background: white;
-  cursor: pointer;
+.team-glass-card:hover p::after{
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    letter-spacing:1px;
 
-  box-shadow: 0 10px 25px rgba(15,23,42,0.12);
-  transition: 0.3s ease;
+} */
+
+/*==============================
+       BUTTONS
+==============================*/
+
+.team-glass-controls{
+
+    margin-top:45px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
 }
 
-.team-glass-btn:hover {
-  transform: scale(1.08);
+.team-glass-btn{
+
+    width:56px;
+
+    height:56px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    color:#390077;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
 }
 
-.team-glass-btn i {
-  font-size: 14px;
-  color: #475569;
+.team-glass-btn:hover{
+
+    background:linear-gradient(135deg, #2898d9, #731d95);
+
+    color:#fff;
+
+    transform:translateY(-3px);
+
 }
 
-/* Responsive */
+.team-glass-btn i{
 
-@media (max-width: 768px) {
-  .team-glass-card {
-    min-width: 85%;
-  }
+    font-size:18px;
+
+}
+.team-glass-section{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:100px 5%;
+
+    background:
+        radial-gradient(circle,#39007708 1px,transparent 1px),
+        linear-gradient(180deg,#ffffff,#f8f9fd);
+
+    background-size:24px 24px,100% 100%;
+
+}
+.team-glass-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:800px;
+
+    height:800px;
+
+    background:linear-gradient(135deg,#39007715,#0E69F115);
+
+    border-radius:45%;
+
+    top:-520px;
+
+    right:-250px;
+
+    transform:rotate(35deg);
+
+}
+
+.team-glass-section::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    background:linear-gradient(135deg,#0E69F110,#39007710);
+
+    border-radius:45%;
+
+    bottom:-420px;
+
+    left:-220px;
+
+    transform:rotate(-30deg);
+
+}
+/*==============================
+      RESPONSIVE
+==============================*/
+
+@media(max-width:768px){
+
+.team-glass-card{
+
+    min-width:88%;
+
+}
+
+.team-glass-header h2{
+
+    font-size:34px;
+
+}
+
 }

@@ -332,9 +332,12 @@ E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensio
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.Localization.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.Localization.Abstractions.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Newtonsoft.Json.dll
@@ -350,6 +353,7 @@ E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\System.Diagnostics
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\System.Drawing.Common.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\System.IO.Packaging.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\System.Management.dll
+E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\TwoFactorAuth.Net.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\TwoFactorAuth.Net.QRCoder.dll
 E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
@@ -416,7 +420,3 @@ E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\refint\OrchidCapit
 E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.pdb
 E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.genruntimeconfig.cache
 E:\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\ref\OrchidCapital.dll
-E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
-E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
-E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
-E:\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll

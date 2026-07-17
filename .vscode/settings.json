@@ -1,4 +1,7 @@
 {
     "dotnet.preferCSharpExtension": true,
-    "dotnet.defaultSolution": "OrchidCapital.sln"
+    "dotnet.defaultSolution": "OrchidCapital.sln",
+    "search.useIgnoreFiles": true,
+    "search.useGlobalIgnoreFiles": true,
+    "search.useParentIgnoreFiles": true
 }
