@@ -1,23 +1,23 @@
 {
   "Files": [
     {
-      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\AccountLocked.html",
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\AccountLocked.html",
       "PackagePath": "staticwebassets\\EmailTemplates\\AccountLocked.html"
     },
     {
-      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\ChangePassword.html",
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\ChangePassword.html",
       "PackagePath": "staticwebassets\\EmailTemplates\\ChangePassword.html"
     },
     {
-      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\ForgotPassword.html",
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\ForgotPassword.html",
       "PackagePath": "staticwebassets\\EmailTemplates\\ForgotPassword.html"
     },
     {
-      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\ResetPassword.html",
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\ResetPassword.html",
       "PackagePath": "staticwebassets\\EmailTemplates\\ResetPassword.html"
     },
     {
-      "Id": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\Welcome.html",
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\Welcome.html",
       "PackagePath": "staticwebassets\\EmailTemplates\\Welcome.html"
     },
     {

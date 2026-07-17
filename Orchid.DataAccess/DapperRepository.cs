@@ -22,6 +22,20 @@ namespace Orchid.DataAccess
         {
 
         }
+        public async Task InitializeDatabaseAsync()
+        {
+            await using var conn = new SqlConnection(GetDbconnection(1));
+
+            await conn.OpenAsync();
+
+            string sql = $@"
+            IF DB_ID('{DB_NAME}') IS NULL
+            BEGIN
+                CREATE DATABASE [{DB_NAME}]
+            END";
+
+            await conn.ExecuteAsync(sql);
+        }
         public async Task<IEnumerable<T>> GetAllAsync<T>(string sp, DynamicParameters parms, int? commandTimeout = null, CommandType commandType = CommandType.StoredProcedure)
         {
             using (var conn = new SqlConnection(GetDbconnection(ConnectionString)))
@@ -120,7 +134,7 @@ namespace Orchid.DataAccess
             {
                 connectionString = decryptedConnectionString;
             }
-
+            DB_NAME = _config["DB_NAME"];
             var updatedConnectionString = connectionString.Replace("{{DBNAME}}", DB_NAME);
             if (!updatedConnectionString.Contains("Encrypt=", StringComparison.OrdinalIgnoreCase))
             {

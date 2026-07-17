@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\OrchidCapital\\OrchidCapital\\Orchid.DataAccess\\Orchid.DataAccess.csproj": {}
+    "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.DataAccess\\Orchid.DataAccess.csproj": {}
   },
   "projects": {
-    "E:\\OrchidCapital\\OrchidCapital\\Orchid.DataAccess\\Orchid.DataAccess.csproj": {
+    "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.DataAccess\\Orchid.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\OrchidCapital\\OrchidCapital\\Orchid.DataAccess\\Orchid.DataAccess.csproj",
+        "projectUniqueName": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.DataAccess\\Orchid.DataAccess.csproj",
         "projectName": "Orchid.DataAccess",
-        "projectPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.DataAccess\\Orchid.DataAccess.csproj",
+        "projectPath": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.DataAccess\\Orchid.DataAccess.csproj",
         "packagesPath": "C:\\Users\\JGajera\\.nuget\\packages\\",
-        "outputPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.DataAccess\\obj\\",
+        "outputPath": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "E:\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj": {
-                "projectPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj"
+              "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj": {
+                "projectPath": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj"
               }
             }
           }
@@ -82,14 +82,14 @@
         }
       }
     },
-    "E:\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj": {
+    "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj",
+        "projectUniqueName": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj",
         "projectName": "Orchid.UtilityHelper",
-        "projectPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj",
+        "projectPath": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj",
         "packagesPath": "C:\\Users\\JGajera\\.nuget\\packages\\",
-        "outputPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\obj\\",
+        "outputPath": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

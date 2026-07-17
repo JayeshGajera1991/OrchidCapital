@@ -1010,11 +1010,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\OrchidCapital\\OrchidCapital\\Orchid.TokenValidator\\Orchid.TokenValidator.csproj",
+      "projectUniqueName": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.TokenValidator\\Orchid.TokenValidator.csproj",
       "projectName": "Orchid.TokenValidator",
-      "projectPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.TokenValidator\\Orchid.TokenValidator.csproj",
+      "projectPath": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.TokenValidator\\Orchid.TokenValidator.csproj",
       "packagesPath": "C:\\Users\\JGajera\\.nuget\\packages\\",
-      "outputPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.TokenValidator\\obj\\",
+      "outputPath": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.TokenValidator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1036,8 +1036,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj": {
-              "projectPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj"
+            "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj": {
+              "projectPath": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj"
             }
           }
         }

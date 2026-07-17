@@ -2917,11 +2917,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\OrchidCapitalCoreAPI.csproj",
+      "projectUniqueName": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\OrchidCapitalCoreAPI.csproj",
       "projectName": "OrchidCapitalCoreAPI",
-      "projectPath": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\OrchidCapitalCoreAPI.csproj",
+      "projectPath": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\OrchidCapitalCoreAPI.csproj",
       "packagesPath": "C:\\Users\\JGajera\\.nuget\\packages\\",
-      "outputPath": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\obj\\",
+      "outputPath": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2943,20 +2943,20 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\OrchidCapital\\OrchidCapital\\Orchid.DataAccess\\Orchid.DataAccess.csproj": {
-              "projectPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.DataAccess\\Orchid.DataAccess.csproj"
+            "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.DataAccess\\Orchid.DataAccess.csproj": {
+              "projectPath": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.DataAccess\\Orchid.DataAccess.csproj"
             },
-            "E:\\OrchidCapital\\OrchidCapital\\Orchid.DataModels\\Orchid.DataModels.csproj": {
-              "projectPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.DataModels\\Orchid.DataModels.csproj"
+            "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.DataModels\\Orchid.DataModels.csproj": {
+              "projectPath": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.DataModels\\Orchid.DataModels.csproj"
             },
-            "E:\\OrchidCapital\\OrchidCapital\\Orchid.EmailService\\Orchid.EmailService.csproj": {
-              "projectPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.EmailService\\Orchid.EmailService.csproj"
+            "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.EmailService\\Orchid.EmailService.csproj": {
+              "projectPath": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.EmailService\\Orchid.EmailService.csproj"
             },
-            "E:\\OrchidCapital\\OrchidCapital\\Orchid.TokenValidator\\Orchid.TokenValidator.csproj": {
-              "projectPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.TokenValidator\\Orchid.TokenValidator.csproj"
+            "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.TokenValidator\\Orchid.TokenValidator.csproj": {
+              "projectPath": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.TokenValidator\\Orchid.TokenValidator.csproj"
             },
-            "E:\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj": {
-              "projectPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj"
+            "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj": {
+              "projectPath": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.UtilityHelper\\Orchid.UtilityHelper.csproj"
             }
           }
         }

@@ -133,7 +133,7 @@ localizationOptions.RequestCultureProviders = new List<IRequestCultureProvider>
 app.UseRequestLocalization(localizationOptions);
 
 app.UseSession();
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.UseStaticFiles();
 

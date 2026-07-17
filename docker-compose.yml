@@ -5,15 +5,13 @@ services:
       context: .
       dockerfile: OrchidCapitalCoreAPI/Dockerfile
     ports:
-      - "5001:8080"
+      - "5001:8081"
     environment:
       ASPNETCORE_ENVIRONMENT: Production
-      ASPNETCORE_URLS: http://+:8080
-      DB-CONN-STR: "Data Source=mssql-db,1433;Initial Catalog={{DBNAME}};User Id=sa;Password=Sa@12345;TrustServerCertificate=True;MultipleActiveResultSets=True"
+      ASPNETCORE_URLS: http://+:8081 
       DB_NAME: "OrchidCapital"
+      DB-CONN-STR: "Server=192.168.29.136,1433;Database={{DBNAME}};User Id=sa;Password=sa@123;TrustServerCertificate=True;Encrypt=False"
       USR_ENC_KEY: "ORCHIDCAPITAL@2026"
-    volumes:
-      - ./docker/dataprotection-keys:/root/.aspnet/DataProtection-Keys
 
   orchid-dashboard:
     container_name: orchid-dashboard
@@ -22,29 +20,12 @@ services:
       dockerfile: OrchidCapital/Dockerfile
     ports:
       - "5000:8080"
+    depends_on:
+      - orchid-api
     environment:
       ASPNETCORE_ENVIRONMENT: Production
       ASPNETCORE_URLS: http://+:8080
-      ConnectionStrings__DefaultConnection: "Server=mssql-db,1433;Database=OrchidCapital;User Id=sa;Password=Sa@12345;TrustServerCertificate=True;MultipleActiveResultSets=True"
-      OrchidCoreAPIurl: "http://orchid-api:8080/api/ORCHIDCAPITAL/v1/"
-      ApiSettings__BaseUrl: "http://orchid-api:8080"
-
-      # Required by LoginController
+      DB_NAME: "OrchidCapital"
+      DB-CONN-STR: "Server=192.168.29.136,1433;Database={{DBNAME}};User Id=sa;Password=sa@123;TrustServerCertificate=True;Encrypt=False"
+      OrchidCoreAPIurl: "http://orchid-api:8081/api/ORCHIDCAPITAL/v1/"
       USR_ENC_KEY: "ORCHIDCAPITAL@2026"
-    depends_on:
-      - orchid-api
-    volumes:
-      - ./docker/dataprotection-keys:/root/.aspnet/DataProtection-Keys
-
-  mssql-db:
-    image: mcr.microsoft.com/mssql/server:2019-latest
-    container_name: mssql-db
-    environment:
-      ACCEPT_EULA: "Y"
-      SA_PASSWORD: "Sa@12345"
-    ports:
-      - "1433:1433"
-    volumes:
-      - ./docker/mssql-backup:/var/opt/mssql/backup
-      - ./docker/mssql-data:/var/opt/mssql/data
-    # removed healthcheck that relied on missing mssql-tools in image

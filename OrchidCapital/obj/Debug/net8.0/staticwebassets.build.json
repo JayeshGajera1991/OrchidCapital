@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JQ5lwLGa2fJd3nMIB5/Ge1xtufao6kcC8em3B27R2P8=",
+  "Hash": "paVR2vmEEgs0LtXibNrbKDVxg4edjnkIIzHGF6NU2qQ=",
   "Source": "OrchidCapital",
   "BasePath": "_content/OrchidCapital",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "OrchidCapital\\wwwroot",
       "Source": "OrchidCapital",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\admin_dashboard.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\admin_dashboard.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/css/admin_dashboard.css",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\css\\admin_dashboard.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\admin_login.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\admin_login.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/css/admin_login.css",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\css\\admin_login.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\admin_profile.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\admin_profile.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/css/admin_profile.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\css\\admin_profile.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\admin_roles.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\admin_roles.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/css/admin_roles.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\css\\admin_roles.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\dailyreport.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\dailyreport.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/css/dailyreport.css",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\css\\dailyreport.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\financereport.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\financereport.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/css/financereport.css",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\css\\financereport.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\fonts_googleapis.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\fonts_googleapis.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/css/fonts_googleapis.css",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\css\\fonts_googleapis.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\loanapplication.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\loanapplication.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/css/loanapplication.css",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\css\\loanapplication.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\loanprocess.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\loanprocess.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/css/loanprocess.css",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\css\\loanprocess.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\select2.min.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\select2.min.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/css/select2.min.css",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\css\\select2.min.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\sidepanel.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\css\\sidepanel.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/css/sidepanel.css",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\css\\sidepanel.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\AuditLogHandling.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\AuditLogHandling.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/Js/AuditLogHandling.js",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\Js\\AuditLogHandling.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\BankBranch.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\BankBranch.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/Js/BankBranch.js",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\Js\\BankBranch.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\BankService.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\BankService.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/Js/BankService.js",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\Js\\BankService.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\Customers.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\Customers.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/Js/Customers.js",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\Js\\Customers.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\ErrorHandling.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\ErrorHandling.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/Js/ErrorHandling.js",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\Js\\ErrorHandling.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\FinanceLoanApplicationList.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\FinanceLoanApplicationList.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/Js/FinanceLoanApplicationList.js",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\Js\\FinanceLoanApplicationList.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\FinanceLoanApprovalList.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\FinanceLoanApprovalList.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/Js/FinanceLoanApprovalList.js",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\Js\\FinanceLoanApprovalList.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\FinanceNewLoanApplication.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\FinanceNewLoanApplication.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/Js/FinanceNewLoanApplication.js",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\Js\\FinanceNewLoanApplication.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\ImageConfiguration.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\ImageConfiguration.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/Js/ImageConfiguration.js",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\Js\\ImageConfiguration.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\LoanType.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\LoanType.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/Js/LoanType.js",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\Js\\LoanType.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\Pages.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\Pages.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/Js/Pages.js",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\Js\\Pages.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\RolePermissions.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\RolePermissions.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/Js/RolePermissions.js",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\Js\\RolePermissions.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\Roles.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\Roles.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/Js/Roles.js",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\Js\\Roles.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\Teams.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\Teams.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/Js/Teams.js",
       "AssetKind": "All",
@@ -492,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\Js\\Teams.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\TwoFactor.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\TwoFactor.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/Js/TwoFactor.js",
       "AssetKind": "All",
@@ -511,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\Js\\TwoFactor.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\Users.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Admin\\Js\\Users.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Admin/Js/Users.js",
       "AssetKind": "All",
@@ -530,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\Admin\\Js\\Users.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\financialcalculator.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\financialcalculator.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "css/financialcalculator.css",
       "AssetKind": "All",
@@ -549,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\css\\financialcalculator.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\footer.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\footer.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "css/footer.css",
       "AssetKind": "All",
@@ -568,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\css\\footer.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\header.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\header.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "css/header.css",
       "AssetKind": "All",
@@ -587,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\css\\header.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\heroYono5.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\heroYono5.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "css/heroYono5.css",
       "AssetKind": "All",
@@ -606,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\css\\heroYono5.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\partners.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\partners.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "css/partners.css",
       "AssetKind": "All",
@@ -625,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\css\\partners.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\site.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -644,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\superBusinessMega.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\superBusinessMega.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "css/superBusinessMega.css",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\css\\superBusinessMega.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\teams.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\teams.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "css/teams.css",
       "AssetKind": "All",
@@ -682,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\css\\teams.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\toastr.min.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\toastr.min.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "css/toastr.min.css",
       "AssetKind": "All",
@@ -701,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\css\\toastr.min.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\whatwedo.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\whatwedo.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "css/whatwedo.css",
       "AssetKind": "All",
@@ -720,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\css\\whatwedo.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\whyus.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\whyus.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "css/whyus.css",
       "AssetKind": "All",
@@ -739,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\css\\whyus.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\favicon.ico",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",
@@ -758,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageProfiler\\5f4abdae-4cc2-4050-a178-f6dd4bdf9ec9.jfif",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageProfiler\\5f4abdae-4cc2-4050-a178-f6dd4bdf9ec9.jfif",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "ImageProfiler/5f4abdae-4cc2-4050-a178-f6dd4bdf9ec9.jfif",
       "AssetKind": "All",
@@ -777,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\ImageProfiler\\5f4abdae-4cc2-4050-a178-f6dd4bdf9ec9.jfif"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageProfiler\\6cbb0b1f-37b1-468d-8550-1a4335ba52e1.webp",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageProfiler\\6cbb0b1f-37b1-468d-8550-1a4335ba52e1.webp",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "ImageProfiler/6cbb0b1f-37b1-468d-8550-1a4335ba52e1.webp",
       "AssetKind": "All",
@@ -796,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\ImageProfiler\\6cbb0b1f-37b1-468d-8550-1a4335ba52e1.webp"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageProfiler\\74bd2414-2d8f-4741-9c99-8b404a989fca.jfif",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageProfiler\\74bd2414-2d8f-4741-9c99-8b404a989fca.jfif",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "ImageProfiler/74bd2414-2d8f-4741-9c99-8b404a989fca.jfif",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\ImageProfiler\\74bd2414-2d8f-4741-9c99-8b404a989fca.jfif"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageProfiler\\786d2c76-0ae1-4ca1-b57d-24736af4c0ae.webp",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageProfiler\\786d2c76-0ae1-4ca1-b57d-24736af4c0ae.webp",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "ImageProfiler/786d2c76-0ae1-4ca1-b57d-24736af4c0ae.webp",
       "AssetKind": "All",
@@ -834,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\ImageProfiler\\786d2c76-0ae1-4ca1-b57d-24736af4c0ae.webp"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageProfiler\\default.jfif",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageProfiler\\default.jfif",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "ImageProfiler/default.jfif",
       "AssetKind": "All",
@@ -853,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\ImageProfiler\\default.jfif"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageProfiler\\fdd661bf-9f2f-4fcb-84ab-58c217d6631e.webp",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageProfiler\\fdd661bf-9f2f-4fcb-84ab-58c217d6631e.webp",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "ImageProfiler/fdd661bf-9f2f-4fcb-84ab-58c217d6631e.webp",
       "AssetKind": "All",
@@ -872,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\ImageProfiler\\fdd661bf-9f2f-4fcb-84ab-58c217d6631e.webp"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Images\\loder.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Images\\loder.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Images/loder.png",
       "AssetKind": "All",
@@ -891,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\loder.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Images\\logo.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Images\\logo.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Images/logo.png",
       "AssetKind": "All",
@@ -910,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\logo.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Images\\logo1.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Images\\logo1.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Images/logo1.png",
       "AssetKind": "All",
@@ -929,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\logo1.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Images\\logo2.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Images\\logo2.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Images/logo2.png",
       "AssetKind": "All",
@@ -948,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\logo2.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Images\\logo3.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Images\\logo3.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Images/logo3.png",
       "AssetKind": "All",
@@ -967,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\logo3.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Images\\logo4.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\Images\\logo4.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "Images/logo4.png",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\Images\\logo4.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageUploads\\529c5b01-9038-4d75-8b53-59418867298a.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageUploads\\529c5b01-9038-4d75-8b53-59418867298a.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "ImageUploads/529c5b01-9038-4d75-8b53-59418867298a.png",
       "AssetKind": "All",
@@ -1005,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\ImageUploads\\529c5b01-9038-4d75-8b53-59418867298a.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageUploads\\8204d263-8ea2-4110-8834-980df16e8a3b.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageUploads\\8204d263-8ea2-4110-8834-980df16e8a3b.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "ImageUploads/8204d263-8ea2-4110-8834-980df16e8a3b.jpg",
       "AssetKind": "All",
@@ -1024,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\ImageUploads\\8204d263-8ea2-4110-8834-980df16e8a3b.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageUploads\\e82274cb-c625-4ba4-bc24-e8c961a86724.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\ImageUploads\\e82274cb-c625-4ba4-bc24-e8c961a86724.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "ImageUploads/e82274cb-c625-4ba4-bc24-e8c961a86724.png",
       "AssetKind": "All",
@@ -1043,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\ImageUploads\\e82274cb-c625-4ba4-bc24-e8c961a86724.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\bank.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\bank.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "img/bank.jpg",
       "AssetKind": "All",
@@ -1062,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\img\\bank.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\developer.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\developer.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "img/developer.jpg",
       "AssetKind": "All",
@@ -1081,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\img\\developer.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\hero.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\hero.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "img/hero.jpg",
       "AssetKind": "All",
@@ -1100,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\img\\hero.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\heroblue1.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\heroblue1.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "img/heroblue1.png",
       "AssetKind": "All",
@@ -1119,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\img\\heroblue1.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\heroblue2.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\heroblue2.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "img/heroblue2.png",
       "AssetKind": "All",
@@ -1138,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\img\\heroblue2.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\heroc1.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\heroc1.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "img/heroc1.jpg",
       "AssetKind": "All",
@@ -1157,10 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\img\\heroc1.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\heron1.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\heron1.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "img/heron1.png",
       "AssetKind": "All",
@@ -1176,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\img\\heron1.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\heron2.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\heron2.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "img/heron2.png",
       "AssetKind": "All",
@@ -1195,10 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\img\\heron2.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\logo.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\logo.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "img/logo.png",
       "AssetKind": "All",
@@ -1214,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\img\\logo.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\manu.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\manu.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "img/manu.jpg",
       "AssetKind": "All",
@@ -1233,10 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\img\\manu.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\msme.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\msme.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "img/msme.png",
       "AssetKind": "All",
@@ -1252,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\img\\msme.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\ndfc.webp",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\ndfc.webp",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "img/ndfc.webp",
       "AssetKind": "All",
@@ -1271,10 +1271,10 @@
       "OriginalItemSpec": "wwwroot\\img\\ndfc.webp"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\petpedhi.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\petpedhi.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "img/petpedhi.jpg",
       "AssetKind": "All",
@@ -1290,10 +1290,10 @@
       "OriginalItemSpec": "wwwroot\\img\\petpedhi.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\pinvestor.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\pinvestor.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "img/pinvestor.jpg",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\img\\pinvestor.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\salaried.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\salaried.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "img/salaried.jpg",
       "AssetKind": "All",
@@ -1328,10 +1328,10 @@
       "OriginalItemSpec": "wwwroot\\img\\salaried.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\service.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\service.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "img/service.jpg",
       "AssetKind": "All",
@@ -1347,10 +1347,10 @@
       "OriginalItemSpec": "wwwroot\\img\\service.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\sidbi.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\sidbi.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "img/sidbi.png",
       "AssetKind": "All",
@@ -1366,10 +1366,10 @@
       "OriginalItemSpec": "wwwroot\\img\\sidbi.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\trade.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\trade.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "img/trade.jpg",
       "AssetKind": "All",
@@ -1385,10 +1385,10 @@
       "OriginalItemSpec": "wwwroot\\img\\trade.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\WhatsApp Image 2026-02-16 at 9.35.19 PM (1).jpeg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\WhatsApp Image 2026-02-16 at 9.35.19 PM (1).jpeg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "img/WhatsApp Image 2026-02-16 at 9.35.19 PM (1).jpeg",
       "AssetKind": "All",
@@ -1404,10 +1404,10 @@
       "OriginalItemSpec": "wwwroot\\img\\WhatsApp Image 2026-02-16 at 9.35.19 PM (1).jpeg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\APortalAjaxResponse.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\APortalAjaxResponse.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "js/APortalAjaxResponse.js",
       "AssetKind": "All",
@@ -1423,10 +1423,10 @@
       "OriginalItemSpec": "wwwroot\\js\\APortalAjaxResponse.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\APortalCommon.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\APortalCommon.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "js/APortalCommon.js",
       "AssetKind": "All",
@@ -1442,10 +1442,10 @@
       "OriginalItemSpec": "wwwroot\\js\\APortalCommon.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\APortalLoader.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\APortalLoader.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "js/APortalLoader.js",
       "AssetKind": "All",
@@ -1461,10 +1461,10 @@
       "OriginalItemSpec": "wwwroot\\js\\APortalLoader.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\APortalMasterBasicFunctionality.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\APortalMasterBasicFunctionality.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "js/APortalMasterBasicFunctionality.js",
       "AssetKind": "All",
@@ -1480,10 +1480,10 @@
       "OriginalItemSpec": "wwwroot\\js\\APortalMasterBasicFunctionality.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\APortalToaster.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\APortalToaster.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "js/APortalToaster.js",
       "AssetKind": "All",
@@ -1499,10 +1499,10 @@
       "OriginalItemSpec": "wwwroot\\js\\APortalToaster.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\crypto-js.min.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\crypto-js.min.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "js/crypto-js.min.js",
       "AssetKind": "All",
@@ -1518,10 +1518,10 @@
       "OriginalItemSpec": "wwwroot\\js\\crypto-js.min.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\jquery-3.7.1.min.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\jquery-3.7.1.min.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "js/jquery-3.7.1.min.js",
       "AssetKind": "All",
@@ -1537,10 +1537,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery-3.7.1.min.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\jquery.validate.min.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\jquery.validate.min.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "js/jquery.validate.min.js",
       "AssetKind": "All",
@@ -1556,10 +1556,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery.validate.min.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\jquery.validate.unobtrusive.min.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "js/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -1575,10 +1575,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\jsencrypt.min.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\jsencrypt.min.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "js/jsencrypt.min.js",
       "AssetKind": "All",
@@ -1594,10 +1594,10 @@
       "OriginalItemSpec": "wwwroot\\js\\jsencrypt.min.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\select2.min.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\select2.min.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "js/select2.min.js",
       "AssetKind": "All",
@@ -1613,10 +1613,10 @@
       "OriginalItemSpec": "wwwroot\\js\\select2.min.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\site.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "js/site.js",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\toastr.min.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\toastr.min.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "js/toastr.min.js",
       "AssetKind": "All",
@@ -1651,10 +1651,10 @@
       "OriginalItemSpec": "wwwroot\\js\\toastr.min.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
       "AssetKind": "All",
@@ -1670,10 +1670,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
       "AssetKind": "All",
@@ -1689,10 +1689,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
       "AssetKind": "All",
@@ -1708,10 +1708,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
       "AssetKind": "All",
@@ -1727,10 +1727,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
       "AssetKind": "All",
@@ -1746,10 +1746,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
       "AssetKind": "All",
@@ -1765,10 +1765,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
       "AssetKind": "All",
@@ -1784,10 +1784,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
       "AssetKind": "All",
@@ -1803,10 +1803,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
       "AssetKind": "All",
@@ -1822,10 +1822,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
       "AssetKind": "All",
@@ -1841,10 +1841,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
       "AssetKind": "All",
@@ -1860,10 +1860,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
       "AssetKind": "All",
@@ -1879,10 +1879,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
       "AssetKind": "All",
@@ -1898,10 +1898,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
       "AssetKind": "All",
@@ -1917,10 +1917,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
       "AssetKind": "All",
@@ -1936,10 +1936,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
       "AssetKind": "All",
@@ -1955,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
       "AssetKind": "All",
@@ -1974,10 +1974,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
       "AssetKind": "All",
@@ -1993,10 +1993,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
       "AssetKind": "All",
@@ -2012,10 +2012,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
       "AssetKind": "All",
@@ -2031,10 +2031,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
       "AssetKind": "All",
@@ -2050,10 +2050,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
       "AssetKind": "All",
@@ -2069,10 +2069,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
       "AssetKind": "All",
@@ -2088,10 +2088,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
       "AssetKind": "All",
@@ -2107,10 +2107,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
       "AssetKind": "All",
@@ -2126,10 +2126,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
       "AssetKind": "All",
@@ -2145,10 +2145,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
@@ -2164,10 +2164,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -2183,10 +2183,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
       "AssetKind": "All",
@@ -2202,10 +2202,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
       "AssetKind": "All",
@@ -2221,10 +2221,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
       "AssetKind": "All",
@@ -2240,10 +2240,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
       "AssetKind": "All",
@@ -2259,10 +2259,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
       "AssetKind": "All",
@@ -2278,10 +2278,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
       "AssetKind": "All",
@@ -2297,10 +2297,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
@@ -2316,10 +2316,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
       "AssetKind": "All",
@@ -2335,10 +2335,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
       "AssetKind": "All",
@@ -2354,10 +2354,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
       "AssetKind": "All",
@@ -2373,10 +2373,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
       "AssetKind": "All",
@@ -2392,10 +2392,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
       "AssetKind": "All",
@@ -2411,10 +2411,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
       "AssetKind": "All",
@@ -2430,10 +2430,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
       "AssetKind": "All",
@@ -2449,10 +2449,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
       "AssetKind": "All",
@@ -2468,10 +2468,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
       "AssetKind": "All",
@@ -2487,10 +2487,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
@@ -2506,10 +2506,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
@@ -2525,10 +2525,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
       "AssetKind": "All",
@@ -2544,10 +2544,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
       "AssetKind": "All",
@@ -2563,10 +2563,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
       "AssetKind": "All",
@@ -2582,10 +2582,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
       "AssetKind": "All",
@@ -2601,10 +2601,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
       "AssetKind": "All",
@@ -2620,10 +2620,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
       "AssetKind": "All",
@@ -2639,10 +2639,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/jquery-validation/LICENSE.md",
       "AssetKind": "All",
@@ -2658,10 +2658,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
@@ -2677,10 +2677,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
@@ -2696,10 +2696,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
@@ -2715,10 +2715,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "lib/jquery/LICENSE.txt",
       "AssetKind": "All",
@@ -2734,10 +2734,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\1dc58d2e-f5d1-4587-bc3f-981829c326ef.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\1dc58d2e-f5d1-4587-bc3f-981829c326ef.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "loandocuments/1dc58d2e-f5d1-4587-bc3f-981829c326ef.png",
       "AssetKind": "All",
@@ -2753,10 +2753,10 @@
       "OriginalItemSpec": "wwwroot\\loandocuments\\1dc58d2e-f5d1-4587-bc3f-981829c326ef.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\58832592-4141-4ec5-9336-32f31b2ea9f1.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\58832592-4141-4ec5-9336-32f31b2ea9f1.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "loandocuments/58832592-4141-4ec5-9336-32f31b2ea9f1.png",
       "AssetKind": "All",
@@ -2772,10 +2772,10 @@
       "OriginalItemSpec": "wwwroot\\loandocuments\\58832592-4141-4ec5-9336-32f31b2ea9f1.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\7affeded-0140-48ca-8fef-d656c4b25761.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\7affeded-0140-48ca-8fef-d656c4b25761.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "loandocuments/7affeded-0140-48ca-8fef-d656c4b25761.png",
       "AssetKind": "All",
@@ -2791,10 +2791,10 @@
       "OriginalItemSpec": "wwwroot\\loandocuments\\7affeded-0140-48ca-8fef-d656c4b25761.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\86f9c399-cf73-4900-8a6a-9835689e3561.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\86f9c399-cf73-4900-8a6a-9835689e3561.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "loandocuments/86f9c399-cf73-4900-8a6a-9835689e3561.png",
       "AssetKind": "All",
@@ -2810,10 +2810,10 @@
       "OriginalItemSpec": "wwwroot\\loandocuments\\86f9c399-cf73-4900-8a6a-9835689e3561.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\97324238-93dd-4948-8c6f-12da16f12bf0.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\97324238-93dd-4948-8c6f-12da16f12bf0.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "loandocuments/97324238-93dd-4948-8c6f-12da16f12bf0.png",
       "AssetKind": "All",
@@ -2829,10 +2829,10 @@
       "OriginalItemSpec": "wwwroot\\loandocuments\\97324238-93dd-4948-8c6f-12da16f12bf0.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\a311ecc7-6270-4f47-a485-f4c5412981e7.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\a311ecc7-6270-4f47-a485-f4c5412981e7.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "loandocuments/a311ecc7-6270-4f47-a485-f4c5412981e7.png",
       "AssetKind": "All",
@@ -2848,10 +2848,10 @@
       "OriginalItemSpec": "wwwroot\\loandocuments\\a311ecc7-6270-4f47-a485-f4c5412981e7.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\ea628c89-1cb7-48dd-91db-256d16419f56.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\ea628c89-1cb7-48dd-91db-256d16419f56.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "loandocuments/ea628c89-1cb7-48dd-91db-256d16419f56.png",
       "AssetKind": "All",
@@ -2867,10 +2867,10 @@
       "OriginalItemSpec": "wwwroot\\loandocuments\\ea628c89-1cb7-48dd-91db-256d16419f56.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\no-image.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loandocuments\\no-image.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "loandocuments/no-image.png",
       "AssetKind": "All",
@@ -2886,10 +2886,10 @@
       "OriginalItemSpec": "wwwroot\\loandocuments\\no-image.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loanguarantors\\0750bf9b-f9d6-4d63-8a59-7c76336702b6.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loanguarantors\\0750bf9b-f9d6-4d63-8a59-7c76336702b6.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "loanguarantors/0750bf9b-f9d6-4d63-8a59-7c76336702b6.png",
       "AssetKind": "All",
@@ -2905,10 +2905,10 @@
       "OriginalItemSpec": "wwwroot\\loanguarantors\\0750bf9b-f9d6-4d63-8a59-7c76336702b6.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loanguarantors\\0964a7ae-8c4e-4eee-a269-11bbeb8280b4.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loanguarantors\\0964a7ae-8c4e-4eee-a269-11bbeb8280b4.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "loanguarantors/0964a7ae-8c4e-4eee-a269-11bbeb8280b4.png",
       "AssetKind": "All",
@@ -2924,10 +2924,10 @@
       "OriginalItemSpec": "wwwroot\\loanguarantors\\0964a7ae-8c4e-4eee-a269-11bbeb8280b4.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loanguarantors\\1c650ebf-ed01-4ffa-a601-9035b1c1e3fd.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loanguarantors\\1c650ebf-ed01-4ffa-a601-9035b1c1e3fd.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "loanguarantors/1c650ebf-ed01-4ffa-a601-9035b1c1e3fd.png",
       "AssetKind": "All",
@@ -2943,10 +2943,10 @@
       "OriginalItemSpec": "wwwroot\\loanguarantors\\1c650ebf-ed01-4ffa-a601-9035b1c1e3fd.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loanguarantors\\52d7b41c-50d4-48ae-9e09-a982f6ea396f.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loanguarantors\\52d7b41c-50d4-48ae-9e09-a982f6ea396f.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "loanguarantors/52d7b41c-50d4-48ae-9e09-a982f6ea396f.jpg",
       "AssetKind": "All",
@@ -2962,10 +2962,10 @@
       "OriginalItemSpec": "wwwroot\\loanguarantors\\52d7b41c-50d4-48ae-9e09-a982f6ea396f.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loanguarantors\\7b5f6600-3ddc-48cf-9764-e1293b37a9e9.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loanguarantors\\7b5f6600-3ddc-48cf-9764-e1293b37a9e9.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "loanguarantors/7b5f6600-3ddc-48cf-9764-e1293b37a9e9.png",
       "AssetKind": "All",
@@ -2981,10 +2981,10 @@
       "OriginalItemSpec": "wwwroot\\loanguarantors\\7b5f6600-3ddc-48cf-9764-e1293b37a9e9.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loanguarantors\\c2627884-d3d3-473d-a12b-6d7f265d326b.jfif",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loanguarantors\\c2627884-d3d3-473d-a12b-6d7f265d326b.jfif",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "loanguarantors/c2627884-d3d3-473d-a12b-6d7f265d326b.jfif",
       "AssetKind": "All",
@@ -3000,10 +3000,10 @@
       "OriginalItemSpec": "wwwroot\\loanguarantors\\c2627884-d3d3-473d-a12b-6d7f265d326b.jfif"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loanguarantors\\no-image.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\loanguarantors\\no-image.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "loanguarantors/no-image.png",
       "AssetKind": "All",
@@ -3019,10 +3019,10 @@
       "OriginalItemSpec": "wwwroot\\loanguarantors\\no-image.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\102a80b2-e613-433b-b615-cbc2bd8bffbf.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\102a80b2-e613-433b-b615-cbc2bd8bffbf.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "LoanProductImage/102a80b2-e613-433b-b615-cbc2bd8bffbf.png",
       "AssetKind": "All",
@@ -3038,10 +3038,10 @@
       "OriginalItemSpec": "wwwroot\\LoanProductImage\\102a80b2-e613-433b-b615-cbc2bd8bffbf.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\217d13c2-d3c5-40fc-87c8-3580729eb15b.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\217d13c2-d3c5-40fc-87c8-3580729eb15b.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "LoanProductImage/217d13c2-d3c5-40fc-87c8-3580729eb15b.jpg",
       "AssetKind": "All",
@@ -3057,10 +3057,10 @@
       "OriginalItemSpec": "wwwroot\\LoanProductImage\\217d13c2-d3c5-40fc-87c8-3580729eb15b.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\266966e9-846e-4ee8-8920-e36526119440.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\266966e9-846e-4ee8-8920-e36526119440.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "LoanProductImage/266966e9-846e-4ee8-8920-e36526119440.jpg",
       "AssetKind": "All",
@@ -3076,10 +3076,10 @@
       "OriginalItemSpec": "wwwroot\\LoanProductImage\\266966e9-846e-4ee8-8920-e36526119440.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\2fe9d2a7-3cbb-4efb-881c-7bf3803239ce.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\2fe9d2a7-3cbb-4efb-881c-7bf3803239ce.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "LoanProductImage/2fe9d2a7-3cbb-4efb-881c-7bf3803239ce.jpg",
       "AssetKind": "All",
@@ -3095,10 +3095,10 @@
       "OriginalItemSpec": "wwwroot\\LoanProductImage\\2fe9d2a7-3cbb-4efb-881c-7bf3803239ce.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\3628e24d-354b-49cd-b779-b5c6f359e1fe.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\3628e24d-354b-49cd-b779-b5c6f359e1fe.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "LoanProductImage/3628e24d-354b-49cd-b779-b5c6f359e1fe.jpg",
       "AssetKind": "All",
@@ -3114,10 +3114,10 @@
       "OriginalItemSpec": "wwwroot\\LoanProductImage\\3628e24d-354b-49cd-b779-b5c6f359e1fe.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\47a43a23-fdbe-4b7a-ace5-18689a87dcf7.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\47a43a23-fdbe-4b7a-ace5-18689a87dcf7.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "LoanProductImage/47a43a23-fdbe-4b7a-ace5-18689a87dcf7.jpg",
       "AssetKind": "All",
@@ -3133,10 +3133,10 @@
       "OriginalItemSpec": "wwwroot\\LoanProductImage\\47a43a23-fdbe-4b7a-ace5-18689a87dcf7.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\5acb8dd8-5c63-4027-9206-0b195069a1cd.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\5acb8dd8-5c63-4027-9206-0b195069a1cd.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "LoanProductImage/5acb8dd8-5c63-4027-9206-0b195069a1cd.jpg",
       "AssetKind": "All",
@@ -3152,10 +3152,10 @@
       "OriginalItemSpec": "wwwroot\\LoanProductImage\\5acb8dd8-5c63-4027-9206-0b195069a1cd.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\b1833703-331e-41f6-a7a3-99aafed6f611.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\b1833703-331e-41f6-a7a3-99aafed6f611.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "LoanProductImage/b1833703-331e-41f6-a7a3-99aafed6f611.png",
       "AssetKind": "All",
@@ -3171,10 +3171,10 @@
       "OriginalItemSpec": "wwwroot\\LoanProductImage\\b1833703-331e-41f6-a7a3-99aafed6f611.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\b20298c4-ab03-4555-8a56-5b843167604a.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\b20298c4-ab03-4555-8a56-5b843167604a.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "LoanProductImage/b20298c4-ab03-4555-8a56-5b843167604a.jpg",
       "AssetKind": "All",
@@ -3190,10 +3190,10 @@
       "OriginalItemSpec": "wwwroot\\LoanProductImage\\b20298c4-ab03-4555-8a56-5b843167604a.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\c44f5062-c47c-41fc-b07d-92e6ee15bdd3.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\c44f5062-c47c-41fc-b07d-92e6ee15bdd3.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "LoanProductImage/c44f5062-c47c-41fc-b07d-92e6ee15bdd3.jpg",
       "AssetKind": "All",
@@ -3209,10 +3209,10 @@
       "OriginalItemSpec": "wwwroot\\LoanProductImage\\c44f5062-c47c-41fc-b07d-92e6ee15bdd3.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\d80ad2e5-af85-4d14-a2b9-20c2e313d282.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\d80ad2e5-af85-4d14-a2b9-20c2e313d282.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "LoanProductImage/d80ad2e5-af85-4d14-a2b9-20c2e313d282.jpg",
       "AssetKind": "All",
@@ -3228,10 +3228,10 @@
       "OriginalItemSpec": "wwwroot\\LoanProductImage\\d80ad2e5-af85-4d14-a2b9-20c2e313d282.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\dbadba8f-1bd6-4b4b-b114-8c78f0b27704.webp",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\dbadba8f-1bd6-4b4b-b114-8c78f0b27704.webp",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "LoanProductImage/dbadba8f-1bd6-4b4b-b114-8c78f0b27704.webp",
       "AssetKind": "All",
@@ -3247,10 +3247,10 @@
       "OriginalItemSpec": "wwwroot\\LoanProductImage\\dbadba8f-1bd6-4b4b-b114-8c78f0b27704.webp"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\de7125f5-f027-48cc-ac44-5a58211fdf4e.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\de7125f5-f027-48cc-ac44-5a58211fdf4e.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "LoanProductImage/de7125f5-f027-48cc-ac44-5a58211fdf4e.jpg",
       "AssetKind": "All",
@@ -3266,10 +3266,10 @@
       "OriginalItemSpec": "wwwroot\\LoanProductImage\\de7125f5-f027-48cc-ac44-5a58211fdf4e.jpg"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\e213cc07-a8fa-4e45-9205-bf536d3a7430.png",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\e213cc07-a8fa-4e45-9205-bf536d3a7430.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "LoanProductImage/e213cc07-a8fa-4e45-9205-bf536d3a7430.png",
       "AssetKind": "All",
@@ -3285,10 +3285,10 @@
       "OriginalItemSpec": "wwwroot\\LoanProductImage\\e213cc07-a8fa-4e45-9205-bf536d3a7430.png"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\ef7a2b87-2afe-4187-91df-4bf215912517.jpg",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\LoanProductImage\\ef7a2b87-2afe-4187-91df-4bf215912517.jpg",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
       "BasePath": "_content/OrchidCapital",
       "RelativePath": "LoanProductImage/ef7a2b87-2afe-4187-91df-4bf215912517.jpg",
       "AssetKind": "All",

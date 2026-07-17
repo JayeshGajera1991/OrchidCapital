@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\OrchidCapital\\OrchidCapital\\Orchid.DataModels\\Orchid.DataModels.csproj",
+      "projectUniqueName": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.DataModels\\Orchid.DataModels.csproj",
       "projectName": "Orchid.DataModels",
-      "projectPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.DataModels\\Orchid.DataModels.csproj",
+      "projectPath": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.DataModels\\Orchid.DataModels.csproj",
       "packagesPath": "C:\\Users\\JGajera\\.nuget\\packages\\",
-      "outputPath": "E:\\OrchidCapital\\OrchidCapital\\Orchid.DataModels\\obj\\",
+      "outputPath": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\Orchid.DataModels\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

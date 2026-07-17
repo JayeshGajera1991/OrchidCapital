@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fuOsutonF/1eLb95zZN9kN5wJ5mLLl0zPYMwqKMciL4=",
+  "Hash": "zlZIXE31RZCPszp+yhIN6EljPogufnAW/BZQsCFspq0=",
   "Source": "OrchidCapitalCoreAPI",
   "BasePath": "_content/OrchidCapitalCoreAPI",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "OrchidCapitalCoreAPI\\wwwroot",
       "Source": "OrchidCapitalCoreAPI",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\",
       "BasePath": "_content/OrchidCapitalCoreAPI",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\AccountLocked.html",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\AccountLocked.html",
       "SourceId": "OrchidCapitalCoreAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\",
       "BasePath": "_content/OrchidCapitalCoreAPI",
       "RelativePath": "EmailTemplates/AccountLocked.html",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\EmailTemplates\\AccountLocked.html"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\ChangePassword.html",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\ChangePassword.html",
       "SourceId": "OrchidCapitalCoreAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\",
       "BasePath": "_content/OrchidCapitalCoreAPI",
       "RelativePath": "EmailTemplates/ChangePassword.html",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\EmailTemplates\\ChangePassword.html"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\ForgotPassword.html",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\ForgotPassword.html",
       "SourceId": "OrchidCapitalCoreAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\",
       "BasePath": "_content/OrchidCapitalCoreAPI",
       "RelativePath": "EmailTemplates/ForgotPassword.html",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\EmailTemplates\\ForgotPassword.html"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\ResetPassword.html",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\ResetPassword.html",
       "SourceId": "OrchidCapitalCoreAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\",
       "BasePath": "_content/OrchidCapitalCoreAPI",
       "RelativePath": "EmailTemplates/ResetPassword.html",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\EmailTemplates\\ResetPassword.html"
     },
     {
-      "Identity": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\Welcome.html",
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\EmailTemplates\\Welcome.html",
       "SourceId": "OrchidCapitalCoreAPI",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapitalCoreAPI\\wwwroot\\",
       "BasePath": "_content/OrchidCapitalCoreAPI",
       "RelativePath": "EmailTemplates/Welcome.html",
       "AssetKind": "All",

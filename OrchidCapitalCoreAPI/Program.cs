@@ -50,7 +50,7 @@ builder.Services.AddScoped<IFinanceRepository, FinanceRepository>();
 builder.Services.AddScoped<IDashboardRepository, DashboardRepository>();
 #region configure email keys
 builder.Services.Configure<EmailConfiguration>(builder.Configuration.GetSection("EMAIL-CONFIG"));
-
+builder.Configuration.GetConnectionString("DB-CONN-STR");
 builder.Services.AddTransient<IEmailService, EmailService>();
 #endregion
 
@@ -109,7 +109,12 @@ builder.Services.Configure<EmailConfiguration>(builder.Configuration.GetSection(
 builder.Services.AddAuthorization();
 
 var app = builder.Build();
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<IDapperRepository>();
 
+    await db.InitializeDatabaseAsync();
+}
 app.UseDeveloperExceptionPage();
 
 app.UseSwagger();
