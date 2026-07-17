@@ -1,162 +1,395 @@
-/* ===== BANK FOOTER ===== */
+/*==============================
+      PREMIUM FOOTER 2026
+==============================*/
 
 .bank-footer {
-  background: linear-gradient(135deg, #ffffff, #f1f5f9);
-  padding: 75px 6% 30px;
-  border-top: 1px solid rgba(15, 23, 42, 0.06);
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+  border-top: 1px solid #edf2f7;
 }
+
+.bank-footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+}
+
 
 .bank-footer-wrapper {
-  max-width: 1250px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
   margin: auto;
+  padding: 10px;
 }
 
-/* Grid */
+/*==============================
+GRID
+==============================*/
 
 .bank-footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 55px;
-  margin-bottom: 50px;
+  grid-template-columns: 2fr 1fr 1fr 1.3fr;
+  gap: 70px;
+  padding: 30px 150px 40px;
+  border-bottom: 1px solid #edf2f7;
 }
 
-/* Brand */
-
-.bank-footer-brand {
-  text-align: left;
-}
+/*==============================
+LOGO
+==============================*/
 
 .bank-footer-brand img {
-  height: 62px;
-  margin-bottom: 14px;
+  height: 72px;
+  transition: .4s;
+  filter: drop-shadow(0 4px 10px rgba(14, 105, 241, .08));
 }
+
+.bank-footer-brand img:hover {
+  transform: scale(1.04);
+}
+
+/*==============================
+TAGLINE
+==============================*/
 
 .bank-footer-tagline {
-  font-size: 14px;
+
   color: #64748b;
-  line-height: 1.7;
-  margin-bottom: 18px;
-  max-width: 320px;
+
+  line-height: 1.9;
+
+  font-size: 15px;
+
+  max-width: 380px;
+
+  margin-bottom: 30px;
 }
+
+/*==============================
+BADGES
+==============================*/
 
 .bank-footer-certifications {
+
   display: flex;
-  gap: 10px;
+
   flex-wrap: wrap;
-}
 
-.bank-badge {
-  font-size: 12px;
-  padding: 6px 10px;
-  border-radius: 8px;
-  background: rgba(14,105,241,0.08);
-  color: #0E69F1;
-  font-weight: 600;
-}
-
-/* Columns */
-
-.bank-footer-column h4 {
-  font-size: 14.5px;
-  font-weight: 650;
-  color: #0f172a;
-  margin-bottom: 16px;
-}
-
-.bank-footer-column ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.bank-footer-column li {
-  margin-bottom: 10px;
-}
-
-.bank-footer-column a {
-  text-decoration: none;
-  font-size: 13.8px;
-  color: #64748b;
-  transition: 0.25s ease;
-}
-
-.bank-footer-column a:hover {
-  color: #0E69F1;
-}
-
-/* Contact */
-
-.bank-footer-contact p {
-  font-size: 13.8px;
-  color: #64748b;
-  margin-bottom: 10px;
-}
-
-/* Divider */
-
-.bank-footer-divider {
-  height: 1px;
-  background: rgba(15, 23, 42, 0.08);
-  margin: 18px 0 22px;
-}
-
-/* Bottom */
-
-.bank-footer-bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
   gap: 12px;
 }
 
-.bank-footer-bottom p {
+.bank-badge {
+
+  padding: 10px 16px;
+
+  border-radius: 40px;
+
+  background: #eef5ff;
+
+  color: #0E69F1;
+
+  font-weight: 700;
+
   font-size: 13px;
-  color: #94a3b8;
-  margin: 0;
+
+  border: 1px solid #dbeafe;
+
+  transition: .35s;
 }
 
-.bank-footer-links {
+.bank-badge:hover {
+
+  background: #0E69F1;
+
+  color: #fff;
+
+  transform: translateY(-3px);
+}
+
+/*==============================
+HEADINGS
+==============================*/
+
+.bank-footer-column h4 {
+
+  position: relative;
+
+  margin-bottom: 26px;
+
+  font-size: 18px;
+
+  color: #0f172a;
+
+  font-weight: 700;
+}
+
+.bank-footer-column h4::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -10px;
+
+  width: 45px;
+
+  height: 3px;
+
+  border-radius: 20px;
+
+  background: linear-gradient(90deg, #0E69F1, #7c3aed);
+}
+
+/*==============================
+LINKS
+==============================*/
+
+.bank-footer-column ul {
+
+  margin: 0;
+
+  padding: 0;
+
+  list-style: none;
+}
+
+.bank-footer-column li {
+
+  margin-bottom: 16px;
+}
+
+.bank-footer-column a {
+
+  position: relative;
+
+  color: #64748b;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  transition: .35s;
+}
+
+.bank-footer-column a::before {
+
+  content: "→";
+
+  margin-right: 8px;
+
+  opacity: 0;
+
+  transform: translateX(-8px);
+
+  display: inline-block;
+
+  transition: .35s;
+}
+
+.bank-footer-column a:hover {
+
+  color: #0E69F1;
+
+  padding-left: 8px;
+}
+
+.bank-footer-column a:hover::before {
+
+  opacity: 1;
+
+  transform: translateX(0);
+}
+
+/*==============================
+CONTACT
+==============================*/
+
+.bank-footer-contact p {
+
   display: flex;
-  gap: 18px;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin-bottom: 15px;
+
+  color: #64748b;
+}
+
+/*==============================
+DIVIDER
+==============================*/
+
+.bank-footer-divider {
+
+  height: 1px;
+
+  background: #edf2f7;
+
+  margin: 35px 0;
+}
+
+/*==============================
+BOTTOM
+==============================*/
+
+.bank-footer-bottom {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+  padding: 10px 150px 10px;
   flex-wrap: wrap;
 }
 
+.bank-footer-bottom p {
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+.bank-footer-links {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 26px;
+}
+
 .bank-footer-links a {
-  font-size: 13px;
+
+  position: relative;
+
+  color: #64748b;
+
   text-decoration: none;
-  color: #94a3b8;
-  transition: 0.25s ease;
+
+  font-size: 14px;
+
+  transition: .35s;
+}
+
+.bank-footer-links a::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -6px;
+
+  width: 0;
+
+  height: 2px;
+
+  background: #0E69F1;
+
+  transition: .35s;
 }
 
 .bank-footer-links a:hover {
+
   color: #0E69F1;
 }
 
-/* Responsive */
+.bank-footer-links a:hover::after {
 
-@media (max-width: 992px) {
-  .bank-footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 35px;
-  }
+  width: 100%;
 }
 
-@media (max-width: 600px) {
+/*==============================
+RESPONSIVE
+==============================*/
+
+@media(max-width:1100px) {
+
   .bank-footer-grid {
-    grid-template-columns: 1fr;
+
+    grid-template-columns: 1fr 1fr;
+
+    padding: 35px;
+
   }
 
-  .bank-footer-bottom {
-    flex-direction: column;
-    text-align: center;
+}
+
+@media(max-width:768px) {
+
+  .bank-footer {
+
+    padding: 0px;
+
+  }
+
+  .bank-footer-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 40px;
+
+    padding: 30px;
+
   }
 
   .bank-footer-brand {
-    text-align: center;
+
+    text-align: left;
+
   }
 
   .bank-footer-tagline {
-    margin: auto;
+
+    margin: auto auto 25px;
+
   }
+
+  .bank-footer-certifications {
+
+    justify-content: left;
+
+  }
+
+  .bank-footer-column {
+
+    text-align: left;
+
+  }
+
+  .bank-footer-column h4::after {
+
+    left: 10%;
+
+    transform: translateX(-50%);
+
+  }
+
+  .bank-footer-bottom {
+
+    flex-direction: column;
+    padding: 0px;
+    text-align: left;
+
+  }
+
+  .bank-footer-links {
+
+    justify-content: left;
+
+  }
+
 }

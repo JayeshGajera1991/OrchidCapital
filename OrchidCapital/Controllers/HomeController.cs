@@ -121,6 +121,32 @@ namespace OrchidCapital.Controllers
             return resultmenu;
         }
 
+        public IActionResult AboutUs()
+        {
+            try
+            {
+                
+            }
+            catch(Exception ex)
+            {
+                
+            }
+            return View();
+        }
+
+        public IActionResult ContactUs()
+        {
+            try
+            {
+                
+            }
+            catch(Exception ex)
+            {
+                
+            }
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

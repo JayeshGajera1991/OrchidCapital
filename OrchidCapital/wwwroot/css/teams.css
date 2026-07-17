@@ -22,16 +22,13 @@
 }
 
 .team-glass-header h2{
-
-    font-size:46px;
-
-    font-weight:700;
-
-    color:#1d2333;
-
-    background:none;
-
-    -webkit-text-fill-color:inherit;
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-align: center;
+    background: linear-gradient(135deg, #0E69F1, #7b1fa2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
 }
 

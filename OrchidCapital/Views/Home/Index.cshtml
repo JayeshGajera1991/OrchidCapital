@@ -3,12 +3,12 @@
 }
 @model AllModuleListRequest
 
-@await Html.PartialAsync("_UserHeroYono5", Model);
+@await Html.PartialAsync("_UserHeroYono5", Model)
 <div class="mobile-overlay" id="mobileOverlay"></div>
 <div class="mobile-panel" id="mobilePanel">
     <div class="mobile-panel-header">
         <div class="mobile-brand">
-            <img src="img/logo.png" alt="Logo">
+            <img src="~/img/logo.png" alt="Logo">
             <div class="mobile-brand-text">
                 <strong>Orchid Capital</strong>
                 <span>@Localizer["PremiumFinancialServices"]</span>
@@ -41,7 +41,7 @@
 </div>
 <section class="usp-bar">
     <div class="usp-left">
-        <img src="img/logo.png" alt="Logo">
+        <img src="~/img/logo.png" alt="Logo">
     </div>
     <div class="usp-center">
         <div class="usp-item">
@@ -65,8 +65,11 @@
         </div>
     </div>
 </section>
-@await Html.PartialAsync("_UserWhatWeDo", Model);
-@await Html.PartialAsync("_UserFinancialCalculator", Model);
+@await Html.PartialAsync("_UserWhatWeDo", Model)
+@await Html.PartialAsync("_UserFinancialCalculator", Model)
 <partial name="_UserWhyUs" />
 <partial name="_UserPartners" />
-@await Html.PartialAsync("_UserTeams", Model);
+@await Html.PartialAsync("_UserTeams", Model)
+<script>
+    $(".top-header").removeClass('purple-submenu-other');
+</script>

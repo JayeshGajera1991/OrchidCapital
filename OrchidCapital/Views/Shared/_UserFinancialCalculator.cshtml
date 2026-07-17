@@ -3,6 +3,7 @@
 <section class="emi-section">
     <div class="emi-header">
         <h2>@Localizer["SimplifyFinancialPlanning"]</h2>
+        <div class="partners-line"></div>
         <p>@Localizer["FlexibleEMIs"]</p>
     </div>
     <div class="emi-tabs-wrapper">
@@ -132,21 +133,21 @@
 
         const P = parseFloat(amount.value);
         const annualRate = parseFloat(rate.value);
-        const r = annualRate / 12 / 100;
-        const n = parseFloat(tenure.value) * 12;
+        const r = (annualRate / 12 / 100);
+        const n = (parseFloat(tenure.value) * 12);
 
         const emi = (P * r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
         const total = emi * n;
         const interest = total - P;
 
-        emiVal.textContent = emi.toFixed(0);
-        totalVal.textContent = total.toFixed(0);
-        interestVal.textContent = interest.toFixed(0);
-        principalVal.textContent = P.toFixed(0);
+        emiVal.textContent = isNaN(emi) ? 0 : emi.toFixed(0);
+        totalVal.textContent = isNaN(total) ? 0 : total.toFixed(0);
+        interestVal.textContent = isNaN(interest) ? 0 : interest.toFixed(0);
+        principalVal.textContent = isNaN(P) ? 0 : P.toFixed(0);
 
-        amountVal.textContent = P.toFixed(0);
+        amountVal.textContent = isNaN(P) ? 0 : P.toFixed(0);
         tenureVal.textContent = tenure.value;
-        rateVal.textContent = annualRate.toFixed(1);
+        rateVal.textContent = isNaN(annualRate) ? 0 : annualRate.toFixed(1);
 
         amount.oninput = calculateEMI;
         tenure.oninput = calculateEMI;
