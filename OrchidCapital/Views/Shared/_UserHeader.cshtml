@@ -1,4 +1,7 @@
 <link rel="stylesheet" href="~/css/header.css" asp-append-version="true" />
+@{
+    var header = ViewBag.HeaderData as AllModuleListRequest;
+}
 <div class="oc-offer-bar">
     <div class="oc-offer-text">
         🎉 @Localizer["LimitedTimeOffer"] –
@@ -8,12 +11,12 @@
 </div>
 <header class="top-header">
     <div class="header-left">
-        <img src="~/img/logo.png" alt="Logo" class="logo">
+        <a href="@Url.Action("Index", "Home")"><img src="~/Images/logo3.png" alt="Logo" class="logo"></a>
     </div>
     <nav class="header-nav">
         <div class="white-menu">
             <div class="white-menu-left">
-                <a href="@Url.Action("Index","Home")">@Localizer["Home"]</a>
+                <a href="@Url.Action("Index", "Home")">@Localizer["Home"]</a>
                 <div class="business-trigger">
                     <a href="#" class="business-link" id="businessTrigger">
                         @Localizer["Business"]
@@ -21,8 +24,8 @@
                     </a>
                     <partial name="_UserSuperBusinessMega" />
                 </div>
-                <a href="@Url.Action("AboutUs","Home")">@Localizer["AboutUs"]</a>
-                <a href="@Url.Action("ContactUs","Home")">@Localizer["ContactUs"]</a>
+                <a href="@Url.Action("AboutUs", "Home")">@Localizer["AboutUs"]</a>
+                <a href="@Url.Action("ContactUs", "Home")">@Localizer["ContactUs"]</a>
             </div>
             <div class="white-menu-right">
                 <div class="white-lang">
@@ -73,19 +76,73 @@
             </a>
         </div>
     </nav>
+
     <div class="mobile-right">
+        <div class="mobile-white-menu-right">
+            <div class="mobile-white-lang">
+                <div class="mobile-language-wrapper">
+                    <partial name="_LanguageSelector" />
+                </div>
+                <a href="#"> <i class="fa-solid fa-phone"></i></a>
+                    <a href="@Url.Action("Login", "Login")"> <i class="fa-solid fa-user"></i></a>
+            </div>
+        </div>
         <button class="call-btn">
-            <i class="fa-solid fa-phone"></i>
+            <i class="fa-brands fa-facebook-f"></i>
         </button>
-        <button class="login-btn" onclick="window.location.href='@Url.Action("Login","Login")'">
-            <i class="fa-solid fa-user"></i>
+        <button class="call-btn">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </button>
+        <button class="call-btn">
+            <i class="fa-brands fa-instagram"></i>
+        </button>
+        <button class="call-btn">
+            <i class="fa-brands fa-x-twitter"></i>
         </button>
         <button class="hamburger-btn" id="hamburgerBtn">
             <i class="fa-solid fa-bars"></i>
         </button>
     </div>
 </header>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="mobile-panel" id="mobilePanel">
+    <div class="mobile-panel-header">
+        <div class="mobile-brand">
+            @* <a href="@Url.Action("Index", "Home")"><img src="~/Images/logo3.png" alt="Logo" class=""></a> *@
+            <div class="mobile-brand-text">
+                <strong>Orchid Capital</strong>
+                <span>@Localizer["PremiumFinancialServices"]</span>
+            </div>
+        </div>
+        <i class="fa-solid fa-xmark mobile-close" id="mobileClose"></i>
+    </div>
+    <div class="mobile-menu">
+        <div class="mobile-item">
+            <span onclick="window.location.href='@Url.Action("Index", "Home")'">@Localizer["Home"]</span>
+        </div>
+        <div class="mobile-item" id="mobileBusiness">
+            <span>@Localizer["Business"]</span>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="mobile-submenu">
+            @if (header != null)
+            {
+                foreach (BankServiceListModel item in header.ProductsList)
+                {
+                    <a href="#" data-desc="@item.Descriptions">@item.ProductName</a>
+                }
+            }
+        </div>
+        <div class="mobile-item">
+            <span onclick="window.location.href='@Url.Action("AboutUs", "Home")'">@Localizer["AboutUs"]</span>
+        </div>
+        <div class="mobile-item">
+            <span onclick="window.location.href='@Url.Action("ContactUs", "Home")'">@Localizer["ContactUs"]</span>
+        </div>
+    </div>
+</div>
 <script>
+   
     document.addEventListener("DOMContentLoaded", function () {
 
         const trigger = document.getElementById("businessTrigger");

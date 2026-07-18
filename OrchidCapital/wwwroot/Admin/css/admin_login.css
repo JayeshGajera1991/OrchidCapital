@@ -90,33 +90,34 @@ body.orchid-login-page {
 }
 
 .logo-wrapper{
-    display:inline-flex;
+    position:relative;
+
+    width:600px;
+    height:90px;
+
+    margin-left:-75px;   /* Left space */
+
+    background:#fff;
+
+    clip-path:polygon(0 0,92% 0,100% 50%,92% 100%,0 100%);
+
+    display:flex;
     align-items:center;
     justify-content:center;
-    padding:18px 30px;
-    margin-bottom:35px;
 
-    background:rgba(255,255,255,.12);
-    border:1px solid rgba(255,255,255,.2);
-    backdrop-filter:blur(15px);
-
-    border-radius:22px;
-
-    box-shadow:
-        0 15px 40px rgba(0,0,0,.18),
-        inset 0 1px 0 rgba(255,255,255,.25);
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
 }
 
-.orchid-logo{
-    width:185px;
-    height:auto;
-	 object-fit:contain;
-border-radius:22px;
-    filter:
-        drop-shadow(0 0 8px rgba(255,255,255,.8))
-        drop-shadow(0 15px 30px rgba(0,0,0,.18));
+.orchid-logo {
+    max-width: 170px;
+    height: auto;
+    margin-left: -255px;
+    box-shadow: none;
+    background-color: #fff;
 }
-
+.brand-copy {
+    margin-top: 20px;
+}
 .trusted-badge,
 .secure-status {
     display: inline-flex;

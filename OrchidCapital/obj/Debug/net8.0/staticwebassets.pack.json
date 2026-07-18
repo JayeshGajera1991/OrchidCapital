@@ -333,10 +333,6 @@
       "PackagePath": "staticwebassets\\img\\about-company.png"
     },
     {
-      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\about-company1.png",
-      "PackagePath": "staticwebassets\\img\\about-company1.png"
-    },
-    {
       "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\advisory.png",
       "PackagePath": "staticwebassets\\img\\advisory.png"
     },
@@ -387,10 +383,6 @@
     {
       "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\usericon.png",
       "PackagePath": "staticwebassets\\img\\usericon.png"
-    },
-    {
-      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\usericon1.png",
-      "PackagePath": "staticwebassets\\img\\usericon1.png"
     },
     {
       "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\working-capital.png",

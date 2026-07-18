@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "V+TgMlZtdD5lRpfGM5fsg+Iexhv3pyVSbHa1uQWvu+0=",
+  "Hash": "jctaZR6vgevRSg96clV5cJ24+0Q9X5JVnrUtaIO2Ub4=",
   "Source": "OrchidCapital",
   "BasePath": "_content/OrchidCapital",
   "Mode": "Default",
@@ -1309,25 +1309,6 @@
       "OriginalItemSpec": "wwwroot\\img\\about-company.png"
     },
     {
-      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\about-company1.png",
-      "SourceId": "OrchidCapital",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
-      "BasePath": "_content/OrchidCapital",
-      "RelativePath": "img/about-company1.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\about-company1.png"
-    },
-    {
       "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\advisory.png",
       "SourceId": "OrchidCapital",
       "SourceType": "Discovered",
@@ -1573,25 +1554,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\usericon.png"
-    },
-    {
-      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\usericon1.png",
-      "SourceId": "OrchidCapital",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
-      "BasePath": "_content/OrchidCapital",
-      "RelativePath": "img/usericon1.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\usericon1.png"
     },
     {
       "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\working-capital.png",

@@ -1,267 +1,279 @@
 /*==================================================
-             WHY CHOOSE US - PREMIUM DESIGN
+            WHY CHOOSE US - PREMIUM BANK DESIGN
 ==================================================*/
+
 .whyus-section {
+    position: relative;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 70px;
     padding: 110px 7%;
-    background: linear-gradient(135deg, #2898d9 0%, #4d73d8 45%, #731d95 100%);
-    position: relative;
     overflow: hidden;
     color: #fff;
+    background:
+        radial-gradient(circle at top left, #cdafff22, transparent 35%),
+        radial-gradient(circle at bottom right, #a2e2ff22, transparent 35%),
+        linear-gradient(135deg, #adceff, #e1edff, transparent 35%);
 }
 
-.whyus-section::before {
-    content: "";
-    position: absolute;
-    width: 650px;
-    height: 650px;
-    left: -250px;
-    top: -250px;
-    background: radial-gradient(circle, rgba(255, 255, 255, .18), transparent 70%);
-    border-radius: 50%;
-    filter: blur(20px);
-    animation: floatGlow 10s ease-in-out infinite;
-}
+/* Background Shapes */
 
+.whyus-section::before,
 .whyus-section::after {
     content: "";
     position: absolute;
-    width: 500px;
-    height: 500px;
-    right: -180px;
-    bottom: -180px;
-    background: radial-gradient(circle, rgba(255, 255, 255, .12), transparent 70%);
     border-radius: 50%;
-    filter: blur(30px);
-    animation: floatGlow 12s ease-in-out infinite reverse;
+    filter: blur(70px);
+    z-index: 0;
 }
 
-@keyframes floatGlow {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(35px);
-    }
+.whyus-section::before {
+    width: 420px;
+    height: 420px;
+    background: #7b1fa230;
+    top: -180px;
+    left: -150px;
 }
 
-/*=========================
-        LEFT SIDE
-==========================*/
+.whyus-section::after {
+    width: 380px;
+    height: 380px;
+    background: #2196f330;
+    right: -150px;
+    bottom: -150px;
+}
+
+/*----------------------------------
+Left Side
+----------------------------------*/
 
 .whyus-left {
-    width: 36%;
+    width: 38%;
     position: relative;
     z-index: 2;
 }
 
 .whyus-tag {
-    font-size: 44px;
-    font-weight: 800;
-    letter-spacing: -1px;
-    text-align: center;
-    background: linear-gradient(135deg, #0E69F1, #7b1fa2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 20px;
+    border-radius: 40px;
+    background: #eef4ff;
+    color: #0E69F1;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .whyus-left h2 {
-    margin: 22px 0;
+    margin: 24px 0;
     font-size: 46px;
+    line-height: 1.15;
     font-weight: 800;
-    color: #fff;
-    line-height: 1.2;
+    color: #1d1d1f;
 }
 
 .whyus-left p {
-    font-size: 16px;
-    color: rgba(255, 255, 255, .85);
+    font-size: 17px;
     line-height: 1.9;
+    color: #5f6b7a;
     margin-bottom: 35px;
 }
 
 /* Button */
+
 .whyus-btn {
-    border: none;
-    outline: none;
-    padding: 15px 28px;
-    border-radius: 12px;
-    background: #fff;
-    color: #4d73d8;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: .35s;
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, .18);
+    gap: 12px;
+    padding: 16px 34px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff;
+    background: linear-gradient(135deg, #0E69F1, #731d95);
+    transition: .35s;
+    box-shadow: 0 18px 40px rgba(14, 105, 241, .28);
 }
 
 .whyus-btn:hover {
-    background: #f8fafc;
-    transform: translateY(-5px);
+    transform: translateY(-4px);
+    box-shadow: 0 25px 50px rgba(14, 105, 241, .35);
 }
 
-/*=========================
-       RIGHT PANEL
-==========================*/
+.whyus-btn i {
+    transition: .3s;
+}
+
+.whyus-btn:hover i {
+    transform: translateX(6px);
+}
+
+/*----------------------------------
+Right Panel
+----------------------------------*/
 
 .whyus-right {
     flex: 1;
-    background: rgba(255, 255, 255, .12);
-    backdrop-filter: blur(25px);
-    border-radius: 28px;
-    padding: 40px;
-    border: 1px solid rgba(255, 255, 255, .18);
-    box-shadow: 0 30px 70px rgba(0, 0, 0, .25);
     position: relative;
     z-index: 2;
+    padding: 38px;
+    border-radius: 30px;
+    background: #ffffff;
+    border: 1px solid #edf1f7;
+    box-shadow:
+        0 30px 60px rgba(18, 38, 63, .08),
+        0 10px 20px rgba(18, 38, 63, .04);
 }
 
-/* Gradient top border */
+/* Gradient Border */
 
 .whyus-right::before {
     content: "";
     position: absolute;
     top: 0;
-    left: 20px;
-    right: 0;
+    left: 20;
+    width: 95%;
     height: 5px;
-    border-radius: 28px 28px 0 0;
-    background: linear-gradient(90deg, #0E69F1, #631988);
-    width: 96%;
+    border-radius: 30px 30px 0 0;
+    background: linear-gradient(90deg, #0E69F1, #731d95);
 }
 
-/*=========================
-        HEADER
-==========================*/
+/*----------------------------------
+Header
+----------------------------------*/
 
 .comparison-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 35px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, .15);
-}
-
-.others {
-    color: rgba(255, 255, 255, .75);
-    font-size: 14px;
-    font-weight: 600;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #edf1f7;
 }
 
 .comparison-brand {
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 12px 18px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .06);
 }
 
 .whyus-logo {
-    height: 50px;
-
-    object-fit: contain;
+    height: 48px;
+    display: block;
 }
 
+.others {
+    font-size: 14px;
+    color: #6c7b8a;
+    font-weight: 600;
+}
 
-/*=========================
-         GRID
-==========================*/
+/*----------------------------------
+Grid
+----------------------------------*/
 
 .comparison-grid {
-
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
     gap: 20px;
 }
 
-/*=========================
-       FEATURE CARD
-==========================*/
+/*----------------------------------
+Card
+----------------------------------*/
 
 .compare-item {
     display: flex;
-    gap: 18px;
     align-items: flex-start;
-    padding: 22px;
+    gap: 18px;
+    padding: 24px;
     border-radius: 18px;
-    background: rgba(255, 255, 255, .08);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, .18);
+    background: #fff;
+    border: 1px solid #edf1f7;
     transition: .35s;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .10);
+}
+
+.compare-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(#0E69F1, #731d95);
+    transform: scaleY(0);
+    transition: .35s;
+}
+
+.compare-item:hover::before {
+    transform: scaleY(1);
 }
 
 .compare-item:hover {
     transform: translateY(-8px);
-    background: rgba(255, 255, 255, .16);
-    border-color: rgba(255, 255, 255, .35);
-    box-shadow: 0 20px 45px rgba(0, 0, 0, .20);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .08);
 }
 
-/*=========================
-         ICON
-==========================*/
+/*----------------------------------
+Icon
+----------------------------------*/
 
 .compare-item i {
-    width: 56px;
-    min-width: 56px;
-    height: 56px;
-    border-radius: 16px;
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    border-radius: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, .18);
-    border: 1px solid rgba(255, 255, 255, .20);
+    font-size: 24px;
     color: #fff;
-    font-size: 22px;
+    background: linear-gradient(135deg, #0E69F1, #731d95);
+    box-shadow: 0 15px 25px rgba(14, 105, 241, .25);
     transition: .35s;
 }
 
-/*=========================
-          TEXT
-==========================*/
+.compare-item:hover i {
+    transform: rotate(-10deg) scale(1.08);
+}
+
+/*----------------------------------
+Text
+----------------------------------*/
+
 .compare-item h4 {
     margin: 0 0 8px;
-    font-size: 17px;
+    font-size: 18px;
+    color: #17223b;
     font-weight: 700;
-    color: #fff;
 }
 
 .compare-item p {
     margin: 0;
-    color: rgba(255, 255, 255, .78);
-    font-size: 14px;
+    color: #667788;
     line-height: 1.7;
+    font-size: 14px;
 }
 
-/*=========================
-        ANIMATION
-==========================*/
+/*----------------------------------
+Animation
+----------------------------------*/
 
 .compare-item {
-
     opacity: 0;
-
-    transform: translateY(30px);
+    transform: translateY(40px);
 }
 
 body.loaded .compare-item {
-
-    animation: fadeUp .6s forwards;
+    animation: fadeUp .7s forwards;
 }
 
 body.loaded .compare-item:nth-child(1) {
@@ -289,90 +301,55 @@ body.loaded .compare-item:nth-child(6) {
 }
 
 @keyframes fadeUp {
-
     to {
-
         opacity: 1;
-
         transform: translateY(0);
     }
 }
 
-/*=========================
-      RESPONSIVE
-==========================*/
+/*----------------------------------
+Responsive
+----------------------------------*/
 
 @media(max-width:1100px) {
 
     .whyus-section {
-
         flex-direction: column;
-
-        gap: 50px;
     }
 
     .whyus-left {
-
         width: 100%;
     }
 
     .whyus-right {
-
         width: 100%;
     }
 
-    .whyus-left h2 {
-
-        font-size: 38px;
-    }
 }
 
 @media(max-width:768px) {
 
     .whyus-section {
-
         padding: 80px 20px;
     }
 
-    .comparison-header {
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 15px;
-    }
-
     .comparison-grid {
-
         grid-template-columns: 1fr;
     }
 
-    .compare-item {
-
-        padding: 18px;
-    }
-
-    .compare-item i {
-
-        width: 50px;
-
-        min-width: 50px;
-
-        height: 50px;
-
-        font-size: 20px;
+    .comparison-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
     }
 
     .whyus-left h2 {
-
-        font-size: 32px;
+        font-size: 34px;
     }
 
     .whyus-btn {
-
         width: 100%;
-
         justify-content: center;
     }
+
 }
