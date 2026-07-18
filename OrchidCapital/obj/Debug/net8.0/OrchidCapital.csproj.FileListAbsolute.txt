@@ -425,9 +425,9 @@ C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\appsettings
 C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\appsettings.json
 C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\appsettings.Production.json
 C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\global.json
+C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\OrchidCapital.staticwebassets.runtime.json
 C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Helper\private.pem
 C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\Helper\public.pem
-C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\OrchidCapital.staticwebassets.runtime.json
 C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\OrchidCapital.exe
 C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\OrchidCapital.deps.json
 C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\OrchidCapital.runtimeconfig.json

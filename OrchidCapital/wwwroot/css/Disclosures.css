@@ -1,0 +1,545 @@
+:root {
+    --primary: #390077;
+    --secondary: #7b2bc2;
+    --light: #f8f5ff;
+    --text: #333;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+
+body {
+    color: var(--text);
+    background: #fff;
+}
+
+
+
+/* HERO */
+
+.hero {
+
+    background:
+         linear-gradient(110deg, rgb(69 28 105), rgb(22 76 182)),
+        url("~/img/disclosure-banner.png");
+
+    background-size: cover;
+    background-position: center;
+
+    padding: 80px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: white;
+
+}
+
+
+.hero-content {
+
+    max-width: 650px;
+
+}
+
+
+.hero h1 {
+
+    font-size: 48px;
+    margin-bottom: 20px;
+
+}
+
+
+.hero p {
+
+    font-size: 18px;
+    line-height: 1.8;
+    opacity: .9;
+
+}
+
+
+.hero-btn {
+
+    display: inline-block;
+
+    margin-top: 30px;
+
+    background: white;
+
+    color: #390077;
+
+    padding: 15px 40px;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+}
+
+
+.hero img {
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(57, 0, 119, .12);
+    width: 620px;
+
+}
+
+
+
+/* COMMON */
+
+
+.container {
+
+    width: 85%;
+    margin: auto;
+
+}
+
+
+.section {
+
+    padding: 80px 0;
+
+}
+
+
+
+.title {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+}
+
+
+
+.title h2 {
+
+    font-size: 36px;
+
+    color: #390077;
+
+}
+
+
+.title p {
+
+    color: #666;
+
+}
+
+
+
+
+/* DISCLOSURE CARDS */
+
+
+.disclosure-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+}
+
+
+
+.card {
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 45px rgba(57, 0, 119, .12);
+
+    transition: .3s;
+
+}
+
+
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+
+
+.card i {
+
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #efe4ff;
+
+    color: #390077;
+
+    font-size: 30px;
+
+    border-radius: 50%;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.card h3 {
+
+    color: #390077;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.card p {
+
+    color: #555;
+
+    line-height: 1.7;
+
+}
+
+
+
+
+/* DOCUMENT SECTION */
+
+
+.documents {
+
+    background: #f8f5ff;
+
+}
+
+
+
+.document-list {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+
+
+.document-box {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .05);
+
+}
+
+
+
+.document-box i {
+
+    font-size: 30px;
+
+    color: #390077;
+
+}
+
+
+
+.document-box h3 {
+
+    color: #390077;
+
+}
+
+
+
+.download {
+
+    margin-left: auto;
+
+    background: #390077;
+
+    color: white;
+
+    padding: 8px 18px;
+
+    border-radius: 20px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+}
+
+
+
+
+
+/* TRANSPARENCY */
+
+
+.transparency {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 50px;
+
+}
+
+
+
+.transparency img {
+
+    width: 450px;
+
+    border-radius: 20px;
+
+}
+
+
+
+.transparency h2 {
+
+    font-size: 36px;
+
+    color: #390077;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.list {
+
+    list-style: none;
+
+}
+
+
+
+.list li {
+
+    margin: 15px 0;
+
+    font-size: 17px;
+
+}
+
+
+
+.list i {
+
+    color: #390077;
+
+    margin-right: 10px;
+
+}
+
+
+
+
+/* POLICY TABLE */
+
+
+.table-box {
+
+    overflow: auto;
+
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+}
+
+
+th {
+
+    background: #390077;
+
+    color: white;
+
+    padding: 16px;
+
+    text-align: left;
+
+}
+
+
+td {
+
+    padding: 16px;
+
+    border-bottom: 1px solid #eee;
+
+    color: #555;
+
+}
+
+
+
+
+
+/* CTA */
+
+
+.cta {
+
+    background: linear-gradient(120deg, #390077, #8c35d1);
+
+    padding: 70px 20px;
+
+    text-align: center;
+
+    color: white;
+
+}
+
+
+
+.cta h2 {
+
+    font-size: 38px;
+
+}
+
+
+
+.cta p {
+
+    margin-top: 15px;
+
+}
+
+
+
+.cta a {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    background: white;
+
+    color: #390077;
+
+    padding: 15px 45px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+}
+
+
+
+
+
+/* RESPONSIVE */
+
+
+@media(max-width:900px) {
+
+
+    .hero {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    .hero img {
+
+        width: 300px;
+
+    }
+
+
+    .disclosure-grid,
+    .document-list {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .transparency {
+
+        flex-direction: column;
+
+    }
+
+
+    .transparency img {
+
+        width: 100%;
+
+    }
+
+
+}

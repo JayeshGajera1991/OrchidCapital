@@ -1,4 +1,6 @@
-@model AllModuleListRequest
+@{
+    var header = ViewBag.HeaderData as AllModuleListRequest;
+}
 <link rel="stylesheet" href="~/css/heroYono5.css" asp-append-version="true" />
 <section class="hero-section">
     <div class="hero-container">
@@ -49,10 +51,10 @@
                 </div>
             </div>
             <div class="hero-left-extension">
-                @if (Model != null && Model.ImagesList != null & Model.ImagesList.Count > 0)
+                @if (header != null)
                 {
                     string _activeC = "active";
-                    foreach (ImageConfigurationModel item in Model.ImagesList.Where(m => m.Role == "HeroImage").ToList())
+                    foreach (ImageConfigurationModel item in header.ImagesList.Where(m => m.Role == "HeroImage").ToList())
                     {
                         <div class="feature-content @_activeC">
                             <div class="feature-text">
@@ -89,10 +91,10 @@
         <div class="hero-right">
             <div class="slider">
                 <div class="slides">
-                    @if (Model != null && Model.ImagesList != null & Model.ImagesList.Count > 0)
+                    @if (header != null)
                     {
                         string _activeC = "active";
-                        foreach (ImageConfigurationModel item in Model.ImagesList.Where(m => m.Role ==
+                        foreach (ImageConfigurationModel item in header.ImagesList.Where(m => m.Role ==
          "HeroImage").ToList())
                         {
                             <img src="~/ImageUploads/@item.ImagePath" class="slide @_activeC">

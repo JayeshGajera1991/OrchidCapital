@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="~/css/superBusinessMega.css" asp-append-version="true" />
-@model AllModuleListRequest
+@{
+    var header = ViewBag.HeaderData as AllModuleListRequest;
+}
 <div class="business-panel" id="businessPanel">
     <div class="panel-header">
         <div class="biz-head-left">
@@ -22,9 +24,9 @@
         <div class="panel-columns advanced-finance zone-left"> <!-- SECURED -->
             <div class="panel-column finance-group">
                 <h4>@Localizer["Secured"]</h4>
-                @if (Model != null && Model.ProductsList != null & Model.ProductsList.Count > 0)
+                @if (header != null)
                 {
-                    foreach (BankServiceListModel item in Model.ProductsList.Where(m => m.IsSecure == true).ToList())
+                    foreach (BankServiceListModel item in header.ProductsList.Where(m => m.IsSecure == true).ToList())
                     {
                         <a href="#" data-desc="@Html.Raw(@item.Descriptions)">@item.ProductName</a>
                     }
@@ -32,9 +34,9 @@
             </div>
             <div class="panel-column finance-group">
                 <h4>@Localizer["Unsecured"]</h4>
-                @if (Model != null && Model.ProductsList != null & Model.ProductsList.Count > 0)
+                @if (header != null)
                 {
-                    foreach (BankServiceListModel item in Model.ProductsList.Where(m => m.IsSecure == false).ToList())
+                    foreach (BankServiceListModel item in header.ProductsList.Where(m => m.IsSecure == false).ToList())
                     {
                         <a href="#" data-desc="@Html.Raw(@item.Descriptions)">@item.ProductName</a>
                     }

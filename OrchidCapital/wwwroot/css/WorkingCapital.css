@@ -1,0 +1,542 @@
+:root {
+    --primary: #390077;
+    --secondary: #7c2bc2;
+    --light: #f8f5ff;
+    --text: #333;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter, Arial, sans-serif;
+}
+
+
+body {
+    color: var(--text);
+}
+
+
+
+/* HERO */
+
+.hero {
+
+    background:
+        linear-gradient(110deg, rgb(69 28 105), rgb(22 76 182)),
+        url("images/working-capital.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    padding: 80px 8%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: white;
+
+}
+
+
+.hero-content {
+
+    max-width: 650px;
+
+}
+
+
+.hero h1 {
+
+    font-size: 48px;
+    margin-bottom: 20px;
+
+}
+
+
+.hero p {
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    opacity: .9;
+
+}
+
+
+.hero-btn {
+
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 15px 40px;
+
+    background: white;
+
+    color: #390077;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+}
+
+
+.hero-image img {
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(57, 0, 119, .12);
+    width: 620px;
+
+}
+
+
+
+/* COMMON */
+
+.container {
+
+    width: 85%;
+    margin: auto;
+
+}
+
+
+.section {
+
+    padding: 80px 0;
+
+}
+
+
+.title {
+
+    text-align: center;
+    margin-bottom: 50px;
+
+}
+
+
+.title h2 {
+
+    font-size: 36px;
+    color: #390077;
+
+}
+
+
+.title p {
+
+    color: #666;
+
+}
+
+
+
+/* PRODUCTS */
+
+
+.products {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+}
+
+
+
+.card {
+
+    background: white;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 45px rgba(57, 0, 119, .12);
+
+    transition: .3s;
+
+}
+
+
+.card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+
+.card i {
+
+    height: 70px;
+    width: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #efe4ff;
+
+    color: #390077;
+
+    font-size: 30px;
+
+    border-radius: 50%;
+
+    margin-bottom: 20px;
+
+}
+
+
+.card h3 {
+
+    color: #390077;
+
+    margin-bottom: 15px;
+
+}
+
+
+.card p {
+
+    line-height: 1.7;
+
+    color: #555;
+
+}
+
+
+
+/* BENEFITS */
+
+
+.benefits {
+
+    background: #f8f5ff;
+
+}
+
+
+
+.benefit-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.benefit {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    gap: 20px;
+
+    align-items: center;
+
+}
+
+
+
+.benefit i {
+
+    font-size: 28px;
+
+    color: #390077;
+
+}
+
+
+
+
+
+/* LOAN TYPES */
+
+
+.loan-types {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+}
+
+
+
+.loan-box {
+
+    padding: 30px;
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+
+}
+
+
+
+.loan-box i {
+
+    font-size: 35px;
+
+    color: #390077;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.loan-box h4 {
+
+    color: #390077;
+
+}
+
+
+
+
+/* PROCESS */
+
+
+.process {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.step {
+
+    text-align: center;
+
+}
+
+
+
+.step-number {
+
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: auto;
+
+    background: #390077;
+
+    color: white;
+
+    font-size: 25px;
+
+    border-radius: 50%;
+
+    font-weight: bold;
+
+}
+
+
+.step h4 {
+
+    margin-top: 15px;
+
+}
+
+
+
+
+/* WHY */
+
+
+.why {
+
+    display: flex;
+
+    gap: 50px;
+
+    align-items: center;
+
+}
+
+
+.why img {
+
+    width: 450px;
+
+    border-radius: 20px;
+
+}
+
+
+
+.why h2 {
+
+    font-size: 36px;
+
+    color: #390077;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.check-list {
+
+    list-style: none;
+
+}
+
+
+.check-list li {
+
+    margin: 15px 0;
+
+    font-size: 17px;
+
+}
+
+
+.check-list i {
+
+    color: #390077;
+
+    margin-right: 10px;
+
+}
+
+
+
+/* CTA */
+
+
+.cta {
+
+    background: linear-gradient(120deg, #390077, #8b35d1);
+
+    padding: 70px 20px;
+
+    text-align: center;
+
+    color: white;
+
+}
+
+
+.cta h2 {
+
+    font-size: 38px;
+
+}
+
+
+.cta a {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    padding: 15px 45px;
+
+    background: white;
+
+    color: #390077;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+}
+
+
+
+
+/* RESPONSIVE */
+
+
+@media(max-width:900px) {
+
+
+    .hero {
+
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+
+    .hero h1 {
+
+        font-size: 36px;
+
+    }
+
+
+    .hero-image img {
+
+        width: 300px;
+
+    }
+
+
+
+    .products,
+    .benefit-grid,
+    .loan-types,
+    .process {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .why {
+
+        flex-direction: column;
+
+    }
+
+
+    .why img {
+
+        width: 100%;
+
+    }
+
+
+}

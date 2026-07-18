@@ -1,0 +1,399 @@
+.loan-careers {
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* Container */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+
+
+/* Hero */
+
+
+.loan-career-hero {
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+
+    background:linear-gradient(110deg, rgb(69 28 105), rgb(22 76 182)),
+
+        url('../images/loan-career.jpg');
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+
+}
+
+
+
+.career-content {
+
+    max-width: 650px;
+
+}
+
+
+
+.career-content span {
+
+    font-size: 15px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+}
+
+
+
+.career-content h1 {
+
+    font-size: 48px;
+
+    line-height: 1.2;
+
+    margin: 20px 0;
+
+}
+
+
+
+.career-content b {
+
+    color: #fff;
+
+}
+
+
+
+.career-content p {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+
+.btn-primary {
+
+    display: inline-block;
+
+    margin-top: 25px;
+
+    background: #fff;
+
+    color: #390077;
+
+    padding: 14px 35px;
+
+    border-radius: 30px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+}
+
+
+
+/* Career Areas */
+
+
+.career-area {
+
+    padding: 80px 0;
+
+    background: #f8f7fc;
+
+}
+
+
+
+.title {
+
+    text-align: center;
+
+    margin-bottom: 45px;
+
+}
+
+
+
+.title h2 {
+
+    font-size: 36px;
+
+}
+
+
+
+.area-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+
+}
+
+
+
+.area-card {
+
+    background: #fff;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(57, 0, 119, .12);
+
+    transition: .3s;
+
+}
+
+
+
+.area-card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+
+
+.area-card i {
+
+    font-size: 40px;
+
+    color: #390077;
+
+}
+
+
+
+.area-card h3 {
+
+    margin: 20px 0 10px;
+
+}
+
+
+
+/* Why Section */
+
+
+.why-bank-career {
+
+    padding: 80px 0;
+
+}
+
+
+
+.why-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 50px;
+
+    align-items: center;
+
+}
+
+
+
+.why-image img {
+
+    width: 100%;
+
+    border-radius: 25px;
+
+}
+
+
+
+.why-content li {
+
+    list-style: none;
+
+    margin: 20px 0;
+
+    font-size: 17px;
+
+}
+
+
+
+.why-content i {
+
+    color: #390077;
+
+    margin-right: 10px;
+
+}
+
+
+
+/* Jobs */
+
+
+.job-section {
+
+    padding: 80px 0;
+
+    background: #f8f7fc;
+
+}
+
+
+
+.job-item {
+
+    background: white;
+
+    padding: 25px 30px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-left: 5px solid #390077;
+
+    border-radius: 12px;
+
+}
+
+
+
+.job-item button {
+
+    background: #390077;
+
+    color: white;
+
+    border: 0;
+
+    padding: 12px 30px;
+
+    border-radius: 25px;
+
+}
+
+
+
+/* Apply */
+
+
+.apply-banner {
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background: #390077;
+
+    color: white;
+
+}
+
+
+
+.apply-banner a {
+
+    display: inline-block;
+
+    margin-top: 20px;
+
+    background: #fff;
+
+    color: #390077;
+
+    padding: 14px 35px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+}
+
+
+
+/* Responsive */
+
+
+@media(max-width:992px) {
+
+    .area-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .why-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+
+@media(max-width:600px) {
+
+    .career-content h1 {
+
+        font-size: 34px;
+
+    }
+
+
+    .area-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .job-item {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+    }
+
+}

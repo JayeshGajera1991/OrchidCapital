@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="~/css/financialcalculator.css" asp-append-version="true" />
-@model AllModuleListRequest
+@{
+    var header = ViewBag.HeaderData as AllModuleListRequest;
+}
 <section class="emi-section">
     <div class="emi-header">
         <h2>@Localizer["SimplifyFinancialPlanning"]</h2>
@@ -11,9 +13,9 @@
             <i class="fa-solid fa-chevron-left"></i>
         </button>
         <div class="emi-tabs" id="emiTabs">
-            @if (Model != null && Model.ProductsList != null & Model.ProductsList.Count > 0)
+            @if (header != null)
             {
-                foreach (BankServiceListModel item in Model.ProductsList)
+                foreach (BankServiceListModel item in header.ProductsList)
                 {
                     <div class="emi-tab" data-loan="@item.LoanProductId" data-mina="@item.MinAmount" data-maxa="@item.MaxAmount"
                          data-mint="@item.MinTenure" data-maxt="@item.MaxTenure" data-ratedir="@item.DefaultInterestRate"

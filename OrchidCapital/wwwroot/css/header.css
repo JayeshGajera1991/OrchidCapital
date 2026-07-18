@@ -691,7 +691,7 @@
      display: flex;
      align-items: center;
      gap: 20px;
-     margin-top: -10px;
+     margin-top: -3px;
    }
 
 
@@ -804,7 +804,7 @@
    /* WHITE MENU FIX */
    .white-menu {
      position: absolute;
-     top: 12px;
+     top: 8px;
      /* inside white 45px strip */
      left: 40px;
      /* space after angled logo */
@@ -830,13 +830,15 @@
 
    .top-header.scrolled,
    .purple-submenu-other {
-     background: linear-gradient(135deg,
-         #530e53,
-         #144eb9);
+     background: linear-gradient(110deg, rgb(69 28 105), rgb(22 76 182));
 
-     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-     transition: all 0.4s ease;
+     /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); */
+     transition: all 0.4s ease !important;
    }
+
+   .purple-submenu-other .logo {
+    margin-left: -65px;
+}
 
    /* Darken purple submenu text slightly */
    .top-header.scrolled .purple-submenu a,

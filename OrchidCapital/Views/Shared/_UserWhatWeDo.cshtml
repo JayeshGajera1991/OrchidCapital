@@ -1,5 +1,7 @@
 @using DocumentFormat.OpenXml.Office.CustomUI
-@model AllModuleListRequest
+@{
+    var header = ViewBag.HeaderData as AllModuleListRequest;
+}
 <link rel="stylesheet" href="~/css/whatwedo.css" asp-append-version="true" />
 <section class="funding-showcase">
     <div class="mesh-bg"></div>
@@ -7,10 +9,10 @@
     <div class="partners-line"></div>
     <p class="showcase-subtitle">@Localizer["WeRaiseFundsFor"]</p>
     <div class="showcase-options">
-        @if (Model != null && Model.ProductTypesList != null & Model.ProductTypesList.Count > 0)
+        @if (header != null)
         {
             string _activeC = "active";
-            foreach (LoanTypeModel item in Model.ProductTypesList.OrderBy(m => m.LoanTypeId))
+            foreach (LoanTypeModel item in header.ProductTypesList.OrderBy(m => m.LoanTypeId))
             {
                 <span class="option @_activeC" data-target="@item.LoanTypeId">@item.Name</span>
                 <span class="divider"></span>
@@ -21,10 +23,10 @@
     <div class="showcase-line"></div>
     <div class="showcase-cards-wrapper">
         <div class="showcase-cards" id="showcaseCards">
-            @if (Model != null && Model.ProductsList != null & Model.ProductsList.Count > 0)
+            @if (header != null)
             {
                 string _activeC = "active";
-                foreach (BankServiceListModel item in Model.ProductsList)
+                foreach (BankServiceListModel item in header.ProductsList)
                 {
                     <div class="showcase-card tone-blue @_activeC" data-loan="@item.LoanTypeId">
                         <div class="card-top">

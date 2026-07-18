@@ -1,4 +1,6 @@
-@model AllModuleListRequest
+@{
+    var header = ViewBag.HeaderData as AllModuleListRequest;
+}
 <link rel="stylesheet" href="~/css/teams.css" asp-append-version="true" />
 <section class="team-glass-section">
     <div class="team-glass-wrapper">
@@ -8,9 +10,9 @@
             <p>@Localizer["LeadershipTeamDescription"]</p>
         </div>
         <div class="team-glass-scroll" id="teamGlassScroll">
-            @if (Model != null && Model.TeamsList != null & Model.TeamsList.Count > 0)
+            @if (header != null)
             {
-                foreach (TeamModel item in Model.TeamsList)
+                foreach (TeamModel item in header.TeamsList)
                 {
                     <div class="team-glass-card">
                         <div class="team-glass-icon">

@@ -4,7 +4,7 @@
     <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    <RootNamespace>OrchidCapital</RootNamespace>  
+    <RootNamespace>OrchidCapital</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

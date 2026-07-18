@@ -230,16 +230,52 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Advisory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZHZpc29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/BusinessLoans.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCdXNpbmVzc0xvYW5zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Careers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJlZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Compliance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wbGlhbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/ContactUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0VXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Disclosures.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEaXNjbG9zdXJlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Leadership.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMZWFkZXJzaGlwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Newsroom.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOZXdzcm9vbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/PrivacyPolicy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5UG9saWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/StructuredFinance.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdHJ1Y3R1cmVkRmluYW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/WorkingCapital.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxXb3JraW5nQ2FwaXRhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Login/ChangePassword.cshtml]

@@ -1,9 +1,8 @@
 ﻿@{
     ViewData["Title"] = Localizer["WelcomeMessage"];
+    var header = ViewBag.HeaderData as AllModuleListRequest;
 }
-@model AllModuleListRequest
-
-@await Html.PartialAsync("_UserHeroYono5", Model)
+@await Html.PartialAsync("_UserHeroYono5")
 <div class="mobile-overlay" id="mobileOverlay"></div>
 <div class="mobile-panel" id="mobilePanel">
     <div class="mobile-panel-header">
@@ -22,9 +21,9 @@
             <i class="fa-solid fa-chevron-down"></i>
         </div>
         <div class="mobile-submenu">
-            @if (Model != null && Model.ProductsList != null & Model.ProductsList.Count > 0)
+            @if (header != null)
             {
-                foreach (BankServiceListModel item in Model.ProductsList)
+                foreach (BankServiceListModel item in header.ProductsList)
                 {
                     <a href="#" data-desc="@item.Descriptions">@item.ProductName</a>
                 }
@@ -65,11 +64,11 @@
         </div>
     </div>
 </section>
-@await Html.PartialAsync("_UserWhatWeDo", Model)
-@await Html.PartialAsync("_UserFinancialCalculator", Model)
+@await Html.PartialAsync("_UserWhatWeDo")
+@await Html.PartialAsync("_UserFinancialCalculator")
 <partial name="_UserWhyUs" />
 <partial name="_UserPartners" />
-@await Html.PartialAsync("_UserTeams", Model)
+@await Html.PartialAsync("_UserTeams")
 <script>
     $(".top-header").removeClass('purple-submenu-other');
 </script>

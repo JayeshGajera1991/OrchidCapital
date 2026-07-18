@@ -113,7 +113,7 @@ TAB
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 14px 22px;
+    padding: 10px 10px;
     background: #fff;
     border: 1px solid var(--border);
     border-radius: 50px;

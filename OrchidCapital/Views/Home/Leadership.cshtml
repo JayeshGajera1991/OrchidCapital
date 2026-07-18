@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="~/css/Leadership.css" asp-append-version="true" />
+@{
+    var header = ViewBag.HeaderData as AllModuleListRequest;
+}
+<section class="leadership-section">
+    <div class="container">
+
+        <div class="section-header">
+            <span>Our People</span>
+            <h2>Leadership Team</h2>
+            <p>
+                Meet the experienced professionals driving innovation,
+                trust, and growth at Orchid Capital.
+            </p>
+        </div>
+        <div class="leadership-grid">
+            @if (header != null)
+            {
+                foreach (TeamModel item in header.TeamsList)
+                {
+                    <div class="leader-card">
+                        <div class="leader-image">
+                            <img src="~/img/usericon.png" alt="@(string.IsNullOrEmpty(item.Qualification) ? "" : item.Qualification)">
+                        </div>
+
+                        <div class="leader-info">
+                            <h3>@(string.IsNullOrEmpty(item.FullName) ? "" : item.FullName)</h3>
+                            <h5>@(string.IsNullOrEmpty(item.Qualification) ? "" : item.Qualification)</h5>
+
+                            <p>
+                                @(string.IsNullOrEmpty(item.Description1) ? "" : item.Description1)
+                                @(string.IsNullOrEmpty(item.Description2) ? "" : item.Description2)
+                            </p>
+
+                            <div class="social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</section>
+<script>
+    $(".top-header").addClass('purple-submenu-other');
+</script>

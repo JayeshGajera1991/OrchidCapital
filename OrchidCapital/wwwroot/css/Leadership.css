@@ -1,0 +1,235 @@
+/* Leadership Section */
+
+.leadership-section {
+    padding:80px 0;
+    background:#f8f7fc;
+    font-family:'Inter',sans-serif;
+}
+
+
+.container {
+    max-width:1200px;
+    margin:auto;
+    padding:0 20px;
+}
+
+
+/* Header */
+
+.section-header {
+    text-align:center;
+    margin-bottom:50px;
+}
+
+
+.section-header span {
+    color:#390077;
+    font-weight:600;
+    font-size:15px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+
+.section-header h2 {
+    margin:10px 0;
+    font-size:38px;
+    color:#1c1c1c;
+}
+
+
+.section-header p {
+    max-width:650px;
+    margin:auto;
+    color:#666;
+    line-height:1.7;
+}
+
+
+/* Grid */
+
+.leadership-grid {
+
+    display:grid;
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+/* Card */
+
+.leader-card {
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    box-shadow:
+    0 10px 35px rgba(57,0,119,.10);
+
+    transition:.4s;
+
+}
+
+
+.leader-card:hover {
+
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 20px 45px rgba(57,0,119,.18);
+
+}
+
+
+/* Image */
+
+.leader-image {
+
+    padding-top:35px;
+
+}
+
+
+.leader-image img {
+
+    width:160px;
+
+    height:160px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:6px solid #fff;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.15);
+
+}
+
+
+/* Info */
+
+.leader-info {
+
+    padding:25px;
+
+}
+
+
+.leader-info h3 {
+
+    margin:0;
+
+    font-size:22px;
+
+    color:#222;
+
+}
+
+
+.leader-info h5 {
+
+    margin:8px 0;
+
+    color:#390077;
+
+    font-size:15px;
+
+}
+
+
+.leader-info p {
+
+    color:#666;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+}
+
+
+
+/* Social */
+
+.social {
+
+    margin-top:20px;
+
+}
+
+
+.social a {
+
+    display:inline-flex;
+
+    width:38px;
+
+    height:38px;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#390077;
+
+    color:#fff;
+
+    margin:0 5px;
+
+    transition:.3s;
+
+}
+
+
+.social a:hover {
+
+    background:#ffcc00;
+
+    color:#390077;
+
+}
+
+
+
+/* Responsive */
+
+@media(max-width:992px){
+
+    .leadership-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+
+    }
+
+}
+
+
+@media(max-width:600px){
+
+    .leadership-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .section-header h2{
+
+        font-size:30px;
+
+    }
+
+}

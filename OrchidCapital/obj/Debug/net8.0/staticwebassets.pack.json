@@ -229,6 +229,54 @@
       "PackagePath": "staticwebassets\\LoanProductImage\\ef7a2b87-2afe-4187-91df-4bf215912517.jpg"
     },
     {
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\AboutUs.css",
+      "PackagePath": "staticwebassets\\css\\AboutUs.css"
+    },
+    {
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\Advisory.css",
+      "PackagePath": "staticwebassets\\css\\Advisory.css"
+    },
+    {
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\BusinessLoans.css",
+      "PackagePath": "staticwebassets\\css\\BusinessLoans.css"
+    },
+    {
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\Careers.css",
+      "PackagePath": "staticwebassets\\css\\Careers.css"
+    },
+    {
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\Compliance.css",
+      "PackagePath": "staticwebassets\\css\\Compliance.css"
+    },
+    {
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\ContactUs.css",
+      "PackagePath": "staticwebassets\\css\\ContactUs.css"
+    },
+    {
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\Disclosures.css",
+      "PackagePath": "staticwebassets\\css\\Disclosures.css"
+    },
+    {
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\Leadership.css",
+      "PackagePath": "staticwebassets\\css\\Leadership.css"
+    },
+    {
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\Newsroom.css",
+      "PackagePath": "staticwebassets\\css\\Newsroom.css"
+    },
+    {
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\PrivacyPolicy.css",
+      "PackagePath": "staticwebassets\\css\\PrivacyPolicy.css"
+    },
+    {
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\StructuredFinance.css",
+      "PackagePath": "staticwebassets\\css\\StructuredFinance.css"
+    },
+    {
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\WorkingCapital.css",
+      "PackagePath": "staticwebassets\\css\\WorkingCapital.css"
+    },
+    {
       "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\financialcalculator.css",
       "PackagePath": "staticwebassets\\css\\financialcalculator.css"
     },
@@ -277,80 +325,76 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\WhatsApp Image 2026-02-16 at 9.35.19 PM (1).jpeg",
-      "PackagePath": "staticwebassets\\img\\WhatsApp Image 2026-02-16 at 9.35.19 PM (1).jpeg"
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\about-banner.png",
+      "PackagePath": "staticwebassets\\img\\about-banner.png"
     },
     {
-      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\bank.jpg",
-      "PackagePath": "staticwebassets\\img\\bank.jpg"
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\about-company.png",
+      "PackagePath": "staticwebassets\\img\\about-company.png"
     },
     {
-      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\developer.jpg",
-      "PackagePath": "staticwebassets\\img\\developer.jpg"
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\about-company1.png",
+      "PackagePath": "staticwebassets\\img\\about-company1.png"
     },
     {
-      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\hero.jpg",
-      "PackagePath": "staticwebassets\\img\\hero.jpg"
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\advisory.png",
+      "PackagePath": "staticwebassets\\img\\advisory.png"
     },
     {
-      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\heroblue1.png",
-      "PackagePath": "staticwebassets\\img\\heroblue1.png"
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\banking-team.png",
+      "PackagePath": "staticwebassets\\img\\banking-team.png"
     },
     {
-      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\heroblue2.png",
-      "PackagePath": "staticwebassets\\img\\heroblue2.png"
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\business-loan.png",
+      "PackagePath": "staticwebassets\\img\\business-loan.png"
     },
     {
-      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\heroc1.jpg",
-      "PackagePath": "staticwebassets\\img\\heroc1.jpg"
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\compliance-banner.png",
+      "PackagePath": "staticwebassets\\img\\compliance-banner.png"
     },
     {
-      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\heron1.png",
-      "PackagePath": "staticwebassets\\img\\heron1.png"
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\digital-banking.png",
+      "PackagePath": "staticwebassets\\img\\digital-banking.png"
     },
     {
-      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\heron2.png",
-      "PackagePath": "staticwebassets\\img\\heron2.png"
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\disclosure-banner.png",
+      "PackagePath": "staticwebassets\\img\\disclosure-banner.png"
+    },
+    {
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\home-loan.png",
+      "PackagePath": "staticwebassets\\img\\home-loan.png"
     },
     {
       "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
     },
     {
-      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\manu.jpg",
-      "PackagePath": "staticwebassets\\img\\manu.jpg"
-    },
-    {
       "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\msme.png",
       "PackagePath": "staticwebassets\\img\\msme.png"
     },
     {
-      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\ndfc.webp",
-      "PackagePath": "staticwebassets\\img\\ndfc.webp"
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\privacy-banner.png",
+      "PackagePath": "staticwebassets\\img\\privacy-banner.png"
     },
     {
-      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\petpedhi.jpg",
-      "PackagePath": "staticwebassets\\img\\petpedhi.jpg"
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\structured-finance.png",
+      "PackagePath": "staticwebassets\\img\\structured-finance.png"
     },
     {
-      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\pinvestor.jpg",
-      "PackagePath": "staticwebassets\\img\\pinvestor.jpg"
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\user.png",
+      "PackagePath": "staticwebassets\\img\\user.png"
     },
     {
-      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\salaried.jpg",
-      "PackagePath": "staticwebassets\\img\\salaried.jpg"
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\usericon.png",
+      "PackagePath": "staticwebassets\\img\\usericon.png"
     },
     {
-      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\service.jpg",
-      "PackagePath": "staticwebassets\\img\\service.jpg"
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\usericon1.png",
+      "PackagePath": "staticwebassets\\img\\usericon1.png"
     },
     {
-      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\sidbi.png",
-      "PackagePath": "staticwebassets\\img\\sidbi.png"
-    },
-    {
-      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\trade.jpg",
-      "PackagePath": "staticwebassets\\img\\trade.jpg"
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\working-capital.png",
+      "PackagePath": "staticwebassets\\img\\working-capital.png"
     },
     {
       "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\APortalAjaxResponse.js",
