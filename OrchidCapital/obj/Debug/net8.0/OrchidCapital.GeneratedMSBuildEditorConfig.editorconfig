@@ -9,367 +9,367 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = OrchidCapital
 build_property.RootNamespace = OrchidCapital
-build_property.ProjectDir = c:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\
+build_property.ProjectDir = C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = c:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital
+build_property.MSBuildProjectDirectory = C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/Agents.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/Agents.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWdlbnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/AuditLogHandling.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/AuditLogHandling.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQXVkaXRMb2dIYW5kbGluZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/Branch.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/Branch.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQnJhbmNoLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/ChangePassword.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/Customers.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/Customers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3VzdG9tZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/ErrorHandling.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/ErrorHandling.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRXJyb3JIYW5kbGluZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/ForgotPassword.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/ForgotPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRm9yZ290UGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/ImageConfiguration.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/ImageConfiguration.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cSW1hZ2VDb25maWd1cmF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/LoanType.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/LoanType.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9hblR5cGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/Pages.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/Pages.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUGFnZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/Profile.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/ResetPassword.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/ResetPassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUmVzZXRQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/RolePermissions.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/RolePermissions.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUm9sZVBlcm1pc3Npb25zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/Roles.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/Roles.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cUm9sZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/Service.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/Service.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cU2VydmljZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/Teams.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/Teams.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVGVhbXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AddAgents.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AddAgents.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX0FkZEFnZW50cy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AddBankBranch.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AddBankBranch.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX0FkZEJhbmtCcmFuY2guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AddBankService.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AddBankService.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX0FkZEJhbmtTZXJ2aWNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AddCustomers.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AddCustomers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX0FkZEN1c3RvbWVycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AddImageConfiguration.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AddImageConfiguration.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX0FkZEltYWdlQ29uZmlndXJhdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AddLoanType.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AddLoanType.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX0FkZExvYW5UeXBlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AddPages.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AddPages.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX0FkZFBhZ2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AddRolePermissions.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AddRolePermissions.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX0FkZFJvbGVQZXJtaXNzaW9ucy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AddRoles.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AddRoles.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX0FkZFJvbGVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AddTeams.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AddTeams.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX0FkZFRlYW1zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AgentsList.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AgentsList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX0FnZW50c0xpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AuditLogList.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_AuditLogList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX0F1ZGl0TG9nTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_BankBranchList.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_BankBranchList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX0JhbmtCcmFuY2hMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_BankServiceList.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_BankServiceList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX0JhbmtTZXJ2aWNlTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_CustomersList.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_CustomersList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX0N1c3RvbWVyc0xpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_EditUser.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_EditUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX0VkaXRVc2VyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_ErrorLogList.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_ErrorLogList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX0Vycm9yTG9nTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_ImageConfigurationList.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_ImageConfigurationList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX0ltYWdlQ29uZmlndXJhdGlvbkxpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_LoanTypeList.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_LoanTypeList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX0xvYW5UeXBlTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_PagesList.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_PagesList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX1BhZ2VzTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_RolesList.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_RolesList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX1JvbGVzTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_TeamsList.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_TeamsList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX1RlYW1zTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_TwoFactor.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Admin/_TwoFactor.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cX1R3b0ZhY3Rvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Dashboard/Dashboard.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Dashboard/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGFzaGJvYXJkXERhc2hib2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/DailyReport.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/DailyReport.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmluYW5jZVxEYWlseVJlcG9ydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/FinancialReport.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/FinancialReport.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmluYW5jZVxGaW5hbmNpYWxSZXBvcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/LoanApplicationList.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/LoanApplicationList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmluYW5jZVxMb2FuQXBwbGljYXRpb25MaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/LoanApproval.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/LoanApproval.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmluYW5jZVxMb2FuQXBwcm92YWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/LoanApprovalList.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/LoanApprovalList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmluYW5jZVxMb2FuQXBwcm92YWxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/NewLoanApplication.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/NewLoanApplication.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmluYW5jZVxOZXdMb2FuQXBwbGljYXRpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/_AddLoanApplicationDetails.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/_AddLoanApplicationDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmluYW5jZVxfQWRkTG9hbkFwcGxpY2F0aW9uRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/_AddLoanApplicationReview.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/_AddLoanApplicationReview.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmluYW5jZVxfQWRkTG9hbkFwcGxpY2F0aW9uUmV2aWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/_AddLoanDocument.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/_AddLoanDocument.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmluYW5jZVxfQWRkTG9hbkRvY3VtZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/_AddLoanGuarantorInformation.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/_AddLoanGuarantorInformation.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmluYW5jZVxfQWRkTG9hbkd1YXJhbnRvckluZm9ybWF0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/_LoanApplicationList.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/_LoanApplicationList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmluYW5jZVxfTG9hbkFwcGxpY2F0aW9uTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/_LoanApprovalList.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Finance/_LoanApprovalList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmluYW5jZVxfTG9hbkFwcHJvdmFsTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/AboutUs.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/AboutUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dFVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Advisory.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Advisory.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZHZpc29yeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/BusinessLoans.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/BusinessLoans.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCdXNpbmVzc0xvYW5zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Careers.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Careers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYXJlZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Compliance.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Compliance.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wbGlhbmNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/ContactUs.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/ContactUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0VXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Disclosures.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Disclosures.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEaXNjbG9zdXJlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Index.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Leadership.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Leadership.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMZWFkZXJzaGlwLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Newsroom.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/Newsroom.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOZXdzcm9vbS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/PrivacyPolicy.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/PrivacyPolicy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5UG9saWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/StructuredFinance.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/StructuredFinance.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdHJ1Y3R1cmVkRmluYW5jZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/UserRequest.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/UserRequest.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxVc2VyUmVxdWVzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/WorkingCapital.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/WorkingCapital.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxXb3JraW5nQ2FwaXRhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Login/ChangePassword.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Login/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cQ2hhbmdlUGFzc3dvcmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Login/Login.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Login/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Login/TwoFactorVerification.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Login/TwoFactorVerification.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cVHdvRmFjdG9yVmVyaWZpY2F0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/Error.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_AdminFooter.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_AdminFooter.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkZvb3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_AdminHeader.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_AdminHeader.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbkhlYWRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_AdminMenu.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_AdminMenu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbk1lbnUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_AdminScripts.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_AdminScripts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pblNjcmlwdHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_LanguageSelector.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_LanguageSelector.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYW5ndWFnZVNlbGVjdG9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_Layout.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_LayoutAdmin.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_LayoutAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_UserFinancialCalculator.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_UserFinancialCalculator.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyRmluYW5jaWFsQ2FsY3VsYXRvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_UserFooter.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_UserFooter.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyRm9vdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_UserHeader.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_UserHeader.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VySGVhZGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_UserHeroYono5.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_UserHeroYono5.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VySGVyb1lvbm81LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_UserPartners.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_UserPartners.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyUGFydG5lcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_UserSuperBusinessMega.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_UserSuperBusinessMega.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyU3VwZXJCdXNpbmVzc01lZ2EuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_UserTeams.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_UserTeams.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyVGVhbXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_UserWhatWeDo.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_UserWhatWeDo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyV2hhdFdlRG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_UserWhyUs.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_UserWhyUs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyV2h5VXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/_ViewImports.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/_ViewStart.cshtml]
+[C:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

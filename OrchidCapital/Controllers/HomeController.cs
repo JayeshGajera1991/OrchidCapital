@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using OrchidCapital.Models;
+using OrchidCapital.Resources;
 
 namespace OrchidCapital.Controllers
 {
@@ -11,15 +12,18 @@ namespace OrchidCapital.Controllers
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IConfiguration _configuration;
+        private readonly IStringLocalizer<SharedResource> _localizer;
 
-        public HomeController(IHttpContextAccessor httpContextAccessor, IConfiguration configuration) : base(httpContextAccessor, configuration)
+        public HomeController(IHttpContextAccessor httpContextAccessor, IConfiguration configuration, IStringLocalizer<SharedResource> localizer) : base(httpContextAccessor, configuration)
         {
             _httpContextAccessor = httpContextAccessor;
             _configuration = configuration;
+            _localizer = localizer;
         }
 
         public async Task<IActionResult> Index()
         {
+            ViewBag.Welcome = _localizer["WelcomeMessage"];
             try
             {
 
