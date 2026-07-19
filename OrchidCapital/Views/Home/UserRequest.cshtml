@@ -1,9 +1,8 @@
 <link rel="stylesheet" href="~/css/UserRequest.css" asp-append-version="true" />
-
-<!-- =========================
- HERO SECTION
-========================== -->
-
+@{
+   ViewData["Title"] = Localizer["LoanApply"];
+   var header = ViewBag.HeaderData as AllModuleListRequest;
+}
 <section class="hero">
 
     <div class="container hero-grid">

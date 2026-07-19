@@ -421,4 +421,7 @@
 <data name="ExploreOrchidCapitalServices" xml:space="preserve">
   <value>Explore Orchid Capital services...</value>
 </data>
+<data name="LoanApply" xml:space="preserve">
+  <value>Apply Loan</value>
+</data>
 </root>

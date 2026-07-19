@@ -365,4 +365,7 @@
 <data name="ExploreOrchidCapitalServices" xml:space="preserve">
   <value>ऑर्किड कॅपिटलच्या सेवा जाणून घ्या...</value>
 </data>
+<data name="LoanApply" xml:space="preserve">
+  <value>कर्जासाठी अर्ज करा</value>
+</data>
 </root>
