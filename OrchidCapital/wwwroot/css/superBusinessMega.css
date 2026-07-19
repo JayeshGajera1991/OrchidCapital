@@ -1,40 +1,31 @@
  /* =========================
    BUSINESS MEGA PANEL
    ========================= */
-
 .business-panel {
   position: fixed;
   top: 39px; /* EXACT header height */
   left: 0;
   width: 100%;
   box-sizing: border-box;
-
   background: white;
   border-radius: 0;
   padding: 20px 6%;
   box-shadow: 0 22px 60px rgba(0,0,0,0.28);
-
   opacity: 0;
   transform: translateY(0) scale(0.98);
   transform-origin: top center;
-
   transition:
     opacity 0.25s ease,
     transform 0.32s cubic-bezier(0.22, 1, 0.36, 1);
-
   pointer-events: none;
   z-index: 99999!important;
    isolation: isolate;   /* ⭐ prevents blending conflicts */
 }
-
 .business-panel.active ~ .sub-nav,
 .business-panel.active ~ nav.sub-nav {
   opacity: 0;
   pointer-events: none;
 }
-
-
-
 /* ACTIVE STATE */
 .business-panel.active {
   opacity: 1;
@@ -42,24 +33,20 @@
   pointer-events: auto;
   animation: panelPop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
-
 /* Smooth luxury pop */
 @keyframes panelPop {
   0%   { transform: translateY(12px) scale(0.96); }
   60%  { transform: translateY(-2px) scale(1.01); }
   100% { transform: translateY(0) scale(1); }
 }
-
 /* =========================
    PANEL HEADER
    ========================= */
-
 .panel-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .panel-header h2 {
   font-family: 'Inter', sans-serif;
   font-size: 26px;
@@ -67,11 +54,9 @@
   color: #06306F;
   margin: 0;
 }
-
 /* =========================
    SAFE BANK HEADER ENHANCEMENT
    ========================= */
-
 /* Left wrapper */
 .biz-head-left h2 {
   display: flex;
@@ -79,45 +64,35 @@
   gap: 8px;
   margin: 0;
 }
-
 /* Icon styling */
 .biz-head-left h2 i {
   font-size: 16px;
   color: #0E69F1;
 }
-
 /* Center MSME block */
 .biz-head-center {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-
   display: flex;
   align-items: center;
   gap: 6px;
-
   font-family: 'Inter', sans-serif;
   font-size: 12.5px;
   font-weight: 500;
   color: #475569;
-
   pointer-events: none; /* prevents hover interference */
 }
-
 /* MSME Logo */
 .biz-head-center img {
   height: 56px;
   width: auto;
   opacity: 0.85;
 }
-
 /* Tagline text */
 .biz-head-center span {
   letter-spacing: 0.3px;
 }
-
-
-
 /* TOP CLOSE ICON */
 .panel-close-top {
   width: 38px;
@@ -131,38 +106,31 @@
   color: #334155;
   font-size: 18px;
 }
-
 .panel-close-top:hover {
   background: #f1f5f9;
   color: #0E69F1;
 }
-
 /* =========================
    DIVIDER
    ========================= */
-
 .panel-divider {
   height: 1px;
   background: #e2e8f0;
   margin: 10px 0 22px;
 }
-
 /* =========================
    PANEL BODY
    ========================= */
-
 .panel-body {
   display: flex;
   justify-content: space-between;
   gap: 60px;
 }
-
 /* LEFT COLUMNS */
 .panel-columns {
   display: flex;
   gap: 70px;
 }
-
 /* COLUMN */
 .panel-column {
   display: flex;
@@ -170,7 +138,6 @@
   gap: 8px;
   min-width: 180px;
 }
-
 .panel-column h4 {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
@@ -178,7 +145,6 @@
   color: #0f172a;
   margin-bottom: 6px;
 }
-
 .panel-column a {
   text-decoration: none;
   font-family: 'Inter', sans-serif;
@@ -186,35 +152,28 @@
   color: #475569;
   transition: 0.2s ease;
 }
-
 .panel-column a:hover {
   color: #0E69F1;
   transform: translateX(2px);
 }
-
 .panel-header-right {
   display: flex;
   align-items: center;
   gap: 14px;
 }
-
 .panel-header-right img {
   height: 76px;
   width: auto;
 }
-
-
 /* =========================
    RIGHT SIDE
    ========================= */
-
 .panel-right {
   display: flex;
   flex-direction: column;
   gap: 16px;
   width: 260px;
 }
-
 /* LOGO BOX (TOP RIGHT) */
 .panel-logo-box {
   background: white;
@@ -225,12 +184,10 @@
   align-items: center;
   justify-content: center;
 }
-
 .panel-logo-box img {
   height: 42px;
   filter: none; /* ORIGINAL COLORS */
 }
-
 /* INFO BOX */
 .panel-info-box {
   background: linear-gradient(135deg, #0E69F1, #65BCF6);
@@ -242,11 +199,9 @@
   line-height: 1.5;
   box-shadow: 0 10px 25px rgba(14,105,241,0.25);
 }
-
 /* =========================
    PANEL FOOTER
    ========================= */
-
 .panel-footer {
   margin-top: 26px;
   border-top: 1px solid #e2e8f0;
@@ -254,7 +209,6 @@
   display: flex;
   justify-content: flex-end;
 }
-
 .panel-footer button {
   border: none;
   background: #0f172a;
@@ -270,26 +224,21 @@
   gap: 6px;
   transition: 0.25s ease;
 }
-
 .panel-footer button:hover {
   background: #020617;
   transform: translateY(-1px);
 }
-
 /* =========================
    ADVANCED FINANCE PANEL
    ========================= */
-
 .advanced-finance {
   display: flex;
   gap: 90px;
 }
-
 .finance-group a {
   position: relative;
   padding: 4px 0;
 }
-
 .finance-group a::after {
   content: "";
   position: absolute;
@@ -300,42 +249,34 @@
   background: #0E69F1;
   transition: width 0.25s ease;
 }
-
 .finance-group a:hover::after {
   width: 100%;
 }
-
 .finance-group a:hover {
   color: #0E69F1;
   transform: translateX(3px);
 }
-
 /* RIGHT SIDE PREVIEW */
 .finance-preview {
   justify-content: center;
 }
-
 .dynamic-desc {
   min-height: 120px;
   transition: 0.3s ease;
 }
-
 .dynamic-desc p {
   margin: 6px 0 0;
   font-size: 13px;
   opacity: 0.9;
 }
-
 /* =========================
    EMI TAGS
    ========================= */
-
 .panel-emi-tags {
   margin-top: 18px;
   display: flex;
   gap: 12px;
 }
-
 .emi-tag {
   font-size: 11px;
   font-family: 'Inter', sans-serif;
@@ -346,27 +287,22 @@
   cursor: default;
   animation: floatTag 3s ease-in-out infinite;
 }
-
 .emi-tag.low {
   background: rgba(14,105,241,0.1);
   color: #0E69F1;
 }
-
 .emi-tag.no {
   background: rgba(16,185,129,0.12);
   color: #10b981;
 }
-
 .emi-tag.flexi {
   background: rgba(249,115,22,0.12);
   color: #f97316;
 }
-
 @keyframes floatTag {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-2px); }
 }
-
 /* =========================
    THREE ZONE LAYOUT
    ========================= */
@@ -375,9 +311,6 @@
   grid-template-columns: 1.7fr 2.2fr 1fr;  /* LEFT | MIDDLE (wider) | RIGHT */
   gap: 12px;
 }
-
-
-
 /* Vertical separators */
 .zone-left {
   padding-right: 0px;
@@ -386,18 +319,15 @@
 .panel-columns.advanced-finance {
   gap: 35px;  /* was 90px → compact banking alignment */
 }
-
 .panel-column {
   gap: 6px;   /* tighter vertical rhythm */
 }
-
 .zone-middle {
   padding: 0 12px;
   border-right: 1px solid #e2e8f0;
   display: flex;
   align-items: flex-start;
 }
-
 /* Remove gradient card styling */
 .zone-middle .panel-info-box {
   background: none;
@@ -406,7 +336,6 @@
   border-radius: 0;
   color: #0f172a;
 }
-
 /* Professional description typography */
 .dynamic-desc strong {
   font-size: 15px;
@@ -415,7 +344,6 @@
   display: block;
   margin-bottom: 8px;
 }
-
 .dynamic-desc p {
   font-size: 13px;
   line-height: 1.6;
@@ -431,17 +359,13 @@
   width: 1px;
   background: linear-gradient(to bottom, transparent, #e2e8f0, transparent);
 }
-
-
 /* =========================
    BANK GRADE DETAIL PANEL
    ========================= */
-
 .finance-detail {
   width: 100%;
   padding: 4px 6px;
 }
-
 .finance-header span {
   font-size: 16px;
   font-weight: 600;
@@ -449,7 +373,6 @@
   display: block;
   margin-bottom: 10px;
 }
-
 /* Bullet points */
 .finance-detail ul {
   margin: 0;
@@ -458,62 +381,51 @@
   flex-direction: column;
   gap: 6px;
 }
-
 .finance-detail li {
   font-size: 13px;
   color: #475569;
   line-height: 1.5;
 }
-
 /* =========================
    BANK GRADE APPLY BUTTON
    ========================= */
-
 .apply-btn {
   margin-top: 16px;
   background: linear-gradient(135deg, #0E69F1, #0A58CA);
   color: white;
   border: none;
   border-radius: 8px;
-
   padding: 10px 16px;
   font-size: 12.5px;
   font-weight: 600;
   letter-spacing: 0.3px;
-
   display: inline-flex;
   align-items: center;
   gap: 7px;
-
   cursor: pointer;
   transition: all 0.22s ease;
   box-shadow:
     0 4px 10px rgba(14,105,241,0.22),
     inset 0 1px 0 rgba(255,255,255,0.25);
 }
-
 /* Icon refinement */
 .apply-btn i {
   font-size: 12px;
   transition: transform 0.22s ease;
 }
-
 /* Hover → subtle banking lift */
 .apply-btn:hover {
   background: linear-gradient(135deg, #0A58CA, #084298);
   box-shadow:
     0 6px 14px rgba(14,105,241,0.28),
     inset 0 1px 0 rgba(255,255,255,0.3);
-
   transform: translateY(-1px);
   color: white;
 }
-
 /* Arrow micro-motion */
 .apply-btn:hover i {
   transform: translateX(2px);
 }
-
 /* Click feedback */
 .apply-btn:active {
   transform: translateY(0);
@@ -521,33 +433,26 @@
     0 2px 6px rgba(14,105,241,0.18),
     inset 0 2px 4px rgba(0,0,0,0.15);
 }
-
-
-
 /* Right help section */
 .zone-right {
   display: flex;
   align-items: center;
   padding-left: 6px;   /* reduced */
 }
-
 .help-box {
   padding: 16px;       /* slightly tighter */
   border-radius: 14px;
 }
-
 .help-box h4 {
   margin: 0 0 6px;
   font-size: 15px;
   color: #0f172a;
 }
-
 .help-box p {
   font-size: 13px;
   color: #475569;
   margin-bottom: 14px;
 }
-
 .help-box button {
   border: none;
   background: #0E69F1;
@@ -562,16 +467,13 @@
   gap: 6px;
   transition: 0.25s ease;
 }
-
 .help-box button:hover {
   background: #0852c9;
   transform: translateY(-1px);
 }
-
 /* =========================
    PROFESSIONAL EMI TAGS
    ========================= */
-
 .panel-emi-tags {
   margin-top: 18px;
   padding-top: 10px;
@@ -579,7 +481,6 @@
   display: flex;
   gap: 8px;
 }
-
 .emi-tag {
   font-size: 10.5px;
   font-weight: 600;
@@ -587,69 +488,55 @@
   border-radius: 4px;
   letter-spacing: 0.45px;
 }
-
-
 .emi-tag.low {
   background: #eff6ff;
   color: #0E69F1;
   border-color: #dbeafe;
 }
-
 .emi-tag.no {
   background: #ecfdf5;
   color: #059669;
   border-color: #d1fae5;
 }
-
 .emi-tag.flexi {
   background: #fff7ed;
   color: #ea580c;
   border-color: #fed7aa;
 }
-
 /* =========================
    BANK FOOTER LAYOUT
    ========================= */
-
 .bank-footer {
   position: relative;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-
 /* Center Tagline */
 .footer-tagline {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.4px;
-
   background: linear-gradient(135deg, #0f172a, #334155);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   opacity: 0.9;
   white-space: nowrap;
 }
-
 /* Highlight word */
 .footer-tagline span {
   font-size: 22px;
   font-weight: 700;
   margin-left: 6px;
-
   background: linear-gradient(135deg, #0E69F1, #7d2aa4);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
   letter-spacing: 0.6px;
 }
-
 /* Optional subtle glow */
 .footer-tagline span::after {
   content: "";
@@ -661,10 +548,8 @@
 .footer-tagline {
   animation: shimmerText 6s linear infinite;
 }
-
 @keyframes shimmerText {
   0% { opacity: 0.75; }
   50% { opacity: 1; }
   100% { opacity: 0.75; }
 }
-

@@ -2,10 +2,8 @@
    PREMIUM LIGHT BLUE HERO – BANK GRADE FINISH
    Inspired by corporate blue + subtle saffron warmth
    ================================================== */
-
 .hero-section {
   position: relative;
-
   /* 🔥 Upscaled Bank-Grade Dual Gradient */
   background: linear-gradient(
     115deg,
@@ -19,14 +17,10 @@ filter: contrast(1.12) brightness(1.05);
   overflow: hidden;
   margin-top: -82px;
   padding-top: 82px;
-  
-
  /* box-shadow:
   inset 0 0 60px rgba(255,255,255,0.04),
   0 30px 70px rgba(0,0,0,0.18); */
 }
-
-
 /* ----------------------------------------
    Subtle Saffron Warm Accent (very soft)
    ---------------------------------------- */
@@ -34,19 +28,15 @@ filter: contrast(1.12) brightness(1.05);
   content: "";
   position: absolute;
   inset: 0;
-
   background:
     radial-gradient(circle at 30% 25%, rgba(255,40,40,0.35), transparent 45%),
     radial-gradient(circle at 70% 30%, rgba(60,120,255,0.35), transparent 55%);
-
   mix-blend-mode: color-dodge;
   pointer-events: none;
 }
-
 /* ==================================================
    SEARCH BAR – PREMIUM CLEAN ELEVATION
    ================================================== */
-
 .hero-search {
   margin-top: 40px;
   background: rgba(255,255,255,0.98);
@@ -56,14 +46,11 @@ filter: contrast(1.12) brightness(1.05);
   align-items: center;
   gap: 12px;
   max-width: 520px;
-
   box-shadow:
     0 22px 50px rgba(0,0,0,0.20),
     0 8px 18px rgba(0,0,0,0.08);
-
   border: none;
 }
-
 .hero-search input {
   border: none;
   outline: none;
@@ -73,59 +60,45 @@ filter: contrast(1.12) brightness(1.05);
   background: transparent;
   color: #111;
 }
-
 .hero-search i {
   color: #555;
 }
-
 /* ==================================================
    EXTENSION PANEL – MATTE GLASS FINISH
    ================================================== */
-
 .hero-left-extension {
   background: rgba(255,255,255,0.10);
   backdrop-filter: blur(18px);
   border-radius: 26px;
-
   border: 1px solid rgba(255,255,255,0.18);
-
   box-shadow:
     0 35px 70px rgba(0,0,0,0.25),
     inset 0 1px 0 rgba(255,255,255,0.15);
 }
-
 /* ==================================================
    SERVICE PANEL – CLEAN BANK DEPTH
    ================================================== */
-
 .service-panel {
   background: #ffffff;
   border-radius: 24px;
-
   box-shadow:
     0 40px 90px rgba(0,0,0,0.16),
     0 12px 28px rgba(0,0,0,0.08);
 }
-
 /* ==================================================
    SLIDER CONTROLS – MODERN CORPORATE STYLE
    ================================================== */
-
 .slider-controls button {
   border: none;
   width: 44px;
   height: 44px;
   border-radius: 16px;
-
   background: rgba(0,0,0,0.45);
   color: white;
-
   box-shadow: 0 12px 28px rgba(0,0,0,0.25);
-
   cursor: pointer;
   transition: all 0.25s ease;
 }
-
 .slider-controls button:hover {
   transform: translateY(-2px);
   background: rgba(0,0,0,0.60);
@@ -140,7 +113,6 @@ filter: contrast(1.12) brightness(1.05);
   justify-content: center;
   min-height: 650px;   /* 👈 Increased height */
 }
-
 /* LEFT PANEL */
 .hero-left {
   flex: 1;
@@ -151,7 +123,6 @@ filter: contrast(1.12) brightness(1.05);
   margin-top: 30px;;
   justify-content: flex-start;
 }
-
 /* BANK-GRADE TITLE */
 .hero-left h1 {
   font-size: 52px;              /* 👈 Bigger impact */
@@ -162,7 +133,6 @@ filter: contrast(1.12) brightness(1.05);
   font-family: "Poppins", "Segoe UI", system-ui, sans-serif;
   color: #ffffff;
 }
-
 /* SEARCH BAR */
 .hero-search {
   margin-top: 40px;
@@ -175,12 +145,10 @@ filter: contrast(1.12) brightness(1.05);
   max-width: 520px;
   border: 1px solid #e5e7eb;
 }
-
 .hero-search i {
   color: #6b7280;
   font-size: 16px;
 }
-
 .hero-search input {
   border: none;
   outline: none;
@@ -189,7 +157,6 @@ filter: contrast(1.12) brightness(1.05);
   font-weight: 500;
   font-family: "Poppins", sans-serif;
 }
-
 /* Voice Search Button */
 .voice-search {
   width: 34px;
@@ -202,26 +169,21 @@ filter: contrast(1.12) brightness(1.05);
   cursor: pointer;
   transition: 0.2s ease;
 }
-
 .voice-search:hover {
   background: #e5e7eb;
 }
 .hero-search input {
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
-
 /* Animation states */
 .placeholder-fade-out {
   opacity: 0;
   transform: translateY(2px);
 }
-
 .placeholder-fade-in {
   opacity: 1;
   transform: translateY(0);
 }
-
-
 /* BANKING GRID */
 .banking-grid {
   margin-top: 34px;
@@ -230,7 +192,6 @@ filter: contrast(1.12) brightness(1.05);
   gap: 14px;
   max-width: 520px;
 }
-
 /* BANKING CARD */
 .banking-card {
   height: 62px;
@@ -240,27 +201,22 @@ filter: contrast(1.12) brightness(1.05);
   font-weight: 500;
   background: #ffffff;
   border: 1px solid #e5e7eb;
-
   display: flex;
   align-items: center;
   gap: 12px;
-
   cursor: pointer;
   transition: transform 0.2s ease, background 0.2s ease;
 }
-
 /* ICON */
 .banking-card i {
   font-size: 19px;
   color: #000000;
 }
-
 /* HOVER */
 .banking-card:hover {
   background: #f9fafb;
   transform: translateY(-1px);
 }
-
 /* LOCK COLORS */
 .banking-card,
 .banking-card *,
@@ -269,49 +225,37 @@ filter: contrast(1.12) brightness(1.05);
 .banking-card:focus {
   color: #000000 !important;
 }
-
 .banking-card i {
   color: #000000 !important;
 }
-
-
 /* HERO CONTAINER MUST BE POSITIONED */
 .hero-container {
   position: relative;
 }
-
 /* LEFT PANEL MUST ALLOW OVERFLOW */
 .hero-left {
   position: relative;
   overflow: visible;   /* 👈 IMPORTANT */
 }
-
 /* ==================================================
    EXTENSION PANEL – PREMIUM BLENDED MATTE
    ================================================== */
-
 .hero-left-extension {
   position: absolute;
   right: -250px;
   top: 50%;
   transform: translateY(-50%);
-
   width: 300px;
   padding: 28px 24px;
-
   background: rgba(255,255,255,0.08);
   backdrop-filter: blur(22px);
-
   border-radius: 28px;
   border: 1px solid rgba(255,255,255,0.18);
-
   box-shadow:
     0 40px 80px rgba(0,0,0,0.28),
     inset 0 1px 0 rgba(255,255,255,0.20);
-
   z-index: 20;
 }
-
 /* Feature Content Layout */
 .feature-content {
   display: none;
@@ -319,13 +263,10 @@ filter: contrast(1.12) brightness(1.05);
   animation: fadeSlide 0.45s ease;
   z-index: 5;
   right: -40px;
-
 }
-
 .feature-content.active {
   display: block;
 }
-
 /* Text */
 .feature-text h2 {
   font-size: 26px;
@@ -333,60 +274,49 @@ filter: contrast(1.12) brightness(1.05);
   margin: 0;
   color: black;
 }
-
 .feature-text p {
   margin: 6px 0 0;
   font-size: 14px;
   color: black;
 }
-
 /* 🚀 Floating Button */
 .feature-btn {
   position: absolute;
   top: 150px;
   right: -130px;
-
   background: #ffffff;
   color: rgb(38,110,215); /* match hero blue */
-
   padding: 12px 24px;
   border-radius: 16px;
   font-weight: 600;
-
   box-shadow:
     0 18px 40px rgba(0,0,0,0.22),
     0 6px 15px rgba(0,0,0,0.10);
-
   transition: 0.25s ease;
 }
-
 /* Hover */
 .feature-btn:hover {
   transform: translateY(-2px);
   background: #f3f4f6;
 }
-
 /* RIGHT PANEL */
 .hero-right {
   flex: 1;
   position: relative;
   background: transparent;
 }
-
 /* SLIDER */
 .slider {
   position: relative;
   width: 100%;
   height: 100%;
 }
-
 .slides {
   position: relative;
   width: 100%;
   height: 100%;
   min-height: 540px;
 }
-
 .slide {
   position: absolute;
   width: 100%;
@@ -395,11 +325,9 @@ filter: contrast(1.12) brightness(1.05);
   opacity: 0;
   transition: opacity 0.6s ease;
 }
-
 .slide.active {
   opacity: 1;
 }
-
 /* CONTROLS */
 .slider-controls {
   position: absolute;
@@ -408,7 +336,6 @@ filter: contrast(1.12) brightness(1.05);
   display: flex;
   gap: 10px;
 }
-
 .slider-controls button {
   border: none;
   width: 44px;
@@ -418,7 +345,6 @@ filter: contrast(1.12) brightness(1.05);
   color: white;
   cursor: pointer;
 }
-
 .service-wrapper {
      margin-top: -30px;
      max-width: 1400px;
@@ -426,7 +352,6 @@ filter: contrast(1.12) brightness(1.05);
      margin-right: auto;
      z-index: 1000;
      position: relative;
-
 }
 /* SERVICE PANEL WRAPPER */
 .service-panel {
@@ -434,8 +359,6 @@ filter: contrast(1.12) brightness(1.05);
   background: white;
   margin-left: 10%;
   margin-right: 10%;
- 
-  
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -445,7 +368,6 @@ filter: contrast(1.12) brightness(1.05);
   box-shadow: 0 -4px 18px rgba(0,0,0,0.08);
   flex-wrap: wrap; /* 👈 Prevent breaking on small screens */
 }
-
 /* BUTTON BASE */
 .service-btn {
   border: none;
@@ -461,24 +383,20 @@ filter: contrast(1.12) brightness(1.05);
   gap: 10px;
   transition: 0.25s ease;
 }
-
 /* ICON */
 .service-btn i {
   font-size: 20px;
   color: #6b21a8;
 }
-
 /* TEXT */
 .service-btn span {
   white-space: nowrap;
 }
-
 /* HOVER */
 .service-btn:hover {
   background: #e2e8f0;
   transform: translateY(-2px);
 }
-
 /* PRIMARY BUTTON */
 .service-btn.primary {
   background: linear-gradient(135deg, #78158f, #0E69F1);
@@ -486,27 +404,22 @@ filter: contrast(1.12) brightness(1.05);
   font-weight: 600;
   padding: 18px 30px;
 }
-
 .service-btn.primary i {
   color: white;
 }
-
 .service-btn.primary:hover {
   opacity: 0.95;
 }
-
 /* ==================================================
    SEAMLESS HERO CONTINUATION PANEL
    Same gradient → fades to white
 ================================================== */
-
 .hero-bottom {
   position: relative;
   width: 100%;
   height: 80px;
   margin-top: -46px;
   z-index: 1;
-
   /* SAME EXACT HERO GRADIENT */
   background:
     linear-gradient(
@@ -516,14 +429,12 @@ filter: contrast(1.12) brightness(1.05);
     rgb(46, 102, 255) 75%,     /* Rich Corporate Blue */
     rgb(22, 60, 170) 100%    
     );
-
   overflow: hidden;
 }
 .hero-bottom::after {
   content: "";
   position: absolute;
   inset: 0;
-
   background: linear-gradient(
     to bottom,
     rgba(255,255,255,0) 0%,
@@ -532,8 +443,6 @@ filter: contrast(1.12) brightness(1.05);
     #ffffff 100%
   );
 }
-
-
 /* STRIPS CONTAINER */
 /* STRIP CONTAINER */
 .strip-line {
@@ -544,39 +453,28 @@ filter: contrast(1.12) brightness(1.05);
   height: 100%;   /* 👈 FULL HEIGHT */
   display: flex;
   gap: 0;        /* No gap for seamless stripes */}
-
-
 /* VERTICAL STRIPS */
 .strip-line span {
   flex: 1;
   height: 100%;
-
   background: transparent;
   border-right: 1px solid rgba(0,0,0,0.03);
 }
-
 .strip-line span:last-child {
   border-right: none;
 }
-
-
-
-
 /* Remove last border */
 .strip-line span:last-child {
   border-right: none;
 }
-
 /* Remove last border */
 .strip-line span:last-child {
   border-right: none;
 }
-
 .empty-white-spcae {
   height: 70px;
   background-color: white;
 }
-
 .hero-tag {
     padding-left: 30px;
   font-size: 22px;
@@ -590,38 +488,29 @@ filter: contrast(1.12) brightness(1.05);
   inset: 0;
   pointer-events: none;
 }
-
 /* EXTENSION PANEL TEXT LAYOUT */
 .hero-left-extension {
   display: flex;
   align-items: center;
-  
 }
-
-
 /* TAGLINE */
 .hero-tagline {
   margin: 3px 0 0;
   font-size: 14px;
   letter-spacing: 0.3px;
   color: rgba(255,255,255,0.75);
-
   text-align: right;          /* 👈 Right aligned */
   font-weight: 500;
-
   font-family: "Poppins", "Segoe UI", sans-serif;
 }
-
 /* FEATURE CONTENT ANIMATION */
 .feature-content {
   display: none;
   animation: fadeSlide 0.45s ease;
 }
-
 .feature-content.active {
   display: block;
 }
-
 /* SMOOTH TEXT ANIMATION */
 @keyframes fadeSlide {
   from {
@@ -633,12 +522,9 @@ filter: contrast(1.12) brightness(1.05);
     transform: translateX(0);
   }
 }
-
 .feature-content.active {
   transform: translateY(-5px);
 }
-
-
 /* BASE SQUARE STYLE */
 .decor-square {
   position: absolute;
@@ -646,19 +532,14 @@ filter: contrast(1.12) brightness(1.05);
   height: 58px;
   background: rgba(255,255,255,0.10);
 backdrop-filter: blur(4px); /* 👈 Low opacity */
-  
 }
-
 /* INDIVIDUAL POSITIONS (CUSTOMIZABLE) */
-
 .sq1 {
   top: 232px;
   right: -250px;
   z-index: 4;
   opacity: 0.4;
-  
 }
-
 .sq2 {
   top: 232px;
   right: -212px;
@@ -677,7 +558,6 @@ backdrop-filter: blur(4px); /* 👈 Low opacity */
   opacity: 0.8;
   z-index: 4;
 }
-
 .sq4 {
   top: 232px;
   right: -136px;
@@ -689,79 +569,67 @@ backdrop-filter: blur(4px); /* 👈 Low opacity */
   right: -60px;
   opacity: 0.5;
   z-index: 4;
-
 }
 .sq7 {
   top: 192px;
   right: -30px;
   opacity: 0.3;
   z-index: 4;
-
 }
 .sq8 {
   top: 350px;
   right: -142px;
   opacity: 0.5;
   z-index: 4;
-
 }
 .sq9 {
   top: 350px;
   right: -200px;
   opacity: 0.5;
   z-index: 4;
-
 }
 .sq11 {
   top: 330px;
   right: -260px;
   opacity: 0.5;
   z-index: 4;
-
 }
 .sq12 {
   top: 360px;
   right: -230px;
   opacity: 0.8;
   z-index: 4;
-
 }
 .sq13 {
   top: 350px;
   right: -83px;
   opacity: 0.5;
   z-index: 4;
-
 }
 .sq14 {
   top: 370px;
   right: -123px;
   opacity: 0.8;
   z-index: 4;
-
 }
 .sq10 {
   top: 172px;
   right: -159px;
   opacity: 0.5;
   z-index: 4;
-
 }
 .sq15 {
   top: 250px;
   right: -305px;
   opacity: 0.2;
   z-index: 4;
-
 }
 .sq16 {
   top: 300px;
   right: -305px;
   opacity: 0.2;
   z-index: 4;
-
 }
-
 /* ===== BANK-GRADE HERO OPTIONS (CLEAN, NO GLASS) ===== */
 .banking-options .option {
   height: 62px;              /* 👈 Bigger */
@@ -776,30 +644,24 @@ backdrop-filter: blur(4px); /* 👈 Low opacity */
   gap: 12px;
   transition: transform 0.2s ease, background 0.2s ease;
 }
-
 .banking-options .option i {
   font-size: 19px;
 }
-
-
 /* ICON */
 .banking-options .option i {
   color: #000000;
   font-size: 18px;
 }
-
 /* HOVER – CLEAN BANK STYLE */
 .banking-options .option:hover {
   background: #f9fafb;              /* Soft professional hover */
   transform: translateY(-1px);
   color: #000000;
 }
-
 /* ICON COLOR LOCK */
 .banking-options .option:hover i {
   color: #000000;
 }
-
 /* REMOVE FOCUS / TAP HIGHLIGHT */
 .banking-options .option,
 .banking-options .option:focus,
@@ -815,7 +677,6 @@ backdrop-filter: blur(4px); /* 👈 Low opacity */
   gap: 12px;
   font-family: "Poppins", sans-serif;
 }
-
 .hero-support i {
   width: 42px;
   height: 42px;
@@ -826,24 +687,20 @@ backdrop-filter: blur(4px); /* 👈 Low opacity */
   justify-content: center;
   font-size: 18px;
 }
-
 .hero-support-text {
   display: flex;
   flex-direction: column;
   line-height: 1.2;
 }
-
 .hero-support-text span {
   font-size: 13px;
   color: rgba(255,255,255,0.7);
 }
-
 .hero-support-text strong {
   font-size: 17px;
   font-weight: 600;
   color: #ffffff;
 }
-
 /* 🔒 HARD LOCK TEXT COLOR – PREVENT BLUE FLASH ON LOAD */
 .banking-options .option,
 .banking-options .option *,
@@ -853,7 +710,6 @@ backdrop-filter: blur(4px); /* 👈 Low opacity */
 .banking-options .option:visited {
   color: #000000 !important;
 }
-
 /* 🔒 HARD LOCK ICON COLOR TOO */
 .banking-options .option i,
 .banking-options .option:hover i,
@@ -861,42 +717,32 @@ backdrop-filter: blur(4px); /* 👈 Low opacity */
 .banking-options .option:active i {
   color: #000000 !important;
 }
-
 .next-section {
   background: #ffffff;
   position: relative;
   height: 50px;
   z-index: 2;
 }
-
 /* ==========================================
    PREMIUM BLENDED HERO STRIPS
    ========================================== */
-
 .hero-strips {
   position: relative;
   height: 120px;
   margin-top: -120px; /* slight overlap with service panel */
   z-index: 2;
-
   display: flex;
   width: 100%;
-
   /* NO background */
 }
-
 /* Vertical Lines */
 .hero-strips span {
   flex: 1;
   height: 100%;
-
   border-right: 1px solid rgba(255,255,255,0.10);
 }
-
 /* Remove last border */
 .hero-strips span:last-child {
   border-right: none;
 }
-
-
 /* Soft fade blending to hero-bottom */

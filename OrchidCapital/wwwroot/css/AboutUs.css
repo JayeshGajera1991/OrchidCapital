@@ -2,7 +2,6 @@
  GOOGLE FONT
 ==========================*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
 /*=========================
  ROOT
 ==========================*/
@@ -15,38 +14,29 @@
     --radius: 18px;
     --shadow: 0 10px 30px rgba(0, 0, 0, .08);
 }
-
-
-
 img {
     max-width: 100%;
     display: block;
     border-radius: 10px;
     box-shadow: 0 15px 40px rgba(57, 0, 119, .12);
 }
-
 a {
     text-decoration: none;
 }
-
 .container {
     width: 90%;
     max-width: 1280px;
     margin: auto;
 }
-
 .section {
     padding: 80px 0;
 }
-
 .light {
     background: #fff;
 }
-
 /*=========================
  BUTTONS
 ==========================*/
-
 .btn-primary {
     display: inline-block;
     padding: 14px 35px;
@@ -56,11 +46,9 @@ a {
     transition: .3s;
     font-weight: 600;
 }
-
 .btn-primary:hover {
     transform: translateY(-4px);
 }
-
 .btn-outline {
     display: inline-block;
     padding: 14px 35px;
@@ -70,29 +58,24 @@ a {
     margin-left: 15px;
     transition: .3s;
 }
-
 .btn-outline:hover {
     background: #390077;
     color: #fff;
 }
-
 /*=========================
  HERO
 ==========================*/
-
 .hero {
     background: linear-gradient(110deg, rgb(69 28 105), rgb(22 76 182));
     color: #fff;
     padding: 100px 0;
 }
-
 .hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
 }
-
 .subtitle {
     display: inline-block;
     color: #ffb74d;
@@ -100,13 +83,11 @@ a {
     letter-spacing: 2px;
     margin-bottom: 15px;
 }
-
 .hero h1 {
     font-size: 56px;
     line-height: 1.2;
     margin-bottom: 20px;
 }
-
 .hero p {
     font-size: 18px;
     margin-bottom: 35px;
@@ -122,80 +103,63 @@ a {
     animation: float 4s ease-in-out infinite;
     filter: drop-shadow(0 25px 40px rgba(57, 0, 119, .18));
 }
-
 @keyframes float {
-
     50% {
         transform: translateY(-15px);
     }
-
 }
-
 /*=========================
  ABOUT
 ==========================*/
-
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
 }
-
 .about-img {
     border-radius: 20px;
     box-shadow: var(--shadow);
 }
-
 .section-tag {
     color: #390077;
     font-weight: 700;
     text-transform: uppercase;
 }
-
 .about h2 {
     font-size: 40px;
     margin: 20px 0;
 }
-
 .about-list {
     list-style: none;
     margin-top: 25px;
 }
-
 .about-list li {
     margin: 12px 0;
 }
-
 .about-list i {
     color: #ff8a00;
     margin-right: 10px;
 }
-
 /*=========================
  TITLES
 ==========================*/
-
 .section-title {
     text-align: center;
     margin-bottom: 50px;
 }
-
 .section-title h2 {
     font-size: 42px;
     color: #390077;
 }
-
 /*=========================
  MISSION
 ==========================*/
-
 .mission-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
-
 .glass-card {
     background: rgba(255, 255, 255, .8);
     border-radius: 20px;
@@ -205,27 +169,22 @@ a {
     box-shadow: var(--shadow);
     transition: .3s;
 }
-
 .glass-card:hover {
     transform: translateY(-8px);
 }
-
 .glass-card i {
     font-size: 45px;
     color: #390077;
     margin-bottom: 20px;
 }
-
 /*=========================
  WHY
 ==========================*/
-
 .why-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
-
 .why-box {
     background: #fff;
     padding: 35px;
@@ -234,27 +193,22 @@ a {
     box-shadow: var(--shadow);
     transition: .3s;
 }
-
 .why-box:hover {
     transform: translateY(-6px);
 }
-
 .why-box i {
     font-size: 42px;
     color: #390077;
     margin-bottom: 15px;
 }
-
 /*=========================
  SERVICES
 ==========================*/
-
 .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
-
 .service-card {
     background: #fff;
     text-align: center;
@@ -263,48 +217,39 @@ a {
     box-shadow: var(--shadow);
     transition: .3s;
 }
-
 .service-card:hover {
     background: #390077;
     color: #fff;
 }
-
 .service-card i {
     font-size: 42px;
     color: #ff8a00;
     margin-bottom: 15px;
 }
-
 /*=========================
  STATS
 ==========================*/
-
 .stats {
     background: #390077;
     color: #fff;
     padding: 70px 0;
 }
-
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     text-align: center;
 }
-
 .stats h2 {
     font-size: 48px;
 }
-
 /*=========================
  TIMELINE
 ==========================*/
-
 .timeline {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
-
 .step {
     background: #fff;
     text-align: center;
@@ -312,7 +257,6 @@ a {
     border-radius: 18px;
     box-shadow: var(--shadow);
 }
-
 .step span {
     width: 60px;
     height: 60px;
@@ -326,18 +270,15 @@ a {
     font-size: 22px;
     margin-bottom: 15px;
 }
-
 /*=========================
  TEAM
 ==========================*/
 .teamSwiper {
     padding: 20px 10px 60px;
 }
-
 .teamSwiper .swiper-slide {
     height: auto;
 }
-
 .team-card {
     background: #fff;
     border-radius: 20px;
@@ -346,46 +287,37 @@ a {
     box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
     transition: .35s;
 }
-
 .team-card:hover {
     transform: translateY(-10px);
 }
-
 .team-card img {
     width: 100%;
     height: 260px;
     object-fit: cover;
 }
-
 .team-card h3 {
     margin: 20px 0 8px;
     color: #390077;
     font-size: 22px;
 }
-
 .team-card p {
     color: #777;
     margin-bottom: 25px;
 }
-
 .teamSwiper .swiper-button-next,
 .teamSwiper .swiper-button-prev {
     color: #390077;
 }
-
 .teamSwiper .swiper-pagination-bullet {
     background: #390077;
 }
-
 .teamSwiper .swiper-pagination-bullet-active {
     width: 24px;
     border-radius: 20px;
 }
-
 /*=========================
  TESTIMONIAL
 ==========================*/
-
 .testimonial {
     max-width: 700px;
     margin: auto;
@@ -395,56 +327,43 @@ a {
     box-shadow: var(--shadow);
     text-align: center;
 }
-
 .testimonial p {
     margin: 20px 0;
 }
-
 /*=========================
  CTA
 ==========================*/
-
 .cta {
     background: linear-gradient(135deg, #390077, #6d2fe8);
     color: #fff;
     text-align: center;
     padding: 80px 20px;
 }
-
 .cta h2 {
     font-size: 42px;
     margin-bottom: 20px;
 }
-
 .cta p {
     margin-bottom: 30px;
 }
-
-
-
 /*=========================
  TABLET
 ==========================*/
-
 @media(max-width:992px) {
-
     .hero-content,
     .about-grid {
         grid-template-columns: 1fr;
         text-align: center;
     }
-
     .hero-buttons {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
         gap: 15px;
     }
-
     .btn-outline {
         margin-left: 0;
     }
-
     .mission-grid,
     .why-grid,
     .services-grid,
@@ -452,46 +371,35 @@ a {
     .timeline {
         grid-template-columns: repeat(2, 1fr);
     }
-
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
-
     .hero h1 {
         font-size: 42px;
     }
-
 }
-
 /*=========================
  MOBILE
 ==========================*/
-
 @media(max-width:768px) {
-
     .section {
         padding: 60px 0;
     }
-
     .hero {
         padding: 70px 0;
     }
-
     .hero h1 {
         font-size: 34px;
     }
-
     .hero p {
         font-size: 16px;
     }
-
     .about h2,
     .section-title h2,
     .cta h2 {
         font-size: 30px;
     }
-
     .mission-grid,
     .why-grid,
     .services-grid,
@@ -500,11 +408,9 @@ a {
     .stats-grid {
         grid-template-columns: 1fr;
     }
-
     .team-card img {
         height: 370px;
     }
-
     .btn-primary,
     .btn-outline {
         display: block;
@@ -512,9 +418,7 @@ a {
         margin: 10px 0;
         text-align: center;
     }
-
     .container {
         width: 94%;
     }
-
 }

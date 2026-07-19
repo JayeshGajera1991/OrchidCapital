@@ -2,7 +2,6 @@
         ORCHID CAPITAL EMI CALCULATOR
         Premium Banking UI
 ==================================================*/
-
 :root {
     --primary: #0E69F1;
     --primary-dark: #004FC7;
@@ -14,11 +13,9 @@
     --shadow: 0 20px 60px rgba(15, 40, 90, .10);
     --radius: 24px;
 }
-
 /*========================
 SECTION
 ========================*/
-
 .emi-section {
     position: relative;
     padding: 90px 6%;
@@ -29,7 +26,6 @@ SECTION
         linear-gradient(180deg, #9cc0ef, #eef6ff);
     font-family: Inter, sans-serif;
 }
-
 .emi-section:before {
     content: "";
     position: absolute;
@@ -40,7 +36,6 @@ SECTION
     top: -280px;
     right: -250px;
 }
-
 .emi-section:after {
     content: "";
     position: absolute;
@@ -51,18 +46,15 @@ SECTION
     bottom: -220px;
     left: -200px;
 }
-
 /*========================
 HEADER
 ========================*/
-
 .emi-header {
     text-align: center;
     margin-bottom: 45px;
     position: relative;
     z-index: 2;
 }
-
 .emi-header h2 {
     font-size: 44px;
     font-weight: 800;
@@ -72,16 +64,13 @@ HEADER
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
 .emi-header p {
     font-size: 17px;
     color: var(--muted);
 }
-
 /*========================
 TAB WRAPPER
 ========================*/
-
 .emi-tabs-wrapper {
     display: flex;
     align-items: center;
@@ -90,7 +79,6 @@ TAB WRAPPER
     position: relative;
     z-index: 2;
 }
-
 .emi-tabs {
     display: flex;
     flex-wrap: nowrap;
@@ -99,15 +87,12 @@ TAB WRAPPER
     scrollbar-width: none;
     width: 100%;
 }
-
 .emi-tabs::-webkit-scrollbar {
     display: none;
 }
-
 /*========================
 TAB
 ========================*/
-
 .emi-tab {
     flex: 0 0 auto;
     display: flex;
@@ -125,7 +110,6 @@ TAB
     box-shadow: 0 5px 18px rgba(0, 0, 0, .04) !important;
     margin: 5px;
 }
-
 .emi-tab i {
     width: 34px;
     height: 34px;
@@ -136,29 +120,24 @@ TAB
     align-items: center;
     justify-content: center;
 }
-
 .emi-tab:hover {
     transform: translateY(-3px);
     border-color: var(--primary);
     color: var(--primary);
     box-shadow: 0 15px 35px rgba(14, 105, 241, .18);
 }
-
 .emi-tab.active {
     background: linear-gradient(135deg, var(--primary), #4ea4ff);
     color: #fff;
     border: none;
 }
-
 .emi-tab.active i {
     background: rgba(255, 255, 255, .18);
     color: #fff;
 }
-
 /*========================
 NAV BUTTON
 ========================*/
-
 .nav-btn {
     width: 52px;
     height: 52px;
@@ -171,17 +150,14 @@ NAV BUTTON
     box-shadow: var(--shadow);
     transition: .3s;
 }
-
 .nav-btn:hover {
     background: var(--primary);
     color: #fff;
     transform: scale(1.08);
 }
-
 /*========================
 MAIN
 ========================*/
-
 .emi-container {
     display: grid;
     grid-template-columns: 1.6fr 430px;
@@ -189,11 +165,9 @@ MAIN
     position: relative;
     z-index: 2;
 }
-
 /*========================
 LEFT CARD
 ========================*/
-
 .emi-left {
     background: rgba(255, 255, 255, .78);
     backdrop-filter: blur(18px);
@@ -202,34 +176,27 @@ LEFT CARD
     border: 1px solid rgba(255, 255, 255, .8);
     box-shadow: var(--shadow);
 }
-
 /*========================
 SLIDER
 ========================*/
-
 .slider-group {
     margin-bottom: 45px;
 }
-
 .slider-group:last-child {
     margin-bottom: 0;
 }
-
 .slider-group label {
     font-size: 14px;
     font-weight: 700;
     color: var(--text);
 }
-
 .slider-value {
     font-size: 30px;
     font-weight: 800;
     color: var(--primary);
     margin: 10px 0 18px;
 }
-
 /* Modern Range */
-
 input[type=range] {
     appearance: none;
     width: 100%;
@@ -238,7 +205,6 @@ input[type=range] {
     background: #dce7f9;
     outline: none;
 }
-
 input[type=range]::-webkit-slider-thumb {
     appearance: none;
     width: 24px;
@@ -249,11 +215,9 @@ input[type=range]::-webkit-slider-thumb {
     box-shadow: 0 0 0 6px rgba(14, 105, 241, .12);
     cursor: pointer;
 }
-
 /*========================
 RIGHT CARD
 ========================*/
-
 .emi-right-new {
     position: relative;
     overflow: hidden;
@@ -263,7 +227,6 @@ RIGHT CARD
     color: #fff;
     box-shadow: 0 25px 70px rgba(14, 105, 241, .35);
 }
-
 .emi-right-new:before {
     content: "";
     position: absolute;
@@ -274,7 +237,6 @@ RIGHT CARD
     top: -120px;
     right: -120px;
 }
-
 .emi-right-new:after {
     content: "";
     position: absolute;
@@ -285,30 +247,24 @@ RIGHT CARD
     bottom: -90px;
     left: -70px;
 }
-
 /*========================
 RESULT
 ========================*/
-
 .emi-result-new {
     margin-bottom: 35px;
 }
-
 .emi-result-new p {
     color: rgba(255, 255, 255, .75);
     font-size: 15px;
 }
-
 .emi-result-new h2 {
     margin-top: 10px;
     font-size: 46px;
     font-weight: 800;
 }
-
 /*========================
 BREAKDOWN
 ========================*/
-
 .emi-breakdown-new {
     background: rgba(255, 255, 255, .12);
     border-radius: 18px;
@@ -316,37 +272,30 @@ BREAKDOWN
     backdrop-filter: blur(10px);
     margin-bottom: 30px;
 }
-
 .emi-breakdown-new div {
     display: flex;
     justify-content: space-between;
     padding: 14px 0;
     border-bottom: 1px solid rgba(255, 255, 255, .15);
 }
-
 .emi-breakdown-new div:last-child {
     border: none;
 }
-
 .emi-breakdown-new span {
     color: rgba(255, 255, 255, .75);
 }
-
 .emi-breakdown-new strong {
     color: #fff;
     font-size: 16px;
 }
-
 /*========================
 BUTTONS
 ========================*/
-
 .emi-actions-new {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 15px;
 }
-
 .emi-actions-new button {
     height: 54px;
     border-radius: 14px;
@@ -355,31 +304,25 @@ BUTTONS
     cursor: pointer;
     transition: .35s;
 }
-
 .apply-btn-new {
     border: none;
     background: #fff;
     color: var(--primary);
 }
-
 .apply-btn-new:hover {
     transform: translateY(-4px);
 }
-
 .know-btn-new {
     background: transparent;
     color: #fff;
     border: 2px solid rgba(255, 255, 255, .35);
 }
-
 .know-btn-new:hover {
     background: rgba(255, 255, 255, .12);
 }
-
 /*========================
 DECORATION
 ========================*/
-
 .emi-triangles-new {
     position: absolute;
     right: 22px;
@@ -389,71 +332,52 @@ DECORATION
     gap: 8px;
     opacity: .12;
 }
-
 .emi-triangles-new span {
     width: 18px;
     height: 18px;
     background: #fff;
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
-
 /*========================
 RESPONSIVE
 ========================*/
-
 @media(max-width:1100px) {
-
     .emi-container {
         grid-template-columns: 1fr;
     }
-
     .emi-right-new {
         width: 80%;
     }
-
 }
-
 @media(max-width:768px) {
-
     .emi-section {
         padding: 70px 20px;
     }
-
     .emi-header h2 {
         font-size: 34px;
     }
-
     .emi-left {
         padding: 28px;
     }
-
     .slider-value {
         font-size: 24px;
     }
-
     .emi-result-new h2 {
         font-size: 36px;
     }
-
     .emi-actions-new {
         grid-template-columns: 1fr;
     }
-
     .nav-btn {
         display: none;
     }
-
 }
-
 @media(max-width:480px) {
-
     .emi-header h2 {
         font-size: 28px;
     }
-
     .emi-tab {
         padding: 12px 16px;
         font-size: 13px;
     }
-
 }

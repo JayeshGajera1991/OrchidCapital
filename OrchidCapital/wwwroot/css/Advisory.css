@@ -4,78 +4,41 @@
     --light: #f8f5ff;
     --text: #333;
 }
-
-
 /* HERO */
-
 .hero {
-
     padding: 80px 8%;
-
     background:
         linear-gradient(110deg, rgb(69 28 105), rgb(22 76 182)),
         url("images/advisory-banner.jpg");
-
     background-size: cover;
     background-position: center;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     color: white;
-
 }
-
-
-
 .hero-content {
-
     max-width: 650px;
-
 }
-
-
 .hero h1 {
-
     font-size: 48px;
     margin-bottom: 20px;
-
 }
-
-
 .hero p {
-
     font-size: 18px;
     line-height: 1.8;
     opacity: .9;
-
 }
-
-
-
 .hero-btn {
-
     display: inline-block;
-
     margin-top: 30px;
-
     padding: 15px 40px;
-
     border-radius: 30px;
-
     background: #fff;
-
     color: #390077;
-
     font-weight: 600;
-
     text-decoration: none;
-
 }
-
-
-
 .hero-image img {
     border-radius: 10px;
     box-shadow: 0 15px 40px rgba(57, 0, 119, .12);
@@ -83,427 +46,187 @@
     animation: float 4s ease-in-out infinite;
     filter: drop-shadow(0 25px 40px rgba(57, 0, 119, .18));
 }
-
 @keyframes float {
-
     50% {
         transform: translateY(-15px);
     }
-
 }
-
-
-
 /* COMMON */
-
 .container {
-
     width: 85%;
     margin: auto;
-
 }
-
-
 .section {
-
     padding: 80px 0;
-
 }
-
-
 .title {
-
     text-align: center;
     margin-bottom: 50px;
-
 }
-
-
 .title h2 {
-
     font-size: 36px;
     color: #390077;
-
 }
-
-
 .title p {
-
     color: #666;
-
 }
-
-
-
-
 /* ADVISORY SERVICES */
-
-
 .services {
-
     display: grid;
-
     grid-template-columns: repeat(3, 1fr);
-
     gap: 30px;
-
 }
-
-
-
 .service-card {
-
     padding: 35px;
-
     background: white;
-
     border-radius: 20px;
-
     box-shadow:
         0 15px 45px rgba(57, 0, 119, .12);
-
     transition: .3s;
-
 }
-
-
-
 .service-card:hover {
-
     transform: translateY(-10px);
-
 }
-
-
-
 .service-card i {
-
     width: 70px;
     height: 70px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     background: #efe4ff;
-
     color: #390077;
-
     border-radius: 50%;
-
     font-size: 30px;
-
     margin-bottom: 20px;
-
 }
-
-
-
 .service-card h3 {
-
     color: #390077;
-
     margin-bottom: 15px;
-
 }
-
-
 .service-card p {
-
     line-height: 1.7;
-
     color: #555;
-
 }
-
-
-
 /* SOLUTIONS */
-
-
 .solution-section {
-
     background: #f8f5ff;
-
 }
-
-
 .solution-grid {
-
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
     gap: 25px;
-
 }
-
-
-
 .solution-box {
-
     background: white;
-
     padding: 25px;
-
     border-radius: 16px;
-
     display: flex;
-
     align-items: center;
-
     gap: 20px;
-
 }
-
-
-
 .solution-box i {
-
     font-size: 30px;
-
     color: #390077;
-
 }
-
-
-
 .solution-box h3 {
-
     color: #390077;
-
 }
-
-
-
 /* EXPERTISE */
-
-
 .expertise {
-
     display: flex;
-
     gap: 50px;
-
     align-items: center;
-
 }
-
-
-
 .expertise img {
-
     width: 450px;
-
     border-radius: 20px;
-
 }
-
-
-
 .expertise-content h2 {
-
     font-size: 36px;
-
     color: #390077;
-
     margin-bottom: 20px;
-
 }
-
-
-
 .expertise-list {
-
     list-style: none;
-
 }
-
-
-
 .expertise-list li {
-
     margin: 15px 0;
-
     font-size: 17px;
-
 }
-
-
-
 .expertise-list i {
-
     color: #390077;
-
     margin-right: 10px;
-
 }
-
-
-
 /* PROCESS */
-
-
 .process {
-
     display: grid;
-
     grid-template-columns: repeat(4, 1fr);
-
     gap: 25px;
-
 }
-
-
 .process-item {
-
     text-align: center;
-
 }
-
-
-
 .number {
-
     height: 65px;
-
     width: 65px;
-
     background: #390077;
-
     color: white;
-
     border-radius: 50%;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     font-size: 24px;
-
     font-weight: bold;
-
     margin: auto;
-
 }
-
-
-
 .process-item h4 {
-
     margin-top: 18px;
-
 }
-
-
-
 /* CTA */
-
-
 .cta {
-
     background: linear-gradient(120deg, #390077, #8c35d1);
-
     padding: 70px 20px;
-
     color: white;
-
     text-align: center;
-
 }
-
-
 .cta h2 {
-
     font-size: 38px;
-
 }
-
-
-
 .cta p {
-
     margin-top: 15px;
-
 }
-
-
-
 .cta a {
-
     display: inline-block;
-
     margin-top: 30px;
-
     background: white;
-
     color: #390077;
-
     padding: 15px 45px;
-
     border-radius: 30px;
-
     text-decoration: none;
-
     font-weight: 600;
-
 }
-
-
-
 /* RESPONSIVE */
-
-
 @media(max-width:900px) {
-
-
     .hero {
-
         flex-direction: column;
-
         text-align: center;
-
     }
-
-
     .hero h1 {
-
         font-size: 36px;
-
     }
-
-
     .hero-image img {
         margin-top: 50px;
         width: 400px;
     }
-
-
-
     .services,
     .solution-grid,
     .process {
-
         grid-template-columns: 1fr;
-
     }
-
-
     .expertise {
-
         flex-direction: column;
-
     }
-
-
     .expertise img {
-
         width: 100%;
-
     }
-
-
 }

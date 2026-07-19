@@ -4,10 +4,7 @@
     --light: #f7f3ff;
     --text: #333;
 }
-
-
 /* Hero */
-
 .loan-hero {
     background: linear-gradient(110deg, rgb(69 28 105), rgb(22 76 182));
     color: #fff;
@@ -17,22 +14,18 @@
     justify-content: space-between;
     gap: 40px;
 }
-
 .hero-content {
     max-width: 600px;
 }
-
 .hero-content h1 {
     font-size: 48px;
     margin-bottom: 20px;
 }
-
 .hero-content p {
     font-size: 18px;
     line-height: 1.7;
     opacity: .9;
 }
-
 .hero-btn {
     display: inline-block;
     margin-top: 30px;
@@ -43,8 +36,6 @@
     font-weight: 600;
     text-decoration: none;
 }
-
-
 .hero-image img {
     border-radius: 10px;
     box-shadow: 0 15px 40px rgba(57, 0, 119, .12);
@@ -52,73 +43,48 @@
     animation: float 4s ease-in-out infinite;
     filter: drop-shadow(0 25px 40px rgba(57, 0, 119, .18));
 }
-
 @keyframes float {
-
     50% {
         transform: translateY(-15px);
     }
-
 }
-
-
 /* Section */
-
 .container {
     width: 85%;
     margin: auto;
 }
-
 .section {
     padding: 70px 0;
 }
-
-
 .title {
     text-align: center;
     margin-bottom: 50px;
 }
-
 .title h2 {
     color: #390077;
     font-size: 36px;
 }
-
 .title p {
     margin-top: 10px;
     color: #666;
 }
-
-
-
 /* Feature Cards */
-
 .loan-features {
-
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-
 }
-
-
 .feature-card {
-
     background: white;
     padding: 35px;
     border-radius: 20px;
     box-shadow: 0 15px 40px rgba(57, 0, 119, .12);
     transition: .3s;
 }
-
-
 .feature-card:hover {
     transform: translateY(-8px);
 }
-
-
 .feature-card i {
-
     width: 65px;
     height: 65px;
     display: flex;
@@ -129,74 +95,42 @@
     font-size: 28px;
     border-radius: 50%;
     margin-bottom: 20px;
-
 }
-
-
 .feature-card h3 {
     margin-bottom: 15px;
     color: #390077;
 }
-
-
 /* Loan Benefits */
-
 .benefits {
-
     background: #f8f5ff;
-
 }
-
-
 .benefit-list {
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
-
 }
-
-
 .benefit-item {
-
     background: white;
     padding: 25px;
     border-radius: 15px;
     display: flex;
     gap: 20px;
     align-items: center;
-
 }
-
-
 .benefit-item i {
-
     color: #390077;
     font-size: 28px;
-
 }
-
-
 /* Process */
-
 .steps {
-
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
-
 }
-
-
 .step {
-
     text-align: center;
-
 }
-
-
 .step span {
-
     width: 60px;
     height: 60px;
     display: inline-flex;
@@ -207,39 +141,21 @@
     border-radius: 50%;
     font-size: 22px;
     font-weight: bold;
-
 }
-
-
 .step h4 {
-
     margin-top: 15px;
-
 }
-
-
-
 /* CTA */
-
 .cta {
-
     background: linear-gradient(120deg, #390077, #8d3ed0);
     color: white;
     text-align: center;
     padding: 60px 20px;
-
 }
-
-
 .cta h2 {
-
     font-size: 38px;
-
 }
-
-
 .cta a {
-
     display: inline-block;
     margin-top: 25px;
     background: white;
@@ -248,36 +164,22 @@
     border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
-
 }
-
-
-
 /* Responsive */
-
 @media(max-width:900px) {
-
     .loan-hero {
         flex-direction: column;
         text-align: center;
     }
-
     .hero-content h1 {
         font-size: 36px;
     }
-
     .hero-image img {
         width: 300px;
     }
-
-
     .loan-features,
     .benefit-list,
     .steps {
-
         grid-template-columns: 1fr;
-
     }
-
-
 }

@@ -1,7 +1,6 @@
 /*==================================================
             WHY CHOOSE US - PREMIUM BANK DESIGN
 ==================================================*/
-
 .whyus-section {
     position: relative;
     display: flex;
@@ -16,9 +15,7 @@
         radial-gradient(circle at bottom right, #a2e2ff22, transparent 35%),
         linear-gradient(135deg, #adceff, #e1edff, transparent 35%);
 }
-
 /* Background Shapes */
-
 .whyus-section::before,
 .whyus-section::after {
     content: "";
@@ -27,7 +24,6 @@
     filter: blur(70px);
     z-index: 0;
 }
-
 .whyus-section::before {
     width: 420px;
     height: 420px;
@@ -35,7 +31,6 @@
     top: -180px;
     left: -150px;
 }
-
 .whyus-section::after {
     width: 380px;
     height: 380px;
@@ -43,17 +38,14 @@
     right: -150px;
     bottom: -150px;
 }
-
 /*----------------------------------
 Left Side
 ----------------------------------*/
-
 .whyus-left {
     width: 38%;
     position: relative;
     z-index: 2;
 }
-
 .whyus-tag {
     display: inline-flex;
     align-items: center;
@@ -66,7 +58,6 @@ Left Side
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
 .whyus-left h2 {
     margin: 24px 0;
     font-size: 46px;
@@ -74,16 +65,13 @@ Left Side
     font-weight: 800;
     color: #1d1d1f;
 }
-
 .whyus-left p {
     font-size: 17px;
     line-height: 1.9;
     color: #5f6b7a;
     margin-bottom: 35px;
 }
-
 /* Button */
-
 .whyus-btn {
     display: inline-flex;
     align-items: center;
@@ -99,24 +87,19 @@ Left Side
     transition: .35s;
     box-shadow: 0 18px 40px rgba(14, 105, 241, .28);
 }
-
 .whyus-btn:hover {
     transform: translateY(-4px);
     box-shadow: 0 25px 50px rgba(14, 105, 241, .35);
 }
-
 .whyus-btn i {
     transition: .3s;
 }
-
 .whyus-btn:hover i {
     transform: translateX(6px);
 }
-
 /*----------------------------------
 Right Panel
 ----------------------------------*/
-
 .whyus-right {
     flex: 1;
     position: relative;
@@ -129,9 +112,7 @@ Right Panel
         0 30px 60px rgba(18, 38, 63, .08),
         0 10px 20px rgba(18, 38, 63, .04);
 }
-
 /* Gradient Border */
-
 .whyus-right::before {
     content: "";
     position: absolute;
@@ -142,11 +123,9 @@ Right Panel
     border-radius: 30px 30px 0 0;
     background: linear-gradient(90deg, #0E69F1, #731d95);
 }
-
 /*----------------------------------
 Header
 ----------------------------------*/
-
 .comparison-header {
     display: flex;
     justify-content: space-between;
@@ -155,39 +134,32 @@ Header
     padding-bottom: 25px;
     border-bottom: 1px solid #edf1f7;
 }
-
 .comparison-brand {
     background: #ffffff;
     border-radius: 12px;
     padding: 12px 18px;
     /* box-shadow: 0 10px 25px rgba(0, 0, 0, .06); */
 }
-
 .whyus-logo {
     height: 48px;
     display: block;
 }
-
 .others {
     font-size: 14px;
     color: #6c7b8a;
     font-weight: 600;
 }
-
 /*----------------------------------
 Grid
 ----------------------------------*/
-
 .comparison-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
-
 /*----------------------------------
 Card
 ----------------------------------*/
-
 .compare-item {
     display: flex;
     align-items: flex-start;
@@ -200,7 +172,6 @@ Card
     position: relative;
     overflow: hidden;
 }
-
 .compare-item::before {
     content: "";
     position: absolute;
@@ -212,20 +183,16 @@ Card
     transform: scaleY(0);
     transition: .35s;
 }
-
 .compare-item:hover::before {
     transform: scaleY(1);
 }
-
 .compare-item:hover {
     transform: translateY(-8px);
     box-shadow: 0 18px 45px rgba(0, 0, 0, .08);
 }
-
 /*----------------------------------
 Icon
 ----------------------------------*/
-
 .compare-item i {
     width: 60px;
     height: 60px;
@@ -240,116 +207,89 @@ Icon
     box-shadow: 0 15px 25px rgba(14, 105, 241, .25);
     transition: .35s;
 }
-
 .compare-item:hover i {
     transform: rotate(-10deg) scale(1.08);
 }
-
 /*----------------------------------
 Text
 ----------------------------------*/
-
 .compare-item h4 {
     margin: 0 0 8px;
     font-size: 18px;
     color: #17223b;
     font-weight: 700;
 }
-
 .compare-item p {
     margin: 0;
     color: #667788;
     line-height: 1.7;
     font-size: 14px;
 }
-
 /*----------------------------------
 Animation
 ----------------------------------*/
-
 .compare-item {
     opacity: 0;
     transform: translateY(40px);
 }
-
 body.loaded .compare-item {
     animation: fadeUp .7s forwards;
 }
-
 body.loaded .compare-item:nth-child(1) {
     animation-delay: .1s;
 }
-
 body.loaded .compare-item:nth-child(2) {
     animation-delay: .2s;
 }
-
 body.loaded .compare-item:nth-child(3) {
     animation-delay: .3s;
 }
-
 body.loaded .compare-item:nth-child(4) {
     animation-delay: .4s;
 }
-
 body.loaded .compare-item:nth-child(5) {
     animation-delay: .5s;
 }
-
 body.loaded .compare-item:nth-child(6) {
     animation-delay: .6s;
 }
-
 @keyframes fadeUp {
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-
 /*----------------------------------
 Responsive
 ----------------------------------*/
-
 @media(max-width:1100px) {
-
     .whyus-section {
         flex-direction: column;
     }
-
     .whyus-left {
         width: 100%;
     }
-
     .whyus-right {
         width: 100%;
     }
-
 }
-
 @media(max-width:768px) {
-
     .whyus-section {
         padding: 80px 20px;
     }
-
     .comparison-grid {
         grid-template-columns: 1fr;
     }
-
     .comparison-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
     }
-
     .whyus-left h2 {
         font-size: 34px;
     }
-
     .whyus-btn {
         width: 100%;
         justify-content: center;
     }
-
 }

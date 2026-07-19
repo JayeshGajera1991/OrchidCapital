@@ -1,14 +1,12 @@
 /*==============================
       PREMIUM FOOTER 2026
 ==============================*/
-
 .bank-footer {
   position: relative;
   background: #fff;
   overflow: hidden;
   border-top: 1px solid #edf2f7;
 }
-
 .bank-footer::before {
   content: "";
   position: absolute;
@@ -17,8 +15,6 @@
   width: 100%;
   height: 4px;
 }
-
-
 .bank-footer-wrapper {
   position: relative;
   z-index: 2;
@@ -26,11 +22,9 @@
   margin: auto;
   padding: 10px;
 }
-
 /*==============================
 GRID
 ==============================*/
-
 .bank-footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.3fr;
@@ -38,280 +32,165 @@ GRID
   padding: 30px 150px 40px;
   border-bottom: 1px solid #edf2f7;
 }
-
 /*==============================
 LOGO
 ==============================*/
-
 .bank-footer-brand img {
   height: 72px;
   transition: .4s;
   filter: drop-shadow(0 4px 10px rgba(14, 105, 241, .08));
 }
-
 .bank-footer-brand img:hover {
   transform: scale(1.04);
 }
-
 /*==============================
 TAGLINE
 ==============================*/
-
 .bank-footer-tagline {
-
   color: #64748b;
-
   line-height: 1.9;
-
   font-size: 15px;
-
   max-width: 380px;
-
   margin-bottom: 30px;
 }
-
 /*==============================
 BADGES
 ==============================*/
-
 .bank-footer-certifications {
-
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 12px;
 }
-
 .bank-badge {
-
   padding: 10px 16px;
-
   border-radius: 40px;
-
   background: #eef5ff;
-
   color: #0E69F1;
-
   font-weight: 700;
-
   font-size: 13px;
-
   border: 1px solid #dbeafe;
-
   transition: .35s;
 }
-
 .bank-badge:hover {
-
   background: #0E69F1;
-
   color: #fff;
-
   transform: translateY(-3px);
 }
-
 /*==============================
 HEADINGS
 ==============================*/
-
 .bank-footer-column h4 {
-
   position: relative;
-
   margin-bottom: 35px;
-
   font-size: 18px;
-
   color: #0f172a;
-
   font-weight: 700;
 }
-
 /* .bank-footer-column h4::after {
-
   content: "";
-
   position: absolute;
-
   left: 0;
-
   bottom: -10px;
-
   width: 45px;
-
   height: 3px;
-
   border-radius: 20px;
-
   background: linear-gradient(90deg, #0E69F1, #7c3aed);
 } */
-
 /*==============================
 LINKS
 ==============================*/
-
 .bank-footer-column ul {
-
   margin: -17px;
-
   padding: 0;
-
   list-style: none;
 }
-
 .bank-footer-column li {
-
   margin-bottom: 16px;
 }
-
 .bank-footer-column a {
-
   position: relative;
-
   color: #64748b;
-
   text-decoration: none;
-
   font-size: 15px;
-
   transition: .35s;
 }
-
 .bank-footer-column a::before {
-
   content: "→";
-
   margin-right: 8px;
-
   opacity: 0;
-
   transform: translateX(-8px);
-
   display: inline-block;
-
   transition: .35s;
 }
-
 .bank-footer-column a:hover {
-
   color: #0E69F1;
-
   padding-left: 8px;
 }
-
 .bank-footer-column a:hover::before {
-
   opacity: 1;
-
   transform: translateX(0);
 }
-
 /*==============================
 CONTACT
 ==============================*/
-
 .bank-footer-contact p {
-
   display: flex;
-
   align-items: flex-start;
-
   gap: 10px;
-
   margin-bottom: 15px;
-
   color: #64748b;
 }
-
 /*==============================
 DIVIDER
 ==============================*/
-
 .bank-footer-divider {
-
   height: 1px;
-
   background: #edf2f7;
-
   margin: 35px 0;
 }
-
 /*==============================
 BOTTOM
 ==============================*/
-
 .bank-footer-bottom {
-
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
-
   gap: 20px;
   padding: 10px 150px 10px;
   flex-wrap: wrap;
 }
-
 .bank-footer-bottom p {
-
   color: #64748b;
-
   font-size: 14px;
 }
-
 .bank-footer-links {
-
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 26px;
 }
-
 .bank-footer-links a {
-
   position: relative;
-
   color: #64748b;
-
   text-decoration: none;
-
   font-size: 14px;
-
   transition: .35s;
 }
-
 .bank-footer-links a::after {
-
   content: "";
-
   position: absolute;
-
   left: 0;
-
   bottom: -6px;
-
   width: 0;
-
   height: 2px;
-
   background: #0E69F1;
-
   transition: .35s;
 }
-
 .bank-footer-links a:hover {
-
   color: #0E69F1;
 }
-
 .bank-footer-links a:hover::after {
-
   width: 100%;
 }
-
 .bank-footer-bottom a {
     color: #0E69F1;
     font-weight: 600;
@@ -319,7 +198,6 @@ BOTTOM
     position: relative;
     transition: all .3s ease;
 }
-
 .bank-footer-bottom a::after {
     content: "";
     position: absolute;
@@ -330,93 +208,52 @@ BOTTOM
     background: #0E69F1;
     transition: width .3s ease;
 }
-
 .bank-footer-bottom a:hover {
     color: #0E69F1;
 }
-
 .bank-footer-bottom a:hover::after {
     width: 100%;
 }
-
 /*==============================
 RESPONSIVE
 ==============================*/
-
 @media(max-width:1100px) {
-
   .bank-footer-grid {
-
     grid-template-columns: 1fr 1fr;
-
     padding: 35px;
-
   }
-
 }
-
 @media(max-width:768px) {
-
   .bank-footer {
-
     padding: 0px;
-
   }
-
   .bank-footer-grid {
-
     grid-template-columns: 1fr;
-
     gap: 40px;
-
     padding: 30px;
-
   }
-
   .bank-footer-brand {
-
     text-align: left;
-
   }
-
   .bank-footer-tagline {
-
     margin: auto auto 25px;
-
   }
-
   .bank-footer-certifications {
-
     justify-content: left;
-
   }
-
   .bank-footer-column {
-
     text-align: left;
-
   }
-
   .bank-footer-column h4::after {
-
     left: 10%;
-
     transform: translateX(-50%);
-
   }
-
   .bank-footer-bottom {
-
     flex-direction: column;
     padding: 0px;
     text-align: left;
-
   }
-
   .bank-footer-links {
-
     justify-content: left;
-
   }
-
 }
