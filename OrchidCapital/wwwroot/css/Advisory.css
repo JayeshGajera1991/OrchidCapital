@@ -6,21 +6,6 @@
 }
 
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', Arial, sans-serif;
-}
-
-
-body {
-    color: var(--text);
-    background: #fff;
-}
-
-
-
 /* HERO */
 
 .hero {

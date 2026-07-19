@@ -16,18 +16,7 @@
     --shadow: 0 10px 30px rgba(0, 0, 0, .08);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: var(--light);
-    color: #222;
-    line-height: 1.7;
-}
 
 img {
     max-width: 100%;

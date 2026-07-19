@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Orchid.TokenValidator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7303f584c9c40b5c3535c88e19c20b850bda5e0d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a4659e3505d1440f47d1471f2390a9de2be5e1e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Orchid.TokenValidator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Orchid.TokenValidator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

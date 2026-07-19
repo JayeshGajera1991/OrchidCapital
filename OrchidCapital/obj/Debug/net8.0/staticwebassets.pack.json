@@ -377,6 +377,10 @@
       "PackagePath": "staticwebassets\\img\\privacy-banner.png"
     },
     {
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\request-loan.png",
+      "PackagePath": "staticwebassets\\img\\request-loan.png"
+    },
+    {
       "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\img\\structured-finance.png",
       "PackagePath": "staticwebassets\\img\\structured-finance.png"
     },
