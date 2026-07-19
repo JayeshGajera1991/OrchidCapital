@@ -1,0 +1,419 @@
+<link rel="stylesheet" href="~/css/AboutUs.css" asp-append-version="true" />
+@{
+    var header = ViewBag.HeaderData as AllModuleListRequest;
+}
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <div class="hero-left">
+
+            <span class="subtitle">
+                Fast Approval • Secure Process
+            </span>
+
+            <h1>
+                Apply For Your Dream Loan
+            </h1>
+
+            <p>
+                Simple online application with quick approval, attractive interest
+                rates and transparent processing.
+            </p>
+
+            <div class="hero-buttons">
+
+                 <a href="#loanForm" class="btn-primary">
+                    Apply Now
+                </a>
+
+                <a href="#" class="btn-outline">
+                    Talk to Expert
+                </a>
+
+            </div>
+             <div class="hero-features">
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Paperless
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Instant Eligibility
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-circle-check"></i>
+                    RBI Compliant
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hero-right">
+
+            <img src="~/img/request-loan.png" alt="About Orchid Capital">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Loan Products -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Choose Loan Type</h2>
+
+            <p>Select the right loan for your financial needs.</p>
+
+        </div>
+
+        <div class="loan-grid">
+
+            <div class="loan-card">
+
+                <i class="fa-solid fa-house"></i>
+
+                <h3>Home Loan</h3>
+
+                <p>Interest from 8.50%</p>
+
+            </div>
+
+            <div class="loan-card">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                <h3>Business Loan</h3>
+
+                <p>Up to ₹5 Crore</p>
+
+            </div>
+
+            <div class="loan-card">
+
+                <i class="fa-solid fa-wallet"></i>
+
+                <h3>Personal Loan</h3>
+
+                <p>Instant Approval</p>
+
+            </div>
+
+            <div class="loan-card">
+
+                <i class="fa-solid fa-coins"></i>
+
+                <h3>Gold Loan</h3>
+
+                <p>Maximum Value</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- WHY -->
+
+<section class="section light">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Why Choose Us</h2>
+
+        </div>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <h4>100% Secure</h4>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-bolt"></i>
+
+                <h4>Fast Approval</h4>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-file"></i>
+
+                <h4>Paperless Process</h4>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-headset"></i>
+
+                <h4>24×7 Support</h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- FORM -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Loan Request Form</h2>
+
+        </div>
+
+        <form id="loanForm" class="loan-form">
+
+            <div class="form-grid">
+
+                <input placeholder="Full Name">
+
+                <input placeholder="Email">
+
+                <input placeholder="Mobile Number">
+
+                <select>
+
+                    <option>Loan Type</option>
+
+                </select>
+
+                <input placeholder="Loan Amount">
+
+                <input placeholder="Monthly Income">
+
+                <input placeholder="City">
+
+                <input placeholder="Occupation">
+
+                <textarea rows="5" placeholder="Message"></textarea>
+
+            </div>
+
+            <button class="btn-primary">
+
+                Submit Application
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- DOCUMENTS -->
+
+<section class="section light">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Required Documents</h2>
+
+        </div>
+
+        <div class="doc-grid">
+
+            <div class="doc-card">
+
+                <i class="fa-solid fa-id-card"></i>
+
+                Identity Proof
+
+            </div>
+
+            <div class="doc-card">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                Address Proof
+
+            </div>
+
+            <div class="doc-card">
+
+                <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                Income Proof
+
+            </div>
+
+            <div class="doc-card">
+
+                <i class="fa-solid fa-building-columns"></i>
+
+                Bank Statement
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- PROCESS -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Loan Process</h2>
+
+        </div>
+
+        <div class="process-grid">
+
+            <div class="process">
+
+                <span>1</span>
+
+                <h4>Apply</h4>
+
+            </div>
+
+            <div class="process">
+
+                <span>2</span>
+
+                <h4>Verify</h4>
+
+            </div>
+
+            <div class="process">
+
+                <span>3</span>
+
+                <h4>Approve</h4>
+
+            </div>
+
+            <div class="process">
+
+                <span>4</span>
+
+                <h4>Disbursement</h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- FAQ -->
+
+<section class="section light">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Frequently Asked Questions</h2>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3>How long does approval take?</h3>
+
+            <p>Normally within 24–48 hours.</p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3>Can I apply online?</h3>
+
+            <p>Yes, anytime.</p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h3>Any hidden charges?</h3>
+
+            <p>No. Complete transparency.</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>
+
+            Need Financial Assistance?
+
+        </h2>
+
+        <p>
+
+            Let's help you achieve your financial goals.
+
+        </p>
+
+        <a href="#loanForm" class="btn-primary">
+
+            Apply Today
+
+        </a>
+
+    </div>
+
+</section>
+<script>
+    $(".top-header").addClass('purple-submenu-other');
+</script>

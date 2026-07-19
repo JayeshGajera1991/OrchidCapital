@@ -273,6 +273,10 @@
       "PackagePath": "staticwebassets\\css\\StructuredFinance.css"
     },
     {
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\UserRequest.css",
+      "PackagePath": "staticwebassets\\css\\UserRequest.css"
+    },
+    {
       "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\WorkingCapital.css",
       "PackagePath": "staticwebassets\\css\\WorkingCapital.css"
     },

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jctaZR6vgevRSg96clV5cJ24+0Q9X5JVnrUtaIO2Ub4=",
+  "Hash": "J9EOJQjYynG7mwj3Ugce6q1vOqH7wDCFYehsxTckFtw=",
   "Source": "OrchidCapital",
   "BasePath": "_content/OrchidCapital",
   "Mode": "Default",
@@ -908,6 +908,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\toastr.min.css"
+    },
+    {
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\UserRequest.css",
+      "SourceId": "OrchidCapital",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "BasePath": "_content/OrchidCapital",
+      "RelativePath": "css/UserRequest.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\UserRequest.css"
     },
     {
       "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\whatwedo.css",

@@ -157,10 +157,10 @@ Header
 }
 
 .comparison-brand {
-    background: #fff;
+    background: #ffffff;
     border-radius: 12px;
     padding: 12px 18px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, .06);
+    /* box-shadow: 0 10px 25px rgba(0, 0, 0, .06); */
 }
 
 .whyus-logo {

@@ -1,0 +1,98 @@
+
+img {
+    max-width: 100%;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(57, 0, 119, .12);
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1280px;
+    margin: auto;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.light {
+    background: #fff;
+}
+
+/*=========================
+ BUTTONS
+==========================*/
+
+.btn-primary {
+    display: inline-block;
+    padding: 14px 35px;
+    background: linear-gradient(135deg, #390077, #7b1fa2);
+    color: #fff;
+    border-radius: 50px;
+    transition: .3s;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+}
+
+.btn-outline {
+    display: inline-block;
+    padding: 14px 35px;
+    border: 2px solid #390077;
+    color: #390077;
+    border-radius: 50px;
+    margin-left: 15px;
+    transition: .3s;
+}
+
+.btn-outline:hover {
+    background: #390077;
+    color: #fff;
+}
+
+/*=========================
+ HERO
+==========================*/
+
+.hero {
+    background: linear-gradient(110deg, rgb(69 28 105), rgb(22 76 182));
+    color: #fff;
+    padding: 100px 0;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.subtitle {
+    display: inline-block;
+    color: #ffb74d;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 56px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 35px;
+}
+
+.hero-right img {
+    width: 100%;
+}

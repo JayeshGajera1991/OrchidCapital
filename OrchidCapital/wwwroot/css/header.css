@@ -754,10 +754,10 @@
      }
 
      .logo {
-       width: 85% !important;
+       width: 70% !important;
        box-shadow: none !important;
        top: -13px !important;
-       left: 10px !important;
+       left: 25px !important;
      }
    }
 

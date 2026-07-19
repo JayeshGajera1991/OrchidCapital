@@ -129,7 +129,7 @@
             {
                 foreach (BankServiceListModel item in header.ProductsList)
                 {
-                    <a href="#" data-desc="@item.Descriptions">@item.ProductName</a>
+                    <a href="@Url.Action("UserRequest","Home")" data-desc="@item.Descriptions">@item.ProductName</a>
                 }
             }
         </div>

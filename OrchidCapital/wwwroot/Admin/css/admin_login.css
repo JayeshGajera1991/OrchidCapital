@@ -89,23 +89,24 @@ body.orchid-login-page {
     width: min(100%, 590px);
 }
 
-.logo-wrapper{
-    position:relative;
+.logo-wrapper {
+    position: relative;
 
-    width:600px;
-    height:90px;
+    width: 600px;
+    height: 90px;
 
-    margin-left:-75px;   /* Left space */
+    margin-left: -75px;
+    /* Left space */
 
-    background:#fff;
+    background: #f7f7f7;
 
-    clip-path:polygon(0 0,92% 0,100% 50%,92% 100%,0 100%);
+    clip-path: polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%);
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .15);
 }
 
 .orchid-logo {
@@ -115,9 +116,11 @@ body.orchid-login-page {
     box-shadow: none;
     background-color: #fff;
 }
+
 .brand-copy {
     margin-top: 20px;
 }
+
 .trusted-badge,
 .secure-status {
     display: inline-flex;
@@ -326,7 +329,7 @@ body.orchid-login-page {
     align-items: center;
 }
 
-.input-field > i {
+.input-field>i {
     position: absolute;
     left: 16px;
     z-index: 1;
@@ -418,7 +421,7 @@ body.orchid-login-page {
     font-size: 10px;
 }
 
-.remember-option input:checked + .custom-check {
+.remember-option input:checked+.custom-check {
     border-color: var(--orchid-purple);
     color: #fff;
     background: linear-gradient(135deg, var(--orchid-blue), var(--orchid-magenta));
@@ -492,6 +495,7 @@ body.orchid-login-page {
 .form-panel-footer a:hover {
     text-decoration: underline;
 }
+
 .home-btn {
     display: inline-flex;
     align-items: center;
@@ -508,7 +512,8 @@ body.orchid-login-page {
     font-size: 14px;
     font-weight: 600;
 
-    white-space: nowrap; /* Keep text on one line */
+    white-space: nowrap;
+    /* Keep text on one line */
 
     transition: all .3s ease;
 }
@@ -579,12 +584,21 @@ body.orchid-login-page {
         padding: 34px 22px;
     }
 
-    .orchid-logo {
-        width: 225px;
-        max-height: 118px;
-        margin-bottom: 25px;
-        padding: 8px 12px;
+    .logo-wrapper {
+        width: 335px;
     }
+
+    .orchid-logo {
+        width: 180px;
+        max-height: 145px;
+        margin-bottom: 3px;
+        position: absolute;
+        background-color: #fff;
+        left: 315px;
+        box-shadow: none !important;
+    }
+
+
 
     .brand-copy h1 {
         margin-top: 16px;

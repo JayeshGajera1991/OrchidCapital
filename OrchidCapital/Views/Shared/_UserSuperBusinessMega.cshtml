@@ -28,7 +28,7 @@
                 {
                     foreach (BankServiceListModel item in header.ProductsList.Where(m => m.IsSecure == true).ToList())
                     {
-                        <a href="#" data-desc="@Html.Raw(@item.Descriptions)">@item.ProductName</a>
+                        <a href="@Url.Action("UserRequest","Home")" data-desc="@Html.Raw(@item.Descriptions)">@item.ProductName</a>
                     }
                 }
             </div>
@@ -38,7 +38,7 @@
                 {
                     foreach (BankServiceListModel item in header.ProductsList.Where(m => m.IsSecure == false).ToList())
                     {
-                        <a href="#" data-desc="@Html.Raw(@item.Descriptions)">@item.ProductName</a>
+                        <a href="@Url.Action("UserRequest","Home")" data-desc="@Html.Raw(@item.Descriptions)">@item.ProductName</a>
                     }
                 }
             </div>
