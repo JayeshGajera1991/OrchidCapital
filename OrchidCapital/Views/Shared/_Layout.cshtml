@@ -37,20 +37,6 @@
             window.onpopstate = function () {
                 history.go(1);
             };
-            @* document.addEventListener("keydown", function (e) {
-                if (
-                    e.key === "F12" ||
-                    (e.ctrlKey && e.shiftKey && ["I", "J", "C"].includes(e.key.toUpperCase())) ||
-                    (e.ctrlKey && ["U", "S"].includes(e.key.toUpperCase()))
-                ) {
-                    e.preventDefault();
-                }
-            });
-
-            document.addEventListener("contextmenu", function (e) {
-                e.preventDefault();
-            }); *@
     </script>
 </body>
-
 </html>

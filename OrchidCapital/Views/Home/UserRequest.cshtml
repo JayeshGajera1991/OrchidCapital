@@ -1,61 +1,43 @@
-<link rel="stylesheet" href="~/css/AboutUs.css" asp-append-version="true" />
-@{
-    var header = ViewBag.HeaderData as AllModuleListRequest;
-}
+<link rel="stylesheet" href="~/css/UserRequest.css" asp-append-version="true" />
+
+<!-- =========================
+ HERO SECTION
+========================== -->
+
 <section class="hero">
 
-    <div class="container hero-content">
+    <div class="container hero-grid">
 
-        <div class="hero-left">
+        <div class="hero-content">
 
-            <span class="subtitle">
-                Fast Approval • Secure Process
+            <span class="badge">
+                Fast Approval • Lowest Interest • 100% Secure
             </span>
 
-            <h1>
-                Apply For Your Dream Loan
-            </h1>
+            <h1>Apply For Your Dream Loan</h1>
 
             <p>
-                Simple online application with quick approval, attractive interest
-                rates and transparent processing.
+                Get quick approval with minimal documentation and attractive interest
+                rates. Apply online in just a few minutes.
             </p>
 
             <div class="hero-buttons">
 
-                 <a href="#loanForm" class="btn-primary">
+                <a href="#loanForm" class="btn-primary">
                     Apply Now
                 </a>
 
                 <a href="#" class="btn-outline">
-                    Talk to Expert
+                    Contact Expert
                 </a>
-
-            </div>
-             <div class="hero-features">
-
-                <div>
-                    <i class="fa-solid fa-circle-check"></i>
-                    Paperless
-                </div>
-
-                <div>
-                    <i class="fa-solid fa-circle-check"></i>
-                    Instant Eligibility
-                </div>
-
-                <div>
-                    <i class="fa-solid fa-circle-check"></i>
-                    RBI Compliant
-                </div>
 
             </div>
 
         </div>
 
-        <div class="hero-right">
+        <div class="hero-image">
 
-            <img src="~/img/request-loan.png" alt="About Orchid Capital">
+            <img src="~/img/request-loan.png" alt="Loan Request">
 
         </div>
 
@@ -65,7 +47,9 @@
 
 
 
-<!-- Loan Products -->
+<!-- =========================
+ LOAN PRODUCTS
+========================== -->
 
 <section class="section">
 
@@ -73,9 +57,9 @@
 
         <div class="section-title">
 
-            <h2>Choose Loan Type</h2>
+            <h2>Choose Your Loan</h2>
 
-            <p>Select the right loan for your financial needs.</p>
+            <p>Select the loan that best matches your financial needs.</p>
 
         </div>
 
@@ -87,17 +71,9 @@
 
                 <h3>Home Loan</h3>
 
-                <p>Interest from 8.50%</p>
+                <p>Interest starts from 8.50%</p>
 
-            </div>
-
-            <div class="loan-card">
-
-                <i class="fa-solid fa-briefcase"></i>
-
-                <h3>Business Loan</h3>
-
-                <p>Up to ₹5 Crore</p>
+                <a href="#">Apply Now</a>
 
             </div>
 
@@ -107,7 +83,33 @@
 
                 <h3>Personal Loan</h3>
 
-                <p>Instant Approval</p>
+                <p>Instant approval with flexible EMI.</p>
+
+                <a href="#">Apply Now</a>
+
+            </div>
+
+            <div class="loan-card">
+
+                <i class="fa-solid fa-briefcase"></i>
+
+                <h3>Business Loan</h3>
+
+                <p>Up to ₹10 Crore financing.</p>
+
+                <a href="#">Apply Now</a>
+
+            </div>
+
+            <div class="loan-card">
+
+                <i class="fa-solid fa-car"></i>
+
+                <h3>Vehicle Loan</h3>
+
+                <p>Affordable EMI for new & used vehicles.</p>
+
+                <a href="#">Apply Now</a>
 
             </div>
 
@@ -117,7 +119,21 @@
 
                 <h3>Gold Loan</h3>
 
-                <p>Maximum Value</p>
+                <p>Maximum value against your gold.</p>
+
+                <a href="#">Apply Now</a>
+
+            </div>
+
+            <div class="loan-card">
+
+                <i class="fa-solid fa-graduation-cap"></i>
+
+                <h3>Education Loan</h3>
+
+                <p>Support for higher education.</p>
+
+                <a href="#">Apply Now</a>
 
             </div>
 
@@ -129,7 +145,9 @@
 
 
 
-<!-- WHY -->
+<!-- =========================
+ WHY CHOOSE US
+========================== -->
 
 <section class="section light">
 
@@ -137,7 +155,7 @@
 
         <div class="section-title">
 
-            <h2>Why Choose Us</h2>
+            <h2>Why Choose Orchid Capital?</h2>
 
         </div>
 
@@ -145,25 +163,33 @@
 
             <div class="feature-card">
 
-                <i class="fa-solid fa-shield-halved"></i>
-
-                <h4>100% Secure</h4>
-
-            </div>
-
-            <div class="feature-card">
-
                 <i class="fa-solid fa-bolt"></i>
 
-                <h4>Fast Approval</h4>
+                <h4>Instant Approval</h4>
 
             </div>
 
             <div class="feature-card">
 
-                <i class="fa-solid fa-file"></i>
+                <i class="fa-solid fa-percent"></i>
+
+                <h4>Lowest Interest</h4>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-file-circle-check"></i>
 
                 <h4>Paperless Process</h4>
+
+            </div>
+
+            <div class="feature-card">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <h4>Secure Application</h4>
 
             </div>
 
@@ -175,6 +201,14 @@
 
             </div>
 
+            <div class="feature-card">
+
+                <i class="fa-solid fa-handshake"></i>
+
+                <h4>Trusted Service</h4>
+
+            </div>
+
         </div>
 
     </div>
@@ -183,7 +217,9 @@
 
 
 
-<!-- FORM -->
+<!-- =========================
+ APPLICATION FORM
+========================== -->
 
 <section class="section">
 
@@ -193,33 +229,47 @@
 
             <h2>Loan Request Form</h2>
 
+            <p>Fill in your details to apply online.</p>
+
         </div>
 
         <form id="loanForm" class="loan-form">
 
             <div class="form-grid">
 
-                <input placeholder="Full Name">
+                <input type="text" placeholder="Full Name">
 
-                <input placeholder="Email">
+                <input type="email" placeholder="Email Address">
 
-                <input placeholder="Mobile Number">
+                <input type="tel" placeholder="Mobile Number">
 
                 <select>
 
-                    <option>Loan Type</option>
+                    <option>Select Loan Type</option>
+
+                    <option>Home Loan</option>
+
+                    <option>Business Loan</option>
+
+                    <option>Personal Loan</option>
+
+                    <option>Vehicle Loan</option>
+
+                    <option>Gold Loan</option>
+
+                    <option>Education Loan</option>
 
                 </select>
 
-                <input placeholder="Loan Amount">
+                <input type="number" placeholder="Loan Amount">
 
-                <input placeholder="Monthly Income">
+                <input type="number" placeholder="Monthly Income">
 
-                <input placeholder="City">
+                <input type="text" placeholder="Occupation">
 
-                <input placeholder="Occupation">
+                <input type="text" placeholder="City">
 
-                <textarea rows="5" placeholder="Message"></textarea>
+                <textarea rows="5" placeholder="Additional Information"></textarea>
 
             </div>
 
@@ -237,7 +287,9 @@
 
 
 
-<!-- DOCUMENTS -->
+<!-- =========================
+ DOCUMENTS
+========================== -->
 
 <section class="section light">
 
@@ -255,23 +307,23 @@
 
                 <i class="fa-solid fa-id-card"></i>
 
-                Identity Proof
+                <h4>Aadhaar Card</h4>
 
             </div>
 
             <div class="doc-card">
 
-                <i class="fa-solid fa-location-dot"></i>
+                <i class="fa-solid fa-address-card"></i>
 
-                Address Proof
+                <h4>PAN Card</h4>
 
             </div>
 
             <div class="doc-card">
 
-                <i class="fa-solid fa-file-invoice-dollar"></i>
+                <i class="fa-solid fa-file-invoice"></i>
 
-                Income Proof
+                <h4>Salary Slip</h4>
 
             </div>
 
@@ -279,7 +331,7 @@
 
                 <i class="fa-solid fa-building-columns"></i>
 
-                Bank Statement
+                <h4>Bank Statement</h4>
 
             </div>
 
@@ -291,7 +343,9 @@
 
 
 
-<!-- PROCESS -->
+<!-- =========================
+ PROCESS
+========================== -->
 
 <section class="section">
 
@@ -309,7 +363,7 @@
 
                 <span>1</span>
 
-                <h4>Apply</h4>
+                <h4>Apply Online</h4>
 
             </div>
 
@@ -317,7 +371,7 @@
 
                 <span>2</span>
 
-                <h4>Verify</h4>
+                <h4>Verification</h4>
 
             </div>
 
@@ -325,7 +379,7 @@
 
                 <span>3</span>
 
-                <h4>Approve</h4>
+                <h4>Approval</h4>
 
             </div>
 
@@ -345,7 +399,9 @@
 
 
 
-<!-- FAQ -->
+<!-- =========================
+ FAQ
+========================== -->
 
 <section class="section light">
 
@@ -361,7 +417,7 @@
 
             <h3>How long does approval take?</h3>
 
-            <p>Normally within 24–48 hours.</p>
+            <p>Usually within 24–48 business hours.</p>
 
         </div>
 
@@ -369,15 +425,15 @@
 
             <h3>Can I apply online?</h3>
 
-            <p>Yes, anytime.</p>
+            <p>Yes. You can apply anytime from our website.</p>
 
         </div>
 
         <div class="faq-item">
 
-            <h3>Any hidden charges?</h3>
+            <h3>Are there any hidden charges?</h3>
 
-            <p>No. Complete transparency.</p>
+            <p>No. Our charges are completely transparent.</p>
 
         </div>
 
@@ -387,33 +443,32 @@
 
 
 
-<!-- CTA -->
+<!-- =========================
+ CTA
+========================== -->
 
 <section class="cta">
 
     <div class="container">
 
-        <h2>
-
-            Need Financial Assistance?
-
-        </h2>
+        <h2>Need Financial Assistance?</h2>
 
         <p>
 
-            Let's help you achieve your financial goals.
+            Apply today and our loan expert will contact you shortly.
 
         </p>
 
         <a href="#loanForm" class="btn-primary">
 
-            Apply Today
+            Apply Now
 
         </a>
 
     </div>
 
 </section>
+
 <script>
     $(".top-header").addClass('purple-submenu-other');
 </script>

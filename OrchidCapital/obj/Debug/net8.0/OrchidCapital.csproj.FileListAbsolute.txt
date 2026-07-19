@@ -808,10 +808,10 @@ C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\runtimes\un
 C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\runtimes\win\lib\netcoreapp2.0\System.Drawing.Common.dll
 C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll
 C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.csproj.AssemblyReference.cache
-C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.Resources.Resources.SharedResource.resources
-C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.Resources.Resources.SharedResource.gu.resources
-C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.Resources.Resources.SharedResource.hi.resources
-C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.Resources.Resources.SharedResource.mr.resources
+C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.Resources.SharedResource.resources
+C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.Resources.SharedResource.gu.resources
+C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.Resources.SharedResource.hi.resources
+C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.Resources.SharedResource.mr.resources
 C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.csproj.GenerateResource.cache
 C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.GeneratedMSBuildEditorConfig.editorconfig
 C:\Jayesh\OrchidCapital\OrchidCapital\OrchidCapital\obj\Debug\net8.0\OrchidCapital.AssemblyInfoInputs.cache

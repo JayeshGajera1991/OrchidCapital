@@ -19,6 +19,7 @@
     <PackageReference Include="PemUtils" Version="3.0.0.82" />
     <PackageReference Include="RestSharp" Version="114.0.0" />
     <PackageReference Include="TwoFactorAuth.Net.QRCoder" Version="1.0.2" />
+    
     <None Update="Helper\public.pem">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
