@@ -16,6 +16,8 @@
         url('../images/news-bg.jpg');
     background-size: cover;
     color: white;
+    position: relative;
+    overflow: hidden;
 }
 .news-hero::before {
     content: "";
@@ -35,7 +37,7 @@
     height: 300px;
     border-radius: 50%;
     background: rgba(255, 255, 255, .05);
-    bottom: 260px;
+    bottom: -130px;
     left: -80px;
 }
 .news-content {

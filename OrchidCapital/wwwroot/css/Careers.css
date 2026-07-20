@@ -17,6 +17,8 @@
     background-size: cover;
     background-position: center;
     color: white;
+    position: relative;
+    overflow: hidden;
 }
 .loan-career-hero::before {
     content: "";
@@ -36,7 +38,7 @@
     height: 300px;
     border-radius: 50%;
     background: rgba(255, 255, 255, .05);
-    bottom: 175px;
+    bottom: -130px;
     left: -80px;
 }
 .career-content {

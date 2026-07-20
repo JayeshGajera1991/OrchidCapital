@@ -22,7 +22,9 @@
     background: linear-gradient(110deg, rgb(69 28 105), rgb(22 76 182));
     color: #fff;
     padding: 80px 0;
-    text-align: center
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 .hero::before {
     content: "";
@@ -42,7 +44,7 @@
     height: 300px;
     border-radius: 50%;
     background: rgba(255, 255, 255, .05);
-    bottom: 350px;
+    bottom: -130px;
     left: -80px;
 }
 .hero h1 {
