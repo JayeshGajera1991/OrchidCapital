@@ -101,7 +101,7 @@ TAB
     padding: 10px 10px;
     background: #fff;
     border: 1px solid var(--border);
-    border-radius: 50px;
+    border-radius: 10px;
     cursor: pointer;
     transition: .35s;
     color: #50627d;
@@ -142,7 +142,7 @@ NAV BUTTON
     width: 52px;
     height: 52px;
     border: none;
-    border-radius: 50%;
+    border-radius: 10%;
     background: #fff;
     color: var(--primary);
     font-size: 18px;
