@@ -95,25 +95,25 @@
 }
 
 .btn {
-    padding: 14px 28px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: .3s;
+    padding: 14px 28px !important;
+    border-radius: 10px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    transition: .3s !important;
 }
 
 .btn-primary {
-    background: #fff;
-    color: #390077;
+    background: #fff !important;
+    color: #390077 !important;
 }
 
 .btn-outline {
-    border: 2px solid rgba(255, 255, 255, .35);
-    color: #fff;
+    border: 2px solid rgba(255, 255, 255, .35) !important;
+    color: #fff !important;
 }
 
 .btn:hover {
-    transform: translateY(-3px);
+    transform: translateY(-3px) !important;
 }
 
 /* SECTION */
