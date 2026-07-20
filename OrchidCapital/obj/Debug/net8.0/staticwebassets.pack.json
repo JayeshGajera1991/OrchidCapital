@@ -237,6 +237,14 @@
       "PackagePath": "staticwebassets\\css\\Advisory.css"
     },
     {
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\AnnualReport.css",
+      "PackagePath": "staticwebassets\\css\\AnnualReport.css"
+    },
+    {
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\BankingGuidelines.css",
+      "PackagePath": "staticwebassets\\css\\BankingGuidelines.css"
+    },
+    {
       "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\BusinessLoans.css",
       "PackagePath": "staticwebassets\\css\\BusinessLoans.css"
     },
@@ -271,6 +279,10 @@
     {
       "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\StructuredFinance.css",
       "PackagePath": "staticwebassets\\css\\StructuredFinance.css"
+    },
+    {
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\TermsConditions.css",
+      "PackagePath": "staticwebassets\\css\\TermsConditions.css"
     },
     {
       "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\UserRequest.css",

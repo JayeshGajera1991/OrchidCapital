@@ -16,7 +16,7 @@
             <span>@Localizer["EmpowerMSME"]</span>
         </div>
         <div class="panel-header-right">
-            <img src="~/Images/logo3.png" alt="Company Logo">
+            <a href="@Url.Action("Index",controller: "Home")"><img src="~/Images/logo3.png" alt="Company Logo"></a>
         </div>
     </div>
     <div class="panel-divider"></div> <!-- BODY -->
@@ -49,7 +49,7 @@
                     <span id="financeTitle"></span>
                 </div>
                 <div id="financePoints"></div>
-                <button class="apply-btn">
+                <button class="apply-btn" onclick="window.location.href='@Url.Action("UserRequest", "Home")'">
                     <i class="fa-solid fa-arrow-right"></i>
                     @Localizer["ApplyNow"]
                 </button>
@@ -59,7 +59,7 @@
             <div class="help-box">
                 <h4>@Localizer["NeedHelp"]</h4>
                 <p>@Localizer["NeedHelpDescription"]</p>
-                <button>
+                <button onclick="window.location.href='@Url.Action("ContactUs", "Home")'">
                     <i class="fa-solid fa-headset"></i>
                     @Localizer["ContactRelationshipManager"]
                 </button>

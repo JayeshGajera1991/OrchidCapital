@@ -1,19 +1,19 @@
 <link rel="stylesheet" href="~/css/Leadership.css" asp-append-version="true" />
 @{
-   ViewData["Title"] = Localizer["Leadership"];
-   var header = ViewBag.HeaderData as AllModuleListRequest;
+    ViewData["Title"] = Localizer["Leadership"];
+    var header = ViewBag.HeaderData as AllModuleListRequest;
 }
+<div class="hero">
+    <div class="container">
+        <h1>Leadership Team</h1>
+        <p>
+            Meet the experienced professionals driving innovation,
+            trust, and growth at Orchid Capital.
+        </p>
+    </div>
+</div>
 <section class="leadership-section">
     <div class="container">
-
-        <div class="section-header">
-            <span>Our People</span>
-            <h2>Leadership Team</h2>
-            <p>
-                Meet the experienced professionals driving innovation,
-                trust, and growth at Orchid Capital.
-            </p>
-        </div>
         <div class="leadership-grid">
             @if (header != null)
             {
@@ -21,7 +21,8 @@
                 {
                     <div class="leader-card">
                         <div class="leader-image">
-                            <img src="~/img/usericon.png" alt="@(string.IsNullOrEmpty(item.Qualification) ? "" : item.Qualification)">
+                            <img src="~/img/usericon.png"
+                                 alt="@(string.IsNullOrEmpty(item.Qualification) ? "" : item.Qualification)">
                         </div>
 
                         <div class="leader-info">

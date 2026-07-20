@@ -193,6 +193,42 @@ namespace OrchidCapital.Controllers
             return View();
         }
 
+        public IActionResult AnnualReport()
+        {
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return View();
+        }
+
+        public IActionResult TermsConditions()
+        {
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return View();
+        }
+
+        public IActionResult BankingGuidelines()
+        {
+            try
+            {
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return View();
+        }
+
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

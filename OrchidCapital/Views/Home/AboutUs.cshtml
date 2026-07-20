@@ -22,7 +22,7 @@
             <a href="#" class="btn-primary">
                Learn More
             </a>
-            <a href="#" class="btn-outline">
+            <a href="@Url.Action("ContactUs", "Home")" class="btn-outline">
                Contact Us
             </a>
          </div>
@@ -305,7 +305,7 @@
       <p>
          Let's build your future together.
       </p>
-      <a href="#" class="btn-primary">
+      <a href="@Url.Action("UserRequest", "Home")" class="btn-primary">
          Apply Now
       </a>
    </div>
@@ -314,34 +314,34 @@
 <script>
    $(".top-header").addClass('purple-submenu-other');
    new Swiper(".teamSwiper", {
-      loop: true,
-      speed: 800,
-      spaceBetween: 30,
-      autoplay: {
-         delay: 2500,
-         disableOnInteraction: false
-      },
-      pagination: {
-         el: ".swiper-pagination",
-         clickable: true
-      },
-      navigation: {
-         nextEl: ".swiper-button-next",
-         prevEl: ".swiper-button-prev"
-      },
-      breakpoints: {
-         0: {
-            slidesPerView: 1
-         },
-         576: {
-            slidesPerView: 2
-         },
-         768: {
-            slidesPerView: 3
-         },
-         1200: {
-            slidesPerView: 4
-         }
-      }
+   loop: true,
+   speed: 800,
+   spaceBetween: 30,
+   autoplay: {
+   delay: 2500,
+   disableOnInteraction: false
+   },
+   pagination: {
+   el: ".swiper-pagination",
+   clickable: true
+   },
+   navigation: {
+   nextEl: ".swiper-button-next",
+   prevEl: ".swiper-button-prev"
+   },
+   breakpoints: {
+   0: {
+   slidesPerView: 1
+   },
+   576: {
+   slidesPerView: 2
+   },
+   768: {
+   slidesPerView: 3
+   },
+   1200: {
+   slidesPerView: 4
+   }
+   }
    });
 </script>

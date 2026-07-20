@@ -234,6 +234,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZHZpc29yeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/AnnualReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBbm51YWxSZXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/BankingGuidelines.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCYW5raW5nR3VpZGVsaW5lcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/BusinessLoans.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCdXNpbmVzc0xvYW5zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -272,6 +280,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/StructuredFinance.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTdHJ1Y3R1cmVkRmluYW5jZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/TermsConditions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZXJtc0NvbmRpdGlvbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Jayesh/OrchidCapital/OrchidCapital/OrchidCapital/Views/Home/UserRequest.cshtml]

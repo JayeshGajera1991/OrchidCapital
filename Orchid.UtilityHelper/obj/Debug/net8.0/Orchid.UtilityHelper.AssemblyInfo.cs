@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Orchid.UtilityHelper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07a134b8765183679b746a9b48eeb504a8171391")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8a3a957d292c76c049a898d7280baccbfefac6b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Orchid.UtilityHelper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Orchid.UtilityHelper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
