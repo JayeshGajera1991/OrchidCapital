@@ -50,6 +50,8 @@
     opacity: .9;
 }
 .btn {
+    top: 20px !important;
+    position: relative;
     padding: 14px 28px;
     border-radius: 10px;
     text-decoration: none;

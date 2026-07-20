@@ -298,7 +298,7 @@ BUTTONS
 }
 .emi-actions-new button {
     height: 54px;
-    border-radius: 14px;
+    border-radius: 10px;
     font-size: 15px;
     font-weight: 700;
     cursor: pointer;

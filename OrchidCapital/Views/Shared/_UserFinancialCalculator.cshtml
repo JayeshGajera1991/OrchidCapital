@@ -20,7 +20,39 @@
                     <div class="emi-tab" data-loan="@item.LoanProductId" data-mina="@item.MinAmount" data-maxa="@item.MaxAmount"
                          data-mint="@item.MinTenure" data-maxt="@item.MaxTenure" data-ratedir="@item.DefaultInterestRate"
                          data-ratepfp="@item.ProcessingFeePercent" data-ratepi="@item.PenaltyInterest">
-                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                        @{
+                            string icon = item.LoanProductId switch
+                            {
+                                1 => "fa-solid fa-house",
+                                2 => "fa-solid fa-briefcase",
+                                3 => "fa-solid fa-user",
+                                4 => "fa-solid fa-coins",
+                                5 => "fa-solid fa-car",
+                                6 => "fa-solid fa-graduation-cap",
+                                7 => "fa-solid fa-tractor",
+                                8 => "fa-solid fa-industry",
+                                9 => "fa-solid fa-building-columns",
+                                10 => "fa-solid fa-hand-holding-dollar",
+                                11 => "fa-solid fa-chart-line",
+                                12 => "fa-solid fa-sack-dollar",
+                                13 => "fa-solid fa-landmark",
+                                14 => "fa-solid fa-building",
+                                15 => "fa-solid fa-store",
+                                16 => "fa-solid fa-shop",
+                                17 => "fa-solid fa-wallet",
+                                18 => "fa-solid fa-credit-card",
+                                19 => "fa-solid fa-money-check-dollar",
+                                20 => "fa-solid fa-piggy-bank",
+                                21 => "fa-solid fa-file-invoice-dollar",
+                                22 => "fa-solid fa-chart-pie",
+                                23 => "fa-solid fa-scale-balanced",
+                                24 => "fa-solid fa-seedling",
+                                25 => "fa-solid fa-handshake",
+                                _ => "fa-solid fa-circle-dollar-to-slot"
+                            };
+                        }
+
+                        <i class="@icon"></i>
                         <span>@item.ProductName</span>
                     </div>
                 }
@@ -79,7 +111,8 @@
             </div>
 
             <div class="emi-actions-new">
-                <button class="apply-btn-new" onclick="location.href='@Url.Action("UserRequest","Home")'">@Localizer["ApplyNow"]</button>
+                <button class="apply-btn-new"
+                        onclick="location.href='@Url.Action("UserRequest", "Home")'">@Localizer["ApplyNow"]</button>
                 <button class="know-btn-new">@Localizer["KnowMore"]</button>
             </div>
 

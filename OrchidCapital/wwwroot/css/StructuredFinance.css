@@ -4,6 +4,7 @@
     --light: #f8f5ff;
     --dark: #222;
 }
+
 /* HERO */
 .hero {
     background:
@@ -19,6 +20,7 @@
     position: relative;
     overflow: hidden;
 }
+
 .hero::before {
     content: "";
     position: absolute;
@@ -40,19 +42,25 @@
     bottom: -130px;
     left: -80px;
 }
+
 .hero-content {
     max-width: 650px;
 }
+
 .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
 }
+
 .hero p {
     font-size: 18px;
     line-height: 1.8;
     opacity: .9;
 }
+
 .btn {
+    top: 20px !important;
+    position: relative;
     padding: 14px 28px;
     border-radius: 10px;
     text-decoration: none;
@@ -73,6 +81,7 @@
 .btn:hover {
     transform: translateY(-3px);
 }
+
 .hero-image img {
     border-radius: 10px;
     box-shadow: 0 15px 40px rgba(57, 0, 119, .12);
@@ -80,37 +89,45 @@
     animation: float 4s ease-in-out infinite;
     filter: drop-shadow(0 25px 40px rgba(57, 0, 119, .18));
 }
+
 @keyframes float {
     50% {
         transform: translateY(-15px);
     }
 }
+
 /* COMMON */
 .container {
     width: 85%;
     margin: auto;
 }
+
 .section {
     padding: 80px 0;
 }
+
 .section-title {
     text-align: center;
     margin-bottom: 50px;
 }
+
 .section-title h2 {
     font-size: 36px;
     color: #390077;
 }
+
 .section-title p {
     color: #666;
     margin-top: 12px;
 }
+
 /* SERVICES */
 .finance-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
+
 .finance-card {
     padding: 35px;
     background: white;
@@ -119,9 +136,11 @@
         0 15px 45px rgba(57, 0, 119, .12);
     transition: .3s;
 }
+
 .finance-card:hover {
     transform: translateY(-10px);
 }
+
 .finance-card i {
     height: 70px;
     width: 70px;
@@ -134,23 +153,28 @@
     border-radius: 50%;
     margin-bottom: 20px;
 }
+
 .finance-card h3 {
     color: #390077;
     margin-bottom: 15px;
 }
+
 .finance-card p {
     line-height: 1.7;
     color: #555;
 }
+
 /* SOLUTIONS */
 .solutions {
     background: #f8f5ff;
 }
+
 .solution-box {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 }
+
 .solution-item {
     background: #fff;
     padding: 25px;
@@ -160,22 +184,27 @@
     align-items: center;
     box-shadow: 0 10px 25px rgba(0, 0, 0, .05);
 }
+
 .solution-item i {
     font-size: 28px;
     color: #390077;
 }
+
 .solution-item h3 {
     font-size: 20px;
 }
+
 /* PROCESS */
 .process {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
 }
+
 .process-card {
     text-align: center;
 }
+
 .process-number {
     height: 65px;
     width: 65px;
@@ -189,35 +218,43 @@
     border-radius: 50%;
     font-weight: bold;
 }
+
 .process-card h4 {
     margin-top: 18px;
 }
+
 /* WHY BANK */
 .why {
     display: flex;
     gap: 50px;
     align-items: center;
 }
+
 .why img {
     width: 450px;
     border-radius: 20px;
 }
+
 .why-content h2 {
     font-size: 36px;
     color: #390077;
     margin-bottom: 20px;
 }
+
 .why-list {
     list-style: none;
 }
+
 .why-list li {
     margin: 15px 0;
     font-size: 17px;
 }
+
 .why-list i {
     color: #390077;
     margin-right: 12px;
 }
+
 /* CTA */
 .cta {
     background: linear-gradient(120deg, #390077, #8b35d1);
@@ -225,9 +262,11 @@
     text-align: center;
     color: white;
 }
+
 .cta h2 {
     font-size: 38px;
 }
+
 .cta p {
     margin-top: 15px;
 }
@@ -238,21 +277,26 @@
         flex-direction: column;
         text-align: center;
     }
+
     .hero h1 {
         font-size: 36px;
     }
+
     .hero-image img {
         margin-top: 50px;
         width: 400px;
     }
+
     .finance-grid,
     .solution-box,
     .process {
         grid-template-columns: 1fr;
     }
+
     .why {
         flex-direction: column;
     }
+
     .why img {
         width: 100%;
     }

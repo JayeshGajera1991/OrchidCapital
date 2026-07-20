@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="~/css/UserRequest.css" asp-append-version="true" />
 @{
-   ViewData["Title"] = Localizer["LoanApply"];
-   var header = ViewBag.HeaderData as AllModuleListRequest;
+    ViewData["Title"] = Localizer["LoanApply"];
+    var header = ViewBag.HeaderData as AllModuleListRequest;
 }
 <section class="hero">
     <div class="container hero-grid">
@@ -15,10 +15,10 @@
                 rates. Apply online in just a few minutes.
             </p>
             <div class="hero-buttons">
-                <a href="#loanForm" class="btn-primary">
+                <a href="#loanForm" class="btn btn-primary">
                     Apply Now
                 </a>
-                <a href="@Url.Action("ContactUs", "Home")" class="btn-outline">
+                <a href="@Url.Action("ContactUs", "Home")" class="btn btn-outline">
                     Contact Expert
                 </a>
             </div>
@@ -38,42 +38,50 @@
             <p>Select the loan that best matches your financial needs.</p>
         </div>
         <div class="loan-grid">
-            <div class="loan-card">
-                <i class="fa-solid fa-house"></i>
-                <h3>Home Loan</h3>
-                <p>Interest starts from 8.50%</p>
-                <a href="#">Apply Now</a>
-            </div>
-            <div class="loan-card">
-                <i class="fa-solid fa-wallet"></i>
-                <h3>Personal Loan</h3>
-                <p>Instant approval with flexible EMI.</p>
-                <a href="#">Apply Now</a>
-            </div>
-            <div class="loan-card">
-                <i class="fa-solid fa-briefcase"></i>
-                <h3>Business Loan</h3>
-                <p>Up to ₹10 Crore financing.</p>
-                <a href="#">Apply Now</a>
-            </div>
-            <div class="loan-card">
-                <i class="fa-solid fa-car"></i>
-                <h3>Vehicle Loan</h3>
-                <p>Affordable EMI for new & used vehicles.</p>
-                <a href="#">Apply Now</a>
-            </div>
-            <div class="loan-card">
-                <i class="fa-solid fa-coins"></i>
-                <h3>Gold Loan</h3>
-                <p>Maximum value against your gold.</p>
-                <a href="#">Apply Now</a>
-            </div>
-            <div class="loan-card">
-                <i class="fa-solid fa-graduation-cap"></i>
-                <h3>Education Loan</h3>
-                <p>Support for higher education.</p>
-                <a href="#">Apply Now</a>
-            </div>
+            @if (header != null)
+            {
+                foreach (LoanTypeModel item in header.ProductTypesList)
+                {
+                    <div class="loan-card">
+                        @{
+                            string icon = item.LoanTypeId switch
+                            {
+                                1 => "fa-solid fa-house",
+                                2 => "fa-solid fa-briefcase",
+                                3 => "fa-solid fa-user",
+                                4 => "fa-solid fa-coins",
+                                5 => "fa-solid fa-car",
+                                6 => "fa-solid fa-graduation-cap",
+                                7 => "fa-solid fa-tractor",
+                                8 => "fa-solid fa-industry",
+                                9 => "fa-solid fa-building-columns",
+                                10 => "fa-solid fa-hand-holding-dollar",
+                                11 => "fa-solid fa-chart-line",
+                                12 => "fa-solid fa-sack-dollar",
+                                13 => "fa-solid fa-landmark",
+                                14 => "fa-solid fa-building",
+                                15 => "fa-solid fa-store",
+                                16 => "fa-solid fa-shop",
+                                17 => "fa-solid fa-wallet",
+                                18 => "fa-solid fa-credit-card",
+                                19 => "fa-solid fa-money-check-dollar",
+                                20 => "fa-solid fa-piggy-bank",
+                                21 => "fa-solid fa-file-invoice-dollar",
+                                22 => "fa-solid fa-chart-pie",
+                                23 => "fa-solid fa-scale-balanced",
+                                24 => "fa-solid fa-seedling",
+                                25 => "fa-solid fa-handshake",
+                                _ => "fa-solid fa-circle-dollar-to-slot"
+                            };
+                        }
+
+                        <i class="@icon"></i>
+                        <h3>@item.Name</h3>
+                        <a href="#loanForm" class="btn btn-primary">Apply Now</a>
+                    </div>
+
+                }
+            }
         </div>
     </div>
 </section>
@@ -129,12 +137,13 @@
                 <input type="tel" placeholder="Mobile Number">
                 <select>
                     <option>Select Loan Type</option>
-                    <option>Home Loan</option>
-                    <option>Business Loan</option>
-                    <option>Personal Loan</option>
-                    <option>Vehicle Loan</option>
-                    <option>Gold Loan</option>
-                    <option>Education Loan</option>
+                    @if (header != null)
+                    {
+                        foreach (LoanTypeModel item in header.ProductTypesList)
+                        {
+                            <option value="@item.LoanTypeId">@item.Name</option>
+                        }
+                    }
                 </select>
                 <input type="number" placeholder="Loan Amount">
                 <input type="number" placeholder="Monthly Income">
@@ -142,7 +151,7 @@
                 <input type="text" placeholder="City">
                 <textarea rows="5" placeholder="Additional Information"></textarea>
             </div>
-            <button class="btn-primary">
+            <button class="btn btn-primary">
                 Submit Application
             </button>
         </form>
@@ -235,7 +244,7 @@
         <p>
             Apply today and our loan expert will contact you shortly.
         </p>
-        <a href="#loanForm" class="btn-primary">
+        <a href="#loanForm" class="btn btn-primary">
             Apply Now
         </a>
     </div>
