@@ -368,4 +368,15 @@
 <data name="LoanApply" xml:space="preserve">
   <value>कर्जासाठी अर्ज करा</value>
 </data>
+<data name="AnnualReport" xml:space="preserve">
+  <value>वार्षिक अहवाल</value>
+</data>
+
+<data name="TermsConditions" xml:space="preserve">
+  <value>अटी व शर्ती</value>
+</data>
+
+<data name="BankingGuidelines" xml:space="preserve">
+  <value>बँकिंग मार्गदर्शक तत्त्वे</value>
+</data>
 </root>

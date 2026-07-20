@@ -19,6 +19,8 @@
     justify-content: space-between;
     position: relative;
     overflow: hidden;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .hero::before {

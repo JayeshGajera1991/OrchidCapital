@@ -17,6 +17,8 @@
         linear-gradient(110deg, rgb(69 28 105), rgb(22 76 182));
     position: relative;
     overflow: hidden;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .hero::before {

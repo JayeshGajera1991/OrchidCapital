@@ -164,6 +164,7 @@
 .panel-header-right img {
   height: 76px;
   width: auto;
+  box-shadow: none !important;
 }
 /* =========================
    RIGHT SIDE

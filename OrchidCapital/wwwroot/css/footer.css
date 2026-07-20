@@ -40,6 +40,7 @@ GRID
 LOGO
 ==============================*/
 .bank-footer-brand img {
+  box-shadow: none !important;
   height: 72px;
   transition: .4s;
   filter: drop-shadow(0 4px 10px rgba(14, 105, 241, .08));

@@ -19,6 +19,8 @@
     color: white;
     position: relative;
     overflow: hidden;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 .loan-career-hero::before {
     content: "";

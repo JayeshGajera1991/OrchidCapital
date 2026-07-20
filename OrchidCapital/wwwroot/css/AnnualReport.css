@@ -8,7 +8,9 @@
     background: linear-gradient(110deg, rgb(69 28 105), rgb(22 76 182));
     color: #fff;
     padding: 80px 0;
-    text-align: center
+    text-align: center;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 .hero::before {
     content: "";

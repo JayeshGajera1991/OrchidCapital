@@ -76,6 +76,8 @@ a {
     padding: 80px 0;
     position: relative;
     overflow: hidden;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 .hero::before {
     content: "";
@@ -95,7 +97,7 @@ a {
     height: 300px;
     border-radius: 50%;
     background: rgba(255, 255, 255, .05);
-    bottom: 50px;
+    bottom: -100px;
     left: -80px;
 }
 .hero-content {

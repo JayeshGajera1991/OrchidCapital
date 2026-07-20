@@ -15,6 +15,8 @@
     gap: 40px;
     position: relative;
     overflow: hidden;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 .loan-hero::before {
     content: "";

@@ -424,4 +424,13 @@
 <data name="LoanApply" xml:space="preserve">
   <value>Apply Loan</value>
 </data>
+<data name="AnnualReport" xml:space="preserve">
+  <value>Annual Report</value>
+</data>
+<data name="TermsConditions" xml:space="preserve">
+  <value>Terms And Conditions</value>
+</data>
+<data name="BankingGuidelines" xml:space="preserve">
+  <value>Banking Guidelines</value>
+</data>
 </root>

@@ -379,4 +379,15 @@
 <data name="LoanApply" xml:space="preserve">
   <value>લોન માટે અરજી કરો</value>
 </data>
+<data name="AnnualReport" xml:space="preserve">
+  <value>વાર્ષિક અહેવાલ</value>
+</data>
+
+<data name="TermsConditions" xml:space="preserve">
+  <value>નિયમો અને શરતો</value>
+</data>
+
+<data name="BankingGuidelines" xml:space="preserve">
+  <value>બેંકિંગ માર્ગદર્શિકા</value>
+</data>
 </root>

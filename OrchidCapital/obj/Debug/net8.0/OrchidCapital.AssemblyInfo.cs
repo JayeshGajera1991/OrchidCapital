@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OrchidCapital")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a32beb696da388639c577735cf2d69295c4e856")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c783e782434b334be3537f8705f25ddb1001e9a")]
 [assembly: System.Reflection.AssemblyProductAttribute("OrchidCapital")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OrchidCapital")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
