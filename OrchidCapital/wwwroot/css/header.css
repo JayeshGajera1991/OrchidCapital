@@ -15,11 +15,37 @@
      padding: 0;
      display: flex;
      align-items: flex-start;
-     /* 👈 important */
      overflow: hidden;
      background: transparent;
      backdrop-filter: none;
-     /* optional */
+   }
+
+   .top-header.scrolled {
+     background: linear-gradient(135deg,
+         #530e53,
+         #144eb9);
+     /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); */
+     transition: all 0.4s ease;
+   }
+
+   .top-header.purple-submenu-other {
+     background: linear-gradient(135deg,
+         #530e53,
+         #144eb9);
+     /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+     transition: all 0.4s ease; */
+   }
+
+
+   /* Darken purple submenu text slightly */
+   .top-header.scrolled .purple-submenu a,
+   .purple-submenu-other .purple-submenu a {
+     color: rgba(255, 255, 255, 0.95);
+   }
+
+   /* Smooth transition always active */
+   .top-header {
+     transition: background 0.4s ease, box-shadow 0.4s ease;
    }
 
    .header-left,
@@ -772,22 +798,7 @@
    /* ===============================
    SCROLL DARK MODE HEADER
 ================================= */
-   .top-header.scrolled,
-   .purple-submenu-other {
-     background: linear-gradient(110deg, rgb(69 28 105), rgb(22 76 182));
-     transition: all 0.4s ease !important;
-   }
 
-   /* Darken purple submenu text slightly */
-   .top-header.scrolled .purple-submenu a,
-   .purple-submenu-other .purple-submenu a {
-     color: rgba(255, 255, 255, 0.95);
-   }
-
-   /* Smooth transition always active */
-   .top-header {
-     transition: background 0.4s ease, box-shadow 0.4s ease;
-   }
 
    .business-trigger {
      position: relative;
