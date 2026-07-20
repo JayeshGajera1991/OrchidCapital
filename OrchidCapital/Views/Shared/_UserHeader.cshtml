@@ -81,10 +81,10 @@
         <div class="mobile-white-menu-right">
             <div class="mobile-white-lang">
                 <div class="mobile-language-wrapper">
-                    <partial name="_LanguageSelector" />
+                    <partial name="_LanguageSelectorMobile" />
                 </div>
                 <a href="#"> <i class="fa-solid fa-phone"></i></a>
-                    <a href="@Url.Action("Login", "Login")"> <i class="fa-solid fa-user"></i></a>
+                <a href="@Url.Action("Login", "Login")"> <i class="fa-solid fa-user"></i></a>
             </div>
         </div>
         <button class="call-btn">
@@ -129,7 +129,7 @@
             {
                 foreach (BankServiceListModel item in header.ProductsList)
                 {
-                    <a href="@Url.Action("UserRequest","Home")" data-desc="@item.Descriptions">@item.ProductName</a>
+                    <a href="@Url.Action("UserRequest", "Home")" data-desc="@item.Descriptions">@item.ProductName</a>
                 }
             }
         </div>
@@ -142,7 +142,6 @@
     </div>
 </div>
 <script>
-   
     document.addEventListener("DOMContentLoaded", function () {
 
         const trigger = document.getElementById("businessTrigger");

@@ -429,9 +429,9 @@
      transform: scale(0.9);
    }
 
-   /*=====================================
-        Mobile Footer Section
-======================================*/
+   /*=========================================
+        PREMIUM MOBILE PANEL
+=========================================*/
    .mobile-right {
      flex: 1;
      height: 100%;
@@ -466,9 +466,7 @@
      align-items: center;
    }
 
-   /*=========================================
-        PREMIUM MOBILE PANEL
-=========================================*/
+
    .mobile-panel {
      position: fixed;
      top: 0;
@@ -894,6 +892,9 @@
             Mobile
 ===================================================*/
    @media (max-width:767px) {
+     .oc-offer-bar {
+       font-size: 8px;
+     }
 
      .header-nav,
      .business-btn,
@@ -933,7 +934,7 @@
    /*==================================================
             iPad Portrait & Landscape
 ===================================================*/
-   @media (min-width:768px) and (max-width:1024px){
+   @media (min-width:768px) and (max-width:1024px) {
 
      * {
        box-sizing: border-box;
@@ -1102,7 +1103,7 @@
        width: 150px;
        position: absolute;
        top: 5px;
-       left: -10px;
+       left: -2px;
      }
 
      .header-nav {
@@ -1182,5 +1183,6 @@
        align-items: center;
        gap: 8px;
      }
+
 
    }

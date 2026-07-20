@@ -54,7 +54,7 @@
     position: relative;
     display: inline-block;
 }
-.language-wrapper::before,.mobile-language-wrapper::before {
+/* .language-wrapper::before,.mobile-language-wrapper::before {
     content: "\f0ac";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
@@ -79,7 +79,7 @@
     font-size: 11px;
     pointer-events: none;
     transition: .25s;
-}
+} */
 .language-wrapper:hover::after,.mobile-language-wrapper:hover:after{
     transform: translateY(-50%) rotate(180deg);
     color:#390077;
@@ -101,7 +101,7 @@
     outline:none;
     transition:all .25s ease;
 }
-.language-wrapper .form-select:hover,.mobile-language-wrapper .form-select:hover{
+/* .language-wrapper .form-select:hover,.mobile-language-wrapper .form-select:hover{
     border-color:#390077;
     color:#390077;
 }
@@ -113,11 +113,16 @@
     background:#fff;
     color:#333;
     padding:10px;
-}
+} */
 .language-wrapper .form-select option:checked,.mobile-language-wrapper .form-select option:checked {
   background: #6c3fd6;
   color: #fff;
+} 
+.select2-container {
+    z-index: 9999;
+    width: 117px !important;
 }
+
 /* =================HEADER USP BAR ================= */
 /*==============================
       PREMIUM USP BAR

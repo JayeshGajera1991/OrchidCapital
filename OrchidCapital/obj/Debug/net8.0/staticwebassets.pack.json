@@ -309,6 +309,10 @@
       "PackagePath": "staticwebassets\\css\\superBusinessMega.css"
     },
     {
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\swiper-bundle.min.css",
+      "PackagePath": "staticwebassets\\css\\swiper-bundle.min.css"
+    },
+    {
       "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\teams.css",
       "PackagePath": "staticwebassets\\css\\teams.css"
     },
@@ -443,6 +447,10 @@
     {
       "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\swiper-bundle.min.js",
+      "PackagePath": "staticwebassets\\js\\swiper-bundle.min.js"
     },
     {
       "Id": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\toastr.min.js",

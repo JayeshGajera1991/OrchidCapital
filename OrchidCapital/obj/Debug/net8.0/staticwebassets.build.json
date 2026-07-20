@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7elejiZnfgNvW9Yb3Qyy+bKI3oRHpwDcVRlbfrISdOk=",
+  "Hash": "6U31eHH2U4quWoJCa4a8zmuEws9lf2s6qAGhxGzOWYs=",
   "Source": "OrchidCapital",
   "BasePath": "_content/OrchidCapital",
   "Mode": "Default",
@@ -870,6 +870,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\superBusinessMega.css"
+    },
+    {
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\swiper-bundle.min.css",
+      "SourceId": "OrchidCapital",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "BasePath": "_content/OrchidCapital",
+      "RelativePath": "css/swiper-bundle.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\swiper-bundle.min.css"
     },
     {
       "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\css\\teams.css",
@@ -1839,6 +1858,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\swiper-bundle.min.js",
+      "SourceId": "OrchidCapital",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\",
+      "BasePath": "_content/OrchidCapital",
+      "RelativePath": "js/swiper-bundle.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\swiper-bundle.min.js"
     },
     {
       "Identity": "C:\\Jayesh\\OrchidCapital\\OrchidCapital\\OrchidCapital\\wwwroot\\js\\toastr.min.js",

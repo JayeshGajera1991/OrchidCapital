@@ -13,6 +13,7 @@
     <link href="~/Admin/css/select2.min.css" rel="stylesheet" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/toastr.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Admin/css/select2.min.css" asp-append-version="true" />
     <partial name="_ValidationScriptsPartial" />
 </head>
 
@@ -26,17 +27,25 @@
     <partial name="_UserHeader" />
     @RenderBody()
     <partial name="_UserFooter" />
-
+    <script src="~/js/select2.min.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
     <script>
-            window.addEventListener("load", function () {
-                document.getElementById("loader").style.display = "none";
-            });
-            history.pushState(null, "", location.href);
+        $(document).ready(function () {
+        $('.cultureddl').select2({
+        placeholder: "-- Select --",
+        allowClear: false,
+        width: '100%'
+        });
+        });
+        window.addEventListener("load", function () {
+        document.getElementById("loader").style.display = "none";
+        });
+        history.pushState(null, "", location.href);
 
-            window.onpopstate = function () {
-                history.go(1);
-            };
+        window.onpopstate = function () {
+        history.go(1);
+        };
     </script>
 </body>
+
 </html>

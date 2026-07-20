@@ -15,7 +15,7 @@
 
     <input type="hidden" name="returnUrl" value="@returnUrl" />
 
-    <select name="culture" id="culture" class="form-select cultureddl" onchange="this.form.submit()">
+    <select name="culture" id="culturemobile" class="form-select" onchange="this.form.submit()">
 
         <option value="en" selected="@(currentCulture == "en")">
             English
@@ -36,7 +36,7 @@
 </form>
 <script>
     $(document).ready(function () {        
-        $('#culture').select2({
+        $('#culturemobile').select2({
             placeholder: "-- Select --",
             allowClear: false,
             width: '100%'
