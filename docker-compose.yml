@@ -42,6 +42,9 @@ services:
       dockerfile: OrchidCapital/Dockerfile
     ports:
       - "5000:8080"
+    volumes:
+    - ./OrchidCapital/wwwroot:/app/wwwroot
+    
     depends_on:
       orchid-api:
         condition: service_started
