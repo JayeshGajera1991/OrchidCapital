@@ -1,4 +1,23 @@
 services:
+  mssql-db:
+    container_name: orchid-mssql
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - "1434:1433"
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Developer"
+      MSSQL_SA_PASSWORD: "StrongPassword123!"
+    volumes:
+      - ./docker/mssql-data:/var/opt/mssql/data
+      - ./docker/mssql-backup:/var/opt/mssql/backup
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P \"StrongPassword123!\" -C -Q \"SELECT 1\" || exit 1"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+
   orchid-api:
     container_name: orchid-api
     build:
@@ -6,11 +25,14 @@ services:
       dockerfile: OrchidCapitalCoreAPI/Dockerfile
     ports:
       - "5001:8081"
+    depends_on:
+      mssql-db:
+        condition: service_healthy
     environment:
       ASPNETCORE_ENVIRONMENT: Production
-      ASPNETCORE_URLS: http://+:8081 
+      ASPNETCORE_URLS: http://+:8081
       DB_NAME: "OrchidCapital"
-      DB-CONN-STR: "Server=192.168.29.136,1433;Database={{DBNAME}};User Id=sa;Password=sa@123;TrustServerCertificate=True;Encrypt=False"
+      DB-CONN-STR: "Server=mssql-db,1433;Database={{DBNAME}};User Id=sa;Password=StrongPassword123!;TrustServerCertificate=True;Encrypt=False"
       USR_ENC_KEY: "ORCHIDCAPITAL@2026"
 
   orchid-dashboard:
@@ -21,11 +43,14 @@ services:
     ports:
       - "5000:8080"
     depends_on:
-      - orchid-api
+      orchid-api:
+        condition: service_started
+      mssql-db:
+        condition: service_healthy
     environment:
       ASPNETCORE_ENVIRONMENT: Production
       ASPNETCORE_URLS: http://+:8080
       DB_NAME: "OrchidCapital"
-      DB-CONN-STR: "Server=192.168.29.136,1433;Database={{DBNAME}};User Id=sa;Password=sa@123;TrustServerCertificate=True;Encrypt=False"
+      DB-CONN-STR: "Server=mssql-db,1433;Database={{DBNAME}};User Id=sa;Password=StrongPassword123!;TrustServerCertificate=True;Encrypt=False"
       OrchidCoreAPIurl: "http://orchid-api:8081/api/ORCHIDCAPITAL/v1/"
       USR_ENC_KEY: "ORCHIDCAPITAL@2026"

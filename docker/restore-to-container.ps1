@@ -1,9 +1,9 @@
 # Restore the backup inside the mssql container mounted at /var/opt/mssql/backup
 # Usage: run after docker compose up -d
 
-$BackupFile = '/var/opt/mssql/backup/OrchidCapital.bak'
+$BackupFile = '/var/opt/mssql/backup/orchidcapital.bak'
 $Database = 'OrchidCapital'
-$saPass = 'Sa@12345'
+$saPass = 'StrongPassword123!'
 
 Write-Host "Running RESTORE FILELISTONLY to show logical file names..."
 & sqlcmd -S "localhost,1433" -U "sa" -P $saPass -Q "RESTORE FILELISTONLY FROM DISK = N'$BackupFile'"
