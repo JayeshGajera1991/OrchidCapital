@@ -493,25 +493,26 @@
    }
 
 
-/* Mobile Panel */
-.mobile-panel {
-    position: absolute;
-    display: none;
-    top: 0;
-    right: -100%;
-    width: 100%;
-    height: 100dvh; /* Better support on mobile browsers */
-    background: #F8FAFC;
-    overflow-y: auto;
-    transition: right .35s ease;
-    z-index: 9999;
-    box-shadow: -18px 0 50px rgba(0,0,0,.18);
-    -webkit-overflow-scrolling: touch;
-}
+   /* Mobile Panel */
+   .mobile-panel {
+     position: absolute;
+     display: none;
+     top: 0;
+     right: -100%;
+     width: 100%;
+     height: 100dvh;
+     /* Better support on mobile browsers */
+     background: #F8FAFC;
+     overflow-y: auto;
+     transition: right .35s ease;
+     z-index: 9999;
+     box-shadow: -18px 0 50px rgba(0, 0, 0, .18);
+     -webkit-overflow-scrolling: touch;
+   }
 
-.mobile-panel.active{
-    right: 0;
-}
+   .mobile-panel.active {
+     right: 0;
+   }
 
    /*========================
         HEADER
@@ -550,7 +551,7 @@
      font-size: 13px;
    }
 
-   
+
 
    /*========================
         MENU
@@ -574,22 +575,22 @@
      color: #2D3748;
    }
 
- .mobile-close {
-    position: absolute;
-    top: 18px;
-    right: 18px;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255,255,255,.18);
-    color: #fff;
-    cursor: pointer;
-    transition: .3s;
-    z-index: 9999;
-}
+   .mobile-close {
+     position: absolute;
+     top: 18px;
+     right: 18px;
+     width: 38px;
+     height: 38px;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: rgba(255, 255, 255, .18);
+     color: #fff;
+     cursor: pointer;
+     transition: .3s;
+     z-index: 9999;
+   }
 
    .mobile-close:hover {
      background: #fff;
@@ -927,6 +928,10 @@
        margin-top: 20px;
      }
 
+     .mobile-panel.active {
+       display: block;
+     }
+
      .mobile-white-lang {
        display: flex;
      }
@@ -1103,6 +1108,9 @@
        display: none;
      }
 
+     .mobile-panel.active {
+       display: none;
+     }
    }
 
 
@@ -1163,7 +1171,9 @@
        font-size: 14px;
      }
 
-
+     .mobile-panel.active {
+       display: none;
+     }
 
    }
 
@@ -1201,5 +1211,8 @@
        gap: 8px;
      }
 
+     .mobile-panel.active {
+       display: none;
+     }
 
    }
